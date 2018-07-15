@@ -1,0 +1,373 @@
+/* ------------------------------------------
+  PRIMARY BUTTONS
+--------------------------------------------- */
+.button, button {
+  display: inline-flex;
+  align-items: center;
+  width: auto;
+  min-height: 2.25rem;
+  max-height: 2.25rem;
+  margin: 1rem auto 0;
+  padding: 1rem 1.75rem;
+  border-radius: 4rem;
+  font-size: 0.694rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 0;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+@media (min-width: 48rem) {.button, button {margin: 1rem 1rem 0;}}
+
+.button span.post {
+  margin: -0.0525rem 0 0;
+  padding: 0 0 0 0.5rem;
+  font-size: 1rem;
+}
+
+.button span.pre {
+  margin: -0.0525rem 0 0;
+  padding: 0 0.5rem 0 0;
+  font-size: 1rem;
+}
+
+.button span.post-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0 0 0 0.5rem;
+  border-radius: 2rem;
+  font-weight: 700;
+}
+
+.button.disabled {opacity: 0.5;}
+
+.button.big {
+  min-height: inherit;
+  max-height: inherit;
+  padding: 1.25rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+
+/* PRIMARY BUTTON COLOR SETTINGS */
+.button.color-one {
+  border: 1px solid #2e84ed;
+  color: #ffffff;
+  background-color: #2e84ed;
+}
+
+.button.color-one:hover,
+.button.color-one:focus {
+  color: #2e84ed;
+  background-color: #ffffff;
+}
+
+.button.color-one span.post-number {
+  color: #2e84ed;
+  background-color: #ffffff;
+}
+
+.button.color-one:hover span.post-number,
+.button.color-one:focus span.post-number {
+  color: #ffffff;
+  background-color: #2e84ed;
+}
+
+.button.color-two {
+  border: 1px solid #0f4a92;
+  color: #ffffff;
+  background-color: #0f4a92;
+}
+
+.button.color-two:hover,
+.button.color-two:focus {
+  color: #0f4a92;
+  background-color: #ffffff;
+}
+
+.button.color-two span.post-number {
+  color: #0f4a92;
+  background-color: #ffffff;
+}
+
+.button.color-two:hover span.post-number,
+.button.color-two:focus span.post-number {
+  color: #ffffff;
+  background-color: #0f4a92;
+}
+
+
+/* SECONDARY BUTTON COLOR SETTINGS */
+.button.secondary.color-one {
+  border: 1px solid #2e84ed;
+  color: #2e84ed;
+  background-color: #ffffff;
+}
+
+.button.secondary.color-one:hover, .button.secondary.color-one:focus {
+  color: #ffffff;
+  background-color: #2e84ed;
+}
+
+.button.secondary.color-one span.post-number {
+  color: #ffffff;
+  background-color: #2e84ed;
+}
+
+.button.secondary.color-one:hover span.post-number,
+.button.secondary.color-one:focus span.post-number {
+  color: #2e84ed;
+  background-color: #ffffff;
+}
+
+.button.secondary.color-two {
+  border: 1px solid #0f4a92;
+  color: #0f4a92;
+  background-color: #ffffff;
+}
+
+.button.secondary.color-two:hover, .button.secondary.color-two:focus {
+  color: #ffffff;
+  background-color: #0f4a92;
+}
+
+.button.secondary.color-two span.post-number {
+  color: #ffffff;
+  background-color: #0f4a92;
+}
+
+.button.secondary.color-two:hover span.post-number,
+.button.secondary.color-two:focus span.post-number {
+  color: #0f4a92;
+  background-color: #ffffff;
+}
+
+
+/* ------------------------------------------
+  BUTTON BOX/ROW CONTAINER
+--------------------------------------------- */
+.button-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.button-box.right {justify-content: flex-end;}
+
+.button-box.left {justify-content: flex-start;}
+
+@media (min-width: 48rem) {
+.button-box {
+  flex-direction: row;
+  justify-content: center;
+}}
+
+
+/* ------------------------------------------
+  EXPANDING BUTTONS
+--------------------------------------------- */
+.expanding-button-box {
+  display: inline-flex;
+  align-items: center;
+  max-width: 2.25rem;
+  margin: 1rem 0 0;
+  border-radius: 4rem;
+  overflow: hidden;
+  cursor: pointer;
+	-webkit-transition: max-width 0.4s ease;
+	-moz-transition: max-width 0.4s ease;
+	-o-transition: max-width 0.4s ease;
+	transition: max-width 0.4s ease;
+}
+
+.expanding-button-box.expand {max-width: 100%;}
+
+.expanding-button-box .expanding-button {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4rem;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.expanding-button-box .expanding-button.large {display: none;}
+
+.expanding-button-box .expanding-button.small {
+  display: flex;
+  max-width: 2.25rem;
+  max-height: 2.25rem;
+  margin: auto;
+  padding: 0.5rem;
+  font-size: 1.44rem;
+  line-height: 1;
+  color: #ffffff;
+}
+
+.expanding-button-box.expand .expanding-button.small {
+	-webkit-transform: rotate(0.75turn);
+	-moz-transform: rotate(0.75turn);
+	-o-transform: rotate(0.75turn);
+	transform: rotate(0.75turn);
+}
+
+.expanding-button-box .expanding-button.large {
+  width: max-content;
+  min-width: 7.875rem;
+  min-height: 2.25rem;
+  max-height: 2.25rem;
+  padding: 1rem 1.175rem;
+  font-size: 0.694rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 0;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+@media (min-width: 48rem) {
+.expanding-button-box {max-width: 7.875rem;}
+.expanding-button-box.expand {max-width: 100%;}
+.expanding-button-box .expanding-button.small {display: none;}
+.expanding-button-box .expanding-button.large {display: flex;}}
+
+
+/* CONFIRM ACTION BOX SETTINGS */
+.expanding-button-box .confirm-action-box {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 0.325rem 0 0.5rem;
+  font-size: 0.694rem;
+  font-weight: 500;
+  line-height: 0;
+  text-transform: uppercase;
+  color: #ffffff;
+  opacity: 0;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  -webkit-transform: translateX(10rem);
+  -moz-transform: translateX(10rem);
+  -o-transform: translateX(10rem);
+  transform: translateX(10rem);
+}
+
+.expanding-button-box.expand .confirm-action-box {
+  display: inline-flex;
+  opacity: 1;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+}
+
+.expanding-button-box .confirm-action-box span.confirm-action-text {
+  display: inline-flex;
+  width: max-content;
+}
+
+.expanding-button-box .confirm-action-box span.confirm-action {
+  margin: 0 0 0 0.5rem;
+  padding: 0.675rem 1rem;
+  border-radius: 4rem;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+
+/* EXPANDING BUTTON COLOR ONE SETTINGS */
+.expanding-button-box.color-one {background-color: #2e84ed;}
+
+.expanding-button-box.color-one .expanding-button {
+  border: 1px solid #2e84ed;
+  background-color: #2e84ed;
+}
+
+.expanding-button-box.color-one .expanding-button:hover,
+.expanding-button-box.color-one .expanding-button:focus {
+  color: #2e84ed;
+  background-color: #ffffff;
+}
+
+.expanding-button-box.expand.color-one .confirm-action-box span.confirm-action {
+  border: 1px solid #ffffff;
+  color: #2e84ed;
+  background-color: #ffffff;
+}
+
+.expanding-button-box.expand.color-one .confirm-action-box span.confirm-action:hover,
+.expanding-button-box.expand.color-one .confirm-action-box span.confirm-action:focus {
+  color: #ffffff;
+  background-color: #2e84ed;
+}
+
+.expanding-button-box.expand.color-one .confirm-action-box span.confirm-action.secondary {
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  background-color: #2e84ed;
+}
+
+.expanding-button-box.expand.color-one .confirm-action-box span.confirm-action.secondary:hover,
+.expanding-button-box.expand.color-one .confirm-action-box span.confirm-action.secondary:focus {
+  color: #2e84ed;
+  background-color: #ffffff;
+}
+
+
+/* EXPANDING BUTTON COLOR TWO SETTINGS */
+.expanding-button-box.color-two {background-color: #0f4a92;}
+
+.expanding-button-box.color-two .expanding-button {
+  border: 1px solid #0f4a92;
+  background-color: #0f4a92;
+}
+
+.expanding-button-box.color-two .expanding-button:hover,
+.expanding-button-box.color-two .expanding-button:focus {
+  color: #0f4a92;
+  background-color: #ffffff;
+}
+
+.expanding-button-box.expand.color-two .confirm-action-box span.confirm-action {
+  border: 1px solid #ffffff;
+  color: #0f4a92;
+  background-color: #ffffff;
+}
+
+.expanding-button-box.expand.color-two .confirm-action-box span.confirm-action:hover,
+.expanding-button-box.expand.color-two .confirm-action-box span.confirm-action:focus {
+  color: #ffffff;
+  background-color: #0f4a92;
+}
+
+.expanding-button-box.expand.color-two .confirm-action-box span.confirm-action.secondary {
+  border: 1px solid #ffffff;
+  color: #ffffff;
+  background-color: #0f4a92;
+}
+
+.expanding-button-box.expand.color-two .confirm-action-box span.confirm-action.secondary:hover,
+.expanding-button-box.expand.color-two .confirm-action-box span.confirm-action.secondary:focus {
+  color: #0f4a92;
+  background-color: #ffffff;
+}

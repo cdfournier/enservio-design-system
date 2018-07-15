@@ -1,0 +1,30 @@
+/* ------------------------------------------
+  COLORS
+--------------------------------------------- /*
+/* BACKGROUND COLORS */
+.background.white {background-color: #ffffff;}
+.background.light-gray {background-color: #cccece;}
+.background.dark-gray {background-color: #444853;}
+.background.black {background-color: #000000;}
+.background.success {background-color: #008000;}
+.background.error {background-color: #d0021b;}
+
+.background.color-one {background-color: #2e84ed;}
+.background.color-two {background-color: #0f4a92;}
+
+
+/* TEXT COLORS */
+.text.white {color: #ffffff;}
+.text.light-gray {color: #cccece;}
+.text.dark-gray {color: #444853;}
+.text.black {color: #000000;}
+.text.success {color: #008000;}
+.text.error {color: #d0021b;}
+
+.text.color-one {color: #2e84ed;}
+.text.color-two {color: #0f4a92;}
+
+
+/* LINK COLORS */
+a {color: #2e84ed;}
+a:hover, a:focus {color: #0f4a92;}

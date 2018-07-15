@@ -1,0 +1,257 @@
+/* ------------------------------------------
+  INPUT RESETS
+--------------------------------------------- */
+input[type=text],
+input[type=email],
+input[type=tel],
+input[type=url],
+input[type=password],
+input[type=search],
+input[type=file],
+input[type=select] {
+  font-size: 1rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+input.username:disabled {
+  font-weight: 500;
+  color: #000000;
+  opacity: 1;
+}
+
+
+/* ------------------------------------------
+  FORM STRUCTURE
+--------------------------------------------- */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1rem 0;
+}
+
+.field {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  position: relative;
+  width: 100%;
+  margin: 0 0 1rem;
+  padding: 0 1rem;
+}
+
+.small {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* INPUTS, LABELS, AND PLACEHOLDERS */
+.field label, .field input {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.833rem;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  touch-action: manipulation;
+}
+
+.field input {
+  z-index: 500;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  border-bottom: 1px solid #000000;
+  border-radius: 0;
+  font-weight: 400;
+  line-height: 3;
+  background-color: transparent;
+  cursor: text;
+}
+
+.field input.valid:disabled {opacity: 1;}
+
+.field label {
+  margin: 0;
+  width: 100%;
+  font-weight: 500;
+  text-align: left;
+  color: #000000;
+}
+
+.field input:placeholder-shown + label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: text;
+  transform-origin: left bottom;
+  -webkit-transform: translate(0,1.5rem);
+  -moz-transform: translate(0,1.5rem);
+  -o-transform: translate(0,1.5rem);
+  transform: translate(0,1.5rem);
+}
+
+input::placeholder {
+  opacity: 0;
+  transition: inherit;
+}
+
+input:focus::placeholder {opacity: 1; color: #cccece;}
+
+.field input:not(:placeholder-shown) + label,
+.field input:focus + label {
+  transform: translate(0,0);
+  cursor: pointer;
+}
+
+
+/* ------------------------------------------
+  CHECKBOX DEFAULTS
+--------------------------------------------- */
+label.container {
+  display: inline-flex;
+  align-items: center;
+  position: relative;
+  min-height: 1.325rem;
+  margin: 1rem 0 0;
+  padding: 0 0 0 1.75rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser"s default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 1.125rem;
+  width: 1.125rem;
+  border: 1px solid #000000;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+/* When the checkbox is checked, add a background color */
+.container input:checked ~ .checkmark {background-color: #000000;}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  display: none;
+  content: "";
+  position: absolute;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {display: block;}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  top: 0;
+  left: 0.325rem;
+  width: 0.2125rem;
+  height: 0.625rem;
+  border: solid #ffffff;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+
+/* INPUT ERROR MESSAGE SETTINGS */
+span.error-message {
+  width: 100%;
+  height: inherit;
+  min-height: 2rem;
+  margin: 0.25rem 0 0 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.833rem;
+  font-weight: 600;
+  color: #d0021b;
+  text-align: left;
+  opacity: 0;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.field.invalid span.error-message {opacity: 1;}
+
+.field.invalid input {
+  border-color: #d0021b;
+  color: #d0021b;
+}
+
+.field.invalid input:not(:placeholder-shown) + label,
+.field.invalid input:placeholder-shown + label,
+.field.invalid input:focus + label {color: #d0021b;}
+
+.field.invalid select {border-color: #d0021b; color: #d0021b;}
+
+.field.invalid select option,
+.field.invalid .select-icon,
+.field.invalid label {color: #d0021b;}
+
+.field.invalid select option span.option {color: #d0021b;}
+
+
+/* VALID INPUT SETTINGS */
+.field.valid input {
+  border-color: #008000;
+  color: #008000;
+}
+
+.field.valid input:not(:placeholder-shown) + label,
+.field.valid input:placeholder-shown + label,
+.field.valid input:focus + label {color: #008000;}
+
+.field.valid select {border-color: #008000; color: #008000;}
+
+.field.valid select option,
+.field.valid .select-icon,
+.field.valid label {color: #008000;}
+
+.field.valid select option span.option {color: #008000;}
+
+.field span.valid {
+  display: none;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0 0 0 1rem;
+  font-size: 1.5rem;
+  color: #008000;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.field.valid span.valid {display: block;}

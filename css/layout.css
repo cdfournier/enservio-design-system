@@ -1,0 +1,42 @@
+/* ------------------------------------------
+  MAIN
+--------------------------------------------- */
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  padding: 7.375rem 0 0;
+}
+
+@media (min-width: 35.5rem) {main {padding: 4rem 0 0;}}
+
+
+/* ------------------------------------------
+  TEXT BOX
+--------------------------------------------- */
+.text {
+  display: block;
+  width: 100%;
+  margin: auto;
+  padding: 2rem 2rem 0;
+}
+
+.text.border:before {
+  display: block;
+  margin: 0 auto 2rem;
+  border-top: 1px solid #cccece;
+  content: "";
+}
+
+.text.center {text-align: center;}
+
+
+/* ------------------------------------------
+  MAX-WIDTHS
+--------------------------------------------- */
+.sm {max-width: 24rem;}
+
+.md {max-width: 32rem;}
+
+.lg {max-width: 40rem;}
