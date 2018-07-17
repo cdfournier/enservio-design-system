@@ -221,13 +221,6 @@
   color: #ffffff;
 }
 
-.expanding-button-box.expand .expanding-button.small {
-	-webkit-transform: rotate(0.75turn);
-	-moz-transform: rotate(0.75turn);
-	-o-transform: rotate(0.75turn);
-	transform: rotate(0.75turn);
-}
-
 .expanding-button-box .expanding-button.large {
   width: max-content;
   min-width: 7.875rem;

@@ -3,11 +3,14 @@
 --------------------------------------------- */
 footer {
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   margin: 0;
   padding: 2rem;
   font-size: 0.833rem;
-  line-height: 1.728;
+  text-align: center;
 }
+
+footer a {padding: 0.644rem 0 0;}

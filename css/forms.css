@@ -117,70 +117,261 @@ input:focus::placeholder {opacity: 1; color: #cccece;}
   cursor: pointer;
 }
 
+@media (min-width: 48rem) {
+form {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.field {width: 50%;}
+.small {
+  width: 50%;
+  margin: 0 0 1rem;
+}
+.small .field {margin: 0;}}
+
+@media (min-width: 80rem) {
+.field, .small {width: 33%;}
+.small .field {width: 50%;}}
+
+@media (min-width: 96rem) {.field, .small {width: 25%;}}
+
 
 /* ------------------------------------------
-  CHECKBOX DEFAULTS
+  SELECT FIELDS
 --------------------------------------------- */
-label.container {
-  display: inline-flex;
-  align-items: center;
+.field select {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+}
+
+.field select {
+  display: inline-block;
+  overflow: hidden;
   position: relative;
-  min-height: 1.325rem;
-  margin: 1rem 0 0;
-  padding: 0 0 0 1.75rem;
-  cursor: pointer;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+  width: 100%;
+  min-height: 2.3125rem;
+  margin: 0;
+  padding: 0 2rem 0 0;
+  border-bottom: 1px solid #000000;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.833rem;
+  font-weight: 500;
+  line-height: 3;
+  text-overflow: ellipsis;
+  background-color: transparent;
+  white-space: nowrap;
 }
 
-/* Hide the browser"s default checkbox */
-.container input {
+.field select option {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.copy .field {padding: 0;}
+
+.field .select-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   position: absolute;
-  opacity: 0;
-  cursor: pointer;
+  top: 30%;
+  right: 1rem;
+  z-index: -50;
+  font-size: 1rem;
 }
 
-/* Create a custom checkbox */
-.checkmark {
+
+/* ------------------------------------------
+  CHECKBOXES
+--------------------------------------------- */
+input[type="checkbox"] {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin: 0;
+  border: 1px solid #000000;
+  background-color: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+input[type="checkbox"]:checked:before {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   height: 1.125rem;
   width: 1.125rem;
+  margin: 0;
+  font-family: "LineAwesome";
+  font-size: 1rem;
+  color: #ffffff;
+  content: '\f17b';
+}
+
+input[type="checkbox"]:checked:not(:disabled) {background-color: #000000;}
+
+.field.invalid input[type="checkbox"]:checked:not(:disabled) {background-color: #d0021b;}
+
+label.checkbox, label.radio {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  min-height: 1.25rem;
+  padding: 0 0 0 1.75rem;
+}
+
+
+/* ------------------------------------------
+  RADIOS
+--------------------------------------------- */
+input[type="radio"] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin: 0;
   border: 1px solid #000000;
+  border-radius: 100%;
+  background-color: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+input[type="radio"]:checked:before {
+  display: block;
+  position: relative;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 100%;
+  background-color: #000000;
+  content: '';
+}
+
+label.radio {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  min-height: 1.25rem;
+  padding: 0 0 0 1.75rem;
+}
+
+input:disabled, input:disabled:checked {
+  border: 1px solid #cccece;
+  cursor: default;
+}
+
+input[type="radio"]:disabled:checked:before {
+  display: block;
+  position: relative;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 100%;
+  background-color: #cccece;
+  content: '';
+}
+
+
+/* ------------------------------------------
+  SWITCHES
+--------------------------------------------- */
+input.switch[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  left: 0;
+  width: 3rem;
+  height: 1.25rem;
+  padding: 0 0.25rem;
+  border: 1px solid #444853;
+  border-radius: 4rem;
+  background-color: transparent;
+}
+
+input.switch[type="checkbox"]:checked:before {display: none;}
+
+input.switch[type="checkbox"]:checked {
+  border: 1px solid #000000;
+  background-color: transparent;
+}
+
+.field input.switch:not(:placeholder-shown) + label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  width: 3rem;
+  height: 1.25rem;
+  padding: 0 0.25rem;
+  overflow: hidden;
+  -webkit-transform: translate(0,1.25rem);
+  -moz-transform: translate(0,1.25rem);
+  -o-transform: translate(0,1.25rem);
+  transform: translate(0,1.25rem);
+}
+
+.switch-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
 }
 
-/* When the checkbox is checked, add a background color */
-.container input:checked ~ .checkmark {background-color: #000000;}
-
-/* Create the checkmark/indicator (hidden when not checked) */
-.checkmark:after {
-  display: none;
-  content: "";
-  position: absolute;
+input.switch[type="checkbox"]:checked + label .switch-box {
+  -webkit-transform: translateX(-1.625rem);
+  -moz-transform: translateX(-1.625rem);
+  -o-transform: translateX(-1.625rem);
+  transform: translateX(-1.625rem);
 }
 
-/* Show the checkmark when checked */
-.container input:checked ~ .checkmark:after {display: block;}
-
-/* Style the checkmark/indicator */
-.container .checkmark:after {
-  top: 0;
-  left: 0.325rem;
-  width: 0.2125rem;
-  height: 0.625rem;
-  border: solid #ffffff;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
+span.on-off-switch {
+  width: 1rem;
+  min-width: 1rem;
+  height: 1rem;
+  min-height: 1rem;
+  margin: 0;
+  border: 1px solid #ffffff;
+  border-radius: 100%;
+  background-color: #444853;
 }
+
+input.switch[type="checkbox"]:checked + label .switch-box span.on-off-switch {background-color: #000000;}
+
+span.off, span.on {
+  display: block;
+  width: 1.5rem;
+}
+
+span.off {
+  text-align: left;
+  color: #444853;
+}
+
+span.on {text-align: right;}
 
 
 /* INPUT ERROR MESSAGE SETTINGS */
@@ -222,6 +413,24 @@ span.error-message {
 .field.invalid select option span.option {color: #d0021b;}
 
 
+/* CHECKBOX INPUT ERROR MESSAGE SETTINGS */
+span.error-message.checkbox {padding: 0 0 0 1.75rem;}
+
+.field.invalid label span.checkmark {border-color: #d0021b;}
+
+
+/* SWITCH ERROR MESSAGE SETTINGS */
+.field.invalid input.switch[type="checkbox"]:checked:not(:disabled) {
+  border-color: #d0021b;
+  background-color: transparent;
+}
+
+.field.invalid input.switch[type="checkbox"] + label .switch-box span.on-off-switch,
+.field.invalid input.switch[type="checkbox"]:checked + label .switch-box span.on-off-switch {background-color: #d0021b;}
+
+.field.invalid input.switch[type="checkbox"] + label .switch-box span.off {color: #d0021b;}
+
+
 /* VALID INPUT SETTINGS */
 .field.valid input {
   border-color: #008000;
@@ -255,3 +464,8 @@ span.error-message {
 }
 
 .field.valid span.valid {display: block;}
+
+.field.valid span.select.valid {
+  top: 1.44rem;
+  right: 2.2rem;
+}

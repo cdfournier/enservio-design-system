@@ -29,8 +29,8 @@ body {animation: 1s ease-out 0s 1 fadeIn;}
 }
 
 * {
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 

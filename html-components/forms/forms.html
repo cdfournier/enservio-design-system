@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="../../css/layout.css">
     <link rel="stylesheet" href="../../css/status.css">
     <link rel="stylesheet" href="../../css/typography.css">
+    <style>h1 {padding: 0;}</style>
   </head>
   <body>
     <header id="header" class="header--fixed">
@@ -29,38 +30,154 @@
       </div>
     </header>
     <main>
-      <form class="sm">
-        <div class="field"> <!-- change to field valid or field invalid as necessary -->
-          <span class="error-message">Please include a description</span>
-          <input type="text" name="text-input" id="text-input" placeholder="Text input placeholder" required>
-          <label for="text-input">Label&#42;</label>
-        </div>
-        <div class="field invalid"> <!-- change to field valid or field invalid as necessary -->
-          <span class="error-message">This is not a valid email. Please try again.</span>
-          <input type="email" name="email-address" id="text-input" placeholder="Enter your email address" value="cmills" autocomplete required>
-          <label for="email-address">Email Address&#42;</label>
-        </div>
-        <div class="field valid"> <!-- change to 'field valid' or 'field invalid' as necessary -->
-          <span class="error-message">This password is not correct. Please try again.</span>
-          <input type="password" name="password" id="password" placeholder="Enter your password" value="passwordpassword" autocomplete required>
-          <label for="password">Password&#42;</label>
-          <span class="valid"><i class="la la-check-circle-o"></i></span>
-        </div>
-        <div class="field">
-          <span class="error-message">You must check this box to continue</span>
-          <label class="container">I certify that I have read and understand the above.
-            <input type="checkbox">
-            <span class="checkmark"></span>
-          </label>
-        </div>
-        <div class="field invalid">
-          <span class="error-message">You must check this box to continue</span>
-          <label class="container">I certify that I have read and understand the above.
-            <input type="checkbox">
-            <span class="checkmark"></span>
-          </label>
-        </div>
-      </form>
+      <section id="text-inputs">
+        <div class="text"><h1>Text Inputs</h1></div>
+          <form>
+            <div class="field"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
+              <span class="error-message">Please include a description</span>
+              <input type="text" name="text-input" id="text-input" placeholder="Text input placeholder" required>
+              <label for="text-input">Label</label>
+              <span class="valid"><i class="la la-check-circle-o"></i></span>
+            </div>
+            <div class="field invalid"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
+              <span class="error-message">This is not a valid email. Please try again.</span>
+              <input type="email" name="email-address" id="text-input" placeholder="Enter your email address" value="cmills" autocomplete required>
+              <label for="email-address">Email Address&#42;</label>
+              <span class="valid"><i class="la la-check-circle-o"></i></span>
+            </div>
+            <div class="field valid"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
+              <span class="error-message">This password is not correct. Please try again.</span>
+              <input type="password" name="password" id="password" placeholder="Enter your password" value="passwordpassword" autocomplete required>
+              <label for="password">Password&#42;</label>
+              <span class="valid"><i class="la la-check-circle-o"></i></span>
+            </div>
+            <div class="small">
+              <div class="field"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
+                <span class="error-message">Please include a description</span>
+                <input type="text" name="text-input" id="text-input" placeholder="Text input placeholder" required>
+                <label for="text-input">Label</label>
+                <span class="valid"><i class="la la-check-circle-o"></i></span>
+              </div>
+              <div class="field"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
+                <span class="error-message">Please include a description</span>
+                <input type="text" name="text-input" id="text-input" placeholder="Text input placeholder" required>
+                <label for="text-input">Label</label>
+                <span class="valid"><i class="la la-check-circle-o"></i></span>
+              </div>
+            </div>
+          </form>
+      </section>
+      <section id="select-inputs">
+        <div class="text"><h1>Select Inputs</h1></div>
+        <form>
+          <div class="field"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
+            <span class="error-message">Please select an option</span>
+            <select>
+              <option value="0">Option 1</option>
+              <option value="1">Option 2</option>
+              <option value="2">Option 3</option>
+            </select>
+            <div class="select-icon"><i class="la la-angle-down"></i></div>
+            <span class="valid"><i class="la la-check-circle-o"></i></span>
+            <label for="category">Label</label>
+          </div>
+          <div class="field invalid"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
+            <span class="error-message">Please select an option</span>
+            <select>
+              <option value="0">Option 1</option>
+              <option value="1">Option 2</option>
+              <option value="2">Option 3</option>
+            </select>
+            <div class="select-icon"><i class="la la-angle-down"></i></div>
+            <span class="valid"><i class="la la-check-circle-o"></i></span>
+            <label for="category">Label</label>
+          </div>
+          <div class="field valid"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
+            <span class="error-message">Please select an option</span>
+            <select>
+              <option value="0">Option 1</option>
+              <option value="1">Option 2</option>
+              <option value="2">Option 3</option>
+            </select>
+            <div class="select-icon"><i class="la la-angle-down"></i></div>
+            <span class="valid select"><i class="la la-check-circle-o"></i></span>
+            <label for="category">Label</label>
+          </div>
+        </form>
+      </section>
+      <section id="checkboxes">
+        <div class="text"><h1>Checkboxes</h1></div>
+        <form>
+          <div class="field"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
+            <span class="error-message checkbox">You must check this box to continue</span>
+            <input type="checkbox" name="one" id="one">
+            <label class="checkbox" for="one">I certify that I have read and understand the above</label>
+          </div>
+          <div class="field invalid"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
+            <span class="error-message checkbox">You must check this box to continue</span>
+            <input type="checkbox" name="two" id="two">
+            <label class="checkbox" for="two">I certify that I have read and understand the above</label>
+          </div>
+        </form>
+      </section>
+      <section id="radio-buttons">
+        <div class="text"><h1>Radio Buttons</h1></div>
+        <form>
+          <div class="small">
+            <div class="field"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
+              <span class="error-message radio">You must select one option</span>
+              <input type="radio" name="radio" id="three" checked>
+              <label class="radio" for="three">On</label>
+            </div>
+            <div class="field"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
+              <span class="error-message radio">You must select one option</span>
+              <input type="radio" name="radio" id="four">
+              <label class="radio" for="four">Off</label>
+            </div>
+          </div>
+          <div class="small">
+            <div class="field"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
+              <span class="error-message radio">You must select one option</span>
+              <input type="radio" name="radio-disabled" id="five" checked disabled>
+              <label class="radio" for="five">On</label>
+            </div>
+            <div class="field"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
+              <span class="error-message radio">You must select one option</span>
+              <input type="radio" name="radio-disabled" id="five" disabled>
+              <label class="radio" for="five">Off</label>
+            </div>
+          </div>
+        </form>
+      </section>
+      <section id="switches">
+        <div class="text"><h1>Switches</h1></div>
+        <form>
+          <div class="small">
+            <div class="field">
+              <span class="error-message">This is an error message</span>
+              <input type="checkbox" name="flip" class="switch" id="flip">
+              <label class="switch-label" for="flip">
+                <div class="switch-box">
+                  <span class="off">Off</span>
+                  <span class="on-off-switch"></span>
+                  <span class="on">On</span>
+                </div>
+              </label>
+            </div>
+            <div class="field invalid">
+              <span class="error-message">This is an error message</span>
+              <input type="checkbox" name="flip" class="switch" id="flip">
+              <label class="switch-label" for="flip">
+                <div class="switch-box">
+                  <span class="off">Off</span>
+                  <span class="on-off-switch"></span>
+                  <span class="on">On</span>
+                </div>
+              </label>
+            </div>
+          </div>
+        </form>
+      </section>
     </main>
     <footer>&copy;2018 Enservio, Inc. All rights reserved.&nbsp;<a href="#!">Terms&nbsp;&amp;&nbsp;Conditions</a></footer>
     <!-- scripts -->
