@@ -6,7 +6,7 @@ main {
   flex-direction: column;
   justify-content: center;
   margin: 0;
-  padding: 7.375rem 0 0;
+  padding: 6rem 0 0;
 }
 
 @media (min-width: 35.5rem) {main {padding: 4rem 0 0;}}
@@ -21,6 +21,8 @@ main {
   margin: auto;
   padding: 2rem 2rem 0;
 }
+
+.text:first-of-type {padding: 0 2rem 0;}
 
 .text.border:before {
   display: block;

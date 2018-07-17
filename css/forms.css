@@ -200,6 +200,10 @@ input[type="checkbox"] {
   background-color: #ffffff;
   cursor: pointer;
   -webkit-appearance: none;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 input[type="checkbox"]:checked:before {
@@ -248,6 +252,10 @@ input[type="radio"] {
   background-color: #ffffff;
   cursor: pointer;
   -webkit-appearance: none;
+  -webkit-transition: all 0.2s ease;
+  -moz-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 
 input[type="radio"]:checked:before {
@@ -299,7 +307,7 @@ input.switch[type="checkbox"] {
   width: 3rem;
   height: 1.25rem;
   padding: 0 0.25rem;
-  border: 1px solid #444853;
+  border: 1px solid #000000;
   border-radius: 4rem;
   background-color: transparent;
 }
@@ -356,7 +364,7 @@ span.on-off-switch {
   margin: 0;
   border: 1px solid #ffffff;
   border-radius: 100%;
-  background-color: #444853;
+  background-color: #000000;
 }
 
 input.switch[type="checkbox"]:checked + label .switch-box span.on-off-switch {background-color: #000000;}
@@ -368,7 +376,7 @@ span.off, span.on {
 
 span.off {
   text-align: left;
-  color: #444853;
+  color: #000000;
 }
 
 span.on {text-align: right;}

@@ -11,7 +11,6 @@ h1, h2, h3, p {
 }
 
 h1 {
-  padding: 0 0 1rem;
   font-family: "Roboto Slab", serif;
   font-size: 1.728rem;
   font-weight: 400;
@@ -22,7 +21,6 @@ h1 {
 }
 
 h2, h3 {
-  padding: 0 0 1rem;
   font-family: "Roboto Slab", serif;
   font-size: 1.44rem;
   font-weight: 400;
@@ -32,12 +30,12 @@ h2, h3 {
 h3 {font-size: 1.2rem;}
 
 p {
-  padding: 0 0 1rem;
+  padding: 0.694rem 0 0.694rem;
   font-size: 1rem;
   line-height: 1.5;
 }
 
-p:last-child {padding: 0;}
+p:last-child {padding: 0.694rem 0 0;}
 
 small {
   padding: 0 0 1rem;

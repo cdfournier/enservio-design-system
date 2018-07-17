@@ -25,7 +25,7 @@
   transition: all 0.2s ease;
 }
 
-@media (min-width: 48rem) {.button, button {margin: 1rem 1rem 0;}}
+@media (min-width: 48rem) {.button, button {margin: 1rem 0.5rem 0;}}
 
 .button span.post {
   margin: -0.0525rem 0 0;

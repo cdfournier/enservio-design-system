@@ -84,16 +84,16 @@
 <code>.headroom {</code>
 <code>  -webkit-transition: transform 0.25s ease-in-out;</code>
 <code>  -moz-transition: transform 0.25s ease-in-out;</code>
-<code> -o-transition: transform 0.25s ease-in-out;</code>
+<code>  -o-transition: transform 0.25s ease-in-out;</code>
 <code>  transition: transform 0.25s ease-in-out;</code>
 <code>  will-change: transform;</code>
 <code>}</code>
 
 <code>.headroom--pinned {</code>
-<code>  -webkit-transform: translateY(0%);</code>
-<code>  -moz-transform: translateY(0%);</code>
-<code>  -o-transform: translateY(0%);</code>
-<code>  transform: translateY(0%);</code>
+<code>  -webkit-transform: translateY(0);</code>
+<code>  -moz-transform: translateY(0);</code>
+<code>  -o-transform: translateY(0);</code>
+<code>  transform: translateY(0);</code>
 <code>}</code>
 
 <code>.headroom--unpinned {</code>
@@ -109,6 +109,54 @@
 <code>  align-items: flex-end;</code>
 <code>  justify-content: center;</code>
 <code>}}</code>
+
+<code>.logo {</code>
+<code>  display: flex;</code>
+<code>  align-items: center;</code>
+<code>  flex-direction: column;</code>
+<code>  justify-content: center;</code>
+<code>  width: 12rem;</code>
+<code>  margin: 0;</code>
+<code>  padding: 0;</code>
+<code>}</code>
+
+<code>nav {</code>
+<code>  width: 100%;</code>
+<code>  padding: 1rem 0 0;</code>
+<code>}</code>
+
+<code>nav ul {</code>
+<code>  display: flex;</code>
+<code>  flex-direction: row;</code>
+<code>  align-items: center;</code>
+<code>  justify-content: space-between;</code>
+<code>  width: 100%;</code>
+<code>  margin: 0;</code>
+<code>  padding: 0;</code>
+<code>  list-style-type: none;</code>
+<code>}</code>
+
+<code>nav ul li {</code>
+<code>  display: flex;</code>
+<code>  flex-direction: column;</code>
+<code>  align-items: center;</code>
+<code>  width: initial;</code>
+<code>  margin: 0;</code>
+<code>  padding: 0 0.694rem;</code>
+<code>  font-size: 0.694rem;</code>
+<code>  text-align: center;</code>
+<code>  text-transform: uppercase;</code>
+<code>  opacity: 1;</code>
+<code>}</code>
+
+<code>@media (min-width: 35.5rem) {</code>
+<code>nav {padding: 0;}</code>
+<code>nav ul {justify-content: flex-end;}</code>
+<code>nav ul li {</code>
+<code>  font-size: 0.833rem;</code>
+<code>  padding: 0 0 0 1.44rem;</code>
+<code>}</code>
+<code>nav ul li:last-child {padding: 0 0 0 1.44rem;}}</code>
           </pre>
         </figure>
 
