@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="../../css/base.css">
     <link rel="stylesheet" href="../../css/buttons.css">
     <link rel="stylesheet" href="../../css/carousels.css">
+    <link rel="stylesheet" href="../../css/code.css">
     <link rel="stylesheet" href="../../css/colors.css">
     <link rel="stylesheet" href="../../css/footer.css">
     <link rel="stylesheet" href="../../css/forms.css">
@@ -29,36 +30,221 @@
       </div>
     </header>
     <main>
-      <div class="button-box">
-        <span class="button color-one">Primary Button</span>
-        <span class="button secondary color-one">Secondary Button</span>
-      </div>
-      <div class="button-box">
-        <span class="button color-two">Primary Button</span>
-        <span class="button secondary color-two">Secondary Button</span>
-      </div>
-      <div class="button-box">
-        <div class="expanding-button-box color-one one">
-          <div class="expanding-button small click-one"><span class="icon-close"><i class="la la-trash"></i></span></div>
-          <div class="expanding-button large click-one">Click Here</div>
-          <div class="confirm-action-box">
-            <span class="confirm-action-text">Are you sure?</span>
-            <span class="confirm-action secondary no-one">No</span>
-            <span class="confirm-action yes-one">Yes</span>
+      <section id="default-buttons">
+        <div class="text lg">
+          <h1>Regular Buttons</h1>
+        </div>
+        <div class="button-box">
+          <span class="button color-one">Primary Button</span>
+          <span class="button secondary color-one">Secondary Button</span>
+        </div>
+        <div class="button-box">
+          <span class="button color-two">Primary Button</span>
+          <span class="button secondary color-two">Secondary Button</span>
+        </div>
+        <figure class="lg">
+          <figcaption>html</figcaption>
+          <pre>
+<code>&lt;div class=&quot;button-box&quot;&gt;</code>
+  <code>&lt;span class=&quot;button color-one&quot;&gt;Primary Button&lt;/span&gt;</code>
+  <code>&lt;span class=&quot;button secondary color-one&quot;&gt;Secondary Button&lt;/span&gt;</code>
+<code>&lt;/div&gt;</code>
+<code>&lt;div class=&quot;button-box&quot;&gt;</code>
+  <code>&lt;span class=&quot;button color-two&quot;&gt;Primary Button&lt;/span&gt;</code>
+  <code>&lt;span class=&quot;button secondary color-two&quot;&gt;Secondary Button&lt;/span&gt;</code>
+<code>&lt;/div&gt;</code>
+          </pre>
+        </figure>
+        <figure class="lg">
+          <figcaption>css</figcaption>
+          <pre>
+<code>.button, button {</code>
+  <code>display: inline-flex;</code>
+  <code>align-items: center;</code>
+  <code>width: auto;</code>
+  <code>min-height: 2.25rem;</code>
+  <code>max-height: 2.25rem;</code>
+  <code>margin: 1rem auto 0;</code>
+  <code>padding: 1rem 1.75rem;</code>
+  <code>border-radius: 4rem;</code>
+  <code>font-size: 0.694rem;</code>
+  <code>font-weight: 500;</code>
+  <code>letter-spacing: 1px;</code>
+  <code>line-height: 0;</code>
+  <code>text-align: center;</code>
+  <code>text-decoration: none;</code>
+  <code>text-transform: uppercase;</code>
+  <code>overflow: hidden;</code>
+  <code>cursor: pointer;</code>
+  <code>-webkit-transition: all 0.2s ease;</code>
+  <code>-moz-transition: all 0.2s ease;</code>
+  <code>-o-transition: all 0.2s ease;</code>
+  <code>transition: all 0.2s ease;</code>
+<code>}</code>
+
+<code>@media (min-width: 48rem) {.button, button {margin: 1rem 0.5rem 0;}}</code>
+
+<code>.button.color-one {</code>
+  <code>border: 1px solid #2e84ed;</code>
+  <code>color: #ffffff;</code>
+  <code>background-color: #2e84ed;</code>
+<code>}</code>
+
+<code>.button.color-one:hover,</code>
+<code>.button.color-one:focus {</code>
+  <code>color: #2e84ed;</code>
+  <code>background-color: #ffffff;</code>
+<code>}</code>
+
+<code>.button.color-two {</code>
+  <code>border: 1px solid #0f4a92;</code>
+  <code>color: #ffffff;</code>
+  <code>background-color: #0f4a92;</code>
+<code>}</code>
+
+<code>.button.color-two:hover,</code>
+<code>.button.color-two:focus {</code>
+  <code>color: #0f4a92;</code>
+  <code>background-color: #ffffff;</code>
+<code>}</code>
+
+<code>.button.secondary.color-one {</code>
+  <code>border: 1px solid #2e84ed;</code>
+  <code>color: #2e84ed;</code>
+  <code>background-color: #ffffff;</code>
+<code>}</code>
+
+<code>.button.secondary.color-one:hover, .button.secondary.color-one:focus {</code>
+  <code>color: #ffffff;</code>
+  <code>background-color: #2e84ed;</code>
+<code>}</code>
+
+<code>.button.secondary.color-two {</code>
+  <code>border: 1px solid #0f4a92;</code>
+  <code>color: #0f4a92;</code>
+  <code>background-color: #ffffff;</code>
+<code>}</code>
+
+<code>.button.secondary.color-two:hover, .button.secondary.color-two:focus {</code>
+  <code>color: #ffffff;</code>
+  <code>background-color: #0f4a92;</code>
+<code>}</code>
+          </pre>
+        </figure>
+      </section>
+      <section id="span-buttons">
+        <div class="text lg">
+          <h1>Buttons with Pre- and Post- Spans</h1>
+        </div>
+        <div class="button-box">
+          <span class="button color-one"><span class="pre"><i class="la la-angle-left"></i></span>Primary Button</span>
+          <span class="button secondary color-one">Secondary Button<span class="post"><i class="la la-angle-right"></i></span></span>
+        </div>
+        <div class="button-box">
+          <span class="button color-two">Primary Button<span class="post"><i class="la la-paperclip"></i></span></span>
+          <span class="button secondary color-two">Secondary Button<span class="post"><i class="la la-paperclip"></i></span></span>
+        </div>
+        <figure class="lg">
+          <figcaption>html</figcaption>
+          <pre>
+<code>&lt;div class=&quot;button-box&quot;&gt;</code>
+  <code>&lt;span class=&quot;button color-one&quot;&gt;&lt;span class=&quot;pre&quot;&gt;&lt;i class=&quot;la la-angle-left&quot;&gt;&lt;/i&gt;&lt;/span&gt;Primary Button&lt;/span&gt;</code>
+  <code>&lt;span class=&quot;button secondary color-one&quot;&gt;Secondary Button&lt;span class=&quot;post&quot;&gt;&lt;i class=&quot;la la-angle-right&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/span&gt;</code>
+<code>&lt;/div&gt;</code>
+<code>&lt;div class=&quot;button-box&quot;&gt;</code>
+  <code>&lt;span class=&quot;button color-two&quot;&gt;Primary Button&lt;span class=&quot;post&quot;&gt;&lt;i class=&quot;la la-paperclip&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/span&gt;</code>
+  <code>&lt;span class=&quot;button secondary color-two&quot;&gt;Secondary Button&lt;span class=&quot;post&quot;&gt;&lt;i class=&quot;la la-paperclip&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/span&gt;</code>
+<code>&lt;/div&gt;</code>
+          </pre>
+        </figure>
+        <figure class="lg">
+          <figcaption>css</figcaption>
+          <pre>
+<code>.button span.post {</code>
+  <code>margin: -0.0525rem 0 0;</code>
+  <code>padding: 0 0 0 0.5rem;</code>
+  <code>font-size: 1rem;</code>
+<code>}</code>
+
+<code>.button span.pre {</code>
+  <code>margin: -0.0525rem 0 0;</code>
+  <code>padding: 0 0.5rem 0 0;</code>
+  <code>font-size: 1rem;</code>
+<code>}</code>
+          </pre>
+        </figure>
+      </section>
+
+
+      <section id="buttons-with-numbers">
+        <div class="text lg">
+          <h1>Buttons with Number Counters</h1>
+        </div>
+        <div class="button-box">
+          <span class="button color-one">Primary Button<span class="post-number">1</span></span>
+          <span class="button secondary color-one">Secondary Button<span class="post-number">8</span></span>
+        </div>
+        <div class="button-box">
+          <span class="button color-two">Primary Button<span class="post-number">4</span></span>
+          <span class="button secondary color-two">Secondary Button<span class="post-number">3</span></span>
+        </div>
+        <figure class="lg">
+          <figcaption>html</figcaption>
+          <pre>
+<code>&lt;div class=&quot;button-box&quot;&gt;</code>
+  <code>&lt;span class=&quot;button color-one&quot;&gt;Primary Button&lt;span class=&quot;post-number&quot;&gt;1&lt;/span&gt;&lt;/span&gt;</code>
+  <code>&lt;span class=&quot;button secondary color-one&quot;&gt;Secondary Button&lt;span class=&quot;post-number&quot;&gt;8&lt;/span&gt;&lt;/span&gt;</code>
+<code>&lt;/div&gt;</code>
+<code>&lt;div class=&quot;button-box&quot;&gt;</code>
+  <code>&lt;span class=&quot;button color-two&quot;&gt;Primary Button&lt;span class=&quot;post-number&quot;&gt;4&lt;/span&gt;&lt;/span&gt;</code>
+  <code>&lt;span class=&quot;button secondary color-two&quot;&gt;Secondary Button&lt;span class=&quot;post-number&quot;&gt;3&lt;/span&gt;&lt;/span&gt;</code>
+<code>&lt;/div&gt;</code>
+          </pre>
+        </figure>
+      </section>
+
+        <figure class="lg">
+          <figcaption>css</figcaption>
+          <pre>
+<code>.button span.post-number {</code>
+  <code>display: flex;</code>
+  <code>align-items: center;</code>
+  <code>justify-content: center;</code>
+  <code>width: 1.5rem;</code>
+  <code>height: 1.5rem;</code>
+  <code>margin: 0 0 0 0.5rem;</code>
+  <code>border-radius: 2rem;</code>
+  <code>font-weight: 700;</code>
+<code>}</code>
+          </pre>
+        </figure>
+      </section>
+
+
+      <section id="expanding-buttons">
+        <div class="button-box">
+          <div class="expanding-button-box color-one one">
+            <div class="expanding-button small click-one"><span class="icon-close"><i class="la la-trash"></i></span></div>
+            <div class="expanding-button large click-one">Click Here</div>
+            <div class="confirm-action-box">
+              <span class="confirm-action-text">Are you sure?</span>
+              <span class="confirm-action secondary no-one">No</span>
+              <span class="confirm-action yes-one">Yes</span>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="button-box">
-        <div class="expanding-button-box color-two two">
-          <div class="expanding-button small click-two"><span class="icon-close"><i class="la la-trash"></i></span></div>
-          <div class="expanding-button large click-two">Click Here</div>
-          <div class="confirm-action-box">
-            <span class="confirm-action-text">Are you sure?</span>
-            <span class="confirm-action secondary no-two">No</span>
-            <span class="confirm-action yes-two">Yes</span>
+        <div class="button-box">
+          <div class="expanding-button-box color-two two">
+            <div class="expanding-button small click-two"><span class="icon-close"><i class="la la-trash"></i></span></div>
+            <div class="expanding-button large click-two">Click Here</div>
+            <div class="confirm-action-box">
+              <span class="confirm-action-text">Are you sure?</span>
+              <span class="confirm-action secondary no-two">No</span>
+              <span class="confirm-action yes-two">Yes</span>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
     </main>
     <footer>&copy;2018 Enservio, Inc. All rights reserved.&nbsp;<a href="#!">Terms&nbsp;&amp;&nbsp;Conditions</a></footer>
     <!-- scripts -->
