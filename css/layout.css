@@ -22,7 +22,7 @@ main {
   padding: 2rem 2rem 0;
 }
 
-.text:first-of-type {padding: 0 2rem 0;}
+.text.first {padding: 0 2rem;}
 
 .text.border:before {
   display: block;

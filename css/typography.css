@@ -37,10 +37,7 @@ p {
 
 p:last-child {padding: 0.694rem 0 0;}
 
-small {
-  padding: 0 0 1rem;
-  font-size: 0.833rem;
-}
+small {font-size: 0.833rem;}
 
 strong, em, b {
   font-style: normal;
