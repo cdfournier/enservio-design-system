@@ -1,0 +1,671 @@
+//VARIABLES
+$serif: "Roboto Slab", serif;
+$sans-serif: "Montserrat", sans-serif;
+
+$white: #ffffff;
+$light-gray: #cccece;
+$dark-gray: #444853;
+$black: #000000;
+$errors: #d0021b;
+$okay: #008000;
+$color-one: #2e84ed;
+$color-two: #0f4a92;
+
+//MIXINS
+@mixin transition($what: all, $time: 0.25s, $how: ease-in-out) {
+  -webkit-transition: $what $time $how;
+  -moz-transition: $what $time $how;
+  -ms-transition: $what $time $how;
+  -o-transition: $what $time $how;
+  transition: $what $time $how;
+};
+
+@mixin transform($property: all) {
+  -webkit-transform: $property;
+  -moz-transform: $property;
+  -ms-transform: $property;
+  -o-transform: $property;
+  transform: $property;
+};
+
+@mixin appearance($appearance: none) {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;  
+};
+
+
+/* ------------------------------------------
+  BASE SITE STYLES
+--------------------------------------------- */
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0;
+  font-family: $sans-serif;
+  font-size: calc(0.75rem + 0.5vw);
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.2;
+  color: $black;
+}
+
+body {animation: 1s ease-out 0s 1 fadeIn;}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a {
+  font-weight: 500;
+  text-decoration: none;
+  color: $color-one;
+  @include transition (all, 0.25s, ease);
+}
+
+a:hover, a:focus, a:active {color: $color-two;}
+
+img {
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+
+/* ------------------------------------------
+  TYPOGRAPHY
+--------------------------------------------- */
+h1, h2, h3, p {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+}
+
+h1 {
+  font-family: $serif;
+  font-size: 1.728rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  -webkit-column-span: all;
+  -moz-column-span: all;
+  column-span: all;
+}
+
+h2, h3 {
+  font-family: $serif;
+  font-size: 1.44rem;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+h3 {font-size: 1.2rem;}
+
+p {
+  padding: 0.694rem 0 0.694rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+p:last-child {padding: 0.694rem 0 0;}
+
+small {font-size: 0.833rem;}
+
+strong, em, b {
+  font-style: normal;
+  font-weight: 500;
+}
+
+h1.center, h2.center, h3.center, p.center, strong.center, em.center, small.center {text-align: center;}
+
+h1.right, h2.right, h3.right, p.right, strong.right, em.right, small.right {text-align: right;}
+
+
+/* ------------------------------------------
+  LISTS
+--------------------------------------------- */
+ul, ol {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0 1rem 1rem;
+  font-size: 1rem;
+  text-align: left;
+}
+
+ul {list-style-type: disc;}
+
+ol {list-style-type: decimal;}
+
+ul li, ol li {
+  width: 100%;
+  padding: 0 0 1rem 0;
+}
+
+ul li:last-child, ol li:last-child {padding: 0;}
+
+
+/* ------------------------------------------
+  PRIMARY BUTTONS
+--------------------------------------------- */
+button,
+.button {
+  display: inline-flex;
+  align-items: center;
+  width: auto;
+  min-height: 2.25rem;
+  max-height: 2.25rem;
+  margin: 1rem auto 0;
+  padding: 0 1.75rem;
+  border-radius: 4rem;
+  font-size: 0.694rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 0;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  cursor: pointer;
+  @include transition (all, 0.25s, ease-in-out);
+}
+
+@media (min-width: 48rem) {button, .button {margin: 1rem 0.5rem 0;}}
+
+button span.pre, .button span.pre,
+button span.post, .button span.post {
+  margin: -0.0525rem 0 0;
+  font-size: 1rem;
+}
+
+button span.pre, .button span.pre {padding: 0 0.5rem 0 0;}
+
+button span.post, .button span.post {padding: 0 0 0 0.5rem;}
+
+button span.post-number,
+.button span.post-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0 0 0 0.5rem;
+  border-radius: 2rem;
+  font-weight: 700;
+}
+
+button.big,
+.button.big {
+  min-height: inherit;
+  max-height: inherit;
+  padding: 1.25rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+button.color-one,
+.button.color-one {
+  border: 1px solid $color-one;
+  color: $white;
+  background-color: $color-one;
+}
+
+button.color-one:hover, button.color-one:focus,
+.button.color-one:hover, .button.color-one:focus {
+  color: $color-one;
+  background-color: $white;
+}
+
+button.color-one span.post-number,
+.button.color-one span.post-number {
+  color: $color-one;
+  background-color: $white;
+}
+
+button.color-one:hover span.post-number, button.color-one:focus span.post-number,
+.button.color-one:hover span.post-number, .button.color-one:focus span.post-number {
+  color: $white;
+  background-color: $color-one;
+}
+
+button.color-two,
+.button.color-two {
+  border: 1px solid $color-two;
+  color: $white;
+  background-color: $color-two;
+}
+
+button.color-two:hover, button.color-two:focus,
+.button.color-two:hover, .button.color-two:focus {
+  color: $color-two;
+  background-color: $white;
+}
+
+button.color-two span.post-number,
+.button.color-two span.post-number {
+  color: $color-two;
+  background-color: $white;
+}
+
+button.color-two:hover span.post-number, button.color-two:focus span.post-number,
+.button.color-two:hover span.post-number, .button.color-two:focus span.post-number {
+  color: $white;
+  background-color: $color-two;
+}
+
+button.secondary.color-one,
+.button.secondary.color-one {
+  border: 1px solid $color-one;
+  color: $color-one;
+  background-color: $white;
+}
+
+button.secondary.color-one:hover, button.secondary.color-one:focus,
+.button.secondary.color-one:hover, .button.secondary.color-one:focus {
+  color: $white;
+  background-color: $color-one;
+}
+
+button.secondary.color-one span.post-number,
+.button.secondary.color-one span.post-number {
+  color: $white;
+  background-color: $color-one;
+}
+
+button.secondary.color-one:hover span.post-number, button.secondary.color-one:focus span.post-number,
+.button.secondary.color-one:hover span.post-number, .button.secondary.color-one:focus span.post-number {
+  color: $color-one;
+  background-color: $white;
+}
+
+button.secondary.color-two,
+.button.secondary.color-two {
+  border: 1px solid $color-two;
+  color: $color-two;
+  background-color: $white;
+}
+
+button.secondary.color-two:hover, button.secondary.color-two:focus,
+.button.secondary.color-two:hover, .button.secondary.color-two:focus {
+  color: $white;
+  background-color: $color-two;
+}
+
+button.secondary.color-two span.post-number,
+.button.secondary.color-two span.post-number {
+  color: $white;
+  background-color: $color-two;
+}
+
+button.secondary.color-two:hover span.post-number, button.secondary.color-two:focus span.post-number,
+.button.secondary.color-two:hover span.post-number, .button.secondary.color-two:focus span.post-number {
+  color: $color-two;
+  background-color: $white;
+}
+
+
+/* ------------------------------------------
+  BUTTON BOX/ROW CONTAINER
+--------------------------------------------- */
+.button-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.button-box.right {justify-content: flex-end;}
+
+.button-box.left {justify-content: flex-start;}
+
+@media (min-width: 48rem) {
+.button-box {
+  flex-direction: row;
+  justify-content: center;
+}}
+
+
+/* ------------------------------------------
+  HEADER
+--------------------------------------------- */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  padding: 1rem 2rem;
+  background-color: $white;
+}
+
+.header--fixed {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.headroom {
+  @include transition (all, 0.25s, ease-in-out);
+  will-change: transform;
+}
+
+.headroom--pinned {@include transform(translateY(0));}
+
+.headroom--unpinned {@include transform(translateY(-100%));}
+
+@media (min-width: 35.5rem) {
+header {
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+}}
+
+
+/* ------------------------------------------
+  LOGO
+--------------------------------------------- */
+.logo {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 12rem;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* ------------------------------------------
+  NAVIGATION
+--------------------------------------------- */
+nav {
+  ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: initial;
+    margin: 0;
+    padding: 0 0.694rem;
+    font-size: 0.694rem;
+    text-align: center;
+    text-transform: uppercase;
+    opacity: 1;
+  }
+}
+
+@media (min-width: 35.5rem) {
+nav {padding: 0;}
+nav ul {justify-content: flex-end;}
+nav ul li {
+  font-size: 0.833rem;
+  padding: 0 0 0 1.44rem;
+}
+nav ul li:last-child {padding: 0 0 0 1.44rem;}}
+
+
+/* ------------------------------------------
+  FOOTER
+--------------------------------------------- */
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+  padding: 2rem;
+  font-size: 0.833rem;
+  text-align: center;
+}
+
+footer a {padding: 0.644rem 0 0;}
+
+
+/* ------------------------------------------
+  MAIN
+--------------------------------------------- */
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  padding: 6rem 0 0;
+}
+
+
+/* ------------------------------------------
+  TEXT BOX
+--------------------------------------------- */
+.text {
+  display: block;
+  width: 100%;
+  margin: auto;
+  padding: 2rem 2rem 0;
+}
+
+.text.first {padding: 0 2rem;}
+
+.text.border:before {
+  display: block;
+  margin: 0 auto 2rem;
+  border-top: 1px solid $light-gray;
+  content: "";
+}
+
+.text.center {text-align: center;}
+
+
+/* ------------------------------------------
+  MAX-WIDTHS
+--------------------------------------------- */
+.sm {max-width: 24rem;}
+
+.md {max-width: 32rem;}
+
+.lg {max-width: 40rem;}
+
+
+/* ------------------------------------------
+  INPUT RESETS
+--------------------------------------------- */
+input[type=text],
+input[type=email],
+input[type=tel],
+input[type=url],
+input[type=password],
+input[type=search],
+input[type=file],
+input[type=select] {
+  font-size: 1rem;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  @include appearance (none);
+}
+
+input.username:disabled {
+  font-weight: 500;
+  color: #000000;
+  opacity: 1;
+}
+
+
+/* ------------------------------------------
+  FORM STRUCTURE
+--------------------------------------------- */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1rem 0;
+}
+
+fieldset {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+legend {display: none;}
+
+.field {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  position: relative;
+  width: 100%;
+  margin: 0 0 1rem;
+  padding: 0 1rem;
+}
+
+.small {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+/* INPUTS, LABELS, AND PLACEHOLDERS */
+.field label, .field input {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.833rem;
+  @include transition(all, 0.25s, ease-in-out);
+  touch-action: manipulation;
+}
+
+.field input {
+  z-index: 500;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  border-bottom: 1px solid $black;
+  border-radius: 0;
+  font-weight: 400;
+  line-height: 3;
+  background-color: transparent;
+  cursor: text;
+}
+
+.field input.valid:disabled {opacity: 1;}
+
+.field label {
+  margin: 0;
+  width: 100%;
+  font-weight: 500;
+  text-align: left;
+  color: $black;
+}
+
+.field input:placeholder-shown + label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: text;
+  transform-origin: left bottom;
+  @include transform (translate(0,1.5rem));
+}
+
+input::placeholder {
+  opacity: 0;
+  transition: inherit;
+}
+
+input:focus::placeholder {
+  opacity: 1;
+  color: $light-gray;
+}
+
+.field input:not(:placeholder-shown) + label,
+.field input:focus + label {
+  cursor: pointer;
+  @include transform (translate(0,0));
+}
+
+@media (min-width: 48rem) {
+form {
+  flex-direction: row;
+  flex-wrap: wrap;
+}}
+
+
+/* ------------------------------------------
+  CHECKBOXES
+--------------------------------------------- */
+input[type="checkbox"] {
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin: 0;
+  border: 1px solid $black;
+  background-color: $white;
+  cursor: pointer;
+  @include appearance(none);
+  @include transition(all, 0.25s, ease-in-out);
+}
+
+input[type="checkbox"]:checked:before {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 1.125rem;
+  width: 1.125rem;
+  margin: 0;
+  font-family: "LineAwesome";
+  font-size: 1rem;
+  color: $white;
+  content: '\f17b';
+}
+
+input[type="checkbox"]:checked:not(:disabled) {background-color: $black;}
+
+.field.invalid input[type="checkbox"]:checked:not(:disabled) {background-color: $errors;}
+
+label.checkbox, label.radio {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  min-height: 1.25rem;
+  padding: 0 0 0 1.75rem;
+}
