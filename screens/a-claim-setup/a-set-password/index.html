@@ -25,11 +25,11 @@
           <h1>Welcome</h1>
           <p>Hello {First_Name}! Please set a password to continue.</p>
         </div>
-        <form class="sm">
+        <form class="sm" action="../b-fraud-warning/index.html">
           <fieldset>
             <legend>Email Address</legend>
             <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
-              <!-- <span class="error-message"></span> -->
+              <span class="error-message"></span>
               <input type="email" name="username" id="username" class="username" value="{Email_Address}" disabled>
               <label for="username">Your Email*</label>
             </div>
@@ -37,19 +37,19 @@
           <fieldset>
             <legend>Password</legend>
             <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
-              <!-- <span class="error-message">This password does not meet the minimum requirements below</span> -->
+              <span class="error-message">This password does not meet the minimum requirements below</span>
               <input type="password" name="password" id="password" placeholder="Choose a password" maxlength="50" minlength="8" autocomplete="new-password" required>
               <label for="password">Password*</label>
-              <!-- <span class="valid"><i class="la la-check-circle-o"></i></span> -->
+              <span class="valid"><i class="la la-check-circle-o"></i></span>
             </div>
           </fieldset>
           <fieldset>
             <legend>Confirm Password</legend>
             <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
-              <!-- <span class="error-message">Your passwords do not match</span> -->
+              <span class="error-message">Your passwords do not match</span>
               <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirm your password" maxlength="50" minlength="8" autocomplete="new-password" required>
               <label for="password">Confirm Password*</label>
-              <!-- <span class="valid"><i class="la la-check-circle-o"></i></span> -->
+              <span class="valid"><i class="la la-check-circle-o"></i></span>
             </div>
           </fieldset>
           <fieldset>
@@ -61,9 +61,58 @@
             </div>
           </fieldset>
           <div class="button-box">
-            <button class="button color-one">Set Password<span class="post"><i class="la la-angle-right"></i></span></button>
+            <button class="button color-one">Set Password</button>
           </div>
         </form>
+      </section>
+      <section id="password-requirements">
+        <div class="text border md">
+          <h2>Password Requirements</h2>
+          <ul class="requirements">
+            <li class="default">Passwords must match&nbsp; <!-- change li class from default to valid or invalid as necessary -->
+              <span>
+                <i class="la la-circle"></i>
+                <i class="la la-check-circle"></i>
+                <i class="la la-exclamation-circle"></i>
+              </span>
+            </li>
+            <li class="default">Passwords must contain between 8&#8211;50 characters&nbsp;
+              <span>
+                <i class="la la-circle"></i>
+                <i class="la la-check-circle"></i>
+                <i class="la la-exclamation-circle"></i>
+              </span>
+            </li>
+            <li class="default">Passwords must contain least 1 upper&#45;case letter&nbsp;
+              <span>
+                <i class="la la-circle"></i>
+                <i class="la la-check-circle"></i>
+                <i class="la la-exclamation-circle"></i>
+              </span>
+            </li>
+            <li class="default">Passwords must contain least 1 lower&#45;case letter&nbsp;
+              <span>
+                <i class="la la-circle"></i>
+                <i class="la la-check-circle"></i>
+                <i class="la la-exclamation-circle"></i>
+              </span>
+            </li>
+            <li class="default">Passwords must contain least 1 number&nbsp;
+              <span>
+                <i class="la la-circle"></i>
+                <i class="la la-check-circle"></i>
+                <i class="la la-exclamation-circle"></i>
+              </span>
+            </li>
+            <li class="default">Passwords must contain least 1 of the following characters: &#x21;&#x20;&#x40;&#x20;&#x23;&#x20;&#x24;&#x20;&#x25;&#x20;&#x5e;&#x20;&#x26;&#x20;&#x2a;&#x20;&#x28;&#x20;&#x29;&#x20;&#x27;&#x20;&#x2d;&#x20;&#x2b;&#x20;&#x2c;&#x20;&#x2e;&#x20;&#x2f;&#x20;&#x3a;&#x20;&#x3b;&#x20;&#x3c;&#x20;&#x3d;&#x20;&#x3e;&#x20;&#x3f;&#x20;&#x5b;&#x20;&#x5d;&#x20;&#x5f;&#x20;&#x60;&#x20;&#x7b;&#x20;&#x7d;&#x20;&#x7c;&#x20;&#x5c;&#x20;&nbsp;
+              <span>
+                <i class="la la-circle"></i>
+                <i class="la la-check-circle"></i>
+                <i class="la la-exclamation-circle"></i>
+              </span>
+            </li>
+          </ul>
+        </div>
       </section>
     </main>
     <footer>&copy;2018 Enservio, Inc. All rights reserved.&nbsp;<a href="#!">Terms&nbsp;&amp;&nbsp;Conditions</a></footer>
