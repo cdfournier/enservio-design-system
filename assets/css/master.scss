@@ -285,6 +285,23 @@ ul.attachment-list li.invalid .line-item span.file-name {color: $errors;}
 ul.attachment-list li.invalid .button-box.right {opacity: 0;}
 
 
+/* INVENTORY HELP LIST STYLES */
+.carousel .carousel-cell.center ul {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  margin: 0;
+}
+
+@media (min-height: 48rem) {
+.carousel .carousel-cell.center ul {
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+.carousel .carousel-cell.center ul li {width: auto;}}
+
+
 /* ------------------------------------------
   BUTTONS
 --------------------------------------------- */
@@ -442,6 +459,14 @@ button.secondary.color-two:hover span.post-number, button.secondary.color-two:fo
   color: $color-two;
   background-color: $white;
 }
+
+// HIDE BUTTONS
+.button.skip {
+  opacity: 1;
+	@include transition (all, 0.25s, ease-in-out);
+}
+
+.button.skip.hide {opacity: 0;}
 
 
 // EXPANDING BUTTONS
@@ -787,6 +812,47 @@ main {
 .text.center {text-align: center;}
 
 
+// STATUS BARS
+.status-bar {
+  position: fixed;
+  z-index: 1500;
+  width: 100%;
+  @include transition (all, 0.5s, ease-in-out);
+  @include transform (translateY(-20rem));
+}
+
+.status-bar.error {background-color: $errors;}
+
+.status-bar.success {background-color: $okay;}
+
+.status-bar.error.show,
+.status-bar.success.show {@include transform (translateY(0));}
+
+.status-bar .status-bar-details {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1rem;
+  color: $white;
+}
+
+.status-bar .status-bar-details p {
+  padding: 0;
+  font-weight: 400;
+  color: $white;
+}
+
+.status-bar .status-bar-details span {font-size: 2rem;}
+
+.status-bar .status-bar-details span.dismiss {cursor: pointer;}
+
+.status-bar .status-bar-details span:first-of-type {padding: 0 1rem 0 0;}
+
+.status-bar .status-bar-details span:last-of-type {padding: 0 0 0 1rem;}
+
+@media (min-width: 48rem) {.status-bar .status-bar-details {padding: 2rem;}}
+
+
 // UPLOAD CONTAINER
 .upload-container {display: none;}
 
@@ -802,6 +868,68 @@ main {
   border-radius: 0.25rem;
   text-align: center;
 }
+
+
+// CAROUSELS
+.carousel {
+  display: block;
+  width: 100%;
+  max-width: 40rem;
+  margin: 0 auto 1rem;
+  padding: 0;
+}
+
+.carousel .flickity-prev-next-button {display: none;}
+
+.carousel .flickity-button-icon {fill: $color-one;}
+
+.carousel .flickity-page-dots {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  position: inherit;
+  bottom: 0;
+  width: 100%;
+}
+
+.carousel .flickity-page-dots .dot {
+  width: 0.625rem;
+  height: 0.625rem;
+  margin: 0 0.25rem;
+  padding: 0;
+  line-height: 1;
+  background: $color-one;
+}
+
+.carousel .carousel-cell {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 40rem;
+  min-height: 100%;
+  margin: auto;
+  padding: 0 2rem 2rem;
+  text-align: left;
+}
+
+.carousel .carousel-cell.center {text-align: center;}
+
+.carousel-cell .graphic {
+  width: 25%;
+  margin: 0 auto 2rem;
+}
+
+.carousel-cell .graphic.wide {
+  width: 100%;
+  margin: 0;
+}
+
+@media (min-width: 48rem) {
+.carousel .flickity-prev-next-button {display: block;}
+.carousel .carousel-cell {padding: 0 6rem 2rem;}}
 
 
 // MAX-WIDTHS
@@ -876,7 +1004,10 @@ form {
   flex-direction: row;
   flex-wrap: wrap;
 }
-fieldset.small {width: 25%;}}
+form.column {flex-direction: column;}
+form.column fieldset.small {width: 25%;}
+fieldset {width: 50%;}
+}
 
 
 // INPUTS, LABELS, AND PLACEHOLDERS

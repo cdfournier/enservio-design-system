@@ -237,6 +237,21 @@ ul.attachment-list li.invalid .line-item span.file-name {
 ul.attachment-list li.invalid .button-box.right {
   opacity: 0; }
 
+/* INVENTORY HELP LIST STYLES */
+.carousel .carousel-cell.center ul {
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  margin: 0; }
+
+@media (min-height: 48rem) {
+  .carousel .carousel-cell.center ul {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%; }
+  .carousel .carousel-cell.center ul li {
+    width: auto; } }
+
 /* ------------------------------------------
   BUTTONS
 --------------------------------------------- */
@@ -382,6 +397,17 @@ button.secondary.color-two:hover span.post-number, button.secondary.color-two:fo
 .button.secondary.color-two:hover span.post-number, .button.secondary.color-two:focus span.post-number {
   color: #0f4a92;
   background-color: #ffffff; }
+
+.button.skip {
+  opacity: 1;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out; }
+
+.button.skip.hide {
+  opacity: 0; }
 
 .expanding-button-box {
   display: inline-flex;
@@ -722,6 +748,63 @@ main {
 .text.center {
   text-align: center; }
 
+.status-bar {
+  position: fixed;
+  z-index: 1500;
+  width: 100%;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transform: translateY(-20rem);
+  -moz-transform: translateY(-20rem);
+  -ms-transform: translateY(-20rem);
+  -o-transform: translateY(-20rem);
+  transform: translateY(-20rem); }
+
+.status-bar.error {
+  background-color: #d0021b; }
+
+.status-bar.success {
+  background-color: #008000; }
+
+.status-bar.error.show,
+.status-bar.success.show {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0); }
+
+.status-bar .status-bar-details {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1rem;
+  color: #ffffff; }
+
+.status-bar .status-bar-details p {
+  padding: 0;
+  font-weight: 400;
+  color: #ffffff; }
+
+.status-bar .status-bar-details span {
+  font-size: 2rem; }
+
+.status-bar .status-bar-details span.dismiss {
+  cursor: pointer; }
+
+.status-bar .status-bar-details span:first-of-type {
+  padding: 0 1rem 0 0; }
+
+.status-bar .status-bar-details span:last-of-type {
+  padding: 0 0 0 1rem; }
+
+@media (min-width: 48rem) {
+  .status-bar .status-bar-details {
+    padding: 2rem; } }
+
 .upload-container {
   display: none; }
 
@@ -736,6 +819,65 @@ main {
   border: 1px solid #cccece;
   border-radius: 0.25rem;
   text-align: center; }
+
+.carousel {
+  display: block;
+  width: 100%;
+  max-width: 40rem;
+  margin: 0 auto 1rem;
+  padding: 0; }
+
+.carousel .flickity-prev-next-button {
+  display: none; }
+
+.carousel .flickity-button-icon {
+  fill: #2e84ed; }
+
+.carousel .flickity-page-dots {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  position: inherit;
+  bottom: 0;
+  width: 100%; }
+
+.carousel .flickity-page-dots .dot {
+  width: 0.625rem;
+  height: 0.625rem;
+  margin: 0 0.25rem;
+  padding: 0;
+  line-height: 1;
+  background: #2e84ed; }
+
+.carousel .carousel-cell {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  max-width: 40rem;
+  min-height: 100%;
+  margin: auto;
+  padding: 0 2rem 2rem;
+  text-align: left; }
+
+.carousel .carousel-cell.center {
+  text-align: center; }
+
+.carousel-cell .graphic {
+  width: 25%;
+  margin: 0 auto 2rem; }
+
+.carousel-cell .graphic.wide {
+  width: 100%;
+  margin: 0; }
+
+@media (min-width: 48rem) {
+  .carousel .flickity-prev-next-button {
+    display: block; }
+  .carousel .carousel-cell {
+    padding: 0 6rem 2rem; } }
 
 .sm {
   max-width: 24rem; }
@@ -805,8 +947,12 @@ legend {
   form {
     flex-direction: row;
     flex-wrap: wrap; }
-  fieldset.small {
-    width: 25%; } }
+  form.column {
+    flex-direction: column; }
+  form.column fieldset.small {
+    width: 25%; }
+  fieldset {
+    width: 50%; } }
 
 .field label, .field input {
   font-family: "Montserrat", sans-serif;
