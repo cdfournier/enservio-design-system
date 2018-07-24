@@ -10,3 +10,21 @@ $(".item-one").click(function() {
 $(".item-two").click(function() {
   $(".expanding-button-box.item-two").toggleClass("expand");
 });
+$(".click-two").click(function() {
+  $(".expanding-button-box.two").toggleClass("expand");
+});
+$(".no-two").click( function() {
+  $(".expanding-button-box.two").removeClass("expand");
+});
+$(".yes-two").click( function() {
+  $(".expanding-button-box.two").removeClass("expand");
+});
+$(".click-one").click(function() {
+  $(".expanding-button-box.one").toggleClass("expand");
+});
+$(".no-one").click( function() {
+  $(".expanding-button-box.one").removeClass("expand");
+});
+$(".yes-one").click( function() {
+  $(".expanding-button-box.one").removeClass("expand");
+});
