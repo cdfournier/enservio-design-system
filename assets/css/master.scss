@@ -352,6 +352,23 @@ button span.post-number,
   font-weight: 700;
 }
 
+button span.post-processing,
+.button span.post-processing {
+  max-width: 0;
+  opacity: 0;
+  margin: -0.0525rem 0 0;
+  padding: 0;
+  font-size: 1rem;
+  @include transition (all, 0.25s, ease-in-out);
+}
+
+button span.post-processing.active,
+.button span.post-processing.active {
+  max-width: 100%;
+  opacity: 1;
+  padding: 0 0 0 0.5rem;
+}
+
 button.big,
 .button.big {
   min-height: inherit;
@@ -479,7 +496,7 @@ button.secondary.color-two:hover span.post-number, button.secondary.color-two:fo
   border-radius: 4rem;
   overflow: hidden;
   cursor: pointer;
-	@include transition (all, 0.25s, ease-in-out);
+  @include transition (all, 0.25s, ease-in-out);
 }
 
 .line-item .expanding-button-box {margin: 0;}
@@ -558,7 +575,7 @@ button.secondary.color-two:hover span.post-number, button.secondary.color-two:fo
 
 .expanding-button-box .confirm-action-box span.confirm-action {
   margin: 0 0 0 0.5rem;
-  padding: 0.675rem 1rem;
+  padding: 0.675rem 0.75rem;
   border-radius: 4rem;
   @include transition (all, 0.25s, ease-in-out);
 }
