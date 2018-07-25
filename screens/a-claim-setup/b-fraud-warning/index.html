@@ -25,7 +25,7 @@
           <h1>For Your Protection</h1>
           <p>Please be advised of the following: any person who knowingly presents a false or fraudulent claim for payments of a loss, or knowingly presents false or misleading information to an insurance company for the purpose of defrauding or attempting to defraud an insurance company, or provides false information concerning a material fact on an application for insurance, or helps any other person commit such acts, may be guilty of fraud, and may be subject to substantial civil and criminal penalties pursuant to the laws of the state in which those acts occur.</p>
         </div>
-        <form class="lg column" action="../c-claim-attachments/index.html">
+        <form class="lg" action="../c-claim-attachments/index.html">
           <fieldset>
             <legend>Fraud Warning</legend>
             <div class="field"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
@@ -34,14 +34,16 @@
               <label class="checkbox" for="show-password">I certify that I have read and understand the above</label>
             </div>
           </fieldset>
-          <fieldset class="small">
-            <legend>Initial</legend>
-            <div class="field"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
-              <span class="error-message">Please include your initials here</span>
-              <input type="text" name="initials" id="initials" placeholder="Initial here" style="text-transform: uppercase;" required>
-              <label for="initials">Initial Here&#42;</label>
-            </div>
-          </fieldset>
+          <div class="xsmall">
+            <fieldset>
+              <legend>Initial</legend>
+              <div class="field"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
+                <span class="error-message">Please include your initials here</span>
+                <input type="text" name="initials" id="initials" placeholder="Initial here" style="text-transform: uppercase;" required>
+                <label for="initials">Initial Here&#42;</label>
+              </div>
+            </fieldset>
+          </div>
           <div class="button-box">
             <button class="button color-one">Accept</button>
           </div>

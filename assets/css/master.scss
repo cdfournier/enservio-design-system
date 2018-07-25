@@ -328,7 +328,7 @@ button,
   @include transition (all, 0.25s, ease-in-out);
 }
 
-@media (min-width: 48rem) {button, .button {margin: 1rem 0.5rem 0;}}
+@media (min-width: 48rem) {button, .button {margin: 0 0.5rem 0;}}
 
 button span.pre, .button span.pre,
 button span.post, .button span.post {
@@ -482,6 +482,8 @@ button.secondary.color-two:hover span.post-number, button.secondary.color-two:fo
 	@include transition (all, 0.25s, ease-in-out);
 }
 
+.line-item .expanding-button-box {margin: 0;}
+
 .expanding-button-box.expand {max-width: 100%;}
 
 .expanding-button-box .expanding-button {
@@ -496,6 +498,8 @@ button.secondary.color-two:hover span.post-number, button.secondary.color-two:fo
 
 .expanding-button-box .expanding-button.small {
   display: flex;
+  width: 2.25rem;
+  height: 2.25rem;
   max-width: 2.25rem;
   max-height: 2.25rem;
   margin: auto;
@@ -661,6 +665,7 @@ span.button.upload input[type=file] {
 
 .button-box.right, .button-box.left {align-items: center;}
 
+
 @media (min-width: 48rem) {
 .button-box {
   flex-direction: row;
@@ -670,12 +675,13 @@ span.button.upload input[type=file] {
   align-items: flex-end;
   justify-content: flex-end;
 }
-.button-box.right .button {margin: 1rem 0 0 1rem;}
+.button-box.right .button {margin: 0 0 0 1rem;}
 .button-box.left {
   align-items: flex-start;
   justify-content: flex-start;
 }
-.button-box.left .button {margin: 1rem 1rem 0 0;}}
+.button-box.left .button {margin: 0 1rem 0 0;}
+form .button-box {padding: 0 1rem;}}
 
 
 /* ------------------------------------------
@@ -798,6 +804,7 @@ main {
 // TEXT BOX
 .text {
   display: block;
+  position: relative;
   width: 100%;
   margin: auto;
   padding: 2rem 2rem 0;
@@ -865,7 +872,7 @@ main {
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin: 0 auto 1rem;
+  margin: 0 auto 2rem;
   padding: 4rem 1rem;
   border: 1px solid #cccece;
   border-radius: 0.25rem;
@@ -937,7 +944,7 @@ main {
 
 // CURRENT INVENTORY
 .current-inventory {
-//   position: fixed;
+  position: fixed;
   top: 80%;
   left: 0;
   z-index: 1000;
@@ -970,7 +977,7 @@ main {
   justify-content: space-between;
   width: 100%;
   height: 5rem;
-  margin: 0 auto 2rem;
+  margin: 0 auto;
   padding: 1rem 2rem;
   background-color: $color-one;
   cursor: pointer;
@@ -1014,9 +1021,11 @@ main {
   background-color: $white;
 }
 
+@media (min-width: 48rem) {.current-inventory {position: relative;}}
+
 
 // CURRENT INVENTORY LIST ITEMS
-.current-inventory-list {padding: 0 2rem 2rem;}
+.current-inventory-list {padding: 2rem 1rem 0;}
 
 .inventory-item {
   display: flex;
@@ -1031,6 +1040,8 @@ main {
   background-color: $white;
   overflow: hidden;
 }
+
+.inventory-item:first-of-type {margin: 0 auto;}
 
 .inventory-item input.accordian {
   position: absolute;
@@ -1086,7 +1097,7 @@ main {
   padding: 0 0 0 2rem;
 }
 
-.inventory-item-details {
+.inventory-item .inventory-item-details {
   max-height: 0;
   @include transition (max-height, 0.25s, ease-in-out);
 }
@@ -1098,6 +1109,10 @@ main {
 
 .inventory-item input.accordian:checked ~ .inventory-item-header i.la.la-angle-down {
   @include transform (rotate(0.5turn));
+}
+
+.inventory-item .inventory-item-details form {
+  padding: 2rem 0 0;
 }
 
 @media (min-width: 48rem) {
@@ -1198,15 +1213,38 @@ legend {display: none;}
   padding: 0;
 }
 
+.xsmall {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  position: relative;
+  width: 50%;
+  margin: 0;
+  padding: 0;
+}
+
 @media (min-width: 48rem) {
 form {
   flex-direction: row;
   flex-wrap: wrap;
 }
+form.sm, form.md, form.lg {
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+form.sm fieldset,
+form.md fieldset,
+form.lg fieldset {width: 100%;}
 form.column {flex-direction: column;}
 form.column fieldset.small {width: 25%;}
 fieldset {width: 50%;}
 .small {width: 50%;}
+.xsmall {width: 25%;}
+}
+
+@media (min-width: 72rem) {
+fieldset, .small {width: 25%;}
+.small fieldset {width: 50%;}
 }
 
 

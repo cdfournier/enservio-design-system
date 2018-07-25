@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Enservio Customer Portal | Claim Attachments</title>
+    <title>Enservio Customer Portal | Add Attachments</title>
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <!-- css -->
@@ -41,21 +41,75 @@
     </header>
     <main>
       <section id="claim-attachments">
-        <div class="text first lg">
-          <h1>Claim Attachments</h1>
-          <p>Upload any attachments you may have for the entire claim (not individual items in your claim). This is a good place to add things like a police report.</p>
+        <div class="text first center lg">
+          <h1>Attachments</h1>
+          <p>You have {number} attachments for this item.</p>
         </div>
-        <form class="lg" action="../../b-inventory/a-help/index.html">
-        <div class="upload-container md">
-          <p><strong>Drag Files Here To Upload</strong></p>
-          <small>PDF, PNG, JPG, DOC</small>
+        <div class="current-inventory-list">
+          <div class="inventory-item">
+            <input id="item-1" type="radio" name="items" class="accordian">
+            <label for="item-1" class="inventory-item-header">
+              <span class="item-number">1</span>
+              <div class="item-details">
+                <span class="description"><b>Description</b>:&nbsp;Macbook Pro 13&quot;</span>
+                <span class="cost"><b>Cost</b>:&nbsp;&#36;2,500</span>
+                <span class="age"><b>Age</b>:&nbsp;1 years, 7 months</span>
+              </div>
+            </label>
+          </div>
         </div>
+        <form class="lg">
+          <div class="upload-container md">
+            <p><strong>Drag Files Here To Upload</strong></p>
+            <small>PDF, PNG, JPG, DOC</small>
+          </div>
           <div class="button-box">
             <span class="button upload color-one"><input type="file" id="files" name="files[]" multiple>Add Attachments<span class="post"><i class="la la-paperclip"></i></span></span>
             <!-- <button class="button color-one">Add Attachments<span class="post"><i class="la la-paperclip"></i></span></button> -->
-            <button class="button color-two">Skip</button>
+            <button class="button color-two">Done</button>
           </div>
         </form>
+        <div class="text center border lg">
+          <h1>This Item's Attachments</h1>
+        </div>
+        <ul class="attachment-list md">
+          <li> <!-- change class to 'invalid' for errors -->
+            <div class="line-item">
+              <span class="file-type-icon"><i class="la la-file-photo-o"></i></span>
+              <span class="file-name">Belkin_box_pic.jpg</span>
+              <div class="button-box right">
+                <div class="expanding-button-box color-one item-one">
+                  <div class="expanding-button small delete-one"><span class="icon-close"><i class="la la-trash"></i></span></div>
+                  <div class="expanding-button large delete-one">Delete Item</div>
+                  <div class="confirm-action-box">
+                    <span class="confirm-action-text">Are you sure?</span>
+                    <span class="confirm-action secondary no-one">No</span>
+                    <span class="confirm-action yes-one">Yes</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <span class="error-message file-type">This is not a valid file type</span>
+          </li>
+          <li> <!-- change class to 'invalid' for errors -->
+            <div class="line-item">
+              <span class="file-type-icon"><i class="la la-file-pdf-o"></i></span>
+              <span class="file-name">Your Receipt from Apple.pdf</span>
+              <div class="button-box right">
+                <div class="expanding-button-box color-one item-two">
+                  <div class="expanding-button small delete-two"><span class="icon-close"><i class="la la-trash"></i></span></div>
+                  <div class="expanding-button large delete-two">Click Here</div>
+                  <div class="confirm-action-box">
+                    <span class="confirm-action-text">Are you sure?</span>
+                    <span class="confirm-action secondary no-two">No</span>
+                    <span class="confirm-action yes-two">Yes</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <span class="error-message file-type">This is not a valid file type</span>
+          </li>
+        </ul>
       </section>
     </main>
     <footer>&copy;2018 Enservio, Inc. All rights reserved.&nbsp;<a href="#!">Terms&nbsp;&amp;&nbsp;Conditions</a></footer>

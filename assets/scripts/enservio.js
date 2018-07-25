@@ -28,3 +28,9 @@ $(".no-one").click( function() {
 $(".yes-one").click( function() {
   $(".expanding-button-box.one").removeClass("expand");
 });
+
+// CURRENT INVENTORY BAR BEHAVIOR
+$(".current-inventory-bar").click( function() {
+  $(".current-inventory").toggleClass("open");
+  $(".header--fixed").toggleClass("headroom--unpinned");
+});

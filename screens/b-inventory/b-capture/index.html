@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Enservio Customer Portal | Fraud Warning</title>
+    <title>Enservio Customer Portal | Inventory</title>
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <!-- css -->
@@ -12,6 +12,19 @@
     <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="../../../assets/css/master.css">
+    <style>
+      .button-box.desktop {
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 1rem;
+        width: auto;
+      }
+      @media (min-width: 48rem) {
+        .button-box.mobile {display: none;}
+        .button-box.desktop {display: flex;}
+      }
+    </style>
   </head>
   <body>
     <div class="status-bar error">
@@ -31,7 +44,7 @@
         <div class="text first">
           <h1>Your Inventory List</h1>
           <p>Please complete the form below to add items to your claim.</p>
-          <div class="button-box left">
+          <div class="button-box left desktop">
             <button class="button secondary color-one">Submit Inventory</button>
           </div>
         </div>
@@ -101,10 +114,10 @@
             <button class="button color-one">Add Item To Inventory</button>
             <button class="button color-two">Add Attachments<span class="post"><i class="la la-paperclip"></i></span></button>
           </div>
-          <div class="button-box left">
-            <button class="button secondary color-one">Submit Inventory</button>
-          </div>
         </form>
+        <div class="button-box left mobile">
+          <button class="button secondary color-one">Submit Inventory</button>
+        </div>
       </section>
       <div class="release-inventory"></div>
       <section id="current-list" class="current-inventory">
