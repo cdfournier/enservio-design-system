@@ -63,6 +63,7 @@
   <code>width: auto;</code>
   <code>min-height: 2.25rem;</code>
   <code>max-height: 2.25rem;</code>
+  <code>overflow: hidden;</code>
   <code>margin: 1rem auto 0;</code>
   <code>padding: 0 1.75rem;</code>
   <code>border-radius: 4rem;</code>
@@ -73,7 +74,6 @@
   <code>text-align: center;</code>
   <code>text-decoration: none;</code>
   <code>text-transform: uppercase;</code>
-  <code>overflow: hidden;</code>
   <code>cursor: pointer;</code>
   <code>@include transition (all, 0.25s, ease-in-out);</code>
 <code>}</code>
@@ -323,18 +323,18 @@
 <code>button span.post-processing,</code>
 <code>.button span.post-processing {</code>
   <code>max-width: 0;</code>
-  <code>opacity: 0;</code>
   <code>margin: -0.0525rem 0 0;</code>
   <code>padding: 0;</code>
   <code>font-size: 1rem;</code>
+  <code>opacity: 0;</code>
   <code>@include transition (all, 0.25s, ease-in-out);</code>
 <code>}</code>
 
 <code>button span.post-processing.active,</code>
 <code>.button span.post-processing.active {</code>
   <code>max-width: 100%;</code>
-  <code>opacity: 1;</code>
   <code>padding: 0 0 0 0.5rem;</code>
+  <code>opacity: 1;</code>
 <code>}</code>
               </pre>
             </figure>
@@ -416,9 +416,9 @@
   <code>display: inline-flex;</code>
   <code>align-items: center;</code>
   <code>max-width: 2.25rem;</code>
+  <code>overflow: hidden;</code>
   <code>margin: 1rem 0 0;</code>
   <code>border-radius: 4rem;</code>
-  <code>overflow: hidden;</code>
   <code>cursor: pointer;</code>
   <code>@include transition (all, 0.25s, ease-in-out);</code>
 <code>}</code>
@@ -440,8 +440,8 @@
 <code>.expanding-button-box .expanding-button.small {</code>
   <code>display: flex;</code>
   <code>width: 2.25rem;</code>
-  <code>height: 2.25rem;</code>
   <code>max-width: 2.25rem;</code>
+  <code>height: 2.25rem;</code>
   <code>max-height: 2.25rem;</code>
   <code>margin: auto;</code>
   <code>padding: 0.5rem;</code>
