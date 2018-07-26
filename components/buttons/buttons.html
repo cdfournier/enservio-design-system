@@ -23,6 +23,76 @@
   </head>
   <body>
     <main>
+      <section id="button-boxes">
+        <div class="text">
+          <h1>Button Boxes</h1>
+        </div>
+        <div class="split">
+          <div class="design-sample">
+            <figcaption>Design Sample</figcaption>
+            <div class="button-box left">
+              <span class="button color-one">Primary Button</span>
+            </div>
+            <div class="button-box">
+              <span class="button color-one">Primary Button</span>
+            </div>
+            <div class="button-box right">
+              <span class="button color-one">Primary Button</span>
+            </div>
+            <div class="note">
+              <p>To enable improved layout and design, all buttons are placed inside of a <code>.button-box</code> div. On small screens, buttons are centered horizontally by default. For larger screens, you can align buttons inside the <code>.button-box</code> using the <code>.left</code> or <code>.right</code> class.</p>
+            </div>
+          </div>
+          <div class="code-sample">
+            <figure>
+              <figcaption>html</figcaption>
+              <pre>
+<code>&lt;div class=&quot;button-box left&quot;&gt;</code>
+  <code>&lt;button class=&quot;button color-one&quot;&gt;Primary Button&lt;/button&gt;</code>
+<code>&lt;/div&gt;</code>
+<code>&lt;div class=&quot;button-box&quot;&gt;</code>
+  <code>&lt;button class=&quot;button color-one&quot;&gt;Primary Button&lt;/button&gt;</code>
+<code>&lt;/div&gt;</code>
+<code>&lt;div class=&quot;button-box right&quot;&gt;</code>
+  <code>&lt;button class=&quot;button color-one&quot;&gt;Primary Button&lt;/button&gt;</code>
+<code>&lt;/div&gt;</code>
+              </pre>
+            </figure>
+            <figure>
+              <figcaption>scss</figcaption>
+              <pre>
+<code>.button-box {</code>
+  <code>display: flex;</code>
+  <code>flex-direction: column;</code>
+  <code>align-items: center;</code>
+  <code>width: 100%;</code>
+  <code>margin: 0;</code>
+  <code>padding: 0;</code>
+<code>}</code>
+
+<code>.button-box.right, .button-box.left {align-items: center;}</code>
+
+<code>@media (min-width: 48rem) {</code>
+<code>.button-box {</code>
+  <code>flex-direction: row;</code>
+  <code>justify-content: center;</code>
+<code>}</code>
+<code>.button-box.right {</code>
+  <code>align-items: flex-end;</code>
+  <code>justify-content: flex-end;</code>
+<code>}</code>
+<code>.button-box.right .button {margin: 0 0 0 1rem;}</code>
+<code>.button-box.left {</code>
+  <code>align-items: flex-start;</code>
+  <code>justify-content: flex-start;</code>
+<code>}</code>
+<code>.button-box.left .button {margin: 0 1rem 0 0;}}</code>
+              </pre>
+            </figure>
+          </div>
+        </div>
+      </section>
+
       <section id="default-buttons">
         <div class="text">
           <h1>Regular Buttons</h1>
@@ -346,7 +416,7 @@
         <div class="text">
           <h1>Expanding Delete Buttons</h1>
         </div>
-        <div class="split">
+        <div class="split last">
           <div class="design-sample">
             <figcaption>Design Sample</figcaption>
             <div class="button-box left">

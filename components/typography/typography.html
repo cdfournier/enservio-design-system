@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Enservio Design System | Typography</title>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700">
+    <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="../../assets/css/master.css">
+
+    <link rel="stylesheet" href="../../assets/styles/guide.css">
+
+    <style>
+      main {padding: 0;}
+      .button-box {padding: 1rem 0 0;}
+      .button-box:first-of-type {padding: 0;}
+    </style>
+  </head>
+  <body>
+    <main>
+      <section id="typography">
+        <div class="text">
+          <h1>Typography</h1>
+        </div>
+        <div class="split">
+          <div class="design-sample">
+            <figcaption>Design Sample</figcaption>
+            <h1>This is <span style="text-transform: none;">h1</span> Text</h1>
+          </div>
+          <div class="code-sample">
+            <figure>
+              <figcaption>html</figcaption>
+              <pre>
+<code>&lt;h1&gt;This is h1 Text&lt;/h1&gt;</code>
+              </pre>
+            </figure>
+            <figure>
+              <figcaption>scss</figcaption>
+              <pre>
+<code>h1, h2, h3, p {</code>
+  <code>display: block;</code>
+  <code>width: 100%;</code>
+  <code>margin: 0;</code>
+  <code>padding: 0;</code>
+  <code>font-style: normal;</code>
+<code>}</code>
+
+<code>h1 {</code>
+  <code>font-family: $serif;</code>
+  <code>font-size: 1.728rem;</code>
+  <code>font-weight: 400;</code>
+  <code>text-transform: capitalize;</code>
+<code>}</code>
+              </pre>
+            </figure>
+          </div>
+        </div>
+        <div class="split">
+          <div class="design-sample">
+            <figcaption>Design Sample</figcaption>
+            <h2>This is <span style="text-transform: none;">h2</span> Text</h2>
+          </div>
+          <div class="code-sample">
+            <figure>
+              <figcaption>html</figcaption>
+              <pre>
+<code>&lt;h2&gt;This is h2 Text&lt;/h2&gt;</code>
+              </pre>
+            </figure>
+            <figure>
+              <figcaption>scss</figcaption>
+              <pre>
+<code>h2, h3 {</code>
+  <code>font-family: $serif;</code>
+  <code>font-size: 1.44rem;</code>
+  <code>font-weight: 400;</code>
+  <code>text-transform: capitalize;</code>
+<code>}</code>
+              </pre>
+            </figure>
+          </div>
+        </div>
+        <div class="split">
+          <div class="design-sample">
+            <figcaption>Design Sample</figcaption>
+            <h3>This is <span style="text-transform: none;">h3</span> Text</h3>
+          </div>
+          <div class="code-sample">
+            <figure>
+              <figcaption>html</figcaption>
+              <pre>
+<code>&lt;h3&gt;This is h3 Text&lt;/h3&gt;</code>
+              </pre>
+            </figure>
+            <figure>
+              <figcaption>scss</figcaption>
+              <pre>
+<code>h3 {font-size: 1.2rem;}</code>
+              </pre>
+            </figure>
+          </div>
+        </div>
+        <div class="split">
+          <div class="design-sample">
+            <figcaption>Design Sample</figcaption>
+            <p>This is p text</p>
+          </div>
+          <div class="code-sample">
+            <figure>
+              <figcaption>html</figcaption>
+              <pre>
+<code>&lt;p&gt;This is p text&lt;/p&gt;</code>
+              </pre>
+            </figure>
+            <figure>
+              <figcaption>scss</figcaption>
+              <pre>
+<code>p {</code>
+  <code>padding: 0.694rem 0 0.694rem;</code>
+  <code>font-size: 1rem;</code>
+  <code>line-height: 1.5;</code>
+<code>}</code>
+
+<code>p:last-child {padding: 0.694rem 0 0;}</code>
+              </pre>
+            </figure>
+          </div>
+        </div>
+        <div class="split">
+          <div class="design-sample">
+            <figcaption>Design Sample</figcaption>
+            <small>This is small text</small>
+          </div>
+          <div class="code-sample">
+            <figure>
+              <figcaption>html</figcaption>
+              <pre>
+<code>&lt;small&gt;This is small text&lt;/small&gt;</code>
+              </pre>
+            </figure>
+            <figure>
+              <figcaption>scss</figcaption>
+              <pre>
+<code>small {font-size: 0.833rem;}</code>
+              </pre>
+            </figure>
+          </div>
+        </div>
+        <div class="split">
+          <div class="design-sample">
+            <figcaption>Design Sample</figcaption>
+            <strong>This is strong text</strong>
+            <em>This is em text</em>
+            <b>This is bold text</b>
+          </div>
+          <div class="code-sample">
+            <figure>
+              <figcaption>html</figcaption>
+              <pre>
+<code>&lt;strong&gt;This is strong text&lt;/strong&gt;</code>
+<code>&lt;em&gt;This is em text&lt;/em&gt;</code>
+<code>&lt;b&gt;This is bold text&lt;/b&gt;</code>
+              </pre>
+            </figure>
+            <figure>
+              <figcaption>scss</figcaption>
+              <pre>
+<code>strong, em, b {</code>
+  <code>font-style: normal;</code>
+  <code>font-weight: 500;</code>
+<code>}</code>
+              </pre>
+            </figure>
+          </div>
+        </div>
+        <div class="split">
+          <div class="design-sample">
+            <figcaption>Design Sample</figcaption>
+            <ul>
+              <li>This is an unordered list item</li>
+              <li><a href="#!">This is an unordered list item with a link</a></li>
+            </ul>
+          </div>
+          <div class="code-sample">
+            <figure>
+              <figcaption>html</figcaption>
+              <pre>
+<code>&lt;ul&gt;</code>
+  <code>&lt;li&gt;This is an unordered list item&lt;/li&gt;</code>
+  <code>&lt;li&gt;&lt;a href=&quot;#!&quot;&gt;This is an unordered list item with a link&lt;/a&gt;&lt;/li&gt;</code>
+<code>&lt;/ul&gt;</code>
+              </pre>
+            </figure>
+            <figure>
+              <figcaption>scss</figcaption>
+              <pre>
+<code>ul, ol {</code>
+  <code>display: flex;</code>
+  <code>flex-direction: column;</code>
+  <code>width: 100%;</code>
+  <code>margin: 0 auto;</code>
+  <code>padding: 0 0 1rem 1rem;</code>
+  <code>font-size: 1rem;</code>
+  <code>text-align: left;</code>
+<code>}</code>
+
+<code>ul {list-style-type: disc;}</code>
+
+<code>ul li, ol li {</code>
+  <code>width: 100%;</code>
+  <code>padding: 0 0 1rem 0.5rem;</code>
+<code>}</code>
+
+<code>ul li:last-child, ol li:last-child {padding: 0 0 0 0.5rem;}</code>
+              </pre>
+            </figure>
+          </div>
+        </div>
+        <div class="split">
+          <div class="design-sample">
+            <figcaption>Design Sample</figcaption>
+            <ol>
+              <li>This is an ordered list item</li>
+              <li><a href="#!">This is an ordered list item with a link</a></li>
+            </ol>
+          </div>
+          <div class="code-sample">
+            <figure>
+              <figcaption>html</figcaption>
+              <pre>
+<code>&lt;ol&gt;</code>
+  <code>&lt;li&gt;This is an unordered list item&lt;/li&gt;</code>
+  <code>&lt;li&gt;&lt;a href=&quot;#!&quot;&gt;This is an unordered list item with a link&lt;/a&gt;&lt;/li&gt;</code>
+<code>&lt;/ol&gt;</code>
+              </pre>
+            </figure>
+            <figure>
+              <figcaption>scss</figcaption>
+              <pre>
+<code>ol {list-style-type: decimal;}</code>
+              </pre>
+            </figure>
+          </div>
+        </div>
+        <div class="split">
+          <div class="design-sample">
+            <figcaption>Design Sample</figcaption>
+            <h1 class="center" style="text-transform: none;">This Is Center-Aligned h1 Text</h1>
+            <p class="center" style="text-transform: none;">This Is Center-Aligned p Text</p>
+          </div>
+          <div class="code-sample">
+            <figure>
+              <figcaption>html</figcaption>
+              <pre>
+<code>&lt;h1 class=&quot;center&quot;&gt;This Is Center-Aligned h1 Text&lt;/h1&gt;</code>
+<code>&lt;p class=&quot;center&quot;&gt;This Is Center-Aligned p Text&lt;/p&gt;</code>
+              </pre>
+            </figure>
+            <figure>
+              <figcaption>scss</figcaption>
+              <pre>
+<code>h1.center, h2.center, h3.center, p.center, strong.center, em.center, small.center {text-align: center;}</code>
+              </pre>
+            </figure>
+          </div>
+        </div>
+        <div class="split last">
+          <div class="design-sample">
+            <figcaption>Design Sample</figcaption>
+            <h1 class="right" style="text-transform: none;">This Is Right-Aligned h1 Text</h1>
+            <p class="right" style="text-transform: none;">This Is Right-Aligned p Text</p>
+          </div>
+          <div class="code-sample">
+            <figure>
+              <figcaption>html</figcaption>
+              <pre>
+<code>&lt;h1 class=&quot;right&quot;&gt;This Is Right-Aligned h1 Text&lt;/h1&gt;</code>
+<code>&lt;p class=&quot;right&quot;&gt;This Is Right-Aligned p Text&lt;/p&gt;</code>
+              </pre>
+            </figure>
+            <figure>
+              <figcaption>scss</figcaption>
+              <pre>
+<code>h1.right, h2.right, h3.right, p.right, strong.right, em.right, small.right {text-align: right;}</code>
+              </pre>
+            </figure>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>&copy;2018 Enservio, Inc. All rights reserved.&nbsp;<a href="#!">Terms&nbsp;&amp;&nbsp;Conditions</a></footer>
+    <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  </body>
+</html>

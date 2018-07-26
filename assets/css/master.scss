@@ -163,10 +163,10 @@ ol {list-style-type: decimal;}
 
 ul li, ol li {
   width: 100%;
-  padding: 0 0 1rem 0;
+  padding: 0 0 1rem 0.5rem;
 }
 
-ul li:last-child, ol li:last-child {padding: 0;}
+ul li:last-child, ol li:last-child {padding: 0 0 0 0.5rem;}
 
 
 // PASSWORD REQUIREMENTS LIST
@@ -688,7 +688,6 @@ span.button.upload input[type=file] {
 }
 
 .button-box.right, .button-box.left {align-items: center;}
-
 
 @media (min-width: 48rem) {
 .button-box {
