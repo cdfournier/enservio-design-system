@@ -25,10 +25,12 @@ $(".yes-one").click( function() {
 });
 
 // CURRENT INVENTORY BAR BEHAVIOR
+/*
 $(".current-inventory-bar").click( function() {
   $(".current-inventory").toggleClass("open");
   $(".header--fixed").toggleClass("headroom--unpinned");
 });
+*/
 
 // STATUS BARS
 $(".show-error").click( function() {

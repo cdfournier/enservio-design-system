@@ -17,20 +17,26 @@
     <div class="status-bar error file-type">
       <div class="status-bar-details">
         <span><i class="la la-exclamation-circle"></i></span>
-        <p>This is not a valid file type</p>
+        <div class="status-bar-message">
+          <span>This is not a valid file type</span>
+        </div>
         <span class="dismiss error"><i class="la la-times-circle"></i></span>
       </div>
     </div>
     <div class="status-bar error file-size">
       <div class="status-bar-details">
         <span><i class="la la-exclamation-circle"></i></span>
-        <p>This file's size is too big</p>
+        <div class="status-bar-message">
+          <span>This file's size is too big</span>
+        </div>
         <span class="dismiss error"><i class="la la-times-circle"></i></span>
       </div>
     </div>
     <div class="status-bar success">
       <div class="status-bar-details">
-        <p>File uploaded successfully</p>
+        <div class="status-bar-message">
+          <span>File uploaded successfully</span>
+        </div>
         <span class="dismiss success"><i class="la la-times-circle"></i></span>
       </div>
     </div>
@@ -61,6 +67,7 @@
         <form class="lg">
           <div class="upload-container md">
             <p><strong>Drag Files Here To Upload</strong></p>
+            <small>PDF, PNG, JPG, DOC</small>
           </div>
           <div class="button-box">
             <span class="button upload color-one"><input type="file" id="files" name="files[]" multiple>Add Attachments<span class="post"><i class="la la-paperclip"></i></span></span>
@@ -117,5 +124,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script src="https://unpkg.com/headroom.js@0.9.4/dist/headroom.js"></script>
     <script src="../../../assets/scripts/enservio.js"></script>
+    <script src="../../../assets/scripts/enservio.header.js"></script>
   </body>
 </html>
