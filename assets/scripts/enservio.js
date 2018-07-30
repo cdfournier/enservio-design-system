@@ -1,8 +1,3 @@
-// HEADROOM
-var myElement = document.querySelector("header");
-var headroom  = new Headroom(myElement);
-headroom.init(); 
-
 // ATTACHMENT DELETE BUTTONS
 $(".item-one").click(function() {
   $(".expanding-button-box.item-one").toggleClass("expand");
@@ -33,4 +28,30 @@ $(".yes-one").click( function() {
 $(".current-inventory-bar").click( function() {
   $(".current-inventory").toggleClass("open");
   $(".header--fixed").toggleClass("headroom--unpinned");
+});
+
+// STATUS BARS
+$(".show-error").click( function() {
+  $(".status-bar.error").addClass("show");
+  setTimeout(function() { 
+    $(".status-bar.error").removeClass("show") }, 10000);
+});
+$(".dismiss.error").click( function() {
+  $(".status-bar.error").removeClass("show");
+});
+$(".show-success").click( function() {
+  $(".status-bar.success").addClass("show");
+  setTimeout(function() { 
+    $(".status-bar.success").removeClass("show") }, 10000);
+});
+$(".dismiss.success").click( function() {
+  $(".status-bar.success").removeClass("show");
+});
+$(".show-system").click( function() {
+  $(".status-bar.system").addClass("show");
+  setTimeout(function() { 
+    $(".status-bar.system").removeClass("show") }, 10000);
+});
+$(".dismiss.system").click( function() {
+  $(".status-bar.system").removeClass("show");
 });

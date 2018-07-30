@@ -858,8 +858,11 @@ main {
 
 .status-bar.success {background-color: $okay;}
 
+.status-bar.system {background-color: $color-one;}
+
 .status-bar.error.show,
-.status-bar.success.show {@include transform (translateY(0));}
+.status-bar.success.show,
+.status-bar.system.show {@include transform (translateY(0));}
 
 .status-bar .status-bar-details {
   display: flex;

@@ -807,8 +807,12 @@ main {
 .status-bar.success {
   background-color: #008000; }
 
+.status-bar.system {
+  background-color: #2e84ed; }
+
 .status-bar.error.show,
-.status-bar.success.show {
+.status-bar.success.show,
+.status-bar.system.show {
   -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
   -ms-transform: translateY(0);

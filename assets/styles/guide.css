@@ -1,4 +1,10 @@
 /* ------------------------------------------
+  <p> LINE HEIGHT
+--------------------------------------------- */
+p {line-height: 2;}
+
+
+/* ------------------------------------------
   SPLIT
 --------------------------------------------- */
 .split {
@@ -127,4 +133,18 @@ code {font-size: 0.833rem;}
 
 @media (min-width: 48rem) {
 .note {overflow: hidden;}
+}
+
+
+/* ------------------------------------------
+  <p> CODE
+--------------------------------------------- */
+p code {
+  padding: 0.125rem 0.25rem;
+  border: 1px solid #444853;
+  border-radius: 0.125rem;
+  font-size: 1rem;
+  background-color: #cccece;
+  background-color: rgba(206,206,206,0.5);
+  white-space: nowrap;
 }
