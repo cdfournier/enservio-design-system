@@ -652,7 +652,8 @@ span.button.upload input[type=file] {
   .button-box.left {
     align-items: flex-start;
     justify-content: flex-start; }
-  .button-box.left .button {
+  .button-box.left .button,
+  .button-box.left .expanding-button-box {
     margin: 0 1rem 0 0; }
   form .button-box {
     padding: 0 1rem; } }
