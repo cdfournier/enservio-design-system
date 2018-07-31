@@ -6,8 +6,8 @@ $white: #ffffff;
 $light-gray: #cccece;
 $dark-gray: #444853;
 $black: #000000;
-$errors: #d0021b;
-$okay: #008000;
+$invalid: #d0021b;
+$valid: #008000;
 $color-one: #2e84ed;
 $color-two: #0f4a92;
 
@@ -209,11 +209,11 @@ ul.requirements li.default span i.la.la-exclamation-circle {display: none;}
 
 
 // VALID REQUIREMENTS LIST
-ul.requirements li.valid {color: $okay;}
+ul.requirements li.valid {color: $valid;}
 
 ul.requirements li.valid span i.la.la-check-circle {
   display: flex;
-  color: $okay;
+  color: $valid;
 }
 
 ul.requirements li.valid span i.la.la-circle,
@@ -221,11 +221,11 @@ ul.requirements li.valid span i.la.la-exclamation-circle {display: none;}
 
 
 // INVALID REQUIREMENTS LIST
-ul.requirements li.invalid {color: $errors;}
+ul.requirements li.invalid {color: $invalid;}
 
 ul.requirements li.invalid span i.la.la-exclamation-circle {
   display: flex;
-  color: $errors;
+  color: $invalid;
 }
 
 ul.requirements li.invalid span i.la.la-circle,
@@ -271,6 +271,7 @@ ul.attachment-list li .line-item .button-box {
   position: absolute;
   right: 0;
   width: auto;
+  @include transition (all, 0.25s, ease);
 }
 
 ul.attachment-list li .line-item .expanding-button-box {max-width: 2.25rem;}
@@ -288,7 +289,7 @@ ul.attachment-list li span.error-message {margin: 0.25rem 0 0 0.5rem;}
 ul.attachment-list li.invalid span.error-message {opacity: 1;}
 
 ul.attachment-list li.invalid .line-item span.file-type-icon,
-ul.attachment-list li.invalid .line-item span.file-name {color: $errors;}
+ul.attachment-list li.invalid .line-item span.file-name {color: $invalid;}
 
 ul.attachment-list li.invalid .button-box.right {opacity: 0;}
 
@@ -859,9 +860,9 @@ main {
   @include transform (translateY(-20rem));
 }
 
-.status-bar.error {background-color: $errors;}
+.status-bar.error {background-color: $invalid;}
 
-.status-bar.success {background-color: $okay;}
+.status-bar.success {background-color: $valid;}
 
 .status-bar.system {background-color: $color-one;}
 
@@ -1447,7 +1448,7 @@ input[type="checkbox"]:checked:before {
 
 input[type="checkbox"]:checked:not(:disabled) {background-color: $black;}
 
-.field.invalid input[type="checkbox"]:checked:not(:disabled) {background-color: $errors;}
+.field.invalid input[type="checkbox"]:checked:not(:disabled) {background-color: $invalid;}
 
 label.checkbox, label.radio {
   display: flex;
