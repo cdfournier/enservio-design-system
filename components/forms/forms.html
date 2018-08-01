@@ -1,0 +1,835 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Enservio Design System | Attachments</title>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700">
+    <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="../../assets/css/master.css">
+
+    <link rel="stylesheet" href="../../assets/styles/guide.css">
+
+    <style>
+      main {padding: 0;}
+      .note {padding: 0;}
+      .button-box {padding: 1rem 0 0;}
+      .button-box:first-of-type {padding: 0;}
+      fieldset.wide {width: 100%;}
+      fieldset.wide .field {padding: 0 1rem 0 0;}
+
+      @media (min-width: 48rem) {fieldset.wide {width: 50%;}}
+
+      @media (min-width: 64rem) {fieldset.wide {width: 100%;}}
+    </style>
+  </head>
+  <body>
+    <main>
+      <section id="form">
+        <div class="text">
+          <h1>Forms</h1>
+        </div>
+        <div class="split first">
+          <div class="design-sample first">
+            <div class="note">
+              <p>The <code>&lt;form&gt;</code> element represents a document section that contains interactive controls for submitting information to a web server. We also utilize the <code>&lt;form&gt;</code> element to render a form's design on the screen. In this sense the <code>&lt;form&gt;</code> element acts as a parent container for the fields within.</p>
+              <p>Like other containers in our Design System, there are modification classes provided to make adjustments to the layout of the <code>&lt;form&gt;</code> element [reference required].</p>
+            </div>
+          </div>
+          <div class="code-sample">
+            <figure>
+              <figcaption>html</figcaption>
+              <pre>
+<code>&lt;form&gt;</code>
+<code>&lt;/form&gt;</code>
+              </pre>
+            </figure>
+            <figure>
+              <figcaption>scss</figcaption>
+              <pre>
+<code>form {</code>
+  <code>display: flex;</code>
+  <code>flex-direction: column;</code>
+  <code>align-items: flex-start;</code>
+  <code>width: 100%;</code>
+  <code>margin: 0 auto;</code>
+  <code>padding: 2rem 1rem 0;</code>
+<code>}</code>
+
+<code>@media (min-width: 48rem) {</code>
+<code>form {</code>
+  <code>flex-direction: row;</code>
+  <code>flex-wrap: wrap;</code>
+<code>}</code>
+<code>form.column {flex-direction: column;}</code>
+<code>}</code>
+              </pre>
+            </figure>
+          </div>
+        </div>
+      </section>
+      <section id="form-inputs">
+        <div class="text">
+          <h1>Input Fields</h1>
+          <p>Text, number, email, tel, password, etc.</p>
+        </div>
+        <div class="split">
+          <div class="design-sample">
+            <figcaption>Design Sample</figcaption>
+            <fieldset class="wide">
+              <legend>Legend</legend>
+              <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                <span class="error-message">Error message</span>
+                <input type="text" name="input-example-1" id="input-example-1" placeholder="Placeholder">
+                <label for="input-example-1">Label</label>
+                <span class="valid"><i class="la la-check-circle-o"></i></span>
+              </div>
+            </fieldset>
+            <fieldset class="wide">
+              <legend>Legend</legend>
+              <div class="field valid"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                <span class="error-message">Error message</span>
+                <input type="text" name="input-example-2" id="input-example-2" placeholder="Placeholder">
+                <label for="input-example-2">Label</label>
+                <span class="valid"><i class="la la-check-circle-o"></i></span>
+              </div>
+            </fieldset>
+            <fieldset class="wide">
+              <legend>Legend</legend>
+              <div class="field invalid"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                <span class="error-message">Error message</span>
+                <input type="text" name="input-example-3" id="input-example-3" placeholder="Placeholder">
+                <label for="input-example-3">Label</label>
+                <span class="valid"><i class="la la-check-circle-o"></i></span>
+              </div>
+            </fieldset>
+            <div class="note">
+              <p>All input fields should be built with the <code>&lt;html&gt;</code> structure seen here to enable both semantic delivery and user experience design functions. The <code>&lt;input&gt;</code> <code>&lt;label&gt;</code> is positioned in place over the <code>&lt;input&gt;</code> <code>&lt;placeholder&gt;</code>. When the user clicks or taps the <code>&lt;input&gt;</code> the <code>&lt;label&gt;</code> uses css transformations to move out of place and expose the <code>&lt;placeholder&gt;</code>.</p>
+              <p>As with other components in the design system, it is possible to add validation conditions to any <code>&lt;input&gt;</code>. Simply add a <code>.valid</code> or <code>.invalid</code> class to the <code>&lt;input&gt;</code> <code>.field</code> class.</p>
+            </div>
+          </div>
+          <div class="code-sample">
+            <figure>
+              <figcaption>html</figcaption>
+              <pre>
+<code>&lt;fieldset class=&quot;wide&quot;&gt;</code>
+  <code>&lt;legend&gt;Legend&lt;/legend&gt;</code>
+  <code>&lt;div class=&quot;field&quot;&gt;&lt;!-- change to 'field valid' or 'field invalid' as necessary --&gt;</code>
+    <code>&lt;span class=&quot;error-message&quot;&gt;Error message&lt;/span&gt;</code>
+    <code>&lt;input type=&quot;text&quot; name=&quot;input-example-1&quot; id=&quot;input-example-1&quot; placeholder=&quot;Placeholder&quot;&gt;</code>
+    <code>&lt;label for=&quot;input-example-1&quot;&gt;Label&lt;/label&gt;</code>
+    <code>&lt;span class=&quot;valid&quot;&gt;&lt;i class=&quot;la la-check-circle-o&quot;&gt;&lt;/i&gt;&lt;/span&gt;</code>
+  <code>&lt;/div&gt;</code>
+<code>&lt;/fieldset&gt;</code>
+<code>&lt;fieldset class=&quot;wide&quot;&gt;</code>
+  <code>&lt;legend&gt;Legend&lt;/legend&gt;</code>
+  <code>&lt;div class=&quot;field valid&quot;&gt;&lt;!-- change to 'field valid' or 'field invalid' as necessary --&gt;</code>
+    <code>&lt;span class=&quot;error-message&quot;&gt;Error message&lt;/span&gt;</code>
+    <code>&lt;input type=&quot;text&quot; name=&quot;input-example-2&quot; id=&quot;input-example-2&quot; placeholder=&quot;Placeholder&quot;&gt;</code>
+    <code>&lt;label for=&quot;input-example-2&quot;&gt;Label&lt;/label&gt;</code>
+    <code>&lt;span class=&quot;valid&quot;&gt;&lt;i class=&quot;la la-check-circle-o&quot;&gt;&lt;/i&gt;&lt;/span&gt;</code>
+  <code>&lt;/div&gt;</code>
+<code>&lt;/fieldset&gt;</code>
+<code>&lt;fieldset class=&quot;wide&quot;&gt;</code>
+  <code>&lt;legend&gt;Legend&lt;/legend&gt;</code>
+  <code>&lt;div class=&quot;field invalid&quot;&gt;&lt;!-- change to 'field valid' or 'field invalid' as necessary --&gt;</code>
+    <code>&lt;span class=&quot;error-message&quot;&gt;Error message&lt;/span&gt;</code>
+    <code>&lt;input type=&quot;text&quot; name=&quot;input-example-3&quot; id=&quot;input-example-3&quot; placeholder=&quot;Placeholder&quot;&gt;</code>
+    <code>&lt;label for=&quot;input-example-3&quot;&gt;Label&lt;/label&gt;</code>
+    <code>&lt;span class=&quot;valid&quot;&gt;&lt;i class=&quot;la la-check-circle-o&quot;&gt;&lt;/i&gt;&lt;/span&gt;</code>
+  <code>&lt;/div&gt;</code>
+<code>&lt;/fieldset&gt;</code>
+              </pre>
+            </figure>
+            <figure>
+              <figcaption>scss</figcaption>
+              <pre>
+<code>input[type=text],</code>
+<code>input[type=email],</code>
+<code>input[type=tel],</code>
+<code>input[type=url],</code>
+<code>input[type=password],</code>
+<code>input[type=search],</code>
+<code>input[type=file],</code>
+<code>input[type=select],</code>
+<code>input[type=checkbox] {</code>
+  <code>outline-color: $color-one;</code>
+  <code>font-size: 1rem;</code>
+  <code>-webkit-border-radius: 0;</code>
+  <code>-moz-border-radius: 0;</code>
+  <code>border-radius: 0;</code>
+  <code>@include appearance (none);</code>
+<code>}</code>
+
+<code>fieldset {</code>
+  <code>width: 100%;</code>
+  <code>margin: 0;</code>
+  <code>padding: 0;</code>
+  <code>border: none;</code>
+<code>}</code>
+
+<code>fieldset.small {width: 50%;}</code>
+
+<code>legend {display: none;}</code>
+
+<code>.field {</code>
+  <code>display: flex;</code>
+  <code>flex-direction: column-reverse;</code>
+  <code>align-items: flex-start;</code>
+  <code>position: relative;</code>
+  <code>width: 100%;</code>
+  <code>margin: 0 0 1rem;</code>
+  <code>padding: 0 1rem;</code>
+<code>}</code>
+
+<code>.small {</code>
+  <code>display: flex;</code>
+  <code>flex-direction: row;</code>
+  <code>align-items: flex-start;</code>
+  <code>position: relative;</code>
+  <code>width: 100%;</code>
+  <code>margin: 0;</code>
+  <code>padding: 0;</code>
+<code>}</code>
+
+<code>.xsmall {</code>
+  <code>display: flex;</code>
+  <code>flex-direction: row;</code>
+  <code>align-items: flex-start;</code>
+  <code>position: relative;</code>
+  <code>width: 50%;</code>
+  <code>margin: 0;</code>
+  <code>padding: 0;</code>
+<code>}</code>
+
+<code>@media (min-width: 48rem) {</code>
+<code>form.sm fieldset,</code>
+<code>form.md fieldset,</code>
+<code>form.lg fieldset {width: 100%;}</code>
+<code>fieldset {width: 50%;}</code>
+<code>.small {width: 50%;}</code>
+<code>.xsmall {width: 25%;}</code>
+<code>}</code>
+
+<code>@media (min-width: 72rem) {</code>
+<code>fieldset, .small {width: 25%;}</code>
+<code>.small fieldset {width: 50%;}</code>
+<code>}</code>
+
+<code>.field label, .field input {</code>
+  <code>font-family: "Montserrat", sans-serif;</code>
+  <code>font-size: 0.833rem;</code>
+  <code>@include transition(all, 0.25s, ease-in-out);</code>
+  <code>touch-action: manipulation;</code>
+<code>}</code>
+
+<code>.field input {</code>
+  <code>z-index: 500;</code>
+  <code>width: 100%;</code>
+  <code>padding: 0;</code>
+  <code>border: 0;</code>
+  <code>border-bottom: 1px solid $black;</code>
+  <code>border-radius: 0;</code>
+  <code>outline-color: $color-one;</code>
+  <code>font-weight: 400;</code>
+  <code>line-height: 3;</code>
+  <code>background-color: transparent;</code>
+  <code>cursor: text;</code>
+<code>}</code>
+
+<code>.field input.valid:disabled {opacity: 1;}</code>
+
+<code>.field label {</code>
+  <code>margin: 0;</code>
+  <code>width: 100%;</code>
+  <code>font-weight: 500;</code>
+  <code>text-align: left;</code>
+  <code>color: $black;</code>
+<code>}</code>
+
+<code>.field input:placeholder-shown + label {</code>
+  <code>overflow: hidden;</code>
+  <code>text-overflow: ellipsis;</code>
+  <code>cursor: text;</code>
+  <code>transform-origin: left bottom;</code>
+  <code>white-space: nowrap;</code>
+  <code>@include transform (translate(0,1.5rem));</code>
+<code>}</code>
+
+<code>input::placeholder {</code>
+  <code>opacity: 0;</code>
+  <code>transition: inherit;</code>
+<code>}</code>
+
+<code>input:focus::placeholder {</code>
+  <code>opacity: 1;</code>
+  <code>color: $light-gray;</code>
+<code>}</code>
+
+<code>.field input:not(:placeholder-shown) + label,</code>
+<code>.field input:focus + label {</code>
+  <code>cursor: pointer;</code>
+  <code>@include transform (translate(0,0));</code>
+<code>}</code>
+
+<code>.field.valid input {</code>
+  <code>border-color: $valid;</code>
+  <code>color: $valid;</code>
+<code>}</code>
+
+<code>.field.valid input:not(:placeholder-shown) + label,</code>
+<code>.field.valid input:placeholder-shown + label,</code>
+<code>.field.valid input:focus + label {color: $valid;}</code>
+
+<code>.field.valid label {color: $valid;}</code>
+
+<code>.field span.valid {</code>
+  <code>display: none;</code>
+  <code>position: absolute;</code>
+  <code>top: 1rem;</code>
+  <code>right: 1rem;</code>
+  <code>padding: 0 0 0 1rem;</code>
+  <code>font-size: 1.5rem;</code>
+  <code>color: $valid;</code>
+  <code>@include transition (all, 0.25s, ease-in-out);</code>
+<code>}</code>
+
+<code>.field.valid span.valid {display: block;}</code>
+
+<code>span.error-message {</code>
+  <code>width: 100%;</code>
+  <code>height: inherit;</code>
+  <code>min-height: 2rem;</code>
+  <code>margin: 0.25rem 0 0 0;</code>
+  <code>padding: 0;</code>
+  <code>font-family: "Montserrat", sans-serif;</code>
+  <code>font-size: 0.833rem;</code>
+  <code>font-weight: 600;</code>
+  <code>color: $invalid;</code>
+  <code>text-align: left;</code>
+  <code>opacity: 0;</code>
+  <code>@include transition (all, 0.25s, ease-in-out);</code>
+<code>}</code>
+
+<code>.field.invalid span.error-message {opacity: 1;}</code>
+
+<code>.field.invalid input {</code>
+  <code>border-color: $invalid;</code>
+  <code>color: $invalid;</code>
+<code>}</code>
+
+<code>.field.invalid input:not(:placeholder-shown) + label,</code>
+<code>.field.invalid input:placeholder-shown + label,</code>
+<code>.field.invalid input:focus + label {color: $invalid;}</code>
+
+<code>.field.invalid label {color: $invalid;}</code>
+              </pre>
+            </figure>
+          </div>
+        </div>
+      </section>
+      <section id="form-select">
+        <div class="text">
+          <h1>Select</h1>
+        </div>
+        <div class="split">
+          <div class="design-sample">
+            <figcaption>Design Sample</figcaption>
+            <fieldset class="wide">
+              <legend>Legend</legend>
+              <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                <span class="error-message">Error message</span>
+                <select name="select-example" id="select-example">
+                  <option value="0">Choose a option</option>
+                  <option value="Option 1">Option 1</option>
+                  <option value="Option 2">Option 2</option>
+                  <option value="Option 3">Option 3</option>
+                  <option value="Option 4">Option 4</option>
+                  <option value="Option 5">Option 5</option>
+                </select>
+                <div class="select-icon"><i class="la la-angle-down"></i></div>
+                <span class="select valid"><i class="la la-check-circle-o"></i></span>
+                <label for="select-example">Label</label>
+              </div>
+            </fieldset>
+            <div class="note">
+              <p>As with other components in the design system, it is possible to add validation conditions to any <code>&lt;select&gt;</code> component. Simply add a <code>.valid</code> or <code>.invalid</code> class to the <code>&lt;select&gt;</code> <code>.field</code> class. CSS does the rest.</p>
+            </div>
+          </div>
+          <div class="code-sample">
+            <figure>
+              <figcaption>html</figcaption>
+              <pre>
+<code>&lt;fieldset&gt;</code>
+  <code>&lt;legend&gt;Legend&lt;/legend&gt;</code>
+  <code>&lt;div class=&quot;field&quot;&gt;&lt;!-- change to 'field valid' or 'field invalid' as necessary --&gt;</code>
+    <code>&lt;span class=&quot;error-message&quot;&gt;Error message&lt;/span&gt;</code>
+    <code>&lt;select name=&quot;select-example&quot; id=&quot;select-example&quot;&gt;</code>
+      <code>&lt;option value=&quot;0&quot;&gt;Choose a option&lt;/option&gt;</code>
+      <code>&lt;option value=&quot;Option 1&quot;&gt;Option 1&lt;/option&gt;</code>
+      <code>&lt;option value=&quot;Option 2&quot;&gt;Option 2&lt;/option&gt;</code>
+      <code>&lt;option value=&quot;Option 3&quot;&gt;Option 3&lt;/option&gt;</code>
+      <code>&lt;option value=&quot;Option 4&quot;&gt;Option 4&lt;/option&gt;</code>
+      <code>&lt;option value=&quot;Option 5&quot;&gt;Option 5&lt;/option&gt;</code>
+    <code>&lt;/select&gt;</code>
+    <code>&lt;div class=&quot;select-icon&quot;&gt;&lt;i class=&quot;la la-angle-down&quot;&gt;&lt;/i&gt;&lt;/div&gt;</code>
+    <code>&lt;span class=&quot;select valid&quot;&gt;&lt;i class=&quot;la la-check-circle-o&quot;&gt;&lt;/i&gt;&lt;/span&gt;</code>
+    <code>&lt;label for=&quot;select-example&quot;&gt;Label&lt;/label&gt;</code>
+  <code>&lt;/div&gt;</code>
+<code>&lt;/fieldset&gt;</code>
+              </pre>
+            </figure>
+            <figure>
+              <figcaption>scss</figcaption>
+              <pre>
+<code>.field select {</code>
+  <code>border: none;</code>
+  <code>border-radius: 0;</code>
+  <code>-moz-border-radius: 0;</code>
+  <code>-webkit-border-radius: 0;</code>
+  <code>@include appearance (none);</code>
+<code>}</code>
+
+<code>.field select {</code>
+  <code>display: inline-block;</code>
+  <code>position: relative;</code>
+  <code>width: 100%;</code>
+  <code>min-height: 2.3125rem;</code>
+  <code>overflow: hidden;</code>
+  <code>margin: 0;</code>
+  <code>padding: 0 2rem 0 0;</code>
+  <code>border-bottom: 1px solid $black;</code>
+  <code>outline-color: $color-one;</code>
+  <code>font-family: "Montserrat", sans-serif;</code>
+  <code>font-size: 0.833rem;</code>
+  <code>font-weight: 400;</code>
+  <code>line-height: 3;</code>
+  <code>text-overflow: ellipsis;</code>
+  <code>background-color: transparent;</code>
+  <code>white-space: nowrap;</code>
+<code>}</code>
+
+<code>.field select option {</code>
+  <code>overflow: hidden;</code>
+  <code>outline-color: $color-one;</code>
+  <code>text-overflow: ellipsis;</code>
+<code>}</code>
+
+<code>.text .field {padding: 0;}</code>
+
+<code>.field .select-icon {</code>
+  <code>display: flex;</code>
+  <code>flex-direction: column;</code>
+  <code>justify-content: center;</code>
+  <code>position: absolute;</code>
+  <code>top: 30%;</code>
+  <code>right: 1rem;</code>
+  <code>z-index: 0;</code>
+  <code>font-size: 1rem;</code>
+<code>}</code>
+
+<code>.field.valid select {</code>
+  <code>border-color: $valid;</code>
+  <code>color: $valid;</code>
+<code>}</code>
+
+<code>.field.valid select option,</code>
+<code>.field.valid .select-icon {color: $valid;}</code>
+
+<code>.field.valid select option span.option {color: $valid;}</code>
+
+<code>.field.valid span.select.valid {</code>
+  <code>top: 1.44rem;</code>
+  <code>right: 2.2rem;</code>
+<code>}</code>
+
+<code>.field.invalid select {</code>
+  <code>border-color: $invalid;</code>
+  <code>color: $invalid;</code>
+<code>}</code>
+
+<code>.field.invalid select option,</code>
+<code>.field.invalid .select-icon {color: $invalid;}</code>
+
+<code>.field.invalid select option span.option {color: $invalid;}</code>
+              </pre>
+            </figure>
+          </div>
+        </div>
+      </section>
+      <section id="form-checkboxes">
+        <div class="text">
+          <h1>Checkboxes</h1>
+        </div>
+        <div class="split">
+          <div class="design-sample">
+            <figcaption>Design Sample</figcaption>
+            <fieldset class="wide">
+              <legend>Checkbox Example</legend>
+              <div class="field" style="padding: 0 1rem 0 0;"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
+                <span class="error-message checkbox">Error message</span>
+                <input type="checkbox" name="one" id="one" style="left: 0;">
+                <label class="checkbox" for="one">Checkbox label</label>
+              </div>
+            </fieldset>
+            <fieldset class="wide">
+              <legend>Checkbox Example</legend>
+              <div class="field valid" style="padding: 0 1rem 0 0;"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
+                <span class="error-message checkbox">Error message</span>
+                <input type="checkbox" name="two" id="two" style="left: 0;">
+                <label class="checkbox" for="two">Checkbox label</label>
+              </div>
+            </fieldset>
+            <fieldset class="wide">
+              <legend>Checkbox Example</legend>
+              <div class="field invalid" style="padding: 0 1rem 0 0;"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
+                <span class="error-message checkbox">Error message</span>
+                <input type="checkbox" name="three" id="three" style="left: 0;">
+                <label class="checkbox" for="three">Checkbox label</label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="code-sample">
+            <figure>
+              <figcaption>html</figcaption>
+              <pre>
+<code>&lt;fieldset&gt;</code>
+  <code>&lt;legend&gt;Checkbox Example&lt;/legend&gt;</code>
+  <code>&lt;div class=&quot;field&quot;&gt;&lt;!-- change class to 'field valid' or 'field invalid' as necessary --&gt;</code>
+    <code>&lt;span class=&quot;error-message checkbox&quot;&gt;Error message&lt;/span&gt;</code>
+    <code>&lt;input type=&quot;checkbox&quot; name=&quot;one&quot; id=&quot;one&quot;&gt;</code>
+    <code>&lt;label class=&quot;checkbox&quot; for=&quot;one&quot;&gt;Checkbox label&lt;/label&gt;</code>
+  <code>&lt;/div&gt;</code>
+<code>&lt;/fieldset&gt;</code>
+<code>&lt;fieldset&gt;</code>
+  <code>&lt;legend&gt;Checkbox Example&lt;/legend&gt;</code>
+  <code>&lt;div class=&quot;field valid&quot;&gt;&lt;!-- change class to 'field valid' or 'field invalid' as necessary --&gt;</code>
+    <code>&lt;span class=&quot;error-message checkbox&quot;&gt;Error message&lt;/span&gt;</code>
+    <code>&lt;input type=&quot;checkbox&quot; name=&quot;two&quot; id=&quot;two&quot;&gt;</code>
+    <code>&lt;label class=&quot;checkbox&quot; for=&quot;two&quot;&gt;Checkbox label&lt;/label&gt;</code>
+  <code>&lt;/div&gt;</code>
+<code>&lt;/fieldset&gt;</code>
+<code>&lt;fieldset&gt;</code>
+  <code>&lt;legend&gt;Checkbox Example&lt;/legend&gt;</code>
+  <code>&lt;div class=&quot;field invalid&quot;&gt;&lt;!-- change class to 'field valid' or 'field invalid' as necessary --&gt;</code>
+    <code>&lt;span class=&quot;error-message checkbox&quot;&gt;Error message&lt;/span&gt;</code>
+    <code>&lt;input type=&quot;checkbox&quot; name=&quot;three&quot; id=&quot;three&quot;&gt;</code>
+    <code>&lt;label class=&quot;checkbox&quot; for=&quot;three&quot;&gt;Checkbox label&lt;/label&gt;</code>
+  <code>&lt;/div&gt;</code>
+<code>&lt;/fieldset&gt;</code>
+              </pre>
+            </figure>
+            <figure>
+              <figcaption>scss</figcaption>
+              <pre>
+<code>input[type="checkbox"] {</code>
+  <code>position: absolute;</code>
+  <code>top: 0;</code>
+  <code>left: 1rem;</code>
+  <code>width: 1.25rem;</code>
+  <code>height: 1.25rem;</code>
+  <code>margin: 0;</code>
+  <code>border: 1px solid $black;</code>
+  <code>background-color: $white;</code>
+  <code>cursor: pointer;</code>
+  <code>@include appearance(none);</code>
+  <code>@include transition(all, 0.25s, ease-in-out);</code>
+<code>}</code>
+
+<code>input[type="checkbox"]:checked:before {</code>
+  <code>display: flex;</code>
+  <code>flex-direction: column;</code>
+  <code>align-items: center;</code>
+  <code>justify-content: center;</code>
+  <code>width: 1.125rem;</code>
+  <code>height: 1.125rem;</code>
+  <code>margin: 0;</code>
+  <code>font-family: "LineAwesome";</code>
+  <code>font-size: 1rem;</code>
+  <code>color: $white;</code>
+  <code>content: '\f17b';</code>
+<code>}</code>
+
+<code>input[type="checkbox"]:checked:not(:disabled) {background-color: $black;}</code>
+
+<code>label.checkbox {</code>
+  <code>display: flex;</code>
+  <code>flex-direction: row;</code>
+  <code>align-items: center;</code>
+  <code>min-height: 1.25rem;</code>
+  <code>padding: 0 0 0 2rem;</code>
+<code>}</code>
+
+<code>.field.valid input[type="checkbox"]:checked:not(:disabled) {background-color: $valid;}</code>
+
+<code>.field.valid label span.checkmark {border-color: $valid;}</code>
+
+<code>.field.invalid input[type="checkbox"]:checked:not(:disabled) {background-color: $invalid;}</code>
+
+<code>span.error-message.checkbox {padding: 0 0 0 2rem;}</code>
+
+<code>.field.invalid label span.checkmark {border-color: $invalid;}</code>
+              </pre>
+            </figure>
+          </div>
+        </div>
+      </section>
+      <section id="form-radio-buttons">
+        <div class="text">
+          <h1>Radio Buttons</h1>
+        </div>
+        <div class="split">
+          <div class="design-sample">
+            <figcaption>Design Sample</figcaption>
+            <fieldset class="wide">
+              <legend>Radio Buttons</legend>
+              <div class="small" style="width: 100%;">
+                <div class="field" style="padding: 0 1rem 0 0;"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
+                  <span class="error-message radio">You must select one option</span>
+                  <input type="radio" name="radio-one" id="radio-one-option-one" style="left: 0;" checked>
+                  <label class="radio" for="radio-one-option-one">On</label>
+                </div>
+                <div class="field" style="padding: 0 1rem 0 0;"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
+                  <span class="error-message radio">You must select one option</span>
+                  <input type="radio" name="radio-one" id="radio-one-option-two" style="left: 0;">
+                  <label class="radio" for="radio-one-option-two">Off</label>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="wide">
+              <legend>Disabled Radio Buttons</legend>
+              <div class="small" style="width: 100%;">
+                <div class="field" style="padding: 0 1rem 0 0;"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
+                  <span class="error-message radio">You must select one option</span>
+                  <input type="radio" name="radio-two" id="radio-two-option-one" style="left: 0;" checked disabled>
+                  <label class="radio" for="radio-two-option-one">On</label>
+                </div>
+                <div class="field" style="padding: 0 1rem 0 0;"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
+                  <span class="error-message radio">You must select one option</span>
+                  <input type="radio" name="radio-two" id="radio-two-option-two" style="left: 0;" disabled>
+                  <label class="radio" for="radio-two-option-two">Off</label>
+                </div>
+              </div>
+            </fieldset>
+            <div class="note">
+              <p>As with other components in the design system, it is possible to add validation conditions to any Radio Button. Simply add a <code>.valid</code> or <code>.invalid</code> class to the Radio Button's <code>.field</code> class. CSS does the rest.</p>
+            </div>
+          </div>
+          <div class="code-sample">
+            <figure>
+              <figcaption>html</figcaption>
+              <pre>
+<code>&lt;fieldset&gt;</code>
+  <code>&lt;legend&gt;Radio Buttons&lt;/legend&gt;</code>
+  <code>&lt;div class=&quot;small&quot;&gt;</code>
+    <code>&lt;div class=&quot;field&quot;&gt;&lt;!-- change class to 'field valid' or 'field invalid' as necessary --&gt;</code>
+      <code>&lt;span class=&quot;error-message radio&quot;&gt;You must select one option&lt;/span&gt;</code>
+      <code>&lt;input type=&quot;radio&quot; name=&quot;radio-one&quot; id=&quot;radio-one-option-one&quot; checked&gt;</code>
+      <code>&lt;label class=&quot;radio&quot; for=&quot;radio-one-option-one&quot;&gt;On&lt;/label&gt;</code>
+    <code>&lt;/div&gt;</code>
+    <code>&lt;div class=&quot;field&quot;&gt;&lt;!-- change class to 'field valid' or 'field invalid' as necessary --&gt;</code>
+      <code>&lt;span class=&quot;error-message radio&quot;&gt;You must select one option&lt;/span&gt;</code>
+      <code>&lt;input type=&quot;radio&quot; name=&quot;radio-one&quot; id=&quot;radio-one-option-two&quot;&gt;</code>
+      <code>&lt;label class=&quot;radio&quot; for=&quot;radio-one-option-two&quot;&gt;Off&lt;/label&gt;</code>
+    <code>&lt;/div&gt;</code>
+  <code>&lt;/div&gt;</code>
+<code>&lt;/fieldset&gt;</code>
+<code>&lt;fieldset&gt;</code>
+  <code>&lt;legend&gt;Disabled Radio Buttons&lt;/legend&gt;</code>
+  <code>&lt;div class=&quot;small&quot;&gt;</code>
+    <code>&lt;div class=&quot;field&quot;&gt;&lt;!-- change class to 'field valid' or 'field invalid' as necessary --&gt;</code>
+      <code>&lt;span class=&quot;error-message radio&quot;&gt;You must select one option&lt;/span&gt;</code>
+      <code>&lt;input type=&quot;radio&quot; name=&quot;radio-two&quot; id=&quot;radio-two-option-one&quot; checked disabled&gt;</code>
+      <code>&lt;label class=&quot;radio&quot; for=&quot;radio-two-option-one&quot;&gt;On&lt;/label&gt;</code>
+    <code>&lt;/div&gt;</code>
+    <code>&lt;div class=&quot;field&quot;&gt;&lt;!-- change class to 'field valid' or 'field invalid' as necessary --&gt;</code>
+      <code>&lt;span class=&quot;error-message radio&quot;&gt;You must select one option&lt;/span&gt;</code>
+      <code>&lt;input type=&quot;radio&quot; name=&quot;radio-two&quot; id=&quot;radio-two-option-two&quot; disabled&gt;</code>
+      <code>&lt;label class=&quot;radio&quot; for=&quot;radio-two-option-two&quot;&gt;Off&lt;/label&gt;</code>
+    <code>&lt;/div&gt;</code>
+  <code>&lt;/div&gt;</code>
+<code>&lt;/fieldset&gt;</code>
+              </pre>
+            </figure>
+            <figure>
+              <figcaption>scss</figcaption>
+              <pre>
+<code>input[type="radio"] {</code>
+  <code>display: flex;</code>
+  <code>flex-direction: column;</code>
+  <code>align-items: center;</code>
+  <code>justify-content: center;</code>
+  <code>position: absolute;</code>
+  <code>top: 0;</code>
+  <code>left: 1rem;</code>
+  <code>width: 1.25rem;</code>
+  <code>height: 1.25rem;</code>
+  <code>margin: 0;</code>
+  <code>border: 1px solid $black;</code>
+  <code>border-radius: 100%;</code>
+  <code>background-color: $white;</code>
+  <code>cursor: pointer;</code>
+  <code>@include appearance (none);</code>
+  <code>@include transition (all, 0.25s, ease-in-out);</code>
+<code>}</code>
+
+<code>input[type="radio"]:checked:before {</code>
+  <code>display: block;</code>
+  <code>position: relative;</code>
+  <code>width: 0.75rem;</code>
+  <code>height: 0.75rem;</code>
+  <code>border-radius: 100%;</code>
+  <code>background-color: $black;</code>
+  <code>content: "";</code>
+<code>}</code>
+
+<code>label.radio {</code>
+  <code>display: flex;</code>
+  <code>flex-direction: row;</code>
+  <code>align-items: center;</code>
+  <code>min-height: 1.25rem;</code>
+  <code>padding: 0 0 0 1.75rem;</code>
+<code>}</code>
+
+<code>input:disabled, input:disabled:checked {</code>
+  <code>border: 1px solid $light-gray;</code>
+  <code>cursor: default;</code>
+<code>}</code>
+
+<code>input[type="radio"]:disabled:checked:before {</code>
+  <code>display: block;</code>
+  <code>position: relative;</code>
+  <code>width: 0.75rem;</code>
+  <code>height: 0.75rem;</code>
+  <code>border-radius: 100%;</code>
+  <code>background-color: $light-gray;</code>
+  <code>content: "";</code>
+<code>}</code>
+
+<code>.field.valid input[type="radio"]:checked:before {background-color: $valid;}</code>
+
+<code>.field.invalid input[type="radio"]:checked:before {background-color: $invalid;}</code>
+              </pre>
+            </figure>
+          </div>
+        </div>
+      </section>
+      <section id="form-switches">
+        <div class="text">
+          <h1>Toggle Switches</h1>
+        </div>
+        <div class="split last">
+          <div class="design-sample">
+            <figcaption>Design Sample</figcaption>
+            <fieldset class="wide">
+              <legend>Toggle Switch</legend>
+              <div class="field">
+                <span class="error-message">This is an error message</span>
+                <input type="checkbox" name="toggle" class="toggle" id="toggle-one">
+                <label class="toggle" for="toggle-one">Label</label>
+              </div>
+            </fieldset>
+            <div class="note">
+              <p>As with other components in the design system, it is possible to add validation conditions to any <code>&lt;input&gt;</code>. Simply add a <code>.valid</code> or <code>.invalid</code> class to the <code>&lt;input&gt;</code> <code>.field</code> class.</p>
+            </div>
+          </div>
+          <div class="code-sample">
+            <figure>
+              <figcaption>html</figcaption>
+              <pre>
+<code>&lt;fieldset&gt;</code>
+  <code>&lt;legend&gt;Toggle Switch&lt;/legend&gt;</code>
+  <code>&lt;div class=&quot;field&quot;&gt;</code>
+    <code>&lt;span class=&quot;error-message&quot;&gt;This is an error message&lt;/span&gt;</code>
+    <code>&lt;input type=&quot;checkbox&quot; name=&quot;toggle&quot; class=&quot;toggle&quot; id=&quot;toggle-one&quot;&gt;</code>
+    <code>&lt;label class=&quot;toggle&quot; for=&quot;toggle-one&quot;&gt;Label&lt;/label&gt;</code>
+  <code>&lt;/div&gt;</code>
+<code>&lt;/fieldset&gt;</code>
+              </pre>
+            </figure>
+            <figure>
+              <figcaption>scss</figcaption>
+              <pre>
+<code>input.toggle[type="checkbox"] {</code>
+  <code>-webkit-appearance: none;</code>
+  <code>appearance: none;</code>
+  <code>display: flex;</code>
+  <code>flex-direction: row;</code>
+  <code>align-items: center;</code>
+  <code>position: absolute;</code>
+  <code>left: 0;</code>
+  <code>width: 3.5rem;</code>
+  <code>height: 1.75rem;</code>
+  <code>min-height: 1.75rem;</code>
+  <code>max-height: 1.75rem;</code>
+  <code>margin: 0;</code>
+  <code>padding: 0.1875rem;</code>
+  <code>border-color: transparent;</code>
+  <code>border-radius: 2rem;</code>
+  <code>background-color: $dark-gray;</code>
+  <code>@include transition (all, 0.25s, ease-in-out);</code>
+<code>}</code>
+
+<code>input.toggle[type="checkbox"]:checked:before {display: none;}</code>
+
+<code>input.toggle[type="checkbox"]:after {</code>
+  <code>display: flex;</code>
+  <code>flex-direction: row;</code>
+  <code>align-items: center;</code>
+  <code>justify-content: center;</code>
+  <code>position: relative;</code>
+  <code>left: 0;</code>
+  <code>width: 1.25rem;</code>
+  <code>height: 1.25rem;</code>
+  <code>margin: 0;</code>
+  <code>border-radius: 100%;</code>
+  <code>font-family: "LineAwesome";</code>
+  <code>font-size: 1rem;</code>
+  <code>background-color: white;</code>
+  <code>content: "\f342";</code>
+  <code>@include transition (all, 0.25s, ease-in-out);</code>
+<code>}</code>
+
+<code>input.toggle[type="checkbox"]:checked {background-color: $color-one;}</code>
+
+<code>input.toggle[type="checkbox"]:checked:after {</code>
+  <code>left: calc(100% - 1.25rem);</code>
+  <code>color: $color-one;</code>
+  <code>content: "\f17b";</code>
+<code>}</code>
+
+<code>label.toggle {</code>
+  <code>display: flex;</code>
+  <code>flex-direction: row;</code>
+  <code>align-items: center;</code>
+  <code>min-height: 1.75rem;</code>
+  <code>padding: 0 0 0 4rem;</code>
+<code>}</code>
+
+<code>.field.valid input.toggle[type="checkbox"]:not(:disabled),</code>
+<code>.field.valid input.toggle[type="checkbox"]:checked:not(:disabled) {background-color: $valid;}</code>
+
+<code>.field.valid input.toggle[type="checkbox"]:after {color: $valid;}</code>
+
+<code>.field.invalid input.toggle[type="checkbox"]:not(:disabled),</code>
+<code>.field.invalid input.toggle[type="checkbox"]:checked:not(:disabled) {background-color: $invalid;}</code>
+
+<code>.field.invalid input.toggle[type="checkbox"]:after {color: $invalid;}</code>
+              </pre>
+            </figure>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>&copy;2018 Enservio, Inc. All rights reserved.&nbsp;<a href="#!">Terms&nbsp;&amp;&nbsp;Conditions</a></footer>
+    <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="../../assets/scripts/enservio.js"></script>
+  </body>
+</html>

@@ -294,7 +294,7 @@ ul.attachment-list li.invalid .line-item span.file-name {color: $invalid;}
 ul.attachment-list li.invalid .button-box.right {opacity: 0;}
 
 
-/* INVENTORY HELP LIST STYLES */
+// INVENTORY HELP LIST STYLES
 .carousel .carousel-cell.center ul {
   display: flex;
   flex-direction: column;
@@ -559,7 +559,7 @@ button.secondary.color-two:hover span.post-number, button.secondary.color-two:fo
 .expanding-button-box .expanding-button.large {display: flex;}}
 
 
-/* CONFIRM ACTION BOX SETTINGS */
+// CONFIRM ACTION BOX SETTINGS
 .expanding-button-box .confirm-action-box {
   display: inline-flex;
   align-items: center;
@@ -593,7 +593,7 @@ button.secondary.color-two:hover span.post-number, button.secondary.color-two:fo
 }
 
 
-/* EXPANDING BUTTON COLOR ONE SETTINGS */
+// EXPANDING BUTTON COLOR ONE SETTINGS
 .expanding-button-box.color-one {background-color: $color-one;}
 
 .expanding-button-box.color-one .expanding-button {
@@ -632,7 +632,7 @@ button.secondary.color-two:hover span.post-number, button.secondary.color-two:fo
 }
 
 
-/* EXPANDING BUTTON COLOR TWO SETTINGS */
+// EXPANDING BUTTON COLOR TWO SETTINGS
 .expanding-button-box.color-two {background-color: $color-two;}
 
 .expanding-button-box.color-two .expanding-button {
@@ -1370,6 +1370,85 @@ input:focus::placeholder {
 }
 
 
+// VALID INPUT SETTINGS
+.field.valid input {
+  border-color: $valid;
+  color: $valid;
+}
+
+.field.valid input:not(:placeholder-shown) + label,
+.field.valid input:placeholder-shown + label,
+.field.valid input:focus + label {color: $valid;}
+
+.field.valid select {
+  border-color: $valid;
+  color: $valid;
+}
+
+.field.valid select option,
+.field.valid .select-icon,
+.field.valid label {color: $valid;}
+
+.field.valid select option span.option {color: $valid;}
+
+.field span.valid {
+  display: none;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0 0 0 1rem;
+  font-size: 1.5rem;
+  color: $valid;
+  @include transition (all, 0.25s, ease-in-out);
+}
+
+.field.valid span.valid {display: block;}
+
+.field.valid span.select.valid {
+  top: 1.44rem;
+  right: 2.2rem;
+}
+
+
+// INVALID INPUT SETTINGS
+span.error-message {
+  width: 100%;
+  height: inherit;
+  min-height: 2rem;
+  margin: 0.25rem 0 0 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.833rem;
+  font-weight: 600;
+  color: $invalid;
+  text-align: left;
+  opacity: 0;
+  @include transition (all, 0.25s, ease-in-out);
+}
+
+.field.invalid span.error-message {opacity: 1;}
+
+.field.invalid input {
+  border-color: $invalid;
+  color: $invalid;
+}
+
+.field.invalid input:not(:placeholder-shown) + label,
+.field.invalid input:placeholder-shown + label,
+.field.invalid input:focus + label {color: $invalid;}
+
+.field.invalid select {
+  border-color: $invalid;
+  color: $invalid;
+}
+
+.field.invalid select option,
+.field.invalid .select-icon,
+.field.invalid label {color: $invalid;}
+
+.field.invalid select option span.option {color: $invalid;}
+
+
 // SELECT INPUTS
 .field select {
   border: none;
@@ -1404,7 +1483,7 @@ input:focus::placeholder {
   text-overflow: ellipsis;
 }
 
-.copy .field {padding: 0;}
+.text .field {padding: 0;}
 
 .field .select-icon {
   display: flex;
@@ -1449,8 +1528,6 @@ input[type="checkbox"]:checked:before {
 
 input[type="checkbox"]:checked:not(:disabled) {background-color: $black;}
 
-.field.invalid input[type="checkbox"]:checked:not(:disabled) {background-color: $invalid;}
-
 label.checkbox, label.radio {
   display: flex;
   flex-direction: row;
@@ -1460,92 +1537,154 @@ label.checkbox, label.radio {
 }
 
 
-// FORM VALIDATION
-span.error-message {
-  width: 100%;
-  height: inherit;
-  min-height: 2rem;
-  margin: 0.25rem 0 0 0;
-  padding: 0;
-  font-family: "Montserrat", sans-serif;
-  font-size: 0.833rem;
-  font-weight: 600;
-  color: #d0021b;
-  text-align: left;
-  opacity: 0;
-  @include transition (all, 0.25s, ease-in-out);
-}
+// VALID CHECKBOX SETTINGS
+.field.valid input[type="checkbox"]:checked:not(:disabled) {background-color: $valid;}
 
-.field.invalid span.error-message {opacity: 1;}
-
-.field.invalid input {
-  border-color: #d0021b;
-  color: #d0021b;
-}
-
-.field.invalid input:not(:placeholder-shown) + label,
-.field.invalid input:placeholder-shown + label,
-.field.invalid input:focus + label {color: #d0021b;}
-
-.field.invalid select {border-color: #d0021b; color: #d0021b;}
-
-.field.invalid select option,
-.field.invalid .select-icon,
-.field.invalid label {color: #d0021b;}
-
-.field.invalid select option span.option {color: #d0021b;}
+.field.valid label span.checkmark {border-color: $valid;}
 
 
-// CHECKBOX INPUT ERROR MESSAGE SETTINGS
+// INVALID CHECKBOX SETTINGS
+.field.invalid input[type="checkbox"]:checked:not(:disabled) {background-color: $invalid;}
+
 span.error-message.checkbox {padding: 0 0 0 2rem;}
 
-.field.invalid label span.checkmark {border-color: #d0021b;}
+.field.invalid label span.checkmark {border-color: $invalid;}
 
 
-// SWITCH ERROR MESSAGE SETTINGS
-.field.invalid input.switch[type="checkbox"]:checked:not(:disabled) {
-  border-color: #d0021b;
-  background-color: transparent;
-}
-
-.field.invalid input.switch[type="checkbox"] + label .switch-box span.on-off-switch,
-.field.invalid input.switch[type="checkbox"]:checked + label .switch-box span.on-off-switch {background-color: #d0021b;}
-
-.field.invalid input.switch[type="checkbox"] + label .switch-box span.off {color: #d0021b;}
-
-
-// VALID INPUT SETTINGS
-.field.valid input {
-  border-color: #008000;
-  color: #008000;
-}
-
-.field.valid input:not(:placeholder-shown) + label,
-.field.valid input:placeholder-shown + label,
-.field.valid input:focus + label {color: #008000;}
-
-.field.valid select {border-color: #008000; color: #008000;}
-
-.field.valid select option,
-.field.valid .select-icon,
-.field.valid label {color: #008000;}
-
-.field.valid select option span.option {color: #008000;}
-
-.field span.valid {
-  display: none;
+// RADIO BUTTONS
+input[type="radio"] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   position: absolute;
-  top: 1rem;
-  right: 1rem;
-  padding: 0 0 0 1rem;
-  font-size: 1.5rem;
-  color: #008000;
+  top: 0;
+  left: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin: 0;
+  border: 1px solid $black;
+  border-radius: 100%;
+  background-color: $white;
+  cursor: pointer;
+  @include appearance (none);
   @include transition (all, 0.25s, ease-in-out);
 }
 
-.field.valid span.valid {display: block;}
-
-.field.valid span.select.valid {
-  top: 1.44rem;
-  right: 2.2rem;
+input[type="radio"]:checked:before {
+  display: block;
+  position: relative;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 100%;
+  background-color: $black;
+  content: "";
 }
+
+label.radio {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  min-height: 1.25rem;
+  padding: 0 0 0 1.75rem;
+}
+
+input:disabled, input:disabled:checked {
+  border: 1px solid $light-gray;
+  cursor: default;
+}
+
+input[type="radio"]:disabled:checked:before {
+  display: block;
+  position: relative;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 100%;
+  background-color: $light-gray;
+  content: "";
+}
+
+
+// VALID RADIO BUTTON SETTINGS
+.field.valid input[type="radio"]:checked:before {background-color: $valid;}
+
+
+// INVALID RADIO BUTTON SETTINGS
+.field.invalid input[type="radio"]:checked:before {background-color: $invalid;}
+
+span.error-message.radio {padding: 0 0 0 2rem;}
+
+
+// SWITCHES
+input.toggle[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  width: 3.5rem;
+  height: 1.75rem;
+  min-height: 1.75rem;
+  max-height: 1.75rem;
+  margin: 0;
+  padding: 0.1875rem;
+  border-color: transparent;
+  border-radius: 2rem;
+  background-color: $dark-gray;
+  @include transition (all, 0.25s, ease-in-out);
+}
+
+
+input.toggle[type="checkbox"]:checked:before {display: none;}
+
+input.toggle[type="checkbox"]:after {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin: 0;
+  border-radius: 100%;
+  font-family: "LineAwesome";
+  font-size: 1rem;
+  background-color: white;
+  content: "\f342";
+  @include transition (all, 0.25s, ease-in-out);
+}
+
+input.toggle[type="checkbox"]:checked {
+  background-color: $color-one;
+}
+
+input.toggle[type="checkbox"]:checked:after {
+  left: calc(100% - 1.25rem);
+  color: $color-one;
+  content: "\f17b";
+}
+
+label.toggle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  min-height: 1.75rem;
+  padding: 0 0 0 4rem;
+}
+
+
+// VALID TOGGLE SWITCH SETTINGS
+.field.valid input.toggle[type="checkbox"]:not(:disabled),
+.field.valid input.toggle[type="checkbox"]:checked:not(:disabled) {background-color: $valid;}
+
+.field.valid input.toggle[type="checkbox"]:after {color: $valid;}
+
+
+// INVALID TOGGLE SWITCH SETTINGS
+.field.invalid input.toggle[type="checkbox"]:not(:disabled),
+.field.invalid input.toggle[type="checkbox"]:checked:not(:disabled) {background-color: $invalid;}
+
+.field.invalid input.toggle[type="checkbox"]:after {color: $invalid;}

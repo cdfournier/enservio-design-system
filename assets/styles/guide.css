@@ -39,6 +39,8 @@ p code {
   content: "";
 }
 
+.split.first {padding: 1rem 0;}
+
 .split.last {padding: 0;}
 
 .split.last:after {display: none;}
@@ -61,6 +63,8 @@ p code {
   padding: 2rem 2rem 0;
   width: 100%;
 }
+
+.design-sample.first {padding: 0 2rem;}
 
 @media (min-width: 64rem) {
 .design-sample {
