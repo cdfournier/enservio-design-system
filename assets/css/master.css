@@ -1166,15 +1166,16 @@ main {
 /* ------------------------------------------
   FORMS
 --------------------------------------------- */
-input[type=text],
-input[type=email],
-input[type=tel],
-input[type=url],
 input[type=password],
-input[type=search],
-input[type=file],
+input[type=checkbox],
 input[type=select],
-input[type=checkbox] {
+input[type=search],
+input[type=radio],
+input[type=email],
+input[type=file],
+input[type=text],
+input[type=tel],
+input[type=url] {
   outline-color: #2e84ed;
   font-size: 1rem;
   -webkit-border-radius: 0;

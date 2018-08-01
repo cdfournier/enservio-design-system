@@ -1212,15 +1212,17 @@ main {
   FORMS
 --------------------------------------------- */
 // INPUT RESETS
-input[type=text],
-input[type=email],
-input[type=tel],
-input[type=url],
 input[type=password],
-input[type=search],
-input[type=file],
+input[type=checkbox],
 input[type=select],
-input[type=checkbox] {
+input[type=search],
+input[type=radio],
+input[type=email],
+input[type=file],
+input[type=text],
+input[type=tel],
+input[type=url]
+ {
   outline-color: $color-one;
   font-size: 1rem;
   -webkit-border-radius: 0;
