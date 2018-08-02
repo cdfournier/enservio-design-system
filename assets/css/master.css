@@ -1437,8 +1437,8 @@ input:focus::placeholder {
   display: block; }
 
 .field.valid span.select.valid {
-  top: 1.44rem;
-  right: 2.2rem; }
+  top: 1.5rem;
+  right: 2.25rem; }
 
 .field.valid span.valid.password {
   top: 1.5rem;
