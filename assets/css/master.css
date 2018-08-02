@@ -1440,6 +1440,13 @@ input:focus::placeholder {
   top: 1.44rem;
   right: 2.2rem; }
 
+.field.valid span.valid.password {
+  top: 1.5rem;
+  right: 3rem; }
+
+.field.valid .show-hide-password {
+  color: #008000; }
+
 span.error-message {
   width: 100%;
   height: inherit;
@@ -1490,6 +1497,9 @@ span.error-message {
   color: #d0021b; }
 
 .field.invalid select option span.option {
+  color: #d0021b; }
+
+.field.invalid .show-hide-password {
   color: #d0021b; }
 
 .field select {

@@ -323,7 +323,8 @@ ul.attachment-list li.invalid .button-box.right {opacity: 0;}
   justify-content: space-between;
   width: 100%;
 }
-.carousel .carousel-cell.center ul li {width: auto;}}
+.carousel .carousel-cell.center ul li {width: auto;}
+}
 
 
 /* ------------------------------------------
@@ -571,7 +572,8 @@ button.secondary.color-two:hover span.post-number, button.secondary.color-two:fo
 }
 .expanding-button-box.expand {max-width: 100%;}
 .expanding-button-box .expanding-button.small {display: none;}
-.expanding-button-box .expanding-button.large {display: flex;}}
+.expanding-button-box .expanding-button.large {display: flex;}
+}
 
 
 // CONFIRM ACTION BOX SETTINGS
@@ -726,7 +728,8 @@ span.button.upload input[type="file"] {
 }
 .button-box.left .button,
 .button-box.left .expanding-button-box {margin: 0 1rem 0 0;}
-form .button-box {padding: 0 1rem;}}
+form .button-box {padding: 0 1rem;}
+}
 
 
 /* ------------------------------------------
@@ -764,7 +767,8 @@ header {
   flex-direction: row;
   align-items: flex-end;
   justify-content: center;
-}}
+}
+}
 
 
 // LOGO
@@ -813,7 +817,8 @@ nav ul li {
   font-size: 0.833rem;
   padding: 0 0 0 1.44rem;
 }
-nav ul li:last-child {padding: 0 0 0 1.44rem;}}
+nav ul li:last-child {padding: 0 0 0 1.44rem;}
+}
 
 
 /* ------------------------------------------
@@ -917,7 +922,8 @@ main {
 
 @media (min-width: 48rem) {
 .status-bar .status-bar-details {padding: 2rem;}
-.status-bar .status-bar-details .status-bar-message span {font-size: 1.2rem;}}
+.status-bar .status-bar-details .status-bar-message span {font-size: 1.2rem;}
+}
 
 
 // UPLOAD CONTAINER
@@ -998,7 +1004,8 @@ main {
 @media (min-width: 48rem) {
 .carousel {margin: 0 auto 2rem;}
 .carousel .flickity-prev-next-button {display: block;}
-.carousel .carousel-cell {padding: 0 6rem 2rem;}}
+.carousel .carousel-cell {padding: 0 6rem 2rem;}
+}
 
 
 // CURRENT INVENTORY
@@ -1180,7 +1187,8 @@ main {
   display: flex;
   width: 20%;
   padding: 0 0 0 1rem;
-}}
+}
+}
 
 @media (min-width: 64rem) {
 .inventory-item .inventory-item-header .item-details {
@@ -1192,7 +1200,8 @@ main {
   display: flex;
   width: 30%;
   padding: 0 0 0 1rem;
-}}
+}
+}
 
 
 // PROCESSING SPINNER
@@ -1470,6 +1479,13 @@ input:focus::placeholder {
   right: 2.2rem;
 }
 
+.field.valid span.valid.password {
+  top: 1.5rem;
+  right: 3rem;
+}
+
+.field.valid .show-hide-password {color: $valid;}
+
 
 // INVALID INPUT SETTINGS
 span.error-message {
@@ -1516,6 +1532,8 @@ span.error-message {
 .field.invalid label {color: $invalid;}
 
 .field.invalid select option span.option {color: $invalid;}
+
+.field.invalid .show-hide-password {color: $invalid;}
 
 
 // SELECT INPUTS
