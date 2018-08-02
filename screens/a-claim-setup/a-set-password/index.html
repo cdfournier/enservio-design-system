@@ -40,7 +40,11 @@
               <span class="error-message">This password does not meet the minimum requirements below</span>
               <input type="password" name="password" id="password" placeholder="Choose a password" maxlength="50" minlength="8" autocomplete="new-password" required>
               <label for="password">Password&#42;</label>
-              <span class="valid"><i class="la la-check-circle-o"></i></span>
+              <div class="show-hide-password">
+                <span class="hide-password"><i class="la la-eye-slash"></i></span>
+                <span class="show-password"><i class="la la-eye"></i></span>
+              </div>
+              <span class="valid password"><i class="la la-check-circle-o"></i></span>
             </div>
           </fieldset>
           <fieldset>
@@ -49,15 +53,19 @@
               <span class="error-message">Your passwords do not match</span>
               <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirm your password" maxlength="50" minlength="8" autocomplete="new-password" required>
               <label for="password">Confirm Password&#42;</label>
-              <span class="valid"><i class="la la-check-circle-o"></i></span>
+              <div class="show-hide-password">
+                <span class="hide-password"><i class="la la-eye-slash"></i></span>
+                <span class="show-password"><i class="la la-eye"></i></span>
+              </div>
+              <span class="valid password"><i class="la la-check-circle-o"></i></span>
             </div>
           </fieldset>
           <fieldset>
-            <legend>Show Password</legend>
+            <legend>Terms &amp; Conditions</legend>
             <div class="field"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
-              <span class="error-message checkbox"></span>
-              <input type="checkbox" name="show-password" id="show-password">
-              <label class="checkbox" for="show-password">Show password</label>
+              <span class="error-message checkbox">You must check this box to continue</span>
+              <input type="checkbox" name="terms" id="terms">
+              <label class="checkbox" for="terms"><span>I agree to this site's&nbsp;<a href="#!">Terms &amp; Conditions</a></span></label>
             </div>
           </fieldset>
           <div class="button-box">
