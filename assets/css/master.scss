@@ -687,7 +687,7 @@ button.secondary.color-two:hover span.post-number, button.secondary.color-two:fo
 
 
 // UPLOAD BUTTON
-span.button.upload input[type=file] {
+span.button.upload input[type="file"] {
   position: absolute;
   width: 0;
   min-width: 9.5rem;
@@ -1227,17 +1227,16 @@ main {
   FORMS
 --------------------------------------------- */
 // INPUT RESETS
-input[type=password],
-input[type=checkbox],
-input[type=select],
-input[type=search],
-input[type=radio],
-input[type=email],
-input[type=file],
-input[type=text],
-input[type=tel],
-input[type=url]
- {
+input[type="password"],
+input[type="checkbox"],
+input[type="select"],
+input[type="search"],
+input[type="radio"],
+input[type="email"],
+input[type="file"],
+input[type="text"],
+input[type="tel"],
+input[type="url"] {
   outline-color: $color-one;
   font-size: 1rem;
   -webkit-border-radius: 0;
@@ -1247,7 +1246,7 @@ input[type=url]
 }
 
 input.username:disabled,
-input.username[type=email].disabled {
+input.username[type="email"].disabled {
   border: none;
   border-bottom: 1px solid $black;
   font-weight: 500;
@@ -1393,10 +1392,9 @@ input:focus::placeholder {
 // SHOW/HIDE PASSWORD SETTINGS
 .field .show-hide-password {
   position: absolute;
-  top: 1rem;
-  right: 0;
+  top: 1.5rem;
+  right: 0.125rem;
   z-index: 550;
-  padding: 0 0 0 1rem;
   font-size: 1.5rem;
   color: $color-one;
   cursor: pointer;
@@ -1419,7 +1417,7 @@ input:focus::placeholder {
   right: 1rem;
   background-color: $white;
   opacity: 1;
-  @include transition (all, 0.25s, ease-in-out);
+  @include transition (all, 0.15s, ease-in-out);
 }
 
 .field .show-hide-password .show-password.hide {opacity: 0;}
