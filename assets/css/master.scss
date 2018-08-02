@@ -265,6 +265,21 @@ ul.attachment-list li .line-item span.file-type-icon {
   font-size: 2.5rem;
 }
 
+ul.attachment-list li .line-item span.file-type-icon:after {
+  display: block;
+  font-family: "LineAwesome";
+}
+
+ul.attachment-list li .line-item span.file-type-icon.jpg:after {content: "\f1e9";}
+
+ul.attachment-list li .line-item span.file-type-icon.word:after {content: "\f1ef";}
+
+ul.attachment-list li .line-item span.file-type-icon.text:after {content: "\f1ec";}
+
+ul.attachment-list li .line-item span.file-type-icon.pdf:after {content: "\f1e7";}
+
+ul.attachment-list li .line-item span.file-type-icon.other:after {content: "\f1df";}
+
 ul.attachment-list li .line-item span.file-name {width: 100%;}
 
 ul.attachment-list li .line-item .button-box {
@@ -1231,7 +1246,10 @@ input[type=url]
   @include appearance (none);
 }
 
-input.username:disabled {
+input.username:disabled,
+input.username[type=email].disabled {
+  border: none;
+  border-bottom: 1px solid $black;
   font-weight: 500;
   color: #000000;
   opacity: 1;
@@ -1372,6 +1390,41 @@ input:focus::placeholder {
 }
 
 
+// SHOW/HIDE PASSWORD SETTINGS
+.field .show-hide-password {
+  position: absolute;
+  top: 1rem;
+  right: 0;
+  z-index: 550;
+  padding: 0 0 0 1rem;
+  font-size: 1.5rem;
+  color: $color-one;
+  cursor: pointer;
+  @include transition (all, 0.25s, ease-in-out);
+}
+
+.field .show-hide-password:hover,
+.field .show-hide-password:focus {color: $color-two;}
+
+.field .show-hide-password .hide-password {
+  display: block;
+  position: absolute;
+  right: 1rem;
+  background-color: $white;
+}
+
+.field .show-hide-password .show-password {
+  display: block;
+  position: absolute;
+  right: 1rem;
+  background-color: $white;
+  opacity: 1;
+  @include transition (all, 0.25s, ease-in-out);
+}
+
+.field .show-hide-password .show-password.hide {opacity: 0;}
+
+
 // VALID INPUT SETTINGS
 .field.valid input {
   border-color: $valid;
@@ -1381,6 +1434,14 @@ input:focus::placeholder {
 .field.valid input:not(:placeholder-shown) + label,
 .field.valid input:placeholder-shown + label,
 .field.valid input:focus + label {color: $valid;}
+
+.field.valid input:not(:placeholder-shown) + label a,
+.field.valid input:placeholder-shown + label a,
+.field.valid input:focus + label a {color: $valid;}
+
+.field.valid input:not(:placeholder-shown) + label a:hover, .field.valid input:not(:placeholder-shown) + label a:focus,
+.field.valid input:placeholder-shown + label a:hover, .field.valid input:placeholder-shown + label a:focus,
+.field.valid input:focus + label a:hover, .field.valid input:focus + label a:focus {color: darken($valid, 10%);}
 
 .field.valid select {
   border-color: $valid;
@@ -1438,6 +1499,14 @@ span.error-message {
 .field.invalid input:not(:placeholder-shown) + label,
 .field.invalid input:placeholder-shown + label,
 .field.invalid input:focus + label {color: $invalid;}
+
+.field.invalid input:not(:placeholder-shown) + label a,
+.field.invalid input:placeholder-shown + label a,
+.field.invalid input:focus + label a {color: $invalid;}
+
+.field.invalid input:not(:placeholder-shown) + label a:hover, .field.invalid input:not(:placeholder-shown) + label a:focus,
+.field.invalid input:placeholder-shown + label a:hover, .field.invalid input:placeholder-shown + label a:focus,
+.field.invalid input:focus + label a:hover, .field.invalid input:focus + label a:focus {color: darken($invalid, 10%);}
 
 .field.invalid select {
   border-color: $invalid;

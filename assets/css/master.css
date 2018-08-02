@@ -210,6 +210,25 @@ ul.attachment-list li .line-item span.file-type-icon {
   justify-content: flex-start;
   font-size: 2.5rem; }
 
+ul.attachment-list li .line-item span.file-type-icon:after {
+  display: block;
+  font-family: "LineAwesome"; }
+
+ul.attachment-list li .line-item span.file-type-icon.jpg:after {
+  content: "\f1e9"; }
+
+ul.attachment-list li .line-item span.file-type-icon.word:after {
+  content: "\f1ef"; }
+
+ul.attachment-list li .line-item span.file-type-icon.text:after {
+  content: "\f1ec"; }
+
+ul.attachment-list li .line-item span.file-type-icon.pdf:after {
+  content: "\f1e7"; }
+
+ul.attachment-list li .line-item span.file-type-icon.other:after {
+  content: "\f1df"; }
+
 ul.attachment-list li .line-item span.file-name {
   width: 100%; }
 
@@ -1185,7 +1204,10 @@ input[type=url] {
   -moz-appearance: none;
   appearance: none; }
 
-input.username:disabled {
+input.username:disabled,
+input.username[type=email].disabled {
+  border: none;
+  border-bottom: 1px solid #000000;
   font-weight: 500;
   color: #000000;
   opacity: 1; }
@@ -1327,6 +1349,46 @@ input:focus::placeholder {
   -o-transform: translate(0, 0);
   transform: translate(0, 0); }
 
+.field .show-hide-password {
+  position: absolute;
+  top: 1rem;
+  right: 0;
+  z-index: 550;
+  padding: 0 0 0 1rem;
+  font-size: 1.5rem;
+  color: #2e84ed;
+  cursor: pointer;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out; }
+
+.field .show-hide-password:hover,
+.field .show-hide-password:focus {
+  color: #0f4a92; }
+
+.field .show-hide-password .hide-password {
+  display: block;
+  position: absolute;
+  right: 1rem;
+  background-color: #ffffff; }
+
+.field .show-hide-password .show-password {
+  display: block;
+  position: absolute;
+  right: 1rem;
+  background-color: #ffffff;
+  opacity: 1;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -ms-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out; }
+
+.field .show-hide-password .show-password.hide {
+  opacity: 0; }
+
 .field.valid input {
   border-color: #008000;
   color: #008000; }
@@ -1335,6 +1397,16 @@ input:focus::placeholder {
 .field.valid input:placeholder-shown + label,
 .field.valid input:focus + label {
   color: #008000; }
+
+.field.valid input:not(:placeholder-shown) + label a,
+.field.valid input:placeholder-shown + label a,
+.field.valid input:focus + label a {
+  color: #008000; }
+
+.field.valid input:not(:placeholder-shown) + label a:hover, .field.valid input:not(:placeholder-shown) + label a:focus,
+.field.valid input:placeholder-shown + label a:hover, .field.valid input:placeholder-shown + label a:focus,
+.field.valid input:focus + label a:hover, .field.valid input:focus + label a:focus {
+  color: #004d00; }
 
 .field.valid select {
   border-color: #008000;
@@ -1398,6 +1470,16 @@ span.error-message {
 .field.invalid input:placeholder-shown + label,
 .field.invalid input:focus + label {
   color: #d0021b; }
+
+.field.invalid input:not(:placeholder-shown) + label a,
+.field.invalid input:placeholder-shown + label a,
+.field.invalid input:focus + label a {
+  color: #d0021b; }
+
+.field.invalid input:not(:placeholder-shown) + label a:hover, .field.invalid input:not(:placeholder-shown) + label a:focus,
+.field.invalid input:placeholder-shown + label a:hover, .field.invalid input:placeholder-shown + label a:focus,
+.field.invalid input:focus + label a:hover, .field.invalid input:focus + label a:focus {
+  color: #9d0214; }
 
 .field.invalid select {
   border-color: #d0021b;

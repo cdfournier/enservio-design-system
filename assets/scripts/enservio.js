@@ -57,3 +57,8 @@ $(".show-system").click( function() {
 $(".dismiss.system").click( function() {
   $(".status-bar.system").removeClass("show");
 });
+
+// SHOW/HIDE PASSWORD
+$(".show-hide-password").click( function() {
+  $(".show-password").toggleClass("hide");
+});
