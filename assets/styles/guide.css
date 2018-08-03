@@ -1,0 +1,155 @@
+/* ------------------------------------------
+  <p> LINE HEIGHT
+--------------------------------------------- */
+p {line-height: 2;}
+
+
+/* ------------------------------------------
+  <p> CODE
+--------------------------------------------- */
+p code {
+  padding: 0.125rem 0.25rem;
+  border: 1px solid #444853;
+  border-radius: 0.125rem;
+  font-size: 1rem;
+  background-color: #cccece;
+  background-color: rgba(206,206,206,0.25);
+  white-space: nowrap;
+}
+
+
+/* ------------------------------------------
+  SPLIT
+--------------------------------------------- */
+.split {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 0 0 1rem;
+}
+
+.split:after {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  width: 60%;
+  height: 1px;
+  margin: 0 0 0 2rem;
+  background-color: #cccece;
+  content: "";
+}
+
+.split.first {padding: 1rem 0;}
+
+.split.last {padding: 0;}
+
+.split.last:after {display: none;}
+
+@media (min-width: 64rem) {
+.split {
+  flex-direction: row;
+  padding: 2rem 0 1rem;
+}
+.split.last {padding: 2rem 0 0;}
+.split:after {width: 80%;}}
+
+
+/* ------------------------------------------
+  DESIGN SAMPLE
+--------------------------------------------- */
+.design-sample {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 2rem 0;
+  width: 100%;
+}
+
+.design-sample.first {padding: 0 2rem;}
+
+@media (min-width: 64rem) {
+.design-sample {
+  width: 50%;
+  padding: 0 1rem 0 2rem;
+}}
+
+
+/* ------------------------------------------
+  CODE SAMPLE
+--------------------------------------------- */
+.code-sample {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+/*
+  max-height: 20rem;
+  overflow: scroll;
+*/
+  margin: 2rem auto 0;
+  padding: 0 2rem 0;
+}
+
+@media (min-width: 64rem) {
+.code-sample {
+  width: 50%;
+  margin: 0;
+  padding: 0 2rem 0 1rem;
+}}
+
+
+/* ------------------------------------------
+  CODE STYLE
+--------------------------------------------- */
+figure {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1rem 0 0;
+}
+
+figure:first-of-type {padding: 0;}
+
+figcaption {
+  padding: 0 0 0.5rem;
+  font-size: 0.694rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #444853;
+}
+
+pre {
+  margin: 0;
+  border-right: 1px solid #cccece;
+  overflow: auto;
+}
+
+code {font-size: 0.833rem;}
+
+
+/* ------------------------------------------
+  NOTE
+--------------------------------------------- */
+.note {
+  overflow: scroll;
+  padding: 1rem 0 0;
+}
+
+.note p {
+  font-size: 0.833rem;
+  font-weight: 400;
+  line-height: 2;
+}
+
+.note p code {
+  padding: 0.125rem 0.25rem;
+  border: 1px solid #444853;
+  border-radius: 0.125rem;
+  font-size: 0.833rem;
+  background-color: #cccece;
+  background-color: rgba(206,206,206,0.25);
+  white-space: nowrap;
+}
+
+@media (min-width: 48rem) {
+.note {overflow: hidden;}
+}

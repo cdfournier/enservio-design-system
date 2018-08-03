@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Enservio Customer Portal | Settlement Review</title>
+    <title>Enservio Design System | Header Component</title>
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <!-- css -->
@@ -11,152 +11,90 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700">
     <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <link rel="stylesheet" href="../../css/base.css">
-    <link rel="stylesheet" href="../../css/buttons.css">
-    <link rel="stylesheet" href="../../css/carousels.css">
-    <link rel="stylesheet" href="../../css/colors.css">
-    <link rel="stylesheet" href="../../css/design.css">
-    <link rel="stylesheet" href="../../css/footer.css">
-    <link rel="stylesheet" href="../../css/forms.css">
-    <link rel="stylesheet" href="../../css/header.css">
-    <link rel="stylesheet" href="../../css/layout.css">
-    <link rel="stylesheet" href="../../css/status.css">
-    <link rel="stylesheet" href="../../css/typography.css">
+    <link rel="stylesheet" href="../../assets/css/master.css">
+
+    <link rel="stylesheet" href="../../assets/styles/guide.css">
+
+    <style>
+      main {padding: 4rem 0 0;}
+      .button-box {padding: 1rem 0 0;}
+      .button-box:first-of-type {padding: 0;}
+    </style>
   </head>
   <body>
     <header id="header" class="header--fixed">
       <div class="logo">
         <svg id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 184.57 37.49"><defs><style>.cls-1{fill:#f27e20;}</style></defs><path d="M98.78,26.51H81.05c-.54,5.1,6,8.71,13.27,4.53l2.23,4.26a23.69,23.69,0,0,1-2.7,1.37,20,20,0,0,1-9.31.79c-5.14-.64-8.49-3.94-9.52-9.53-1.28-7,1.88-13.06,7.93-15.32,5.55-2.08,14,0,16,7.26A13.94,13.94,0,0,1,98.78,26.51ZM81.31,22.08H93.16c-.09-3.39-2.1-5.32-5.58-5.45S81.79,18.56,81.31,22.08Z" transform="translate(-0.22 -0.25)"/><path d="M6.4,26.44c-.17,6,7.14,8.37,13.2,4.62l2.14,4.06c-4.7,3.74-14,3.31-18.14-.74-3-3-3.6-6.72-3.32-10.65.35-5,2.78-8.84,7.46-10.84a12.1,12.1,0,0,1,12.9,1.6c3.77,3,4.69,7.12,3.57,12Zm12.2-4.37c-.17-3.43-2.1-5.28-5.6-5.44a5.77,5.77,0,0,0-6.25,5.44Z" transform="translate(-0.22 -0.25)"/><path d="M172.84,37.59c-7.56.35-12.41-5.07-12.12-13.46A12.83,12.83,0,0,1,165,14.47c4.87-4.31,17.1-4,19.31,6.08A17.82,17.82,0,0,1,184,30,10.74,10.74,0,0,1,172.84,37.59Zm-.56-4.72c3.08,0,4.9-1.22,5.81-4a13,13,0,0,0,.12-8.17c-.8-2.64-2.43-4-5-4.16A5.24,5.24,0,0,0,167.65,20a12.59,12.59,0,0,0,0,9.75A4.46,4.46,0,0,0,172.28,32.87Z" transform="translate(-0.22 -0.25)"/><path d="M34.56,19.15V37H28.92V12.48h4L34,14.42a10.66,10.66,0,0,1,10-2.17c3.55.91,6,3.28,6.24,6.78.4,5.95.11,12,.11,18H44.9V23.58c0-.42,0-.85,0-1.28-.13-2-.38-4.08-2.51-5.08a6.17,6.17,0,0,0-6.46.76C35.45,18.3,35.06,18.72,34.56,19.15Z" transform="translate(-0.22 -0.25)"/><path d="M54.91,35.63l1.89-4.2c1.75.54,3.38,1.11,5.06,1.52a6.74,6.74,0,0,0,2.1,0A2.16,2.16,0,0,0,66.2,31.3a2.71,2.71,0,0,0-1.06-3c-1.12-.75-2.37-1.29-3.54-2a28.66,28.66,0,0,1-4.4-2.58,6.3,6.3,0,0,1,1.66-10.93c4.09-1.71,8-1,12.06.8L69.28,18a9.25,9.25,0,0,0-5.85-1.48,2.4,2.4,0,0,0-2.56,1.82A2.33,2.33,0,0,0,62.3,21c1.18.65,2.47,1.09,3.68,1.69a20.79,20.79,0,0,1,3.89,2.18,6.94,6.94,0,0,1-1.48,11.7A14.76,14.76,0,0,1,54.91,35.63Z" transform="translate(-0.22 -0.25)"/><path d="M120.41,12.43h6.32l6,15.08c2.29-5.33,4.4-10.23,6.5-15.13h6.11c-3.89,8.5-7.67,16.79-11.48,25.12H131.6C127.9,29.21,124.21,20.93,120.41,12.43Z" transform="translate(-0.22 -0.25)"/><path d="M103.2,12.37h5.46l.44,1.83c3.33-2.65,6.86-3,10.86-1.46l-2.35,4.81c-.52-.19-1-.37-1.42-.51a5.33,5.33,0,0,0-7.14,4.6,19.88,19.88,0,0,0-.16,2.56c0,3.57,0,7.14,0,10.71v2.18H103.2Z" transform="translate(-0.22 -0.25)"/><path d="M151.15,17.16l-3-.2V12.45h8.69V37h-5.69Z" transform="translate(-0.22 -0.25)"/><path class="cls-1" d="M153.54.25a3.2,3.2,0,0,1,3.31,3.13,3.42,3.42,0,0,1-3.29,3.27,3.33,3.33,0,0,1-3.29-3.22A3.21,3.21,0,0,1,153.54.25Z" transform="translate(-0.22 -0.25)"/></svg>
       </div>
-      <nav>
-        <ul role="menubar">
-          <li role="menuitem"><a href="#!">Home</a></li>
-          <li role="menuitem"><a href="#!">Claim Attachments</a></li>
-          <li role="menuitem"><a href="#!">Help</a></li>
-          <li role="menuitem"><a href="#!">Log Out</a></li>
-        </ul>
-      </nav>
     </header>
     <main>
-      <section id="header-no-logo">
-        <div class="text lg">
-          <h1>Header With Nav</h1>
+      <section id="header-component">
+        <div class="split last">
+          <div class="design-sample">
+            <h1>Header</h1>
+            <p>On screens taller than the window height, the <code>header</code> should disappear <code>(translate(-100%));</code> when the user scrolls down then reappear when the user scrolls back up.</p>
+          </div>
+          <div class="code-sample">
+            <figure>
+              <figcaption>html</figcaption>
+              <pre>
+  <code>&lt;header id=&quot;header&quot; class=&quot;header--fixed&quot;&gt;</code>
+    <code>&lt;div class=&quot;logo&quot;&gt;</code>
+      <code>&lt;svg id=&quot;logo&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; viewBox=&quot;0 0 184.57 37.49&quot;&gt;&lt;defs&gt;&lt;style&gt;.cls-1{fill:#f27e20;}&lt;/style&gt;&lt;/defs&gt;&lt;path d=&quot;M98.78,26.51H81.05c-.54,5.1,6,8.71,13.27,4.53l2.23,4.26a23.69,23.69,0,0,1-2.7,1.37,20,20,0,0,1-9.31.79c-5.14-.64-8.49-3.94-9.52-9.53-1.28-7,1.88-13.06,7.93-15.32,5.55-2.08,14,0,16,7.26A13.94,13.94,0,0,1,98.78,26.51ZM81.31,22.08H93.16c-.09-3.39-2.1-5.32-5.58-5.45S81.79,18.56,81.31,22.08Z&quot; transform=&quot;translate(-0.22 -0.25)&quot;/&gt;&lt;path d=&quot;M6.4,26.44c-.17,6,7.14,8.37,13.2,4.62l2.14,4.06c-4.7,3.74-14,3.31-18.14-.74-3-3-3.6-6.72-3.32-10.65.35-5,2.78-8.84,7.46-10.84a12.1,12.1,0,0,1,12.9,1.6c3.77,3,4.69,7.12,3.57,12Zm12.2-4.37c-.17-3.43-2.1-5.28-5.6-5.44a5.77,5.77,0,0,0-6.25,5.44Z&quot; transform=&quot;translate(-0.22 -0.25)&quot;/&gt;&lt;path d=&quot;M172.84,37.59c-7.56.35-12.41-5.07-12.12-13.46A12.83,12.83,0,0,1,165,14.47c4.87-4.31,17.1-4,19.31,6.08A17.82,17.82,0,0,1,184,30,10.74,10.74,0,0,1,172.84,37.59Zm-.56-4.72c3.08,0,4.9-1.22,5.81-4a13,13,0,0,0,.12-8.17c-.8-2.64-2.43-4-5-4.16A5.24,5.24,0,0,0,167.65,20a12.59,12.59,0,0,0,0,9.75A4.46,4.46,0,0,0,172.28,32.87Z&quot; transform=&quot;translate(-0.22 -0.25)&quot;/&gt;&lt;path d=&quot;M34.56,19.15V37H28.92V12.48h4L34,14.42a10.66,10.66,0,0,1,10-2.17c3.55.91,6,3.28,6.24,6.78.4,5.95.11,12,.11,18H44.9V23.58c0-.42,0-.85,0-1.28-.13-2-.38-4.08-2.51-5.08a6.17,6.17,0,0,0-6.46.76C35.45,18.3,35.06,18.72,34.56,19.15Z&quot; transform=&quot;translate(-0.22 -0.25)&quot;/&gt;&lt;path d=&quot;M54.91,35.63l1.89-4.2c1.75.54,3.38,1.11,5.06,1.52a6.74,6.74,0,0,0,2.1,0A2.16,2.16,0,0,0,66.2,31.3a2.71,2.71,0,0,0-1.06-3c-1.12-.75-2.37-1.29-3.54-2a28.66,28.66,0,0,1-4.4-2.58,6.3,6.3,0,0,1,1.66-10.93c4.09-1.71,8-1,12.06.8L69.28,18a9.25,9.25,0,0,0-5.85-1.48,2.4,2.4,0,0,0-2.56,1.82A2.33,2.33,0,0,0,62.3,21c1.18.65,2.47,1.09,3.68,1.69a20.79,20.79,0,0,1,3.89,2.18,6.94,6.94,0,0,1-1.48,11.7A14.76,14.76,0,0,1,54.91,35.63Z&quot; transform=&quot;translate(-0.22 -0.25)&quot;/&gt;&lt;path d=&quot;M120.41,12.43h6.32l6,15.08c2.29-5.33,4.4-10.23,6.5-15.13h6.11c-3.89,8.5-7.67,16.79-11.48,25.12H131.6C127.9,29.21,124.21,20.93,120.41,12.43Z&quot; transform=&quot;translate(-0.22 -0.25)&quot;/&gt;&lt;path d=&quot;M103.2,12.37h5.46l.44,1.83c3.33-2.65,6.86-3,10.86-1.46l-2.35,4.81c-.52-.19-1-.37-1.42-.51a5.33,5.33,0,0,0-7.14,4.6,19.88,19.88,0,0,0-.16,2.56c0,3.57,0,7.14,0,10.71v2.18H103.2Z&quot; transform=&quot;translate(-0.22 -0.25)&quot;/&gt;&lt;path d=&quot;M151.15,17.16l-3-.2V12.45h8.69V37h-5.69Z&quot; transform=&quot;translate(-0.22 -0.25)&quot;/&gt;&lt;path class=&quot;cls-1&quot; d=&quot;M153.54.25a3.2,3.2,0,0,1,3.31,3.13,3.42,3.42,0,0,1-3.29,3.27,3.33,3.33,0,0,1-3.29-3.22A3.21,3.21,0,0,1,153.54.25Z&quot; transform=&quot;translate(-0.22 -0.25)&quot;/&gt;&lt;/svg&gt;</code>
+    <code>&lt;/div&gt;</code>
+  <code>&lt;/header&gt;</code>
+              </pre>
+            </figure>
+            <figure>
+              <figcaption>scss</figcaption>
+              <pre>
+  <code>header {</code>
+    <code>display: flex;</code>
+    <code>flex-direction: column;</code>
+    <code>align-items: center;</code>
+    <code>width: 100%;</code>
+    <code>margin: 0;</code>
+    <code>padding: 1rem 2rem;</code>
+    <code>background-color: $white;</code>
+  <code>}</code>
+  
+  <code>.header--fixed {</code>
+    <code>position: fixed;</code>
+    <code>top: 0;</code>
+    <code>right: 0;</code>
+    <code>left: 0;</code>
+    <code>z-index: 1000;</code>
+  <code>}</code>
+  
+  <code>.headroom {</code>
+    <code>@include transition (all, 0.25s, ease-in-out);</code>
+    <code>will-change: transform;</code>
+  <code>}</code>
+  
+  <code>.headroom--pinned {@include transform(translateY(0));}</code>
+  
+  <code>.headroom--unpinned {@include transform(translateY(-100%));}</code>
+  
+  <code>@media (min-width: 35.5rem) {</code>
+  <code>header {</code>
+    <code>flex-direction: row;</code>
+    <code>align-items: flex-end;</code>
+    <code>justify-content: center;</code>
+  <code>}}</code>
+  
+  <code>.logo {</code>
+    <code>display: flex;</code>
+    <code>flex-direction: column;</code>
+    <code>align-items: center;</code>
+    <code>justify-content: center;</code>
+    <code>width: 12rem;</code>
+    <code>margin: 0;</code>
+    <code>padding: 0;</code>
+  <code>}</code>
+              </pre>
+            </figure>
+          </div>
         </div>
-        <figure class="lg">
-          <figcaption>html</figcaption>
-          <pre>
-<code>&lt;header id=&quot;header&quot; class=&quot;header--fixed&quot;&gt;</code>
-<code>&lt;div class=&quot;logo&quot;&gt;&lt;/div&gt;</code>
-  <code>&lt;nav&gt;</code>
-    <code>&lt;ul role=&quot;menubar&quot;&gt;</code>
-      <code>&lt;li role=&quot;menuitem&quot;&gt;&lt;a href=&quot;#!&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;</code>
-      <code>&lt;li role=&quot;menuitem&quot;&gt;&lt;a href=&quot;#!&quot;&gt;Claim Attachments&lt;/a&gt;&lt;/li&gt;</code>
-      <code>&lt;li role=&quot;menuitem&quot;&gt;&lt;a href=&quot;#!&quot;&gt;Help&lt;/a&gt;&lt;/li&gt;</code>
-      <code>&lt;li role=&quot;menuitem&quot;&gt;&lt;a href=&quot;#!&quot;&gt;Log Out&lt;/a&gt;&lt;/li&gt;</code>
-    <code>&lt;/ul&gt;</code>
-  <code>&lt;/nav&gt;</code>
-<code>&lt;/header&gt;</code>
-          </pre>
-        </figure>
-        <figure class="lg">
-          <figcaption>css</figcaption>
-          <pre>
-<code>header {</code>
-<code>  display: flex;</code>
-<code>  flex-direction: column;</code>
-<code>  align-items: center;</code>
-<code>  width: 100%;</code>
-<code>  margin: 0;</code>
-<code>  padding: 1rem 2rem;</code>
-<code>  background-color: #ffffff;</code>
-<code>}</code>
-
-<code>.header--fixed {</code>
-<code>  position: fixed;</code>
-<code>  z-index: 10;</code>
-<code>  right: 0;</code>
-<code>  left: 0;</code>
-<code>  top: 0</code>
-<code>}</code>
-
-<code>.headroom {</code>
-<code>  -webkit-transition: transform 0.25s ease-in-out;</code>
-<code>  -moz-transition: transform 0.25s ease-in-out;</code>
-<code>  -o-transition: transform 0.25s ease-in-out;</code>
-<code>  transition: transform 0.25s ease-in-out;</code>
-<code>  will-change: transform;</code>
-<code>}</code>
-
-<code>.headroom--pinned {</code>
-<code>  -webkit-transform: translateY(0);</code>
-<code>  -moz-transform: translateY(0);</code>
-<code>  -o-transform: translateY(0);</code>
-<code>  transform: translateY(0);</code>
-<code>}</code>
-
-<code>.headroom--unpinned {</code>
-<code>  -webkit-transform: translateY(-100%);</code>
-<code>  -moz-transform: translateY(-100%);</code>
-<code>  -o-transform: translateY(-100%);</code>
-<code>  transform: translateY(-100%);</code>
-<code>}</code>
-
-<code>@media (min-width: 35.5rem) {</code>
-<code>header {</code>
-<code>  flex-direction: row;</code>
-<code>  align-items: flex-end;</code>
-<code>  justify-content: center;</code>
-<code>}}</code>
-
-<code>.logo {</code>
-<code>  display: flex;</code>
-<code>  align-items: center;</code>
-<code>  flex-direction: column;</code>
-<code>  justify-content: center;</code>
-<code>  width: 12rem;</code>
-<code>  margin: 0;</code>
-<code>  padding: 0;</code>
-<code>}</code>
-
-<code>nav {</code>
-<code>  width: 100%;</code>
-<code>  padding: 1rem 0 0;</code>
-<code>}</code>
-
-<code>nav ul {</code>
-<code>  display: flex;</code>
-<code>  flex-direction: row;</code>
-<code>  align-items: center;</code>
-<code>  justify-content: space-between;</code>
-<code>  width: 100%;</code>
-<code>  margin: 0;</code>
-<code>  padding: 0;</code>
-<code>  list-style-type: none;</code>
-<code>}</code>
-
-<code>nav ul li {</code>
-<code>  display: flex;</code>
-<code>  flex-direction: column;</code>
-<code>  align-items: center;</code>
-<code>  width: initial;</code>
-<code>  margin: 0;</code>
-<code>  padding: 0 0.694rem;</code>
-<code>  font-size: 0.694rem;</code>
-<code>  text-align: center;</code>
-<code>  text-transform: uppercase;</code>
-<code>  opacity: 1;</code>
-<code>}</code>
-
-<code>@media (min-width: 35.5rem) {</code>
-<code>nav {padding: 0;}</code>
-<code>nav ul {justify-content: flex-end;}</code>
-<code>nav ul li {</code>
-<code>  font-size: 0.833rem;</code>
-<code>  padding: 0 0 0 1.44rem;</code>
-<code>}</code>
-<code>nav ul li:last-child {padding: 0 0 0 1.44rem;}}</code>
-          </pre>
-        </figure>
       </section>
     </main>
     <footer>&copy;2018 Enservio, Inc. All rights reserved.&nbsp;<a href="#!">Terms&nbsp;&amp;&nbsp;Conditions</a></footer>
@@ -164,6 +102,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script src="https://unpkg.com/headroom.js@0.9.4/dist/headroom.js"></script>
-    <script src="../../scripts/enservio.js"></script>
+    <script src="../../assets/scripts/enservio.js"></script>
+    <script src="../../assets/scripts/enservio.header.js"></script>
   </body>
 </html>

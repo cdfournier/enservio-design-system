@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Enservio Design System | Attachments Components</title>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700">
+    <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="../../assets/css/master.css">
+
+    <link rel="stylesheet" href="../../assets/styles/guide.css">
+
+    <style>
+      main {padding: 0;}
+      .button-box {padding: 1rem 0 0;}
+      .button-box:first-of-type {padding: 0;}
+    </style>
+  </head>
+  <body>
+    <main>
+      <section id="attachment-upload-component">
+        <div class="text">
+          <h1>Attachments</h1>
+          <p>There are screens for Claim Attachments and for individual Inventory Item Attachments. The two screens look and function alike, the only difference being that the screen for individual Inventory Item Attachments includes the inventory item header from the Inventory Capture screen (included below).</p>
+          <p>The are two functional components on these screens: the upload button and container and the attachments list.</p>
+        </div>
+        <div class="split">
+          <div class="design-sample">
+            <figcaption>Design Sample</figcaption>
+            <form class="lg">
+              <div class="upload-container md">
+                <p><strong>Drag Files Here To Upload</strong></p>
+                <small>PDF, PNG, JPG, DOC</small>
+              </div>
+              <div class="button-box">
+                <button class="button color-one">Add Attachments<span class="post"><i class="la la-paperclip"></i></span></button>
+                <button class="button color-two">Done</button>
+              </div>
+            </form>
+            <div class="note">
+              <p>We utilize <a href="https://modernizr.com/" target="_blank">Modernizr</a> to detect touch-screen devices which will set the <code>&lt;div class=&quot;upload-container&quot;&gt;</code> to <code>display: none;</code>. When no touch-screen is detected, we apply the <code>.no-touch</code> class to the upload container to make it visible for drag-and-drop functionality.</p>
+              <p>On mobile devices, the Add Attachments button should enable the device's native file features, including access to the device's camera, photo album, and file management system.</p>
+            </div>
+          </div>
+          <div class="code-sample">
+            <figure>
+              <figcaption>html</figcaption>
+              <pre>
+<code>&lt;form class=&quot;lg&quot;&gt;</code>
+  <code>&lt;div class=&quot;upload-container md&quot;&gt;</code>
+    <code>&lt;p&gt;&lt;strong&gt;Drag Files Here To Upload&lt;/strong&gt;&lt;/p&gt;</code>
+    <code>&lt;small&gt;PDF, PNG, JPG, DOC&lt;/small&gt;</code>
+  <code>&lt;/div&gt;</code>
+  <code>&lt;div class=&quot;button-box&quot;&gt;</code>
+    <code>&lt;button class=&quot;button color-one&quot;&gt;Add Attachments&lt;span class=&quot;post&quot;&gt;&lt;i class=&quot;la la-paperclip&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/button&gt;</code>
+    <code>&lt;button class=&quot;button color-two&quot;&gt;Done&lt;/button&gt;</code>
+  <code>&lt;/div&gt;</code>
+<code>&lt;/form&gt;</code>
+              </pre>
+            </figure>
+            <figure>
+              <figcaption>scss</figcaption>
+              <pre>
+<code>.upload-container {display: none;}</code>
+
+<code>.no-touch .upload-container {</code>
+  <code>display: flex;</code>
+  <code>flex-direction: column;</code>
+  <code>align-items: center;</code>
+  <code>justify-content: center;</code>
+  <code>width: 100%;</code>
+  <code>margin: 0 auto 2rem;</code>
+  <code>padding: 4rem 1rem;</code>
+  <code>border: 1px solid #cccece;</code>
+  <code>border-radius: 0.25rem;</code>
+  <code>text-align: center;</code>
+<code>}</code>
+              </pre>
+            </figure>
+          </div>
+        </div>
+      </section>
+      <section id="attachment-list-component">
+        <div class="text">
+          <h1>Current Attachment List</h1>
+        </div>
+        <div class="split last">
+          <div class="design-sample">
+            <figcaption>Design Sample</figcaption>
+            <ul class="attachment-list md" style="padding: 0;">
+              <li> <!-- change class to 'invalid' for errors -->
+                <div class="line-item">
+                  <span class="file-type-icon jpg"></span>
+                  <span class="file-name">Busted_Macbook_pic.jpg</span>
+                  <div class="button-box right">
+                    <div class="expanding-button-box color-one item-one">
+                      <div class="expanding-button small delete-one"><span class="icon-close"><i class="la la-trash"></i></span></div>
+                      <div class="expanding-button large delete-one">Delete Item</div>
+                      <div class="confirm-action-box">
+                        <span class="confirm-action-text">Are you sure?</span>
+                        <span class="confirm-action secondary no-one">No</span>
+                        <span class="confirm-action yes-one">Yes</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <span class="error-message file-type">This is not a valid file type</span>
+              </li>
+            </ul>
+            <div class="note" style="padding: 0;">
+              <p>The attachment list is an unordered list whose individual line-items with two additional children components including a <code>&lt;div&gt;</code> and a <code>&lt;span&gt;</code> (for error messages).</p>
+              <p>The <code>&lt;div class=&quot;line-item&quot;&gt;</code> is split into three child elements: a <code>&lt;span&gt;</code> for the <code>.file-type-icon</code>, a <code>&lt;span&gt;</code> for the <code>.file-name</code>, and a Button Box for the delete line item button.</p>
+              <p>The icons for file type are rendered by adding a class to the <code>.file-type-icon</code> span. For example, if the user uploads a jpg, we would render the following: <code>&lt;span class=&quot;file-type-icon jpg&quot;&gt;</code> to show the jpg icon.</p>
+              <p>To display error messages for each <code>&lt;li&gt;</code>, add the class <code>.invalid</code> to the <code>&lt;li&gt;</code>.</p>
+              <p>All file-type icons can be found here: <a href="https://icons8.com/line-awesome" target="_blank">Line Awesome</a>.</p>
+            </div>
+          </div>
+          <div class="code-sample">
+            <figure>
+              <figcaption>html</figcaption>
+              <pre>
+<code>&lt;ul class=&quot;attachment-list&quot;&gt;</code>
+  <code>&lt;li&gt;</code>
+  <code>&lt;!-- change class to 'invalid' for errors --&gt;</code>
+    <code>&lt;div class=&quot;line-item&quot;&gt;</code>
+      <code>&lt;span class=&quot;file-type-icon jpg&quot;&gt;&lt;/span&gt;</code>
+      <code>&lt;span class=&quot;file-name&quot;&gt;Busted_Macbook_pic.jpg&lt;/span&gt;</code>
+      <code>&lt;div class=&quot;button-box right&quot;&gt;</code>
+        <code>&lt;div class=&quot;expanding-button-box color-one item-one&quot;&gt;</code>
+          <code>&lt;div class=&quot;expanding-button small delete-one&quot;&gt;&lt;span class=&quot;icon-close&quot;&gt;&lt;i class=&quot;la la-trash&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;</code>
+          <code>&lt;div class=&quot;expanding-button large delete-one&quot;&gt;Delete Item&lt;/div&gt;</code>
+          <code>&lt;div class=&quot;confirm-action-box&quot;&gt;</code>
+            <code>&lt;span class=&quot;confirm-action-text&quot;&gt;Are you sure?&lt;/span&gt;</code>
+            <code>&lt;span class=&quot;confirm-action secondary no-one&quot;&gt;No&lt;/span&gt;</code>
+            <code>&lt;span class=&quot;confirm-action yes-one&quot;&gt;Yes&lt;/span&gt;</code>
+          <code>&lt;/div&gt;</code>
+        <code>&lt;/div&gt;</code>
+      <code>&lt;/div&gt;</code>
+    <code>&lt;/div&gt;</code>
+    <code>&lt;span class=&quot;error-message file-type&quot;&gt;This is not a valid file type&lt;/span&gt;</code>
+  <code>&lt;/li&gt;</code>
+<code>&lt;/ul&gt;</code>
+              </pre>
+            </figure>
+            <figure>
+              <figcaption>scss</figcaption>
+              <pre>
+<code>ul.attachment-list {</code>
+  <code>margin: 0 auto;</code>
+  <code>padding: 2rem 2rem 0;</code>
+  <code>list-style-type: none;</code>
+<code>}</code>
+
+<code>ul.attachment-list li {</code>
+  <code>display: flex;</code>
+  <code>flex-direction: column;</code>
+  <code>padding: 0;</code>
+<code>}</code>
+
+<code>ul.attachment-list li .line-item {</code>
+  <code>display: flex;</code>
+  <code>flex-direction: row;</code>
+  <code>align-items: center;</code>
+  <code>justify-content: flex-start;</code>
+  <code>position: relative;</code>
+  <code>width: 100%;</code>
+  <code>padding: 0;</code>
+  <code>font-weight: 500;</code>
+  <code>line-height: 1.5;</code>
+<code>}</code>
+
+<code>ul.attachment-list li .line-item span.file-type-icon {</code>
+  <code>display: flex;</code>
+  <code>flex-direction: row;</code>
+  <code>align-items: flex-start;</code>
+  <code>justify-content: flex-start;</code>
+  <code>font-size: 2.5rem;</code>
+<code>}</code>
+
+<code>ul.attachment-list li .line-item span.file-type-icon:after {</code>
+  <code>display: block;</code>
+  <code>font-family: "LineAwesome";</code>
+<code>}</code>
+
+<code>ul.attachment-list li .line-item span.file-type-icon.jpg:after {content: "\f1e9";}</code>
+
+<code>ul.attachment-list li .line-item span.file-type-icon.word:after {content: "\f1ef";}</code>
+
+<code>ul.attachment-list li .line-item span.file-type-icon.text:after {content: "\f1ec";}</code>
+
+<code>ul.attachment-list li .line-item span.file-type-icon.pdf:after {content: "\f1e7";}</code>
+
+<code>ul.attachment-list li .line-item span.file-type-icon.other:after {content: "\f1df";}</code>
+
+<code>ul.attachment-list li .line-item span.file-name {width: 100%;}</code>
+
+<code>ul.attachment-list li .line-item .button-box {</code>
+  <code>position: absolute;</code>
+  <code>right: 0;</code>
+  <code>width: auto;</code>
+  <code>@include transition (all, 0.25s, ease);</code>
+<code>}</code>
+
+<code>ul.attachment-list li .line-item .expanding-button-box {max-width: 2.25rem;}</code>
+
+<code>ul.attachment-list li .line-item .expanding-button-box.expand {max-width: 100%;}</code>
+
+<code>ul.attachment-list li .line-item .expanding-button-box .expanding-button.small {display: flex;}</code>
+
+<code>ul.attachment-list li .line-item .expanding-button-box .expanding-button.large {display: none;}</code>
+
+<code>ul.attachment-list li span.error-message {margin: 0.25rem 0 0 0.5rem;}</code>
+
+<code>ul.attachment-list li.invalid span.error-message {opacity: 1;}</code>
+
+<code>ul.attachment-list li.invalid .line-item span.file-type-icon,</code>
+<code>ul.attachment-list li.invalid .line-item span.file-name {color: $invalid;}</code>
+
+<code>ul.attachment-list li.invalid .button-box.right {opacity: 0;}</code>
+              </pre>
+            </figure>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>&copy;2018 Enservio, Inc. All rights reserved.&nbsp;<a href="#!">Terms&nbsp;&amp;&nbsp;Conditions</a></footer>
+    <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="../../assets/scripts/enservio.js"></script>
+  </body>
+</html>
