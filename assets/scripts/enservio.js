@@ -62,3 +62,8 @@ $(".dismiss.system").click( function() {
 $(".show-hide-password").click( function() {
   $(".show-password").toggleClass("hide");
 });
+
+// TIMEOUT
+$(".continue").click( function() {
+  $(".timeout").removeClass("show");
+});

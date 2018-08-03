@@ -877,6 +877,36 @@ main {
   .status-bar .status-bar-details .status-bar-message span {
     font-size: 1.2rem; } }
 
+.timeout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -5000;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  background-color: #ffffff;
+  opacity: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease; }
+
+.timeout.show {
+  z-index: 5000;
+  opacity: 1; }
+
+.timeout .text {
+  margin: 0 auto;
+  padding: 2rem; }
+
 .upload-container {
   display: none; }
 
@@ -1137,6 +1167,10 @@ main {
 
 .inventory-item .inventory-item-details form {
   padding: 2rem 0 0; }
+
+@media (min-width: 21.625rem) {
+  .current-inventory-list {
+    padding: 2rem 2rem 0; } }
 
 @media (min-width: 48rem) {
   .inventory-item .inventory-item-header .item-details span.description {

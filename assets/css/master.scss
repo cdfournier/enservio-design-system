@@ -323,8 +323,7 @@ ul.attachment-list li.invalid .button-box.right {opacity: 0;}
   justify-content: space-between;
   width: 100%;
 }
-.carousel .carousel-cell.center ul li {width: auto;}
-}
+.carousel .carousel-cell.center ul li {width: auto;}}
 
 
 /* ------------------------------------------
@@ -572,8 +571,7 @@ button.secondary.color-two:hover span.post-number, button.secondary.color-two:fo
 }
 .expanding-button-box.expand {max-width: 100%;}
 .expanding-button-box .expanding-button.small {display: none;}
-.expanding-button-box .expanding-button.large {display: flex;}
-}
+.expanding-button-box .expanding-button.large {display: flex;}}
 
 
 // CONFIRM ACTION BOX SETTINGS
@@ -728,8 +726,7 @@ span.button.upload input[type="file"] {
 }
 .button-box.left .button,
 .button-box.left .expanding-button-box {margin: 0 1rem 0 0;}
-form .button-box {padding: 0 1rem;}
-}
+form .button-box {padding: 0 1rem;}}
 
 
 /* ------------------------------------------
@@ -767,8 +764,7 @@ header {
   flex-direction: row;
   align-items: flex-end;
   justify-content: center;
-}
-}
+}}
 
 
 // LOGO
@@ -817,8 +813,7 @@ nav ul li {
   font-size: 0.833rem;
   padding: 0 0 0 1.44rem;
 }
-nav ul li:last-child {padding: 0 0 0 1.44rem;}
-}
+nav ul li:last-child {padding: 0 0 0 1.44rem;}}
 
 
 /* ------------------------------------------
@@ -922,7 +917,37 @@ main {
 
 @media (min-width: 48rem) {
 .status-bar .status-bar-details {padding: 2rem;}
-.status-bar .status-bar-details .status-bar-message span {font-size: 1.2rem;}
+.status-bar .status-bar-details .status-bar-message span {font-size: 1.2rem;}}
+
+
+// TIMEOUT
+.timeout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -5000;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  background-color: $white;
+  opacity: 0;
+  @include transition (all, 0.5s, ease);
+}
+
+.timeout.show {
+  z-index: 5000;
+  opacity: 1;
+}
+
+.timeout .text {
+  margin: 0 auto;
+  padding: 2rem;
 }
 
 
@@ -1004,8 +1029,7 @@ main {
 @media (min-width: 48rem) {
 .carousel {margin: 0 auto 2rem;}
 .carousel .flickity-prev-next-button {display: block;}
-.carousel .carousel-cell {padding: 0 6rem 2rem;}
-}
+.carousel .carousel-cell {padding: 0 6rem 2rem;}}
 
 
 // CURRENT INVENTORY
@@ -1181,14 +1205,15 @@ main {
   padding: 2rem 0 0;
 }
 
+@media (min-width: 21.625rem) {.current-inventory-list {padding: 2rem 2rem 0;}}
+
 @media (min-width: 48rem) {
 .inventory-item .inventory-item-header .item-details span.description {width: 75%;}
 .inventory-item .inventory-item-header .item-details span.cost {
   display: flex;
   width: 20%;
   padding: 0 0 0 1rem;
-}
-}
+}}
 
 @media (min-width: 64rem) {
 .inventory-item .inventory-item-header .item-details {
@@ -1200,8 +1225,7 @@ main {
   display: flex;
   width: 30%;
   padding: 0 0 0 1rem;
-}
-}
+}}
 
 
 // PROCESSING SPINNER
@@ -1331,13 +1355,11 @@ form.column {flex-direction: column;}
 form.column fieldset.small {width: 25%;}
 fieldset {width: 50%;}
 .small {width: 50%;}
-.xsmall {width: 25%;}
-}
+.xsmall {width: 25%;}}
 
 @media (min-width: 72rem) {
 fieldset, .small {width: 25%;}
-.small fieldset {width: 50%;}
-}
+.small fieldset {width: 50%;}}
 
 
 // INPUTS, LABELS, AND PLACEHOLDERS
