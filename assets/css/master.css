@@ -1263,9 +1263,6 @@ fieldset {
   padding: 0;
   border: none; }
 
-fieldset.small {
-  width: 50%; }
-
 legend {
   display: none; }
 
@@ -1579,7 +1576,7 @@ span.error-message {
   flex-direction: column;
   justify-content: center;
   position: absolute;
-  top: 30%;
+  top: 1.575rem;
   right: 1rem;
   z-index: 0;
   font-size: 1rem; }
