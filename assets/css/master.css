@@ -281,6 +281,39 @@ ul.attachment-list li.invalid .button-box.right {
   .carousel .carousel-cell.center ul li {
     width: auto; } }
 
+ul.settlement-offer {
+  margin: 0;
+  padding: 1rem 0;
+  list-style-type: none; }
+
+ul.settlement-offer li {
+  display: inline-flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 0 1rem; }
+
+ul.settlement-offer li:last-of-type {
+  padding: 0; }
+
+ul.settlement-offer li span {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 0 0 0 1rem;
+  font-weight: 400; }
+
+ul.settlement-offer li span.subtract {
+  color: #d0021b; }
+
+ul.settlement-offer li span.subtract.border {
+  padding: 0 0 1rem;
+  border-bottom: 1px solid #cccece; }
+
+ul.settlement-offer li.border {
+  margin: 0 0 1rem;
+  border-bottom: 1px solid #cccece; }
+
 /* ------------------------------------------
   BUTTONS
 --------------------------------------------- */
@@ -359,8 +392,7 @@ button.big,
   min-height: inherit;
   max-height: inherit;
   padding: 1.25rem 2.5rem;
-  font-size: 1rem;
-  font-weight: 700; }
+  font-size: 1rem; }
 
 button.color-one,
 .button.color-one {
@@ -965,7 +997,7 @@ main {
   max-width: 40rem;
   min-height: 100%;
   margin: auto;
-  padding: 0 2rem 2rem;
+  padding: 0 2rem;
   text-align: left; }
 
 .carousel .carousel-cell.center {
@@ -985,7 +1017,7 @@ main {
   .carousel .flickity-prev-next-button {
     display: block; }
   .carousel .carousel-cell {
-    padding: 0 6rem 2rem; } }
+    padding: 0 6rem; } }
 
 .current-inventory {
   position: fixed;

@@ -2,10 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Enservio Customer Portal | Processing Inventory</title>
+    <title>Enservio Customer Portal | Category Review</title>
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<!--     <meta http-equiv="refresh" content="5; url='../../d-category-review/a-onboarding/index.html'"> -->
     <!-- css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700">
@@ -13,14 +12,30 @@
     <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="../../../assets/css/master.css">
+    
+    <style>
+      form {padding-top: calc(2rem - 0.694rem);}
+      form fieldset:after {
+        display: block;
+        margin: 0 1rem 2rem;
+        border-bottom: 1px solid #cccece;
+        content: "";
+      }
+      form fieldset:last-of-type:after {
+        margin: 0;
+        border-bottom: none;
+      }
+      form fieldset p {padding: 0.694rem 1rem 0.694rem;}
+    </style>
+
   </head>
   <body>
     <section id="alerts" class="alerts">
-      <div class="status-bar error file-type">
+      <div class="status-bar error">
         <div class="status-bar-details">
           <span><i class="la la-exclamation-circle"></i></span>
           <div class="status-bar-message">
-            <span>Our review is taking longer than expected. You will be contacted by email with next steps.</span>
+            <span></span>
           </div>
           <span class="dismiss error"><i class="la la-times-circle"></i></span>
         </div>
@@ -44,7 +59,7 @@
       <div class="timeout">
         <div class="text center md">
           <h1>Timeout Warning</h1>
-          <p>Due to inactivity, your session will end in <b>{time}</b>, and any unsaved changes will be lost. To remain logged in, please click the <b>Continue</b> button to keep working.</p>
+          <p>Due to inactivity, your session will end in <b>{time}</b>, and any unsaved changes will be lost. To remain logged in, please click the  <b>Continue</b> button to keep working.</p>
         </div>
         <div class="button-box">
           <button class="button color-one continue">Continue</button>
@@ -57,14 +72,44 @@
       </div>
     </header>
     <main>
-      <section id="processing-inventory">
-        <div class="text center">
-          <div class="spinner-box">
-            <div class="spinner"><i class="la la-refresh la-spin"></i></div>
-          </div>
-          <h1>Awesome!</h1>
-          <p>Please stand by while we review your inventory. We promise this won't take long.</p>
+      <section id="category-review">
+        <div class="text first md">
+          <h1>Category Review</h1>
+          <p>Are the items below in the correct category? If not, please select the correct product category. If yes, click <b>Submit Items</b>.</p>
         </div>
+        <form class="md" action="../c-processing/index.html">
+          <fieldset>
+            <legend>Category Review Item</legend>
+            <p><b>Description:</b>&nbsp;<span>Samsung 55" HDTV</span></p>
+            <div class="field">
+              <span class="error-message"></span>
+              <select name="category-item-1" id="category-item-1">
+                <option value="0">Electronics	TV and Video TV</option>
+                <option value="1">Electronics	TV and Video DVD Player</option>
+                <option value="2">Electronics	TV and Video Television Mount</option>
+              </select>
+              <div class="select-icon"><i class="la la-angle-down"></i></div>
+              <label for="category">Category</label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Category Review Item</legend>
+            <p><b>Description:</b>&nbsp;<span>Belkin Thunderbolt 3 HD</span></p>
+            <div class="field">
+              <span class="error-message"></span>
+              <select name="category-item-2" id="category-item-2">
+                <option value="0">Disk Drive</option>
+                <option value="1">Computer Memory</option>
+                <option value="2">Computer Optical Drive</option>
+              </select>
+              <div class="select-icon"><i class="la la-angle-down"></i></div>
+              <label for="category">Category</label>
+            </div>
+          </fieldset>
+          <div class="button-box">
+            <button class="button color-one">Submit Items<span class="post-processing"><i class="la la-refresh la-spin"></i></span></button>
+          </div>
+        </form>
       </section>
     </main>
     <footer>&copy;2018 Enservio, Inc. All rights reserved.&nbsp;<a href="#!">Terms&nbsp;&amp;&nbsp;Conditions</a></footer>

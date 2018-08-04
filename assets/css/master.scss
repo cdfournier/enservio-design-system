@@ -326,6 +326,44 @@ ul.attachment-list li.invalid .button-box.right {opacity: 0;}
 .carousel .carousel-cell.center ul li {width: auto;}}
 
 
+// SETTLEMENT OFFER LIST
+ul.settlement-offer {
+  margin: 0;
+  padding: 1rem 0;
+  list-style-type: none;
+}
+
+ul.settlement-offer li {
+  display: inline-flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 0 1rem;
+}
+
+ul.settlement-offer li:last-of-type {padding: 0;}
+
+ul.settlement-offer li span {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 0 0 0 1rem;
+  font-weight: 400;
+}
+
+ul.settlement-offer li span.subtract {color: $invalid;}
+
+ul.settlement-offer li span.subtract.border {
+  padding: 0 0 1rem;
+  border-bottom: 1px solid $light-gray;
+}
+
+ul.settlement-offer li.border {
+  margin: 0 0 1rem;
+  border-bottom: 1px solid $light-gray;
+}
+
+
 /* ------------------------------------------
   BUTTONS
 --------------------------------------------- */
@@ -398,7 +436,6 @@ button.big,
   max-height: inherit;
   padding: 1.25rem 2.5rem;
   font-size: 1rem;
-  font-weight: 700;
 }
 
 button.color-one,
@@ -1012,7 +1049,7 @@ main {
   max-width: 40rem;
   min-height: 100%;
   margin: auto;
-  padding: 0 2rem 2rem;
+  padding: 0 2rem;
   text-align: left;
 }
 
@@ -1031,7 +1068,7 @@ main {
 @media (min-width: 48rem) {
 .carousel {margin: 0 auto 2rem;}
 .carousel .flickity-prev-next-button {display: block;}
-.carousel .carousel-cell {padding: 0 6rem 2rem;}}
+.carousel .carousel-cell {padding: 0 6rem;}}
 
 
 // CURRENT INVENTORY
