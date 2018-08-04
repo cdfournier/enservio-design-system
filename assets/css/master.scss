@@ -868,6 +868,8 @@ main {
 
 
 // STATUS BARS
+.alerts {position: absolute;}
+
 .status-bar {
   position: fixed;
   z-index: 1500;
