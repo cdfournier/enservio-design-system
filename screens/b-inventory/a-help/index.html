@@ -19,40 +19,42 @@
     </style>
   </head>
   <body>
-    <div class="status-bar error">
-      <div class="status-bar-details">
-        <span><i class="la la-exclamation-circle"></i></span>
-        <div class="status-bar-message">
-          <span></span>
+    <section id="alerts">
+      <div class="status-bar error">
+        <div class="status-bar-details">
+          <span><i class="la la-exclamation-circle"></i></span>
+          <div class="status-bar-message">
+            <span></span>
+          </div>
+          <span class="dismiss error"><i class="la la-times-circle"></i></span>
         </div>
-        <span class="dismiss error"><i class="la la-times-circle"></i></span>
       </div>
-    </div>
-    <div class="status-bar success">
-      <div class="status-bar-details">
-        <div class="status-bar-message">
-          <span></span>
+      <div class="status-bar success">
+        <div class="status-bar-details">
+          <div class="status-bar-message">
+            <span></span>
+          </div>
+          <span class="dismiss success"><i class="la la-times-circle"></i></span>
         </div>
-        <span class="dismiss success"><i class="la la-times-circle"></i></span>
       </div>
-    </div>
-    <div class="status-bar system">
-      <div class="status-bar-details">
-        <div class="status-bar-message">
-          <span></span>
+      <div class="status-bar system">
+        <div class="status-bar-details">
+          <div class="status-bar-message">
+            <span></span>
+          </div>
+          <span class="dismiss system"><i class="la la-times-circle"></i></span>
         </div>
-        <span class="dismiss system"><i class="la la-times-circle"></i></span>
       </div>
-    </div>
-    <div class="timeout">
-      <div class="text center md">
-        <h1>Timeout Warning</h1>
-        <p>Due to inactivity, your session will end in <b>{time}</b>, and any unsaved changes will be lost. To remain logged in, please click the  <b>Continue</b> button to keep working.</p>
+      <div class="timeout">
+        <div class="text center md">
+          <h1>Timeout Warning</h1>
+          <p>Due to inactivity, your session will end in <b>{time}</b>, and any unsaved changes will be lost. To remain logged in, please click the  <b>Continue</b> button to keep working.</p>
+        </div>
+        <div class="button-box">
+          <button class="button color-one continue">Continue</button>
+        </div>
       </div>
-      <div class="button-box">
-        <button class="button color-one continue">Continue</button>
-      </div>
-    </div>
+    </section>
     <main>
       <section id="inventory-help">
         <div class="carousel" data-flickity-options="{ 'wrapAround': true, 'prevNextButtons': true }">
