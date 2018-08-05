@@ -1287,6 +1287,45 @@ main {
 }
 
 
+// FIGURE & CAPTION
+figure {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 1rem 0;
+}
+
+figcaption {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0.5rem 0 0;
+  width: 100%;
+  font-size: 0.833rem;
+  font-weight: 400;
+  line-height: 1;
+  text-transform: uppercase;
+  color: $black;
+}
+
+figcaption span.left {
+  width: 35%;
+  text-align: left;
+}
+
+figcaption span.center {
+  width: 50%;
+  text-align: center;
+}
+
+figcaption span.right {
+  width: 15%;
+  text-align: right;
+}
+
+
 // MAX-WIDTHS
 .sm {max-width: 24rem;}
 
