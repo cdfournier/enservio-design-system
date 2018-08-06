@@ -231,7 +231,7 @@ ul.attachment-list li .line-item span.file-type-icon.other:after {
   content: "\f1df"; }
 
 ul.attachment-list li .line-item span.file-name {
-  width: 100%; }
+  width: 70%; }
 
 ul.attachment-list li .line-item .button-box {
   position: absolute;
@@ -242,6 +242,9 @@ ul.attachment-list li .line-item .button-box {
   -ms-transition: all 0.25s ease;
   -o-transition: all 0.25s ease;
   transition: all 0.25s ease; }
+
+ul.attachment-list li .line-item .button-box.right {
+  flex-direction: row; }
 
 ul.attachment-list li .line-item .expanding-button-box {
   max-width: 2.25rem; }
@@ -685,8 +688,11 @@ span.button.upload input[type="file"] {
   margin: 0;
   padding: 0; }
 
-.button-box.right, .button-box.left {
-  align-items: center; }
+.button-box.right {
+  justify-content: flex-end; }
+
+.button-box.left {
+  justify-content: flex-start; }
 
 @media (min-width: 48rem) {
   .button-box {

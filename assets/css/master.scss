@@ -282,7 +282,7 @@ ul.attachment-list li .line-item span.file-type-icon.pdf:after {content: "\f1e7"
 
 ul.attachment-list li .line-item span.file-type-icon.other:after {content: "\f1df";}
 
-ul.attachment-list li .line-item span.file-name {width: 100%;}
+ul.attachment-list li .line-item span.file-name {width: 70%;}
 
 ul.attachment-list li .line-item .button-box {
   position: absolute;
@@ -290,6 +290,8 @@ ul.attachment-list li .line-item .button-box {
   width: auto;
   @include transition (all, 0.25s, ease);
 }
+
+ul.attachment-list li .line-item .button-box.right {flex-direction: row;}
 
 ul.attachment-list li .line-item .expanding-button-box {max-width: 2.25rem;}
 
@@ -747,7 +749,9 @@ span.button.upload input[type="file"] {
   padding: 0;
 }
 
-.button-box.right, .button-box.left {align-items: center;}
+.button-box.right {justify-content: flex-end;}
+
+.button-box.left {justify-content: flex-start;}
 
 @media (min-width: 48rem) {
 .button-box {
