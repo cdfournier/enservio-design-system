@@ -1036,6 +1036,7 @@ main {
   .carousel .carousel-cell {
     padding: 0 6rem; } }
 
+/*
 .current-inventory {
   position: fixed;
   top: 80%;
@@ -1044,24 +1045,27 @@ main {
   width: 100%;
   height: 100%;
   margin: 1rem auto 0;
-  background-color: #ffffff;
-  -webkit-transition: top 0.4s ease-in-out;
-  -moz-transition: top 0.4s ease-in-out;
-  -ms-transition: top 0.4s ease-in-out;
-  -o-transition: top 0.4s ease-in-out;
-  transition: top 0.4s ease-in-out; }
-
+  background-color: $white;
+  @include transition (top, 0.4s, ease-in-out);
+}	
+	
 .current-inventory.open {
   top: 0;
-  overflow-y: scroll; }
+  overflow-y: scroll;
+}
 
 .release-inventory {
   width: 100%;
-  height: 1rem; }
+  height: 1rem;
+}
 
 .release-inventory.fixed {
   position: fixed;
-  top: 0; }
+  top: 0;
+}
+*/
+.current-inventory {
+  padding: 2rem 0 0; }
 
 .current-inventory .current-inventory-bar {
   display: flex;

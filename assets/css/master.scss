@@ -1088,6 +1088,7 @@ main {
 
 
 // CURRENT INVENTORY
+/*
 .current-inventory {
   position: fixed;
   top: 80%;
@@ -1114,6 +1115,9 @@ main {
   position: fixed;
   top: 0;
 }
+*/
+
+.current-inventory {padding: 2rem 0 0;}
 
 .current-inventory .current-inventory-bar {
   display: flex;
