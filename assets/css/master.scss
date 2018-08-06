@@ -3,6 +3,7 @@ $serif: "Roboto Slab", serif;
 $sans-serif: "Montserrat", sans-serif;
 
 $white: #ffffff;
+$off-white: #f5f5f5;
 $light-gray: #cccece;
 $dark-gray: #444853;
 $black: #000000;
@@ -154,6 +155,7 @@ ul, ol {
   margin: 0 auto;
   padding: 0 0 1rem 1rem;
   font-size: 1rem;
+  line-height: 1.5;
   text-align: left;
 }
 
@@ -853,6 +855,20 @@ nav ul li {
 nav ul li:last-child {padding: 0 0 0 1.44rem;}}
 
 
+// BACK BUTTON
+span.back {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  font-size: 1.44rem;
+  color: $color-one;
+  cursor: pointer;
+  @include transition(all, 0.25s, ease-in-out);
+}
+
+span.back:hover, span.back:focus {color: $color-two;}
+
+
 /* ------------------------------------------
   FOOTER
 --------------------------------------------- */
@@ -1267,6 +1283,158 @@ main {
 }}
 
 
+// HOME SCREEN
+.claim {
+  display: block;
+  width: 100%;
+  padding: 2rem 2rem 0;
+}
+
+.claim:first-of-type {padding: 0 2rem;}
+
+.claim-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 1rem;
+  border: 1px solid $light-gray;
+  border-radius: 0.25rem;
+  text-align: center;
+  background-color: $off-white;
+}
+
+.claim-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 0 1rem;
+  padding: 0;
+  background-color: $white;
+}
+
+.claim-information {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  margin: 0;
+  padding: 1rem;
+  border: 1px solid $light-gray;
+  border-radius: 0.25rem;
+  text-align: left;
+  background-color: $white;
+}
+
+.claim-details {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  padding: 0;
+}
+
+.claim-details.items, .claim-details.attachments {display: none;}
+
+.claim-details:last-of-type {padding: 0;}
+
+.claim-details-icon {
+  font-size: 2rem;
+  color: $light-gray;
+}
+
+.claim-details .details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 0 0 1rem;
+  text-align: left;
+}
+
+.claim-details .details span.claim-label {
+  font-size: 0.694rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: $light-gray;
+}
+
+.claim-details .details span.claim-data {font-weight: 500;}
+
+@media (min-width: 30rem) {
+.claim-information {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.claim-details {width: 50%;}
+.claim-details:nth-of-type(3n) {padding: 0;}}
+
+@media (min-width: 48rem) {
+.claim-details {
+  width: initial;
+  padding: 0 4rem 0 0;
+}
+.claim-details.items, .claim-details.attachments {display: flex;}}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 0 1rem;
+  border: 1px solid $light-gray;
+  border-radius: 0.25rem;
+  background-color: $white;
+}
+
+.card:last-of-type {margin: 0;}
+
+.card .card-graphic {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+  padding: 1rem;
+  background-color: $color-one;
+}
+
+.card .card-graphic img {width: 5rem;}
+
+.card .card-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 1rem 0 0;
+  padding: 0 1rem 1rem;  
+}
+
+@media (min-width: 48rem) {
+.cards {
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.card {
+  width: 33%;
+  margin: 0 1rem 0 0;
+}}
+
+
 // PROCESSING SPINNER
 .spinner-box {
   display: flex;
@@ -1356,8 +1524,8 @@ input[type="url"] {
   @include appearance (none);
 }
 
-input.username:disabled,
-input.username[type="email"].disabled {
+input.email-address:disabled,
+input.email-address[type="email"].disabled {
   border: none;
   border-bottom: 1px solid $black;
   font-weight: 500;

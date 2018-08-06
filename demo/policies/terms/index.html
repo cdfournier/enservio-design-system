@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Enservio Customer Portal | Your Claim is Being Processed</title>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700">
+    <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="../../../assets/css/master.css">
+    <style>
+      article {padding: 2rem 0 0;}
+      article h3 {padding: 1rem 0 0;}
+    </style>
+  </head>
+  <body>
+    <section id="alerts" class="alerts">
+      <div class="status-bar error">
+        <div class="status-bar-details">
+          <span><i class="la la-exclamation-circle"></i></span>
+          <div class="status-bar-message">
+            <span></span>
+          </div>
+          <span class="dismiss error"><i class="la la-times-circle"></i></span>
+        </div>
+      </div>
+      <div class="status-bar success">
+        <div class="status-bar-details">
+          <div class="status-bar-message">
+            <span></span>
+          </div>
+          <span class="dismiss success"><i class="la la-times-circle"></i></span>
+        </div>
+      </div>
+      <div class="status-bar system">
+        <div class="status-bar-details">
+          <div class="status-bar-message">
+            <span></span>
+          </div>
+          <span class="dismiss system"><i class="la la-times-circle"></i></span>
+        </div>
+      </div>
+      <div class="timeout">
+        <div class="text center md">
+          <h1>Timeout Warning</h1>
+          <p>Due to inactivity, your session will end in <b>{time}</b>, and any unsaved changes will be lost. To remain logged in, please click the  <b>Continue</b> button to keep working.</p>
+        </div>
+        <div class="button-box">
+          <button class="button color-one continue">Continue</button>
+        </div>
+      </div>
+    </section>
+    <header id="header" class="header--fixed">
+      <span class="back" onclick="goBack()"><i class="la la-angle-left"></i></span>
+      <div class="logo">
+        <svg id="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 184.57 37.49"><defs><style>.cls-1{fill:#f27e20;}</style></defs><path d="M98.78,26.51H81.05c-.54,5.1,6,8.71,13.27,4.53l2.23,4.26a23.69,23.69,0,0,1-2.7,1.37,20,20,0,0,1-9.31.79c-5.14-.64-8.49-3.94-9.52-9.53-1.28-7,1.88-13.06,7.93-15.32,5.55-2.08,14,0,16,7.26A13.94,13.94,0,0,1,98.78,26.51ZM81.31,22.08H93.16c-.09-3.39-2.1-5.32-5.58-5.45S81.79,18.56,81.31,22.08Z" transform="translate(-0.22 -0.25)"/><path d="M6.4,26.44c-.17,6,7.14,8.37,13.2,4.62l2.14,4.06c-4.7,3.74-14,3.31-18.14-.74-3-3-3.6-6.72-3.32-10.65.35-5,2.78-8.84,7.46-10.84a12.1,12.1,0,0,1,12.9,1.6c3.77,3,4.69,7.12,3.57,12Zm12.2-4.37c-.17-3.43-2.1-5.28-5.6-5.44a5.77,5.77,0,0,0-6.25,5.44Z" transform="translate(-0.22 -0.25)"/><path d="M172.84,37.59c-7.56.35-12.41-5.07-12.12-13.46A12.83,12.83,0,0,1,165,14.47c4.87-4.31,17.1-4,19.31,6.08A17.82,17.82,0,0,1,184,30,10.74,10.74,0,0,1,172.84,37.59Zm-.56-4.72c3.08,0,4.9-1.22,5.81-4a13,13,0,0,0,.12-8.17c-.8-2.64-2.43-4-5-4.16A5.24,5.24,0,0,0,167.65,20a12.59,12.59,0,0,0,0,9.75A4.46,4.46,0,0,0,172.28,32.87Z" transform="translate(-0.22 -0.25)"/><path d="M34.56,19.15V37H28.92V12.48h4L34,14.42a10.66,10.66,0,0,1,10-2.17c3.55.91,6,3.28,6.24,6.78.4,5.95.11,12,.11,18H44.9V23.58c0-.42,0-.85,0-1.28-.13-2-.38-4.08-2.51-5.08a6.17,6.17,0,0,0-6.46.76C35.45,18.3,35.06,18.72,34.56,19.15Z" transform="translate(-0.22 -0.25)"/><path d="M54.91,35.63l1.89-4.2c1.75.54,3.38,1.11,5.06,1.52a6.74,6.74,0,0,0,2.1,0A2.16,2.16,0,0,0,66.2,31.3a2.71,2.71,0,0,0-1.06-3c-1.12-.75-2.37-1.29-3.54-2a28.66,28.66,0,0,1-4.4-2.58,6.3,6.3,0,0,1,1.66-10.93c4.09-1.71,8-1,12.06.8L69.28,18a9.25,9.25,0,0,0-5.85-1.48,2.4,2.4,0,0,0-2.56,1.82A2.33,2.33,0,0,0,62.3,21c1.18.65,2.47,1.09,3.68,1.69a20.79,20.79,0,0,1,3.89,2.18,6.94,6.94,0,0,1-1.48,11.7A14.76,14.76,0,0,1,54.91,35.63Z" transform="translate(-0.22 -0.25)"/><path d="M120.41,12.43h6.32l6,15.08c2.29-5.33,4.4-10.23,6.5-15.13h6.11c-3.89,8.5-7.67,16.79-11.48,25.12H131.6C127.9,29.21,124.21,20.93,120.41,12.43Z" transform="translate(-0.22 -0.25)"/><path d="M103.2,12.37h5.46l.44,1.83c3.33-2.65,6.86-3,10.86-1.46l-2.35,4.81c-.52-.19-1-.37-1.42-.51a5.33,5.33,0,0,0-7.14,4.6,19.88,19.88,0,0,0-.16,2.56c0,3.57,0,7.14,0,10.71v2.18H103.2Z" transform="translate(-0.22 -0.25)"/><path d="M151.15,17.16l-3-.2V12.45h8.69V37h-5.69Z" transform="translate(-0.22 -0.25)"/><path class="cls-1" d="M153.54.25a3.2,3.2,0,0,1,3.31,3.13,3.42,3.42,0,0,1-3.29,3.27,3.33,3.33,0,0,1-3.29-3.22A3.21,3.21,0,0,1,153.54.25Z" transform="translate(-0.22 -0.25)"/></svg>
+      </div>
+    </header>
+    <main>
+      <section id="terms-and-conditions">
+        <div class="text first lg">
+          <h1>Terms &amp; Conditions</h1>
+          <article>
+            <h2>Insured Access Portal &#40;IAP&#41; Terms &amp; Conditions of Use</h2>
+            <p>Your access to and use of this website &#40;the &#8220;Site&#8221;&#41; is subject to the following terms. If you are not willing to comply with the terms below, then you should inform your insurance carrier and leave the Site:</p>
+            <ul>
+              <li>You may access and use this Site only if you are &#40;a&#41; the policyholder named on the insurance claim &#40;&#8220;Claim&#8221;&#41; for which your access to the Site has been authorized by your insurance carrier, or &#40;b&#41; an authorized representative of the insurance carrier for the Claim. If you are not the policyholder on this Claim or an authorized insurer carrier representative, then you are not authorized to use this Site.</li>
+              <li>Access to the site is on a named user password protected basis. You may not share your password or other log-in credentials with any other person or entity or otherwise compromise the confidentiality of your password and other log-in credentials or provide access to the Site to any other person or entity.</li>
+              <li>You may use the Site only to facilitate the processing of your Claim and not for any other person. Without limiting the foregoing, you may not use the Site on behalf of another person or entity other than a person who is a joint policy holder with you with respect to the Claim, and then only for purposes of advancing the settlement of that Claim.</li>
+              <li>Any and all information you provide through the Site, including information you enter into Site forms, must be accurate, current and complete, to the best of your knowledge.</li>
+              <li>You agree not to &#40;a&#41; download, modify, reverse engineer or copy any Site software, &#40;b&#41; use reports or data generated through the Site for any purpose other than for the settlement of your Claim &#40;including your purchase of replacement property if applicable&#41;, or &#40;c&#41; attempt to damage or interfere with the Site or with access to or use of the site by other Site users, nor introduce any viruses or other malware into the Site.</li>
+              <li>Information you submit to the Site, including personally identifiable information, will be available to your insurance carrier under the terms of your insurance policy and will be available to Enservio and its contractors for solely for purposes of performing services for Your insurance carrier and for Site management. Such information will be retained by Enservio for that period which may be required by your insurance carrier and applicable law.</li>
+              <li>The Site may from time to time provide links to third party products which may be used to help you and your insurer to value or replace your lost or damaged property. You understand that the provision of such links does not mean that Enservio &#40;a&#41; endorses or supports any product, services or content offered by that Site, or &#40;b&#41; represents that information on a third party site is accurate, current or comprehensive. Any activities or transactions you may perform after linking to a third party website are at your own risk and Enservio shall have no liability therefor.</li>
+              <li>This Site is offered as a tool in the claim adjustment process. You understand that the data generated by the Site application may not be accurate, comprehensive, current or reliable and that the Site and Site data are provided &#8220;as is&#8221; without representation or warranty of any kind.</li>
+              <li>While Enservio uses commercially reasonable efforts to maintain Site availability and protect data on the Site from damage, degradation or loss, you understand that Enservio &#40;a&#41; does not guarantee either the availability of the Site or the secure retention of your data and &#40;b&#41; will not be responsible for any interruptions in Site availability or your use of the Site or any damage, degradation or loss of your data.</li>
+            </ul>
+            <p>If you have any questions with respect to your use of this Site or the above Terms of Use, please contact the Enservio Technical Support Center at <a href="tel:8888138233">888-813-8233</a> or <a href="mailto:support@enservio.com">support@enservio.com</a> and we would be happy to offer assistance.</p>
+          </article>
+          <article>
+            <h2>Payments Electronic Fund Transfer &#40;EFT&#41; Terms &amp; Conditions of Use</h2>
+            <p>Use of the Electronic Funds Transfer feature on the Insured Access Portal is governed by the general terms and conditions of the account specified by you in this form. This service is established solely for the convenience of the account owner and may be terminated or modified at any time without notice. The account owners release Payment Provider and Enservio and their affiliates, agents and representatives from all liability subject to applicable law, and agree to indemnify the same from any and all losses, damages or costs for acting in good faith in accordance with the privilege selected herein. In no event shall Payment Provider or Enservio or their respective affiliates, agents or representatives be liable for indirect, incidental, consequential, special, exemplary, or punitive damages arising out of or relating in any way to your Electronics Fund Transfer feature or use &#40;or misuse&#41; of the Insured Access Portal. All terms shall be binding upon the heirs, representatives and assigns of the account owners. Subject to applicable law, the account owners release Payment Provider and Enservio and their respective affiliates, agents or representatives in the event Payment Provider makes an error which underpays/overpays their account. The account owners authorize Payment Provider to debit or credit their account as necessary to correct any errors. In conducting an Electronic Funds Transfer, you agree to the following:</p>
+            <p>&#40;a&#41; The transfer may take up to three &#40;3&#41; business days, weekends and holidays excluded.</p>
+            <p>&#40;b&#41; The amount of the transfer may not exceed the current available balance received by Payment Provider elated to the claim and if so will cause the transfer to fail.</p>
+            <p>&#40;c&#41; The financial institution holding the account to which you are transferring funds may impose fees for this type of transaction. We do not control and are not responsible for such fees or charges.</p>
+            <p>&#40;d&#41; Transfers may only be made to U.S. Financial Institutions and must comply with U.S. Laws.</p>
+            <p>&#40;e&#41; You are solely responsible for correctly identifying the account to which the funds are being transferred. We are not responsible for the misappropriation of funds due to account entry errors.</p>
+            <p>&#40;f&#41; Enservio or Bank shall not be obligated to transfer funds for reasons of compliance with applicable law or safe and sound banking practices.</p>
+            <p>&#40;g&#41; Neither Enservio nor Bank will be liable for fraud, loss or misuse of the Electronic Fund Transfer feature or the use of the Insured Access Portal.</p>
+          </article>
+          <article>
+            <h2>Prepaid Card Terms &amp; Conditions of Use</h2>
+            <p>This Payment Provider Services Prepaid Card Agreement explains the terms of your Payment Provider Services Prepaid Card. Please keep it for your records.</p>
+            <p>You agree to this Agreement by registering for, activating, accepting, or using your Card.</p>
+            <p>Contact information, including our website, our telephone number, our address and our email address are provided in the Supplemental Terms, which should be read in conjunction with the Fee List and this Card agreement for important information about the use and features of your Card.</p>
+            <p>THIS AGREEMENT CONTAINS AN ARBITRATION PROVISION. THIS PROVISION MAY SUBSTANTIALLY LIMIT YOUR RIGHTS IN THE EVENT OF A DISPUTE. SEE BELOW UNDER &#8220;ARBITRATION&#8221; FOR DETAILS.</p>
+          </article>
+          <article>
+            <h2>Definitions</h2>
+            <p><strong>ACH:</strong> the Automated Clearing House system</p>
+            <p><strong>Agreement</strong> : this Payment Provider Services Prepaid Card Agreement, together with the Supplemental Terms and the Fee List</p>
+            <p><strong>ATM</strong> : an automated teller machine where you may be allowed to use your Card if disclosed in the Supplemental Terms</p>
+            <p><strong>Business Days</strong> : For purposes of this Agreement, our business days are Monday through Friday, excluding national holidays.</p>
+            <p><strong>Card</strong> : the Payment Provider Services Prepaid Card provided to you</p>
+            <p><strong>Card Carrier</strong> : The documents about your card that the Card is affixed to</p>
+            <p><strong>Fee List</strong> : the list of fees that apply to your Card, provided on the back of the Card carrier</p>
+            <p><strong>Load</strong> : any time that money is added to your Card</p>
+            <p><strong>Network</strong> : The Network Association &#40;MasterCard or Visa&#41;, whichever appears on your Card.</p>
+            <p><strong>PIN</strong> : a personal identification number that we issue to you to allow you to use your Card for Transactions that are authorized by use of that number</p>
+            <p><strong>Sponsor</strong> : the organization that requested that we issue your Card, and that may Load the Card for your use</p>
+            <p><strong>Supplemental Terms</strong> : additional terms that are part of this Agreement, provided on the back of the Card carrier</p>
+            <p><strong>Transaction</strong> : any time you use your Card to access the money on it</p>
+            <p><strong>We, us and our</strong> : Citibank, N.A., the issuer of your Card</p>
+            <p><strong>You, your, and yours</strong> : the person who is issued, or accepts, activates, or registers a Card</p>
+          </article>
+          <article>
+            <h2>Using Your Card</h2>
+            <p>Your Card is a Network-branded prepaid card that lets you purchase goods and services from merchants that accept debit cards in the Network. You can also use your Card for the Transactions described in the Supplemental Terms. Your Card is not a credit card, and it can be used only for the amount of the Load.</p>
+            <h3>How You Can Use Your Card - Limits</h3>
+            <p>You can use your Card to complete Transactions at merchants that accept Network-branded debit cards. See the Supplemental Terms for other ways that you can use your Card, and how Loads can be made to your Card. There are limits on the dollar amount and number of Transactions you can make. These limits are described in the Supplemental Terms.</p>
+            <h3>Use of the Card by Others</h3>
+            <p>If you provide your Card to another person, you are responsible for that person&#39;s use of your Card even if that person uses the Card for Transactions that you did not intend. In order to terminate the other person&#39;s authority to use the Card, you must either get the Card back or call us to deactivate the Card. Reissuance of the Card may incur fees as described in the Supplemental Terms.</p>
+            <h3>Authorization Holds</h3>
+            <p>When you use a card a Merchant, that Merchants may ask us to authorize the Transaction in advance on your behalf, and they may estimate the final amount or include an additional amount &#40;for example, to include a tip at a restaurant or estimate a hotel stay&#41;. When we authorize this Transaction, we commit to make the money available to the Merchant, and for that reason we may place a hold on the money on your Card. The money is not available to you until the Transaction is finalized or the hold is released. In some cases, an authorization may result in a hold for up to 90 days. If you cancel a Transaction after the merchant obtains an authorization, there may be a temporary hold on your money for 10 days or longer.</p>
+            <h3>Receipts and Other Card Information</h3>
+            <p>You can get a receipt at the time you make any Transaction using your Card at a merchant or an ATM &#40;if your Card allows this feature&#41;. A receipt may not be provided for certain small-ticket Transactions. You may obtain information about the amount of money you have remaining on your Card by calling us. This information, along with a 60-day history of Card Transactions and Loads is also available online at our website. You also have the right to obtain a 60-day written history of Card Transactions and Loads by calling us or writing to us.</p>
+            <p>If you have arranged to have direct deposits or are expecting loads made to your Card at least once every 60 days from the same person or company, you can call us or visit our website to find out whether or not the deposit has been made. Our website, telephone number and address are printed in the Supplemental Terms.</p>
+            <h3>Fees</strong></h3>
+            <p>You agree to pay all fees set forth in the Fee List. We can collect all fees by deducting them from the money on your Card and from any Loads. We can change the fees, as described below under &#8220;Changes to this Agreement.&#8221;</p>
+            <h3>Transactions Made in Foreign Currencies</h3>
+            <p>Transactions made in currencies other than U.S. dollars will be converted to U.S. dollars under the rules of the Network at the time of the Transaction. Currently those rules provide that the conversion rate may be either a wholesale market rate or government-mandated rate in effect the day the Network processes the Transaction. The currency conversation rate in effect on the processing date may be different from the rate in effect on the Transaction date or the posting date. We will also add a Foreign Currency Conversion Fee on all Transactions made in currencies other than U.S. dollars. The Foreign Currency Conversion Fee will be equal to a percentage amount of each foreign currency Transaction, as set forth in the Fee List.</p>
+            <h3>No Interest Paid</h3>
+            <p>We do not pay any interest on the money Loaded on your Card &#40;the interest rate and the Annual Percentage Yield are 0%&#41;.</p>
+            <h3>Recurring Payments</h3>
+            <p>Because your Card can be used only for the amount that is Loaded to it, we recommend that you do not use your Card for recurring payments. If you do, please be sure that you have sufficient money on your Card for each payment. Otherwise, your payments will be rejected, and your Card may be terminated or suspended.</p>
+            <h3>If a Transaction Exceeds the Amount of Money on Your Card</h3>
+            <p>You should expect that any Transaction that exceeds the amount of money on your Card will be rejected. A fee may apply to a Transaction that is rejected, if disclosed in the Fee List. If a merchant completes a Transaction that results in a negative balance on your Card, you agree to immediately pay us the amount of the negative balance. If you do not make the required payment, we have the right to initiate collection proceedings against you, report your failure to consumer reporting agencies and take other remedies. See Termination and Other Remedies.</p>
+            <h3>Expiration Date</h3>
+            <p>There is an expiration date printed on the front of your Card. You may not use your Card after the expiration date. The Supplemental Terms provide information about what happens after the Card expiration date.</p>
+            <h3>Other Obligations and Restrictions On You</h3>
+            <p>You agree to each of the following obligations and restrictions when you use your Card.</p>
+            <h3>Your Disputes with Merchants</h3>
+            <p>We do not guarantee, and we are not responsible for, any goods or services you purchase using your Card. You agree to resolve any disputes with a merchant who honored your Card directly, and not to involve us in that dispute.</p>
+            <h3>Your Relationship with the Sponsor</h3>
+            <p>The terms of any payments from the Sponsor to you, including whether the money belongs to you and the correct amount, are matters between you and the Sponsor. We are not responsible for resolving any disputes between you and the Sponsor.</p>
+            <h3>Your Liability for Unauthorized Use of Your Card: <em>Unauthorized Purchases; Unauthorized ACH Transfers or ATM Withdrawals</em></h3>
+            <p>Contact our Customer Service Department by calling or writing, or at our website, as soon as you can, if you think an error has occurred on your Card. Tell us AT ONCE if you believe your Card or PIN has been lost or stolen. Telephoning is the best way of keeping your possible losses down. If you tell us orally, we may require that you send us your complaint or question in writing. You could lose all the money on your Card.</p>
+            <p>If your Card has a MasterCard logo: If your Card is used to make purchases at merchants without your authorization, you will not be liable for this unauthorized usage under certain circumstances. You will not be liable if all of the following are true: &#40;1&#41; the purchase was completed without your PIN, &#40;2&#41; you exercised reasonable care in safeguarding your Card from risk of loss or theft, &#40;3&#41; you have not reported 2 or more incidents of unauthorized use within the preceding 12 months, &#40;4&#41; your Card is in good standing, &#40;5&#41; your identity was registered with us prior to the unauthorized purchase, and &#40;6&#41; the purchase was made for personal, family or household purposes.</p>
+            <p>If your Card has a Visa logo: If your Card is used to make purchases at merchants without your authorization, you will not be liable for this unauthorized usage under certain circumstances. You will not be liable if all of the following are true: &#40;1&#41; the purchase was completed without your PIN, &#40;2&#41; the purchase was processed through the Visa network, &#40;3&#41; you were not grossly negligent or fraudulent in the handling of the Card, and &#40;4&#41; the purchase was made for personal, family or household purposes.</p>
+            <p>For all Cards: In the case of ACH or ATM withdrawals using your Card, and for other Transactions if you did not meet the requirements in the applicable prior paragraph, you can lose no more than $50 if someone used your Card or PIN without your permission IF you tell us within 2 business days after you learn of the loss or theft of your CARD or PIN. For these Transactions, if you do NOT tell us within 2 business days after you learn of the loss or theft of your Card or PIN, and we can prove that we could have stopped someone from using your Card or PIN without your permission if you had told us, you could lose as much as $500.</p>
+            <p>Also, if a Card history that you obtain shows Transactions that you did not make, including those made by Card or other means, tell us at once. If you do not tell us within the lesser of 60 days after you received a written Card history or accessed an electronic Card history, and 120 days after the Transaction was first made available in your Card history, you may not get back any money you lost after that period if we can prove that we could have stopped someone from taking the money if you had told us in time. If a good reason &#40;such as a long trip or a hospital stay&#41; kept you from telling us, we will extend the time period.</p>
+            <h3>If You Believe Your Card or PIN Has Been Lost or Stolen, or That Someone May Use Your Card Number or PIN Without Your Permission</h3> 
+            <p>Please call us, contact us at our website, or write to us as soon as you can. Our website, telephone number and address are printed in the Supplemental Terms.</p>
+            <h3>ATM Fees</strong></h3>
+            <p>When you use an ATM not owned by us, you may be charged a fee by the ATM operator or any network used, and you may be charged a fee for a balance inquiry even if you do not complete a cash withdrawal.</p>
+          </article>
+          <article>
+            <h2>Legal Requirements</h2>
+            <p>You may only use your Card for lawful purposes and in a lawful manner, and you agree to comply with all applicable laws when you use your Card. You may not use your Card under a false name.</p>
+          </article>
+          <article>
+            <h2>Our Rights and Obligations</h2>
+            <p>This section of the Agreements explains some of our rights and obligations.</p>
+          </article>
+          <article>
+            <h2>Our Liability for Failure to Complete a Transaction</h2>
+            <p>If we do not complete a Transaction or Load on your Card on time or in the correct amount, according to this Agreement with you, we will be liable for your losses or damages, to the extent required by law. There are some circumstances where we will not be liable. We will not be liable, for instance:</p>
+            <ul>
+              <li>If, through no fault of ours, you do not have enough money on your Card to make the Transaction.</li>
+              <li>If, through no fault of ours, the money on your Card is not available because the funds are uncollected, or subject to legal process.</li>
+              <li>If the ATM or merchant where you are making the Transaction does not have enough cash.</li>
+              <li>If the machine or system was not working properly and you knew of the breakdown when you started the Transaction or Load.</li>
+              <li>If circumstances beyond our control &#40;such as an Act of God, fire or other catastrophe, or an electrical or computer failure&#41; prevent the Transaction or Load, despite reasonable precautions that we have taken.</li>
+              <li>If we have reason to believe that the Transaction or Load requested is unauthorized, suspicious or fraudulent.</li>
+              <li>If you attempt to complete a Transaction that is not allowed for your Card.</li>
+              <li>If you attempt to complete a Transaction contrary to the terms and conditions in this Agreement. There may be other reasons stated in this Agreement.</li>
+            </ul>
+          </article>
+          <article>
+            <h2>Suspicious, Fraudulent or Unlawful Conduct</h2>
+            <p>We may report suspicious, fraudulent, or unlawful conduct to law enforcement authority. We may withhold any amount we reasonably believe that you owe as a result of any wrongful conduct in connection with your Card or your use of our website.</p>
+          </article>
+          <article>
+            <h2>Privacy</h2>
+            <p>We will disclose information to third parties about your Card or the Transactions or Loads you make:</p>
+            <ul>
+              <li>Where it is necessary for completing Transactions or Loads.</li>
+              <li>In order to verify the existence and condition or your Card for a third party, such as a consumer reporting agency or merchant.</li>
+              <li>In order to comply with government agency or court orders.</li>
+              <li>If you give us your written permission.</li>
+            </ul>
+            <p>As described in our Privacy Policy. A copy of our Privacy Policy is included with and incorporated into this Agreement.</p>
+          </article>
+          <article>
+            <h2>Limitation of Our Liability</h2>
+            <p>We, our affiliates and the parties with which we contract to offer the Card are not responsible or liable for any indirect, incidental, consequential, special, exemplary, or punitive damages arising out of or relating in any way to your Card, your use &#40;or misuse&#41; of the Card, our website, or any products or services purchased using your Card. However, this limitation does not apply to our liability as described in the section titled &#8220;Our Liability for Failure to Complete a Transaction,&#8221; or as limited by applicable law.</p>
+          </article>
+          <article>
+            <h2>Changes to This Agreement</h2>
+            <p>We may add to, delete, or change any of the terms of this Agreement, including the Supplemental Terms and the Fee List, at any time. This means that we may add or increase fees at any time. We will provide you notice of changes to the extent required by law. This is the only manner in which changes may be made.</p>
+          </article>
+          <article>
+            <h2>Termination and Other Remedies</h2>
+            <p>We, in our sole discretion, may terminate this Agreement, your Card, access to your Card, or your access to our website, at any time and for any reason. We will provide you any notice required by law. We may set off the amount of any outstanding fees or payments due to us, and any negative balance created by a Transaction that exceeds the amount of money on your Card, including from Loads that are subsequently added to your Card.</p>
+            <p>Without limiting other remedies, we may update inaccurate or incorrect information you provide to us, contact you by means other than electronically, place a hold on money on your Card, limit funding sources and payments, limit access to your Card and any or all of the Card&#39;s functions, limit Transactions or fail to process Transactions, indefinitely suspend your Card and refuse to provide our services to you if: &#40;a&#41; you breach this Agreement; &#40;b&#41; we are unable to verify or authenticate any information you provide to us; &#40;c&#41; we believe that your account or activities pose a significant credit, fraud or money laundering risk; or &#40;d&#41; we believe that your actions may cause financial loss or legal liability for you, us or others. The rights described in this section are in addition to and apart from any other rights.</p>
+          </article>
+          <article>
+            <h2>Arbitration</h2>
+            <p>PLEASE READ THIS PROVISION OF THE AGREEMENT CAREFULLY. IT PROVIDES THAT ANY DISPUTE MAY BE RESOLVED BY BINDING ARBITRATION. ARBITRATION REPLACES THE RIGHT TO GO TO COURT, INCLUDING THE RIGHT TO A JURY AND THE RIGHT TO PARTICIPATE IN A CLASS ACTION OR SIMILAR PROCEEDING. IN ARBITRATION, A DISPUTE IS RESOLVED BY AN ARBITRATOR INSTEAD OF A JUDGE OR JURY. ARBITRATION PROCEDURES ARE SIMPLER AND MORE LIMITED THAN COURT PROCEDURES.</p>
+            <p><em>Agreement to Arbitrate</em>: Either you or we may, without the other&#39;s consent, elect mandatory, binding arbitration for any claim, dispute, or controversy between you and us &#40;called &#8220;Claims&#8221;&#41;.</p>
+          </article>
+          <article>
+            <h2>Claims Covered</h2>
+            <h3>What Claims are subject to arbitration?</h3>
+            <p>All Claims relating to your Card, a prior related Card, or our relationship are subject to arbitration, including Claims regarding the application, enforceability, or interpretation of this Agreement and this arbitration provision. All Claims are subject to arbitration, no matter what legal theory they are based on or what remedy &#40;damages, or injunctive or declaratory relief&#41; they seek. This includes Claims based on contract, tort &#40;including intentional tort&#41;, fraud, agency, your or our negligence, statutory or regulatory provisions, or any other sources of law; Claims made as counterclaims, cross- claims, third party claims, interpleaders or otherwise; and Claims made independently or with other claims. A party who initiates a proceeding in court may elect arbitration with respect to any Claim advanced in that proceeding by any other party. Claims and remedies sought as part of a class action, private attorney general or other representative action are subject to arbitration on an individual &#40;non-class, non- representative&#41; basis, and the arbitrator may award relief only on an individual &#40;non-class, non-representative&#41; basis.</p>
+            <h3>Whose Claims are subject to arbitration?</h3>
+            <p>Not only ours and yours, but also Claims made by or against anyone connected with us or you or claiming through us or you, such as an authorized user of your Card, an employee, agent, representative, affiliated company, predecessor or successor, heir, assignee, or trustee in bankruptcy.</p>
+            <h3>What time frame applies to Claims subject to arbitration?</h3>
+            <p>Claims arising in the past, present, or future, including Claims arising before the issuance of your Card, are subject to arbitration.</p>
+            <h3>Broadest interpretation.</h3>
+            <p>Any questions about whether Claims are subject to arbitration shall be resolved by interpreting this arbitration provision in the broadest way the law will allow it to be enforced. This arbitration provision is governed by the Federal Arbitration Act &#40;the &#8220;FAA&#8221;&#41;.</p>
+            <h3>What about Claims filed in Small Claims Court?</h3>
+            <p>Claims filed in a small claims court are not subject to arbitration, so long as the matter remains in such court and advances only an individual &#40;non-class, non-representative&#41; Claim.</p>
+          </article>
+          <article>
+            <h2>How Arbitration Works</h2>
+            <h3>How does a party initiate arbitration?</h3>
+            <p>The party filing an arbitration must choose one of the following two arbitration firms and follow its rules and procedures for initiating and pursuing an arbitration: American Arbitration Association or JAMS. Any arbitration hearing that you attend will be held at a place chosen by the arbitration firm in the same city as the U.S. District Court closest to your then current billing address, or at some other place to which you and we agree in writing. You may obtain copies of the current rules of each of the arbitration firms and forms and instructions for initiating an arbitration by contacting them as follows:</p>
+            <p>American Arbitration Association, <a href="tel:8007787879">800-778-7879</a> &#40;toll-free&#41;, Website: <a href="https://www.adr.org/" target="_blank">www.adr.org</a></p>
+            <p>JAMS, <a href="tel:8003525267">800-352-5267</a> &#40;toll-free&#41;, Website: <a href="https://www.jamsadr.com/" target="_blank">www.jamsadr.com</a></p>
+            <p>At any time you or we may ask an appropriate court to compel arbitration of Claims, or to stay the litigation of Claims pending arbitration, even if such Claims are part of a lawsuit, unless a trial has begun or a final judgment has been entered. Even if a party fails to exercise these rights at any particular time, or in connection with any particular Claims, that party can still require arbitration at a later time or in connection with any other Claims.</p>
+            <h3>What procedures and law are applicable in arbitration?</h3>
+            <p>A single, neutral arbitrator will resolve Claims. The arbitrator will be either a lawyer with at least ten years experience or a retired or former judge, selected in accordance with the rules of the arbitration firm. The arbitration will follow procedures and rules of the arbitration firm in effect on the date the arbitration is filed unless those procedures and rules are inconsistent with this Agreement, in which case this Agreement will prevail. Those procedures and rules may limit the discovery available to you or us. The arbitrator will take reasonable steps to protect customer account information and other confidential information if requested to do so by you or us. The arbitrator will apply applicable substantive law consistent with the FAA and applicable statutes of limitations, will honor claims of privilege recognized at law, and will have the power to award to a party any damages or other relief provided for under applicable law. You or we may choose to have a hearing and be represented by counsel. The arbitrator will make any award in writing and, if requested by you or us, will provide a brief statement of the reasons for the award. An award in arbitration shall determine the rights and obligations between the named parties only, and only in respect of the Claims in arbitration, and shall not have any bearing on the rights and obligations of any other person, or on the resolution of any other dispute.</p>
+            <h3>Who pays?</h3>
+            <p>Whoever files the arbitration pays the initial filing fee. If we file, we pay; if you file, you pay, unless you get a fee waiver under the applicable rules of the arbitration firm. If you have paid the initial filing fee and you prevail, we will reimburse you for that fee. If there is a hearing, we will pay any fees of the arbitrator and arbitration firm for the first day of that hearing. All other fees will be allocated as provided by the rules of the arbitration firm and applicable law. However, we will advance or reimburse your fees if the arbitration firm or arbitrator determines there is good reason for requiring us to do so, or if you ask us and we determine there is good reason for doing so. Each party will bear the expense of that party&#39;s attorneys, experts, and witnesses, and other expenses, regardless of which party prevails, but a party may recover any or all expenses from another party if the arbitrator, applying applicable law, so determines.</p>
+            <h3>Who can be a party?</h3>
+            <p>Claims must be brought in the name of an individual person or entity and must proceed on an individual &#40;non-class, non- representative&#41; basis. The arbitrator will not award relief for or against anyone who is not a party. If you or we require arbitration of a Claim, neither you, we, nor any other person may pursue the Claim in arbitration as a class action, private attorney general action or other representative action, nor may such Claim be pursued on your or our behalf in any litigation in any court. Claims, including assigned Claims, of two or more persons may not be joined or consolidated in the same arbitration. However, authorized users on a single Card, or corporate affiliates are here considered as one person.</p>
+            <h3>When is an arbitration award final?</h3>
+            <p>The arbitrator&#39;s award is final and binding on the parties unless a party appeals it in writing to the arbitration firm within fifteen days of notice of the award. The appeal must request a new arbitration before a panel of three neutral arbitrators designated by the same arbitration firm. The panel will consider all factual and legal issues anew, follow the same rules that apply to a proceeding using a single arbitrator, and make decisions based on the vote of the majority. Costs will be allocated in the same way they are allocated for arbitration before a single arbitrator. An award by a panel is final and binding on the parties after fifteen days has passed. A final and binding award is subject to judicial review and enforcement as provided by the FAA or other applicable law.</p>
+            <h3>Survival and Severability of Terms</h3>
+            <p>This arbitration provision shall survive: &#40;i&#41; termination or changes in the Agreement, the Card, or the relationship between you and us concerning the Card; &#40;ii&#41; the bankruptcy of any party; and &#40;iii&#41; any transfer, sale or assignment of your Card to any other person or entity. If any portion of this arbitration provision is deemed invalid or unenforceable, the entire arbitration provision shall not remain in force. No portion of this arbitration provision may be amended, severed or waived absent a written agreement between you and us.</p>
+          </article>
+          <article>
+            <h2>Miscellaneous</h2>
+            <h3>Electronic Alerts</h3>
+            <p>You can elect to receive electronic Card alerts via email or text messaging, if offered by us. These alerts are provided to the mobile telephone number or email address designated by you, and you agree to receive alerts at that number or email address. The alerts that you elect to receive are for convenience purposes only. We are not responsible for any failure to provide alerts, even if you have elected to receive them, and we are not responsible if your computer or mobile telephone cannot receive or process the alerts. Alerts do not amend, supplement, change, or replace any other notice or information that you may receive in connection with your card including &#40;but not limited to&#41; any information provided to you on your Card history or this Agreement. If you have any questions or concerns about your Card or the status of your Card &#40;such as the amount of money available or Transaction history&#41; you should call us or visit our website. Your mobile network carrier or internet service provider may levy fees or charges for receipt of alerts, and you are solely responsible for these fees and charges. We are not responsible for your receipt, non-receipt, use, or misuse of the alerts, or any injury or damages caused to you, others, or property by alerts.</p>
+            <h3>Entire Agreement</h3>
+            <p>This Agreement, including the Supplemental Terms and the Fee List, constitutes the entire agreement between you and us with respect to your Card and our relationship regarding your Card, and supersedes all prior and contemporaneous agreements, claims, representations, and understandings of the parties in connection with these subjects.</p>
+            <h3>Governing Law</h3>
+            <p>Except as otherwise provided in the Arbitration section of this Agreement, this Agreement and your Card are governed by federal law and, to the extent that state law applies, the laws of South Dakota without regard to conflict of laws principles.</p>
+            <h3>Severability</h3>
+            <p>Except as otherwise provided in the Arbitration section of this Agreement, if any provision of this Agreement is deemed unlawful, void, or unenforceable, then that provision shall be deemed severable from and shall not affect the validity and enforceability of any remaining provisions.</p>
+            <h3>No Waiver</h3>
+            <p>No failure by us to enforce the strict performance of any provision of this Agreement will constitute a waiver by us of any right to subsequently enforce that provision or any other provision of this Agreement.</p>
+            <h3>Assignment</h3>
+            <p>You may not assign your rights or obligations under this Agreement. We may assign our rights or obligations, in whole or in part, at any time and without notice to you.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer>&copy;2018 Enservio, Inc. All rights reserved.&nbsp;<a href="#!">Terms&nbsp;&amp;&nbsp;Conditions</a></footer>
+    <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="https://unpkg.com/headroom.js@0.9.4/dist/headroom.js"></script>
+    <script src="../../../assets/scripts/enservio.js"></script>
+    <script src="../../../assets/scripts/enservio.header.js"></script>
+    <script>
+      function goBack() {
+          window.history.back();
+      }
+    </script>
+  </body>
+</html>
