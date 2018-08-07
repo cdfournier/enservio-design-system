@@ -1855,11 +1855,12 @@ span.error-message {
 .field select {
   display: inline-block;
   position: relative;
+  z-index: 1;
   width: 100%;
   min-height: 2.3125rem;
   overflow: hidden;
   margin: 0;
-  padding: 0 2rem 0 0;
+  padding: 0;
   border-bottom: 1px solid $black;
   outline-color: $color-one;
   font-family: "Montserrat", sans-serif;
