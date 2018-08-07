@@ -772,6 +772,39 @@ span.button.upload input[type="file"] {
 form .button-box {padding: 0 1rem;}}
 
 
+// CURRENT INVENTORY BUTTON BOX
+.form-button-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.form-button-box-button {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+}
+
+.form-button-box .form-button-box-button {padding: 0 0 0 1rem;}
+
+.form-button-box-row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form-button-box-row.row {flex-direction: row;}
+
+.form-button-box-button .expanding-button-box {margin: 1rem 0 0;}
+
+@media (min-width: 48rem) {
+.form-button-box-row {flex-direction: row;}
+.form-button-box .form-button-box-button {padding: 0 0 0 0.5rem;}
+.form-button-box .form-button-box-row.row .form-button-box-button {padding: 0;}
+.form-button-box-button .expanding-button-box {margin: 1rem 0 0 0.5rem;}}
+
+
 /* ------------------------------------------
   HEADER
 --------------------------------------------- */
