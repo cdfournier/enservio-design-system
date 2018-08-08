@@ -893,7 +893,8 @@ main {
   display: block;
   margin: 0 auto 2rem;
   border-top: 1px solid #cccece;
-  content: ""; }
+  content: "";
+  column-span: all; }
 
 .text.center {
   text-align: center; }

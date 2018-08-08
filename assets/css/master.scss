@@ -952,6 +952,7 @@ main {
   margin: 0 auto 2rem;
   border-top: 1px solid $light-gray;
   content: "";
+  column-span: all;
 }
 
 .text.center {text-align: center;}
