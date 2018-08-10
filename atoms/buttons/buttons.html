@@ -12,8 +12,7 @@
     <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="../../assets/css/master.css">
-
-    <link rel="stylesheet" href="../../assets/styles/guide.css">
+    <link rel="stylesheet" href="../../assets/css/guide.css">
 
     <style>
       main {padding: 0;}
@@ -58,37 +57,6 @@
 <code>&lt;/div&gt;</code>
               </pre>
             </figure>
-            <figure>
-              <figcaption>scss</figcaption>
-              <pre>
-<code>.button-box {</code>
-  <code>display: flex;</code>
-  <code>flex-direction: column;</code>
-  <code>align-items: center;</code>
-  <code>width: 100%;</code>
-  <code>margin: 0;</code>
-  <code>padding: 0;</code>
-<code>}</code>
-
-<code>.button-box.right, .button-box.left {align-items: center;}</code>
-
-<code>@media (min-width: 48rem) {</code>
-<code>.button-box {</code>
-  <code>flex-direction: row;</code>
-  <code>justify-content: center;</code>
-<code>}</code>
-<code>.button-box.right {</code>
-  <code>align-items: flex-end;</code>
-  <code>justify-content: flex-end;</code>
-<code>}</code>
-<code>.button-box.right .button {margin: 0 0 0 1rem;}</code>
-<code>.button-box.left {</code>
-  <code>align-items: flex-start;</code>
-  <code>justify-content: flex-start;</code>
-<code>}</code>
-<code>.button-box.left .button {margin: 0 1rem 0 0;}}</code>
-              </pre>
-            </figure>
           </div>
         </div>
       </section>
@@ -121,134 +89,6 @@
   <code>&lt;button class=&quot;button color-two&quot;&gt;Primary Button&lt;/button&gt;</code>
   <code>&lt;button class=&quot;button secondary color-two&quot;&gt;Secondary Button&lt;/button&gt;</code>
 <code>&lt;/div&gt;</code>
-              </pre>
-            </figure>
-            <figure>
-              <figcaption>scss</figcaption>
-              <pre>
-<code>button,</code>
-<code>.button {</code>
-  <code>display: inline-flex;</code>
-  <code>align-items: center;</code>
-  <code>width: auto;</code>
-  <code>min-height: 2.25rem;</code>
-  <code>max-height: 2.25rem;</code>
-  <code>overflow: hidden;</code>
-  <code>margin: 1rem auto 0;</code>
-  <code>padding: 0 1.75rem;</code>
-  <code>border-radius: 4rem;</code>
-  <code>font-size: 0.694rem;</code>
-  <code>font-weight: 500;</code>
-  <code>letter-spacing: 1px;</code>
-  <code>line-height: 0;</code>
-  <code>text-align: center;</code>
-  <code>text-decoration: none;</code>
-  <code>text-transform: uppercase;</code>
-  <code>cursor: pointer;</code>
-  <code>@include transition (all, 0.25s, ease-in-out);</code>
-<code>}</code>
-
-<code>@media (min-width: 48rem) {button, .button {margin: 0 0.5rem 0;}}</code>
-
-<code>button.color-one,</code>
-<code>.button.color-one {</code>
-  <code>border: 1px solid $color-one;</code>
-  <code>color: $white;</code>
-  <code>background-color: $color-one;</code>
-<code>}</code>
-
-<code>button.color-one:hover, button.color-one:focus,</code>
-<code>.button.color-one:hover, .button.color-one:focus {</code>
-  <code>color: $color-one;</code>
-  <code>background-color: $white;</code>
-<code>}</code>
-
-<code>button.color-one span.post-number,</code>
-<code>.button.color-one span.post-number {</code>
-  <code>color: $color-one;</code>
-  <code>background-color: $white;</code>
-<code>}</code>
-
-<code>button.color-one:hover span.post-number, button.color-one:focus span.post-number,</code>
-<code>.button.color-one:hover span.post-number, .button.color-one:focus span.post-number {</code>
-  <code>color: $white;</code>
-  <code>background-color: $color-one;</code>
-<code>}</code>
-
-<code>button.color-two,</code>
-<code>.button.color-two {</code>
-  <code>border: 1px solid $color-two;</code>
-  <code>color: $white;</code>
-  <code>background-color: $color-two;</code>
-<code>}</code>
-
-<code>button.color-two:hover, button.color-two:focus,</code>
-<code>.button.color-two:hover, .button.color-two:focus {</code>
-  <code>color: $color-two;</code>
-  <code>background-color: $white;</code>
-<code>}</code>
-
-<code>button.color-two span.post-number,</code>
-<code>.button.color-two span.post-number {</code>
-  <code>color: $color-two;</code>
-  <code>background-color: $white;</code>
-<code>}</code>
-
-<code>button.color-two:hover span.post-number, button.color-two:focus span.post-number,</code>
-<code>.button.color-two:hover span.post-number, .button.color-two:focus span.post-number {</code>
-  <code>color: $white;</code>
-  <code>background-color: $color-two;</code>
-<code>}</code>
-
-<code>button.secondary.color-one,</code>
-<code>.button.secondary.color-one {</code>
-  <code>border: 1px solid $color-one;</code>
-  <code>color: $color-one;</code>
-  <code>background-color: $white;</code>
-<code>}</code>
-
-<code>button.secondary.color-one:hover, button.secondary.color-one:focus,</code>
-<code>.button.secondary.color-one:hover, .button.secondary.color-one:focus {</code>
-  <code>color: $white;</code>
-  <code>background-color: $color-one;</code>
-<code>}</code>
-
-<code>button.secondary.color-one span.post-number,</code>
-<code>.button.secondary.color-one span.post-number {</code>
-  <code>color: $white;</code>
-  <code>background-color: $color-one;</code>
-<code>}</code>
-
-<code>button.secondary.color-one:hover span.post-number, button.secondary.color-one:focus span.post-number,</code>
-<code>.button.secondary.color-one:hover span.post-number, .button.secondary.color-one:focus span.post-number {</code>
-  <code>color: $color-one;</code>
-  <code>background-color: $white;</code>
-<code>}</code>
-
-<code>button.secondary.color-two,</code>
-<code>.button.secondary.color-two {</code>
-  <code>border: 1px solid $color-two;</code>
-  <code>color: $color-two;</code>
-  <code>background-color: $white;</code>
-<code>}</code>
-
-<code>button.secondary.color-two:hover, button.secondary.color-two:focus,</code>
-<code>.button.secondary.color-two:hover, .button.secondary.color-two:focus {</code>
-  <code>color: $white;</code>
-  <code>background-color: $color-two;</code>
-<code>}</code>
-
-<code>button.secondary.color-two span.post-number,</code>
-<code>.button.secondary.color-two span.post-number {</code>
-  <code>color: $white;</code>
-  <code>background-color: $color-two;</code>
-<code>}</code>
-
-<code>button.secondary.color-two:hover span.post-number, button.secondary.color-two:focus span.post-number,</code>
-<code>.button.secondary.color-two:hover span.post-number, .button.secondary.color-two:focus span.post-number {</code>
-  <code>color: $color-two;</code>
-  <code>background-color: $white;</code>
-<code>}</code>
               </pre>
             </figure>
           </div>
@@ -285,20 +125,6 @@
 <code>&lt;/div&gt;</code>
           </pre>
         </figure>
-        <figure>
-          <figcaption>scss</figcaption>
-          <pre>
-<code>button span.pre, .button span.pre,</code>
-<code>button span.post, .button span.post {</code>
-  <code>margin: -0.0525rem 0 0;</code>
-  <code>font-size: 1rem;</code>
-<code>}</code>
-
-<code>button span.pre, .button span.pre {padding: 0 0.5rem 0 0;}</code>
-
-<code>button span.post, .button span.post {padding: 0 0 0 0.5rem;}</code>
-          </pre>
-        </figure>
           </div>
         </div>
       </section>
@@ -331,22 +157,6 @@
   <code>&lt;button class=&quot;button color-two&quot;&gt;Primary&lt;span class=&quot;post-number&quot;&gt;4&lt;/span&gt;&lt;/button&gt;</code>
   <code>&lt;button class=&quot;button secondary color-two&quot;&gt;Secondary&lt;span class=&quot;post-number&quot;&gt;3&lt;/span&gt;&lt;/button&gt;</code>
 <code>&lt;/div&gt;</code>
-              </pre>
-            </figure>
-            <figure>
-              <figcaption>scss</figcaption>
-              <pre>
-<code>button span.post-number,</code>
-<code>.button span.post-number {</code>
-  <code>display: flex;</code>
-  <code>align-items: center;</code>
-  <code>justify-content: center;</code>
-  <code>width: 1.5rem;</code>
-  <code>height: 1.5rem;</code>
-  <code>margin: 0 0 0 0.5rem;</code>
-  <code>border-radius: 2rem;</code>
-  <code>font-weight: 700;</code>
-<code>}</code>
               </pre>
             </figure>
           </div>
@@ -385,27 +195,6 @@
   <code>&lt;button class=&quot;button color-two&quot;&gt;Primary&lt;span class=&quot;post-processing&quot;&gt;&lt;i class=&quot;la la-refresh la-spin&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/button&gt;</code>
   <code>&lt;span class=&quot;button secondary color-two&quot;&gt;Secondary&lt;span class=&quot;post-processing&quot;&gt;&lt;i class=&quot;la la-refresh la-spin&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/button&gt;</code>
 <code>&lt;/div&gt;</code>
-              </pre>
-            </figure>
-            <figure>
-              <figcaption>scss</figcaption>
-              <pre>
-<code>button span.post-processing,</code>
-<code>.button span.post-processing {</code>
-  <code>max-width: 0;</code>
-  <code>margin: -0.0525rem 0 0;</code>
-  <code>padding: 0;</code>
-  <code>font-size: 1rem;</code>
-  <code>opacity: 0;</code>
-  <code>@include transition (all, 0.25s, ease-in-out);</code>
-<code>}</code>
-
-<code>button span.post-processing.active,</code>
-<code>.button span.post-processing.active {</code>
-  <code>max-width: 100%;</code>
-  <code>padding: 0 0 0 0.5rem;</code>
-  <code>opacity: 1;</code>
-<code>}</code>
               </pre>
             </figure>
           </div>
@@ -479,180 +268,22 @@
 <code>&lt;/div&gt;</code>
               </pre>
             </figure>
-            <figure>
-              <figcaption>scss</figcaption>
-              <pre>
-<code>.expanding-button-box {</code>
-  <code>display: inline-flex;</code>
-  <code>align-items: center;</code>
-  <code>max-width: 2.25rem;</code>
-  <code>overflow: hidden;</code>
-  <code>margin: 1rem 0 0;</code>
-  <code>border-radius: 4rem;</code>
-  <code>cursor: pointer;</code>
-  <code>@include transition (all, 0.25s, ease-in-out);</code>
-<code>}</code>
-
-<code>.line-item .expanding-button-box {margin: 0;}</code>
-
-<code>.expanding-button-box.expand {max-width: 100%;}</code>
-
-<code>.expanding-button-box .expanding-button {</code>
-  <code>flex-direction: row;</code>
-  <code>align-items: center;</code>
-  <code>justify-content: center;</code>
-  <code>border-radius: 4rem;</code>
-  <code>@include transition (all, 0.25s, ease-in-out);</code>
-<code>}</code>
-
-<code>.expanding-button-box .expanding-button.large {display: none;}</code>
-
-<code>.expanding-button-box .expanding-button.small {</code>
-  <code>display: flex;</code>
-  <code>width: 2.25rem;</code>
-  <code>max-width: 2.25rem;</code>
-  <code>height: 2.25rem;</code>
-  <code>max-height: 2.25rem;</code>
-  <code>margin: auto;</code>
-  <code>padding: 0.5rem;</code>
-  <code>font-size: 1.44rem;</code>
-  <code>line-height: 1;</code>
-  <code>color: $white;</code>
-<code>}</code>
-
-<code>.expanding-button-box .expanding-button.large {</code>
-  <code>width: max-content;</code>
-  <code>min-width: 8rem;</code>
-  <code>min-height: 2.25rem;</code>
-  <code>max-height: 2.25rem;</code>
-  <code>padding: 1rem 1.175rem;</code>
-  <code>font-size: 0.694rem;</code>
-  <code>font-weight: 500;</code>
-  <code>letter-spacing: 1px;</code>
-  <code>line-height: 0;</code>
-  <code>text-transform: uppercase;</code>
-  <code>color: $white;</code>
-<code>}</code>
-
-<code>@media (min-width: 48rem) {</code>
-<code>.expanding-button-box {max-width: 8rem;}</code>
-<code>.expanding-button-box.expand {max-width: 100%;}</code>
-<code>.expanding-button-box .expanding-button.small {display: none;}</code>
-<code>.expanding-button-box .expanding-button.large {display: flex;}}</code>
-
-<code>.expanding-button-box .confirm-action-box {</code>
-  <code>display: inline-flex;</code>
-  <code>align-items: center;</code>
-  <code>padding: 0 0.325rem 0 0.5rem;</code>
-  <code>font-size: 0.694rem;</code>
-  <code>font-weight: 500;</code>
-  <code>line-height: 0;</code>
-  <code>text-transform: uppercase;</code>
-  <code>color: $white;</code>
-  <code>opacity: 0;</code>
-  <code>@include transition (all, 0.5s, ease-in-out);</code>
-  <code>@include transform (translateX(10rem));</code>
-<code>}</code>
-
-<code>.expanding-button-box.expand .confirm-action-box {</code>
-  <code>display: inline-flex;</code>
-  <code>opacity: 1;</code>
-  <code>@include transform (translateX(0));</code>
-<code>}</code>
-
-<code>.expanding-button-box .confirm-action-box span.confirm-action-text {</code>
-  <code>display: inline-flex;</code>
-  <code>width: max-content;</code>
-<code>}</code>
-
-<code>.expanding-button-box .confirm-action-box span.confirm-action {</code>
-  <code>margin: 0 0 0 0.5rem;</code>
-  <code>padding: 0.675rem 1rem;</code>
-  <code>border-radius: 4rem;</code>
-  <code>@include transition (all, 0.25s, ease-in-out);</code>
-<code>}</code>
-
-<code>.expanding-button-box.color-one {background-color: $color-one;}</code>
-
-<code>.expanding-button-box.color-one .expanding-button {</code>
-  <code>border: 1px solid $color-one;</code>
-  <code>background-color: $color-one;</code>
-<code>}</code>
-
-<code>.expanding-button-box.color-one .expanding-button:hover,</code>
-<code>.expanding-button-box.color-one .expanding-button:focus {</code>
-  <code>color: $color-one;</code>
-  <code>background-color: $white;</code>
-<code>}</code>
-
-<code>.expanding-button-box.expand.color-one .confirm-action-box span.confirm-action {</code>
-  <code>border: 1px solid $white;</code>
-  <code>color: $color-one;</code>
-  <code>background-color: $white;</code>
-<code>}</code>
-
-<code>.expanding-button-box.expand.color-one .confirm-action-box span.confirm-action:hover,</code>
-<code>.expanding-button-box.expand.color-one .confirm-action-box span.confirm-action:focus {</code>
-  <code>color: $white;</code>
-  <code>background-color: $color-one;</code>
-<code>}</code>
-
-<code>.expanding-button-box.expand.color-one .confirm-action-box span.confirm-action.secondary {</code>
-  <code>border: 1px solid $white;</code>
-  <code>color: $white;</code>
-  <code>background-color: $color-one;</code>
-<code>}</code>
-
-<code>.expanding-button-box.expand.color-one .confirm-action-box span.confirm-action.secondary:hover,</code>
-<code>.expanding-button-box.expand.color-one .confirm-action-box span.confirm-action.secondary:focus {</code>
-  <code>color: $color-one;</code>
-  <code>background-color: $white;</code>
-<code>}</code>
-
-<code>.expanding-button-box.color-two {background-color: $color-two;}</code>
-
-<code>.expanding-button-box.color-two .expanding-button {</code>
-  <code>border: 1px solid $color-two;</code>
-  <code>background-color: $color-two;</code>
-<code>}</code>
-
-<code>.expanding-button-box.color-two .expanding-button:hover,</code>
-<code>.expanding-button-box.color-two .expanding-button:focus {</code>
-  <code>color: $color-two;</code>
-  <code>background-color: $white;</code>
-<code>}</code>
-
-<code>.expanding-button-box.expand.color-two .confirm-action-box span.confirm-action {</code>
-  <code>border: 1px solid $white;</code>
-  <code>color: $color-two;</code>
-  <code>background-color: $white;</code>
-<code>}</code>
-
-<code>.expanding-button-box.expand.color-two .confirm-action-box span.confirm-action:hover,</code>
-<code>.expanding-button-box.expand.color-two .confirm-action-box span.confirm-action:focus {</code>
-  <code>color: $white;</code>
-  <code>background-color: $color-two;</code>
-<code>}</code>
-
-<code>.expanding-button-box.expand.color-two .confirm-action-box span.confirm-action.secondary {</code>
-  <code>border: 1px solid $white;</code>
-  <code>color: $white;</code>
-  <code>background-color: $color-two;</code>
-<code>}</code>
-
-<code>.expanding-button-box.expand.color-two .confirm-action-box span.confirm-action.secondary:hover,</code>
-<code>.expanding-button-box.expand.color-two .confirm-action-box span.confirm-action.secondary:focus {</code>
-  <code>color: $color-two;</code>
-  <code>background-color: $white;</code>
-<code>}</code>
-              </pre>
-            </figure>
           </div>
         </div>
       </section>
 
     </main>
-    <footer>&copy;2018 Enservio, Inc. All rights reserved.&nbsp;<a href="#!">Terms&nbsp;&amp;&nbsp;Conditions</a></footer>
+    <footer class="lg">
+      <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../../principles/principles.html">Principles</a></li>
+        <li><a href="#!">Style</a></li>
+        <li><a href="../atoms.html">Atoms</a></li>
+        <li><a href="#!">Molecules</a></li>
+        <li><a href="#!">Pages</a></li>
+      </ul>
+      <span>&copy;2018 Enservio, Inc. All rights reserved. v.1.1</span>
+    </footer>
     <!-- scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>

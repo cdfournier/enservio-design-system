@@ -12,9 +12,7 @@
     <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="../../assets/css/master.css">
-
-    <link rel="stylesheet" href="../../assets/styles/guide.css">
-
+    <link rel="stylesheet" href="../../assets/css/guide.css">
     <style>
       main {padding: 4rem 0 0;}
       .button-box {padding: 1rem 0 0;}
@@ -45,59 +43,21 @@
   <code>&lt;/header&gt;</code>
               </pre>
             </figure>
-            <figure>
-              <figcaption>scss</figcaption>
-              <pre>
-  <code>header {</code>
-    <code>display: flex;</code>
-    <code>flex-direction: column;</code>
-    <code>align-items: center;</code>
-    <code>width: 100%;</code>
-    <code>margin: 0;</code>
-    <code>padding: 1rem 2rem;</code>
-    <code>background-color: $white;</code>
-  <code>}</code>
-  
-  <code>.header--fixed {</code>
-    <code>position: fixed;</code>
-    <code>top: 0;</code>
-    <code>right: 0;</code>
-    <code>left: 0;</code>
-    <code>z-index: 1000;</code>
-  <code>}</code>
-  
-  <code>.headroom {</code>
-    <code>@include transition (all, 0.25s, ease-in-out);</code>
-    <code>will-change: transform;</code>
-  <code>}</code>
-  
-  <code>.headroom--pinned {@include transform(translateY(0));}</code>
-  
-  <code>.headroom--unpinned {@include transform(translateY(-100%));}</code>
-  
-  <code>@media (min-width: 35.5rem) {</code>
-  <code>header {</code>
-    <code>flex-direction: row;</code>
-    <code>align-items: flex-end;</code>
-    <code>justify-content: center;</code>
-  <code>}}</code>
-  
-  <code>.logo {</code>
-    <code>display: flex;</code>
-    <code>flex-direction: column;</code>
-    <code>align-items: center;</code>
-    <code>justify-content: center;</code>
-    <code>width: 12rem;</code>
-    <code>margin: 0;</code>
-    <code>padding: 0;</code>
-  <code>}</code>
-              </pre>
-            </figure>
           </div>
         </div>
       </section>
     </main>
-    <footer>&copy;2018 Enservio, Inc. All rights reserved.&nbsp;<a href="#!">Terms&nbsp;&amp;&nbsp;Conditions</a></footer>
+    <footer class="lg">
+      <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../../principles/principles.html">Principles</a></li>
+        <li><a href="#!">Style</a></li>
+        <li><a href="../atoms.html">Atoms</a></li>
+        <li><a href="#!">Molecules</a></li>
+        <li><a href="#!">Pages</a></li>
+      </ul>
+      <span>&copy;2018 Enservio, Inc. All rights reserved. v.1.1</span>
+    </footer>
     <!-- scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>

@@ -12,8 +12,7 @@
     <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="../../assets/css/master.css">
-
-    <link rel="stylesheet" href="../../assets/styles/guide.css">
+    <link rel="stylesheet" href="../../assets/css/guide.css">
 
     <style>
       main {padding: 0;}
@@ -22,9 +21,7 @@
       .button-box:first-of-type {padding: 0;}
       fieldset.wide {width: 100%;}
       fieldset.wide .field {padding: 0 1rem 0 0;}
-
       @media (min-width: 48rem) {fieldset.wide {width: 50%;}}
-
       @media (min-width: 64rem) {fieldset.wide {width: 100%;}}
     </style>
   </head>
@@ -47,27 +44,6 @@
               <pre>
 <code>&lt;form&gt;</code>
 <code>&lt;/form&gt;</code>
-              </pre>
-            </figure>
-            <figure>
-              <figcaption>scss</figcaption>
-              <pre>
-<code>form {</code>
-  <code>display: flex;</code>
-  <code>flex-direction: column;</code>
-  <code>align-items: flex-start;</code>
-  <code>width: 100%;</code>
-  <code>margin: 0 auto;</code>
-  <code>padding: 2rem 1rem 0;</code>
-<code>}</code>
-
-<code>@media (min-width: 48rem) {</code>
-<code>form {</code>
-  <code>flex-direction: row;</code>
-  <code>flex-wrap: wrap;</code>
-<code>}</code>
-<code>form.column {flex-direction: column;}</code>
-<code>}</code>
               </pre>
             </figure>
           </div>
@@ -146,190 +122,6 @@
 <code>&lt;/fieldset&gt;</code>
               </pre>
             </figure>
-            <figure>
-              <figcaption>scss</figcaption>
-              <pre>
-<code>input[type=text],</code>
-<code>input[type=email],</code>
-<code>input[type=tel],</code>
-<code>input[type=url],</code>
-<code>input[type=password],</code>
-<code>input[type=search],</code>
-<code>input[type=file],</code>
-<code>input[type=select],</code>
-<code>input[type=checkbox] {</code>
-  <code>outline-color: $color-one;</code>
-  <code>font-size: 1rem;</code>
-  <code>-webkit-border-radius: 0;</code>
-  <code>-moz-border-radius: 0;</code>
-  <code>border-radius: 0;</code>
-  <code>@include appearance (none);</code>
-<code>}</code>
-
-<code>fieldset {</code>
-  <code>width: 100%;</code>
-  <code>margin: 0;</code>
-  <code>padding: 0;</code>
-  <code>border: none;</code>
-<code>}</code>
-
-<code>fieldset.small {width: 50%;}</code>
-
-<code>legend {display: none;}</code>
-
-<code>.field {</code>
-  <code>display: flex;</code>
-  <code>flex-direction: column-reverse;</code>
-  <code>align-items: flex-start;</code>
-  <code>position: relative;</code>
-  <code>width: 100%;</code>
-  <code>margin: 0 0 1rem;</code>
-  <code>padding: 0 1rem;</code>
-<code>}</code>
-
-<code>.small {</code>
-  <code>display: flex;</code>
-  <code>flex-direction: row;</code>
-  <code>align-items: flex-start;</code>
-  <code>position: relative;</code>
-  <code>width: 100%;</code>
-  <code>margin: 0;</code>
-  <code>padding: 0;</code>
-<code>}</code>
-
-<code>.xsmall {</code>
-  <code>display: flex;</code>
-  <code>flex-direction: row;</code>
-  <code>align-items: flex-start;</code>
-  <code>position: relative;</code>
-  <code>width: 50%;</code>
-  <code>margin: 0;</code>
-  <code>padding: 0;</code>
-<code>}</code>
-
-<code>@media (min-width: 48rem) {</code>
-<code>form.sm fieldset,</code>
-<code>form.md fieldset,</code>
-<code>form.lg fieldset {width: 100%;}</code>
-<code>fieldset {width: 50%;}</code>
-<code>.small {width: 50%;}</code>
-<code>.xsmall {width: 25%;}</code>
-<code>}</code>
-
-<code>@media (min-width: 72rem) {</code>
-<code>fieldset, .small {width: 25%;}</code>
-<code>.small fieldset {width: 50%;}</code>
-<code>}</code>
-
-<code>.field label, .field input {</code>
-  <code>font-family: "Montserrat", sans-serif;</code>
-  <code>font-size: 0.833rem;</code>
-  <code>@include transition(all, 0.25s, ease-in-out);</code>
-  <code>touch-action: manipulation;</code>
-<code>}</code>
-
-<code>.field input {</code>
-  <code>z-index: 500;</code>
-  <code>width: 100%;</code>
-  <code>padding: 0;</code>
-  <code>border: 0;</code>
-  <code>border-bottom: 1px solid $black;</code>
-  <code>border-radius: 0;</code>
-  <code>outline-color: $color-one;</code>
-  <code>font-weight: 400;</code>
-  <code>line-height: 3;</code>
-  <code>background-color: transparent;</code>
-  <code>cursor: text;</code>
-<code>}</code>
-
-<code>.field input.valid:disabled {opacity: 1;}</code>
-
-<code>.field label {</code>
-  <code>margin: 0;</code>
-  <code>width: 100%;</code>
-  <code>font-weight: 500;</code>
-  <code>text-align: left;</code>
-  <code>color: $black;</code>
-<code>}</code>
-
-<code>.field input:placeholder-shown + label {</code>
-  <code>overflow: hidden;</code>
-  <code>text-overflow: ellipsis;</code>
-  <code>cursor: text;</code>
-  <code>transform-origin: left bottom;</code>
-  <code>white-space: nowrap;</code>
-  <code>@include transform (translate(0,1.5rem));</code>
-<code>}</code>
-
-<code>input::placeholder {</code>
-  <code>opacity: 0;</code>
-  <code>transition: inherit;</code>
-<code>}</code>
-
-<code>input:focus::placeholder {</code>
-  <code>opacity: 1;</code>
-  <code>color: $light-gray;</code>
-<code>}</code>
-
-<code>.field input:not(:placeholder-shown) + label,</code>
-<code>.field input:focus + label {</code>
-  <code>cursor: pointer;</code>
-  <code>@include transform (translate(0,0));</code>
-<code>}</code>
-
-<code>.field.valid input {</code>
-  <code>border-color: $valid;</code>
-  <code>color: $valid;</code>
-<code>}</code>
-
-<code>.field.valid input:not(:placeholder-shown) + label,</code>
-<code>.field.valid input:placeholder-shown + label,</code>
-<code>.field.valid input:focus + label {color: $valid;}</code>
-
-<code>.field.valid label {color: $valid;}</code>
-
-<code>.field span.valid {</code>
-  <code>display: none;</code>
-  <code>position: absolute;</code>
-  <code>top: 1rem;</code>
-  <code>right: 1rem;</code>
-  <code>padding: 0 0 0 1rem;</code>
-  <code>font-size: 1.5rem;</code>
-  <code>color: $valid;</code>
-  <code>@include transition (all, 0.25s, ease-in-out);</code>
-<code>}</code>
-
-<code>.field.valid span.valid {display: block;}</code>
-
-<code>span.error-message {</code>
-  <code>width: 100%;</code>
-  <code>height: inherit;</code>
-  <code>min-height: 2rem;</code>
-  <code>margin: 0.25rem 0 0 0;</code>
-  <code>padding: 0;</code>
-  <code>font-family: "Montserrat", sans-serif;</code>
-  <code>font-size: 0.833rem;</code>
-  <code>font-weight: 600;</code>
-  <code>color: $invalid;</code>
-  <code>text-align: left;</code>
-  <code>opacity: 0;</code>
-  <code>@include transition (all, 0.25s, ease-in-out);</code>
-<code>}</code>
-
-<code>.field.invalid span.error-message {opacity: 1;}</code>
-
-<code>.field.invalid input {</code>
-  <code>border-color: $invalid;</code>
-  <code>color: $invalid;</code>
-<code>}</code>
-
-<code>.field.invalid input:not(:placeholder-shown) + label,</code>
-<code>.field.invalid input:placeholder-shown + label,</code>
-<code>.field.invalid input:focus + label {color: $invalid;}</code>
-
-<code>.field.invalid label {color: $invalid;}</code>
-              </pre>
-            </figure>
           </div>
         </div>
       </section>
@@ -382,81 +174,6 @@
     <code>&lt;label for=&quot;select-example&quot;&gt;Label&lt;/label&gt;</code>
   <code>&lt;/div&gt;</code>
 <code>&lt;/fieldset&gt;</code>
-              </pre>
-            </figure>
-            <figure>
-              <figcaption>scss</figcaption>
-              <pre>
-<code>.field select {</code>
-  <code>border: none;</code>
-  <code>border-radius: 0;</code>
-  <code>-moz-border-radius: 0;</code>
-  <code>-webkit-border-radius: 0;</code>
-  <code>@include appearance (none);</code>
-<code>}</code>
-
-<code>.field select {</code>
-  <code>display: inline-block;</code>
-  <code>position: relative;</code>
-  <code>width: 100%;</code>
-  <code>min-height: 2.3125rem;</code>
-  <code>overflow: hidden;</code>
-  <code>margin: 0;</code>
-  <code>padding: 0 2rem 0 0;</code>
-  <code>border-bottom: 1px solid $black;</code>
-  <code>outline-color: $color-one;</code>
-  <code>font-family: "Montserrat", sans-serif;</code>
-  <code>font-size: 0.833rem;</code>
-  <code>font-weight: 400;</code>
-  <code>line-height: 3;</code>
-  <code>text-overflow: ellipsis;</code>
-  <code>background-color: transparent;</code>
-  <code>white-space: nowrap;</code>
-<code>}</code>
-
-<code>.field select option {</code>
-  <code>overflow: hidden;</code>
-  <code>outline-color: $color-one;</code>
-  <code>text-overflow: ellipsis;</code>
-<code>}</code>
-
-<code>.text .field {padding: 0;}</code>
-
-<code>.field .select-icon {</code>
-  <code>display: flex;</code>
-  <code>flex-direction: column;</code>
-  <code>justify-content: center;</code>
-  <code>position: absolute;</code>
-  <code>top: 30%;</code>
-  <code>right: 1rem;</code>
-  <code>z-index: 0;</code>
-  <code>font-size: 1rem;</code>
-<code>}</code>
-
-<code>.field.valid select {</code>
-  <code>border-color: $valid;</code>
-  <code>color: $valid;</code>
-<code>}</code>
-
-<code>.field.valid select option,</code>
-<code>.field.valid .select-icon {color: $valid;}</code>
-
-<code>.field.valid select option span.option {color: $valid;}</code>
-
-<code>.field.valid span.select.valid {</code>
-  <code>top: 1.44rem;</code>
-  <code>right: 2.2rem;</code>
-<code>}</code>
-
-<code>.field.invalid select {</code>
-  <code>border-color: $invalid;</code>
-  <code>color: $invalid;</code>
-<code>}</code>
-
-<code>.field.invalid select option,</code>
-<code>.field.invalid .select-icon {color: $invalid;}</code>
-
-<code>.field.invalid select option span.option {color: $invalid;}</code>
               </pre>
             </figure>
           </div>
@@ -522,58 +239,6 @@
     <code>&lt;label class=&quot;checkbox&quot; for=&quot;three&quot;&gt;Checkbox label&lt;/label&gt;</code>
   <code>&lt;/div&gt;</code>
 <code>&lt;/fieldset&gt;</code>
-              </pre>
-            </figure>
-            <figure>
-              <figcaption>scss</figcaption>
-              <pre>
-<code>input[type="checkbox"] {</code>
-  <code>position: absolute;</code>
-  <code>top: 0;</code>
-  <code>left: 1rem;</code>
-  <code>width: 1.25rem;</code>
-  <code>height: 1.25rem;</code>
-  <code>margin: 0;</code>
-  <code>border: 1px solid $black;</code>
-  <code>background-color: $white;</code>
-  <code>cursor: pointer;</code>
-  <code>@include appearance(none);</code>
-  <code>@include transition(all, 0.25s, ease-in-out);</code>
-<code>}</code>
-
-<code>input[type="checkbox"]:checked:before {</code>
-  <code>display: flex;</code>
-  <code>flex-direction: column;</code>
-  <code>align-items: center;</code>
-  <code>justify-content: center;</code>
-  <code>width: 1.125rem;</code>
-  <code>height: 1.125rem;</code>
-  <code>margin: 0;</code>
-  <code>font-family: "LineAwesome";</code>
-  <code>font-size: 1rem;</code>
-  <code>color: $white;</code>
-  <code>content: '\f17b';</code>
-<code>}</code>
-
-<code>input[type="checkbox"]:checked:not(:disabled) {background-color: $black;}</code>
-
-<code>label.checkbox {</code>
-  <code>display: flex;</code>
-  <code>flex-direction: row;</code>
-  <code>align-items: center;</code>
-  <code>min-height: 1.25rem;</code>
-  <code>padding: 0 0 0 2rem;</code>
-<code>}</code>
-
-<code>.field.valid input[type="checkbox"]:checked:not(:disabled) {background-color: $valid;}</code>
-
-<code>.field.valid label span.checkmark {border-color: $valid;}</code>
-
-<code>.field.invalid input[type="checkbox"]:checked:not(:disabled) {background-color: $invalid;}</code>
-
-<code>span.error-message.checkbox {padding: 0 0 0 2rem;}</code>
-
-<code>.field.invalid label span.checkmark {border-color: $invalid;}</code>
               </pre>
             </figure>
           </div>
@@ -656,66 +321,6 @@
 <code>&lt;/fieldset&gt;</code>
               </pre>
             </figure>
-            <figure>
-              <figcaption>scss</figcaption>
-              <pre>
-<code>input[type="radio"] {</code>
-  <code>display: flex;</code>
-  <code>flex-direction: column;</code>
-  <code>align-items: center;</code>
-  <code>justify-content: center;</code>
-  <code>position: absolute;</code>
-  <code>top: 0;</code>
-  <code>left: 1rem;</code>
-  <code>width: 1.25rem;</code>
-  <code>height: 1.25rem;</code>
-  <code>margin: 0;</code>
-  <code>border: 1px solid $black;</code>
-  <code>border-radius: 100%;</code>
-  <code>background-color: $white;</code>
-  <code>cursor: pointer;</code>
-  <code>@include appearance (none);</code>
-  <code>@include transition (all, 0.25s, ease-in-out);</code>
-<code>}</code>
-
-<code>input[type="radio"]:checked:before {</code>
-  <code>display: block;</code>
-  <code>position: relative;</code>
-  <code>width: 0.75rem;</code>
-  <code>height: 0.75rem;</code>
-  <code>border-radius: 100%;</code>
-  <code>background-color: $black;</code>
-  <code>content: "";</code>
-<code>}</code>
-
-<code>label.radio {</code>
-  <code>display: flex;</code>
-  <code>flex-direction: row;</code>
-  <code>align-items: center;</code>
-  <code>min-height: 1.25rem;</code>
-  <code>padding: 0 0 0 1.75rem;</code>
-<code>}</code>
-
-<code>input:disabled, input:disabled:checked {</code>
-  <code>border: 1px solid $light-gray;</code>
-  <code>cursor: default;</code>
-<code>}</code>
-
-<code>input[type="radio"]:disabled:checked:before {</code>
-  <code>display: block;</code>
-  <code>position: relative;</code>
-  <code>width: 0.75rem;</code>
-  <code>height: 0.75rem;</code>
-  <code>border-radius: 100%;</code>
-  <code>background-color: $light-gray;</code>
-  <code>content: "";</code>
-<code>}</code>
-
-<code>.field.valid input[type="radio"]:checked:before {background-color: $valid;}</code>
-
-<code>.field.invalid input[type="radio"]:checked:before {background-color: $invalid;}</code>
-              </pre>
-            </figure>
           </div>
         </div>
       </section>
@@ -752,81 +357,21 @@
 <code>&lt;/fieldset&gt;</code>
               </pre>
             </figure>
-            <figure>
-              <figcaption>scss</figcaption>
-              <pre>
-<code>input.toggle[type="checkbox"] {</code>
-  <code>-webkit-appearance: none;</code>
-  <code>appearance: none;</code>
-  <code>display: flex;</code>
-  <code>flex-direction: row;</code>
-  <code>align-items: center;</code>
-  <code>position: absolute;</code>
-  <code>left: 0;</code>
-  <code>width: 3.5rem;</code>
-  <code>height: 1.75rem;</code>
-  <code>min-height: 1.75rem;</code>
-  <code>max-height: 1.75rem;</code>
-  <code>margin: 0;</code>
-  <code>padding: 0.1875rem;</code>
-  <code>border-color: transparent;</code>
-  <code>border-radius: 2rem;</code>
-  <code>background-color: $dark-gray;</code>
-  <code>@include transition (all, 0.25s, ease-in-out);</code>
-<code>}</code>
-
-<code>input.toggle[type="checkbox"]:checked:before {display: none;}</code>
-
-<code>input.toggle[type="checkbox"]:after {</code>
-  <code>display: flex;</code>
-  <code>flex-direction: row;</code>
-  <code>align-items: center;</code>
-  <code>justify-content: center;</code>
-  <code>position: relative;</code>
-  <code>left: 0;</code>
-  <code>width: 1.25rem;</code>
-  <code>height: 1.25rem;</code>
-  <code>margin: 0;</code>
-  <code>border-radius: 100%;</code>
-  <code>font-family: "LineAwesome";</code>
-  <code>font-size: 1rem;</code>
-  <code>background-color: white;</code>
-  <code>content: "\f342";</code>
-  <code>@include transition (all, 0.25s, ease-in-out);</code>
-<code>}</code>
-
-<code>input.toggle[type="checkbox"]:checked {background-color: $color-one;}</code>
-
-<code>input.toggle[type="checkbox"]:checked:after {</code>
-  <code>left: calc(100% - 1.25rem);</code>
-  <code>color: $color-one;</code>
-  <code>content: "\f17b";</code>
-<code>}</code>
-
-<code>label.toggle {</code>
-  <code>display: flex;</code>
-  <code>flex-direction: row;</code>
-  <code>align-items: center;</code>
-  <code>min-height: 1.75rem;</code>
-  <code>padding: 0 0 0 4rem;</code>
-<code>}</code>
-
-<code>.field.valid input.toggle[type="checkbox"]:not(:disabled),</code>
-<code>.field.valid input.toggle[type="checkbox"]:checked:not(:disabled) {background-color: $valid;}</code>
-
-<code>.field.valid input.toggle[type="checkbox"]:after {color: $valid;}</code>
-
-<code>.field.invalid input.toggle[type="checkbox"]:not(:disabled),</code>
-<code>.field.invalid input.toggle[type="checkbox"]:checked:not(:disabled) {background-color: $invalid;}</code>
-
-<code>.field.invalid input.toggle[type="checkbox"]:after {color: $invalid;}</code>
-              </pre>
-            </figure>
           </div>
         </div>
       </section>
     </main>
-    <footer>&copy;2018 Enservio, Inc. All rights reserved.&nbsp;<a href="#!">Terms&nbsp;&amp;&nbsp;Conditions</a></footer>
+    <footer class="lg">
+      <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../../principles/principles.html">Principles</a></li>
+        <li><a href="#!">Style</a></li>
+        <li><a href="../atoms.html">Atoms</a></li>
+        <li><a href="#!">Molecules</a></li>
+        <li><a href="#!">Pages</a></li>
+      </ul>
+      <span>&copy;2018 Enservio, Inc. All rights reserved. v.1.1</span>
+    </footer>
     <!-- scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
