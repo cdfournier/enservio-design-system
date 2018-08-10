@@ -803,38 +803,39 @@ header {
   margin: 0;
   padding: 0; }
 
-nav ul {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  list-style-type: none; }
-
-nav li {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: initial;
-  margin: 0;
-  padding: 0 0.694rem;
-  font-size: 0.694rem;
-  text-align: center;
-  text-transform: uppercase;
-  opacity: 1; }
+nav {
+  width: 100%; }
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 0;
+    padding: 0 0 1rem;
+    list-style-type: none; }
+  nav li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: initial;
+    margin: 0;
+    padding: 0 0.694rem 0 0;
+    font-size: 0.694rem;
+    text-align: center;
+    text-transform: uppercase;
+    opacity: 1; }
+  nav li a {
+    padding: 0; }
 
 @media (min-width: 35.5rem) {
   nav {
     padding: 0; }
-  nav ul {
-    justify-content: flex-end; }
   nav ul li {
-    font-size: 0.833rem;
-    padding: 0 0 0 1.44rem; }
+    padding: 0 1rem 0 0;
+    font-size: 0.833rem; }
   nav ul li:last-child {
-    padding: 0 0 0 1.44rem; } }
+    padding: 0; } }
 
 span.back {
   position: absolute;
@@ -858,7 +859,7 @@ span.back:hover, span.back:focus {
 footer {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   width: 100%;
   margin: 0;
@@ -1891,8 +1892,10 @@ label.checkbox, label.radio {
   display: flex;
   flex-direction: row;
   align-items: center;
+  width: auto;
   min-height: 1.25rem;
-  padding: 0 0 0 2rem; }
+  padding: 0 0 0 2rem;
+  line-height: 1.5; }
 
 .field.valid input[type="checkbox"]:checked:not(:disabled) {
   background-color: #008000; }

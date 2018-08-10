@@ -857,14 +857,16 @@ header {
 
 // NAVIGATION
 nav {
+  width: 100%;
+
   ul {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     width: 100%;
     margin: 0;
-    padding: 0;
+    padding: 0 0 1rem;
     list-style-type: none;
   }
   
@@ -874,22 +876,23 @@ nav {
     align-items: center;
     width: initial;
     margin: 0;
-    padding: 0 0.694rem;
+    padding: 0 0.694rem 0 0;
     font-size: 0.694rem;
     text-align: center;
     text-transform: uppercase;
     opacity: 1;
   }
+  
+  li a {padding: 0;}
 }
 
 @media (min-width: 35.5rem) {
 nav {padding: 0;}
-nav ul {justify-content: flex-end;}
 nav ul li {
+  padding: 0 1rem 0 0;
   font-size: 0.833rem;
-  padding: 0 0 0 1.44rem;
 }
-nav ul li:last-child {padding: 0 0 0 1.44rem;}}
+nav ul li:last-child {padding: 0;}}
 
 
 // BACK BUTTON
@@ -912,7 +915,7 @@ span.back:hover, span.back:focus {color: $color-two;}
 footer {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   width: 100%;
   margin: 0;
@@ -1928,8 +1931,10 @@ label.checkbox, label.radio {
   display: flex;
   flex-direction: row;
   align-items: center;
+  width: auto;
   min-height: 1.25rem;
   padding: 0 0 0 2rem;
+  line-height: 1.5;
 }
 
 
