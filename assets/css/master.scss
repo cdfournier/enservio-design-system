@@ -177,6 +177,7 @@ span.badge {
   padding: 0.125rem 0.75rem;
   border: 1px solid $light-gray;
   border-radius: 2rem;
+  font-size: 0.694rem;
   background-color: $off-white;
   white-space: nowrap;
 }
@@ -1046,12 +1047,14 @@ main {
   padding: 2rem;
   background-color: $white;
   opacity: 0;
-  @include transition (all, 0.5s, ease);
+  @include transition (all, 0.5s, ease-in-out);
+  @include transform (translateY(-100%));
 }
 
 .timeout.show {
   z-index: 5000;
   opacity: 1;
+  @include transform (translateY(0));
 }
 
 .timeout .text {

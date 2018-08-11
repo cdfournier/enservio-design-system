@@ -32,7 +32,7 @@ $(".current-inventory-bar").click( function() {
 });
 */
 
-// STATUS BARS
+// ALERT BARS
 $(".show-error").click( function() {
   $(".alert-bar.error").addClass("show");
   setTimeout(function() { 
@@ -64,9 +64,14 @@ $(".show-hide-password").click( function() {
 });
 
 // TIMEOUT
+$(".show-timeout").click( function() {
+  $(".timeout").addClass("show");
+});
+
 $(".continue").click( function() {
   $(".timeout").removeClass("show");
 });
+
 
 // SMOOTH SCROLL
 $('a[href*="#"]')

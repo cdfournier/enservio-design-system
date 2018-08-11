@@ -131,6 +131,7 @@ span.badge {
   padding: 0.125rem 0.75rem;
   border: 1px solid #cccece;
   border-radius: 2rem;
+  font-size: 0.694rem;
   background-color: #f5f5f5;
   white-space: nowrap; }
 
@@ -999,15 +1000,25 @@ main {
   padding: 2rem;
   background-color: #ffffff;
   opacity: 0;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-  transition: all 0.5s ease; }
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  transform: translateY(-100%); }
 
 .timeout.show {
   z-index: 5000;
-  opacity: 1; }
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0); }
 
 .timeout .text {
   margin: 0 auto;
