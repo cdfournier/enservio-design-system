@@ -126,6 +126,14 @@ ul li, ol li {
 ul li:last-child, ol li:last-child {
   padding: 0 0 0 0.5rem; }
 
+span.badge {
+  margin: 0 0.5rem;
+  padding: 0.125rem 0.75rem;
+  border: 1px solid #cccece;
+  border-radius: 2rem;
+  background-color: #f5f5f5;
+  white-space: nowrap; }
+
 ul.requirements {
   margin: 0;
   padding: 1rem 0;
@@ -906,7 +914,7 @@ main {
 .alerts {
   position: absolute; }
 
-.status-bar {
+.alert-bar {
   position: fixed;
   z-index: 1500;
   width: 100%;
@@ -921,58 +929,58 @@ main {
   -o-transform: translateY(-20rem);
   transform: translateY(-20rem); }
 
-.status-bar.error {
+.alert-bar.error {
   background-color: #d0021b; }
 
-.status-bar.success {
+.alert-bar.success {
   background-color: #008000; }
 
-.status-bar.system {
+.alert-bar.system {
   background-color: #2e84ed; }
 
-.status-bar.error.show,
-.status-bar.success.show,
-.status-bar.system.show {
+.alert-bar.error.show,
+.alert-bar.success.show,
+.alert-bar.system.show {
   -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
   -ms-transform: translateY(0);
   -o-transform: translateY(0);
   transform: translateY(0); }
 
-.status-bar .status-bar-details {
+.alert-bar .alert-bar-details {
   display: flex;
   flex-direction: row;
   align-items: center;
   padding: 1rem;
   color: #ffffff; }
 
-.status-bar .status-bar-details span {
+.alert-bar .alert-bar-details span {
   font-size: 2rem; }
 
-.status-bar .status-bar-details span.dismiss {
+.alert-bar .alert-bar-details span.dismiss {
   cursor: pointer; }
 
-.status-bar .status-bar-details span:first-of-type {
+.alert-bar .alert-bar-details span:first-of-type {
   padding: 0 1rem 0 0; }
 
-.status-bar .status-bar-details span:last-of-type {
+.alert-bar .alert-bar-details span:last-of-type {
   padding: 0 0 0 1rem; }
 
-.status-bar .status-bar-details .status-bar-message {
+.alert-bar .alert-bar-details .alert-bar-message {
   display: flex;
   flex-direction: column;
   width: 100%; }
 
-.status-bar .status-bar-details .status-bar-message span {
+.alert-bar .alert-bar-details .alert-bar-message span {
   padding: 0;
   font-size: 1rem;
   font-weight: 400;
   color: #ffffff; }
 
 @media (min-width: 48rem) {
-  .status-bar .status-bar-details {
+  .alert-bar .alert-bar-details {
     padding: 2rem; }
-  .status-bar .status-bar-details .status-bar-message span {
+  .alert-bar .alert-bar-details .alert-bar-message span {
     font-size: 1.2rem; } }
 
 .timeout {
@@ -2036,6 +2044,7 @@ label.toggle {
   display: flex;
   flex-direction: row;
   align-items: center;
+  width: auto;
   min-height: 1.75rem;
   padding: 0 0 0 4rem; }
 

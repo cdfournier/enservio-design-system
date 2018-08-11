@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Enservio Design System | Inventory Capture Components</title>
+    <title>Enservio Design System | Inventory Capture</title>
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <!-- css -->
@@ -12,9 +12,7 @@
     <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="../../assets/css/master.css">
-
-    <link rel="stylesheet" href="../../assets/styles/guide.css">
-
+    <link rel="stylesheet" href="../../assets/css/guide.css">
     <style>
       main {padding: 0;}
       .split {flex-direction: column !important;}
@@ -31,11 +29,10 @@
         .code-sample {padding: 2rem 2rem 0;}
       }
     </style>
-
   </head>
   <body>
     <main>
-      <section id="inventory-capture-component">
+      <section id="inventory-capture">
         <div class="text">
           <h1>Inventory Capture</h1>
         </div>
@@ -183,385 +180,21 @@
 <code>&lt;/form&gt;</code>
               </pre>
             </figure>
-            <figure>
-              <figcaption>scss</figcaption>
-              <pre>
-<code>button,</code>
-<code>.button {</code>
-  <code>display: inline-flex;</code>
-  <code>align-items: center;</code>
-  <code>width: auto;</code>
-  <code>min-height: 2.25rem;</code>
-  <code>max-height: 2.25rem;</code>
-  <code>overflow: hidden;</code>
-  <code>margin: 1rem auto 0;</code>
-  <code>padding: 0 1.75rem;</code>
-  <code>border-radius: 4rem;</code>
-  <code>font-size: 0.694rem;</code>
-  <code>font-weight: 500;</code>
-  <code>letter-spacing: 1px;</code>
-  <code>line-height: 0;</code>
-  <code>text-align: center;</code>
-  <code>text-decoration: none;</code>
-  <code>text-transform: uppercase;</code>
-  <code>cursor: pointer;</code>
-  <code>@include transition (all, 0.25s, ease-in-out);</code>
-<code>}</code>
-
-<code>@media (min-width: 48rem) {button, .button {margin: 0 0.5rem 0;}}</code>
-
-<code>button span.pre, .button span.pre,</code>
-<code>button span.post, .button span.post {</code>
-  <code>margin: -0.0525rem 0 0;</code>
-  <code>font-size: 1rem;</code>
-<code>}</code>
-
-<code>button span.post, .button span.post {padding: 0 0 0 0.5rem;}</code>
-
-<code>button.color-one,</code>
-<code>.button.color-one {</code>
-  <code>border: 1px solid $color-one;</code>
-  <code>color: $white;</code>
-  <code>background-color: $color-one;</code>
-<code>}</code>
-
-<code>button.color-one:hover, button.color-one:focus,</code>
-<code>.button.color-one:hover, .button.color-one:focus {</code>
-  <code>color: $color-one;</code>
-  <code>background-color: $white;</code>
-<code>}</code>
-
-<code>button.color-one span.post-number,</code>
-<code>.button.color-one span.post-number {</code>
-  <code>color: $color-one;</code>
-  <code>background-color: $white;</code>
-<code>}</code>
-
-<code>button.color-one:hover span.post-number, button.color-one:focus span.post-number,</code>
-<code>.button.color-one:hover span.post-number, .button.color-one:focus span.post-number {</code>
-  <code>color: $white;</code>
-  <code>background-color: $color-one;</code>
-<code>}</code>
-
-<code>button.color-two,</code>
-<code>.button.color-two {</code>
-  <code>border: 1px solid $color-two;</code>
-  <code>color: $white;</code>
-  <code>background-color: $color-two;</code>
-<code>}</code>
-
-<code>button.color-two:hover, button.color-two:focus,</code>
-<code>.button.color-two:hover, .button.color-two:focus {</code>
-  <code>color: $color-two;</code>
-  <code>background-color: $white;</code>
-<code>}</code>
-
-<code>button.color-two span.post-number,</code>
-<code>.button.color-two span.post-number {</code>
-  <code>color: $color-two;</code>
-  <code>background-color: $white;</code>
-<code>}</code>
-
-<code>button.color-two:hover span.post-number, button.color-two:focus span.post-number,</code>
-<code>.button.color-two:hover span.post-number, .button.color-two:focus span.post-number {</code>
-  <code>color: $white;</code>
-  <code>background-color: $color-two;</code>
-<code>}</code>
-
-<code>.button-box {</code>
-  <code>display: flex;</code>
-  <code>flex-direction: column;</code>
-  <code>align-items: center;</code>
-  <code>width: 100%;</code>
-  <code>margin: 0;</code>
-  <code>padding: 0;</code>
-<code>}</code>
-
-<code>.button-box.right, .button-box.left {align-items: center;}</code>
-
-<code>@media (min-width: 48rem) {</code>
-<code>.button-box {</code>
-  <code>flex-direction: row;</code>
-  <code>justify-content: center;</code>
-<code>}</code>
-<code>.button-box.left {</code>
-  <code>align-items: flex-start;</code>
-  <code>justify-content: flex-start;</code>
-<code>}</code>
-<code>.button-box.left .button,</code>
-<code>.button-box.left .expanding-button-box {margin: 0 1rem 0 0;}</code>
-<code>form .button-box {padding: 0 1rem;}</code>
-<code>}</code>
-
-<code>input[type="password"],</code>
-<code>input[type="checkbox"],</code>
-<code>input[type="select"],</code>
-<code>input[type="search"],</code>
-<code>input[type="radio"],</code>
-<code>input[type="email"],</code>
-<code>input[type="file"],</code>
-<code>input[type="text"],</code>
-<code>input[type="tel"],</code>
-<code>input[type="url"] {</code>
-  <code>outline-color: $color-one;</code>
-  <code>font-size: 1rem;</code>
-  <code>-webkit-border-radius: 0;</code>
-  <code>-moz-border-radius: 0;</code>
-  <code>border-radius: 0;</code>
-  <code>@include appearance (none);</code>
-<code>}</code>
-
-<code>form {</code>
-  <code>display: flex;</code>
-  <code>flex-direction: column;</code>
-  <code>align-items: flex-start;</code>
-  <code>width: 100%;</code>
-  <code>margin: 0 auto;</code>
-  <code>padding: 2rem 1rem 0;</code>
-<code>}</code>
-
-<code>fieldset {</code>
-  <code>width: 100%;</code>
-  <code>margin: 0;</code>
-  <code>padding: 0;</code>
-  <code>border: none;</code>
-<code>}</code>
-
-<code>fieldset.small {width: 50%;}</code>
-
-<code>legend {display: none;}</code>
-
-<code>.field {</code>
-  <code>display: flex;</code>
-  <code>flex-direction: column-reverse;</code>
-  <code>align-items: flex-start;</code>
-  <code>position: relative;</code>
-  <code>width: 100%;</code>
-  <code>margin: 0 0 1rem;</code>
-  <code>padding: 0 1rem;</code>
-<code>}</code>
-
-<code>.small {</code>
-  <code>display: flex;</code>
-  <code>flex-direction: row;</code>
-  <code>align-items: flex-start;</code>
-  <code>position: relative;</code>
-  <code>width: 100%;</code>
-  <code>margin: 0;</code>
-  <code>padding: 0;</code>
-<code>}</code>
-
-<code>@media (min-width: 48rem) {</code>
-<code>form {</code>
-  <code>flex-direction: row;</code>
-  <code>flex-wrap: wrap;</code>
-<code>}</code>
-<code>fieldset {width: 50%;}</code>
-<code>.small {width: 50%;}</code>
-<code>}</code>
-
-<code>@media (min-width: 72rem) {</code>
-<code>fieldset, .small {width: 25%;}</code>
-<code>.small fieldset {width: 50%;}</code>
-<code>}</code>
-
-<code>.field label, .field input {</code>
-  <code>font-family: "Montserrat", sans-serif;</code>
-  <code>font-size: 0.833rem;</code>
-  <code>@include transition(all, 0.25s, ease-in-out);</code>
-  <code>touch-action: manipulation;</code>
-<code>}</code>
-
-<code>.field input {</code>
-  <code>z-index: 500;</code>
-  <code>width: 100%;</code>
-  <code>padding: 0;</code>
-  <code>border: 0;</code>
-  <code>border-bottom: 1px solid $black;</code>
-  <code>border-radius: 0;</code>
-  <code>outline-color: $color-one;</code>
-  <code>font-weight: 400;</code>
-  <code>line-height: 3;</code>
-  <code>background-color: transparent;</code>
-  <code>cursor: text;</code>
-<code>}</code>
-
-<code>.field label {</code>
-  <code>margin: 0;</code>
-  <code>width: 100%;</code>
-  <code>font-weight: 500;</code>
-  <code>text-align: left;</code>
-  <code>color: $black;</code>
-<code>}</code>
-
-<code>.field input:placeholder-shown + label {</code>
-  <code>overflow: hidden;</code>
-  <code>text-overflow: ellipsis;</code>
-  <code>cursor: text;</code>
-  <code>transform-origin: left bottom;</code>
-  <code>white-space: nowrap;</code>
-  <code>@include transform (translate(0,1.5rem));</code>
-<code>}</code>
-
-<code>input::placeholder {</code>
-  <code>opacity: 0;</code>
-  <code>transition: inherit;</code>
-<code>}</code>
-
-<code>input:focus::placeholder {</code>
-  <code>opacity: 1;</code>
-  <code>color: $light-gray;</code>
-<code>}</code>
-
-<code>.field input:not(:placeholder-shown) + label,</code>
-<code>.field input:focus + label {</code>
-  <code>cursor: pointer;</code>
-  <code>@include transform (translate(0,0));</code>
-<code>}</code>
-
-<code>.field.valid input {</code>
-  <code>border-color: $valid;</code>
-  <code>color: $valid;</code>
-<code>}</code>
-
-<code>.field.valid input:not(:placeholder-shown) + label,</code>
-<code>.field.valid input:placeholder-shown + label,</code>
-<code>.field.valid input:focus + label {color: $valid;}</code>
-
-<code>.field.valid input:not(:placeholder-shown) + label a,</code>
-<code>.field.valid input:placeholder-shown + label a,</code>
-<code>.field.valid input:focus + label a {color: $valid;}</code>
-
-<code>.field.valid input:not(:placeholder-shown) + label a:hover, .field.valid input:not(:placeholder-shown) + label a:focus,</code>
-<code>.field.valid input:placeholder-shown + label a:hover, .field.valid input:placeholder-shown + label a:focus,</code>
-<code>.field.valid input:focus + label a:hover, .field.valid input:focus + label a:focus {color: darken($valid, 10%);}</code>
-
-<code>.field.valid select {</code>
-  <code>border-color: $valid;</code>
-  <code>color: $valid;</code>
-<code>}</code>
-
-<code>.field.valid select option,</code>
-<code>.field.valid .select-icon,</code>
-<code>.field.valid label {color: $valid;}</code>
-
-<code>.field.valid select option span.option {color: $valid;}</code>
-
-<code>.field span.valid {</code>
-  <code>display: none;</code>
-  <code>position: absolute;</code>
-  <code>top: 1rem;</code>
-  <code>right: 1rem;</code>
-  <code>padding: 0 0 0 1rem;</code>
-  <code>font-size: 1.5rem;</code>
-  <code>color: $valid;</code>
-  <code>@include transition (all, 0.25s, ease-in-out);</code>
-<code>}</code>
-
-<code>.field.valid span.valid {display: block;}</code>
-
-<code>.field.valid span.select.valid {</code>
-  <code>top: 1.5rem;</code>
-  <code>right: 2.25rem;</code>
-<code>}</code>
-
-<code>span.error-message {</code>
-  <code>width: 100%;</code>
-  <code>height: inherit;</code>
-  <code>min-height: 2rem;</code>
-  <code>margin: 0.25rem 0 0 0;</code>
-  <code>padding: 0;</code>
-  <code>font-family: "Montserrat", sans-serif;</code>
-  <code>font-size: 0.833rem;</code>
-  <code>font-weight: 600;</code>
-  <code>color: $invalid;</code>
-  <code>text-align: left;</code>
-  <code>opacity: 0;</code>
-  <code>@include transition (all, 0.25s, ease-in-out);</code>
-<code>}</code>
-
-<code>.field.invalid span.error-message {opacity: 1;}</code>
-
-<code>.field.invalid input {</code>
-  <code>border-color: $invalid;</code>
-  <code>color: $invalid;</code>
-<code>}</code>
-
-<code>.field.invalid input:not(:placeholder-shown) + label,</code>
-<code>.field.invalid input:placeholder-shown + label,</code>
-<code>.field.invalid input:focus + label {color: $invalid;}</code>
-
-<code>.field.invalid input:not(:placeholder-shown) + label a,</code>
-<code>.field.invalid input:placeholder-shown + label a,</code>
-<code>.field.invalid input:focus + label a {color: $invalid;}</code>
-
-<code>.field.invalid input:not(:placeholder-shown) + label a:hover, .field.invalid input:not(:placeholder-shown) + label a:focus,</code>
-<code>.field.invalid input:placeholder-shown + label a:hover, .field.invalid input:placeholder-shown + label a:focus,</code>
-<code>.field.invalid input:focus + label a:hover, .field.invalid input:focus + label a:focus {color: darken($invalid, 10%);}</code>
-
-<code>.field.invalid select {</code>
-  <code>border-color: $invalid;</code>
-  <code>color: $invalid;</code>
-<code>}</code>
-
-<code>.field.invalid select option,</code>
-<code>.field.invalid .select-icon,</code>
-<code>.field.invalid label {color: $invalid;}</code>
-
-<code>.field.invalid select option span.option {color: $invalid;}</code>
-
-<code>.field select {</code>
-  <code>border: none;</code>
-  <code>border-radius: 0;</code>
-  <code>-moz-border-radius: 0;</code>
-  <code>-webkit-border-radius: 0;</code>
-  <code>@include appearance (none);</code>
-<code>}</code>
-
-<code>.field select {</code>
-  <code>display: inline-block;</code>
-  <code>position: relative;</code>
-  <code>width: 100%;</code>
-  <code>min-height: 2.3125rem;</code>
-  <code>overflow: hidden;</code>
-  <code>margin: 0;</code>
-  <code>padding: 0 2rem 0 0;</code>
-  <code>border-bottom: 1px solid $black;</code>
-  <code>outline-color: $color-one;</code>
-  <code>font-family: "Montserrat", sans-serif;</code>
-  <code>font-size: 0.833rem;</code>
-  <code>font-weight: 400;</code>
-  <code>line-height: 3;</code>
-  <code>text-overflow: ellipsis;</code>
-  <code>background-color: transparent;</code>
-  <code>white-space: nowrap;</code>
-<code>}</code>
-
-<code>.field select option {</code>
-  <code>overflow: hidden;</code>
-  <code>outline-color: $color-one;</code>
-  <code>text-overflow: ellipsis;</code>
-<code>}</code>
-
-<code>.text .field {padding: 0;}</code>
-
-<code>.field .select-icon {</code>
-  <code>display: flex;</code>
-  <code>flex-direction: column;</code>
-  <code>justify-content: center;</code>
-  <code>position: absolute;</code>
-  <code>top: 30%;</code>
-  <code>right: 1rem;</code>
-  <code>z-index: 0;</code>
-  <code>font-size: 1rem;</code>
-<code>}</code>
-              </pre>
-            </figure>
           </div>
         </div>
       </section>
     </main>
-    <footer>&copy;2018 Enservio, Inc. All rights reserved.&nbsp;<a href="#!">Terms&nbsp;&amp;&nbsp;Conditions</a></footer>
+    <footer>
+      <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../../principles/principles.html">Principles</a></li>
+        <li><a href="../../style/style.html">Style</a></li>
+        <li><a href="../../atoms.html">Atoms</a></li>
+        <li><a href="../../molecules/molecules.html">Molecules</a></li>
+        <li><a href="../demo/pages.html">Pages</a></li>
+      </ul>
+      <span>&copy;2018 Enservio, Inc. All rights reserved. <span class="badge">v.1.1</span></span>
+    </footer>
     <!-- scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>

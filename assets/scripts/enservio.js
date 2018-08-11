@@ -34,28 +34,28 @@ $(".current-inventory-bar").click( function() {
 
 // STATUS BARS
 $(".show-error").click( function() {
-  $(".status-bar.error").addClass("show");
+  $(".alert-bar.error").addClass("show");
   setTimeout(function() { 
-    $(".status-bar.error").removeClass("show") }, 10000);
+    $(".alert-bar.error").removeClass("show") }, 10000);
 });
 $(".dismiss.error").click( function() {
-  $(".status-bar.error").removeClass("show");
+  $(".alert-bar.error").removeClass("show");
 });
 $(".show-success").click( function() {
-  $(".status-bar.success").addClass("show");
+  $(".alert-bar.success").addClass("show");
   setTimeout(function() { 
-    $(".status-bar.success").removeClass("show") }, 10000);
+    $(".alert-bar.success").removeClass("show") }, 10000);
 });
 $(".dismiss.success").click( function() {
-  $(".status-bar.success").removeClass("show");
+  $(".alert-bar.success").removeClass("show");
 });
 $(".show-system").click( function() {
-  $(".status-bar.system").addClass("show");
+  $(".alert-bar.system").addClass("show");
   setTimeout(function() { 
-    $(".status-bar.system").removeClass("show") }, 10000);
+    $(".alert-bar.system").removeClass("show") }, 10000);
 });
 $(".dismiss.system").click( function() {
-  $(".status-bar.system").removeClass("show");
+  $(".alert-bar.system").removeClass("show");
 });
 
 // SHOW/HIDE PASSWORD

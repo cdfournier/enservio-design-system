@@ -13,6 +13,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="../assets/css/master.css">
     <link rel="stylesheet" href="../assets/css/guide.css">
+    <style>
+      ul.toc {
+        margin: auto;
+        padding: 0 0 1rem;
+        list-style: none;
+        -webkit-column-break-inside: avoid;
+        pagbreak-inside: avoid;
+        break-inside: avoid;
+      }
+      ul.toc h2 {
+        padding: 0 0 0.694rem;
+        line-height: 1.2;
+      }
+      ul.toc li {
+        width: fit-content;
+        padding-left: 0;
+      }
+      @media (min-width: 48rem) {ul.toc.columns {column-count: 2;}}
+    </style>
   </head>
   <body>
     <header id="header" class="header--fixed">
@@ -22,14 +41,16 @@
     </header>
     <main>
       <section id="atoms">
-        <div class="text lg">
+        <div class="text first lg">
           <h1>Atoms</h1>
-          <p>The essential building blocks of our user interface.</p>
-          <ul>
+          <p>Atoms are the essential building blocks of our design system and user interface. When combined with other atoms they create <a href="../molecules/molecules.html">molecules</a> used to facilitate a specific purpose.</p>
+        </div>
+        <div class="text border lg">
+          <ul class="toc columns">
+            <li><a href="alert-bar/alert-bar.html">Alert Bar</a></li>
             <li><a href="buttons/buttons.html">Buttons</a></li>
-            <li><a href="form-elements/form-elements.html">Form Elements</a></li>
+            <li><a href="form-inputs/form-inputs.html">Form Elements</a></li>
             <li><a href="header/header.html">Header</a></li>
-            <li><a href="status-bar/status-bar.html">Status Bar</a></li>
           </ul>
         </div>
       </section>
@@ -38,12 +59,12 @@
       <ul>
         <li><a href="../index.html">Home</a></li>
         <li><a href="../principles/principles.html">Principles</a></li>
-        <li><a href="#!">Style</a></li>
+        <li><a href="../style/style.html">Style</a></li>
         <li>Atoms</li>
-        <li><a href="#!">Molecules</a></li>
-        <li><a href="#!">Pages</a></li>
+        <li><a href="../molecules/molecules.html">Molecules</a></li>
+        <li><a href="../demo/pages.html">Pages</a></li>
       </ul>
-      <span>&copy;2018 Enservio, Inc. All rights reserved. v.1.1</span>
+      <span>&copy;2018 Enservio, Inc. All rights reserved. <span class="badge">v.1.1</span></span>
     </footer>
     <!-- scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
