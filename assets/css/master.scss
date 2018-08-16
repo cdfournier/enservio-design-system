@@ -276,7 +276,8 @@ ul.attachment-list li .line-item span.file-type-icon {
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
-  font-size: 2.5rem;
+  font-size: 2.25rem;
+  line-height: 1;
 }
 
 ul.attachment-list li .line-item span.file-type-icon:after {
@@ -761,9 +762,9 @@ span.button.upload input[type="file"] {
   padding: 0;
 }
 
-.button-box.right {justify-content: flex-end;}
+.button-box.right {align-items: flex-end;}
 
-.button-box.left {justify-content: flex-start;}
+.button-box.left {align-items: flex-start;}
 
 @media (min-width: 48rem) {
 .button-box {

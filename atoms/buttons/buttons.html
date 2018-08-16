@@ -13,56 +13,57 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="../../assets/css/master.css">
     <link rel="stylesheet" href="../../assets/css/guide.css">
-    <style>
-      main {padding: 0;}
-      .button-box {padding: 1rem 0 0;}
-      .button-box:first-of-type {padding: 0;}
-    </style>
   </head>
   <body>
     <main>
-      <section id="button-box-component">
-        <div class="text">
-          <h1>Button Box</h1>
+      <section id="buttons">
+        <div class="text guide">
+          <h1>Buttons</h1>
+          <p>Whenever semantically appropriate, anything that functions as a button should be coded as a <code>&lt;button&gt;</code>. This design system, however, does provide CSS classes to make any <code>&lt;span&gt;</code> or <code>&lt;a href&gt;</code> element look like a button.</p>
+        </div>
+      </section>
+      <section id="button-box">
+        <div class="text guide">
+          <h2>Button Box</h2>
+          <p>To enable improved layout and flexible design options with ease, buttons are placed inside of a <code>.button-box</code> parent div.</p>
         </div>
         <div class="split">
           <div class="design-sample">
             <figcaption>Design Sample</figcaption>
             <div class="button-box left">
-              <span class="button color-one">Primary Button</span>
+              <span class="button color-one">Button</span>
             </div>
             <div class="button-box">
-              <span class="button color-one">Primary Button</span>
+              <span class="button color-one">Button</span>
             </div>
             <div class="button-box right">
-              <span class="button color-one">Primary Button</span>
+              <span class="button color-one">Button</span>
             </div>
             <div class="note">
-              <p>To enable improved layout and design, all buttons are placed inside of a <code>.button-box</code> div. On small screens, buttons are centered horizontally by default. For larger screens, you can align buttons inside the <code>.button-box</code> using the <code>.left</code> or <code>.right</code> class.</p>
+              <figcaption>Notes</figcaption>
+              <p>Buttons are centered horizontally by default, but you can re-align buttons using either a <code>.left</code> or <code>.right</code> class on the <code>.button-box</code>.</p>
             </div>
           </div>
           <div class="code-sample">
             <figure>
               <figcaption>html</figcaption>
-              <pre>
-<code>&lt;div class=&quot;button-box left&quot;&gt;</code>
-  <code>&lt;button class=&quot;button color-one&quot;&gt;Primary Button&lt;/button&gt;</code>
-<code>&lt;/div&gt;</code>
-<code>&lt;div class=&quot;button-box&quot;&gt;</code>
-  <code>&lt;button class=&quot;button color-one&quot;&gt;Primary Button&lt;/button&gt;</code>
-<code>&lt;/div&gt;</code>
-<code>&lt;div class=&quot;button-box right&quot;&gt;</code>
-  <code>&lt;button class=&quot;button color-one&quot;&gt;Primary Button&lt;/button&gt;</code>
-<code>&lt;/div&gt;</code>
-              </pre>
+<pre><code>&lt;div class=&quot;button-box left&quot;&gt;
+  &lt;span class=&quot;button color-one&quot;&gt;Button&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;button-box&quot;&gt;
+  &lt;span class=&quot;button color-one&quot;&gt;Button&lt;/span&gt;
+&lt;/div&gt;
+&lt;div class=&quot;button-box right&quot;&gt;
+  &lt;span class=&quot;button color-one&quot;&gt;Button&lt;/span&gt;
+&lt;/div&gt;</code></pre>
             </figure>
           </div>
         </div>
       </section>
-
-      <section id="default-button-component">
-        <div class="text">
-          <h1>Button</h1>
+      <section id="button-classes">
+        <div class="text guide">
+          <h2>Button Classes</h2>
+          <p>This design system uses two basic <code>&lt;button&gt;</code> classes: <code>.primary</code> and <code>.secondary</code>. The <code>.primary</code> class creates a <code>&lt;button&gt;</code> with a solid fill and a white label. The <code>.secondary</code> class creates a <code>&lt;button&gt;</code> with a white fill, a colored border, and a colored label. The <code>:hover</code> and <code>:focus</code> state for each class is the opposite class.</p>
         </div>
         <div class="split">
           <div class="design-sample">
@@ -79,24 +80,22 @@
           <div class="code-sample">
             <figure>
               <figcaption>html</figcaption>
-              <pre>
-<code>&lt;div class=&quot;button-box&quot;&gt;</code>
-  <code>&lt;button class=&quot;button color-one&quot;&gt;Primary Button&lt;/button&gt;</code>
-  <code>&lt;button class=&quot;button secondary color-one&quot;&gt;Secondary Button&lt;/button&gt;</code>
-<code>&lt;/div&gt;</code>
-<code>&lt;div class=&quot;button-box&quot;&gt;</code>
-  <code>&lt;button class=&quot;button color-two&quot;&gt;Primary Button&lt;/button&gt;</code>
-  <code>&lt;button class=&quot;button secondary color-two&quot;&gt;Secondary Button&lt;/button&gt;</code>
-<code>&lt;/div&gt;</code>
-              </pre>
+<pre><code>&lt;div class=&quot;button-box left&quot;&gt;
+  &lt;button class=&quot;button color-one&quot;&gt;Primary Button&lt;/button&gt;
+  &lt;button class=&quot;button secondary color-one&quot;&gt;Secondary Button&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;button-box left&quot;&gt;
+  &lt;button class=&quot;button color-two&quot;&gt;Primary Button&lt;/button&gt;
+  &lt;button class=&quot;button secondary color-two&quot;&gt;Secondary Button&lt;/button&gt;
+&lt;/div&gt;</code></pre>
             </figure>
           </div>
         </div>
       </section>
-
-      <section id="span-button-component">
-        <div class="text">
-          <h1>Button with Pre- and Post- Spans</h1>
+      <section id="buttons-with-pre-and-post-spans">
+        <div class="text guide">
+          <h2>Buttons With Pre- and Post- Spans</h2>
+          <p>We have included classes to make it easy to add an icon before or after the <code>&lt;button&gt;</code> label.</p>
         </div>
         <div class="split">
           <div class="design-sample">
@@ -109,100 +108,77 @@
               <span class="button color-two">Primary<span class="post"><i class="la la-paperclip"></i></span></span>
               <span class="button secondary color-two">Secondary<span class="post"><i class="la la-paperclip"></i></span></span>
             </div>
+            <div class="note">
+              <figcaption>Notes</figcaption>
+              <p>Available icons can be found here: <a href="https://icons8.com/line-awesome" target="_blank">Line Awesome</a>.</p>
+            </div>
           </div>
           <div class="code-sample">
-        <figure>
-          <figcaption>html</figcaption>
-          <pre>
-<code>&lt;div class=&quot;button-box&quot;&gt;</code>
-  <code>&lt;button class=&quot;button color-one&quot;&gt;&lt;span class=&quot;pre&quot;&gt;&lt;i class=&quot;la la-angle-left&quot;&gt;&lt;/i&gt;&lt;/span&gt;Primary&lt;/button&gt;</code>
-  <code>&lt;button class=&quot;button secondary color-one&quot;&gt;Secondary&lt;span class=&quot;post&quot;&gt;&lt;i class=&quot;la la-angle-right&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/button&gt;</code>
-<code>&lt;/div&gt;</code>
-<code>&lt;div class=&quot;button-box&quot;&gt;</code>
-  <code>&lt;button class=&quot;button color-two&quot;&gt;Primary&lt;span class=&quot;post&quot;&gt;&lt;i class=&quot;la la-paperclip&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/button&gt;</code>
-  <code>&lt;button class=&quot;button secondary color-two&quot;&gt;Secondary&lt;span class=&quot;post&quot;&gt;&lt;i class=&quot;la la-paperclip&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/button&gt;</code>
-<code>&lt;/div&gt;</code>
-          </pre>
-        </figure>
+            <figure>
+              <figcaption>html</figcaption>
+<pre><code>&lt;div class=&quot;button-box left&quot;&gt;
+  &lt;button class=&quot;button color-one&quot;&gt;&lt;span class=&quot;pre&quot;&gt;&lt;i class=&quot;la la-angle-left&quot;&gt;&lt;/i&gt;&lt;/span&gt;Primary&lt;/button&gt;
+  &lt;button class=&quot;button secondary color-one&quot;&gt;Secondary&lt;span class=&quot;post&quot;&gt;&lt;i class=&quot;la la-angle-right&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class=&quot;button-box left&quot;&gt;
+  &lt;button class=&quot;button color-two&quot;&gt;Primary&lt;span class=&quot;post&quot;&gt;&lt;i class=&quot;la la-paperclip&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/button&gt;
+  &lt;button class=&quot;button secondary color-two&quot;&gt;Secondary&lt;span class=&quot;post&quot;&gt;&lt;i class=&quot;la la-paperclip&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+            </figure>
           </div>
         </div>
       </section>
-
-      <section id="buttons-with-numbers-component">
-        <div class="text">
-          <h1>Button with Number Counters</h1>
+      <section id="buttons-with-a-number">
+        <div class="text guide">
+          <h2>Buttons With a Number</h2>
+          <p>To include a number with a <code>&lt;button&gt;</code>, use the <code>.post-number</code> <code>&lt;span&gt;</code> class.</p>
         </div>
         <div class="split">
           <div class="design-sample">
             <figcaption>Design Sample</figcaption>
             <div class="button-box left">
               <span class="button color-one">Primary<span class="post-number">1</span></span>
-              <span class="button secondary color-one">Secondary<span class="post-number">8</span></span>
-            </div>
-            <div class="button-box left">
-              <span class="button color-two">Primary<span class="post-number">4</span></span>
-              <span class="button secondary color-two">Secondary<span class="post-number">3</span></span>
             </div>
           </div>
           <div class="code-sample">
             <figure>
               <figcaption>html</figcaption>
-              <pre>
-<code>&lt;div class=&quot;button-box&quot;&gt;</code>
-  <code>&lt;button class=&quot;button color-one&quot;&gt;Primary&lt;span class=&quot;post-number&quot;&gt;1&lt;/span&gt;&lt;/button&gt;</code>
-  <code>&lt;button class=&quot;button secondary color-one&quot;&gt;Secondary&lt;span class=&quot;post-number&quot;&gt;8&lt;/span&gt;&lt;/button&gt;</code>
-<code>&lt;/div&gt;</code>
-<code>&lt;div class=&quot;button-box&quot;&gt;</code>
-  <code>&lt;button class=&quot;button color-two&quot;&gt;Primary&lt;span class=&quot;post-number&quot;&gt;4&lt;/span&gt;&lt;/button&gt;</code>
-  <code>&lt;button class=&quot;button secondary color-two&quot;&gt;Secondary&lt;span class=&quot;post-number&quot;&gt;3&lt;/span&gt;&lt;/button&gt;</code>
-<code>&lt;/div&gt;</code>
-              </pre>
+<pre><code>&lt;div class=&quot;button-box left&quot;&gt;
+  &lt;button class=&quot;button color-one&quot;&gt;Primary&lt;span class=&quot;post-number&quot;&gt;1&lt;/span&gt;&lt;/button&gt;
+&lt;/div&gt;</code></pre>
             </figure>
           </div>
         </div>
       </section>
-
-      <section id="buttons-with-spinner-component">
-        <div class="text">
-          <h1>Button with Spinner</h1>
+      <section id="buttons-with-a-spinner">
+        <div class="text guide">
+          <h2>Buttons With a Spinner</h2>
+          <p>If there is a situation where any sort of processing delay is possible when a user clicks a <code>&lt;button&gt;</code>, we should create a <code>&lt;button&gt;</code> with a <code>.post-processing</code> <code>&lt;span&gt;</code>. When necessary we can add the <code>.active</code> class to that span and trigger the button's spinner.</p>
         </div>
         <div class="split">
           <div class="design-sample">
             <figcaption>Design Sample</figcaption>
             <div class="button-box left">
               <span class="button color-one delay one">Primary<span class="post-processing one"><i class="la la-refresh la-spin"></i></span></span>
-              <span class="button secondary color-one delay two">Secondary<span class="post-processing two"><i class="la la-refresh la-spin"></i></span></span>
-            </div>
-            <div class="button-box left">
-              <span class="button color-two delay three">Primary<span class="post-processing three"><i class="la la-refresh la-spin"></i></span></span>
-              <span class="button secondary color-two delay four">Secondary<span class="post-processing four"><i class="la la-refresh la-spin"></i></span></span>
             </div>
             <div class="note">
-              <p style="line-height: 1.2;"><b>Click or tap any button to see its spinner</b></p>
-              <p>These buttons are ideal for form submission. If the server indicates a delay in processing, the class <code>.active</code> can be added to <code>&lt;span class=&quot;post-processing&quot;&gt;</code> to trigger the button's spinner.</p>
+              <figcaption>Notes</figcaption>
+              <p><b>Click or tap the button to see its spinner</b></p>
             </div>
           </div>
           <div class="code-sample">
             <figure>
               <figcaption>html</figcaption>
-              <pre>
-<code>&lt;div class=&quot;button-box&quot;&gt;</code>
-  <code>&lt;button class=&quot;button color-one&quot;&gt;Primary&lt;span class=&quot;post-processing&quot;&gt;&lt;i class=&quot;la la-refresh la-spin&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/button&gt;</code>
-  <code>&lt;button class=&quot;button secondary color-one&quot;&gt;Secondary&lt;span class=&quot;post-processing&quot;&gt;&lt;i class=&quot;la la-refresh la-spin&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/button&gt;</code>
-<code>&lt;/div&gt;</code>
-<code>&lt;div class=&quot;button-box&quot;&gt;</code>
-  <code>&lt;button class=&quot;button color-two&quot;&gt;Primary&lt;span class=&quot;post-processing&quot;&gt;&lt;i class=&quot;la la-refresh la-spin&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/button&gt;</code>
-  <code>&lt;span class=&quot;button secondary color-two&quot;&gt;Secondary&lt;span class=&quot;post-processing&quot;&gt;&lt;i class=&quot;la la-refresh la-spin&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/button&gt;</code>
-<code>&lt;/div&gt;</code>
-              </pre>
+<pre><code>&lt;div class=&quot;button-box left&quot;&gt;
+  &lt;span class=&quot;button color-one delay one&quot;&gt;Primary&lt;span class=&quot;post-processing one&quot;&gt;&lt;i class=&quot;la la-refresh la-spin&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/span&gt;
+&lt;/div&gt;</code></pre>
             </figure>
           </div>
         </div>
       </section>
-
-      <section id="expanding-delete-button-component">
-        <div class="text">
-          <h1>Expanding Delete Button</h1>
+      <section id="expanding-delete-button">
+        <div class="text guide">
+          <h2>Expanding Delete Button</h2>
         </div>
         <div class="split last">
           <div class="design-sample">
@@ -218,123 +194,45 @@
                 </div>
               </div>
             </div>
-            <div class="button-box left">
-              <div class="expanding-button-box color-two item-two">
-                <div class="expanding-button small delete-two"><span class="icon-close"><i class="la la-trash"></i></span></div>
-                <div class="expanding-button large delete-two">Delete</div>
-                <div class="confirm-action-box">
-                  <span class="confirm-action-text">Are you sure?</span>
-                  <span class="confirm-action secondary no-two">No</span>
-                  <span class="confirm-action yes-two">Yes</span>
-                </div>
-              </div>
-            </div>
             <div class="note">
-              <p style="line-height: 1.2;"><b>Click or tap either button to see it expand</b></p>
-              <p>These expanding delete buttons are ideal for actions that may require a confirmation. When the user clicks an expanding delete button, the class <code>.expand</code> is added to <code>&lt;div class=&quot;expanding-button-box&quot;&gt;</code> which triggers a transition to the button's width and exposes the yes or no confirmation buttons.</p>
+              <figcaption>Notes</figcaption>
+              <p><b>Click or tap the button to see it expand</b></p>
+              <p>When the user clicks these expanding delete buttons, the class <code>.expand</code> is added to <code>.expanding-button-box</code> class which triggers a CSS transition to the button's width and exposes the yes or no confirmation buttons.</p>
             </div>
           </div>
           <div class="code-sample">
             <figure>
               <figcaption>html</figcaption>
-              <pre>
-<code>&lt;div class=&quot;button-box&quot;&gt;</code>
-  <code>&lt;div class=&quot;expanding-button-box color-one item-one&quot;&gt;</code>
-    <code>&lt;div class=&quot;expanding-button small delete-one&quot;&gt;</code>
-      <code>&lt;span class=&quot;icon-close&quot;&gt;&lt;i class=&quot;la la-trash&quot;&gt;&lt;/i&gt;&lt;/span&gt;</code>
-    <code>&lt;/div&gt;</code>
-    <code>&lt;div class=&quot;expanding-button large delete-one&quot;&gt;Delete&lt;/div&gt;</code>
-    <code>&lt;div class=&quot;confirm-action-box&quot;&gt;</code>
-      <code>&lt;span class=&quot;confirm-action-text&quot;&gt;Are you sure?&lt;/span&gt;</code>
-      <code>&lt;span class=&quot;confirm-action secondary no-one&quot;&gt;No&lt;/span&gt;</code>
-      <code>&lt;span class=&quot;confirm-action yes-one&quot;&gt;Yes&lt;/span&gt;</code>
-    <code>&lt;/div&gt;</code>
-  <code>&lt;/div&gt;</code>
-<code>&lt;/div&gt;</code>
-
-<code>&lt;div class=&quot;button-box&quot;&gt;</code>
-  <code>&lt;div class=&quot;expanding-button-box color-two item-two&quot;&gt;</code>
-    <code>&lt;div class=&quot;expanding-button small delete-two&quot;&gt;</code>
-      <code>&lt;span class=&quot;icon-close&quot;&gt;&lt;i class=&quot;la la-trash&quot;&gt;&lt;/i&gt;&lt;/span&gt;</code>
-    <code>&lt;/div&gt;</code>
-    <code>&lt;div class=&quot;expanding-button large delete-two&quot;&gt;Delete&lt;/div&gt;</code>
-    <code>&lt;div class=&quot;confirm-action-box&quot;&gt;</code>
-      <code>&lt;span class=&quot;confirm-action-text&quot;&gt;Are you sure?&lt;/span&gt;</code>
-      <code>&lt;span class=&quot;confirm-action secondary no-two&quot;&gt;No&lt;/span&gt;</code>
-      <code>&lt;span class=&quot;confirm-action yes-two&quot;&gt;Yes&lt;/span&gt;</code>
-    <code>&lt;/div&gt;</code>
-  <code>&lt;/div&gt;</code>
-<code>&lt;/div&gt;</code>
-              </pre>
+<pre><code>&lt;div class=&quot;button-box left&quot;&gt;
+  &lt;div class=&quot;expanding-button-box color-one item-one&quot;&gt;
+    &lt;div class=&quot;expanding-button small delete-one&quot;&gt;&lt;span class=&quot;icon-close&quot;&gt;&lt;i class=&quot;la la-trash&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;
+    &lt;div class=&quot;expanding-button large delete-one&quot;&gt;Delete&lt;/div&gt;
+    &lt;div class=&quot;confirm-action-box&quot;&gt;
+      &lt;span class=&quot;confirm-action-text&quot;&gt;Are you sure?&lt;/span&gt;
+      &lt;span class=&quot;confirm-action secondary no-one&quot;&gt;No&lt;/span&gt;
+      &lt;span class=&quot;confirm-action yes-one&quot;&gt;Yes&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
             </figure>
           </div>
         </div>
       </section>
-
     </main>
     <footer>
       <ul>
         <li><a href="../../index.html">Home</a></li>
         <li><a href="../../principles/principles.html">Principles</a></li>
         <li><a href="../../style/style.html">Style</a></li>
-        <li><a href="../atoms.html">Atoms</a></li>
+        <li><a href="../../atoms/atoms.html">Atoms</a></li>
         <li><a href="../../molecules/molecules.html">Molecules</a></li>
         <li><a href="../../demo/pages.html">Pages</a></li>
       </ul>
-      <span>&copy;2018 Enservio, Inc. All rights reserved. <span class="badge">v.1.1</span></span>
+      <p>&copy;2018 Enservio, Inc. All rights reserved. <span class="badge">v.1.1</span></p>
     </footer>
     <!-- scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-    <script>
-      $(".delay.one").click(function() {
-        $(".post-processing.one").toggleClass("active");
-      });
-    </script>
-    <script>
-      $(".delay.two").click(function() {
-        $(".post-processing.two").toggleClass("active");
-      });
-    </script>
-    <script>
-      $(".delay.three").click(function() {
-        $(".post-processing.three").toggleClass("active");
-      });
-    </script>
-    <script>
-      $(".delay.four").click(function() {
-        $(".post-processing.four").toggleClass("active");
-      });
-    </script>
-    <script>
-      $(".delete-one").click(function() {
-        $(".expanding-button-box.item-one").toggleClass("expand");
-      });
-    </script>
-    <script>
-      $(".no-one").click( function() {
-        $(".expanding-button-box.item-one").removeClass("expand");
-      });
-    </script>
-    <script>
-      $(".yes-one").click( function() {
-        $(".expanding-button-box.item-one").removeClass("expand");
-      });
-    </script>
-    <script>
-      $(".delete-two").click(function() {
-        $(".expanding-button-box.item-two").toggleClass("expand");
-      });
-    </script>
-    <script>
-      $(".no-two").click( function() {
-        $(".expanding-button-box.item-two").removeClass("expand");
-      });
-    </script>
-    <script>
-      $(".yes-two").click( function() {
-        $(".expanding-button-box.item-two").removeClass("expand");
-      });
-    </script>
+    <script src="../../assets/scripts/enservio.js"></script>
   </body>
 </html>

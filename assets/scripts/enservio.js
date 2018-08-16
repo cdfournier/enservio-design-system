@@ -24,6 +24,25 @@ $(".yes-one").click( function() {
   $(".expanding-button-box.one").removeClass("expand");
 });
 
+// ATTACHMENT DELETE BUTTON ERROR
+$(".attachment-error").click( function() {
+  $("ul.attachment-list li").toggleClass("invalid");
+});
+
+// SPINNER BUTTONS
+$(".delay.one").click(function() {
+  $(".post-processing.one").toggleClass("active");
+});
+$(".delay.two").click(function() {
+  $(".post-processing.two").toggleClass("active");
+});
+$(".delay.three").click(function() {
+  $(".post-processing.three").toggleClass("active");
+});
+$(".delay.four").click(function() {
+  $(".post-processing.four").toggleClass("active");
+});
+
 // CURRENT INVENTORY BAR BEHAVIOR
 /*
 $(".current-inventory-bar").click( function() {
@@ -63,15 +82,23 @@ $(".show-hide-password").click( function() {
   $(".show-password").toggleClass("hide");
 });
 
+// SHOW PASSWORD VALIDATION
+$(".password-error").click( function() {
+  $(".field.password").toggleClass("invalid");
+  $(".field.confirm-password").toggleClass("invalid");
+});
+$(".password-valid").click( function() {
+  $(".field.password").toggleClass("valid");
+  $(".field.confirm-password").toggleClass("valid");
+});
+
 // TIMEOUT
 $(".show-timeout").click( function() {
   $(".timeout").addClass("show");
 });
-
 $(".continue").click( function() {
   $(".timeout").removeClass("show");
 });
-
 
 // SMOOTH SCROLL
 $('a[href*="#"]')

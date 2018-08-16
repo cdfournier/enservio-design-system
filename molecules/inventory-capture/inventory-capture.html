@@ -14,32 +14,20 @@
     <link rel="stylesheet" href="../../assets/css/master.css">
     <link rel="stylesheet" href="../../assets/css/guide.css">
     <style>
-      main {padding: 0;}
-      .split {flex-direction: column !important;}
-      .design-sample {
-        width: 100% !important;
-        padding: 2rem 1rem 0;
-      }
-      .code-sample {
-        width: 100%;
-        padding: 0 2rem 0;
-      }
-      
-      @media (min-width: 64rem) {
-        .code-sample {padding: 2rem 2rem 0;}
-      }
+      @media (min-width: 48rem) {.note {max-width: 54%;}}
     </style>
   </head>
   <body>
     <main>
       <section id="inventory-capture">
-        <div class="text">
+        <div class="text guide">
           <h1>Inventory Capture</h1>
+          <p>The Inventory Capture form is the primary means by which our users provide us with contents data for their claims. We use this form not only for new items added to a claim, but for existing or previously added items, as well.</p>
         </div>
-        <div class="split last">
+        <div class="split wide last">
           <div class="design-sample">
-            <figcaption style="padding-left: 1rem;">Design Sample</figcaption>
-            <form style="padding: 0;">
+            <figcaption>Design Sample</figcaption>
+            <form style="padding: 1rem 0 0;">
               <fieldset>
                 <legend>Description</legend>
                 <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
@@ -106,79 +94,81 @@
                 <button class="button color-two">Add Attachments<span class="post"><i class="la la-paperclip"></i></span></button>
               </div>
             </form>
+            <div class="note">
+              <figcaption>Notes</figcaption>
+              <p>One thing to note is the use of <code>&lt;div class=&quot;small&quot;&gt;</code>. This technique enables us to group smaller aligned <code>input</code> fields. This keeps those fields together even on devices with smaller screens.</p>
+            </div>
           </div>
           <div class="code-sample">
             <figure>
               <figcaption>html</figcaption>
-              <pre>
-<code>&lt;form&gt;</code>
-  <code>&lt;fieldset&gt;</code>
-  <code>&lt;legend&gt;Description&lt;/legend&gt;</code>
-  <code>&lt;div class=&quot;field&quot;&gt;&lt;!-- change to 'field valid' or 'field invalid' as necessary --&gt;</code>
-    <code>&lt;span class=&quot;error-message&quot;&gt;Please include a description&lt;/span&gt;</code>
-    <code>&lt;input type=&quot;text&quot; name=&quot;description&quot; id=&quot;description&quot; placeholder=&quot;Describe your item&amp;nbsp;&amp;#40;including brand&amp;#41;&quot; required&gt;</code>
-    <code>&lt;label for=&quot;description&quot;&gt;Description&amp;#42;&lt;/label&gt;</code>
-  <code>&lt;/div&gt;</code>
-  <code>&lt;/fieldset&gt;</code>
-  <code>&lt;div class=&quot;small&quot;&gt;</code>
-    <code>&lt;fieldset&gt;</code>
-      <code>&lt;legend&gt;Cost&lt;/legend&gt;</code>
-      <code>&lt;div class=&quot;field&quot;&gt;&lt;!-- change to 'field valid' or 'field invalid' as necessary --&gt;</code>
-        <code>&lt;span class=&quot;error-message&quot;&gt;Please include a cost per item&lt;/span&gt;</code>
-        <code>&lt;input type=&quot;text&quot; name=&quot;cost&quot; id=&quot;cost&quot; placeholder=&quot;Cost per item&quot; required&gt;</code>
-        <code>&lt;label for=&quot;cost&quot;&gt;Cost Per Item&amp;#42;&lt;/label&gt;</code>
-      <code>&lt;/div&gt;</code>
-    <code>&lt;/fieldset&gt;</code>
-    <code>&lt;fieldset&gt;</code>
-      <code>&lt;legend&gt;Quantity&lt;/legend&gt;</code>
-      <code>&lt;div class=&quot;field&quot;&gt;&lt;!-- change to 'field valid' or 'field invalid' as necessary --&gt;</code>
-        <code>&lt;span class=&quot;error-message&quot;&gt;Please include a quantity&lt;/span&gt;</code>
-        <code>&lt;input type=&quot;number&quot; name=&quot;quantity&quot; id=&quot;quantity&quot; placeholder=&quot;Quantity&quot; required&gt;</code>
-        <code>&lt;label for=&quot;quantity&quot;&gt;Quantity&amp;#42;&lt;/label&gt;</code>
-      <code>&lt;/div&gt;</code>
-    <code>&lt;/fieldset&gt;</code>
-  <code>&lt;/div&gt;</code>
-  <code>&lt;div class=&quot;small&quot;&gt;</code>
-    <code>&lt;fieldset&gt;</code>
-      <code>&lt;legend&gt;Age: Years&lt;/legend&gt;</code>
-      <code>&lt;div class=&quot;field&quot;&gt;&lt;!-- change to 'field valid' or 'field invalid' as necessary --&gt;</code>
-        <code>&lt;span class=&quot;error-message&quot;&gt;How old is this item &amp;#40;in years&amp;#41;?&lt;/span&gt;</code>
-        <code>&lt;input type=&quot;number&quot; name=&quot;years&quot; id=&quot;years&quot; placeholder=&quot;Years&quot; required&gt;</code>
-        <code>&lt;label for=&quot;years&quot;&gt;Age: In Years&amp;#42;&lt;/label&gt;</code>
-      <code>&lt;/div&gt;</code>
-    <code>&lt;/fieldset&gt;</code>
-    <code>&lt;fieldset&gt;</code>
-      <code>&lt;legend&gt;Age: Months&lt;/legend&gt;</code>
-      <code>&lt;div class=&quot;field&quot;&gt;&lt;!-- change to 'field valid' or 'field invalid' as necessary --&gt;</code>
-        <code>&lt;span class=&quot;error-message&quot;&gt;How old is this item &amp;#40;in months&amp;#41;?&lt;/span&gt;</code>
-        <code>&lt;input type=&quot;number&quot; name=&quot;months&quot; id=&quot;months&quot; placeholder=&quot;Months&quot; required&gt;</code>
-        <code>&lt;label for=&quot;months&quot;&gt;Age: In Months&amp;#42;&lt;/label&gt;</code>
-      <code>&lt;/div&gt;</code>
-    <code>&lt;/fieldset&gt;</code>
-  <code>&lt;/div&gt;</code>
-  <code>&lt;fieldset&gt;</code>
-    <code>&lt;legend&gt;Condition&lt;/legend&gt;</code>
-    <code>&lt;div class=&quot;field&quot;&gt;&lt;!-- change to 'field valid' or 'field invalid' as necessary --&gt;</code>
-      <code>&lt;span class=&quot;error-message&quot;&gt;Please select an option&lt;/span&gt;</code>
-      <code>&lt;select name=&quot;condition&quot; id=&quot;condition&quot;&gt;</code>
-        <code>&lt;option value=&quot;0&quot;&gt;Choose a Condition&lt;/option&gt;</code>
-        <code>&lt;option value=&quot;New&quot;&gt;New&lt;/option&gt;</code>
-        <code>&lt;option value=&quot;Excellent&quot;&gt;Excellent&lt;/option&gt;</code>
-        <code>&lt;option value=&quot;Good&quot;&gt;Good&lt;/option&gt;</code>
-        <code>&lt;option value=&quot;Fair&quot;&gt;Fair&lt;/option&gt;</code>
-        <code>&lt;option value=&quot;Poor&quot;&gt;Poor&lt;/option&gt;</code>
-      <code>&lt;/select&gt;</code>
-      <code>&lt;div class=&quot;select-icon&quot;&gt;&lt;i class=&quot;la la-angle-down&quot;&gt;&lt;/i&gt;&lt;/div&gt;</code>
-      <code>&lt;span class=&quot;valid select&quot;&gt;&lt;i class=&quot;la la-check-circle-o&quot;&gt;&lt;/i&gt;&lt;/span&gt;</code>
-      <code>&lt;label for=&quot;condition&quot;&gt;Condition&lt;/label&gt;</code>
-    <code>&lt;/div&gt;</code>
-  <code>&lt;/fieldset&gt;</code>
-  <code>&lt;div class=&quot;button-box left&quot;&gt;</code>
-    <code>&lt;button class=&quot;button color-one&quot;&gt;Add Item To Inventory&lt;/button&gt;</code>
-    <code>&lt;button class=&quot;button color-two&quot;&gt;Add Attachments&lt;span class=&quot;post&quot;&gt;&lt;i class=&quot;la la-paperclip&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/button&gt;</code>
-  <code>&lt;/div&gt;</code>
-<code>&lt;/form&gt;</code>
-              </pre>
+<pre><code>&lt;form&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;Description&lt;/legend&gt;
+    &lt;div class=&quot;field&quot;&gt; &lt;!-- change to 'field valid' or 'field invalid' as necessary --&gt;
+      &lt;span class=&quot;error-message&quot;&gt;Please include a description&lt;/span&gt;
+      &lt;input type=&quot;text&quot; name=&quot;description&quot; id=&quot;description&quot; placeholder=&quot;Describe your item&amp;nbsp;&amp;#40;including brand&amp;#41;&quot; required&gt;
+      &lt;label for=&quot;description&quot;&gt;Description&amp;#42;&lt;/label&gt;
+    &lt;/div&gt;
+  &lt;/fieldset&gt;
+  &lt;div class=&quot;small&quot;&gt;
+    &lt;fieldset&gt;
+      &lt;legend&gt;Cost&lt;/legend&gt;
+      &lt;div class=&quot;field&quot;&gt; &lt;!-- change to 'field valid' or 'field invalid' as necessary --&gt;
+        &lt;span class=&quot;error-message&quot;&gt;Please include a cost per item&lt;/span&gt;
+        &lt;input type=&quot;text&quot; name=&quot;cost&quot; id=&quot;cost&quot; placeholder=&quot;Cost per item&quot; required&gt;
+        &lt;label for=&quot;cost&quot;&gt;Cost Per Item&amp;#42;&lt;/label&gt;
+      &lt;/div&gt;
+    &lt;/fieldset&gt;
+    &lt;fieldset&gt;
+      &lt;legend&gt;Quantity&lt;/legend&gt;
+      &lt;div class=&quot;field&quot;&gt; &lt;!-- change to 'field valid' or 'field invalid' as necessary --&gt;
+        &lt;span class=&quot;error-message&quot;&gt;Please include a quantity&lt;/span&gt;
+        &lt;input type=&quot;number&quot; name=&quot;quantity&quot; id=&quot;quantity&quot; placeholder=&quot;Quantity&quot; required&gt;
+        &lt;label for=&quot;quantity&quot;&gt;Quantity&amp;#42;&lt;/label&gt;
+      &lt;/div&gt;
+    &lt;/fieldset&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;small&quot;&gt;
+    &lt;fieldset&gt;
+      &lt;legend&gt;Age: Years&lt;/legend&gt;
+      &lt;div class=&quot;field&quot;&gt; &lt;!-- change to 'field valid' or 'field invalid' as necessary --&gt;
+        &lt;span class=&quot;error-message&quot;&gt;How old is this item &amp;#40;in years&amp;#41;?&lt;/span&gt;
+        &lt;input type=&quot;number&quot; name=&quot;years&quot; id=&quot;years&quot; placeholder=&quot;Years&quot; required&gt;
+        &lt;label for=&quot;years&quot;&gt;Age: In Years&amp;#42;&lt;/label&gt;
+      &lt;/div&gt;
+    &lt;/fieldset&gt;
+    &lt;fieldset&gt;
+      &lt;legend&gt;Age: Months&lt;/legend&gt;
+      &lt;div class=&quot;field&quot;&gt; &lt;!-- change to 'field valid' or 'field invalid' as necessary --&gt;
+        &lt;span class=&quot;error-message&quot;&gt;How old is this item &amp;#40;in months&amp;#41;?&lt;/span&gt;
+        &lt;input type=&quot;number&quot; name=&quot;months&quot; id=&quot;months&quot; placeholder=&quot;Months&quot; required&gt;
+        &lt;label for=&quot;months&quot;&gt;Age: In Months&amp;#42;&lt;/label&gt;
+      &lt;/div&gt;
+    &lt;/fieldset&gt;
+  &lt;/div&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;Condition&lt;/legend&gt;
+    &lt;div class=&quot;field&quot;&gt; &lt;!-- change to 'field valid' or 'field invalid' as necessary --&gt;
+      &lt;span class=&quot;error-message&quot;&gt;Please select an option&lt;/span&gt;
+      &lt;select name=&quot;condition&quot; id=&quot;condition&quot;&gt;
+        &lt;option value=&quot;0&quot;&gt;Choose a Condition&lt;/option&gt;
+        &lt;option value=&quot;New&quot;&gt;New&lt;/option&gt;
+        &lt;option value=&quot;Excellent&quot;&gt;Excellent&lt;/option&gt;
+        &lt;option value=&quot;Good&quot;&gt;Good&lt;/option&gt;
+        &lt;option value=&quot;Fair&quot;&gt;Fair&lt;/option&gt;
+        &lt;option value=&quot;Poor&quot;&gt;Poor&lt;/option&gt;
+      &lt;/select&gt;
+      &lt;div class=&quot;select-icon&quot;&gt;&lt;i class=&quot;la la-angle-down&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+      &lt;span class=&quot;valid select&quot;&gt;&lt;i class=&quot;la la-check-circle-o&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+      &lt;label for=&quot;condition&quot;&gt;Condition&lt;/label&gt;
+    &lt;/div&gt;
+  &lt;/fieldset&gt;
+  &lt;div class=&quot;button-box left&quot;&gt;
+    &lt;button class=&quot;button color-one&quot;&gt;Add Item To Inventory&lt;/button&gt;
+    &lt;button class=&quot;button color-two&quot;&gt;Add Attachments&lt;span class=&quot;post&quot;&gt;&lt;i class=&quot;la la-paperclip&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</code></pre>
             </figure>
           </div>
         </div>
@@ -193,7 +183,7 @@
         <li><a href="../../molecules/molecules.html">Molecules</a></li>
         <li><a href="../../demo/pages.html">Pages</a></li>
       </ul>
-      <span>&copy;2018 Enservio, Inc. All rights reserved. <span class="badge">v.1.1</span></span>
+      <p>&copy;2018 Enservio, Inc. All rights reserved. <span class="badge">v.1.1</span></p>
     </footer>
     <!-- scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>

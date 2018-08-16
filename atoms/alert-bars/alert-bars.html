@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Enservio Design System | Alert Bars</title>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700">
+    <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="../../assets/css/master.css">
+    <link rel="stylesheet" href="../../assets/css/guide.css">
+  </head>
+  <body>
+    <section id="alerts" class="alerts">
+      <div class="alert-bar error">
+        <div class="alert-bar-details">
+          <span><i class="la la-exclamation-circle"></i></span>
+          <div class="alert-bar-message">
+            <span>This is an error alert message</span>
+          </div>
+          <span class="dismiss error"><i class="la la-times-circle"></i></span>
+        </div>
+      </div>
+      <div class="alert-bar success">
+        <div class="alert-bar-details">
+          <div class="alert-bar-message">
+            <span>This is a success alert message</span>
+          </div>
+          <span class="dismiss success"><i class="la la-times-circle"></i></span>
+        </div>
+      </div>
+      <div class="alert-bar system">
+        <div class="alert-bar-details">
+          <div class="alert-bar-message">
+            <span>This is a system alert message</span>
+          </div>
+          <span class="dismiss system"><i class="la la-times-circle"></i></span>
+        </div>
+      </div>
+    </section>
+    <main>
+      <section id="alert-bars">
+        <div class="text guide">
+          <h1>Alert Bars</h1>
+          <p>Used to communicate system- or screen-level error, success, or system alert messages, these messages should dismiss themselves after 10 seconds, or the user can dismiss them using the close button/icon.</p>
+          <p>When needed, simply add a <code>.show</code> class to the appropriate <code>.alert-bar</code>. The CSS should do the rest.</p>
+        </div>
+        <div class="split last">
+          <div class="design-sample">
+            <div class="button-box left">
+              <span class="button color-one show-error">Show Error Alert</span>
+            </div>
+            <div class="button-box left">
+              <span class="button secondary color-one show-success">Show Success Alert</span>
+            </div>
+            <div class="button-box left">
+              <span class="button color-two show-system">Show System Alert</span>
+            </div>
+            <div class="note">
+              <figcaption>Notes</figcaption>
+              <p><b>Click or tap any button to see an alert bar example</b></p>
+            </div>
+          </div>
+          <div class="code-sample">
+            <figure>
+              <figcaption>html</figcaption>
+<pre><code>&lt;section id=&quot;alerts&quot; class=&quot;alerts&quot;&gt;
+  &lt;div class=&quot;alert-bar error&quot;&gt;
+    &lt;div class=&quot;alert-bar-details&quot;&gt;
+      &lt;span&gt;&lt;i class=&quot;la la-exclamation-circle&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+      &lt;div class=&quot;alert-bar-message&quot;&gt;
+        &lt;span&gt;This is an error alert message&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;span class=&quot;dismiss error&quot;&gt;&lt;i class=&quot;la la-times-circle&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;alert-bar success&quot;&gt;
+    &lt;div class=&quot;alert-bar-details&quot;&gt;
+      &lt;div class=&quot;alert-bar-message&quot;&gt;
+        &lt;span&gt;This is a success alert message&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;span class=&quot;dismiss success&quot;&gt;&lt;i class=&quot;la la-times-circle&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;alert-bar system&quot;&gt;
+    &lt;div class=&quot;alert-bar-details&quot;&gt;
+      &lt;div class=&quot;alert-bar-message&quot;&gt;
+        &lt;span&gt;This is a system alert message&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;span class=&quot;dismiss system&quot;&gt;&lt;i class=&quot;la la-times-circle&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/section&gt;</code></pre>
+            </figure>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../../principles/principles.html">Principles</a></li>
+        <li><a href="../../style/style.html">Style</a></li>
+        <li><a href="../../atoms/atoms.html">Atoms</a></li>
+        <li><a href="../../molecules/molecules.html">Molecules</a></li>
+        <li><a href="../../demo/pages.html">Pages</a></li>
+      </ul>
+      <p>&copy;2018 Enservio, Inc. All rights reserved. <span class="badge">v.1.1</span></p>
+    </footer>
+    <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="../../assets/scripts/enservio.js"></script>
+  </body>
+</html>

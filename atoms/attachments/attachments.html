@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Enservio Design System | Attachments</title>
+    <title>Enservio Design System | Attachments Atoms</title>
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <!-- css -->
@@ -13,24 +13,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="../../assets/css/master.css">
     <link rel="stylesheet" href="../../assets/css/guide.css">
-    <style>
-      main {padding: 0;}
-      .button-box {padding: 1rem 0 0;}
-      .button-box:first-of-type {padding: 0;}
-    </style>
   </head>
   <body>
     <main>
-      <section id="attachment-upload">
-        <div class="text">
+      <section id="attachments">
+        <div class="text guide">
           <h1>Attachments</h1>
-          <p>There are screens for Claim Attachments and for individual Inventory Item Attachments. The two screens look and function alike, the only difference being that the screen for individual Inventory Item Attachments includes the inventory item header from the Inventory Capture screen (included below).</p>
-          <p>The are two functional components on these screens: the upload button and container and the attachments list.</p>
+          <p>There are screens for Claim Attachments and for Inventory Item Attachments. The are two functional components on these screens: the Upload Container and the Attachments List.</p>
+        </div>
+      </section>
+      <section id="upload-container">
+        <div class="text guide">
+          <h2>Upload Container</h2>
         </div>
         <div class="split">
           <div class="design-sample">
             <figcaption>Design Sample</figcaption>
-            <form class="lg">
+            <form class="lg" style="padding: 1rem 1rem 0;">
               <div class="upload-container md">
                 <p><strong>Drag Files Here To Upload</strong></p>
                 <small>PDF, PNG, JPG, DOC</small>
@@ -41,6 +40,7 @@
               </div>
             </form>
             <div class="note">
+              <figcaption>Notes</figcaption>
               <p>We utilize <a href="https://modernizr.com/" target="_blank">Modernizr</a> to detect touch-screen devices which will set the <code>&lt;div class=&quot;upload-container&quot;&gt;</code> to <code>display: none;</code>. When no touch-screen is detected, we apply the <code>.no-touch</code> class to the upload container to make it visible for drag-and-drop functionality.</p>
               <p>On mobile devices, the Add Attachments button should enable the device's native file features, including access to the device's camera, photo album, and file management system.</p>
             </div>
@@ -48,25 +48,23 @@
           <div class="code-sample">
             <figure>
               <figcaption>html</figcaption>
-              <pre>
-<code>&lt;form class=&quot;lg&quot;&gt;</code>
-  <code>&lt;div class=&quot;upload-container md&quot;&gt;</code>
-    <code>&lt;p&gt;&lt;strong&gt;Drag Files Here To Upload&lt;/strong&gt;&lt;/p&gt;</code>
-    <code>&lt;small&gt;PDF, PNG, JPG, DOC&lt;/small&gt;</code>
-  <code>&lt;/div&gt;</code>
-  <code>&lt;div class=&quot;button-box&quot;&gt;</code>
-    <code>&lt;button class=&quot;button color-one&quot;&gt;Add Attachments&lt;span class=&quot;post&quot;&gt;&lt;i class=&quot;la la-paperclip&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/button&gt;</code>
-    <code>&lt;button class=&quot;button color-two&quot;&gt;Done&lt;/button&gt;</code>
-  <code>&lt;/div&gt;</code>
-<code>&lt;/form&gt;</code>
-              </pre>
+<pre><code>&lt;form class=&quot;lg&quot;&gt;
+  &lt;div class=&quot;upload-container md&quot;&gt;
+    &lt;p&gt;&lt;strong&gt;Drag Files Here To Upload&lt;/strong&gt;&lt;/p&gt;
+    &lt;small&gt;PDF, PNG, JPG, DOC&lt;/small&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;button-box&quot;&gt;
+    &lt;button class=&quot;button color-one&quot;&gt;Add Attachments&lt;span class=&quot;post&quot;&gt;&lt;i class=&quot;la la-paperclip&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/button&gt;
+    &lt;button class=&quot;button color-two&quot;&gt;Done&lt;/button&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</code></pre>
             </figure>
           </div>
         </div>
       </section>
-      <section id="attachment-list-component">
-        <div class="text">
-          <h1>Current Attachment List</h1>
+      <section id="attachment-list">
+        <div class="text guide">
+          <h2>Attachment List</h2>
         </div>
         <div class="split last">
           <div class="design-sample">
@@ -88,43 +86,40 @@
                     </div>
                   </div>
                 </div>
-                <span class="error-message file-type">This is not a valid file type</span>
+                <span class="error-message file-type">This file size is too big and will not be included</span>
               </li>
             </ul>
-            <div class="note" style="padding: 0;">
-              <p>The attachment list is an unordered list whose individual line-items with two additional children components including a <code>&lt;div&gt;</code> and a <code>&lt;span&gt;</code> (for error messages).</p>
-              <p>The <code>&lt;div class=&quot;line-item&quot;&gt;</code> is split into three child elements: a <code>&lt;span&gt;</code> for the <code>.file-type-icon</code>, a <code>&lt;span&gt;</code> for the <code>.file-name</code>, and a Button Box for the delete line item button.</p>
-              <p>The icons for file type are rendered by adding a class to the <code>.file-type-icon</code> span. For example, if the user uploads a jpg, we would render the following: <code>&lt;span class=&quot;file-type-icon jpg&quot;&gt;</code> to show the jpg icon.</p>
-              <p>To display error messages for each <code>&lt;li&gt;</code>, add the class <code>.invalid</code> to the <code>&lt;li&gt;</code>.</p>
-              <p>All file-type icons can be found here: <a href="https://icons8.com/line-awesome" target="_blank">Line Awesome</a>.</p>
+            <div class="note">
+              <figcaption>Notes</figcaption>
+              <p>As with other components in the design system, it is possible to add validation conditions to the items in the Attachment List. Simply add an <code>.invalid</code> class to the <code>&lt;li&gt;</code> element.</p>
+            </div>
+            <div class="button-box left">
+              <span class="button color-one attachment-error">Show Attachment Error</span>
             </div>
           </div>
           <div class="code-sample">
             <figure>
               <figcaption>html</figcaption>
-              <pre>
-<code>&lt;ul class=&quot;attachment-list&quot;&gt;</code>
-  <code>&lt;li&gt;</code>
-  <code>&lt;!-- change class to 'invalid' for errors --&gt;</code>
-    <code>&lt;div class=&quot;line-item&quot;&gt;</code>
-      <code>&lt;span class=&quot;file-type-icon jpg&quot;&gt;&lt;/span&gt;</code>
-      <code>&lt;span class=&quot;file-name&quot;&gt;Busted_Macbook_pic.jpg&lt;/span&gt;</code>
-      <code>&lt;div class=&quot;button-box right&quot;&gt;</code>
-        <code>&lt;div class=&quot;expanding-button-box color-one item-one&quot;&gt;</code>
-          <code>&lt;div class=&quot;expanding-button small delete-one&quot;&gt;&lt;span class=&quot;icon-close&quot;&gt;&lt;i class=&quot;la la-trash&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;</code>
-          <code>&lt;div class=&quot;expanding-button large delete-one&quot;&gt;Delete Item&lt;/div&gt;</code>
-          <code>&lt;div class=&quot;confirm-action-box&quot;&gt;</code>
-            <code>&lt;span class=&quot;confirm-action-text&quot;&gt;Are you sure?&lt;/span&gt;</code>
-            <code>&lt;span class=&quot;confirm-action secondary no-one&quot;&gt;No&lt;/span&gt;</code>
-            <code>&lt;span class=&quot;confirm-action yes-one&quot;&gt;Yes&lt;/span&gt;</code>
-          <code>&lt;/div&gt;</code>
-        <code>&lt;/div&gt;</code>
-      <code>&lt;/div&gt;</code>
-    <code>&lt;/div&gt;</code>
-    <code>&lt;span class=&quot;error-message file-type&quot;&gt;This is not a valid file type&lt;/span&gt;</code>
-  <code>&lt;/li&gt;</code>
-<code>&lt;/ul&gt;</code>
-              </pre>
+<pre><code>&lt;ul class=&quot;attachment-list md&quot;&gt;
+  &lt;li&gt; &lt;!-- change class to 'invalid' for errors --&gt;
+    &lt;div class=&quot;line-item&quot;&gt;
+      &lt;span class=&quot;file-type-icon jpg&quot;&gt;&lt;/span&gt;
+      &lt;span class=&quot;file-name&quot;&gt;Busted_Macbook_pic.jpg&lt;/span&gt;
+      &lt;div class=&quot;button-box right&quot;&gt;
+        &lt;div class=&quot;expanding-button-box color-one&quot;&gt;
+          &lt;div class=&quot;expanding-button small&quot;&gt;&lt;span class=&quot;icon-close&quot;&gt;&lt;i class=&quot;la la-trash&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;
+          &lt;div class=&quot;expanding-button large&quot;&gt;Delete Item&lt;/div&gt;
+          &lt;div class=&quot;confirm-action-box&quot;&gt;
+            &lt;span class=&quot;confirm-action-text&quot;&gt;Are you sure?&lt;/span&gt;
+            &lt;span class=&quot;confirm-action secondary&quot;&gt;No&lt;/span&gt;
+            &lt;span class=&quot;confirm-action&quot;&gt;Yes&lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;span class=&quot;error-message file-type&quot;&gt;This file size is too big and will not be included&lt;/span&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
             </figure>
           </div>
         </div>
@@ -139,7 +134,7 @@
         <li><a href="../../molecules/molecules.html">Molecules</a></li>
         <li><a href="../../demo/pages.html">Pages</a></li>
       </ul>
-      <span>&copy;2018 Enservio, Inc. All rights reserved. <span class="badge">v.1.1</span></span>
+      <p>&copy;2018 Enservio, Inc. All rights reserved. <span class="badge">v.1.1</span></p>
     </footer>
     <!-- scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
