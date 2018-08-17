@@ -61,7 +61,7 @@
           <h1>Welcome</h1>
           <p>Please log in to continue.</p>
         </div>
-        <form class="sm" action="../../home/home/index.html">
+        <form class="sm" action="../../home/home/index.html" novalidate>
           <fieldset>
             <legend>Email Address</legend>
             <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
@@ -76,10 +76,7 @@
               <span class="error-message">This password is not correct. Please try again.</span>
               <input type="password" name="password" id="password" placeholder="Choose a password" maxlength="50" minlength="8" autocomplete="new-password">
               <label for="password">Password&#42;</label>
-              <div class="show-hide-password">
-                <span class="hide-password"><i class="la la-eye"></i></span>
-                <span class="show-password"><i class="la la-eye-slash"></i></span>
-              </div>
+              <span toggle="#password" class="la la-eye show-hide-password"></span>
               <span class="valid password"><i class="la la-check-circle-o"></i></span>
             </div>
           </fieldset>

@@ -1146,15 +1146,15 @@ main {
 
 
 // CURRENT INVENTORY
-/*
 .current-inventory {
   position: fixed;
-  top: 80%;
+  top: 84%;
   left: 0;
   z-index: 1000;
   width: 100%;
   height: 100%;
   margin: 1rem auto 0;
+  padding: 0 0 2rem;
   background-color: $white;
   @include transition (top, 0.4s, ease-in-out);
 }	
@@ -1173,9 +1173,6 @@ main {
   position: fixed;
   top: 0;
 }
-*/
-
-.current-inventory {padding: 2rem 0 0;}
 
 .current-inventory .current-inventory-bar {
   display: flex;
@@ -1728,10 +1725,13 @@ input:focus::placeholder {
 
 // SHOW/HIDE PASSWORD SETTINGS
 .field .show-hide-password {
+  display: block;
   position: absolute;
   top: 1.5rem;
-  right: 0.125rem;
+  right: 1rem;
   z-index: 550;
+  width: 1.5rem;
+  height: 1.75rem;
   font-size: 1.5rem;
   color: $color-one;
   cursor: pointer;
@@ -1741,29 +1741,12 @@ input:focus::placeholder {
 .field .show-hide-password:hover,
 .field .show-hide-password:focus {color: $color-two;}
 
-.field .show-hide-password .hide-password {
-  display: block;
-  position: absolute;
-  right: 1rem;
-  background-color: $white;
-}
-
-.field .show-hide-password .show-password {
-  display: block;
-  position: absolute;
-  right: 1rem;
-  background-color: $white;
-  opacity: 1;
-  @include transition (all, 0.15s, ease-in-out);
-}
-
-.field .show-hide-password .show-password.hide {opacity: 0;}
-
 
 // VALID INPUT SETTINGS
 .field.valid input {
   border-color: $valid;
   color: $valid;
+  @include transition (all, 0.25s, ease-in-out);
 }
 
 .field.valid input:not(:placeholder-shown) + label,
@@ -1790,17 +1773,17 @@ input:focus::placeholder {
 .field.valid select option span.option {color: $valid;}
 
 .field span.valid {
-  display: none;
   position: absolute;
   top: 1rem;
   right: 1rem;
   padding: 0 0 0 1rem;
   font-size: 1.5rem;
   color: $valid;
+  opacity: 0;
   @include transition (all, 0.25s, ease-in-out);
 }
 
-.field.valid span.valid {display: block;}
+.field.valid span.valid {opacity: 1;}
 
 .field.valid span.select.valid {
   top: 1.5rem;

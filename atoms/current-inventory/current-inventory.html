@@ -15,10 +15,12 @@
     <link rel="stylesheet" href="../../assets/css/guide.css">
     <style>
       .current-inventory {
+        position: relative;
         width: calc(100% + 4rem);
         margin: 0 0 0 -2rem;
         padding: 1rem 0 0;
       }
+      .current-inventory.open {overflow-y: hidden;}
       .current-inventory-list {padding: 1rem 0 0;}
       .split .design-sample .button {margin: 1rem auto 0;}
       .split .design-sample .expanding-button-box {margin: 1rem 0 0;}
@@ -48,7 +50,7 @@
                 <span class="counter">2</span>
               </div>
             </div>
-            <div class="note wide">
+            <div class="notes wide">
               <figcaption>Notes</figcaption>
               <p>On small screens (with less than 768 pixels of vertical height), the Current Inventory section is pinned to the bottom of the screen. When users click the Current Inventory Header, the section should expand up and fill the entire screen. When users scroll down to the Current Inventory's relative position, it becomes unpinned and scrolls normally. If users scroll back up, the Current Inventory should pin itself to the bottom when it reaches that relative position on the screen.</p>
               <p>See the <a href="../../demo/inventory/capture/index.html">Inventory Capture demo page</a> to examine this behavior.</p>
@@ -209,7 +211,7 @@
                 </div>
               </form>
             </div>
-            <div class="note wide">
+            <div class="notes wide">
               <figcaption>Notes</figcaption>
               <p>Only one current inventory item may be open at a time. If a user makes any changes to a current inventory item, they must save or cancel those changes before being able to open another item to edit.</p>
             </div>
@@ -391,7 +393,7 @@
                 </div>
               </form>
             </div>
-            <div class="note wide">
+            <div class="notes wide">
               <figcaption>Notes</figcaption>
               <p>If a user has previously clicked the Submit Inventory button and has returned to enter additional inventory items, those items previously submitted should still be shown in their Current Inventory list. They should, however, be disabled, and the user should be prevented from making any changes to these items. The user may also not delete these items from their inventory. They may click the Attachments button to view the list of attachments for this inventory item, but they should not be able to add new attachments or delete those items already attached.</p>
             </div>

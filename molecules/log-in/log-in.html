@@ -23,7 +23,7 @@
         <div class="split last">
           <div class="design-sample">
             <figcaption>Design Sample</figcaption>
-            <form class="sm" novalidate>
+            <form class="sm" action="../../home/home/index.html" novalidate>
               <fieldset>
                 <legend>Email Address</legend>
                 <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
@@ -38,10 +38,7 @@
                   <span class="error-message">This password is not correct. Please try again.</span>
                   <input type="password" name="password" id="password" placeholder="Choose a password" maxlength="50" minlength="8" autocomplete="new-password">
                   <label for="password">Password&#42;</label>
-                  <div class="show-hide-password">
-                    <span class="hide-password"><i class="la la-eye"></i></span>
-                    <span class="show-password"><i class="la la-eye-slash"></i></span>
-                  </div>
+                  <span toggle="#password" class="la la-eye show-hide-password"></span>
                   <span class="valid password"><i class="la la-check-circle-o"></i></span>
                 </div>
               </fieldset>
@@ -52,11 +49,15 @@
             <div class="text center sm">
               <p><a href="#!">Forgot Password?</a></p>
             </div>
+            <div class="notes">
+              <figcaption>Notes</figcaption>
+              <p>As with other components in the design system, it is possible to add validation conditions to any <code>&lt;input&gt;</code>. Simply add a <code>.valid</code> or <code>.invalid</code> class to the <code>.field</code> class.</p>
+            </div>
           </div>
           <div class="code-sample">
             <figure>
               <figcaption>html</figcaption>
-<pre><code>&lt;form class=&quot;sm&quot;&gt;
+<pre><code>&lt;form class=&quot;sm&quot; novalidate&gt;
   &lt;fieldset&gt;
     &lt;legend&gt;Email Address&lt;/legend&gt;
     &lt;div class=&quot;field&quot;&gt; &lt;!-- change to 'field valid' or 'field invalid' as necessary --&gt;
@@ -71,20 +72,14 @@
       &lt;span class=&quot;error-message&quot;&gt;This password is not correct. Please try again.&lt;/span&gt;
       &lt;input type=&quot;password&quot; name=&quot;password&quot; id=&quot;password&quot; placeholder=&quot;Choose a password&quot; maxlength=&quot;50&quot; minlength=&quot;8&quot; autocomplete=&quot;new-password&quot;&gt;
       &lt;label for=&quot;password&quot;&gt;Password&amp;#42;&lt;/label&gt;
-      &lt;div class=&quot;show-hide-password&quot;&gt;
-        &lt;span class=&quot;hide-password&quot;&gt;&lt;i class=&quot;la la-eye&quot;&gt;&lt;/i&gt;&lt;/span&gt;
-        &lt;span class=&quot;show-password&quot;&gt;&lt;i class=&quot;la la-eye-slash&quot;&gt;&lt;/i&gt;&lt;/span&gt;
-      &lt;/div&gt;
+      &lt;span toggle=&quot;#password&quot; class=&quot;la la-eye show-hide-password&quot;&gt;&lt;/span&gt;
       &lt;span class=&quot;valid password&quot;&gt;&lt;i class=&quot;la la-check-circle-o&quot;&gt;&lt;/i&gt;&lt;/span&gt;
     &lt;/div&gt;
   &lt;/fieldset&gt;
   &lt;div class=&quot;button-box&quot;&gt;
     &lt;button class=&quot;button color-one&quot;&gt;Log In&lt;span class=&quot;post-processing&quot;&gt;&lt;i class=&quot;la la-refresh la-spin&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/button&gt;
   &lt;/div&gt;
-&lt;/form&gt;
-&lt;div class=&quot;text center sm&quot;&gt;
-  &lt;p&gt;&lt;a href=&quot;#!&quot;&gt;Forgot Password?&lt;/a&gt;&lt;/p&gt;
-&lt;/div&gt;</code></pre>
+&lt;/form&gt;</code></pre>
             </figure>
           </div>
         </div>

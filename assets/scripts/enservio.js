@@ -44,12 +44,10 @@ $(".delay.four").click(function() {
 });
 
 // CURRENT INVENTORY BAR BEHAVIOR
-/*
 $(".current-inventory-bar").click( function() {
   $(".current-inventory").toggleClass("open");
   $(".header--fixed").toggleClass("headroom--unpinned");
 });
-*/
 
 // ALERT BARS
 $(".show-error").click( function() {
@@ -77,19 +75,15 @@ $(".dismiss.system").click( function() {
   $(".alert-bar.system").removeClass("show");
 });
 
-// SHOW/HIDE PASSWORD
-$(".show-hide-password").click( function() {
-  $(".show-password").toggleClass("hide");
-});
-
-// SHOW PASSWORD VALIDATION
-$(".password-error").click( function() {
-  $(".field.password").toggleClass("invalid");
-  $(".field.confirm-password").toggleClass("invalid");
-});
-$(".password-valid").click( function() {
-  $(".field.password").toggleClass("valid");
-  $(".field.confirm-password").toggleClass("valid");
+// SHOW/HIDE PASSWORDS
+$(".show-hide-password").click(function() {
+  $(this).toggleClass("la-eye la-eye-slash");
+  var input = $($(this).attr("toggle"));
+  if (input.attr("type") == "password") {
+    input.attr("type", "text");
+  } else {
+    input.attr("type", "password");
+  }
 });
 
 // TIMEOUT
