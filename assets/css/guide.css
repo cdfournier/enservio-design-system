@@ -8,7 +8,8 @@ main {
   .text.guide.wide {
     width: 100%;
     max-width: 100%;
-    column-count: 2; }
+    column-count: 2;
+    column-gap: 2rem; }
   .text.guide.wide h1 {
     column-span: all; }
   .text.guide.wide p {
@@ -35,7 +36,7 @@ ul.contents {
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding: 0;
+  padding: 0 0 1rem;
   list-style-type: none; }
 
 ul.contents:before {
@@ -118,6 +119,9 @@ footer p {
   position: relative;
   padding: 2rem 2rem 0; }
 
+.split .text p {
+  line-height: inherit; }
+
 .split:after {
   display: block;
   position: absolute;
@@ -127,6 +131,9 @@ footer p {
   margin: 0;
   background-color: #cccece;
   content: ""; }
+
+.split.last {
+  padding: 2rem 2rem 0; }
 
 .split.last:after {
   display: none; }
@@ -150,6 +157,8 @@ footer p {
   .design-sample {
     width: 50%;
     padding: 0 1rem 2rem 0; }
+  .split.last .design-sample {
+    padding: 0 1rem 0 0; }
   .split.wide .design-sample {
     width: 100%;
     padding: 0 0 2rem; } }
@@ -182,13 +191,21 @@ footer p {
   width: 100%;
   padding: 0 0 1rem; }
 
+.split.last .code-sample,
+.split.wide.last .code-sample {
+  padding: 0; }
+
 @media (min-width: 48rem) {
   .code-sample {
     width: 50%;
     padding: 0 0 2rem 1rem; }
   .split.wide .code-sample {
     width: 100%;
-    padding: 0 0 2rem; } }
+    padding: 0 0 2rem; }
+  .split.last .code-sample {
+    padding: 0 0 0 1rem; }
+  .split.wide.last .code-sample {
+    padding: 0; } }
 
 figure {
   display: block;
@@ -215,23 +232,23 @@ pre {
 code {
   font-size: 0.833rem; }
 
-.note {
+.notes {
   overflow: scroll;
   padding: 2rem 0 0; }
 
-.note figcaption {
+.notes figcaption {
   padding: 0 0 0.347rem;
   column-span: all; }
 
-.note p {
+.notes p {
   font-size: 0.833rem;
   font-weight: 400;
   line-height: 2; }
 
-.note p:first-of-type {
+.notes p:first-of-type {
   padding: 0; }
 
-.note p code {
+.notes p code {
   padding: 0.125rem 0.25rem;
   border: 1px solid #444853;
   border-radius: 0.125rem;
@@ -241,7 +258,8 @@ code {
   white-space: nowrap; }
 
 @media (min-width: 48rem) {
-  .note {
+  .notes {
     overflow: hidden; }
-  .note.wide {
-    column-count: 2; } }
+  .notes.wide {
+    column-count: 2;
+    column-gap: 2rem; } }

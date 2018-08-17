@@ -71,12 +71,10 @@
             </div>
           </fieldset>
           <div class="button-box">
+            <span class="button secondary color-one" onclick="goBack()">Cancel</span>
             <button class="button color-one">Send<span class="post-processing"><i class="la la-refresh la-spin"></i></span></button>
           </div>
         </form>
-        <div class="text center">
-          <p><a href="../../login/login/index.html">Back to Log In</a></p>
-        </div>
       </section>
     </main>
     <footer>&copy;2018 Enservio, Inc. All rights reserved.&nbsp;<a href="../../policies/terms/index.html">Terms&nbsp;&amp;&nbsp;Conditions</a></footer>
@@ -86,5 +84,10 @@
     <script src="https://unpkg.com/headroom.js@0.9.4/dist/headroom.js"></script>
     <script src="../../../assets/scripts/enservio.js"></script>
     <script src="../../../assets/scripts/enservio.header.js"></script>
+    <script>
+      function goBack() {
+          window.history.back();
+      }
+    </script>
   </body>
 </html>

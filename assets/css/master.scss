@@ -957,7 +957,7 @@ main {
   display: block;
   position: relative;
   width: 100%;
-  margin: auto;
+  margin: 0 auto;
   padding: 2rem 2rem 0;
 }
 
@@ -1912,6 +1912,9 @@ span.error-message {
   font-size: 1rem;
 }
 
+.field select:disabled,
+.field .select-icon:disabled {border-color: $light-gray;}
+
 
 // CHECKBOXES
 input[type="checkbox"] {
@@ -2008,7 +2011,7 @@ label.radio {
 }
 
 input:disabled, input:disabled:checked {
-  border: 1px solid $light-gray;
+  border-color: $light-gray;
   cursor: default;
 }
 
