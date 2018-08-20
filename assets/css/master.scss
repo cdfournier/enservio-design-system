@@ -304,7 +304,10 @@ ul.attachment-list li .line-item .button-box {
   @include transition (all, 0.25s, ease);
 }
 
-ul.attachment-list li .line-item .button-box.right {flex-direction: row;}
+ul.attachment-list li .line-item .button-box.right {
+  flex-direction: row;
+  justify-content: flex-end;
+}
 
 ul.attachment-list li .line-item .expanding-button-box {max-width: 2.25rem;}
 
