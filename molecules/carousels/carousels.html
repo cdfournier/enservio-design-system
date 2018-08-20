@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Enservio Design System | Carousels</title>
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700">
+    <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="../../assets/css/master.css">
+    <link rel="stylesheet" href="../../assets/css/guide.css">
+  </head>
+  <body>
+    <main>
+      <section id="carousels">
+        <div class="text guide">
+          <h1>Carousels</h1>
+          <p>We currently utilize a plugin called <a href="https://flickity.metafizzy.co/" target="_blank">Flickity</a> to generate &#8220;touch, responsive, flickable carousels&#8221;. We use carousels on our help screens with the goal of making the information provided more easily understood.</p>
+        </div>
+        <div class="split last">
+          <div class="design-sample">
+            <figcaption>Design Sample</figcaption>
+            <div class="carousel" data-flickity-options="{ 'wrapAround': true, 'prevNextButtons': true }">
+              <div class="carousel-cell">
+                <div class="graphic"><img src="../../assets/images/ob-inv-description.png" alt="Price tag on a hanger icon"></div>
+                <h1>Carousel Cells</h1>
+                <p>Each carousel cell is able to include a graphic element, a title, and some paragraph text.</p>
+              </div>
+              <div class="carousel-cell">
+                <h1>Carousel Structure</h1>
+                <p>It is easy to create new carousels. The required <code>&lt;html&gt;</code> structure is a <code>.carousel</code> parent container and <code>.carousel-call</code> children containers. <a href="https://flickity.metafizzy.co/" target="_blank">Flickity</a> does the rest.</p>
+              </div>
+              <div class="carousel-cell">
+                <h1>Text Alignment</h1>
+                <p>Text will default to left-aligned, but can be changed to center-aligned&#8230;</p>
+              </div>
+              <div class="carousel-cell center">
+                <h1>Text Alignment</h1>
+                <p>by adding a <code>.center</code> class to <code>&lt;div class=&quot;carousel-cell&quot;&gt;</code>.</p>
+              </div>
+            </div>
+            <div class="notes">
+              <figcaption>Notes</figcaption>
+              <p>Flickity carousels are controllable using the dot navigation, the next and previous buttons, or by swiping with your mouse or finger (on touch devices). Also, once the carousel has <code>:focus</code> it becomes keyboard navigable.</p>
+              <p>Note that on smaller screens, the next and previous buttons are set to <code>display: none;</code> to conserve as much space as possible. Users on devices with smaller screens are more apt to swipe to navigate on these screens.</p>
+            </div>
+          </div>
+          <div class="code-sample">
+            <figure>
+              <figcaption>html</figcaption>
+<pre><code>&lt;div class=&quot;carousel&quot; data-flickity-options=&quot;{ 'wrapAround': true, 'prevNextButtons': true }&quot;&gt;
+  &lt;div class=&quot;carousel-cell&quot;&gt;
+    &lt;div class=&quot;graphic&quot;&gt;&lt;img src=&quot;../../assets/images/ob-inv-description.png&quot; alt=&quot;Price tag on a hanger icon&quot;&gt;&lt;/div&gt;
+    &lt;h1&gt;Carousel Cells&lt;/h1&gt;
+    &lt;p&gt;Each carousel cell is able to include a graphic element, a title, and some paragraph text.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;carousel-cell&quot;&gt;
+    &lt;h1&gt;Carousel Structure&lt;/h1&gt;
+    &lt;p&gt;It is easy to create new carousels. The required &lt;code&gt;&amp;lt;html&amp;gt;&lt;/code&gt; structure is a &lt;code&gt;.carousel&lt;/code&gt; parent container and &lt;code&gt;.carousel-call&lt;/code&gt; children containers. &lt;a href=&quot;https://flickity.metafizzy.co/&quot; target=&quot;_blank&quot;&gt;Flickity&lt;/a&gt; does the rest.&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;carousel-cell&quot;&gt;
+    &lt;h1&gt;Text Alignment&lt;/h1&gt;
+    &lt;p&gt;Text will default to left-aligned, but can be changed to center-aligned&amp;#8230;&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;carousel-cell center&quot;&gt;
+    &lt;h1&gt;Text Alignment&lt;/h1&gt;
+    &lt;p&gt;by adding a &lt;code&gt;.center&lt;/code&gt; class to &lt;code&gt;&amp;lt;div class=&amp;quot;carousel-cell&amp;quot;&amp;gt;&lt;/code&gt;.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </figure>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../../principles/principles.html">Principles</a></li>
+        <li><a href="../../style/style.html">Style</a></li>
+        <li><a href="../../atoms/atoms.html">Atoms</a></li>
+        <li><a href="../../molecules/molecules.html">Molecules</a></li>
+        <li><a href="../../demo/pages.html">Pages</a></li>
+      </ul>
+      <p>&copy;2018 Enservio, Inc. All rights reserved. <span class="badge">v.1.1</span></p>
+    </footer>
+    <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="../../assets/scripts/enservio.js"></script>
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script>
+      $('.carousel').flickity({
+        // options
+        cellAlign: 'left',
+        contain: true
+      });
+    </script>
+  </body>
+</html>

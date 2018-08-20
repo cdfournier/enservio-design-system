@@ -12,288 +12,96 @@
     <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="../../assets/css/master.css">
-
-    <link rel="stylesheet" href="../../assets/styles/guide.css">
-
+    <link rel="stylesheet" href="../../assets/css/guide.css">
     <style>
-      main {padding: 0;}
-      .button-box {padding: 1rem 0 0;}
-      .button-box:first-of-type {padding: 0;}
+      article {padding: 2rem 0 0 0;}
+      article:first-of-type {padding: 0;}
+      ul {
+        -webkit-column-break-inside: avoid;
+        page-break-inside: avoid;
+        break-inside: avoid-column;
+      }
+      ul li {padding: 0 0 0.5rem 0;}
+      h1, h2, h3 {text-transform: none;}
+      .split {
+        max-width: 40rem;
+        margin: auto;
+      }
+      @media (min-width: 48rem) {
+        .design-sample {width: 25%;}
+        .code-sample {width: 75%;}
+      }
     </style>
   </head>
   <body>
     <main>
       <section id="typography">
-        <div class="text">
-          <h1>Typography</h1>
-        </div>
-        <div class="split">
-          <div class="design-sample">
-            <figcaption>Design Sample</figcaption>
-            <h1>This is <span style="text-transform: none;">h1</span> Text</h1>
-          </div>
-          <div class="code-sample">
-            <figure>
-              <figcaption>html</figcaption>
-              <pre>
-<code>&lt;h1&gt;This is h1 Text&lt;/h1&gt;</code>
-              </pre>
-            </figure>
-            <figure>
-              <figcaption>scss</figcaption>
-              <pre>
-<code>h1, h2, h3, p {</code>
-  <code>display: block;</code>
-  <code>width: 100%;</code>
-  <code>margin: 0;</code>
-  <code>padding: 0;</code>
-  <code>font-style: normal;</code>
-<code>}</code>
-
-<code>h1 {</code>
-  <code>font-family: $serif;</code>
-  <code>font-size: 1.728rem;</code>
-  <code>font-weight: 400;</code>
-  <code>text-transform: capitalize;</code>
-<code>}</code>
-              </pre>
-            </figure>
-          </div>
-        </div>
-        <div class="split">
-          <div class="design-sample">
-            <figcaption>Design Sample</figcaption>
-            <h2>This is <span style="text-transform: none;">h2</span> Text</h2>
-          </div>
-          <div class="code-sample">
-            <figure>
-              <figcaption>html</figcaption>
-              <pre>
-<code>&lt;h2&gt;This is h2 Text&lt;/h2&gt;</code>
-              </pre>
-            </figure>
-            <figure>
-              <figcaption>scss</figcaption>
-              <pre>
-<code>h2, h3 {</code>
-  <code>font-family: $serif;</code>
-  <code>font-size: 1.44rem;</code>
-  <code>font-weight: 400;</code>
-  <code>text-transform: capitalize;</code>
-<code>}</code>
-              </pre>
-            </figure>
-          </div>
-        </div>
-        <div class="split">
-          <div class="design-sample">
-            <figcaption>Design Sample</figcaption>
-            <h3>This is <span style="text-transform: none;">h3</span> Text</h3>
-          </div>
-          <div class="code-sample">
-            <figure>
-              <figcaption>html</figcaption>
-              <pre>
-<code>&lt;h3&gt;This is h3 Text&lt;/h3&gt;</code>
-              </pre>
-            </figure>
-            <figure>
-              <figcaption>scss</figcaption>
-              <pre>
-<code>h3 {font-size: 1.2rem;}</code>
-              </pre>
-            </figure>
-          </div>
-        </div>
-        <div class="split">
-          <div class="design-sample">
-            <figcaption>Design Sample</figcaption>
-            <p>This is p text</p>
-          </div>
-          <div class="code-sample">
-            <figure>
-              <figcaption>html</figcaption>
-              <pre>
-<code>&lt;p&gt;This is p text&lt;/p&gt;</code>
-              </pre>
-            </figure>
-            <figure>
-              <figcaption>scss</figcaption>
-              <pre>
-<code>p {</code>
-  <code>padding: 0.694rem 0 0.694rem;</code>
-  <code>font-size: 1rem;</code>
-  <code>line-height: 1.5;</code>
-<code>}</code>
-
-<code>p:last-child {padding: 0.694rem 0 0;}</code>
-              </pre>
-            </figure>
-          </div>
-        </div>
-        <div class="split">
-          <div class="design-sample">
-            <figcaption>Design Sample</figcaption>
-            <small>This is small text</small>
-          </div>
-          <div class="code-sample">
-            <figure>
-              <figcaption>html</figcaption>
-              <pre>
-<code>&lt;small&gt;This is small text&lt;/small&gt;</code>
-              </pre>
-            </figure>
-            <figure>
-              <figcaption>scss</figcaption>
-              <pre>
-<code>small {font-size: 0.833rem;}</code>
-              </pre>
-            </figure>
-          </div>
-        </div>
-        <div class="split">
-          <div class="design-sample">
-            <figcaption>Design Sample</figcaption>
-            <p>This is <strong>strong</strong> text</p>
-            <p>This is <em>em</em> text</p>
-            <p>This is <b>bold</b> text</p>
-          </div>
-          <div class="code-sample">
-            <figure>
-              <figcaption>html</figcaption>
-              <pre>
-<code>&lt;p&gt;This is &lt;strong&gt;strong&lt;/strong&gt; text&lt;/p&gt;</code>
-<code>&lt;p&gt;This is &lt;em&gt;em&lt;/em&gt; text&lt;/p&gt;</code>
-<code>&lt;p&gt;This is &lt;b&gt;bold&lt;/b&gt; text&lt;/p&gt;</code>
-              </pre>
-            </figure>
-            <figure>
-              <figcaption>scss</figcaption>
-              <pre>
-<code>strong, em, b {</code>
-  <code>font-style: normal;</code>
-  <code>font-weight: 500;</code>
-<code>}</code>
-              </pre>
-            </figure>
-          </div>
-        </div>
-        <div class="split">
-          <div class="design-sample">
-            <figcaption>Design Sample</figcaption>
+        <div class="text lg">
+          <article>
+            <h1>Typography</h1>
+            <p>Typography is the appearance of text, and he purpose of typography is to enable readers to focus and immerse themselves in the content of the text. Good typography, by definition, is typography that helps text fulfill its purpose of communication.</p>
+            <p>There are four essential properties required to get typography right:</p>
             <ul>
-              <li>This is an unordered list item</li>
-              <li><a href="#!">This is an unordered list item with a link</a></li>
+              <li>Font family</li>
+              <li>Font size</li>
+              <li>Line height</li>
+              <li>Line width</li>
             </ul>
-          </div>
-          <div class="code-sample">
-            <figure>
-              <figcaption>html</figcaption>
-              <pre>
-<code>&lt;ul&gt;</code>
-  <code>&lt;li&gt;This is an unordered list item&lt;/li&gt;</code>
-  <code>&lt;li&gt;&lt;a href=&quot;#!&quot;&gt;This is an unordered list item with a link&lt;/a&gt;&lt;/li&gt;</code>
-<code>&lt;/ul&gt;</code>
-              </pre>
-            </figure>
-            <figure>
-              <figcaption>scss</figcaption>
-              <pre>
-<code>ul, ol {</code>
-  <code>display: flex;</code>
-  <code>flex-direction: column;</code>
-  <code>width: 100%;</code>
-  <code>margin: 0 auto;</code>
-  <code>padding: 0 0 1rem 1rem;</code>
-  <code>font-size: 1rem;</code>
-  <code>text-align: left;</code>
-<code>}</code>
-
-<code>ul {list-style-type: disc;}</code>
-
-<code>ul li, ol li {</code>
-  <code>width: 100%;</code>
-  <code>padding: 0 0 1rem 0.5rem;</code>
-<code>}</code>
-
-<code>ul li:last-child, ol li:last-child {padding: 0 0 0 0.5rem;}</code>
-              </pre>
-            </figure>
-          </div>
-        </div>
-        <div class="split">
-          <div class="design-sample">
-            <figcaption>Design Sample</figcaption>
-            <ol>
-              <li>This is an ordered list item</li>
-              <li><a href="#!">This is an ordered list item with a link</a></li>
-            </ol>
-          </div>
-          <div class="code-sample">
-            <figure>
-              <figcaption>html</figcaption>
-              <pre>
-<code>&lt;ol&gt;</code>
-  <code>&lt;li&gt;This is an unordered list item&lt;/li&gt;</code>
-  <code>&lt;li&gt;&lt;a href=&quot;#!&quot;&gt;This is an unordered list item with a link&lt;/a&gt;&lt;/li&gt;</code>
-<code>&lt;/ol&gt;</code>
-              </pre>
-            </figure>
-            <figure>
-              <figcaption>scss</figcaption>
-              <pre>
-<code>ol {list-style-type: decimal;}</code>
-              </pre>
-            </figure>
-          </div>
-        </div>
-        <div class="split">
-          <div class="design-sample">
-            <figcaption>Design Sample</figcaption>
-            <h1 class="center" style="text-transform: none;">This Is Center-Aligned h1 Text</h1>
-            <p class="center" style="text-transform: none;">This Is Center-Aligned p Text</p>
-          </div>
-          <div class="code-sample">
-            <figure>
-              <figcaption>html</figcaption>
-              <pre>
-<code>&lt;h1 class=&quot;center&quot;&gt;This Is Center-Aligned h1 Text&lt;/h1&gt;</code>
-<code>&lt;p class=&quot;center&quot;&gt;This Is Center-Aligned p Text&lt;/p&gt;</code>
-              </pre>
-            </figure>
-            <figure>
-              <figcaption>scss</figcaption>
-              <pre>
-<code>h1.center, h2.center, h3.center, p.center, strong.center, em.center, small.center {text-align: center;}</code>
-              </pre>
-            </figure>
-          </div>
+          </article>
+          <article>
+            <h2>Font Family</h2>
+            <p>We have chosen <a href="https://fonts.google.com/specimen/Roboto+Slab" target="_blank">Roboto Slab</a> as our headline font family and <a href="https://fonts.google.com/specimen/Montserrat" target="_blank">Montserrat</a> as our body copy and all-purpose font family. The font weights we use for each depend on the use case, but are intended to provide the most legible option for each situation.</p>
+          </article>
+          <article>
+            <h2>Font Size</h2>
+            <p>For our font sizes, we use a <a href="https://type-scale.com/" target="_blank")>1.200 Minor Third type scale</a>. This provides a subtle but powerful consistency and rhythm to the way in which different aspects of our typography renders at multiple screen sizes.</p>
+          </article>
+          <article>
+            <h2>Line Height</h2>
+            <p>Typography also has both a vertical and horizontal rhythm to help improve readability. The 1.200 Minor Third type scale also provides us with the line height we need.</p>
+          </article>
+          <article>
+            <h2>Line Width</h2>
+            <p>In a fluid layout, browser width and typographic measure are linked: the wider the viewport, the more characters per line. Keeping in mind that a range of 45-75 characters per line is generally accepted as safe for comfortable reading, there are a couple of things that can be done to avoid extra long lines of text in fluid layouts. The first thing we do is control the width of a container (whether for the entire site or just a column of text). We can test our container width by dropping some lorem text into the layout with two asterisks. The first marks the 45th character, and the second marks the 75th. See below at various widths.</p>
+            <p style="font-weight: 500;">Lorem ipsum dolor sit amet, consectetur adip*isicing elit, sed do eiusmod *tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p>If at any point the two asterisks appear on the same line of text, we know it’s time to increase the font size. These adjustments are easy (usually 1 CSS property) because we've used relative (not pixel) units in our CSS.</p>
+            </article>
+          <article>
+            <h2>Relative Units</h2>
+            <p>The other thing we can do is control the size of the type. As indicated above, we've chosen a 1.200 Minor Third type scale for our typography. This gives us our font size settings, but we are able to influence the entire layout by setting a base font size on the <code>&lt;body&gt;</code> element. We've extended our flexibility by using <code>calc</code> to set the <code>&lt;body&gt;</code> font size. This creates a flexible value that is based on the width of the viewport. Lastly, the rest of the typography system is set using the <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units" target="_blank">rem relative unit</a>. This is a first small step to making sure that our designs are relative to font or viewport size, meaning that the layout will stay looking correct if for example the text size is doubled across the whole website by a visually impaired user.</p>
+          </article>
         </div>
         <div class="split last">
           <div class="design-sample">
             <figcaption>Design Sample</figcaption>
-            <h1 class="right" style="text-transform: none;">This Is Right-Aligned h1 Text</h1>
-            <p class="right" style="text-transform: none;">This Is Right-Aligned p Text</p>
+            <h1 style="padding: 0 0 0.694rem;">h1</h1>
+            <h2 style="padding: 0 0 0.694rem;">h2</h2>
+            <h3 style="padding: 0 0 0.694rem;">h3</h3>
+            <p style="padding: 0 0 0.694rem; line-height: 1.5;">p</p>
+            <ol style="padding: 0 0 0.694rem 1.5rem;"><li>ol li</li></ol>
+            <ul style="padding: 0 0 0.694rem 1.5rem;"><li>ul li</li></ul>
+            <small style="display: block; padding: 0 0 0.694rem;">small</small>
           </div>
           <div class="code-sample">
-            <figure>
-              <figcaption>html</figcaption>
-              <pre>
-<code>&lt;h1 class=&quot;right&quot;&gt;This Is Right-Aligned h1 Text&lt;/h1&gt;</code>
-<code>&lt;p class=&quot;right&quot;&gt;This Is Right-Aligned p Text&lt;/p&gt;</code>
-              </pre>
-            </figure>
-            <figure>
-              <figcaption>scss</figcaption>
-              <pre>
-<code>h1.right, h2.right, h3.right, p.right, strong.right, em.right, small.right {text-align: right;}</code>
-              </pre>
-            </figure>
+            <div class="notes" style="padding: 0;">
+              <figcaption>Notes</figcaption>
+              <p>Note that every effort has been made to reduce the number of variants on this typography system. Do we have unordered lists without bullets? Yes. Has spacing been adjusted to accommodate specific layout requirements. In some cases. However, our objective and prime directive is to keep things simple and try to avoid creating customized typography for each obstacle encountered.</p>
+            </div>
           </div>
         </div>
       </section>
     </main>
-    <footer>&copy;2018 Enservio, Inc. All rights reserved.&nbsp;<a href="#!">Terms&nbsp;&amp;&nbsp;Conditions</a></footer>
+    <footer>
+      <ul>
+        <li><a href="../../index.html">Home</a></li>
+        <li><a href="../../principles/principles.html">Principles</a></li>
+        <li><a href="../../style/style.html">Style</a></li>
+        <li><a href="../../atoms/atoms.html">Atoms</a></li>
+        <li><a href="../../molecules/molecules.html">Molecules</a></li>
+        <li><a href="../../demo/pages.html">Pages</a></li>
+      </ul>
+      <p>&copy;2018 Enservio, Inc. All rights reserved. <span class="badge">v.1.1</span></p>
+    </footer>
     <!-- scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
