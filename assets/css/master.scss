@@ -56,6 +56,17 @@ body {
   color: $black;
 }
 
+body {animation: 1s ease-out 0s 1 fadeOut;}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 body {animation: 1s ease-out 0s 1 fadeIn;}
 
 @keyframes fadeIn {
@@ -1692,6 +1703,12 @@ fieldset, .small {width: 25%;}
 
 .field input.valid:disabled {opacity: 1;}
 
+.field input:disabled {
+  border-color: $light-gray;
+  color: $dark-gray;
+  cursor: default;
+}
+
 .field label {
   margin: 0;
   width: 100%;
@@ -1851,7 +1868,7 @@ span.error-message {
 
 
 // SELECT INPUTS
-.field select {
+.field select { // reset
   border: none;
   border-radius: 0;
   -moz-border-radius: 0;
@@ -1898,8 +1915,12 @@ span.error-message {
   font-size: 1rem;
 }
 
-.field select:disabled,
-.field .select-icon:disabled {border-color: $light-gray;}
+.field select:disabled {
+  border-color: $light-gray;
+  color: $dark-gray;
+}
+
+.field select:disabled + .select-icon {color: $light-gray;}
 
 
 // CHECKBOXES

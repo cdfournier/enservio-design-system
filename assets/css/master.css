@@ -17,6 +17,15 @@ body {
   color: #000000; }
 
 body {
+  animation: 1s ease-out 0s 1 fadeOut; }
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
+body {
   animation: 1s ease-out 0s 1 fadeIn; }
 
 @keyframes fadeIn {
@@ -1639,6 +1648,11 @@ legend {
 .field input.valid:disabled {
   opacity: 1; }
 
+.field input:disabled {
+  border-color: #cccece;
+  color: #444853;
+  cursor: default; }
+
 .field label {
   margin: 0;
   width: 100%;
@@ -1861,9 +1875,12 @@ span.error-message {
   z-index: 0;
   font-size: 1rem; }
 
-.field select:disabled,
-.field .select-icon:disabled {
-  border-color: #cccece; }
+.field select:disabled {
+  border-color: #cccece;
+  color: #444853; }
+
+.field select:disabled + .select-icon {
+  color: #cccece; }
 
 input[type="checkbox"] {
   position: absolute;
