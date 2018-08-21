@@ -37,9 +37,7 @@ $color-two: #0f4a92;
 };
 
 
-/* ------------------------------------------
-  BASE
---------------------------------------------- */
+// BASE
 body {
   display: flex;
   flex-direction: column;
@@ -111,9 +109,7 @@ img {
 }
 
 
-/* ------------------------------------------
-  TYPOGRAPHY
---------------------------------------------- */
+// TYPOGRAPHY
 h1, h2, h3, p {
   display: block;
   width: 100%;
@@ -395,9 +391,7 @@ ul.settlement-offer li.border {
 }
 
 
-/* ------------------------------------------
-  BUTTONS
---------------------------------------------- */
+// BUTTONS
 button,
 .button {
   display: inline-flex;
@@ -832,9 +826,7 @@ form .button-box {padding: 0 1rem;}}
 .form-button-box-button .expanding-button-box {margin: 1rem 0 0 0.5rem;}}
 
 
-/* ------------------------------------------
-  HEADER
---------------------------------------------- */
+// HEADER
 header {
   display: flex;
   flex-direction: column;
@@ -936,9 +928,7 @@ span.back {
 span.back:hover, span.back:focus {color: $color-two;}
 
 
-/* ------------------------------------------
-  FOOTER
---------------------------------------------- */
+// FOOTER
 footer {
   display: flex;
   flex-direction: column;
@@ -954,9 +944,7 @@ footer {
 footer a {padding: 0.644rem 0 0;}
 
 
-/* ------------------------------------------
-  LAYOUT
---------------------------------------------- */
+// LAYOUT
 main {
   display: flex;
   flex-direction: column;
@@ -1575,9 +1563,6 @@ figcaption span.right {
 .lg {max-width: 40rem;}
 
 
-/* ------------------------------------------
-  FORMS
---------------------------------------------- */
 // INPUT RESETS
 input[type="password"],
 input[type="checkbox"],

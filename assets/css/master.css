@@ -1,6 +1,3 @@
-/* ------------------------------------------
-  BASE
---------------------------------------------- */
 body {
   display: flex;
   flex-direction: column;
@@ -66,9 +63,6 @@ img {
   height: auto;
   margin: 0; }
 
-/* ------------------------------------------
-  TYPOGRAPHY
---------------------------------------------- */
 h1, h2, h3, p {
   display: block;
   width: 100%;
@@ -338,9 +332,6 @@ ul.settlement-offer li.border {
   margin: 0 0 1rem;
   border-bottom: 1px solid #cccece; }
 
-/* ------------------------------------------
-  BUTTONS
---------------------------------------------- */
 button,
 .button {
   display: inline-flex;
@@ -767,9 +758,6 @@ span.button.upload input[type="file"] {
   .form-button-box-button .expanding-button-box {
     margin: 1rem 0 0 0.5rem; } }
 
-/* ------------------------------------------
-  HEADER
---------------------------------------------- */
 header {
   display: flex;
   flex-direction: column;
@@ -873,9 +861,6 @@ span.back {
 span.back:hover, span.back:focus {
   color: #0f4a92; }
 
-/* ------------------------------------------
-  FOOTER
---------------------------------------------- */
 footer {
   display: flex;
   flex-direction: column;
@@ -890,9 +875,6 @@ footer {
 footer a {
   padding: 0.644rem 0 0; }
 
-/* ------------------------------------------
-  LAYOUT
---------------------------------------------- */
 main {
   display: flex;
   flex-direction: column;
@@ -1520,9 +1502,6 @@ figcaption span.right {
 .lg {
   max-width: 40rem; }
 
-/* ------------------------------------------
-  FORMS
---------------------------------------------- */
 input[type="password"],
 input[type="checkbox"],
 input[type="select"],
