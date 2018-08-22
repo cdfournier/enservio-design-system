@@ -14,12 +14,12 @@ $color-two: #0f4a92;
 
 
 //MIXINS
-@mixin transition($what: all, $time: 0.25s, $how: ease-in-out) {
-  -webkit-transition: $what $time $how;
-  -moz-transition: $what $time $how;
-  -ms-transition: $what $time $how;
-  -o-transition: $what $time $how;
-  transition: $what $time $how;
+@mixin transition($property: all, $duration: 0.25s, $timing: ease-in-out, $delay: 0s) {
+  -webkit-transition: $property $duration $timing $delay;
+  -moz-transition: $property $duration $timing $delay;
+  -ms-transition: $property $duration $timing $delay;
+  -o-transition: $property $duration $timing $delay;
+  transition: $property $duration $timing $delay;
 };
 
 @mixin transform($transform: all) {
@@ -178,8 +178,8 @@ ul li, ol li {
 ul li:last-child, ol li:last-child {padding: 0;}
 
 
-// BADGES & TAGS
-span.badge {
+// TAGS
+span.tag {
   margin: 0 0.5rem;
   padding: 0.125rem 0.75rem;
   border: 1px solid $light-gray;
@@ -1147,6 +1147,43 @@ main {
 .carousel .carousel-cell {padding: 0 6rem;}}
 
 
+// INVENTORY CAPTURE TRANSITIONS
+.inventory-capture.add {
+  @include transition (all, 1s, ease-in-out);
+  @include transform (scale(0));
+}
+
+.inventory-item.new {
+  max-height: 0;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  @include transition (all, 1s, ease-in-out, 0s);
+}
+
+.inventory-item.new.added {
+  max-height: 100%;
+  margin: 0 auto 1rem;
+  padding: 1rem 0;
+  opacity: 1;
+  @include transition (all, 1s, ease-in-out, 0s);
+}
+
+.inventory-item.new.added.delete {
+  max-height: 0;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  @include transform (translateX(110%));
+  @include transition (all, 1s, ease-in-out, 0s);
+}
+
+.forms.new {
+  margin-left: 0;
+  @include transition (margin-left, 1s, ease-in-out, 1s);
+}
+
+
 // CURRENT INVENTORY
 .current-inventory {
   position: fixed;
@@ -1240,14 +1277,14 @@ main {
   position: relative;
   width: 100%;
   overflow: hidden;
-  margin: 1rem auto 0;
+  margin: 0 auto 1rem;
   padding: 1rem 0;
   border: 1px solid $light-gray;
   border-radius: 0.25rem;
   background-color: $white;
 }
 
-.inventory-item:first-of-type {margin: 0 auto;}
+.inventory-item:last-of-type {margin: 0 auto;}
 
 .inventory-item input.accordian {
   position: absolute;
@@ -2050,7 +2087,6 @@ input.toggle[type="checkbox"] {
   background-color: $dark-gray;
   @include transition (all, 0.25s, ease-in-out);
 }
-
 
 input.toggle[type="checkbox"]:checked:before {display: none;}
 

@@ -5,6 +5,15 @@ $(".item-one").click(function() {
 $(".item-two").click(function() {
   $(".expanding-button-box.item-two").toggleClass("expand");
 });
+$(".click-three").click(function() {
+  $(".expanding-button-box.three").toggleClass("expand");
+});
+$(".no-three").click( function() {
+  $(".expanding-button-box.three").removeClass("expand");
+});
+$(".yes-three").click( function() {
+  $(".inventory-item.new.added").addClass("delete");
+});
 $(".click-two").click(function() {
   $(".expanding-button-box.two").toggleClass("expand");
 });
@@ -24,10 +33,12 @@ $(".yes-one").click( function() {
   $(".expanding-button-box.one").removeClass("expand");
 });
 
+
 // ATTACHMENT DELETE BUTTON ERROR
 $(".attachment-error").click( function() {
   $("ul.attachment-list li").toggleClass("invalid");
 });
+
 
 // SPINNER BUTTONS
 $(".delay.one").click(function() {
@@ -43,11 +54,13 @@ $(".delay.four").click(function() {
   $(".post-processing.four").toggleClass("active");
 });
 
+
 // CURRENT INVENTORY BAR BEHAVIOR
 $(".current-inventory-bar").click( function() {
   $(".current-inventory").toggleClass("open");
   $(".header--fixed").toggleClass("headroom--unpinned");
 });
+
 
 // ALERT BARS
 $(".show-error").click( function() {
@@ -75,6 +88,7 @@ $(".dismiss.system").click( function() {
   $(".alert-bar.system").removeClass("show");
 });
 
+
 // SHOW/HIDE PASSWORDS
 $(".show-hide-password").click(function() {
   $(this).toggleClass("la-eye la-eye-slash");
@@ -86,6 +100,7 @@ $(".show-hide-password").click(function() {
   }
 });
 
+
 // TIMEOUT
 $(".show-timeout").click( function() {
   $(".timeout").addClass("show");
@@ -94,11 +109,14 @@ $(".continue").click( function() {
   $(".timeout").removeClass("show");
 });
 
+
 // ADD ITEM TO INVENTORY ANIMATION
 $(".add-item").click( function() {
-  $("#first").addClass("slideOutRight");
-  $(".inventory-item.new-item").addClass("slideInLeft");
+  $("#first.inventory-capture").addClass("add");
+  $(".inventory-item.new").addClass("added");
+  $(".forms").addClass("new");
 });
+
 
 // SMOOTH SCROLL
 $('a[href*="#"]')
