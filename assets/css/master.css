@@ -129,7 +129,7 @@ ul li, ol li {
 ul li:last-child, ol li:last-child {
   padding: 0; }
 
-span.badge {
+span.tag {
   margin: 0 0.5rem;
   padding: 0.125rem 0.75rem;
   border: 1px solid #cccece;
@@ -1096,7 +1096,7 @@ main {
 
 .current-inventory {
   position: fixed;
-  top: 84%;
+  top: 80%;
   left: 0;
   z-index: 1000;
   width: 100%;
