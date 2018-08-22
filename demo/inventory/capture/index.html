@@ -69,73 +69,75 @@
             <a href="../processing-a/index.html" class="button secondary color-one">Submit Inventory<span class="post-processing"><i class="la la-refresh la-spin"></i></span></a>
           </div>
         </div>
-        <form>
-          <fieldset>
-            <legend>Description</legend>
-            <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
-              <span class="error-message">Please include a description</span>
-              <input type="text" name="description" id="description" placeholder="Describe your item&nbsp;&#40;including brand&#41;">
-              <label for="description">Description&#42;</label>
+        <div class="forms">
+          <form>
+            <fieldset>
+              <legend>Description</legend>
+              <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                <span class="error-message">Please include a description</span>
+                <input type="text" name="description" id="description" placeholder="Describe your item&nbsp;&#40;including brand&#41;">
+                <label for="description">Description&#42;</label>
+              </div>
+            </fieldset>
+            <div class="small">
+              <fieldset>
+                <legend>Cost</legend>
+                <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                  <span class="error-message">Please include a cost per item</span>
+                  <input type="text" name="cost" id="cost" placeholder="Cost per item">
+                  <label for="cost">Cost Per Item&#42;</label>
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend>Quantity</legend>
+                <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                  <span class="error-message">Please include a quantity</span>
+                  <input type="number" name="quantity" id="quantity" placeholder="Quantity">
+                  <label for="quantity">Quantity&#42;</label>
+                </div>
+              </fieldset>
             </div>
-          </fieldset>
-          <div class="small">
-            <fieldset>
-              <legend>Cost</legend>
-              <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
-                <span class="error-message">Please include a cost per item</span>
-                <input type="text" name="cost" id="cost" placeholder="Cost per item">
-                <label for="cost">Cost Per Item&#42;</label>
-              </div>
-            </fieldset>
-            <fieldset>
-              <legend>Quantity</legend>
-              <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
-                <span class="error-message">Please include a quantity</span>
-                <input type="number" name="quantity" id="quantity" placeholder="Quantity">
-                <label for="quantity">Quantity&#42;</label>
-              </div>
-            </fieldset>
-          </div>
-          <div class="small">
-            <fieldset>
-              <legend>Age: Years</legend>
-              <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
-                <span class="error-message">How old is this item &#40;in years&#41;?</span>
-                <input type="number" name="years" id="years" placeholder="Years">
-                <label for="years">Age: In Years&#42;</label>
-              </div>
-            </fieldset>
-            <fieldset>
-              <legend>Age: Months</legend>
-              <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
-                <span class="error-message">How old is this item &#40;in months&#41;?</span>
-                <input type="number" name="months" id="months" placeholder="Months">
-                <label for="months">Age: In Months&#42;</label>
-              </div>
-            </fieldset>
-          </div>
-          <fieldset>
-            <legend>Condition</legend>
-            <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
-              <span class="error-message">Please select an option</span>
-              <select name="condition" id="condition">
-                <option value="0">Choose a Condition</option>
-                <option value="New">New</option>
-                <option value="Excellent">Excellent</option>
-                <option value="Good">Good</option>
-                <option value="Fair">Fair</option>
-                <option value="Poor">Poor</option>
-              </select>
-              <div class="select-icon"><i class="la la-angle-down"></i></div>
-              <span class="valid select"><i class="la la-check-circle-o"></i></span>
-              <label for="condition">Condition</label>
+            <div class="small">
+              <fieldset>
+                <legend>Age: Years</legend>
+                <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                  <span class="error-message">How old is this item &#40;in years&#41;?</span>
+                  <input type="number" name="years" id="years" placeholder="Years">
+                  <label for="years">Age: In Years&#42;</label>
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend>Age: Months</legend>
+                <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                  <span class="error-message">How old is this item &#40;in months&#41;?</span>
+                  <input type="number" name="months" id="months" placeholder="Months">
+                  <label for="months">Age: In Months&#42;</label>
+                </div>
+              </fieldset>
             </div>
-          </fieldset>
-          <div class="button-box left">
-            <button class="button color-one">Add Item To Inventory</button>
-            <a href="../attachments/index.html" class="button color-two">Add Attachments<span class="post"><i class="la la-paperclip"></i></span></a>
-          </div>
-        </form>
+            <fieldset>
+              <legend>Condition</legend>
+              <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                <span class="error-message">Please select an option</span>
+                <select name="condition" id="condition">
+                  <option value="0">Choose a Condition</option>
+                  <option value="New">New</option>
+                  <option value="Excellent">Excellent</option>
+                  <option value="Good">Good</option>
+                  <option value="Fair">Fair</option>
+                  <option value="Poor">Poor</option>
+                </select>
+                <div class="select-icon"><i class="la la-angle-down"></i></div>
+                <span class="valid select"><i class="la la-check-circle-o"></i></span>
+                <label for="condition">Condition</label>
+              </div>
+            </fieldset>
+            <div class="button-box left">
+              <span class="button color-one add-item">Add Item To Inventory</span>
+              <a href="../attachments/index.html" class="button color-two">Add Attachments<span class="post"><i class="la la-paperclip"></i></span></a>
+            </div>
+          </form>
+        </div>
         <div class="button-box left mobile">
           <a href="../processing-a/index.html" class="button secondary color-one">Submit Inventory<span class="post-processing"><i class="la la-refresh la-spin"></i></span></a>
         </div>

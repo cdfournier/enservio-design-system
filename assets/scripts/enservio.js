@@ -94,6 +94,12 @@ $(".continue").click( function() {
   $(".timeout").removeClass("show");
 });
 
+// ADD ITEM TO INVENTORY ANIMATION
+$(".add-item").click( function() {
+  $("#first").addClass("slideOutRight");
+  $(".inventory-item.new-item").addClass("slideInLeft");
+});
+
 // SMOOTH SCROLL
 $('a[href*="#"]')
   // Remove links that don't actually link to anything

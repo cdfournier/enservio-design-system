@@ -14,22 +14,10 @@
     <link rel="stylesheet" href="../../assets/css/master.css">
     <link rel="stylesheet" href="../../assets/css/guide.css">
     <style>
-      article {padding: 2rem 0 0 0;}
-      article:first-of-type {padding: 0;}
-      ul {
-        -webkit-column-break-inside: avoid;
-        page-break-inside: avoid;
-        break-inside: avoid-column;
-      }
-      ul li {padding: 0 0 0.5rem 0;}
-      h1, h2, h3 {text-transform: none;}
-      .split {
-        max-width: 40rem;
-        margin: auto;
-      }
-      @media (min-width: 48rem) {
-        .design-sample {width: 25%;}
-        .code-sample {width: 75%;}
+      article {padding: 0 0 2rem;}
+      .design-sample {
+        width: 100%;
+        padding: 0;
       }
     </style>
   </head>
@@ -39,7 +27,104 @@
         <div class="text lg">
           <article>
             <h1>Color</h1>
+            <p>The design system's color application is intended to provide both consistency and flexibility across multiple products and customers. Using <a href="https://sass-lang.com/" target="_blank">Sass</a> enables us to make changes for customization efficiently.</p>
+            <p>All efforts should be made to ensure for acceptable accessibility <a href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html" target="_blank">color contrast</a> for all appropriate elements.</p>
           </article>
+          <div class="design-sample">
+            <h2 style="padding: 0 0 1rem;">Custom Colors</h2>
+            <figcaption>Design Sample</figcaption>
+            <div class="color-cards">
+              <div class="card">
+                <div class="color-sample color-one"></div>
+                <div class="card-copy">
+                  <p>Color One</p>
+                  <code>scss: $color-one</code>
+                  <code>css: #2e84ed</code>
+                </div>
+              </div>
+              <div class="card">
+                <div class="color-sample color-two"></div>
+                <div class="card-copy">
+                  <p>Color Two</p>
+                  <code>scss: $color-two</code>
+                  <code>css: #0f4a92</code>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="design-sample">
+            <h2 style="padding: 0 0 1rem;">System Colors</h2>
+            <figcaption>Design Sample</figcaption>
+            <div class="color-cards">
+              <div class="card">
+                <div class="color-sample white"></div>
+                <div class="card-copy">
+                  <p>White</p>
+                  <code>scss: $white</code>
+                  <code>css: #ffffff</code>
+                </div>
+              </div>
+              <div class="card">
+                <div class="color-sample off-white"></div>
+                <div class="card-copy">
+                  <p>Off-White</p>
+                  <code>scss: $off-white</code>
+                  <code>css: #f5f5f5</code>
+                </div>
+              </div>
+              <div class="card">
+                <div class="color-sample light-gray"></div>
+                <div class="card-copy">
+                  <p>Light Gray</p>
+                  <code>scss: $light-gray</code>
+                  <code>css: #cccece</code>
+                </div>
+              </div>
+              <div class="card">
+                <div class="color-sample dark-gray"></div>
+                <div class="card-copy">
+                  <p>Dark-Gray</p>
+                  <code>scss: $dark-gray</code>
+                  <code>css: #444853</code>
+                </div>
+              </div>
+              <div class="card">
+                <div class="color-sample black"></div>
+                <div class="card-copy">
+                  <p>Black</p>
+                  <code>scss: $black</code>
+                  <code>css: #000000</code>
+                </div>
+              </div>
+              <div class="card">
+                <div class="color-sample invalid"></div>
+                <div class="card-copy">
+                  <p>Invalid</p>
+                  <code>scss: $invalid</code>
+                  <code>css: #d0021b</code>
+                </div>
+              </div>
+              <div class="card">
+                <div class="color-sample valid"></div>
+                <div class="card-copy">
+                  <p>Valid</p>
+                  <code>scss: $valid</code>
+                  <code>css: #008000</code>
+                </div>
+              </div>
+            </div>
+            <div class="notes">
+              <figcaption>Notes</figcaption>
+              <ul>
+                <li>All type is set in <code>$black</code>. Unless&hellip;</li>
+                <li>Type set on a dark background should use <code>$white</code>.
+                <li>Error messages use <code>$invalid</code>.</li>
+                <li>Valid form entries or success messages use <code>$valid</code>.</li>
+                <li>Text links are set to <code>$color-one</code>.</li>
+                <li><code>:hover</code> and <code>:focus</code> states for text links are set to <code>$color-two</code>.</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
     </main>

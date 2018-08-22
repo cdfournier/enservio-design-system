@@ -207,6 +207,84 @@ footer p {
   .split.wide.last .code-sample {
     padding: 0; } }
 
+.color-cards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%; }
+
+.color-cards .card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 45%;
+  margin: 0 0 2rem;
+  border: 1px solid #cccece;
+  border-radius: 0.25rem; }
+
+.color-cards .card .color-sample {
+  width: 100%;
+  height: 6rem;
+  min-height: 6rem; }
+
+.color-cards .card .color-sample.color-one {
+  background-color: #2e84ed; }
+
+.color-cards .card .color-sample.color-two {
+  background-color: #0f4a92; }
+
+.color-cards .card .color-sample.white {
+  background-color: #ffffff; }
+
+.color-cards .card .color-sample.off-white {
+  background-color: #f5f5f5; }
+
+.color-cards .card .color-sample.light-gray {
+  background-color: #cccece; }
+
+.color-cards .card .color-sample.dark-gray {
+  background-color: #444853; }
+
+.color-cards .card .color-sample.black {
+  background-color: #000000; }
+
+.color-cards .card .color-sample.invalid {
+  background-color: #d0021b; }
+
+.color-cards .card .color-sample.valid {
+  background-color: #008000; }
+
+.color-cards .card .card-copy {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+  padding: 0.694rem; }
+
+.color-cards .card .card-copy p {
+  padding: 0;
+  font-size: 0.694rem;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.color-cards .card .card-copy code {
+  font-size: 0.694rem; }
+
+@media (min-width: 48rem) {
+  .color-cards {
+    justify-content: flex-start; }
+  .color-cards .card {
+    width: 29.625%;
+    margin: 0 2rem 2rem 0; }
+  .color-cards .card:nth-of-type(3n) {
+    margin: 0 0 2rem; }
+  .color-cards .card .card-copy code {
+    font-size: 0.833rem; } }
+
 figure {
   display: block;
   width: 100%;
@@ -248,7 +326,18 @@ code {
 .notes p:first-of-type {
   padding: 0; }
 
-.notes p code {
+.notes ul {
+  font-size: 0.833rem;
+  font-weight: 400;
+  line-height: 2; }
+
+.notes ul li {
+  padding: 0 0 0.694rem; }
+
+.notes ul li:last-of-type {
+  padding: 0; }
+
+.notes p code, .notes ul li code {
   padding: 0.125rem 0.25rem;
   border: 1px solid #444853;
   border-radius: 0.125rem;
