@@ -62,6 +62,33 @@ $(".current-inventory-bar").click( function() {
 });
 
 
+// PIN/UNPIN CURRENT INVENTORY BAR
+$.fn.isOnScreen = function () {
+    var win = $(window);
+    var viewport = {
+        top: win.scrollTop(),
+        left: win.scrollLeft()
+    };
+    viewport.right = viewport.left + win.width();
+    viewport.bottom = viewport.top + win.height();
+    var bounds = this.offset();
+    bounds.right = bounds.left + this.outerWidth();
+    bounds.bottom = bounds.top + this.outerHeight();
+    return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
+};
+$(window).scroll(function () {
+    if ($('.release-inventory').isOnScreen() == true) {
+        $('.current-inventory').addClass('release');
+//         $('.release-inventory').addClass('release');
+    }
+    else{
+        $('.current-inventory').removeClass('open');
+        $('.current-inventory').removeClass('release');
+//         $('.release-inventory').removeClass('release');
+    }
+});
+
+
 // ALERT BARS
 $(".show-error").click( function() {
   $(".alert-bar.error").addClass("show");
