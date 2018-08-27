@@ -85,6 +85,9 @@ h2, h3 {
 h3 {
   font-size: 1.2rem; }
 
+h1 + h2 {
+  padding: 0.694rem 0; }
+
 p {
   padding: 0.694rem 0 0.694rem;
   font-size: 1rem;
@@ -867,6 +870,7 @@ footer {
   align-items: flex-start;
   justify-content: center;
   width: 100%;
+  max-width: 40rem;
   margin: 0 auto;
   padding: 2rem;
   font-size: 0.833rem;
@@ -1581,14 +1585,6 @@ input[type="url"] {
   -moz-appearance: none;
   appearance: none; }
 
-input.email-address:disabled,
-input.email-address[type="email"].disabled {
-  border: none;
-  border-bottom: 1px solid #000000;
-  font-weight: 500;
-  color: #000000;
-  opacity: 1; }
-
 form {
   display: flex;
   flex-direction: column;
@@ -1691,6 +1687,14 @@ legend {
   border-color: #cccece;
   color: #444853;
   cursor: default; }
+
+input.email-address:disabled,
+input.email-address[type="email"].disabled {
+  border: none;
+  border-bottom: 1px solid #000000;
+  font-weight: 500;
+  color: #000000;
+  opacity: 1; }
 
 .field label {
   margin: 0;
