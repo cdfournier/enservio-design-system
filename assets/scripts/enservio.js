@@ -62,6 +62,7 @@ $('.current-inventory-bar').click( function() {
 
 
 // PIN/UNPIN CURRENT INVENTORY BAR
+/*
 $.fn.isOnScreen = function () {
     var win = $(window);
     var viewport = {
@@ -84,7 +85,16 @@ $(window).scroll(function () {
         $('.current-inventory').removeClass('open');
     }
 });
-
+*/
+window.onscroll = function(ev) {
+    if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
+        $('.current-inventory').addClass('release');
+    } else {
+        if (direction === 'top' && window.scrollY <= document.body.offsetHeight) {
+          $('.current-inventory').removeClass('release');
+        }
+    }
+};
 
 // STICK RELEASE-INVENTORY TO TOP
 $(window).scroll(function() {
