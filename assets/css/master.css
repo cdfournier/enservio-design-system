@@ -775,7 +775,7 @@ header {
   top: 0;
   right: 0;
   left: 0;
-  z-index: 1000; }
+  z-index: 100; }
 
 .headroom {
   -webkit-transition: all 0.25s ease-in-out 0s;
@@ -914,7 +914,7 @@ main {
 
 .alert-bar {
   position: fixed;
-  z-index: 1500;
+  z-index: 150;
   width: 100%;
   -webkit-transition: all 0.5s ease-in-out 0s;
   -moz-transition: all 0.5s ease-in-out 0s;
@@ -1160,17 +1160,30 @@ main {
   position: fixed;
   top: 80%;
   left: 0;
-  z-index: 1000;
+  z-index: 200;
   width: 100%;
   height: 100%;
-  margin: 2rem auto 0;
-  padding: 0 0 2rem;
+  margin: 0 auto;
+  padding: 2rem 0;
   background-color: #ffffff;
   -webkit-transition: top 0.4s ease-in-out 0s;
   -moz-transition: top 0.4s ease-in-out 0s;
   -ms-transition: top 0.4s ease-in-out 0s;
   -o-transition: top 0.4s ease-in-out 0s;
   transition: top 0.4s ease-in-out 0s; }
+
+.release-inventory {
+  margin: 2rem auto;
+  -webkit-transition: all 0.25s ease-in-out 0s;
+  -moz-transition: all 0.25s ease-in-out 0s;
+  -ms-transition: all 0.25s ease-in-out 0s;
+  -o-transition: all 0.25s ease-in-out 0s;
+  transition: all 0.25s ease-in-out 0s; }
+
+.release-inventory.fixed {
+  position: fixed;
+  top: 0;
+  margin: 0; }
 
 .current-inventory.release {
   position: relative; }
@@ -1193,7 +1206,15 @@ main {
   margin: 0 auto;
   padding: 1rem 2rem;
   background-color: #2e84ed;
-  cursor: pointer; }
+  cursor: pointer;
+  -webkit-transition: all 0.25s ease-in-out 0s;
+  -moz-transition: all 0.25s ease-in-out 0s;
+  -ms-transition: all 0.25s ease-in-out 0s;
+  -o-transition: all 0.25s ease-in-out 0s;
+  transition: all 0.25s ease-in-out 0s; }
+
+.current-inventory.open .current-inventory-bar {
+  margin: 0 auto; }
 
 .current-inventory .current-inventory-bar h2 {
   display: flex;
@@ -1667,7 +1688,7 @@ legend {
   touch-action: manipulation; }
 
 .field input {
-  z-index: 500;
+  z-index: 10;
   width: 100%;
   padding: 0;
   border: 0;
@@ -1736,7 +1757,7 @@ input:focus::placeholder {
   position: absolute;
   top: 1.5rem;
   right: 1rem;
-  z-index: 550;
+  z-index: 15;
   width: 1.5rem;
   height: 1.75rem;
   font-size: 1.5rem;

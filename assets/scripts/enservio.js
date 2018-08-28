@@ -1,64 +1,64 @@
 // ATTACHMENT DELETE BUTTONS
-$(".item-one").click(function() {
-  $(".expanding-button-box.item-one").toggleClass("expand");
+$('.item-one').click(function() {
+  $('.expanding-button-box.item-one').toggleClass('expand');
 });
-$(".item-two").click(function() {
-  $(".expanding-button-box.item-two").toggleClass("expand");
+$('.item-two').click(function() {
+  $('.expanding-button-box.item-two').toggleClass('expand');
 });
-$(".click-three").click(function() {
-  $(".expanding-button-box.three").toggleClass("expand");
+$('.click-three').click(function() {
+  $('.expanding-button-box.three').toggleClass('expand');
 });
-$(".no-three").click( function() {
-  $(".expanding-button-box.three").removeClass("expand");
+$('.no-three').click( function() {
+  $('.expanding-button-box.three').removeClass('expand');
 });
-$(".yes-three").click( function() {
-  $(".inventory-item.new.added").addClass("delete");
+$('.yes-three').click( function() {
+  $('.inventory-item.new.added').addClass('delete');
 });
-$(".click-two").click(function() {
-  $(".expanding-button-box.two").toggleClass("expand");
+$('.click-two').click(function() {
+  $('.expanding-button-box.two').toggleClass('expand');
 });
-$(".no-two").click( function() {
-  $(".expanding-button-box.two").removeClass("expand");
+$('.no-two').click( function() {
+  $('.expanding-button-box.two').removeClass('expand');
 });
-$(".yes-two").click( function() {
-  $(".expanding-button-box.two").removeClass("expand");
+$('.yes-two').click( function() {
+  $('.expanding-button-box.two').removeClass('expand');
 });
-$(".click-one").click(function() {
-  $(".expanding-button-box.one").toggleClass("expand");
+$('.click-one').click(function() {
+  $('.expanding-button-box.one').toggleClass('expand');
 });
-$(".no-one").click( function() {
-  $(".expanding-button-box.one").removeClass("expand");
+$('.no-one').click( function() {
+  $('.expanding-button-box.one').removeClass('expand');
 });
-$(".yes-one").click( function() {
-  $(".expanding-button-box.one").removeClass("expand");
+$('.yes-one').click( function() {
+  $('.expanding-button-box.one').removeClass('expand');
 });
 
 
 // ATTACHMENT DELETE BUTTON ERROR
-$(".attachment-error").click( function() {
-  $("ul.attachment-list li").toggleClass("invalid");
+$('.attachment-error').click( function() {
+  $('ul.attachment-list li').toggleClass('invalid');
 });
 
 
 // SPINNER BUTTONS
-$(".delay.one").click(function() {
-  $(".post-processing.one").toggleClass("active");
+$('.delay.one').click(function() {
+  $('.post-processing.one').toggleClass('active');
 });
-$(".delay.two").click(function() {
-  $(".post-processing.two").toggleClass("active");
+$('.delay.two').click(function() {
+  $('.post-processing.two').toggleClass('active');
 });
-$(".delay.three").click(function() {
-  $(".post-processing.three").toggleClass("active");
+$('.delay.three').click(function() {
+  $('.post-processing.three').toggleClass('active');
 });
-$(".delay.four").click(function() {
-  $(".post-processing.four").toggleClass("active");
+$('.delay.four').click(function() {
+  $('.post-processing.four').toggleClass('active');
 });
 
 
 // CURRENT INVENTORY BAR BEHAVIOR
-$(".current-inventory-bar").click( function() {
-  $(".current-inventory").toggleClass("open");
-  $(".header--fixed").toggleClass("headroom--unpinned");
+$('.current-inventory-bar').click( function() {
+  $('.current-inventory').toggleClass('open');
+//   $('.header--fixed').toggleClass('headroom--unpinned');
 });
 
 
@@ -79,40 +79,48 @@ $.fn.isOnScreen = function () {
 $(window).scroll(function () {
     if ($('.release-inventory').isOnScreen() == true) {
         $('.current-inventory').addClass('release');
-//         $('.release-inventory').addClass('release');
     }
     else{
-        $('.current-inventory').removeClass('open');
         $('.current-inventory').removeClass('release');
-//         $('.release-inventory').removeClass('release');
+    }
+});
+
+
+// STICK RELEASE-INVENTORY TO TOP
+$(window).scroll(function() {
+    var distanceFromTop = $(this).scrollTop();
+    if (distanceFromTop >= $('#create-inventory').height()) {
+        $('.release-inventory').addClass('fixed');
+    } else {
+        $('.release-inventory').removeClass('fixed');
     }
 });
 
 
 // ALERT BARS
-$(".show-error").click( function() {
-  $(".alert-bar.error").addClass("show");
+$('.show-error').click( function() {
+  $('.alert-bar.error').addClass('show');
   setTimeout(function() { 
-    $(".alert-bar.error").removeClass("show") }, 10000);
+    $('.alert-bar.error').removeClass('show') }, 10000);
 });
-$(".dismiss.error").click( function() {
-  $(".alert-bar.error").removeClass("show");
+$('.dismiss.error').click( function() {
+  $('.alert-bar.error').removeClass('show');
 });
-$(".show-success").click( function() {
-  $(".alert-bar.success").addClass("show");
+$('.show-success').click( function() {
+  $('.alert-bar.success').addClass('show');
   setTimeout(function() { 
-    $(".alert-bar.success").removeClass("show") }, 10000);
+    $('.alert-bar.success').removeClass('show') }, 10000);
 });
-$(".dismiss.success").click( function() {
-  $(".alert-bar.success").removeClass("show");
+$('.dismiss.success').click( function() {
+  $('.alert-bar.success').removeClass('show');
 });
-$(".show-system").click( function() {
-  $(".alert-bar.system").addClass("show");
+$('.show-system').click( function() {
+  $('.alert-bar.system').addClass('show');
   setTimeout(function() { 
-    $(".alert-bar.system").removeClass("show") }, 10000);
+    $('.alert-bar.system').removeClass('show') }, 10000);
 });
-$(".dismiss.system").click( function() {
-  $(".alert-bar.system").removeClass("show");
+$('.dismiss.system').click( function() {
+  $('.alert-bar.system').removeClass('show');
 });
 
 
@@ -129,19 +137,19 @@ $(".show-hide-password").click(function() {
 
 
 // TIMEOUT
-$(".show-timeout").click( function() {
-  $(".timeout").addClass("show");
+$('.show-timeout').click( function() {
+  $('.timeout').addClass('show');
 });
-$(".continue").click( function() {
-  $(".timeout").removeClass("show");
+$('.continue').click( function() {
+  $('.timeout').removeClass('show');
 });
 
 
 // ADD ITEM TO INVENTORY ANIMATION
-$(".add-item").click( function() {
-  $("#first.inventory-capture").addClass("add");
-  $(".inventory-item.new").addClass("added");
-  $(".forms").addClass("new");
+$('.add-item').click( function() {
+  $('#first.inventory-capture').addClass('add');
+  $('.inventory-item.new').addClass('added');
+  $('.forms').addClass('new');
 });
 
 
