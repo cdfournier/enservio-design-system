@@ -937,7 +937,6 @@ footer {
   align-items: flex-start;
   justify-content: center;
   width: 100%;
-  max-width: 40rem;
   margin: 0 auto;
   padding: 2rem;
   font-size: 0.833rem;
@@ -1202,7 +1201,6 @@ main {
 }
 
 .release-inventory {
-//   margin: 2rem auto;
   @include transition (all, 0.25s, ease-in-out);
 }
 
