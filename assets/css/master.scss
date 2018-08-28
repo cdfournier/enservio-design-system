@@ -97,7 +97,7 @@ a {
   font-weight: 500;
   text-decoration: none;
   color: $color-one;
-  @include transition (all, 0.25s, ease);
+  @include transition(all, 0.25s, ease);
 }
 
 a:hover, a:focus, a:active {color: $color-two;}
@@ -310,7 +310,7 @@ ul.attachment-list li .line-item .button-box {
   position: absolute;
   right: 0;
   width: auto;
-  @include transition (all, 0.25s, ease);
+  @include transition(all, 0.25s, ease);
 }
 
 ul.attachment-list li .line-item .button-box.right {
@@ -413,7 +413,7 @@ button,
   text-decoration: none;
   text-transform: uppercase;
   cursor: pointer;
-  @include transition (all, 0.25s, ease-in-out);
+  @include transition(all, 0.25s, ease-in-out);
 }
 
 @media (min-width: 48rem) {button, .button {margin: 0 0.5rem 0;}}
@@ -447,7 +447,7 @@ button span.post-processing,
   padding: 0;
   font-size: 1rem;
   opacity: 0;
-  @include transition (all, 0.25s, ease-in-out);
+  @include transition(all, 0.25s, ease-in-out);
 }
 
 button span.post-processing.active,
@@ -569,7 +569,7 @@ button.secondary.color-two:hover span.post-number, button.secondary.color-two:fo
 // HIDE BUTTONS
 .button.skip {
   opacity: 1;
-	@include transition (all, 0.25s, ease-in-out);
+	@include transition(all, 0.25s, ease-in-out);
 }
 
 .button.skip.hide {opacity: 0;}
@@ -584,7 +584,7 @@ button.secondary.color-two:hover span.post-number, button.secondary.color-two:fo
   margin: 1rem 0 0;
   border-radius: 4rem;
   cursor: pointer;
-  @include transition (all, 0.25s, ease-in-out);
+  @include transition(all, 0.25s, ease-in-out);
 }
 
 .line-item .expanding-button-box {margin: 0;}
@@ -596,7 +596,7 @@ button.secondary.color-two:hover span.post-number, button.secondary.color-two:fo
   align-items: center;
   justify-content: center;
   border-radius: 4rem;
-  @include transition (all, 0.25s, ease-in-out);
+  @include transition(all, 0.25s, ease-in-out);
 }
 
 .expanding-button-box .expanding-button.large {display: none;}
@@ -649,14 +649,14 @@ button.secondary.color-two:hover span.post-number, button.secondary.color-two:fo
   text-transform: uppercase;
   color: $white;
   opacity: 0;
-  @include transition (all, 0.5s, ease-in-out);
-  @include transform (translateX(10rem));
+  @include transition(all, 0.5s, ease-in-out);
+  @include transform(translateX(10rem));
 }
 
 .expanding-button-box.expand .confirm-action-box {
   display: inline-flex;
   opacity: 1;
-  @include transform (translateX(0));
+  @include transform(translateX(0));
 }
 
 .expanding-button-box .confirm-action-box span.confirm-action-text {
@@ -668,7 +668,7 @@ button.secondary.color-two:hover span.post-number, button.secondary.color-two:fo
   margin: 0 0 0 0.5rem;
   padding: 0.675rem 0.75rem;
   border-radius: 4rem;
-  @include transition (all, 0.25s, ease-in-out);
+  @include transition(all, 0.25s, ease-in-out);
 }
 
 
@@ -848,7 +848,7 @@ header {
 }
 
 .headroom {
-  @include transition (all, 0.25s, ease-in-out);
+  @include transition(all, 0.25s, ease-in-out);
   will-change: transform;
 }
 
@@ -987,8 +987,8 @@ main {
   position: fixed;
   z-index: 150;
   width: 100%;
-  @include transition (all, 0.5s, ease-in-out);
-  @include transform (translateY(-20rem));
+  @include transition(all, 0.5s, ease-in-out);
+  @include transform(translateY(-20rem));
 }
 
 .alert-bar.error {background-color: $invalid;}
@@ -999,7 +999,7 @@ main {
 
 .alert-bar.error.show,
 .alert-bar.success.show,
-.alert-bar.system.show {@include transform (translateY(0));}
+.alert-bar.system.show {@include transform(translateY(0));}
 
 .alert-bar .alert-bar-details {
   display: flex;
@@ -1052,14 +1052,14 @@ main {
   padding: 2rem;
   background-color: $white;
   opacity: 0;
-  @include transition (all, 0.5s, ease-in-out);
-  @include transform (translateY(-100%));
+  @include transition(all, 0.5s, ease-in-out);
+  @include transform(translateY(-100%));
 }
 
 .timeout.show {
   z-index: 5000;
   opacity: 1;
-  @include transform (translateY(0));
+  @include transform(translateY(0));
 }
 
 .timeout .text {
@@ -1151,8 +1151,7 @@ main {
 
 // INVENTORY CAPTURE TRANSITIONS
 .inventory-capture.add {
-  @include transition (all, 1s, ease-in-out);
-  @include transform (scale(0));
+  @include transition(all, 1s, ease-in-out);
 }
 
 .inventory-item.new {
@@ -1160,7 +1159,7 @@ main {
   margin: 0;
   padding: 0;
   opacity: 0;
-  @include transition (all, 1s, ease-in-out, 0s);
+  @include transition(all, 1s, ease-in-out, 0s);
 }
 
 .inventory-item.new.added {
@@ -1168,21 +1167,22 @@ main {
   margin: 0 auto 1rem;
   padding: 1rem 0;
   opacity: 1;
-  @include transition (all, 1s, ease-in-out, 0s);
+  @include transition(all, 0.5s, ease-in-out, 0s);
 }
 
 .inventory-item.new.added.delete {
-  max-height: 0;
+  height: 0;
+  max-height: 0%;
   margin: 0;
   padding: 0;
+  border-color: none;
   opacity: 0;
-  @include transform (translateX(110%));
-  @include transition (all, 1s, ease-in-out, 0s);
+  @include transition(all, 0.5s, ease-in-out);
 }
 
 .forms.new {
   margin-left: 0;
-  @include transition (margin-left, 1s, ease-in-out, 1s);
+  @include transition(margin-left, 0.5s, ease-in-out);
 }
 
 
@@ -1197,11 +1197,11 @@ main {
   margin: 0 auto;
   padding: 2rem 0;
   background-color: $white;
-  @include transition (top, 0.4s, ease-in-out);
+  @include transition(top, 0.4s, ease-in-out);
 }
 
 .release-inventory {
-  @include transition (all, 0.25s, ease-in-out);
+  @include transition(all, 0.25s, ease-in-out);
 }
 
 .release-inventory.fixed {
@@ -1235,7 +1235,7 @@ main {
   padding: 1rem 2rem;
   background-color: $color-one;
   cursor: pointer;
-  @include transition (all, 0.25s, ease-in-out);
+  @include transition(all, 0.25s, ease-in-out);
 }
 
 .current-inventory .current-inventory-bar h2 {
@@ -1337,7 +1337,7 @@ main {
   position: absolute;
   right: 1rem;
   line-height: 1.25;
-  @include transition (all, 0.25s, ease-in-out);
+  @include transition(all, 0.25s, ease-in-out);
 }
 
 .inventory-item .inventory-item-header .item-details {
@@ -1359,16 +1359,16 @@ main {
 
 .inventory-item .inventory-item-details {
   max-height: 0;
-  @include transition (max-height, 0.25s, ease-in-out);
+  @include transition(max-height, 0.25s, ease-in-out);
 }
 
 .inventory-item input.accordian:checked ~ .inventory-item-details {
   max-height: 100rem;
-  @include transition (max-height, 0.5s, ease-in-out);
+  @include transition(max-height, 0.5s, ease-in-out);
 }
 
 .inventory-item input.accordian:checked ~ .inventory-item-header i.la.la-angle-down {
-  @include transform (rotate(0.5turn));
+  @include transform(rotate(0.5turn));
 }
 
 .inventory-item .inventory-item-details form {
@@ -1633,7 +1633,7 @@ input[type="url"] {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
-  @include appearance (none);
+  @include appearance(none);
 }
 
 
@@ -1762,7 +1762,7 @@ input.email-address[type="email"].disabled {
   cursor: text;
   transform-origin: left bottom;
   white-space: nowrap;
-  @include transform (translate(0,1.5rem));
+  @include transform(translate(0,1.5rem));
 }
 
 input::placeholder {
@@ -1778,7 +1778,7 @@ input:focus::placeholder {
 .field input:not(:placeholder-shown) + label,
 .field input:focus + label {
   cursor: pointer;
-  @include transform (translate(0,0));
+  @include transform(translate(0,0));
 }
 
 
@@ -1794,7 +1794,7 @@ input:focus::placeholder {
   font-size: 1.5rem;
   color: $color-one;
   cursor: pointer;
-  @include transition (all, 0.25s, ease-in-out);
+  @include transition(all, 0.25s, ease-in-out);
 }
 
 .field .show-hide-password:hover,
@@ -1805,7 +1805,7 @@ input:focus::placeholder {
 .field.valid input {
   border-color: $valid;
   color: $valid;
-  @include transition (all, 0.25s, ease-in-out);
+  @include transition(all, 0.25s, ease-in-out);
 }
 
 .field.valid input:not(:placeholder-shown) + label,
@@ -1839,7 +1839,7 @@ input:focus::placeholder {
   font-size: 1.5rem;
   color: $valid;
   opacity: 0;
-  @include transition (all, 0.25s, ease-in-out);
+  @include transition(all, 0.25s, ease-in-out);
 }
 
 .field.valid span.valid {opacity: 1;}
@@ -1870,7 +1870,7 @@ span.error-message {
   color: $invalid;
   text-align: left;
   opacity: 0;
-  @include transition (all, 0.25s, ease-in-out);
+  @include transition(all, 0.25s, ease-in-out);
 }
 
 .field.invalid span.error-message {opacity: 1;}
@@ -1912,7 +1912,7 @@ span.error-message {
   border-radius: 0;
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
-  @include appearance (none);
+  @include appearance(none);
 }
 
 .field select {
@@ -2038,8 +2038,8 @@ input[type="radio"] {
   border-radius: 100%;
   background-color: $white;
   cursor: pointer;
-  @include appearance (none);
-  @include transition (all, 0.25s, ease-in-out);
+  @include appearance(none);
+  @include transition(all, 0.25s, ease-in-out);
 }
 
 input[type="radio"]:checked:before {
@@ -2104,7 +2104,7 @@ input.toggle[type="checkbox"] {
   border-color: transparent;
   border-radius: 2rem;
   background-color: $dark-gray;
-  @include transition (all, 0.25s, ease-in-out);
+  @include transition(all, 0.25s, ease-in-out);
 }
 
 input.toggle[type="checkbox"]:checked:before {display: none;}
@@ -2124,7 +2124,7 @@ input.toggle[type="checkbox"]:after {
   font-size: 1rem;
   background-color: white;
   content: "\f342";
-  @include transition (all, 0.25s, ease-in-out);
+  @include transition(all, 0.25s, ease-in-out);
 }
 
 input.toggle[type="checkbox"]:checked {

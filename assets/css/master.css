@@ -1102,12 +1102,7 @@ main {
   -moz-transition: all 1s ease-in-out 0s;
   -ms-transition: all 1s ease-in-out 0s;
   -o-transition: all 1s ease-in-out 0s;
-  transition: all 1s ease-in-out 0s;
-  -webkit-transform: scale(0);
-  -moz-transform: scale(0);
-  -ms-transform: scale(0);
-  -o-transform: scale(0);
-  transform: scale(0); }
+  transition: all 1s ease-in-out 0s; }
 
 .inventory-item.new {
   max-height: 0;
@@ -1125,35 +1120,32 @@ main {
   margin: 0 auto 1rem;
   padding: 1rem 0;
   opacity: 1;
-  -webkit-transition: all 1s ease-in-out 0s;
-  -moz-transition: all 1s ease-in-out 0s;
-  -ms-transition: all 1s ease-in-out 0s;
-  -o-transition: all 1s ease-in-out 0s;
-  transition: all 1s ease-in-out 0s; }
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  -moz-transition: all 0.5s ease-in-out 0s;
+  -ms-transition: all 0.5s ease-in-out 0s;
+  -o-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s; }
 
 .inventory-item.new.added.delete {
-  max-height: 0;
+  height: 0;
+  max-height: 0%;
   margin: 0;
   padding: 0;
+  border-color: none;
   opacity: 0;
-  -webkit-transform: translateX(110%);
-  -moz-transform: translateX(110%);
-  -ms-transform: translateX(110%);
-  -o-transform: translateX(110%);
-  transform: translateX(110%);
-  -webkit-transition: all 1s ease-in-out 0s;
-  -moz-transition: all 1s ease-in-out 0s;
-  -ms-transition: all 1s ease-in-out 0s;
-  -o-transition: all 1s ease-in-out 0s;
-  transition: all 1s ease-in-out 0s; }
+  -webkit-transition: all 0.5s ease-in-out 0s;
+  -moz-transition: all 0.5s ease-in-out 0s;
+  -ms-transition: all 0.5s ease-in-out 0s;
+  -o-transition: all 0.5s ease-in-out 0s;
+  transition: all 0.5s ease-in-out 0s; }
 
 .forms.new {
   margin-left: 0;
-  -webkit-transition: margin-left 1s ease-in-out 1s;
-  -moz-transition: margin-left 1s ease-in-out 1s;
-  -ms-transition: margin-left 1s ease-in-out 1s;
-  -o-transition: margin-left 1s ease-in-out 1s;
-  transition: margin-left 1s ease-in-out 1s; }
+  -webkit-transition: margin-left 0.5s ease-in-out 0s;
+  -moz-transition: margin-left 0.5s ease-in-out 0s;
+  -ms-transition: margin-left 0.5s ease-in-out 0s;
+  -o-transition: margin-left 0.5s ease-in-out 0s;
+  transition: margin-left 0.5s ease-in-out 0s; }
 
 .current-inventory {
   position: fixed;
