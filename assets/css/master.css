@@ -1173,7 +1173,6 @@ main {
   transition: top 0.4s ease-in-out 0s; }
 
 .release-inventory {
-  margin: 2rem auto;
   -webkit-transition: all 0.25s ease-in-out 0s;
   -moz-transition: all 0.25s ease-in-out 0s;
   -ms-transition: all 0.25s ease-in-out 0s;
@@ -1213,9 +1212,6 @@ main {
   -o-transition: all 0.25s ease-in-out 0s;
   transition: all 0.25s ease-in-out 0s; }
 
-.current-inventory.open .current-inventory-bar {
-  margin: 0 auto; }
-
 .current-inventory .current-inventory-bar h2 {
   display: flex;
   align-items: center;
@@ -1229,11 +1225,12 @@ main {
   font-family: "LineAwesome";
   font-size: 1.75rem;
   color: #ffffff;
-  -webkit-transition: transform 0.4s ease-in-out 0s;
-  -moz-transition: transform 0.4s ease-in-out 0s;
-  -ms-transition: transform 0.4s ease-in-out 0s;
-  -o-transition: transform 0.4s ease-in-out 0s;
-  transition: transform 0.4s ease-in-out 0s; }
+  opacity: 1;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  -ms-transition: all 0.4s ease-in-out 0s;
+  -o-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s; }
 
 .current-inventory.open .current-inventory-bar h2:after {
   -webkit-transform: rotate(0.5turn);
@@ -1244,7 +1241,7 @@ main {
 
 .current-inventory.release .current-inventory-bar h2:after,
 .current-inventory.release.open .current-inventory-bar h2:after {
-  display: none; }
+  opacity: 0; }
 
 .current-inventory .current-inventory-bar span.counter {
   display: flex;
@@ -1261,7 +1258,9 @@ main {
 
 @media (min-width: 48rem) {
   .current-inventory {
-    position: relative; } }
+    position: relative; }
+  .current-inventory .current-inventory-bar h2:after {
+    opacity: 0; } }
 
 .current-inventory-list {
   padding: 2rem 1rem 0; }

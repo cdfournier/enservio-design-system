@@ -1202,7 +1202,7 @@ main {
 }
 
 .release-inventory {
-  margin: 2rem auto;
+//   margin: 2rem auto;
   @include transition (all, 0.25s, ease-in-out);
 }
 
@@ -1239,10 +1239,6 @@ main {
   cursor: pointer;
   @include transition (all, 0.25s, ease-in-out);
 }
-	
-.current-inventory.open .current-inventory-bar {
-  margin: 0 auto;
-}
 
 .current-inventory .current-inventory-bar h2 {
   display: flex;
@@ -1258,7 +1254,8 @@ main {
   font-family: "LineAwesome";
   font-size: 1.75rem;
   color: $white;
-  @include transition(transform, 0.4s, ease-in-out);
+  opacity: 1;
+  @include transition(all, 0.4s, ease-in-out);
 }
 
 .current-inventory.open .current-inventory-bar h2:after {
@@ -1266,7 +1263,7 @@ main {
 }
 
 .current-inventory.release .current-inventory-bar h2:after,
-.current-inventory.release.open .current-inventory-bar h2:after {display: none;}
+.current-inventory.release.open .current-inventory-bar h2:after {opacity: 0;}
 
 .current-inventory .current-inventory-bar span.counter {
   display: flex;
@@ -1282,7 +1279,9 @@ main {
   background-color: $white;
 }
 
-@media (min-width: 48rem) {.current-inventory {position: relative;}}
+@media (min-width: 48rem) {
+.current-inventory {position: relative;}
+.current-inventory .current-inventory-bar h2:after {opacity: 0;}}
 
 
 // CURRENT INVENTORY LIST ITEMS

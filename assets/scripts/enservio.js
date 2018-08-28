@@ -58,7 +58,6 @@ $('.delay.four').click(function() {
 // CURRENT INVENTORY BAR BEHAVIOR
 $('.current-inventory-bar').click( function() {
   $('.current-inventory').toggleClass('open');
-//   $('.header--fixed').toggleClass('headroom--unpinned');
 });
 
 
@@ -82,6 +81,7 @@ $(window).scroll(function () {
     }
     else{
         $('.current-inventory').removeClass('release');
+        $('.current-inventory').removeClass('open');
     }
 });
 
