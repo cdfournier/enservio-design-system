@@ -31,6 +31,10 @@ body {
   100% {
     opacity: 1; } }
 
+body.lock {
+  position: fixed;
+  overflow: hidden; }
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1177,8 +1181,12 @@ main {
 
 .release-inventory.fixed {
   position: fixed;
-  top: 2rem;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   margin: 0;
+  padding: 0;
   height: 100%; }
 
 .current-inventory.release {
@@ -1188,10 +1196,12 @@ main {
   top: 0;
   overflow-y: scroll; }
 
+/*
 .current-inventory.release.open {
   top: inherit;
-  overflow-y: auto; }
-
+  overflow-y: auto;
+}
+*/
 .current-inventory .current-inventory-bar {
   display: flex;
   flex-direction: row;
