@@ -76,7 +76,10 @@ body {animation: 1s ease-out 0s 1 fadeIn;}
   }
 }
 
-body.lock {overflow: hidden;}
+body.lock {
+  position: fixed;
+  overflow: hidden;
+}
 
 * {
   -webkit-box-sizing: border-box;
