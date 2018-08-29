@@ -1,7 +1,7 @@
 // CURRENT INVENTORY BAR BEHAVIOR
 $('.current-inventory-bar').click( function() {
   $('.current-inventory').toggleClass('open');
-  $('body').toggleClass('lock');
+//   $('body').toggleClass('lock');
 });
 
 
