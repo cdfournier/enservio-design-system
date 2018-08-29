@@ -31,10 +31,6 @@ body {
   100% {
     opacity: 1; } }
 
-body.lock {
-  position: fixed;
-  overflow: hidden; }
-
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1182,7 +1178,8 @@ main {
 .release-inventory.fixed {
   position: fixed;
   top: 2rem;
-  margin: 0; }
+  margin: 0;
+  height: 100%; }
 
 .current-inventory.release {
   position: relative; }

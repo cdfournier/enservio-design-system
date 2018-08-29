@@ -76,11 +76,6 @@ body {animation: 1s ease-out 0s 1 fadeIn;}
   }
 }
 
-body.lock {
-  position: fixed;
-  overflow: hidden;
-}
-
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1218,6 +1213,7 @@ main {
   position: fixed;
   top: 2rem;
   margin: 0;
+  height: 100%;
 }
 
 .current-inventory.release {position: relative;}
