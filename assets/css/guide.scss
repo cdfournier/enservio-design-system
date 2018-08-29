@@ -207,6 +207,21 @@ footer ul li:last-child {padding: 0;}}
 .split .design-sample .button:nth-child(2n) {margin: 0 0 0 1rem;}}
 
 
+// DESIGN SAMPLE FORMS
+.split .design-sample form {padding: 2rem 0 0;}
+
+.split .design-sample form .field {padding: 0;}
+
+.split .design-sample form .field .show-hide-password {right: 0;}
+
+@media (min-width: 23.4375rem) {
+.split .design-sample form .field {padding: 0 1rem;}
+.split .design-sample form .field .show-hide-password {right: 1rem;}}
+
+@media (min-width: 48rem) {
+.split .design-sample form {padding: 2rem 1rem 0;}}
+
+
 // CODE SAMPLE
 .code-sample {
   display: flex;
@@ -284,7 +299,10 @@ footer ul li:last-child {padding: 0;}}
   text-transform: uppercase;
 }
 
-.color-cards .card .card-copy code {font-size: 0.694rem;}
+.color-cards .card .card-copy code {font-size: 0.575rem;}
+
+@media (min-width: 23.4375rem) {
+.color-cards .card .card-copy code {font-size: 0.694rem;}}
 
 @media (min-width: 48rem) {
 .color-cards {justify-content: flex-start;}

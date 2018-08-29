@@ -185,6 +185,25 @@ footer p {
   .split .design-sample .button:nth-child(2n) {
     margin: 0 0 0 1rem; } }
 
+.split .design-sample form {
+  padding: 2rem 0 0; }
+
+.split .design-sample form .field {
+  padding: 0; }
+
+.split .design-sample form .field .show-hide-password {
+  right: 0; }
+
+@media (min-width: 23.4375rem) {
+  .split .design-sample form .field {
+    padding: 0 1rem; }
+  .split .design-sample form .field .show-hide-password {
+    right: 1rem; } }
+
+@media (min-width: 48rem) {
+  .split .design-sample form {
+    padding: 2rem 1rem 0; } }
+
 .code-sample {
   display: flex;
   flex-direction: column;
@@ -272,7 +291,11 @@ footer p {
   text-transform: uppercase; }
 
 .color-cards .card .card-copy code {
-  font-size: 0.694rem; }
+  font-size: 0.575rem; }
+
+@media (min-width: 23.4375rem) {
+  .color-cards .card .card-copy code {
+    font-size: 0.694rem; } }
 
 @media (min-width: 48rem) {
   .color-cards {
