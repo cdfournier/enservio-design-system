@@ -79,6 +79,7 @@ body {animation: 1s ease-out 0s 1 fadeIn;}
 body.lock {
   position: fixed;
   overflow: hidden;
+  max-height: 100vh;
 }
 
 * {
@@ -1154,43 +1155,6 @@ main {
 .carousel .carousel-cell {padding: 0 6rem;}}
 
 
-// INVENTORY CAPTURE TRANSITIONS
-.inventory-capture.add {
-  @include transition(all, 1s, ease-in-out);
-}
-
-.inventory-item.new {
-  max-height: 0;
-  margin: 0;
-  padding: 0;
-  opacity: 0;
-  @include transition(all, 1s, ease-in-out, 0s);
-}
-
-.inventory-item.new.added {
-  max-height: 100%;
-  margin: 0 auto 1rem;
-  padding: 1rem 0;
-  opacity: 1;
-  @include transition(all, 0.5s, ease-in-out, 0s);
-}
-
-.inventory-item.new.added.delete {
-  height: 0;
-  max-height: 0%;
-  margin: 0;
-  padding: 0;
-  border-color: none;
-  opacity: 0;
-  @include transition(all, 0.5s, ease-in-out);
-}
-
-.forms.new {
-  margin-left: 0;
-  @include transition(margin-left, 0.5s, ease-in-out);
-}
-
-
 // CURRENT INVENTORY
 .current-inventory {
   position: fixed;
@@ -1217,9 +1181,6 @@ main {
 .release-inventory.fixed {
   position: fixed;
   top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
   margin: 0;
   padding: 0;
   height: 100%;
@@ -1231,13 +1192,6 @@ main {
   top: 0;
   overflow-y: scroll;
 }
-	
-/*
-.current-inventory.release.open {
-  top: inherit;
-  overflow-y: auto;
-}
-*/
 
 .current-inventory .current-inventory-bar {
   display: flex;
@@ -1312,6 +1266,12 @@ main {
   border: 1px solid $light-gray;
   border-radius: 0.25rem;
   background-color: $white;
+  @include transition(all, 0.5s, ease-in-out, 0s);
+  @include transform(translateY(-4.625rem));
+}
+
+.inventory-item.added {
+  @include transform(translateY(0));
 }
 
 .inventory-item:last-of-type {margin: 0 auto;}
@@ -1411,6 +1371,55 @@ main {
   width: 30%;
   padding: 0 0 0 1rem;
 }}
+
+
+// INVENTORY CAPTURE TRANSITIONS
+.forms {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0 auto;
+}
+
+.forms form#first, .forms form#second {
+  min-width: 100%;
+  @include transition(all, 0.5s, ease-in-out);
+}
+
+.forms form#second {
+  @include transform(translateX(-200%));
+}
+
+.forms.new form#first {
+  @include transform(translateX(100%));
+}
+
+.forms.new form#second {
+  @include transform(translateX(-100%));
+}
+
+.inventory-capture.add {
+  @include transition(all, 1s, ease-in-out);
+}
+
+.inventory-item.new {
+  @include transition(all, 1s, ease-in-out, 0s);
+  @include transform(translateX(-110%));
+}
+
+.inventory-item.new.added {
+  @include transition(all, 0.5s, ease-in-out, 0s);
+  @include transform(translateX(0));
+}
+
+.inventory-item.delete {
+  max-height: 0;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  @include transition(all, 1s, ease-in-out, 0s);
+}
 
 
 // HOME SCREEN

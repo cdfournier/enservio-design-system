@@ -1,11 +1,12 @@
 // CURRENT INVENTORY BAR BEHAVIOR
-$('.current-inventory-bar').click( function() {
+$('.current-inventory-bar').click(function() {
   $('.current-inventory').toggleClass('open');
 //   $('body').toggleClass('lock');
 });
 
 
 // PIN/UNPIN CURRENT INVENTORY BAR
+/*
 $.fn.isOnScreen = function () {
     var win = $(window);
     var viewport = {
@@ -28,9 +29,11 @@ $(window).scroll(function () {
         $('.current-inventory').removeClass('open');
     }
 });
+*/
 
 
 // STICK RELEASE-INVENTORY TO TOP
+/*
 $(window).scroll(function() {
     var distanceFromTop = $(this).scrollTop();
     if (distanceFromTop >= $('#create-inventory').height()) {
@@ -39,11 +42,20 @@ $(window).scroll(function() {
         $('.release-inventory').removeClass('fixed');
     }
 });
+*/
 
 
 // ADD ITEM TO INVENTORY ANIMATION
-$('.add-item').click( function() {
+$('.add-item').click(function() {
   $('#first.inventory-capture').addClass('add');
+  $('.inventory-item').addClass('added');
   $('.inventory-item.new').addClass('added');
   $('.forms').addClass('new');
+});
+
+
+// DELETE INVENTORY ITEM ANIMATION
+$('.yes-three').click(function() {
+  $('.inventory-item.new').removeClass('added');
+  $('.inventory-item.new').addClass('delete');
 });

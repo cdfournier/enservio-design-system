@@ -11,9 +11,6 @@ $('.click-three').click(function() {
 $('.no-three').click( function() {
   $('.expanding-button-box.three').removeClass('expand');
 });
-$('.yes-three').click( function() {
-  $('.inventory-item.new.added').addClass('delete');
-});
 $('.click-two').click(function() {
   $('.expanding-button-box.two').toggleClass('expand');
 });
