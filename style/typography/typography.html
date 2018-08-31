@@ -61,14 +61,15 @@
             <p>Typography also has both a vertical and horizontal rhythm to help improve readability. The 1.200 Minor Third type scale also provides us with the line height we need.</p>
           </article>
           <article>
-            <h2>Line Width</h2>
-            <p>In a fluid layout, browser width and typographic measure are linked: the wider the viewport, the more characters per line. Keeping in mind that a range of 45-75 characters per line is generally accepted as safe for comfortable reading, there are a couple of things that can be done to avoid extra long lines of text in fluid layouts. The first thing we do is control the width of a container (whether for the entire site or just a column of text). We can test our container width by dropping some lorem text into the layout with two asterisks. The first marks the 45th character, and the second marks the 75th. See below at various widths.</p>
+            <h2>Line Length</h2>
+            <p>In a fluid layout, browser width and typographic measure are linked: the wider the viewport, the more characters per line. Keeping in mind that a range of 45-75 characters per line is generally accepted as safe for comfortable reading, there are a couple of things that can be done to avoid extra long lines of text in fluid layouts.</p>
+            <p>The first thing we do is control the width of a container. We can test our container width by dropping some lorem text into the layout with two asterisks. The first marks the 45th character, and the second marks the 75th. See below at various widths.</p>
             <p style="font-weight: 500;">Lorem ipsum dolor sit amet, consectetur adip*isicing elit, sed do eiusmod *tempor incididunt ut labore et dolore magna aliqua.</p>
-            <p>If at any point the two asterisks appear on the same line of text, we know it’s time to increase the font size. These adjustments are easy (usually 1 CSS property) because we've used relative (not pixel) units in our CSS.</p>
+            <p>If at any point the two asterisks appear on the same line of text, we know it’s time to either decrease the width of the container or increase the font size.</p>
             </article>
           <article>
             <h2>Relative Units</h2>
-            <p>The other thing we can do is control the size of the type. As indicated above, we've chosen a 1.200 Minor Third type scale for our typography. This gives us our font size settings, but we are able to influence the entire layout by setting a base font size on the <code>&lt;body&gt;</code> element. We've extended our flexibility by using <code>calc</code> to set the <code>&lt;body&gt;</code> font size. This creates a flexible value that is based on the width of the viewport. Lastly, the rest of the typography system is set using the <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units" target="_blank">rem relative unit</a>. This is a first small step to making sure that our designs are relative to font or viewport size, meaning that the layout will stay looking correct if for example the text size is doubled across the whole website by a visually impaired user.</p>
+            <p>The typography for the design system is set using the <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units" target="_blank">rem relative unit</a>. This helps to ensure that our designs are relative to font or viewport size, meaning that the layout will continue to look correct even if the user drastically increases or decreases the font size via their browser.</p>
           </article>
         </div>
         <div class="split last">
@@ -85,7 +86,7 @@
           <div class="code-sample">
             <div class="notes" style="padding: 0;">
               <figcaption>Notes</figcaption>
-              <p>Note that every effort has been made to reduce the number of variants on this typography system. Do we have unordered lists without bullets? Yes. Has spacing been adjusted to accommodate specific layout requirements. In some cases. However, our objective and prime directive is to keep things simple and try to avoid creating customized typography for each obstacle encountered.</p>
+              <p>Note that every effort has been made to reduce the number of variants in this typography system. Do we have unordered lists without bullets? Yes. Has spacing been adjusted to accommodate specific layout requirements? In some cases. However, our objective and prime directive is to keep things simple and try to avoid creating customized typography for each obstacle encountered.</p>
             </div>
           </div>
         </div>
@@ -98,7 +99,6 @@
         <li><a href="../../style/style.html">Style</a></li>
         <li><a href="../../atoms/atoms.html">Atoms</a></li>
         <li><a href="../../molecules/molecules.html">Molecules</a></li>
-        <li><a href="../../transitions/transitions.html">Transitions</a></li>
         <li><a href="../../demo/pages.html">Pages</a></li>
       </ul>
       <p>&copy;2018 Enservio, Inc. All rights reserved. <span class="tag">v.1.1</span></p>
