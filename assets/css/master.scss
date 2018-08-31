@@ -1243,7 +1243,10 @@ main {
 }
 
 @media (min-width: 48rem) {
-.current-inventory {position: relative;}
+.current-inventory {
+  position: relative;
+  top: inherit;
+}
 .current-inventory .current-inventory-bar h2:after {opacity: 0;}}
 
 
