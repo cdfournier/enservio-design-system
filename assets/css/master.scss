@@ -420,6 +420,8 @@ button,
   @include transition(all, 0.25s, ease-in-out);
 }
 
+button.none, .button.none {display: none;}
+
 @media (min-width: 48rem) {button, .button {margin: 0 0.5rem 0;}}
 
 button span.pre, .button span.pre,
@@ -1467,6 +1469,8 @@ main {
 }
 .claim-details.items, .claim-details.attachments {display: flex;}}
 
+
+// CARDS
 .cards {
   display: flex;
   flex-direction: column;
@@ -1512,9 +1516,24 @@ main {
   padding: 0 1rem 1rem;  
 }
 
+.card .card-copy span.status {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 2.25rem;
+  margin: 1rem auto 0;
+  font-size: 0.833rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.card .card-copy span.status.disabled {display: none;}
+
 @media (min-width: 48rem) {
 .cards {
   flex-direction: row;
+  align-items: flex-start;
   justify-content: flex-start;
 }
 .card {

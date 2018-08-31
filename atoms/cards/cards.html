@@ -21,7 +21,7 @@
           <h1>Cards</h1>
           <p>Currently used on the <a href="../../demo/home/home/index.html">Home</a> page, Cards are an efficient way to present users with their navigation options on a more grand scale.</p>
         </div>
-        <div class="split wide last">
+        <div class="split wide">
           <div class="design-sample">
             <figcaption>Design Sample</figcaption>
             <div class="cards">
@@ -31,7 +31,8 @@
                 </div>
                 <div class="card-copy">
                   <h2 class="center">Inventory</h2>
-                  <a href="#!" class="button color-one" style="margin: 1rem auto 0;">Continue</a>
+                  <span class="status disabled">Pending Review</span>
+                  <a href="#!" class="button color-one" style="margin: 1rem auto 0";>Continue</a>
                 </div>
               </div>
               <div class="card">
@@ -40,7 +41,8 @@
                 </div>
                 <div class="card-copy">
                   <h2 class="center">Receipts</h2>
-                  <a href="#!" class="button color-one" style="margin: 1rem auto 0;">More</a>
+                  <span class="status disabled">No Action Required</span>
+                  <a href="#!" class="button color-one" style="margin: 1rem auto 0";>More</a>
                 </div>
               </div>
               <div class="card">
@@ -49,6 +51,7 @@
                 </div>
                 <div class="card-copy">
                   <h2 class="center">Payments</h2>
+                  <span class="status disabled">No Action Required</span>
                   <a href="#!" class="button color-one" style="margin: 1rem auto 0";>More</a>
                 </div>
               </div>
@@ -60,29 +63,72 @@
 <pre><code>&lt;div class=&quot;cards&quot;&gt;
   &lt;div class=&quot;card&quot;&gt;
     &lt;div class=&quot;card-graphic contents&quot;&gt;
-      &lt;img src=&quot;../../../assets/images/contents.png&quot; alt=&quot;Contents icon&quot;&gt;
+      &lt;img src=&quot;../../assets/images/contents.png&quot; alt=&quot;Contents icon&quot;&gt;
     &lt;/div&gt;
     &lt;div class=&quot;card-copy&quot;&gt;
-      &lt;h2&gt;Inventory&lt;/h2&gt;
-      &lt;a href=&quot;../../inventory/capture/index.html&quot; class=&quot;button color-one&quot;&gt;Continue&lt;/a&gt;
+      &lt;h2 class=&quot;center&quot;&gt;Inventory&lt;/h2&gt;
+      &lt;span class=&quot;status disabled&quot;&gt;Pending Review&lt;/span&gt;
+      &lt;a href=&quot;#!&quot; class=&quot;button color-one&quot;&gt;Continue&lt;/a&gt;
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&quot;card&quot;&gt;
     &lt;div class=&quot;card-graphic receipts&quot;&gt;
-      &lt;img src=&quot;../../../assets/images/receipts.png&quot; alt=&quot;Receipt icon&quot;&gt;
+      &lt;img src=&quot;../../assets/images/receipts.png&quot; alt=&quot;Receipt icon&quot;&gt;
     &lt;/div&gt;
     &lt;div class=&quot;card-copy&quot;&gt;
-      &lt;h2&gt;Receipts&lt;/h2&gt;
+      &lt;h2 class=&quot;center&quot;&gt;Receipts&lt;/h2&gt;
+      &lt;span class=&quot;status disabled&quot;&gt;No Action Required&lt;/span&gt;
       &lt;a href=&quot;#!&quot; class=&quot;button color-one&quot;&gt;More&lt;/a&gt;
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class=&quot;card&quot;&gt;
     &lt;div class=&quot;card-graphic payments&quot;&gt;
-      &lt;img src=&quot;../../../assets/images/payments.png&quot; alt=&quot;Payments icon&quot;&gt;
+      &lt;img src=&quot;../../assets/images/payments.png&quot; alt=&quot;Payments icon&quot;&gt;
     &lt;/div&gt;
     &lt;div class=&quot;card-copy&quot;&gt;
-      &lt;h2&gt;Payments&lt;/h2&gt;
-      &lt;a href=&quot;../../payments/setup/index.html&quot; class=&quot;button color-one&quot;&gt;More&lt;/a&gt;
+      &lt;h2 class=&quot;center&quot;&gt;Payments&lt;/h2&gt;
+      &lt;span class=&quot;status disabled&quot;&gt;No Action Required&lt;/span&gt;
+      &lt;a href=&quot;#!&quot; class=&quot;button color-one&quot;&gt;More&lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </figure>
+          </div>
+        </div>
+      </section>
+      <section id="cards-no-action">
+        <div class="text guide">
+          <h2>No Action Required</h2>
+          <p>For those situations where a user returns to the home page but no current actions are required, we display their current status in a &lt;span&gt; in place of the card button.</p>
+        </div>
+        <div class="split wide last">
+          <div class="design-sample">
+            <figcaption>Design Sample</figcaption>
+            <div class="cards">
+              <div class="card">
+                <div class="card-graphic contents">
+                  <img src="../../assets/images/contents.png" alt="Contents icon">
+                </div>
+                <div class="card-copy">
+                  <h2 class="center">Inventory</h2>
+                  <span class="status">Pending Review</span>
+                  <a href="#!" class="button color-one none" style="margin: 1rem auto 0";>Continue</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="code-sample">
+            <figure>
+              <figcaption>html</figcaption>
+<pre><code>&lt;div class=&quot;cards&quot;&gt;
+  &lt;div class=&quot;card&quot;&gt;
+    &lt;div class=&quot;card-graphic contents&quot;&gt;
+      &lt;img src=&quot;../../assets/images/contents.png&quot; alt=&quot;Contents icon&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;card-copy&quot;&gt;
+      &lt;h2 class=&quot;center&quot;&gt;Inventory&lt;/h2&gt;
+      &lt;span class=&quot;status&quot;&gt;Pending Review&lt;/span&gt;
+      &lt;a href=&quot;#!&quot; class=&quot;button color-one none&quot;&gt;Continue&lt;/a&gt;
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;</code></pre>
