@@ -127,7 +127,7 @@ ol {
 
 ul li, ol li {
   width: 100%;
-  padding: 0 0 1rem 0.5rem; }
+  padding: 0 0 1rem 0; }
 
 ul li:last-child, ol li:last-child {
   padding: 0; }
