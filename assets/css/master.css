@@ -806,8 +806,8 @@ header {
 
 @media (min-width: 35.5rem) {
   header {
-    flex-direction: row;
-    align-items: flex-end;
+    flex-direction: row-reverse;
+    align-items: center;
     justify-content: center; } }
 
 .logo {
@@ -825,33 +825,37 @@ nav {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-around;
     width: 100%;
     margin: 0;
-    padding: 0 0 1rem;
+    padding: 1rem 0 0 0;
     list-style-type: none; }
-  nav li {
+  nav ul li {
+    width: auto;
+    padding: 0 0 0 0; }
+  nav ul li a {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: initial;
     margin: 0;
-    padding: 0 0.694rem 0 0;
+    padding: 0;
     font-size: 0.694rem;
     text-align: center;
     text-transform: uppercase;
     opacity: 1; }
-  nav li a {
+  nav ul li a:last-child {
     padding: 0; }
+  nav ul li a span {
+    font-size: 1.44rem;
+    line-height: 1; }
 
 @media (min-width: 35.5rem) {
-  nav {
+  nav ul {
+    justify-content: flex-start;
     padding: 0; }
   nav ul li {
-    padding: 0 1rem 0 0;
-    font-size: 0.833rem; }
-  nav ul li:last-child {
-    padding: 0; } }
+    padding: 0 1.44rem 0 0; } }
 
 span.back {
   position: absolute;
@@ -888,7 +892,7 @@ main {
   flex-direction: column;
   justify-content: center;
   margin: 0;
-  padding: 4.03rem 0 0; }
+  padding: 6.3425rem 0 0; }
 
 .text {
   display: block;
