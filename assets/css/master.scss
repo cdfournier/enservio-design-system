@@ -1151,7 +1151,12 @@ main {
 
 @media (min-width: 48rem) {
 .carousel {margin: 0 auto 2rem;}
-.carousel .flickity-prev-next-button {display: block;}
+.carousel .flickity-prev-next-button {
+  display: block;
+  min-width: inherit;
+  max-height: inherit;
+  padding: 0;
+}
 .carousel .carousel-cell {padding: 0 6rem;}}
 
 
