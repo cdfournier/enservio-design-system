@@ -13,19 +13,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="../../../assets/css/master.css">
     <style>
-      .button-box.desktop {
-        display: none;
-        position: absolute;
-        top: 0;
-        right: 1rem;
-        width: auto;
-      }
       footer {padding: 2rem 2rem 9rem;}
-      @media (min-width: 48rem) {
-        .button-box.mobile {display: none;}
-        .button-box.desktop {display: flex;}
-        footer {padding: 2rem;}
-      }
+      @media (min-width: 48rem) {footer {padding: 2rem;}}
     </style>
   </head>
   <body>
@@ -66,10 +55,7 @@
       <section id="create-inventory">
         <div class="text first">
           <h1>Your Inventory List</h1>
-          <p>Please complete the form below to add items to your claim.</p>
-          <div class="button-box left desktop">
-            <a href="../processing-a/index.html" class="button secondary color-one">Submit Inventory<span class="post-processing"><i class="la la-refresh la-spin"></i></span></a>
-          </div>
+          <p>Please complete the form below to add items to your claim. When you are finished adding items, click the <a href="#submit-button">Submit Inventory</a> button below.</p>
         </div>
         <div class="forms">
           <form>
@@ -137,11 +123,9 @@
             <div class="button-box left">
               <span class="button color-one add-item">Add Item To Inventory</span>
               <a href="../attachments/index.html" class="button color-two">Add Attachments<span class="post"><i class="la la-paperclip"></i></span></a>
+              <a id="submit-button" href="../processing-a/index.html" class="button secondary color-one">Submit Inventory<span class="post-processing"><i class="la la-refresh la-spin"></i></span></a>
             </div>
           </form>
-        </div>
-        <div class="button-box left mobile">
-          <a href="../processing-a/index.html" class="button secondary color-one">Submit Inventory<span class="post-processing"><i class="la la-refresh la-spin"></i></span></a>
         </div>
       </section>
       <div class="release-inventory"></div>
@@ -362,9 +346,14 @@
         </div>
       </section>
       <section id="help">
-        <div class="text">
+        <div class="action text">
+          <div class="text">
           <h1>Need some help?</h1>
           <p>Flip back through the instructions that preceded this page. Your stuff will still be here when you get back.</p>
+          </div>
+          <div class="button-box right">
+            <a href="../help/index.html" class="button secondary color-two">View Help</a>
+          </div>          
         </div>
       </section>
     </main>

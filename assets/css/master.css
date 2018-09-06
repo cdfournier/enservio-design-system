@@ -929,6 +929,31 @@ main {
 .text.left {
   margin: 0; }
 
+.action.text {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 2rem 0; }
+
+.action.text .text {
+  padding: 0; }
+
+.action.text .button-box {
+  width: inherit; }
+
+@media (min-width: 48rem) {
+  .action.text {
+    flex-direction: row;
+    align-items: center; }
+  .action.text .text {
+    width: 200%; }
+  .action.text .button-box.right {
+    margin: 0 0 0 1rem; }
+  .action.text .button-box.left {
+    margin: 0 1rem 0 0; } }
+
 .alerts {
   position: absolute; }
 
@@ -1498,6 +1523,9 @@ main {
   width: 100%;
   margin: 1rem 0 0;
   padding: 0 1rem 1rem; }
+
+.card .card-copy .button {
+  margin: 1rem auto 0; }
 
 .card .card-copy span.status {
   display: flex;
