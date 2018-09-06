@@ -98,6 +98,8 @@ ul.contents li {width: calc(100% / 2.25);}}
 
 
 // GUIDE FOOTER NAV
+footer {align-items: flex-start;}
+
 footer ul {
   display: flex;
   flex-direction: row;
