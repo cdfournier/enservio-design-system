@@ -1,18 +1,10 @@
 html {
   font-family: "Montserrat", sans-serif;
-  font-size: calc(1rem + 0.125vw);
+  font-size: calc(1rem + 0.5vw);
   font-style: normal;
   font-weight: 300;
   line-height: 1.2;
   color: #000000; }
-
-@media (min-width: 48rem) {
-  html {
-    font-size: calc(1rem + 0.25vw); } }
-
-@media (min-width: 64rem) {
-  html {
-    font-size: calc(1rem + 0.5vw); } }
 
 body {
   display: flex;
