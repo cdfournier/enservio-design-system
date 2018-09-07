@@ -1444,6 +1444,8 @@ main {
 .claim {
   display: block;
   width: 100%;
+  max-width: 24rem;
+  margin: 0 auto;
   padding: 2rem 2rem 0;
 }
 
@@ -1521,6 +1523,7 @@ main {
 .claim-details .details span.claim-data {font-weight: 500;}
 
 @media (min-width: 30rem) {
+.claim {max-width: none;}
 .claim-information {
   flex-direction: row;
   flex-wrap: wrap;

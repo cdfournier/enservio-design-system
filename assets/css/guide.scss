@@ -162,7 +162,9 @@ footer span {
 
 // DESIGN SAMPLE TRIGGER BUTTONS
 .split .design-sample .button {margin: 0;}
-.split .design-sample .button:nth-child(2n) {margin: 1rem 0 0;}
+
+.split .design-sample .button:nth-child(2n),
+.split .design-sample .button:nth-child(3n) {margin: 1rem 0 0;}
 
 .split .design-sample .button-box {padding: 1rem 0 0;}
 
@@ -175,7 +177,8 @@ footer span {
 }
 
 @media (min-width: 48rem) {
-.split .design-sample .button:nth-child(2n) {margin: 0 0 0 1rem;}}
+.split .design-sample .button:nth-child(2n) {margin: 0 0 0 1rem;}
+.split .design-sample .button:nth-child(3n) {margin: 0 0 0 1rem;}}
 
 
 // DESIGN SAMPLE FORMS
@@ -237,7 +240,7 @@ footer span {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  width: 45%;
+  width: 47%;
   margin: 0 0 2rem;
   border: 1px solid $light-gray;
   border-radius: 0.25rem;
