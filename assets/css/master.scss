@@ -769,11 +769,20 @@ span.button.upload input[type="file"] {
 }
 
 
+// INVENTORY SUBMIT BUTTON
+@media (min-width: 48rem) {
+.button.submit {
+  position: absolute;
+  right: 0;
+}}
+
+
 // BUTTON BOX/ROW CONTAINER
 .button-box {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
   width: 100%;
   margin: 0;
   padding: 0;

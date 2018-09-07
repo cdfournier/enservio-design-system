@@ -700,10 +700,16 @@ span.button.upload input[type="file"] {
   opacity: 0;
   cursor: pointer; }
 
+@media (min-width: 48rem) {
+  .button.submit {
+    position: absolute;
+    right: 0; } }
+
 .button-box {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
   width: 100%;
   margin: 0;
   padding: 0; }
