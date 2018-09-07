@@ -3,7 +3,7 @@ main {
 
 @media (min-width: 48rem) {
   .text.guide {
-    max-width: 54%;
+    max-width: 40rem;
     margin: 0; }
   .text.guide.wide {
     width: 100%;
