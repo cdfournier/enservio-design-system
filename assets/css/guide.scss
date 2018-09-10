@@ -37,8 +37,13 @@ main {padding: 0;}
 p {line-height: 2;}
 
 p.lede {
-  padding: 0 0 0.694rem;
+  padding: 0;
   font-weight: 400;
+}
+
+h1 + p.lede {
+  padding: 0.694rem 0;
+  font-weight: 300;
 }
 
 p code {
@@ -53,10 +58,7 @@ p code {
 }
 
 @media (min-width: 48rem) {
-p.lede {
-  font-size: 1.2rem;
-  font-weight: 300;
-}}
+p.lede {font-size: 1.1rem;}}
 
 
 // CONTENTS LIST
