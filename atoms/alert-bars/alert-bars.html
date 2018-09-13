@@ -25,6 +25,18 @@
           <span class="dismiss error"><i class="la la-times-circle"></i></span>
         </div>
       </div>
+      <div class="alert-bar confirm">
+        <div class="alert-bar-details">
+          <span><i class="la la-exclamation-circle"></i></span>
+          <div class="alert-bar-message">
+            <span>You have unsaved changes. If you continue, these changes will be lost. Do you want to continue?</span>
+          </div>
+          <span class="confirm-action-box">
+            <span class="confirm-action secondary dismiss confirm">No</span>
+            <span class="confirm-action dismiss confirm">Yes</span>
+          </span>
+        </div>
+      </div>
       <div class="alert-bar success">
         <div class="alert-bar-details">
           <div class="alert-bar-message">
@@ -55,10 +67,13 @@
               <span class="button color-one show-error">Show Error Alert</span>
             </div>
             <div class="button-box left">
-              <span class="button secondary color-one show-success">Show Success Alert</span>
+              <span class="button secondary color-one show-confirm">Show Confirm Alert</span>
             </div>
             <div class="button-box left">
-              <span class="button color-two show-system">Show System Alert</span>
+              <span class="button color-two show-success">Show Success Alert</span>
+            </div>
+            <div class="button-box left">
+              <span class="button secondary color-two show-system">Show System Alert</span>
             </div>
             <div class="notes">
               <figcaption>Notes</figcaption>

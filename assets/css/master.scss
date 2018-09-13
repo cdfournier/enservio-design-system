@@ -1066,13 +1066,14 @@ main {
   @include transform(translateY(-20rem));
 }
 
-.alert-bar.error {background-color: $invalid;}
+.alert-bar.error, .alert-bar.confirm {background-color: $invalid;}
 
 .alert-bar.success {background-color: $valid;}
 
 .alert-bar.system {background-color: $color-one;}
 
 .alert-bar.error.show,
+.alert-bar.confirm.show,
 .alert-bar.success.show,
 .alert-bar.system.show {@include transform(translateY(0));}
 
@@ -1108,6 +1109,63 @@ main {
 @media (min-width: 48rem) {
 .alert-bar .alert-bar-details {padding: 2rem;}
 .alert-bar .alert-bar-details .alert-bar-message span {font-size: 1.2rem;}}
+
+
+// ALERT BAR ACTION BOX SETTINGS
+.alert-bar .alert-bar-details .confirm-action-box {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 0 0 1rem;
+  font-size: 0.694rem;
+  font-weight: 500;
+  line-height: 0;
+  text-transform: uppercase;
+  color: $white;
+  opacity: 1;
+  @include transition(all, 0.25s, ease-in-out);
+}
+
+/*
+.alert-bar .alert-bar-details .confirm-action-box span.confirm-action-text {
+  display: inline-flex;
+  width: max-content;
+  font-size: 0.833rem;
+}
+*/
+
+.alert-bar .alert-bar-details .confirm-action-box span.confirm-action {
+  padding: 0.675rem 0.75rem;
+  border-radius: 4rem;
+  font-size: 0.833rem;
+  @include transition(all, 0.25s, ease-in-out);
+}
+
+.alert-bar .alert-bar-details .confirm-action-box span.confirm-action {
+  margin: 0 0 0 1rem;
+  border: 1px solid $white;
+  color: $invalid;
+  background-color: $white;
+}
+
+.alert-bar .alert-bar-details .confirm-action-box span.confirm-action:hover,
+.alert-bar .alert-bar-details .confirm-action-box span.confirm-action:focus {
+  color: $white;
+  background-color: $invalid;
+}
+
+.alert-bar .alert-bar-details .confirm-action-box span.confirm-action.secondary {
+  margin: 0;
+  border: 1px solid $white;
+  color: $white;
+  background-color: $invalid;
+}
+
+.alert-bar .alert-bar-details .confirm-action-box span.confirm-action.secondary:hover,
+.alert-bar .alert-bar-details .confirm-action-box span.confirm-action.secondary:focus {
+  color: $invalid;
+  background-color: $white;
+}
+
 
 
 // TIMEOUT

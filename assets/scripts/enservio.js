@@ -61,6 +61,12 @@ $('.show-error').click( function() {
 $('.dismiss.error').click( function() {
   $('.alert-bar.error').removeClass('show');
 });
+$('.show-confirm').click( function() {
+  $('.alert-bar.confirm').addClass('show');
+});
+$('.dismiss.confirm').click( function() {
+  $('.alert-bar.confirm').removeClass('show');
+});
 $('.show-success').click( function() {
   $('.alert-bar.success').addClass('show');
   setTimeout(function() { 
