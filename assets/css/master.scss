@@ -1043,14 +1043,18 @@ main {
 
 .action.text .text {padding: 0;}
 
-.action.text .button-box {width: inherit;}
+.action.text .button-box {width: auto;}
 
 @media (min-width: 48rem) {
 .action.text {
   flex-direction: row;
   align-items: center;
+  justify-content: space-around;
 }
-.action.text .text {width: 200%;}
+.action.text .text {
+  width: auto;
+  margin: 0;
+}
 .action.text .button-box.right {margin: 0 0 0 1rem;}
 .action.text .button-box.left {margin: 0 1rem 0 0;}}
 
@@ -1602,7 +1606,9 @@ main {
   width: initial;
   padding: 0 4rem 0 0;
 }
-.claim-details.items, .claim-details.attachments {display: flex;}}
+.claim-details.items {display: flex;}}
+
+@media (min-width: 64rem) {.claim-details.attachments {display: flex;}}
 
 
 // CARDS
