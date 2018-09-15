@@ -1,7 +1,7 @@
 main {
   padding: 0; }
 
-@media (min-width: 46rem) {
+@media (min-width: 48rem) {
   .text.guide {
     max-width: 40rem;
     margin: 0; }
@@ -36,7 +36,7 @@ p code {
   background-color: rgba(206, 206, 206, 0.25);
   white-space: nowrap; }
 
-@media (min-width: 46rem) {
+@media (min-width: 48rem) {
   p.lede {
     font-size: 1.1rem; } }
 
@@ -73,7 +73,7 @@ ul.contents li a {
   padding: 0;
   text-transform: uppercase; }
 
-@media (min-width: 46rem) {
+@media (min-width: 48rem) {
   ul.contents {
     flex-direction: row;
     flex-wrap: wrap;
@@ -114,7 +114,7 @@ footer span {
 .split.last:after {
   display: none; }
 
-@media (min-width: 46rem) {
+@media (min-width: 48rem) {
   .split {
     flex-direction: row; }
   .split.wide {
@@ -129,7 +129,7 @@ footer span {
 .design-sample.first {
   padding: 0 2rem; }
 
-@media (min-width: 46rem) {
+@media (min-width: 48rem) {
   .design-sample {
     width: 50%;
     padding: 0 1rem 2rem 0; }
@@ -158,7 +158,7 @@ footer span {
 .split .design-sample ul.attachment-list li .line-item .button-box {
   padding: 0; }
 
-@media (min-width: 46rem) {
+@media (min-width: 48rem) {
   .split .design-sample .button:nth-child(2n) {
     margin: 0 0 0 1rem; }
   .split .design-sample .button:nth-child(3n) {
@@ -200,7 +200,7 @@ footer span {
 .split.wide.last .code-sample {
   padding: 0; }
 
-@media (min-width: 46rem) {
+@media (min-width: 48rem) {
   .code-sample {
     width: 50%;
     padding: 0 0 2rem 1rem; }
@@ -283,7 +283,7 @@ footer span {
   .color-cards .card .card-copy code {
     font-size: 0.694rem; } }
 
-@media (min-width: 46rem) {
+@media (min-width: 48rem) {
   .color-cards {
     justify-content: flex-start; }
   .color-cards .card {
@@ -355,7 +355,7 @@ code {
   background-color: rgba(206, 206, 206, 0.25);
   white-space: nowrap; }
 
-@media (min-width: 46rem) {
+@media (min-width: 48rem) {
   .notes {
     overflow: hidden; }
   .notes.wide {
