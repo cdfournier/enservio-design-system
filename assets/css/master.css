@@ -981,12 +981,17 @@ main {
     align-items: center;
     justify-content: space-around; }
   .action.text .text {
-    width: auto;
     margin: 0; }
+  .action.text .button-box {
+    width: 100%; }
   .action.text .button-box.right {
     margin: 0 0 0 1rem; }
   .action.text .button-box.left {
     margin: 0 1rem 0 0; } }
+
+@media (min-width: 64rem) {
+  .action.text .button-box {
+    width: 60%; } }
 
 .alerts {
   position: absolute; }
