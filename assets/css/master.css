@@ -415,7 +415,7 @@ button span.post-number,
 button span.post-processing,
 .button span.post-processing {
   max-width: 0;
-  margin: -0.0525rem 0 0 0.25rem;
+  margin: 0;
   padding: 0;
   font-size: 1rem;
   opacity: 0;
@@ -428,6 +428,7 @@ button span.post-processing,
 button span.post-processing.active,
 .button span.post-processing.active {
   max-width: 100%;
+  margin: -0.0525rem 0 0 0.25rem;
   padding: 0 0 0 0.5rem;
   opacity: 1; }
 
@@ -720,15 +721,20 @@ span.button.upload input[type="file"] {
   opacity: 0;
   cursor: pointer; }
 
-@media (min-width: 48rem) {
+.button.submit {
+  margin: 1rem 0 0; }
+
+@media (min-width: 64rem) {
   .button.submit {
     position: absolute;
-    right: 0; } }
+    right: 0;
+    margin: 0; } }
 
 .button-box {
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-wrap: wrap;
   position: relative;
   width: 100%;
   margin: 0;
@@ -754,7 +760,7 @@ span.button.upload input[type="file"] {
     justify-content: flex-start; }
   .button-box.left .button,
   .button-box.left .expanding-button-box {
-    margin: 0 1rem 0 0; }
+    margin: 0 1rem 1rem 0; }
   form .button-box {
     padding: 0 1rem; } }
 
