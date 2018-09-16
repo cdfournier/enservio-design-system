@@ -87,7 +87,8 @@ footer {
 footer span {
   display: flex;
   flex-direction: row;
-  align-items: center; }
+  align-items: center;
+  line-height: 1.5; }
 
 .split {
   display: flex;
