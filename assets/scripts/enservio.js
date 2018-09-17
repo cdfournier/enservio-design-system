@@ -87,7 +87,7 @@ $('.dismiss.system').click( function() {
 
 // SHOW/HIDE PASSWORDS
 $(".show-hide-password").click(function() {
-  $(this).toggleClass("la-eye la-eye-slash");
+  $(this).toggleClass("la-eye-slash la-eye");
   var input = $($(this).attr("toggle"));
   if (input.attr("type") == "password") {
     input.attr("type", "text");

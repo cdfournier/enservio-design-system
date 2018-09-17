@@ -178,7 +178,10 @@ footer span {
   padding: 0 0 0 1rem; }
 
 .split .design-sample form .field .show-hide-password {
-  right: 2rem; }
+  right: 1rem; }
+
+.split .design-sample form .field.valid .show-hide-password {
+  right: 2.5rem; }
 
 @media (min-width: 23.4375rem) {
   .split .design-sample form .field {

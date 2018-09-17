@@ -1928,9 +1928,9 @@ input:focus::placeholder {
   display: block;
   position: absolute;
   top: 1.5rem;
-  right: 2rem;
+  right: 1rem;
   z-index: 15;
-  width: 1.5rem;
+  width: auto;
   height: 1.75rem;
   font-size: 1.5rem;
   color: $color-one;
@@ -1992,10 +1992,15 @@ input:focus::placeholder {
 
 .field.valid span.valid.password {
   top: 1.5rem;
-  right: 3rem;
+  right: 1rem;
+  padding: 0;
+  font-size: 1.25rem;
 }
 
-.field.valid .show-hide-password {color: $valid;}
+.field.valid .show-hide-password {
+  right: 2.5rem;
+  color: $valid;
+}
 
 
 // INVALID INPUT SETTINGS
