@@ -16,7 +16,7 @@ html {
   html {
     font-size: 1.25rem; } }
 
-body {
+body, .body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1876,6 +1876,14 @@ input:focus::placeholder {
   -o-transform: translate(0, 0);
   transform: translate(0, 0); }
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .field input {
+    min-height: 3rem; }
+  .field input:placeholder-shown + label {
+    transform: translate(0, 0); }
+  input:-ms-input-placeholder {
+    opacity: 1; } }
+
 .field .show-hide-password {
   display: block;
   position: absolute;
@@ -2071,6 +2079,12 @@ span.error-message {
 
 .field select:disabled + .select-icon {
   color: #cccece; }
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .field select {
+    padding: 0; }
+  .field .select-icon {
+    display: none; } }
 
 input[type="checkbox"] {
   position: absolute;

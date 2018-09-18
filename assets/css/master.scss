@@ -54,7 +54,7 @@ html {font-size: calc(1rem + 6 * ((100vw - 20rem) / 680))}}
 @media screen and (min-width: 1000px) {
 html {font-size: 1.25rem;}}
 
-body {
+body, .body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -1920,6 +1920,11 @@ input:focus::placeholder {
   @include transform(translate(0,0));
 }
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+.field input {min-height: 3rem;}
+.field input:placeholder-shown + label {transform: translate(0,0);}
+input:-ms-input-placeholder {opacity: 1;}}
+
 
 // SHOW/HIDE PASSWORD SETTINGS
 .field .show-hide-password {
@@ -2104,6 +2109,10 @@ span.error-message {
 }
 
 .field select:disabled + .select-icon {color: $light-gray;}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+.field select {padding: 0;}
+.field .select-icon {display: none;}}
 
 
 // CHECKBOXES
