@@ -1082,13 +1082,6 @@ main {
   -o-transition: all 0.25s ease-in-out 0s;
   transition: all 0.25s ease-in-out 0s; }
 
-/*
-.alert-bar .alert-bar-details .confirm-action-box span.confirm-action-text {
-  display: inline-flex;
-  width: max-content;
-  font-size: 0.833rem;
-}
-*/
 .alert-bar .alert-bar-details .confirm-action-box span.confirm-action {
   padding: 0.675rem 0.75rem;
   border-radius: 4rem;
