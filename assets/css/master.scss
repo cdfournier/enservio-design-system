@@ -1558,6 +1558,7 @@ main {
   flex-direction: row;
   align-items: center;
   width: 100%;
+  overflow: hidden;
   padding: 0;
 }
 
@@ -1574,6 +1575,7 @@ main {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  overflow: hidden;
   padding: 0 0 0 1rem;
   text-align: left;
 }
@@ -1585,7 +1587,12 @@ main {
   color: $light-gray;
 }
 
-.claim-details .details span.claim-data {font-weight: 500;}
+.claim-details .details span.claim-data {
+  width: -webkit-fill-available;
+  overflow: hidden;
+  font-weight: 500;
+  text-overflow: ellipsis;
+}
 
 @media (min-width: 30rem) {
 .claim {max-width: none;}
@@ -1598,13 +1605,13 @@ main {
 .claim-details:nth-of-type(3n) {padding: 0;}}
 
 @media (min-width: 48rem) {
-.claim-details {
-  width: initial;
-  padding: 0 4rem 0 0;
-}
+.claim-details {padding: 0 4rem 0 0;}
 .claim-details.items {display: flex;}}
 
-@media (min-width: 64rem) {.claim-details.attachments {display: flex;}}
+@media (min-width: 64rem) {
+.claim-details {width: 33%;}
+.claim-details.attachments {display: flex;}
+}
 
 
 // CARDS
