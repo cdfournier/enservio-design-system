@@ -844,6 +844,25 @@ header {
     align-items: flex-end;
     justify-content: center; } }
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  header {
+    margin: 0 auto; }
+  header.hidden {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0); }
+  .header--fixed {
+    position: relative; }
+  .headroom--pinned {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0); } }
+
 .logo {
   display: flex;
   flex-direction: column;
@@ -852,6 +871,12 @@ header {
   width: 12rem;
   margin: 0;
   padding: 0; }
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .logo {
+    display: block;
+    height: 2rem;
+    margin: 0; } }
 
 span.back {
   position: absolute;
