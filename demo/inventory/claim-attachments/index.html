@@ -25,7 +25,7 @@
     <meta name="msapplication-config" content="../../../assets/icons/browserconfig.xml">
     <meta name="theme-color" content="#2e84ed">
     <style>
-      .skip, .submit {
+      .skip, .done {
         display: none;
         opacity: 0;
         -webkit-transition: all 0.25s ease-in-out;
@@ -38,7 +38,7 @@
         display: inline-flex;
         opacity: 1;
       }
-      .submit.show {
+      .done.show {
         display: inline-flex;
         opacity: 1;
       }
@@ -46,7 +46,7 @@
         display: none;
         opacity: 0;
       }
-      @media (min-device-width: 48rem) {.submit.show {margin: 0 0.5rem 0;}}
+      @media (min-device-width: 48rem) {.done.show {margin: 0 0.5rem 0;}}
     </style>
   </head>
   <body>
@@ -91,7 +91,7 @@
           <p>Due to inactivity, your session will end in <b>{time}</b>, and any unsaved changes will be lost. To remain logged in, please click the  <b>Continue</b> button to keep working.</p>
         </div>
         <div class="button-box">
-          <button class="button color-one continue">Continue</button>
+          <button class="button color-one continue"><span class="button-label">Continue</span></button>
         </div>
       </div>
     </section>
@@ -112,9 +112,9 @@
             <small>PDF, PNG, JPG, DOC</small>
           </div>
           <div class="button-box">
-            <span class="button upload color-one"><input type="file" id="files" name="files[]" multiple>Add Attachments<span class="post"><i class="la la-paperclip"></i></span></span>
-            <button class="button secondary color-two skip">Skip</button>
-            <button class="button color-two submit">Done<span class="post-processing"><i class="la la-refresh la-spin"></i></span></button>
+            <span class="button upload color-one"><input type="file" id="files" name="files[]" multiple><span class="button-label">Add Attachments<span class="post"><i class="la la-paperclip"></i></span></span></span>
+            <button class="button secondary color-two skip"><span class="button-label">Skip</span></button>
+            <button class="button color-two done"><span class="button-label">Done<span class="post-processing"><i class="la la-refresh la-spin"></i></span></span></button>
           </div>
         </form>
       </section>
@@ -137,7 +137,7 @@
     <script>
       $(".upload").click(function() {
         $(".skip").addClass("hide");
-        $(".submit").addClass("show");
+        $(".done").addClass("show");
       });
     </script>
   </body>

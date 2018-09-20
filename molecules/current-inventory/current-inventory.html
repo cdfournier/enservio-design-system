@@ -46,7 +46,7 @@
       <section id="current-inventory">
         <div class="text guide">
           <h1>Current Inventory</h1>
-          <p>Items added to the user's claim inventory (done by clicking the Add Item To Attachment button in the new item <a href="../inventory-capture/inventory-capture.html">Inventory Capture</a> form) are stored in the Current Inventory.</p>
+          <p>Items added to the user's claim inventory (done by clicking the <b>Add Item To Attachment</b> button in the new item <a href="../inventory-capture/inventory-capture.html">Inventory Capture</a> form) are stored in the Current Inventory.</p>
           <p>To learn more about how each of the atoms of the Current Inventory list works, please visit the <a href="../../atoms/current-inventory/current-inventory.html">Current Inventory atoms page</a>.</p>
         </div>
         <div class="split wide last">
@@ -135,14 +135,14 @@
                       <div class="form-button-box">
                         <div class="form-button-box-row">
                           <div class="form-button-box-button">
-                            <button class="button color-two">Add Attachments<span class="post-number"></span></button>
+                            <button class="button color-two"><span class="button-label">Add Attachments<span class="post-number"></span></span></button>
                           </div>
                           <div class="form-button-box-row row">
                             <div class="form-button-box-button">
-                              <button class="button secondary color-one">Save<span class="post-processing"><i class="la la-refresh la-spin"></i></span></button>
+                              <button class="button secondary color-one"><span class="button-label">Save<span class="post-processing"><i class="la la-refresh la-spin"></i></span></span></button>
                             </div>
                             <div class="form-button-box-button">
-                              <button class="button secondary color-one">Cancel</button>
+                              <button class="button secondary color-one"><span class="button-label">Cancel</span></button>
                             </div>
                           </div>
                         </div>
@@ -167,7 +167,8 @@
           <div class="code-sample">
             <figure>
               <figcaption>html</figcaption>
-<pre><code>&lt;section id=&quot;current-list&quot; class=&quot;current-inventory&quot;&gt;
+<pre><code>
+&lt;div id=&quot;current-list&quot; class=&quot;current-inventory&quot;&gt;
   &lt;div class=&quot;current-inventory-bar&quot;&gt;
     &lt;h2&gt;Current Inventory Items&lt;/h2&gt;
     &lt;span class=&quot;counter&quot;&gt;0&lt;/span&gt;
@@ -250,25 +251,25 @@
           &lt;div class=&quot;form-button-box&quot;&gt;
             &lt;div class=&quot;form-button-box-row&quot;&gt;
               &lt;div class=&quot;form-button-box-button&quot;&gt;
-                &lt;button class=&quot;button color-two&quot;&gt;Add Attachments&lt;span class=&quot;post-number&quot;&gt;&lt;/span&gt;&lt;/button&gt;
+                &lt;button class=&quot;button color-two&quot;&gt;&lt;span class=&quot;button-label&quot;&gt;Add Attachments&lt;span class=&quot;post-number&quot;&gt;&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;
               &lt;/div&gt;
               &lt;div class=&quot;form-button-box-row row&quot;&gt;
                 &lt;div class=&quot;form-button-box-button&quot;&gt;
-                  &lt;button class=&quot;button secondary color-one&quot;&gt;Save&lt;span class=&quot;post-processing&quot;&gt;&lt;i class=&quot;la la-refresh la-spin&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/button&gt;
+                  &lt;button class=&quot;button secondary color-one&quot;&gt;&lt;span class=&quot;button-label&quot;&gt;Save&lt;span class=&quot;post-processing&quot;&gt;&lt;i class=&quot;la la-refresh la-spin&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;
                 &lt;/div&gt;
                 &lt;div class=&quot;form-button-box-button&quot;&gt;
-                  &lt;button class=&quot;button secondary color-one&quot;&gt;Cancel&lt;/button&gt;
+                  &lt;button class=&quot;button secondary color-one&quot;&gt;&lt;span class=&quot;button-label&quot;&gt;Cancel&lt;/span&gt;&lt;/button&gt;
                 &lt;/div&gt;
               &lt;/div&gt;
             &lt;/div&gt;
             &lt;div class=&quot;form-button-box-button&quot;&gt;
-              &lt;div class=&quot;expanding-button-box color-one&quot;&gt;
-                &lt;div class=&quot;expanding-button small&quot;&gt;&lt;span class=&quot;icon-close&quot;&gt;&lt;i class=&quot;la la-trash&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;
-                &lt;div class=&quot;expanding-button large&quot;&gt;Delete Item&lt;/div&gt;
+              &lt;div class=&quot;expanding-button-box color-one two&quot;&gt;
+                &lt;div class=&quot;expanding-button small click-two&quot;&gt;&lt;span class=&quot;icon-close&quot;&gt;&lt;i class=&quot;la la-trash&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;
+                &lt;div class=&quot;expanding-button large click-two&quot;&gt;Delete Item&lt;/div&gt;
                 &lt;div class=&quot;confirm-action-box&quot;&gt;
                   &lt;span class=&quot;confirm-action-text&quot;&gt;Are you sure?&lt;/span&gt;
-                  &lt;span class=&quot;confirm-action secondary&quot;&gt;No&lt;/span&gt;
-                  &lt;span class=&quot;confirm-action&quot;&gt;Yes&lt;/span&gt;
+                  &lt;span class=&quot;confirm-action secondary no-two&quot;&gt;No&lt;/span&gt;
+                  &lt;span class=&quot;confirm-action yes-two&quot;&gt;Yes&lt;/span&gt;
                 &lt;/div&gt;
               &lt;/div&gt;
             &lt;/div&gt;
@@ -277,7 +278,8 @@
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-&lt;/section&gt;</code></pre>
+&lt;/div&gt;
+</code></pre>
             </figure>
           </div>
         </div>

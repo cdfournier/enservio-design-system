@@ -90,6 +90,9 @@ footer span {
   align-items: center;
   line-height: 1.5; }
 
+footer nav ul li {
+  line-height: 2; }
+
 .split {
   display: flex;
   flex-direction: column;

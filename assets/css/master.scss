@@ -422,6 +422,7 @@ button,
   display: inline-flex;
   align-items: center;
   width: auto;
+  max-width: 100%;
   min-height: 2.25rem;
   max-height: 2.25rem;
   overflow: hidden;
@@ -435,6 +436,7 @@ button,
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+  white-space: nowrap;
   cursor: pointer;
   @include transition(all, 0.25s, ease-in-out);
 }
@@ -442,6 +444,16 @@ button,
 button.none, .button.none {display: none;}
 
 @media (min-width: 48rem) {button, .button {margin: 0 0.5rem 0;}}
+
+button span.button-label,
+.button span.button-label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  overflow: hidden;
+  line-height: 2.25rem;
+  text-overflow: ellipsis;
+}
 
 button span.pre, .button span.pre,
 button span.post, .button span.post {
