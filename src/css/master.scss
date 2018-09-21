@@ -1563,6 +1563,7 @@ main {
   align-items: center;
   justify-content: center;
   width: 100%;
+  overflow: hidden;
   margin: 0 0 1rem;
   padding: 0;
   background-color: $white;
@@ -1573,6 +1574,7 @@ main {
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
+  overflow: hidden;
   margin: 0;
   padding: 1rem;
   border: 1px solid $light-gray;
@@ -1633,11 +1635,11 @@ main {
 .claim-details:nth-of-type(3n) {padding: 0;}}
 
 @media (min-width: 48rem) {
-.claim-details {padding: 0 4rem 0 0;}
+.claim-details {padding: 0 2rem 0 0;}
 .claim-details.items {display: flex;}}
 
 @media (min-width: 64rem) {
-.claim-details {width: 33%;}
+.claim-details {width: auto;}
 .claim-details.attachments {display: flex;}
 }
 
@@ -1697,7 +1699,7 @@ main {
   flex-wrap: wrap;
   min-height: 2.25rem;
   margin: 1rem auto 0;
-  font-size: 0.833rem;
+  font-size: 0.694rem;
   font-weight: 500;
   text-transform: uppercase;
   color: $dark-gray;
