@@ -1770,7 +1770,7 @@ input[type="url"] {
 form {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: baseline;
   width: 100%;
   margin: 0 auto;
   padding: 2rem 1rem 0; }
@@ -1796,7 +1796,7 @@ legend {
 .small {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: baseline;
   position: relative;
   width: 100%;
   margin: 0;
