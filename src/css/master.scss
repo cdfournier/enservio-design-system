@@ -1084,12 +1084,12 @@ main {
   align-items: center;
   justify-content: space-around;
 }
-.action.text .text {margin: 0;}
-.action.text .button-box {width: 100%;}
-.action.text .button-box.right {margin: 0 0 0 1rem;}
-.action.text .button-box.left {margin: 0 1rem 0 0;}}
-
-@media (min-width: 64rem) {.action.text .button-box {width: 60%;}}
+.action.text .text {
+  width: auto;
+  margin: 0;
+}
+.action.text .button-box.right {margin: 0 0 0 2rem;}
+.action.text .button-box.left {margin: 0 2rem 0 0;}}
 
 
 // ALERT BARS
@@ -1430,9 +1430,7 @@ main {
   @include transition(all, 0.5s, ease-in-out, 0s);
 }
 
-.inventory-item.added {
-  @include transform(translateY(0));
-}
+.inventory-item.added {@include transform(translateY(0));}
 
 .inventory-item:last-of-type {margin: 0 auto;}
 
