@@ -1035,7 +1035,7 @@ main {
   .action.text {
     flex-direction: row;
     align-items: center;
-    justify-content: space-around; }
+    justify-content: space-between; }
   .action.text .text {
     width: auto;
     margin: 0; }
