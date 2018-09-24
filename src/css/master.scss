@@ -964,6 +964,7 @@ footer {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  position: relative;
   width: 100%;
   max-width: 40rem;
   margin: 0 auto;
@@ -986,6 +987,26 @@ footer a {padding: 0.322rem 0 0;}
 @media (min-width: 35.5rem) {
 footer span {display: block;}
 footer a {padding: 0;}}
+
+footer .livechat.offline,
+footer .livechat.online {
+  display: block;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  width: 6rem;
+  height: auto;
+}
+
+footer .livechat.online {display: none}
+
+footer .livechat.offline.relative,
+footer .livechat.online.relative {
+  position: relative;
+  top: 0;
+  right: 0;
+  padding: 0 0 1rem;
+}
 
 
 // NAVIGATION
