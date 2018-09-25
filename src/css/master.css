@@ -1468,16 +1468,24 @@ main {
   flex-direction: row;
   align-items: center;
   flex-wrap: wrap;
-  width: 80%;
-  padding: 0 1rem 0 0; }
+  overflow: hidden;
+  width: 100%;
+  padding: 0 1rem 0 0;
+  text-overflow: ellipsis; }
 
-.inventory-item .inventory-item-header .item-details span.description {
-  text-align: left; }
+.inventory-item .inventory-item-header .item-details span.description,
+.inventory-item .inventory-item-header .item-details span.cost,
+.inventory-item .inventory-item-header .item-details span.quantity,
+.inventory-item .inventory-item-header .item-details span.age {
+  display: flex;
+  overflow: hidden;
+  text-align: left;
+  text-overflow: ellipsis; }
 
 .inventory-item .inventory-item-header .item-details span.cost,
+.inventory-item .inventory-item-header .item-details span.quantity,
 .inventory-item .inventory-item-header .item-details span.age {
-  display: none;
-  padding: 0 0 0 2rem; }
+  display: none; }
 
 .inventory-item .inventory-item-details {
   max-height: 0;
@@ -1511,18 +1519,28 @@ main {
 
 @media (min-width: 48rem) {
   .inventory-item .inventory-item-header .item-details span.description {
-    width: 75%; }
+    width: 70%; }
   .inventory-item .inventory-item-header .item-details span.cost {
     display: flex;
-    width: 20%;
+    width: 30%;
     padding: 0 0 0 1rem; } }
 
 @media (min-width: 64rem) {
   .inventory-item .inventory-item-header .item-details {
-    justify-content: space-between;
-    width: 94%; }
+    justify-content: space-between; }
   .inventory-item .inventory-item-header .item-details span.description {
-    width: 45%; }
+    width: 40%; }
+  .inventory-item .inventory-item-header .item-details span.quantity {
+    display: flex;
+    width: 30%;
+    padding: 0 0 0 1rem; } }
+
+@media (min-width: 72rem) {
+  .inventory-item .inventory-item-header .item-details span.description {
+    width: 35%; }
+  .inventory-item .inventory-item-header .item-details span.cost,
+  .inventory-item .inventory-item-header .item-details span.quantity {
+    width: 17.5%; }
   .inventory-item .inventory-item-header .item-details span.age {
     display: flex;
     width: 30%;
