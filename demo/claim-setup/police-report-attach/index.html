@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Enservio Customer Portal | Fraud Warning</title>
+    <title>Enservio Customer Portal | Police Report</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
     <!-- css -->
@@ -68,32 +68,19 @@
       </div>
     </header>
     <main>
-      <section id="fraud-warning">
+      <section id="police-report-attachment">
         <div class="text first lg">
-          <h1>For Your Protection</h1>
-          <p>Please be advised of the following: any person who knowingly presents a false or fraudulent claim for payments of a loss, or knowingly presents false or misleading information to an insurance company for the purpose of defrauding or attempting to defraud an insurance company, or provides false information concerning a material fact on an application for insurance, or helps any other person commit such acts, may be guilty of fraud, and may be subject to substantial civil and criminal penalties pursuant to the laws of the state in which those acts occur.</p>
+          <h1>Police Report</h1>
+          <p>Has a police report been filed for this claim? Please upload a copy of the report here.</p>
         </div>
-        <form class="lg" action="../police-report/index.html">
-          <fieldset>
-            <legend>Fraud Warning</legend>
-            <div class="field"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
-              <span class="error-message checkbox">You must check this box to continue</span>
-              <input type="checkbox" name="show-password" id="show-password">
-              <label class="checkbox" for="show-password">I certify that I have read and understand the above</label>
-            </div>
-          </fieldset>
-          <div class="xsmall">
-            <fieldset>
-              <legend>Initial</legend>
-              <div class="field"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
-                <span class="error-message">Please include your initials here</span>
-                <input type="text" name="initials" id="initials" placeholder="Initial here" style="text-transform: uppercase;">
-                <label for="initials">Initial Here&#42;</label>
-              </div>
-            </fieldset>
+        <form class="lg" action="../../inventory/help/index.html">
+          <div class="upload-container md">
+            <p><strong>Drag Files Here To Upload</strong></p>
+            <small>PDF, PNG, JPG, DOC</small>
           </div>
           <div class="button-box">
-            <button class="button color-one"><span class="button-label">Accept<span class="post-processing"><i class="la la-refresh la-spin"></i></span></span></button>
+            <span class="button upload color-one"><input type="file" id="files" name="files[]" multiple><span class="button-label">Add Attachments<span class="post"><i class="la la-paperclip"></i></span></span></span>
+            <button class="button color-two done"><span class="button-label">Done<span class="post-processing"><i class="la la-refresh la-spin"></i></span></span></button>
           </div>
         </form>
       </section>
