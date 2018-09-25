@@ -66,6 +66,7 @@ ul.contents {
   flex-direction: column;
   width: 100%;
   padding: 0 0 1rem;
+  line-height: 1;
   list-style-type: none;
 }
 ul.contents:last-of-type {padding: 0;}
@@ -86,10 +87,8 @@ ul.contents li a {
   font-size: 0.833rem;
   line-height: 1.5;
 }
-ul.contents li a {
-  padding: 0;
-  text-transform: uppercase;
-}
+ul.contents li a {padding: 0;}
+
 @media (min-width: 48rem) {
 ul.contents {
   flex-direction: row;
