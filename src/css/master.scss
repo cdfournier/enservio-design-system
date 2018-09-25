@@ -1892,9 +1892,13 @@ fieldset {width: 50%;}
 .small {width: 50%;}
 .xsmall {width: 25%;}}
 
-@media (min-width: 72rem) {
+@media (min-width: 104rem) {
 fieldset, .small {width: 25%;}
-.small fieldset {width: 50%;}}
+.small fieldset {
+  width: 50%;
+  min-width: 50%;
+  max-width: 50%;
+}}
 
 
 // INPUTS, LABELS, AND PLACEHOLDERS
