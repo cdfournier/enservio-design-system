@@ -35,7 +35,7 @@
         <div class="split last">
           <div class="design-sample">
             <figcaption>Design Sample</figcaption>
-            <form class="sm" action="../../home/home/index.html" novalidate>
+            <form class="sm" novalidate>
               <fieldset>
                 <legend>Email Address</legend>
                 <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
@@ -54,13 +54,18 @@
                   <span class="valid password"><i class="la la-check-circle-o"></i></span>
                 </div>
               </fieldset>
+              <fieldset>
+                <legend>Remember Me</legend>
+                <div class="field"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
+                  <span class="error-message checkbox"></span>
+                  <input type="checkbox" name="remember-me" id="remember-me">
+                  <label class="checkbox" for="remember-me" style="justify-content: space-between; width: 100%;">Remember me<span><a href="#!">Forgot Password?</a></span></label>
+                </div>
+              </fieldset>
               <div class="button-box">
                 <button class="button color-one"><span class="button-label">Log In<span class="post-processing"><i class="la la-refresh la-spin"></i></span></span></button>
               </div>
             </form>
-            <div class="text center sm">
-              <p><a href="#!">Forgot Password?</a></p>
-            </div>
             <div class="notes">
               <figcaption>Notes</figcaption>
               <p>As with other components in the design system, it is possible to add validation conditions to any <code>&lt;input&gt;</code>. Simply add a <code>.valid</code> or <code>.invalid</code> class to the <code>.field</code> class.</p>
@@ -69,7 +74,7 @@
           <div class="code-sample">
             <figure>
               <figcaption>html</figcaption>
-<pre><code>&lt;form class=&quot;sm&quot;&gt;
+<pre><code>&lt;form class=&quot;sm&quot; novalidate&gt;
   &lt;fieldset&gt;
     &lt;legend&gt;Email Address&lt;/legend&gt;
     &lt;div class=&quot;field&quot;&gt; &lt;!-- change to 'field valid' or 'field invalid' as necessary --&gt;
@@ -86,6 +91,14 @@
       &lt;label for=&quot;password&quot;&gt;Password&amp;#42;&lt;/label&gt;
       &lt;span toggle=&quot;#password&quot; class=&quot;la la-eye-slash show-hide-password&quot;&gt;&lt;/span&gt;
       &lt;span class=&quot;valid password&quot;&gt;&lt;i class=&quot;la la-check-circle-o&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+    &lt;/div&gt;
+  &lt;/fieldset&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;Remember Me&lt;/legend&gt;
+    &lt;div class=&quot;field&quot;&gt; &lt;!-- change class to 'field valid' or 'field invalid' as necessary --&gt;
+      &lt;span class=&quot;error-message checkbox&quot;&gt;&lt;/span&gt;
+      &lt;input type=&quot;checkbox&quot; name=&quot;remember-me&quot; id=&quot;remember-me&quot;&gt;
+      &lt;label class=&quot;checkbox&quot; for=&quot;remember-me&quot; style=&quot;justify-content: space-between; width: 100%;&quot;&gt;Remember me&lt;span&gt;&lt;a href=&quot;#!&quot;&gt;Forgot Password?&lt;/a&gt;&lt;/span&gt;&lt;/label&gt;
     &lt;/div&gt;
   &lt;/fieldset&gt;
   &lt;div class=&quot;button-box&quot;&gt;
