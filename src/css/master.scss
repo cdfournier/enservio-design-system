@@ -1810,6 +1810,26 @@ figcaption span.right {
   text-align: right;
 }
 
+figcaption ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 0.694rem;
+  font-weight: 500;
+  list-style-type: none;
+  text-align: center;
+  white-space: nowrap;
+}
+
+figcaption ul li {
+  overflow: hidden;
+  padding: 0;
+  text-overflow: ellipsis;
+}
+
 
 // MAX-WIDTHS
 .sm {max-width: 24rem;}
