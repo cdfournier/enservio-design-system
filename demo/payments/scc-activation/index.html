@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Enservio Customer Portal | Payment Verification</title>
+    <title>Enservio Customer Portal | Claim Card Activation</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
     <!-- css -->
@@ -68,49 +68,34 @@
       </div>
     </header>
     <main>
-      <section id="ach-verification">
+      <section id="scc-activation">
         <div class="text first center lg">
-          <h1>Payment Verification</h1>
-          <p>Please enter the information required in the form below to begin the direct transfer process. Your <b>Payment Reference Number</b> was provided to you by your insurance carrier.</p>
+          <h1>Claim Card Activation</h1>
+          <p>Enter a PIN below to activate the funds on your card.</p>
         </div>
-        <form class="sm" action="../ach-redemption/index.html" novalidate>
-          <fieldset>
-            <legend>Payment Reference Number</legend>
-            <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
-              <span class="error-message"></span>
-              <input type="text" name="payment-reference" id="payment-reference" placeholder="Payment Reference Number">
-              <label for="payment-reference">Payment Reference Number&#42;</label>
-              <span class="valid"><i class="la la-check-circle-o"></i></span>
-            </div>
-          </fieldset>
-          <fieldset>
-            <legend>Last Name</legend>
-            <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
-              <span class="error-message"></span>
-              <input type="text" name="last-name" id="last-name" placeholder="Enter your last name">
-              <label for="last-name">Last Name&#42;</label>
-            </div>
-          </fieldset>
+        <form class="sm" style="align-items: center;" action="../set-password/index.html" novalidate>
           <div class="small">
             <fieldset>
-              <legend>Zip Code</legend>
+              <legend>Select PIN</legend>
               <div class="field"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
                 <span class="error-message"></span>
-                <input type="text" name="zip-code" id="zip-code" placeholder="Enter your zip code">
-                <label for="zip-code">Zip Code&#42;</label>
+                <input type="number" name="pin" id="pin" placeholder="Select a PIN" maxlength="4">
+                <label for="pin">Select PIN&#42;</label>
               </div>
             </fieldset>
           </div>
-          <fieldset>
-            <legend>Terms &amp; Conditions</legend>
-            <div class="field"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
-              <span class="error-message checkbox">You must check this box to continue</span>
-              <input type="checkbox" name="terms" id="terms">
-              <label class="checkbox" for="terms"><span>I agree to this site's&nbsp;<a href="../../policies/terms/index.html">Terms &amp; Conditions</a></span></label>
-            </div>
-          </fieldset>
+          <div class="small">
+            <fieldset>
+              <legend>Confirm PIN</legend>
+              <div class="field"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
+                <span class="error-message"></span>
+                <input type="number" name="confirm-pin" id="confirm-pin" placeholder="Confirm a PIN" maxlength="4">
+                <label for="confirm-pin">Confirm PIN&#42;</label>
+              </div>
+            </fieldset>
+          </div>
           <div class="button-box">
-            <button class="button color-one"><span class="button-label">Next<span class="post-processing"><i class="la la-refresh la-spin"></i></span></span></button>
+            <button class="button color-one"><span class="button-label">Activate<span class="post-processing"><i class="la la-refresh la-spin"></i></span></span></button>
           </div>
         </form>
       </section>
