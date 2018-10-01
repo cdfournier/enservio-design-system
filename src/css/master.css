@@ -1833,6 +1833,9 @@ fieldset {
   padding: 0;
   border: none; }
 
+fieldset.max {
+  width: 50%; }
+
 legend {
   display: none; }
 
@@ -1872,7 +1875,10 @@ legend {
     flex-wrap: nowrap; }
   form.sm fieldset,
   form.md fieldset,
-  form.lg fieldset {
+  form.lg fieldset,
+  form.sm fieldset.max,
+  form.md fieldset.max,
+  form.lg fieldset.max {
     width: 100%; }
   form.column {
     flex-direction: column; }
