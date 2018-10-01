@@ -1425,7 +1425,8 @@ main {
 @media (min-width: 48rem) {
   .current-inventory {
     position: relative;
-    top: inherit; }
+    top: inherit;
+    padding: 1rem 0 0; }
   .current-inventory .current-inventory-bar h2:after {
     opacity: 0; } }
 
