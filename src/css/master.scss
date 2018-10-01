@@ -1113,6 +1113,45 @@ main {
 .action.text .button-box.left {margin: 0 2rem 0 0;}}
 
 
+// GRAPHIC TEXT BOX
+.graphic.text {
+  display: block;
+  width: 100%;
+  max-width: 40rem;
+  margin: 0 auto 1rem;
+  padding: 0;
+}
+
+.graphic.text .graphic-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 40rem;
+  min-height: 100%;
+  margin: auto;
+  padding: 0 2rem;
+  text-align: left;
+}
+
+.graphic.text .graphic-cell.center {text-align: center;}
+
+.graphic-cell .graphic {
+  width: 25%;
+  margin: 0 auto 2rem;
+}
+
+.graphic-cell .graphic.wide {
+  width: 100%;
+  margin: 0;
+}
+
+@media (min-width: 48rem) {
+.graphic.text {margin: 0 auto 2rem;}
+.graphic.text .graphic-cell {padding: 0 6rem;}}
+
+
 // ALERT BARS
 .alerts {position: absolute;}
 
