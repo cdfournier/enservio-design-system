@@ -2,9 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Enservio Customer Portal | Confirm Your Banking Information</title>
+    <title>Enservio Customer Portal | Processing Payment</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
+    <meta http-equiv="refresh" content="2.5; url='../set-password/index.html'">
     <!-- css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700">
@@ -27,11 +28,11 @@
   </head>
   <body>
     <section id="alerts" class="alerts">
-      <div class="alert-bar error">
+      <div class="alert-bar error file-type">
         <div class="alert-bar-details">
           <span><i class="la la-exclamation-circle"></i></span>
           <div class="alert-bar-message">
-            <span></span>
+            <span>Our review is taking longer than expected. You will be contacted by email with next steps.</span>
           </div>
           <span class="dismiss error"><i class="la la-times-circle"></i></span>
         </div>
@@ -55,7 +56,7 @@
       <div class="timeout">
         <div class="text center md">
           <h1>Timeout Warning</h1>
-          <p>Due to inactivity, your session will end in <b>{time}</b>, and any unsaved changes will be lost. To remain logged in, please click the  <b>Continue</b> button to keep working.</p>
+          <p>Due to inactivity, your session will end in <b>{time}</b>, and any unsaved changes will be lost. To remain logged in, please click the <b>Continue</b> button to keep working.</p>
         </div>
         <div class="button-box">
           <button class="button color-one continue"><span class="button-label">Continue</span></button>
@@ -68,57 +69,14 @@
       </div>
     </header>
     <main>
-      <section id="ach-confirmation">
-        <div class="text first lg">
-          <h1>Confirm Your Banking Information</h1>
-          <p>Please confirm that your banking information below is correct.</p>
-        </div>
-        <div class="text lg">
-          <figure style="padding: 0;">
-            <img src="../../../src/images/banking-sample.png" alt="Bank account number samples">
-            <figcaption>
-              <ul>
-                <li style="width: 60%; padding-right: 1rem;">Routing #</li>
-                <li style="width: 100%; padding-right: 1rem;">Account #</li>
-                <li style="width: 20%;">Check #</li>
-              </ul>
-            </figcaption>
-          </figure>
-        </div>
-        <form style="max-width: 40rem;" action="../set-password/index.html" novalidate>
-          <fieldset>
-            <legend>Bank Name</legend>
-            <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
-              <span class="error-message"></span>
-              <input type="text" name="bank-name" id="bank-name" value="{Bank_Name}" disabled>
-              <label for="bank-name">Bank Name&#42;</label>
-              <span class="valid"><i class="la la-check-circle-o"></i></span>
-            </div>
-          </fieldset>
-          <fieldset>
-            <legend>Routing Number</legend>
-            <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
-              <span class="error-message"></span>
-              <input type="number" name="routing-number" id="routing-number" value="012345678" disabled>
-              <label for="routing-number">Routing Number&#42;</label>
-              <span class="valid"><i class="la la-check-circle-o"></i></span>
-            </div>
-          </fieldset>
-          <fieldset>
-            <legend>Account Number</legend>
-            <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
-              <span class="error-message"></span>
-              <input type="number" name="account-number" id="account-number" value="012345678901213" disabled>
-              <label for="account-number">Account Number&#42;</label>
-              <span toggle="#show-account" class="la la-eye-slash show-hide-password"></span>
-              <span class="valid"><i class="la la-check-circle-o"></i></span>
-            </div>
-          </fieldset>
-          <div class="button-box">
-            <a href="../ach-redemption/index.html" class="button color-one"><span class="button-label"><span class="pre"><i class="la la-angle-left"></i></span>Back</span></a>
-            <button class="button color-one"><span class="button-label">Submit<span class="post-processing"><i class="la la-refresh la-spin"></i></span></span></button>
+      <section id="processing-payment">
+        <div class="text center">
+          <div class="spinner-box">
+            <div class="spinner"><i class="la la-refresh la-spin"></i></div>
           </div>
-        </form>
+          <h1>Thank You</h1>
+          <p>We are reviewing your payment details. We promise this won't take long.</p>
+        </div>
       </section>
     </main>
     <footer class="center">

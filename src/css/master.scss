@@ -1852,6 +1852,8 @@ figcaption ul li {
 
 
 // MAX-WIDTHS
+.xs {max-width: 16rem;}
+
 .sm {max-width: 24rem;}
 
 .md {max-width: 32rem;}
@@ -1939,6 +1941,7 @@ form.sm, form.md, form.lg {
   flex-direction: column;
   flex-wrap: nowrap;
 }
+form.xs fieldset,
 form.sm fieldset,
 form.md fieldset,
 form.lg fieldset,

@@ -85,7 +85,7 @@
             </figcaption>
           </figure>
         </div>
-        <form style="max-width: 40rem;" action="../ach-confirmation/index.html" novalidate>
+        <form style="max-width: 40rem;" action="../processing/index.html" novalidate>
           <fieldset>
             <legend>Bank Name</legend>
             <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
@@ -99,8 +99,9 @@
             <legend>Routing Number</legend>
             <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
               <span class="error-message"></span>
-              <input type="number" name="routing-number" id="routing-number" placeholder="Enter your routing number">
+              <input type="password" name="routing-number" id="routing-number" placeholder="Enter your routing number">
               <label for="routing-number">Routing Number&#42;</label>
+              <span toggle="#routing-number" class="la la-eye-slash show-hide-password"></span>
               <span class="valid"><i class="la la-check-circle-o"></i></span>
             </div>
           </fieldset>
@@ -108,9 +109,9 @@
             <legend>Account Number</legend>
             <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
               <span class="error-message"></span>
-              <input type="number" name="account-number" id="account-number" placeholder="Enter your account number">
+              <input type="password" name="account-number" id="account-number" placeholder="Enter your account number">
               <label for="account-number">Account Number&#42;</label>
-              <span toggle="#show-account" class="la la-eye-slash show-hide-password"></span>
+              <span toggle="#account-number" class="la la-eye-slash show-hide-password"></span>
               <span class="valid"><i class="la la-check-circle-o"></i></span>
             </div>
           </fieldset>
@@ -118,9 +119,9 @@
             <legend>Confirm Account Number</legend>
             <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
               <span class="error-message"></span>
-              <input type="number" name="confirm-account-number" id="confirm-account-number" placeholder="Confirm your account number">
+              <input type="password" name="confirm-account-number" id="confirm-account-number" placeholder="Confirm your account number">
               <label for="confirm-account-number">Confirm Account Number&#42;</label>
-              <span toggle="#show-account" class="la la-eye-slash show-hide-password"></span>
+              <span toggle="#confirm-account-number" class="la la-eye-slash show-hide-password"></span>
               <span class="valid"><i class="la la-check-circle-o"></i></span>
             </div>
           </fieldset>

@@ -1804,6 +1804,9 @@ figcaption ul li {
   padding: 0;
   text-overflow: ellipsis; }
 
+.xs {
+  max-width: 16rem; }
+
 .sm {
   max-width: 24rem; }
 
@@ -1886,6 +1889,7 @@ legend {
   form.sm, form.md, form.lg {
     flex-direction: column;
     flex-wrap: nowrap; }
+  form.xs fieldset,
   form.sm fieldset,
   form.md fieldset,
   form.lg fieldset,

@@ -73,25 +73,25 @@
           <h1>Claim Card Activation</h1>
           <p>Enter a PIN below to activate the funds on your card.</p>
         </div>
-        <form class="lg" style="align-items: center;" action="../set-password/index.html" novalidate>
-          <div class="small">
-            <fieldset>
-              <legend>Select PIN</legend>
-              <div class="field"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
-                <span class="error-message"></span>
-                <input type="number" name="pin" id="pin" placeholder="Select a PIN" maxlength="4">
-                <label for="pin">Select PIN&#42;</label>
-              </div>
-            </fieldset>
-            <fieldset>
-              <legend>Confirm PIN</legend>
-              <div class="field"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
-                <span class="error-message"></span>
-                <input type="number" name="confirm-pin" id="confirm-pin" placeholder="Confirm a PIN" maxlength="4">
-                <label for="confirm-pin">Confirm PIN&#42;</label>
-              </div>
-            </fieldset>
-          </div>
+        <form class="xs" style="align-items: center;" action="../set-password/index.html" novalidate>
+          <fieldset>
+            <legend>Select PIN</legend>
+            <div class="field"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
+              <span class="error-message"></span>
+              <input type="password" name="pin" id="pin" placeholder="Select a PIN" maxlength="4">
+              <label for="pin">Select PIN&#42;</label>
+              <span toggle="#pin" class="la la-eye-slash show-hide-password"></span>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Confirm PIN</legend>
+            <div class="field"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
+              <span class="error-message"></span>
+              <input type="password" name="confirm-pin" id="confirm-pin" placeholder="Confirm a PIN" maxlength="4">
+              <label for="confirm-pin">Confirm PIN&#42;</label>
+              <span toggle="#confirm-pin" class="la la-eye-slash show-hide-password"></span>
+            </div>
+          </fieldset>
           <div class="button-box">
             <button class="button color-one"><span class="button-label">Activate<span class="post-processing"><i class="la la-refresh la-spin"></i></span></span></button>
           </div>
