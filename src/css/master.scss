@@ -887,7 +887,7 @@ header {
   justify-content: flex-end;
   width: 100%;
   margin: 0;
-  padding: 1rem 2rem;
+  padding: 2rem;
   background-color: $white;
 }
 
@@ -911,7 +911,7 @@ header {
 @media (min-width: 35.5rem) {
 header {
   flex-direction: row-reverse;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: center;
 }}
 
@@ -931,9 +931,14 @@ header.hidden {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 12rem;
   margin: 0;
   padding: 0;
+}
+
+.logo img {
+  width: auto;
+  height: 5rem;
+  max-height: 5rem;
 }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
@@ -1057,7 +1062,7 @@ main {
   flex-direction: column;
   justify-content: center;
   margin: 0;
-  padding: 4.43625rem 0 0;
+  padding: 10rem 0 0;
 }
 
 
@@ -2058,6 +2063,16 @@ input:-ms-input-placeholder {opacity: 1;}}
 
 .field .show-hide-password:hover,
 .field .show-hide-password:focus {color: $color-two;}
+
+
+// BANK CARD INPUT SETTINGS
+.ccicon {
+  position: absolute;
+  top: 1.2125rem;
+  right: 1rem;
+  width: 3.125rem;
+  height: 1.9625rem;
+}
 
 
 // VALID INPUT SETTINGS
