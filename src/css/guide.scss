@@ -81,9 +81,11 @@ ul.contents:before:first-of-type {display: none;}
 ul.contents li {
   padding: 0 0 1rem;
 }
+ul.contents li:nth-of-type(2n) h3,
+ul.contents li:nth-of-type(3n) h3 {padding: 0.694rem 0 0;}
 ul.contents li p,
 ul.contents li a {
-  padding: 0 0 0.4165rem;
+  padding: 0.4165rem 0;
   font-size: 0.833rem;
   line-height: 1.5;
 }
@@ -95,7 +97,8 @@ ul.contents {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-ul.contents li {width: calc(100% / 2.25);}}
+ul.contents li {width: calc(100% / 2.25);}
+ul.contents li:nth-of-type(2n) h3 {padding: 0;}}
 
 
 // GUIDE FOOTER NAV
