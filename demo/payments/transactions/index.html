@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Enservio Customer Portal | Home</title>
+    <title>Enservio Customer Portal | Transactions</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"> -->
     <!-- css -->
@@ -52,13 +52,13 @@
           <span class="dismiss system"><i class="la la-times-circle"></i></span>
         </div>
       </div>
-      <div class="alert-bar timeout">
+      <div class="timeout">
         <div class="text center md">
           <h1>Timeout Warning</h1>
           <p>Due to inactivity, your session will end in <b>{time}</b>, and any unsaved changes will be lost. To remain logged in, please click the  <b>Continue</b> button to keep working.</p>
         </div>
         <div class="button-box">
-          <button class="button color-one continue"><span class="button-label">Continue</span></button>
+          <button class="button color-one continue"><span class="button-label">Continue<span class="button-label"></button>
         </div>
       </div>
     </section>
@@ -68,161 +68,73 @@
       </div>
     </header>
     <main>
-      <section id="claims">
-        <div class="claim">
-          <div class="claim-container">
-            <div class="claim-header">
-              <div class="claim-information">
-                <div class="claim-details number">
-                  <div class="claim-details-icon">
-                    <span class="icon"><i class="la la-map-signs"></i></span>
-                  </div>
-                  <div class="details">
-                    <span class="claim-label">Number</span>
-                    <span class="claim-data">{Claim_Number}</span>
-                  </div>
-                </div>
-                <div class="claim-details items">
-                  <div class="claim-details-icon">
-                    <span class="icon"><i class="la la-list-ol"></i></span>
-                  </div>
-                  <div class="details">
-                    <span class="claim-label">Items</span>
-                    <span class="claim-data">{18}</span>
-                  </div>
-                </div>
-                <div class="claim-details attachments">
-                  <div class="claim-details-icon">
-                    <span class="icon"><i class="la la-paperclip"></i></span>
-                  </div>
-                  <div class="details">
-                    <span class="claim-label">Attachments</span>
-                    <span class="claim-data">{14}</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="cards">
-              <div class="card">
-                <div class="card-graphic inventory">
-                  <img src="../../../src/images/inventory.png" alt="Inventory icon">
-                </div>
-                <div class="card-copy">
-                  <h2>Inventory</h2>
-                  <span class="status disabled">No Action Required</span>
-                  <a href="../../inventory/capture/index.html" class="button color-one"><span class="button-label">Continue</span></a>
-                </div>
-              </div>
+      <section id="transactions" class="transactions">
+        <div class="transactions-container">
+          <div class="transactions-header">
+            <div class="transactions-information">
+              <h1>Transaction History</h1>
+              <div class="transactions-summary">
+                <div class="transactions-details ccard">
 <!--
-              <div class="card">
-                <div class="card-graphic receipts">
-                  <img src="../../../src/images/receipts.png" alt="Receipt icon">
-                </div>
-                <div class="card-copy">
-                  <h2>Receipts</h2>
-                  <span class="status">No Action Required</span>
-                </div>
-              </div>
+                  <div class="transactions-details-icon">
+                    <span class="icon"><i class="la la-credit-card"></i></span>
+                  </div>
 -->
-<!--
-              <div class="card">
-                <div class="card-graphic payments">
-                  <img src="../../../src/images/payments.png" alt="Payments icon">
-                </div>
-                <div class="card-copy">
-                  <h2>Payments</h2>
-                  <span class="status disabled">Verified</span>
-                  <a href="../../payments/ach-verfication/index.html" class="button color-one"><span class="button-label">Get Started</span></a>
-                </div>
-              </div>
--->
-            </div>
-          </div>
-        </div>
-        <div class="claim">
-          <div class="claim-container">
-            <div class="claim-header">
-              <div class="claim-information">
-                <div class="claim-details number">
-                  <div class="claim-details-icon">
-                    <span class="icon"><i class="la la-map-signs"></i></span>
-                  </div>
                   <div class="details">
-                    <span class="claim-label">Number</span>
-                    <span class="claim-data">{Claim_Number}</span>
+                    <span class="transactions-label">Card &#35;</span>
+                    <span class="transactions-data">{Card_No}</span>
                   </div>
                 </div>
-                <div class="claim-details status">
-                  <div class="claim-details-icon">
-                    <span class="icon"><i class="la la-clock-o"></i></span>
-                  </div>
+                <div class="transactions-details balance">
                   <div class="details">
-                    <span class="claim-label">Status</span>
-                    <span class="claim-data">{Status}</span>
+                    <span class="transactions-label">Balance</span>
+                    <span class="transactions-data">{USD&#36;00.00}</span>
                   </div>
-                </div>
-                <div class="claim-details balance">
-                  <div class="claim-details-icon">
-                    <span class="icon"><i class="la la-paperclip"></i></span>
-                  </div>
-                  <div class="details">
-                    <span class="claim-label">Balance</span>
-                    <span class="claim-data">{USD&#36;0.00}</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="cards">
-              <div class="card">
-                <div class="card-graphic inventory">
-                  <img src="../../../src/images/inventory.png" alt="Inventory icon">
-                </div>
-                <div class="card-copy">
-                  <h2>Inventory</h2>
-                  <span class="status">Closed</span>
-                </div>
-              </div>
-<!--
-              <div class="card">
-                <div class="card-graphic receipts">
-                  <img src="../../../src/images/receipts.png" alt="Receipt icon">
-                </div>
-                <div class="card-copy">
-                  <h2>Receipts</h2>
-                  <span class="status">No Action Required</span>
-                </div>
-              </div>
--->
-              <div class="card">
-                <div class="card-graphic payments">
-                  <img src="../../../src/images/payments.png" alt="Payments icon">
-                </div>
-                <div class="card-copy">
-                  <h2>Payments</h2>
-                  <span class="status disabled">Verified</span>
-                  <a href="../../payments/ach-verfication/index.html" class="button color-one"><span class="button-label">View Details</span></a>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <section id="profile">
-        <div class="action text lg">
-          <div class="text">
-            <h2>Change Your Password</h2>
-            <p>Need to change your password?</p>
+          <div class="transactions-ledger">
+            <div class="control">
+              <form style="padding: 0;">
+                <fieldset>
+                  <legend>Search</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message"></span>
+                    <input type="text" name="search" id="search" placeholder="Search transactions">
+                    <label for="search">Search</label>
+                    <span class="search la la-search"></span>
+                  </div>
+                </fieldset>
+                <fieldset>
+                  <legend>Filter</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message"></span>
+                    <select name="transactions-filter" id="transactions-filter">
+                      <option value="0">Filter</option>
+                      <option value="Option 1">Option 1</option>
+                      <option value="Option 2">Option 2</option>
+                      <option value="Option 3">Option 3</option>
+                      <option value="Option 4">Option 4</option>
+                      <option value="Option 5">Option 5</option>
+                    </select>
+                    <div class="select-icon"><i class="la la-angle-down"></i></div>
+                    <label for="transactions-filter">Filter</label>
+                  </div>
+                </fieldset>
+                <div class="button-box right">
+                  <button class="button color-one"><span class="button-label">Download</span></button>
+                </div>
+              </form>
+            </div>
           </div>
-          <div class="button-box right">
-            <a href="../../password/change-password/index.html" class="button secondary color-one"><span class="button-label">Change Password</span></a>
-          </div>          
         </div>
       </section>
     </main>
-    <footer class="lg">
+    <footer>
       <nav>
         <ul>
-          <li>Home</li>
+          <li><a href="../../home/home/index.html">Home</a></li>
           <li><a href="../../log-in/log-out-log-in/index.html">Log Out</a></li>
         </ul>
       </nav>
