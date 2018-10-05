@@ -394,9 +394,7 @@ button.none, .button.none {
 
 button span.button-label,
 .button span.button-label {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  display: block;
   overflow: hidden;
   line-height: 2.25rem;
   text-overflow: ellipsis; }
@@ -1740,8 +1738,14 @@ main {
   .cards {
     flex-direction: row; }
   .card {
-    width: 33%;
+    width: inherit;
+    max-width: 50%;
+    min-width: 30%;
     margin: 0 1rem 0 0; } }
+
+@media (min-width: 64rem) {
+  .card {
+    max-width: 40%; } }
 
 .transactions {
   display: block;
