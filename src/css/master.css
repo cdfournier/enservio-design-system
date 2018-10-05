@@ -394,7 +394,7 @@ button.none, .button.none {
 
 button span.button-label,
 .button span.button-label {
-  display: block;
+  display: contents;
   overflow: hidden;
   line-height: 2.25rem;
   text-overflow: ellipsis; }
@@ -437,7 +437,7 @@ button span.post-processing,
 button span.post-processing.active,
 .button span.post-processing.active {
   max-width: 100%;
-  margin: -0.0525rem 0 0 0.25rem;
+  margin: 0;
   padding: 0 0 0 0.5rem;
   opacity: 1; }
 
@@ -766,9 +766,9 @@ span.button.upload input[type="file"] {
     align-items: flex-start;
     justify-content: flex-start; }
   .button-box.right .button {
-    margin: 0 0 0 1rem; }
+    margin: 0 0 1rem 1rem; }
   .button-box.left .button {
-    margin: 0 1rem 0 0; }
+    margin: 0 1rem 1rem 0; }
   .button-box.left .expanding-button-box {
     margin: 0 1rem 1rem 0; }
   form .button-box {
