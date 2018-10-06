@@ -106,6 +106,18 @@ $('.continue').click( function() {
 });
 
 
+// LIVECHAT ONLINE/OFFLINE
+var d = new Date();
+if(d.getHours() >= 8 && d.getHours() <= 17 ){
+  $(".livechat.online").show();
+  $(".livechat.offline").hide();
+}
+else {  
+  $(".livechat.offline").show();
+  $(".livechat.online").hide();
+}
+
+
 // SMOOTH SCROLL
 $('a[href*="#"]')
   // Remove links that don't actually link to anything

@@ -949,9 +949,6 @@ footer .livechat.online {
   width: 6rem;
   height: auto; }
 
-footer .livechat.online {
-  display: none; }
-
 footer .livechat.offline.relative,
 footer .livechat.online.relative {
   position: relative;
