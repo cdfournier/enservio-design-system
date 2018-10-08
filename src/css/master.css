@@ -394,8 +394,9 @@ button.none, .button.none {
 
 button span.button-label,
 .button span.button-label {
-  display: contents;
+  display: block;
   overflow: hidden;
+  width: auto;
   line-height: 2.25rem;
   text-overflow: ellipsis; }
 
@@ -412,7 +413,7 @@ button span.post, .button span.post {
 
 button span.post-number,
 .button span.post-number {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 1.5rem;
@@ -423,6 +424,8 @@ button span.post-number,
 
 button span.post-processing,
 .button span.post-processing {
+  position: relative;
+  top: 0.125rem;
   max-width: 0;
   margin: 0;
   padding: 0;
@@ -434,12 +437,20 @@ button span.post-processing,
   -o-transition: all 0.25s ease-in-out 0s;
   transition: all 0.25s ease-in-out 0s; }
 
+button span.post-processing i.la.la-refresh.la-spin,
+.button span.post-processing i.la.la-refresh.la-spin {
+  display: none; }
+
 button span.post-processing.active,
 .button span.post-processing.active {
   max-width: 100%;
   margin: 0;
   padding: 0 0 0 0.5rem;
   opacity: 1; }
+
+button span.post-processing.active i.la.la-refresh.la-spin,
+.button span.post-processing.active i.la.la-refresh.la-spin {
+  display: inline-block; }
 
 button.big,
 .button.big {
