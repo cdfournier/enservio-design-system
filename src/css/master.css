@@ -2635,3 +2635,6 @@ ol.survey li .field label {
 
 ol.survey li .field span.error-message {
   font-size: 1rem; }
+
+::-ms-clear {
+  display: none; }
