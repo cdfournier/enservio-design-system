@@ -798,8 +798,9 @@ button.secondary.color-two:hover span.post-number, button.secondary.color-two:fo
 // UPLOAD BUTTON
 span.button.upload input[type="file"] {
   position: absolute;
-  width: 0;
-  min-width: 9.5rem;
+  width: auto;
+  max-width: 9.5rem;
+  overflow: hidden;
   margin: 0;
   padding: 0;
   opacity: 0;
