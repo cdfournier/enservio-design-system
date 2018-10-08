@@ -2489,6 +2489,9 @@ label.checkbox, label.radio {
   line-height: 1.5;
 }
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+.field input[type="checkbox"] {min-height: inherit;}}
+
 
 // VALID CHECKBOX SETTINGS
 .field.valid input[type="checkbox"]:checked:not(:disabled) {background-color: $valid;}
@@ -2556,6 +2559,9 @@ input[type="radio"]:disabled:checked:before {
   background-color: $light-gray;
   content: "";
 }
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+.field input[type="radio"] {min-height: inherit;}}
 
 
 // VALID RADIO BUTTON SETTINGS

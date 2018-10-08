@@ -2455,6 +2455,10 @@ label.checkbox, label.radio {
   padding: 0 0 0 2rem;
   line-height: 1.5; }
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .field input[type="checkbox"] {
+    min-height: inherit; } }
+
 .field.valid input[type="checkbox"]:checked:not(:disabled) {
   background-color: #008000; }
 
@@ -2522,6 +2526,10 @@ input[type="radio"]:disabled:checked:before {
   border-radius: 100%;
   background-color: #cccece;
   content: ""; }
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .field input[type="radio"] {
+    min-height: inherit; } }
 
 .field.valid input[type="radio"]:checked:before {
   background-color: #008000; }
