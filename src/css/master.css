@@ -397,7 +397,7 @@ button span.button-label,
   display: block;
   overflow: hidden;
   width: auto;
-  line-height: 2.25rem;
+  line-height: 1.875;
   text-overflow: ellipsis; }
 
 button span.pre, .button span.pre,
@@ -1753,7 +1753,7 @@ main {
 
 @media (min-width: 64rem) {
   .card {
-    max-width: 40%; } }
+    max-width: 35%; } }
 
 .transactions {
   display: block;

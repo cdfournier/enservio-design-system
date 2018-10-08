@@ -450,7 +450,7 @@ button span.button-label,
   display: block;
   overflow: hidden;
   width: auto;
-  line-height: 2.25rem;
+  line-height: 1.875;
   text-overflow: ellipsis;
 }
 
@@ -1783,7 +1783,7 @@ main {
   margin: 0 1rem 0 0;
 }}
 
-@media (min-width: 64rem) {.card {max-width: 40%;}}
+@media (min-width: 64rem) {.card {max-width: 35%;}}
 
 
 // TRANSACTIONS HEADER
