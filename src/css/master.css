@@ -869,9 +869,9 @@ header {
 
 @media (min-width: 35.5rem) {
   header {
-    flex-direction: row-reverse;
-    align-items: flex-start;
-    justify-content: center; } }
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between; } }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   header {
@@ -897,7 +897,7 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 0;
+  margin: 0 auto;
   padding: 0; }
 
 .logo img {
@@ -911,7 +911,43 @@ header {
     width: auto;
     height: 5rem;
     max-height: 5rem;
-    margin: 0; } }
+    margin: 0 auto; } }
+
+nav {
+  width: 100%; }
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    padding: 1rem 0 0;
+    list-style-type: none; }
+  nav ul li {
+    width: auto;
+    margin: 0;
+    padding: 0 1rem 0 0;
+    font-size: 0.833rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #0f4a92; }
+  nav ul li:last-child {
+    padding: 0; }
+  nav ul li a {
+    font-size: 0.833rem;
+    text-align: left;
+    text-transform: uppercase;
+    opacity: 1; }
+  nav ul li a span {
+    font-size: 1.44rem;
+    line-height: 1; }
+
+@media (min-width: 35.5rem) {
+  nav ul {
+    justify-content: flex-end;
+    padding: 0 0 0 1rem; } }
 
 span.back {
   position: absolute;
@@ -950,7 +986,8 @@ footer.center {
   text-align: center; }
 
 footer span {
-  display: grid; }
+  display: grid;
+  width: calc(100% - 6rem); }
 
 footer a {
   padding: 0.322rem 0 0; }
@@ -977,43 +1014,16 @@ footer .livechat.online.relative {
   right: 0;
   padding: 0 0 1rem; }
 
-nav {
-  width: 100%; }
-  nav ul {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    width: 100%;
-    margin: 0;
-    padding: 0 0 1rem 0;
-    list-style-type: none; }
-  nav ul li {
-    width: auto;
-    margin: 0;
-    padding: 0 1rem 0 0;
-    font-size: 0.833rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    color: #0f4a92; }
-  nav ul li:last-child {
-    padding: 0; }
-  nav ul li a {
-    font-size: 0.833rem;
-    text-align: left;
-    text-transform: uppercase;
-    opacity: 1; }
-  nav ul li a span {
-    font-size: 1.44rem;
-    line-height: 1; }
-
 main {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 0;
-  padding: 10rem 0 0; }
+  padding: 12rem 0 0; }
+
+@media (min-width: 35.5rem) {
+  main {
+    padding: 9rem 0 0; } }
 
 .text {
   display: block;

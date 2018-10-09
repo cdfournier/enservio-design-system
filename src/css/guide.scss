@@ -108,10 +108,51 @@ footer span {
   display: flex;
   flex-direction: row;
   align-items: center;
+  width: auto;
   line-height: 1.5;
 }
 
 footer nav ul li {line-height: 2;}
+
+footer nav {
+  width: 100%;
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+    margin: 0;
+    padding: 0 0 1rem 0;
+    list-style-type: none;
+  }
+
+  ul li {
+    width: auto;
+    margin: 0;
+    padding: 0 1rem 0 0;
+    font-size: 0.833rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $color-two;
+  }
+
+  ul li:last-child {padding: 0;}
+
+  ul li a {
+    font-size: 0.833rem;
+    text-align: left;
+    text-transform: uppercase;
+    opacity: 1;
+  }
+
+  ul li a span {
+    font-size: 1.44rem;
+    line-height: 1;
+  }
+}
 
 
 // SPLIT
