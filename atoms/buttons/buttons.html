@@ -105,7 +105,7 @@
       <section id="buttons-with-pre-and-post-spans">
         <div class="text guide">
           <h2>Buttons With Pre- and Post- Spans</h2>
-          <p>We have included classes to make it easy to add an icon before or after the <code>&lt;button&gt;</code> label.</p>
+          <p>We have included classes to make it easy to add an icon before or after the <code>&lt;button&gt;</code> label. Use the <code>.pre</code> <code>&lt;span&gt;</code> to include icons before the label text, and use the <code>.post</code> <code>&lt;span&gt;</code> to include icons after the label text</p>
         </div>
         <div class="split wide">
           <div class="design-sample">
@@ -141,20 +141,20 @@
       <section id="buttons-with-a-number">
         <div class="text guide">
           <h2>Buttons With a Number</h2>
-          <p>To include a number with a <code>&lt;button&gt;</code>, use the <code>.post-number</code> <code>&lt;span&gt;</code> class.</p>
+          <p>To include a number with a <code>&lt;button&gt;</code>, use the <code>.number</code> <code>&lt;span&gt;</code> inside the <code>.post</code> <code>&lt;span&gt;</code> class.</p>
         </div>
         <div class="split">
           <div class="design-sample">
             <figcaption>Design Sample</figcaption>
             <div class="button-box left">
-              <span class="button color-one"><span class="button-label">Primary<span class="post-number">1</span></span></span>
+              <span class="button color-one"><span class="button-label">Primary<span class="post"><span class="number">1</span></span></span></span>
             </div>
           </div>
           <div class="code-sample">
             <figure>
               <figcaption>html</figcaption>
 <pre><code>&lt;div class=&quot;button-box left&quot;&gt;
-  &lt;button class=&quot;button color-one&quot;&gt;&lt;span class=&quot;button-label&quot;&gt;Primary&lt;span class=&quot;post-number&quot;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;
+  &lt;button class=&quot;button color-one&quot;&gt;&lt;span class=&quot;button-label&quot;&gt;Primary&lt;span class=&quot;post&quot;&gt;&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;
 &lt;/div&gt;</code></pre>
             </figure>
           </div>
@@ -163,13 +163,13 @@
       <section id="buttons-with-a-spinner">
         <div class="text guide">
           <h2>Buttons With a Spinner</h2>
-          <p>If there is a situation where any sort of processing delay is possible when a user clicks a <code>&lt;button&gt;</code>, we should create a <code>&lt;button&gt;</code> with a <code>.post-processing</code> <code>&lt;span&gt;</code>. When necessary we can add the <code>.active</code> class to that span and trigger the button's spinner.</p>
+          <p>If there is a situation where any sort of processing delay is possible when a user clicks a <code>&lt;button&gt;</code>, we should use a <code>&lt;button&gt;</code> with a <code>.processing</code> <code>&lt;span&gt;</code>. When necessary we can add the <code>.active</code> class to that span and trigger the button's spinner.</p>
         </div>
         <div class="split">
           <div class="design-sample">
             <figcaption>Design Sample</figcaption>
             <div class="button-box left">
-              <span class="button color-one delay one"><span class="button-label">Primary<span class="post-processing one"><i class="la la-refresh la-spin"></i></span></span></span>
+              <span class="button color-one delay one"><span class="button-label">Primary<span class="post"><span class="processing one"><i class="la la-refresh la-spin"></i></span></span></span></span>
             </div>
             <div class="notes">
               <figcaption>Notes</figcaption>
@@ -180,7 +180,7 @@
             <figure>
               <figcaption>html</figcaption>
 <pre><code>&lt;div class=&quot;button-box left&quot;&gt;
-  &lt;button class=&quot;button color-one&quot;&gt;&lt;span class=&quot;button-label&quot;&gt;Primary&lt;span class=&quot;post-processing&quot;&gt;&lt;i class=&quot;la la-refresh la-spin&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;
+  &lt;button class=&quot;button color-one&quot;&gt;&lt;span class=&quot;button-label&quot;&gt;Primary&lt;span class=&quot;post&quot;&gt;&lt;span class=&quot;processing&quot;&gt;&lt;i class=&quot;la la-refresh la-spin&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;
 &lt;/div&gt;</code></pre>
             </figure>
           </div>

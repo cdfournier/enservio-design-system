@@ -454,8 +454,12 @@ button span.button-label,
 }
 
 button span.pre, .button span.pre,
-button span.post, .button span.post {
-  margin: -0.0525rem 0 0;
+button span.post, .button span.post {display: inline-block;}
+
+button span.pre i.la, .button span.pre i.la,
+button span.post i.la, .button span.post i.la {
+  position: relative;
+  top: 0.1rem;
   font-size: 1rem;
 }
 
@@ -463,43 +467,48 @@ button span.pre, .button span.pre {padding: 0 0.5rem 0 0;}
 
 button span.post, .button span.post {padding: 0 0 0 0.5rem;}
 
-button span.post-number,
-.button span.post-number {
+button span.pre span.number, button span.post span.number,
+.button span.pre span.number, .button span.post span.number {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 1.5rem;
   height: 1.5rem;
-  margin: 0 0 0 0.5rem;
+  margin: 0;
   border-radius: 2rem;
+  font-size: 0.694rem;
   font-weight: 700;
+  line-height: 1.5;
 }
 
-button span.post-processing,
-.button span.post-processing {
-  position: relative;
-  top: 0.125rem;
+button span.pre span.processing, button span.post span.processing,
+.button span.pre span.processing, .button span.post span.processing {
+  display: block;
   max-width: 0;
   margin: 0;
   padding: 0;
-  font-size: 1rem;
   opacity: 0;
   @include transition(all, 0.25s, ease-in-out);
 }
 
-button span.post-processing i.la.la-refresh.la-spin,
-.button span.post-processing i.la.la-refresh.la-spin {display: none;}
+button span.processing i.la.la-refresh.la-spin,
+.button span.processing i.la.la-refresh.la-spin {
+  display: none;
+  position: relative;
+  top: 0.125rem;
+  font-size: 1rem;
+}
 
-button span.post-processing.active,
-.button span.post-processing.active {
+button span.pre span.processing.active, button span.post span.processing.active,
+.button span.pre span.processing.active, .button span.post span.processing.active {
   max-width: 100%;
   margin: 0;
-  padding: 0 0 0 0.5rem;
+  padding: 0;
   opacity: 1;
 }
 
-button span.post-processing.active i.la.la-refresh.la-spin,
-.button span.post-processing.active i.la.la-refresh.la-spin {display: inline-block;}
+button span.processing.active i.la.la-refresh.la-spin,
+.button span.processing.active i.la.la-refresh.la-spin {display: inline-block;}
 
 button.big,
 .button.big {
@@ -522,14 +531,14 @@ button.color-one:hover, button.color-one:focus,
   background-color: $white;
 }
 
-button.color-one span.post-number,
-.button.color-one span.post-number {
+button.color-one span.number,
+.button.color-one span.number {
   color: $color-one;
   background-color: $white;
 }
 
-button.color-one:hover span.post-number, button.color-one:focus span.post-number,
-.button.color-one:hover span.post-number, .button.color-one:focus span.post-number {
+button.color-one:hover span.number, button.color-one:focus span.number,
+.button.color-one:hover span.number, .button.color-one:focus span.number {
   color: $white;
   background-color: $color-one;
 }
@@ -547,14 +556,14 @@ button.color-two:hover, button.color-two:focus,
   background-color: $white;
 }
 
-button.color-two span.post-number,
-.button.color-two span.post-number {
+button.color-two span.number,
+.button.color-two span.number {
   color: $color-two;
   background-color: $white;
 }
 
-button.color-two:hover span.post-number, button.color-two:focus span.post-number,
-.button.color-two:hover span.post-number, .button.color-two:focus span.post-number {
+button.color-two:hover span.number, button.color-two:focus span.number,
+.button.color-two:hover span.number, .button.color-two:focus span.number {
   color: $white;
   background-color: $color-two;
 }
@@ -572,14 +581,14 @@ button.secondary.color-one:hover, button.secondary.color-one:focus,
   background-color: $color-one;
 }
 
-button.secondary.color-one span.post-number,
-.button.secondary.color-one span.post-number {
+button.secondary.color-one span.number,
+.button.secondary.color-one span.number {
   color: $white;
   background-color: $color-one;
 }
 
-button.secondary.color-one:hover span.post-number, button.secondary.color-one:focus span.post-number,
-.button.secondary.color-one:hover span.post-number, .button.secondary.color-one:focus span.post-number {
+button.secondary.color-one:hover span.number, button.secondary.color-one:focus span.number,
+.button.secondary.color-one:hover span.number, .button.secondary.color-one:focus span.number {
   color: $color-one;
   background-color: $white;
 }
@@ -597,14 +606,14 @@ button.secondary.color-two:hover, button.secondary.color-two:focus,
   background-color: $color-two;
 }
 
-button.secondary.color-two span.post-number,
-.button.secondary.color-two span.post-number {
+button.secondary.color-two span.number,
+.button.secondary.color-two span.number {
   color: $white;
   background-color: $color-two;
 }
 
-button.secondary.color-two:hover span.post-number, button.secondary.color-two:focus span.post-number,
-.button.secondary.color-two:hover span.post-number, .button.secondary.color-two:focus span.post-number {
+button.secondary.color-two:hover span.number, button.secondary.color-two:focus span.number,
+.button.secondary.color-two:hover span.number, .button.secondary.color-two:focus span.number {
   color: $color-two;
   background-color: $white;
 }

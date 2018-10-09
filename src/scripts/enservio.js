@@ -39,16 +39,16 @@ $('.attachment-error').click( function() {
 
 // SPINNER BUTTONS
 $('.delay.one').click(function() {
-  $('.post-processing.one').toggleClass('active');
+  $('.processing.one').toggleClass('active');
 });
 $('.delay.two').click(function() {
-  $('.post-processing.two').toggleClass('active');
+  $('.processing.two').toggleClass('active');
 });
 $('.delay.three').click(function() {
-  $('.post-processing.three').toggleClass('active');
+  $('.processing.three').toggleClass('active');
 });
 $('.delay.four').click(function() {
-  $('.post-processing.four').toggleClass('active');
+  $('.processing.four').toggleClass('active');
 });
 
 
@@ -108,7 +108,7 @@ $('.continue').click( function() {
 
 // LIVECHAT ONLINE/OFFLINE
 var d = new Date();
-if(d.getHours() >= 8 && d.getHours() <= 17 ){
+if(d.getHours() >= 8 && d.getHours() <= 20 ){
   $(".livechat.online").show();
   $(".livechat.offline").hide();
 }
