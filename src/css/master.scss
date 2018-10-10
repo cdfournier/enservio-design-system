@@ -817,11 +817,14 @@ span.button.upload input[type="file"] {
 
 .button-box.left {align-items: flex-start;}
 
+.button-box.reverse {flex-direction: column-reverse;}
+
 @media (min-width: 48rem) {
 .button-box {
   flex-direction: row;
   justify-content: center;
 }
+.button-box.reverse {flex-direction: row;}
 .button-box.right {
   align-items: flex-end;
   justify-content: flex-end;
@@ -876,7 +879,8 @@ header {
   align-items: center;
   justify-content: flex-start;
   width: 100%;
-  margin: 0;
+  max-width: 40rem;
+  margin: 0 auto;
   padding: 2rem;
   background-color: $white;
 }
