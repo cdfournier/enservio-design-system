@@ -740,6 +740,9 @@ span.button.upload input[type="file"] {
   margin: 0;
   padding: 0; }
 
+.button-box.reverse {
+  flex-direction: column-reverse; }
+
 .button-box.right {
   align-items: flex-end; }
 
@@ -750,6 +753,8 @@ span.button.upload input[type="file"] {
   .button-box {
     flex-direction: row;
     justify-content: center; }
+  .button-box.reverse {
+    flex-direction: row; }
   .button-box.right {
     align-items: flex-end;
     justify-content: flex-end; }
