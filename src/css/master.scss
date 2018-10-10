@@ -352,32 +352,6 @@ ul.attachment-list li.invalid .line-item span.file-name {color: $invalid;}
 ul.attachment-list li.invalid .button-box.right {opacity: 0;}
 
 
-// INVENTORY HELP LIST STYLES
-.carousel .carousel-cell.center ul {
-  display: flex;
-  flex-direction: column;
-  width: auto;
-  margin: 0;
-  line-height: 1;
-}
-
-@media (min-height: 48rem) {
-.carousel .carousel-cell.center ul {
-  flex-direction: row;
-  justify-content: space-around;
-  width: 100%;
-}
-.carousel .carousel-cell.center ul li {width: auto;}}
-
-@media (min-width: 48rem) {
-.carousel .carousel-cell.center ul {
-  flex-direction: row;
-  justify-content: space-around;
-  width: 100%;
-}
-.carousel .carousel-cell.center ul li {width: auto;}}
-
-
 // SETTLEMENT OFFER LIST
 ul.settlement-offer {
   margin: 0;
@@ -454,7 +428,10 @@ button span.button-label,
 }
 
 button span.pre, .button span.pre,
-button span.post, .button span.post {display: inline-block;}
+button span.post, .button span.post {
+  display: inline-block;
+  padding: 0;
+}
 
 button span.pre i.la, .button span.pre i.la,
 button span.post i.la, .button span.post i.la {
@@ -463,10 +440,6 @@ button span.post i.la, .button span.post i.la {
   font-size: 1rem;
 }
 
-button span.pre, .button span.pre {padding: 0 0.5rem 0 0;}
-
-button span.post, .button span.post {padding: 0 0 0 0.5rem;}
-
 button span.pre span.number, button span.post span.number,
 .button span.pre span.number, .button span.post span.number {
   display: inline-flex;
@@ -474,7 +447,7 @@ button span.pre span.number, button span.post span.number,
   justify-content: center;
   width: 1.5rem;
   height: 1.5rem;
-  margin: 0;
+  margin: 0 0 0 0.5rem;
   border-radius: 2rem;
   font-size: 0.694rem;
   font-weight: 700;
@@ -839,6 +812,8 @@ span.button.upload input[type="file"] {
   padding: 0;
 }
 
+.button-box.reverse {flex-direction: column-reverse;}
+
 .button-box.right {align-items: flex-end;}
 
 .button-box.left {align-items: flex-start;}
@@ -848,6 +823,7 @@ span.button.upload input[type="file"] {
   flex-direction: row;
   justify-content: center;
 }
+.button-box.reverse {flex-direction: row;}
 .button-box.right {
   align-items: flex-end;
   justify-content: flex-end;
@@ -989,6 +965,7 @@ nav {
     padding: 0 1rem 0 0;
     font-size: 0.833rem;
     font-weight: 500;
+    text-align: center;
     text-transform: uppercase;
     color: $color-two;
   }
@@ -1046,13 +1023,8 @@ footer {
 
 footer.wide {max-width: none;}
 
-footer.center {
-  align-items: center;
-  text-align: center;
-}
-
 footer span {
-  display: grid;
+  display: block;
   width: calc(100% - 6rem);
 }
 
@@ -1070,16 +1042,6 @@ footer .livechat.online {
   right: 2rem;
   width: 6rem;
   height: auto;
-}
-
-// footer .livechat.online {display: none}
-
-footer .livechat.offline.relative,
-footer .livechat.online.relative {
-  position: relative;
-  top: 0;
-  right: 0;
-  padding: 0 0 1rem;
 }
 
 
@@ -1650,7 +1612,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: auto;
+  width: 100%;
   max-width: 100%;
   overflow: hidden;
   margin: 0 0 1rem;
