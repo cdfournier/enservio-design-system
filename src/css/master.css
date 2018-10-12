@@ -949,7 +949,7 @@ span.back:hover, span.back:focus {
 
 footer {
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   align-items: flex-start;
   justify-content: space-between;
   position: relative;
@@ -971,19 +971,19 @@ footer a {
   padding: 0.322rem 0 0; }
 
 @media (min-width: 35.5rem) {
-  footer span {
-    display: block; }
   footer a {
     padding: 0; } }
 
 footer .livechat.offline,
 footer .livechat.online {
   display: block;
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
   width: 6rem;
-  height: auto; }
+  height: auto;
+  max-height: 1.3rem; }
+
+footer .livechat.offline svg,
+footer .livechat.online svg {
+  height: 1.3rem; }
 
 main {
   display: flex;
