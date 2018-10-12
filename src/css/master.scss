@@ -812,11 +812,11 @@ span.button.upload input[type="file"] {
   padding: 0;
 }
 
+.button-box.reverse {flex-direction: column-reverse;}
+
 .button-box.right {align-items: flex-end;}
 
 .button-box.left {align-items: flex-start;}
-
-.button-box.reverse {flex-direction: column-reverse;}
 
 @media (min-width: 48rem) {
 .button-box {
@@ -907,15 +907,6 @@ header {
   justify-content: space-between;
 }}
 
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-header {margin: 0 auto;}
-header.hidden {
-  opacity: 1;
-  @include transform(translateY(0));
-}
-.header--fixed {position: relative;}
-.headroom--pinned {@include transform(translateY(0))}}
-
 
 // LOGO
 .logo {
@@ -932,15 +923,6 @@ header.hidden {
   height: 5rem;
   max-height: 5rem;
 }
-
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-.logo {
-  display: block;
-  width: auto;
-  height: 5rem;
-  max-height: 5rem;
-  margin: 0 auto;
-}}
 
 
 // NAVIGATION
@@ -965,6 +947,7 @@ nav {
     padding: 0 1rem 0 0;
     font-size: 0.833rem;
     font-weight: 500;
+    text-align: center;
     text-transform: uppercase;
     color: $color-two;
   }
@@ -1008,9 +991,9 @@ span.back:hover, span.back:focus {color: $color-two;}
 // FOOTER
 footer {
   display: flex;
-  flex-direction: column;
+  flex-direction: row-reverse;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: space-between;
   position: relative;
   width: 100%;
   max-width: 40rem;
@@ -1029,22 +1012,21 @@ footer span {
 
 footer a {padding: 0.322rem 0 0;}
 
-@media (min-width: 35.5rem) {
-footer span {display: block;}
-footer a {padding: 0;}}
+@media (min-width: 35.5rem) {footer a {padding: 0;}}
 
 footer .livechat.offline,
 footer .livechat.online {
   display: block;
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
   width: 6rem;
   height: auto;
+  max-height: 1.3rem;
 }
 
+footer .livechat.offline svg,
+footer .livechat.online svg {height: 1.3rem;}
 
-// LAYOUT
+
+// MAIN
 main {
   display: flex;
   flex-direction: column;
@@ -2073,7 +2055,7 @@ input[type="url"] {
 }
 
 
-// STRUCTURE
+// FORMS
 form {
   display: flex;
   flex-direction: column;
@@ -2227,11 +2209,6 @@ input:focus::placeholder {
   cursor: pointer;
   @include transform(translate(0,0));
 }
-
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-.field input {min-height: 3rem;}
-.field input:placeholder-shown + label {transform: translate(0,0);}
-input:-ms-input-placeholder {opacity: 1;}}
 
 
 // SHOW/HIDE PASSWORD SETTINGS
@@ -2428,10 +2405,6 @@ span.error-message {
 
 .field select:disabled + .select-icon {color: $light-gray;}
 
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-.field select {padding: 0;}
-.field .select-icon {display: none;}}
-
 
 // CHECKBOXES
 input[type="checkbox"] {
@@ -2473,9 +2446,6 @@ label.checkbox, label.radio {
   padding: 0 0 0 2rem;
   line-height: 1.5;
 }
-
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-.field input[type="checkbox"] {min-height: inherit;}}
 
 
 // VALID CHECKBOX SETTINGS
@@ -2544,9 +2514,6 @@ input[type="radio"]:disabled:checked:before {
   background-color: $light-gray;
   content: "";
 }
-
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-.field input[type="radio"] {min-height: inherit;}}
 
 
 // VALID RADIO BUTTON SETTINGS
@@ -2666,4 +2633,54 @@ ol.survey li .field span.error-message {font-size: 1rem;}
 
 
 // MICROSOFT HACKS
-::-ms-clear {display: none;}
+input::-ms-clear, input::-ms-reveal, ::-ms-clear {display: none;}
+
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+
+ul.attachment-list li .line-item .button-box {top: 0;}
+
+header {margin: 0 auto;}
+
+header.hidden {
+  opacity: 1;
+  @include transform(translateY(0));
+}
+
+.header--fixed {position: relative;}
+
+.headroom--pinned {@include transform(translateY(0))}
+
+.logo {
+  display: block;
+  width: auto;
+  height: 5rem;
+  max-height: 5rem;
+  margin: 0 auto;
+}
+
+main {padding: 0;}
+
+.graphic-cell .graphic {height: 25%;}
+
+.carousel-cell .graphic {height: 25%;}
+
+.current-inventory {top: calc(100vh - 20rem);}
+
+.inventory-item {display: block;}
+
+.field input {min-height: 3rem;}
+
+.field input:placeholder-shown + label {transform: translate(0,0);}
+
+input:-ms-input-placeholder {opacity: 1;}
+
+.field select {padding: 0;}
+
+.field .select-icon {display: none;}
+
+.field input[type="checkbox"] {min-height: inherit;}
+
+.field input[type="radio"] {min-height: inherit;}
+
+}
