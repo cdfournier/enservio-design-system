@@ -340,9 +340,6 @@ ul.attachment-list li .line-item .expanding-button-box .expanding-button.small {
 
 ul.attachment-list li .line-item .expanding-button-box .expanding-button.large {display: none;}
 
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-ul.attachment-list li .line-item .button-box {top: 0;}}
-
 
 // ATTACHMENT LIST ERRORS
 ul.attachment-list li span.error-message {margin: 0.25rem 0 0 0.5rem;}
@@ -910,15 +907,6 @@ header {
   justify-content: space-between;
 }}
 
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-header {margin: 0 auto;}
-header.hidden {
-  opacity: 1;
-  @include transform(translateY(0));
-}
-.header--fixed {position: relative;}
-.headroom--pinned {@include transform(translateY(0))}}
-
 
 // LOGO
 .logo {
@@ -935,15 +923,6 @@ header.hidden {
   height: 5rem;
   max-height: 5rem;
 }
-
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-.logo {
-  display: block;
-  width: auto;
-  height: 5rem;
-  max-height: 5rem;
-  margin: 0 auto;
-}}
 
 
 // NAVIGATION
@@ -1058,9 +1037,6 @@ main {
 }
 
 @media (min-width: 35.5rem) {main {padding: 9rem 0 0;}}
-
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-main {padding: 0;}}
 
 
 // TEXT BOX
@@ -1376,9 +1352,6 @@ main {padding: 0;}}
 }
 .carousel .carousel-cell {padding: 0 6rem;}}
 
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-.carousel-cell .graphic {height: 25%;}}
-
 
 // CURRENT INVENTORY
 .current-inventory {
@@ -1457,9 +1430,6 @@ main {padding: 0;}}
   padding: 1rem 0 0;
 }
 .current-inventory .current-inventory-bar h2:after {opacity: 0;}}
-
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-.current-inventory {top: calc(100vh - 7rem);}}
 
 
 // CURRENT INVENTORY LIST ITEMS
@@ -1593,9 +1563,6 @@ main {padding: 0;}}
   width: 30%;
   padding: 0 0 0 1rem;
 }}
-
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-.inventory-item {display: block;}}
 
 
 // CLAIM INFORMATION
@@ -2089,7 +2056,7 @@ input[type="url"] {
 }
 
 
-// STRUCTURE
+// FORMS
 form {
   display: flex;
   flex-direction: column;
@@ -2243,11 +2210,6 @@ input:focus::placeholder {
   cursor: pointer;
   @include transform(translate(0,0));
 }
-
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-.field input {min-height: 3rem;}
-.field input:placeholder-shown + label {transform: translate(0,0);}
-input:-ms-input-placeholder {opacity: 1;}}
 
 
 // SHOW/HIDE PASSWORD SETTINGS
@@ -2444,10 +2406,6 @@ span.error-message {
 
 .field select:disabled + .select-icon {color: $light-gray;}
 
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-.field select {padding: 0;}
-.field .select-icon {display: none;}}
-
 
 // CHECKBOXES
 input[type="checkbox"] {
@@ -2489,9 +2447,6 @@ label.checkbox, label.radio {
   padding: 0 0 0 2rem;
   line-height: 1.5;
 }
-
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-.field input[type="checkbox"] {min-height: inherit;}}
 
 
 // VALID CHECKBOX SETTINGS
@@ -2560,9 +2515,6 @@ input[type="radio"]:disabled:checked:before {
   background-color: $light-gray;
   content: "";
 }
-
-@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-.field input[type="radio"] {min-height: inherit;}}
 
 
 // VALID RADIO BUTTON SETTINGS
@@ -2683,3 +2635,53 @@ ol.survey li .field span.error-message {font-size: 1rem;}
 
 // MICROSOFT HACKS
 ::-ms-clear {display: none;}
+
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+
+ul.attachment-list li .line-item .button-box {top: 0;}
+
+header {margin: 0 auto;}
+
+header.hidden {
+  opacity: 1;
+  @include transform(translateY(0));
+}
+
+.header--fixed {position: relative;}
+
+.headroom--pinned {@include transform(translateY(0))}
+
+.logo {
+  display: block;
+  width: auto;
+  height: 5rem;
+  max-height: 5rem;
+  margin: 0 auto;
+}
+
+main {padding: 0;}
+
+.graphic-cell .graphic {height: 25%;}
+
+.carousel-cell .graphic {height: 25%;}
+
+.current-inventory {top: calc(100vh - 20rem);}
+
+.inventory-item {display: block;}
+
+.field input {min-height: 3rem;}
+
+.field input:placeholder-shown + label {transform: translate(0,0);}
+
+input:-ms-input-placeholder {opacity: 1;}
+
+.field select {padding: 0;}
+
+.field .select-icon {display: none;}
+
+.field input[type="checkbox"] {min-height: inherit;}
+
+.field input[type="radio"] {min-height: inherit;}
+
+}
