@@ -2634,7 +2634,7 @@ ol.survey li .field span.error-message {font-size: 1rem;}
 
 
 // MICROSOFT HACKS
-::-ms-clear {display: none;}
+input::-ms-clear, input::-ms-reveal, ::-ms-clear {display: none;}
 
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {

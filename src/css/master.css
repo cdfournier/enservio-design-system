@@ -2583,7 +2583,7 @@ ol.survey li .field label {
 ol.survey li .field span.error-message {
   font-size: 1rem; }
 
-::-ms-clear {
+input::-ms-clear, input::-ms-reveal, ::-ms-clear {
   display: none; }
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
