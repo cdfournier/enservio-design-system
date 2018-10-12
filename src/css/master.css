@@ -289,6 +289,10 @@ ul.attachment-list li .line-item .expanding-button-box .expanding-button.small {
 ul.attachment-list li .line-item .expanding-button-box .expanding-button.large {
   display: none; }
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  ul.attachment-list li .line-item .button-box {
+    top: 0; } }
+
 ul.attachment-list li span.error-message {
   margin: 0.25rem 0 0 0.5rem; }
 
@@ -945,9 +949,9 @@ span.back:hover, span.back:focus {
 
 footer {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: space-between;
   position: relative;
   width: 100%;
   max-width: 40rem;
@@ -991,6 +995,10 @@ main {
 @media (min-width: 35.5rem) {
   main {
     padding: 9rem 0 0; } }
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  main {
+    padding: 0; } }
 
 .text {
   display: block;
@@ -1319,6 +1327,10 @@ main {
   .carousel .carousel-cell {
     padding: 0 6rem; } }
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .carousel-cell .graphic {
+    height: 25%; } }
+
 .current-inventory {
   position: fixed;
   top: calc(100vh - 7rem);
@@ -1404,6 +1416,10 @@ main {
     padding: 1rem 0 0; }
   .current-inventory .current-inventory-bar h2:after {
     opacity: 0; } }
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .current-inventory {
+    top: calc(100vh - 7rem); } }
 
 .current-inventory-list {
   padding: 2rem 1rem 0; }
@@ -1558,6 +1574,10 @@ main {
     display: block;
     width: 30%;
     padding: 0 0 0 1rem; } }
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .inventory-item {
+    display: block; } }
 
 .claim {
   display: block;
