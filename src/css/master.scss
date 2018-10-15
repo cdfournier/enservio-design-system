@@ -1015,6 +1015,7 @@ footer a {padding: 0.322rem 0 0;}
 @media (min-width: 35.5rem) {
 footer a {padding: 0;}}
 
+footer .livechat,
 footer .livechat.offline,
 footer .livechat.online {
   display: block;
@@ -1023,6 +1024,7 @@ footer .livechat.online {
   max-height: 1.3rem;
 }
 
+footer .livechat,
 footer .livechat.offline svg,
 footer .livechat.online svg {height: 1.3rem;}
 
