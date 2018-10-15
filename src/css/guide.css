@@ -88,6 +88,7 @@ ul.contents li a {
     padding: 0; } }
 
 footer {
+  flex-direction: column;
   align-items: flex-start; }
 
 footer span {
@@ -334,8 +335,6 @@ footer nav {
   .color-cards .card {
     width: 29.625%;
     margin: 0 2rem 2rem 0; }
-  .color-cards .card:nth-of-type(3n) {
-    margin: 0 0 2rem; }
   .color-cards .card .card-copy code {
     font-size: 0.833rem; } }
 
