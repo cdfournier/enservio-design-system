@@ -189,11 +189,11 @@ ul.requirements li.default span i.la.la-exclamation-circle {
   display: none; }
 
 ul.requirements li.valid {
-  color: #3c763d; }
+  color: #008000; }
 
 ul.requirements li.valid span i.la.la-check-circle {
   display: flex;
-  color: #3c763d; }
+  color: #008000; }
 
 ul.requirements li.valid span i.la.la-circle,
 ul.requirements li.valid span i.la.la-exclamation-circle {
@@ -1075,7 +1075,7 @@ main {
   background-color: #bb0000; }
 
 .alert-bar.success {
-  background-color: #3c763d; }
+  background-color: #008000; }
 
 .alert-bar.system {
   background-color: #2e84ed; }
@@ -2187,8 +2187,8 @@ input:focus::placeholder {
   height: 1.9625rem; }
 
 .field.valid input {
-  border-color: #3c763d;
-  color: #3c763d;
+  border-color: #008000;
+  color: #008000;
   -webkit-transition: all 0.25s ease-in-out 0s;
   -moz-transition: all 0.25s ease-in-out 0s;
   -ms-transition: all 0.25s ease-in-out 0s;
@@ -2198,29 +2198,29 @@ input:focus::placeholder {
 .field.valid input:not(:placeholder-shown) + label,
 .field.valid input:placeholder-shown + label,
 .field.valid input:focus + label {
-  color: #3c763d; }
+  color: #008000; }
 
 .field.valid input:not(:placeholder-shown) + label a,
 .field.valid input:placeholder-shown + label a,
 .field.valid input:focus + label a {
-  color: #3c763d; }
+  color: #008000; }
 
 .field.valid input:not(:placeholder-shown) + label a:hover, .field.valid input:not(:placeholder-shown) + label a:focus,
 .field.valid input:placeholder-shown + label a:hover, .field.valid input:placeholder-shown + label a:focus,
 .field.valid input:focus + label a:hover, .field.valid input:focus + label a:focus {
-  color: #2b542c; }
+  color: #004d00; }
 
 .field.valid select {
-  border-color: #3c763d;
-  color: #3c763d; }
+  border-color: #008000;
+  color: #008000; }
 
 .field.valid select option,
 .field.valid .select-icon,
 .field.valid label {
-  color: #3c763d; }
+  color: #008000; }
 
 .field.valid select option span.option {
-  color: #3c763d; }
+  color: #008000; }
 
 .field span.valid {
   position: absolute;
@@ -2228,7 +2228,7 @@ input:focus::placeholder {
   right: 1rem;
   padding: 0 0 0 1rem;
   font-size: 1.5rem;
-  color: #3c763d;
+  color: #008000;
   opacity: 0;
   -webkit-transition: all 0.25s ease-in-out 0s;
   -moz-transition: all 0.25s ease-in-out 0s;
@@ -2251,7 +2251,7 @@ input:focus::placeholder {
 
 .field.valid .show-hide-password {
   right: 2.5rem;
-  color: #3c763d; }
+  color: #008000; }
 
 span.error-message {
   width: 100%;
@@ -2406,10 +2406,10 @@ label.checkbox, label.radio {
   line-height: 1.5; }
 
 .field.valid input[type="checkbox"]:checked:not(:disabled) {
-  background-color: #3c763d; }
+  background-color: #008000; }
 
 .field.valid label span.checkmark {
-  border-color: #3c763d; }
+  border-color: #008000; }
 
 .field.invalid input[type="checkbox"]:checked:not(:disabled) {
   background-color: #bb0000; }
@@ -2474,7 +2474,7 @@ input[type="radio"]:disabled:checked:before {
   content: ""; }
 
 .field.valid input[type="radio"]:checked:before {
-  background-color: #3c763d; }
+  background-color: #008000; }
 
 .field.invalid input[type="radio"]:checked:before {
   background-color: #bb0000; }
@@ -2547,10 +2547,10 @@ label.toggle {
 
 .field.valid input.toggle[type="checkbox"]:not(:disabled),
 .field.valid input.toggle[type="checkbox"]:checked:not(:disabled) {
-  background-color: #3c763d; }
+  background-color: #008000; }
 
 .field.valid input.toggle[type="checkbox"]:after {
-  color: #3c763d; }
+  color: #008000; }
 
 .field.invalid input.toggle[type="checkbox"]:not(:disabled),
 .field.invalid input.toggle[type="checkbox"]:checked:not(:disabled) {
