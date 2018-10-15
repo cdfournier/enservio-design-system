@@ -200,11 +200,11 @@ ul.requirements li.valid span i.la.la-exclamation-circle {
   display: none; }
 
 ul.requirements li.invalid {
-  color: #d0021b; }
+  color: #bb0000; }
 
 ul.requirements li.invalid span i.la.la-exclamation-circle {
   display: flex;
-  color: #d0021b; }
+  color: #bb0000; }
 
 ul.requirements li.invalid span i.la.la-circle,
 ul.requirements li.invalid span i.la.la-check-circle {
@@ -297,7 +297,7 @@ ul.attachment-list li.invalid span.error-message {
 
 ul.attachment-list li.invalid .line-item span.file-type-icon,
 ul.attachment-list li.invalid .line-item span.file-name {
-  color: #d0021b; }
+  color: #bb0000; }
 
 ul.attachment-list li.invalid .button-box.right {
   opacity: 0; }
@@ -325,7 +325,7 @@ ul.settlement-offer li span {
   font-weight: 400; }
 
 ul.settlement-offer li span.subtract {
-  color: #d0021b; }
+  color: #bb0000; }
 
 ul.settlement-offer li span.subtract.border {
   padding: 0 0 1rem;
@@ -1070,7 +1070,7 @@ main {
   transform: translateY(-20rem); }
 
 .alert-bar.error, .alert-bar.confirm {
-  background-color: #d0021b; }
+  background-color: #bb0000; }
 
 .alert-bar.success {
   background-color: #008000; }
@@ -1153,23 +1153,23 @@ main {
 .alert-bar .alert-bar-details .confirm-action-box span.confirm-action {
   margin: 0 0 0 1rem;
   border: 1px solid #ffffff;
-  color: #d0021b;
+  color: #bb0000;
   background-color: #ffffff; }
 
 .alert-bar .alert-bar-details .confirm-action-box span.confirm-action:hover,
 .alert-bar .alert-bar-details .confirm-action-box span.confirm-action:focus {
   color: #ffffff;
-  background-color: #d0021b; }
+  background-color: #bb0000; }
 
 .alert-bar .alert-bar-details .confirm-action-box span.confirm-action.secondary {
   margin: 0;
   border: 1px solid #ffffff;
   color: #ffffff;
-  background-color: #d0021b; }
+  background-color: #bb0000; }
 
 .alert-bar .alert-bar-details .confirm-action-box span.confirm-action.secondary:hover,
 .alert-bar .alert-bar-details .confirm-action-box span.confirm-action.secondary:focus {
-  color: #d0021b;
+  color: #bb0000;
   background-color: #ffffff; }
 
 .timeout {
@@ -2260,7 +2260,7 @@ span.error-message {
   font-family: "Montserrat", sans-serif;
   font-size: 0.833rem;
   font-weight: 600;
-  color: #d0021b;
+  color: #bb0000;
   text-align: left;
   opacity: 0;
   -webkit-transition: all 0.25s ease-in-out 0s;
@@ -2273,38 +2273,38 @@ span.error-message {
   opacity: 1; }
 
 .field.invalid input {
-  border-color: #d0021b;
-  color: #d0021b; }
+  border-color: #bb0000;
+  color: #bb0000; }
 
 .field.invalid input:not(:placeholder-shown) + label,
 .field.invalid input:placeholder-shown + label,
 .field.invalid input:focus + label {
-  color: #d0021b; }
+  color: #bb0000; }
 
 .field.invalid input:not(:placeholder-shown) + label a,
 .field.invalid input:placeholder-shown + label a,
 .field.invalid input:focus + label a {
-  color: #d0021b; }
+  color: #bb0000; }
 
 .field.invalid input:not(:placeholder-shown) + label a:hover, .field.invalid input:not(:placeholder-shown) + label a:focus,
 .field.invalid input:placeholder-shown + label a:hover, .field.invalid input:placeholder-shown + label a:focus,
 .field.invalid input:focus + label a:hover, .field.invalid input:focus + label a:focus {
-  color: #9d0214; }
+  color: #880000; }
 
 .field.invalid select {
-  border-color: #d0021b;
-  color: #d0021b; }
+  border-color: #bb0000;
+  color: #bb0000; }
 
 .field.invalid select option,
 .field.invalid .select-icon,
 .field.invalid label {
-  color: #d0021b; }
+  color: #bb0000; }
 
 .field.invalid select option span.option {
-  color: #d0021b; }
+  color: #bb0000; }
 
 .field.invalid .show-hide-password {
-  color: #d0021b; }
+  color: #bb0000; }
 
 .field select {
   border: none;
@@ -2410,13 +2410,13 @@ label.checkbox, label.radio {
   border-color: #008000; }
 
 .field.invalid input[type="checkbox"]:checked:not(:disabled) {
-  background-color: #d0021b; }
+  background-color: #bb0000; }
 
 span.error-message.checkbox {
   padding: 0 0 0 2rem; }
 
 .field.invalid label span.checkmark {
-  border-color: #d0021b; }
+  border-color: #bb0000; }
 
 input[type="radio"] {
   display: flex;
@@ -2475,7 +2475,7 @@ input[type="radio"]:disabled:checked:before {
   background-color: #008000; }
 
 .field.invalid input[type="radio"]:checked:before {
-  background-color: #d0021b; }
+  background-color: #bb0000; }
 
 span.error-message.radio {
   padding: 0 0 0 1.75rem; }
@@ -2552,10 +2552,10 @@ label.toggle {
 
 .field.invalid input.toggle[type="checkbox"]:not(:disabled),
 .field.invalid input.toggle[type="checkbox"]:checked:not(:disabled) {
-  background-color: #d0021b; }
+  background-color: #bb0000; }
 
 .field.invalid input.toggle[type="checkbox"]:after {
-  color: #d0021b; }
+  color: #bb0000; }
 
 ol.survey li fieldset legend {
   display: block; }
