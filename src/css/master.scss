@@ -991,7 +991,7 @@ span.back:hover, span.back:focus {color: $color-two;}
 // FOOTER
 footer {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
   position: relative;
@@ -1012,8 +1012,7 @@ footer span {
 
 footer a {padding: 0.322rem 0 0;}
 
-@media (min-width: 35.5rem) {
-footer a {padding: 0;}}
+@media (min-width: 35.5rem) {footer a {padding: 0;}}
 
 footer .livechat,
 footer .livechat.offline,

@@ -918,7 +918,7 @@ span.back:hover, span.back:focus {
 
 footer {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
   position: relative;
