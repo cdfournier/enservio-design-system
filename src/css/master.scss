@@ -991,7 +991,7 @@ span.back:hover, span.back:focus {color: $color-two;}
 // FOOTER
 footer {
   display: flex;
-  flex-direction: row-reverse;
+  flex-direction: row;
   align-items: flex-start;
   justify-content: space-between;
   position: relative;
