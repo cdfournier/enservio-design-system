@@ -7,7 +7,7 @@ $off-white: #f5f5f5;
 $light-gray: #cccece;
 $dark-gray: #444853;
 $black: #000000;
-$invalid: #d0021b;
+$invalid: #bb0000;
 $valid: #008000;
 $color-one: #2e84ed;
 $color-two: #0f4a92;
@@ -102,7 +102,10 @@ ul.contents li:nth-of-type(2n) h3 {padding: 0;}}
 
 
 // GUIDE FOOTER NAV
-footer {align-items: flex-start;}
+footer {
+  flex-direction: column;
+  align-items: flex-start;
+}
 
 footer span {
   display: flex;
