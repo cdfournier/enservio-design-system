@@ -916,9 +916,9 @@ header {
   align-items: center;
   justify-content: center;
   width: auto;
-  max-width: 10rem;
+  max-width: 12rem;
   height: auto;
-  max-height: 10rem;
+  max-height: 12rem;
   margin: 0 auto;
   padding: 0;
 }
@@ -1032,10 +1032,7 @@ main {
   flex-direction: column;
   justify-content: center;
   margin: 0;
-  padding: 12rem 0 0;
 }
-
-@media (min-width: 35.5rem) {main {padding: 9rem 0 0;}}
 
 
 // TEXT BOX
@@ -1116,7 +1113,7 @@ main {
 
 .graphic-cell .graphic {
   width: 25%;
-  margin: 0 auto 2rem;
+  margin: 0 auto 1rem;
 }
 
 .graphic-cell .graphic.wide {
@@ -1333,7 +1330,7 @@ main {
 
 .carousel-cell .graphic {
   width: 25%;
-  margin: 0 auto 2rem;
+  margin: 0 auto 1rem;
 }
 
 .carousel-cell .graphic.wide {
