@@ -884,6 +884,8 @@ header {
   background-color: $white;
 }
 
+header.wide {justify-content: flex-start;}
+
 .header--fixed {
   position: fixed;
   top: 0;
@@ -905,7 +907,7 @@ header {
 header {
   flex-direction: row;
   align-items: flex-end;
-  justify-content: space-between;
+  justify-content: center;
 }}
 
 
@@ -922,6 +924,8 @@ header {
   margin: 0 auto;
   padding: 0;
 }
+
+@media (min-width: 35.5rem) {.logo {margin: 0;}}
 
 
 // NAVIGATION
@@ -946,6 +950,7 @@ nav {
     padding: 0 1rem 0 0;
     font-size: 0.833rem;
     font-weight: 500;
+    line-height: 1.2;
     text-align: center;
     text-transform: uppercase;
     color: $color-two;
@@ -967,10 +972,13 @@ nav {
 }
 
 @media (min-width: 35.5rem) {
+nav {width: auto;}
 nav ul {
   justify-content: flex-end;
-  padding: 0 0 0 1rem;
+  padding: 0 0 0 4rem;
 }}
+
+@media (min-width: 64rem) {nav ul li {padding: 0 2rem 0 0;}}
 
 
 // BACK BUTTON
@@ -1083,6 +1091,7 @@ main {
   width: auto;
   margin: 0;
 }
+.action.text.left {margin: 0;}
 .action.text .button-box.right {margin: 0 0 0 2rem;}
 .action.text .button-box.left {margin: 0 2rem 0 0;}}
 
