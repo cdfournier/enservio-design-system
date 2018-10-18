@@ -1088,7 +1088,9 @@ main {
   .graphic.text {
     margin: 0 auto 2rem; }
   .graphic.text .graphic-cell {
-    padding: 0 6rem; } }
+    padding: 0 6rem; }
+  .graphic-cell .graphic {
+    width: 20%; } }
 
 .alerts {
   position: absolute; }

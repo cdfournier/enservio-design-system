@@ -1160,7 +1160,8 @@ main {
 
 @media (min-width: 48rem) {
 .graphic.text {margin: 0 auto 2rem;}
-.graphic.text .graphic-cell {padding: 0 6rem;}}
+.graphic.text .graphic-cell {padding: 0 6rem;}
+.graphic-cell .graphic {width: 20%;}}
 
 
 // ALERT BARS
