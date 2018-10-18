@@ -819,6 +819,10 @@ header {
 header.wide {
   justify-content: flex-start; }
 
+header.back {
+  align-items: center;
+  justify-content: center; }
+
 .header--fixed {
   position: fixed;
   top: 0;
