@@ -229,7 +229,7 @@ ul.attachment-list li .line-item {
   width: 100%;
   padding: 0;
   font-weight: 500;
-  line-height: 1.5; }
+  line-height: 1.2; }
 
 ul.attachment-list li .line-item span.file-type-icon {
   display: flex;
@@ -259,7 +259,7 @@ ul.attachment-list li .line-item span.file-type-icon.other:after {
   content: "\f1df"; }
 
 ul.attachment-list li .line-item span.file-name {
-  width: 70%;
+  width: 60%;
   overflow: hidden;
   text-overflow: ellipsis; }
 
@@ -288,6 +288,10 @@ ul.attachment-list li .line-item .expanding-button-box .expanding-button.small {
 
 ul.attachment-list li .line-item .expanding-button-box .expanding-button.large {
   display: none; }
+
+@media (min-width: 48rem) {
+  ul.attachment-list li .line-item span.file-name {
+    width: 70%; } }
 
 ul.attachment-list li span.error-message {
   margin: 0.25rem 0 0 0.5rem; }
@@ -731,6 +735,23 @@ span.button.upload input[type="file"] {
     right: 0;
     margin: 0; } }
 
+.download-button {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 2.25rem;
+  max-width: 2.25rem;
+  height: 2.25rem;
+  max-height: 2.25rem;
+  margin: 0 0 0 0.5rem;
+  padding: 0.5rem;
+  border-radius: 100%;
+  font-size: 1.44rem;
+  line-height: 1; }
+
+.download-button span.download-icon {
+  position: absolute; }
+
 .button-box {
   display: flex;
   flex-direction: column;
@@ -764,6 +785,8 @@ span.button.upload input[type="file"] {
     justify-content: flex-start; }
   .button-box.right .button {
     margin: 0 0 1rem 1rem; }
+  .button-box.right .download-button {
+    margin: 0 0 0 1rem; }
   .button-box.left .button {
     margin: 0 1rem 1rem 0; }
   .button-box.left .expanding-button-box {
