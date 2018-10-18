@@ -1333,7 +1333,9 @@ main {
   .carousel .carousel-cell {
     padding: 0 6rem; }
   .carousel-cell .graphic {
-    width: 20%; } }
+    width: 20%; }
+  .carousel-cell .graphic.wide {
+    width: 80%; } }
 
 .current-inventory {
   position: fixed;
