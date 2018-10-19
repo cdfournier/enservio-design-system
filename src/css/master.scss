@@ -382,6 +382,7 @@ ul.settlement-offer li span {
 
 ul.settlement-offer li span.subtract {color: $invalid;}
 
+ul.settlement-offer li span.border,
 ul.settlement-offer li span.subtract.border {
   padding: 0 0 1rem;
   border-bottom: 1px solid $light-gray;
