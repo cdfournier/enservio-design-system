@@ -593,6 +593,11 @@ button.secondary.color-two:hover span.number, button.secondary.color-two:focus s
   background-color: $white;
 }
 
+button.disabled, .button.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 
 // HIDE BUTTONS
 .button.skip {

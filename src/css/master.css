@@ -524,6 +524,10 @@ button.secondary.color-two:hover span.number, button.secondary.color-two:focus s
   color: #0f4a92;
   background-color: #ffffff; }
 
+button.disabled, .button.disabled {
+  opacity: 0.5;
+  cursor: not-allowed; }
+
 .button.skip {
   opacity: 1;
   -webkit-transition: all 0.25s ease-in-out 0s;
