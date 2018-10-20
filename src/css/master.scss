@@ -493,6 +493,9 @@ button.big,
   font-size: 1rem;
 }
 
+button.big span.button-label,
+.button.big span.button-label {line-height: 1;}
+
 button.color-one,
 .button.color-one {
   border: 1px solid $color-one;
