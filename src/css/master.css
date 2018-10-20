@@ -444,6 +444,10 @@ button.big,
   padding: 1.25rem 2.5rem;
   font-size: 1rem; }
 
+button.big span.button-label,
+.button.big span.button-label {
+  line-height: 1; }
+
 button.color-one,
 .button.color-one {
   border: 1px solid #2e84ed;
@@ -917,7 +921,7 @@ nav {
   nav ul li {
     width: auto;
     margin: 0;
-    padding: 0 1rem 0 0;
+    padding: 0 0.5rem 0 0.5rem;
     font-size: 0.833rem;
     font-weight: 500;
     line-height: 1.2;
@@ -925,12 +929,7 @@ nav {
     text-transform: uppercase;
     color: #0f4a92; }
   nav ul li:last-child {
-    padding: 0; }
-  nav ul li a {
-    font-size: 0.833rem;
-    text-align: left;
-    text-transform: uppercase;
-    opacity: 1; }
+    padding: 0 0.5rem 0 0.5rem; }
   nav ul li a span {
     font-size: 1.44rem;
     line-height: 1; }
@@ -940,11 +939,16 @@ nav {
     width: auto; }
   nav ul {
     justify-content: flex-end;
-    padding: 0 0 0 4rem; } }
+    padding: 0 0 0 4rem; }
+  nav ul li {
+    padding: 0 1rem 0 0;
+    font-size: 0.694rem; }
+  nav ul li:last-child {
+    padding: 0; } }
 
 @media (min-width: 64rem) {
   nav ul li {
-    padding: 0 2rem 0 0; } }
+    padding: 0 1.44rem 0 0; } }
 
 span.back {
   position: absolute;
