@@ -1554,14 +1554,17 @@ main {
   padding: 2rem 0 0; }
 
 .inventory-item.locked .inventory-item-header span.item-number {
-  background-color: #cccece; }
+  background-color: #7f7f7f; }
 
 .inventory-item.locked .inventory-item-header .item-details span.description,
 .inventory-item.locked .inventory-item-header .item-details span.cost,
 .inventory-item.locked .inventory-item-header .item-details span.quantity,
 .inventory-item.locked .inventory-item-header .item-details span.age,
 .inventory-item.locked .inventory-item-header i.la.la-angle-down {
-  color: #cccece; }
+  color: #7f7f7f; }
+
+.inventory-item.locked .inventory-item-details .field label {
+  color: #7f7f7f; }
 
 @media (min-width: 21.625rem) {
   .current-inventory-list {
@@ -2173,7 +2176,7 @@ legend {
 
 .field input:disabled {
   border-color: #cccece;
-  color: #444853;
+  color: #7f7f7f;
   cursor: default; }
 
 input.email-address:disabled,
@@ -2418,10 +2421,10 @@ span.error-message {
 
 .field select:disabled {
   border-color: #cccece;
-  color: #444853; }
+  color: #7f7f7f; }
 
 .field select:disabled + .select-icon {
-  color: #cccece; }
+  color: #7f7f7f; }
 
 input[type="checkbox"] {
   position: absolute;

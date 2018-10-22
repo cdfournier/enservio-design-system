@@ -5,6 +5,7 @@ $sans-serif: "Montserrat", sans-serif;
 $white: #ffffff;
 $off-white: #f5f5f5;
 $light-gray: #cccece;
+$med-gray: #7f7f7f;
 $dark-gray: #444853;
 $black: #000000;
 $invalid: #bb0000;
@@ -1578,13 +1579,15 @@ main {
 
 .inventory-item .inventory-item-details form {padding: 2rem 0 0;}
 
-.inventory-item.locked .inventory-item-header span.item-number {background-color: $light-gray;}
+.inventory-item.locked .inventory-item-header span.item-number {background-color: $med-gray;}
 
 .inventory-item.locked .inventory-item-header .item-details span.description,
 .inventory-item.locked .inventory-item-header .item-details span.cost,
 .inventory-item.locked .inventory-item-header .item-details span.quantity,
 .inventory-item.locked .inventory-item-header .item-details span.age,
-.inventory-item.locked .inventory-item-header i.la.la-angle-down {color: $light-gray;}
+.inventory-item.locked .inventory-item-header i.la.la-angle-down {color: $med-gray;}
+
+.inventory-item.locked .inventory-item-details .field label {color: $med-gray;}
 
 @media (min-width: 21.625rem) {.current-inventory-list {padding: 2rem 2rem 0;}}
 
@@ -2216,7 +2219,7 @@ fieldset, .small {width: 25%;}
 
 .field input:disabled {
   border-color: $light-gray;
-  color: $dark-gray;
+  color: $med-gray;
   cursor: default;
 }
 
@@ -2452,10 +2455,10 @@ span.error-message {
 
 .field select:disabled {
   border-color: $light-gray;
-  color: $dark-gray;
+  color: $med-gray;
 }
 
-.field select:disabled + .select-icon {color: $light-gray;}
+.field select:disabled + .select-icon {color: $med-gray;}
 
 
 // CHECKBOXES
