@@ -328,6 +328,55 @@
           </div>
         </div>
       </section>
+      <section id="submitted-current-inventory-list-item-header">
+        <div class="text guide">
+          <h2>Submitted Current Inventory List Item Header</h2>
+        </div>
+        <div class="split wide">
+          <div class="design-sample">
+            <figcaption>Design Sample</figcaption>
+            <div class="current-inventory-list">
+              <div class="inventory-item locked">
+                <input id="item-2" type="radio" name="items" class="accordian">
+                <label for="item-2" class="inventory-item-header">
+                  <span class="item-number">2</span>
+                  <div class="item-details">
+                    <span class="description"><b>Description</b>:&nbsp;HP Deskjet 4300</span>
+                    <span class="cost"><b>Cost</b>:&nbsp;&#36;139</span>
+                    <span class="quantity"><b>Quantity</b>:&nbsp;1</span>
+                    <span class="age"><b>Age</b>:&nbsp;2 years, 5 months</span>
+                  </div>
+                  <i class="la la-angle-down"></i>
+                </label>
+              </div>
+            </div>
+            <div class="notes wide">
+              <figcaption>Notes</figcaption>
+              <p>If a user has previously clicked the Submit Inventory button and has returned to enter additional inventory items, those items previously submitted should still be shown in their Current Inventory list. They should, however, be disabled, and the user should be prevented from making any changes to these items. The user may also not delete these items from their inventory. They may click the Attachments button to view the list of attachments for this inventory item, but they should not be able to add new attachments or delete those items already attached.</p>
+            </div>
+          </div>
+          <div class="code-sample">
+            <figure>
+              <figcaption>html</figcaption>
+<pre><code>&lt;div class=&quot;current-inventory-list&quot;&gt;
+  &lt;div class=&quot;inventory-item locked&quot;&gt;
+    &lt;input id=&quot;item-2&quot; type=&quot;radio&quot; name=&quot;items&quot; class=&quot;accordian&quot;&gt;
+    &lt;label for=&quot;item-2&quot; class=&quot;inventory-item-header&quot;&gt;
+      &lt;span class=&quot;item-number&quot;&gt;2&lt;/span&gt;
+      &lt;div class=&quot;item-details&quot;&gt;
+        &lt;span class=&quot;description&quot;&gt;&lt;b&gt;Description&lt;/b&gt;:&amp;nbsp;HP Deskjet 4300&lt;/span&gt;
+        &lt;span class=&quot;cost&quot;&gt;&lt;b&gt;Cost&lt;/b&gt;:&amp;nbsp;&amp;#36;139&lt;/span&gt;
+        &lt;span class=&quot;quantity&quot;&gt;&lt;b&gt;Quantity&lt;/b&gt;:&amp;nbsp;1&lt;/span&gt;
+        &lt;span class=&quot;age&quot;&gt;&lt;b&gt;Age&lt;/b&gt;:&amp;nbsp;2 years, 5 months&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;i class=&quot;la la-angle-down&quot;&gt;&lt;/i&gt;
+    &lt;/label&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </figure>
+          </div>
+        </div>
+      </section>
       <section id="submitted-inventory-list-item-details">
         <div class="text guide">
           <h2>Submitted Inventory List Item Details</h2>

@@ -279,7 +279,7 @@
               </form>
             </div>
           </div>
-          <div class="inventory-item">
+          <div class="inventory-item locked">
             <input id="item-1" type="radio" name="items" class="accordian">
             <label for="item-1" class="inventory-item-header">
               <span class="item-number">1</span>
@@ -297,7 +297,7 @@
                   <legend>Description</legend>
                   <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
                     <span class="error-message">Please include a description</span>
-                    <input type="text" name="description" id="description" placeholder="Describe your item&nbsp;&#40;including brand&#41;" value="Macbook Pro 13&quot;">
+                    <input type="text" name="description" id="description" placeholder="Describe your item&nbsp;&#40;including brand&#41;" value="Macbook Pro 13&quot;" disabled>
                     <label for="description">Description&#42;</label>
                   </div>
                 </fieldset>
@@ -306,7 +306,7 @@
                     <legend>Cost</legend>
                     <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
                       <span class="error-message">Please include a cost per item</span>
-                      <input type="text" name="cost" id="cost" placeholder="Cost per item" value="&#36;2,500">
+                      <input type="text" name="cost" id="cost" placeholder="Cost per item" value="&#36;2,500" disabled>
                       <label for="cost">Cost Per Item&#42;</label>
                     </div>
                   </fieldset>
@@ -314,7 +314,7 @@
                     <legend>Quantity</legend>
                     <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
                       <span class="error-message">Please include a quantity</span>
-                      <input type="number" name="quantity" id="quantity" placeholder="Quantity" value="1">
+                      <input type="number" name="quantity" id="quantity" placeholder="Quantity" value="1" disabled>
                       <label for="quantity">Quantity&#42;</label>
                     </div>
                   </fieldset>
@@ -324,7 +324,7 @@
                     <legend>Age: Years</legend>
                     <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
                       <span class="error-message">How old is this item &#40;in years&#41;?</span>
-                      <input type="number" name="years" id="years" placeholder="Years" value="1">
+                      <input type="number" name="years" id="years" placeholder="Years" value="1" disabled>
                       <label for="years">Age: In Years&#42;</label>
                     </div>
                   </fieldset>
@@ -332,7 +332,7 @@
                     <legend>Age: Months</legend>
                     <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
                       <span class="error-message">How old is this item &#40;in months&#41;?</span>
-                      <input type="number" name="months" id="months" placeholder="Months" value="7">
+                      <input type="number" name="months" id="months" placeholder="Months" value="7" disabled>
                       <label for="months">Age: In Months&#42;</label>
                     </div>
                   </fieldset>
@@ -341,7 +341,7 @@
                   <legend>Condition</legend>
                   <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
                     <span class="error-message">Please select an option</span>
-                    <select name="condition" id="condition">
+                    <select name="condition" id="condition" disabled>
                       <option value="Excellent">Excellent</option>
                       <option value="0">Choose a Condition</option>
                       <option value="New">New</option>
@@ -360,6 +360,7 @@
                     <div class="form-button-box-button">
                       <button class="button color-two"><span class="button-label">Add Attachments<span class="post"><span class="number">2</span></span></span></button>
                     </div>
+<!--
                     <div class="form-button-box-row row">
                       <div class="form-button-box-button">
                         <button class="button secondary color-one"><span class="button-label">Save<span class="post"><span class="processing"><i class="la la-refresh la-spin"></i></span></span></span></button>
@@ -368,7 +369,9 @@
                         <button class="button secondary color-one"><span class="button-label">Cancel</span></button>
                       </div>
                     </div>
+-->
                   </div>
+<!--
                   <div class="form-button-box-button">
                     <div class="expanding-button-box color-one one">
                       <div class="expanding-button small click-one"><span class="trash-icon"><i class="la la-trash"></i></span></div>
@@ -380,6 +383,7 @@
                       </div>
                     </div>
                   </div>
+-->
                 </div>
               </form>
             </div>
