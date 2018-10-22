@@ -2668,6 +2668,8 @@ input::-ms-clear, input::-ms-reveal, ::-ms-clear {
     margin: 0 auto; }
   main {
     padding: 0; }
+  .alerts {
+    top: 0; }
   .graphic-cell .graphic {
     height: 25%; }
   .carousel-cell .graphic {
