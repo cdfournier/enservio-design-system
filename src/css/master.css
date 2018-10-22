@@ -2673,7 +2673,9 @@ input::-ms-clear, input::-ms-reveal, ::-ms-clear {
   .carousel-cell .graphic {
     height: 25%; }
   .current-inventory {
-    top: calc(100vh - 20rem); }
+    top: inherit;
+    z-index: 0;
+    height: inherit; }
   .inventory-item {
     display: block; }
   .field input {
