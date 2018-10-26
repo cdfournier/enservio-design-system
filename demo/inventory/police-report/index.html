@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Enservio Customer Portal | 404 Error</title>
+    <title>Enservio Customer Portal | Police Report</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
@@ -67,17 +67,30 @@
       <nav>
         <ul>
           <li><a href="../../home/home/index.html">Home</a></li>
+          <li><a href="../claim-attachments/index.html">Claim Attachments</a></li>
           <li><a href="../../log-in/log-out-log-in/index.html">Log Out</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <section id="error-code">
-        <div class="text first lg">
-          <h1>Error: 404 Not Found</h1>
-          <p>The HTTP 404, 404 Not Found and 404 error message is a Hypertext Transfer Protocol (HTTP) standard response code, in computer network communications, to indicate that the client was able to communicate with a given server, but the server could not find what was requested.</p>
-          <small><a href="https://en.wikipedia.org/wiki/HTTP_404" target="_blank">Courtesy of Wikipedia</a></small>
+      <section id="police-report-case-number">
+        <div class="text first center md">
+          <h1>Police Report</h1>
+          <p>Has a police report been filed for this claim? Please enter the case number below.</p>
         </div>
+        <form class="sm" action="../processing-b/index.html">
+          <fieldset>
+            <legend>Case Number</legend>
+            <div class="field"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
+              <span class="error-message">Please enter your case number here</span>
+              <input type="text" name="case-number" id="case-number" placeholder="Enter your case number">
+              <label for="initials">Case Number&#42;</label>
+            </div>
+          </fieldset>
+          <div class="button-box">
+            <button class="button color-one"><span class="button-label">Submit<span class="post"><span class="processing"><i class="la la-refresh la-spin"></i></span></span></span></button>
+          </div>
+        </form>
       </section>
     </main>
     <footer>

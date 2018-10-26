@@ -212,7 +212,7 @@
                   </div>
                   <div class="form-button-box-button">
                     <div class="expanding-button-box color-one two">
-                      <div class="expanding-button small click-two"><span class="icon-close"><i class="la la-trash"></i></span></div>
+                      <div class="expanding-button small click-two"><span class="trash-icon"><i class="la la-trash"></i></span></div>
                       <div class="expanding-button large click-two">Delete Item</div>
                       <div class="confirm-action-box">
                         <span class="confirm-action-text">Are you sure?</span>
@@ -232,96 +232,147 @@
           <div class="code-sample">
             <figure>
               <figcaption>html</figcaption>
-<pre><code>&lt;form&gt;
-  &lt;fieldset&gt;
-    &lt;legend&gt;Description&lt;/legend&gt;
-    &lt;div class=&quot;field&quot;&gt; &lt;!-- change to 'field valid' or 'field invalid' as necessary --&gt;
-      &lt;span class=&quot;error-message&quot;&gt;Please include a description&lt;/span&gt;
-      &lt;input type=&quot;text&quot; name=&quot;description&quot; id=&quot;description&quot; placeholder=&quot;Describe your item&amp;nbsp;&amp;#40;including brand&amp;#41;&quot; value=&quot;HP Deskjet 4300&quot;&gt;
-      &lt;label for=&quot;description&quot;&gt;Description&amp;#42;&lt;/label&gt;
+<pre><code>&lt;div class=&quot;inventory-item-details&quot;&gt;
+  &lt;form&gt;
+    &lt;fieldset&gt;
+      &lt;legend&gt;Description&lt;/legend&gt;
+      &lt;div class=&quot;field&quot;&gt; &lt;!-- change to 'field valid' or 'field invalid' as necessary --&gt;
+        &lt;span class=&quot;error-message&quot;&gt;Please include a description&lt;/span&gt;
+        &lt;input type=&quot;text&quot; name=&quot;description&quot; id=&quot;description&quot; placeholder=&quot;Describe your item&amp;nbsp;&amp;#40;including brand&amp;#41;&quot; value=&quot;HP Deskjet 4300&quot;&gt;
+        &lt;label for=&quot;description&quot;&gt;Description&amp;#42;&lt;/label&gt;
+      &lt;/div&gt;
+    &lt;/fieldset&gt;
+    &lt;div class=&quot;small&quot;&gt;
+      &lt;fieldset&gt;
+        &lt;legend&gt;Cost&lt;/legend&gt;
+        &lt;div class=&quot;field&quot;&gt; &lt;!-- change to 'field valid' or 'field invalid' as necessary --&gt;
+          &lt;span class=&quot;error-message&quot;&gt;Please include a cost per item&lt;/span&gt;
+          &lt;input type=&quot;text&quot; name=&quot;cost&quot; id=&quot;cost&quot; placeholder=&quot;Cost per item&quot; value=&quot;&amp;#36;139&quot;&gt;
+          &lt;label for=&quot;cost&quot;&gt;Cost Per Item&amp;#42;&lt;/label&gt;
+        &lt;/div&gt;
+      &lt;/fieldset&gt;
+      &lt;fieldset&gt;
+        &lt;legend&gt;Quantity&lt;/legend&gt;
+        &lt;div class=&quot;field&quot;&gt; &lt;!-- change to 'field valid' or 'field invalid' as necessary --&gt;
+          &lt;span class=&quot;error-message&quot;&gt;Please include a quantity&lt;/span&gt;
+          &lt;input type=&quot;number&quot; name=&quot;quantity&quot; id=&quot;quantity&quot; placeholder=&quot;Quantity&quot; value=&quot;1&quot;&gt;
+          &lt;label for=&quot;quantity&quot;&gt;Quantity&amp;#42;&lt;/label&gt;
+        &lt;/div&gt;
+      &lt;/fieldset&gt;
     &lt;/div&gt;
-  &lt;/fieldset&gt;
-  &lt;div class=&quot;small&quot;&gt;
-    &lt;fieldset&gt;
-      &lt;legend&gt;Cost&lt;/legend&gt;
-      &lt;div class=&quot;field&quot;&gt; &lt;!-- change to 'field valid' or 'field invalid' as necessary --&gt;
-        &lt;span class=&quot;error-message&quot;&gt;Please include a cost per item&lt;/span&gt;
-        &lt;input type=&quot;text&quot; name=&quot;cost&quot; id=&quot;cost&quot; placeholder=&quot;Cost per item&quot; value=&quot;&amp;#36;139&quot;&gt;
-        &lt;label for=&quot;cost&quot;&gt;Cost Per Item&amp;#42;&lt;/label&gt;
-      &lt;/div&gt;
-    &lt;/fieldset&gt;
-    &lt;fieldset&gt;
-      &lt;legend&gt;Quantity&lt;/legend&gt;
-      &lt;div class=&quot;field&quot;&gt; &lt;!-- change to 'field valid' or 'field invalid' as necessary --&gt;
-        &lt;span class=&quot;error-message&quot;&gt;Please include a quantity&lt;/span&gt;
-        &lt;input type=&quot;number&quot; name=&quot;quantity&quot; id=&quot;quantity&quot; placeholder=&quot;Quantity&quot; value=&quot;1&quot;&gt;
-        &lt;label for=&quot;quantity&quot;&gt;Quantity&amp;#42;&lt;/label&gt;
-      &lt;/div&gt;
-    &lt;/fieldset&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;small&quot;&gt;
-    &lt;fieldset&gt;
-      &lt;legend&gt;Age: Years&lt;/legend&gt;
-      &lt;div class=&quot;field&quot;&gt; &lt;!-- change to 'field valid' or 'field invalid' as necessary --&gt;
-        &lt;span class=&quot;error-message&quot;&gt;How old is this item &amp;#40;in years&amp;#41;?&lt;/span&gt;
-        &lt;input type=&quot;number&quot; name=&quot;years&quot; id=&quot;years&quot; placeholder=&quot;Years&quot; value=&quot;2&quot;&gt;
-        &lt;label for=&quot;years&quot;&gt;Age: In Years&amp;#42;&lt;/label&gt;
-      &lt;/div&gt;
-    &lt;/fieldset&gt;
-    &lt;fieldset&gt;
-      &lt;legend&gt;Age: Months&lt;/legend&gt;
-      &lt;div class=&quot;field&quot;&gt; &lt;!-- change to 'field valid' or 'field invalid' as necessary --&gt;
-        &lt;span class=&quot;error-message&quot;&gt;How old is this item &amp;#40;in months&amp;#41;?&lt;/span&gt;
-        &lt;input type=&quot;number&quot; name=&quot;months&quot; id=&quot;months&quot; placeholder=&quot;Months&quot; value=&quot;5&quot;&gt;
-        &lt;label for=&quot;months&quot;&gt;Age: In Months&amp;#42;&lt;/label&gt;
-      &lt;/div&gt;
-    &lt;/fieldset&gt;
-  &lt;/div&gt;
-  &lt;fieldset&gt;
-    &lt;legend&gt;Condition&lt;/legend&gt;
-    &lt;div class=&quot;field&quot;&gt; &lt;!-- change to 'field valid' or 'field invalid' as necessary --&gt;
-      &lt;span class=&quot;error-message&quot;&gt;Please select an option&lt;/span&gt;
-      &lt;select name=&quot;condition&quot; id=&quot;condition&quot;&gt;
-        &lt;option value=&quot;Fair&quot;&gt;Fair&lt;/option&gt;
-        &lt;option value=&quot;0&quot;&gt;Choose a Condition&lt;/option&gt;
-        &lt;option value=&quot;New&quot;&gt;New&lt;/option&gt;
-        &lt;option value=&quot;Excellent&quot;&gt;Excellent&lt;/option&gt;
-        &lt;option value=&quot;Good&quot;&gt;Good&lt;/option&gt;
-        &lt;option value=&quot;Fair&quot;&gt;Fair&lt;/option&gt;
-        &lt;option value=&quot;Poor&quot;&gt;Poor&lt;/option&gt;
-      &lt;/select&gt;
-      &lt;div class=&quot;select-icon&quot;&gt;&lt;i class=&quot;la la-angle-down&quot;&gt;&lt;/i&gt;&lt;/div&gt;
-      &lt;span class=&quot;valid select&quot;&gt;&lt;i class=&quot;la la-check-circle-o&quot;&gt;&lt;/i&gt;&lt;/span&gt;
-      &lt;label for=&quot;condition&quot;&gt;Condition&lt;/label&gt;
+    &lt;div class=&quot;small&quot;&gt;
+      &lt;fieldset&gt;
+        &lt;legend&gt;Age: Years&lt;/legend&gt;
+        &lt;div class=&quot;field&quot;&gt; &lt;!-- change to 'field valid' or 'field invalid' as necessary --&gt;
+          &lt;span class=&quot;error-message&quot;&gt;How old is this item &amp;#40;in years&amp;#41;?&lt;/span&gt;
+          &lt;input type=&quot;number&quot; name=&quot;years&quot; id=&quot;years&quot; placeholder=&quot;Years&quot; value=&quot;2&quot;&gt;
+          &lt;label for=&quot;years&quot;&gt;Age: In Years&amp;#42;&lt;/label&gt;
+        &lt;/div&gt;
+      &lt;/fieldset&gt;
+      &lt;fieldset&gt;
+        &lt;legend&gt;Age: Months&lt;/legend&gt;
+        &lt;div class=&quot;field&quot;&gt; &lt;!-- change to 'field valid' or 'field invalid' as necessary --&gt;
+          &lt;span class=&quot;error-message&quot;&gt;How old is this item &amp;#40;in months&amp;#41;?&lt;/span&gt;
+          &lt;input type=&quot;number&quot; name=&quot;months&quot; id=&quot;months&quot; placeholder=&quot;Months&quot; value=&quot;5&quot;&gt;
+          &lt;label for=&quot;months&quot;&gt;Age: In Months&amp;#42;&lt;/label&gt;
+        &lt;/div&gt;
+      &lt;/fieldset&gt;
     &lt;/div&gt;
-  &lt;/fieldset&gt;
-  &lt;div class=&quot;form-button-box&quot;&gt;
-    &lt;div class=&quot;form-button-box-row&quot;&gt;
+    &lt;fieldset&gt;
+      &lt;legend&gt;Condition&lt;/legend&gt;
+      &lt;div class=&quot;field&quot;&gt; &lt;!-- change to 'field valid' or 'field invalid' as necessary --&gt;
+        &lt;span class=&quot;error-message&quot;&gt;Please select an option&lt;/span&gt;
+        &lt;select name=&quot;condition&quot; id=&quot;condition&quot;&gt;
+          &lt;option value=&quot;Fair&quot;&gt;Fair&lt;/option&gt;
+          &lt;option value=&quot;0&quot;&gt;Choose a Condition&lt;/option&gt;
+          &lt;option value=&quot;New&quot;&gt;New&lt;/option&gt;
+          &lt;option value=&quot;Excellent&quot;&gt;Excellent&lt;/option&gt;
+          &lt;option value=&quot;Good&quot;&gt;Good&lt;/option&gt;
+          &lt;option value=&quot;Fair&quot;&gt;Fair&lt;/option&gt;
+          &lt;option value=&quot;Poor&quot;&gt;Poor&lt;/option&gt;
+        &lt;/select&gt;
+        &lt;div class=&quot;select-icon&quot;&gt;&lt;i class=&quot;la la-angle-down&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+        &lt;span class=&quot;valid select&quot;&gt;&lt;i class=&quot;la la-check-circle-o&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+        &lt;label for=&quot;condition&quot;&gt;Condition&lt;/label&gt;
+      &lt;/div&gt;
+    &lt;/fieldset&gt;
+    &lt;div class=&quot;form-button-box&quot;&gt;
+      &lt;div class=&quot;form-button-box-row&quot;&gt;
+        &lt;div class=&quot;form-button-box-button&quot;&gt;
+          &lt;button class=&quot;button color-two&quot;&gt;&lt;span class=&quot;button-label&quot;&gt;Add Attachments&lt;span class=&quot;post&quot;&gt;&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;form-button-box-row row&quot;&gt;
+          &lt;div class=&quot;form-button-box-button&quot;&gt;
+            &lt;button class=&quot;button secondary color-one&quot;&gt;&lt;span class=&quot;button-label&quot;&gt;Save&lt;span class=&quot;post&quot;&gt;&lt;span class=&quot;processing&quot;&gt;&lt;i class=&quot;la la-refresh la-spin&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;
+          &lt;/div&gt;
+          &lt;div class=&quot;form-button-box-button&quot;&gt;
+            &lt;button class=&quot;button secondary color-one&quot;&gt;&lt;span class=&quot;button-label&quot;&gt;Cancel&lt;span class=&quot;button-label&quot;&gt;&lt;/button&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
       &lt;div class=&quot;form-button-box-button&quot;&gt;
-        &lt;button class=&quot;button color-two&quot;&gt;&lt;span class=&quot;button-label&quot;&gt;Add Attachments&lt;span class=&quot;post&quot;&gt;&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;
-      &lt;/div&gt;
-      &lt;div class=&quot;form-button-box-row row&quot;&gt;
-        &lt;div class=&quot;form-button-box-button&quot;&gt;
-          &lt;button class=&quot;button secondary color-one&quot;&gt;&lt;span class=&quot;button-label&quot;&gt;Save&lt;span class=&quot;post&quot;&gt;&lt;span class=&quot;processing&quot;&gt;&lt;i class=&quot;la la-refresh la-spin&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;
-        &lt;/div&gt;
-        &lt;div class=&quot;form-button-box-button&quot;&gt;
-          &lt;button class=&quot;button secondary color-one&quot;&gt;&lt;span class=&quot;button-label&quot;&gt;Cancel&lt;span class=&quot;button-label&quot;&gt;&lt;/button&gt;
-        &lt;/div&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class=&quot;form-button-box-button&quot;&gt;
-      &lt;div class=&quot;expanding-button-box color-one two&quot;&gt;
-        &lt;div class=&quot;expanding-button small click-two&quot;&gt;&lt;span class=&quot;icon-close&quot;&gt;&lt;i class=&quot;la la-trash&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;
-        &lt;div class=&quot;expanding-button large click-two&quot;&gt;Delete Item&lt;/div&gt;
-        &lt;div class=&quot;confirm-action-box&quot;&gt;
-          &lt;span class=&quot;confirm-action-text&quot;&gt;Are you sure?&lt;/span&gt;
-          &lt;span class=&quot;confirm-action secondary no-two&quot;&gt;No&lt;/span&gt;
-          &lt;span class=&quot;confirm-action yes-two&quot;&gt;Yes&lt;/span&gt;
+        &lt;div class=&quot;expanding-button-box color-one&quot;&gt;
+          &lt;div class=&quot;expanding-button small click-two&quot;&gt;&lt;span class=&quot;trash-icon&quot;&gt;&lt;i class=&quot;la la-trash&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;
+          &lt;div class=&quot;expanding-button large click-two&quot;&gt;Delete Item&lt;/div&gt;
+          &lt;div class=&quot;confirm-action-box&quot;&gt;
+            &lt;span class=&quot;confirm-action-text&quot;&gt;Are you sure?&lt;/span&gt;
+            &lt;span class=&quot;confirm-action secondary&quot;&gt;No&lt;/span&gt;
+            &lt;span class=&quot;confirm-action&quot;&gt;Yes&lt;/span&gt;
+          &lt;/div&gt;
         &lt;/div&gt;
       &lt;/div&gt;
     &lt;/div&gt;
+  &lt;/form&gt;
+&lt;/div&gt;</code></pre>
+            </figure>
+          </div>
+        </div>
+      </section>
+      <section id="submitted-current-inventory-list-item-header">
+        <div class="text guide">
+          <h2>Submitted Current Inventory List Item Header</h2>
+        </div>
+        <div class="split wide">
+          <div class="design-sample">
+            <figcaption>Design Sample</figcaption>
+            <div class="current-inventory-list">
+              <div class="inventory-item locked">
+                <input id="item-2" type="radio" name="items" class="accordian">
+                <label for="item-2" class="inventory-item-header">
+                  <span class="item-number">2</span>
+                  <div class="item-details">
+                    <span class="description"><b>Description</b>:&nbsp;HP Deskjet 4300</span>
+                    <span class="cost"><b>Cost</b>:&nbsp;&#36;139</span>
+                    <span class="quantity"><b>Quantity</b>:&nbsp;1</span>
+                    <span class="age"><b>Age</b>:&nbsp;2 years, 5 months</span>
+                  </div>
+                  <i class="la la-angle-down"></i>
+                </label>
+              </div>
+            </div>
+            <div class="notes wide">
+              <figcaption>Notes</figcaption>
+              <p>If a user has previously clicked the Submit Inventory button and has returned to enter additional inventory items, those items previously submitted should still be shown in their Current Inventory list. For the Current Inventory List Item Header, you should add a class of <code>.locked</code> to the <code>.inventory-item</code> element.</p>
+            </div>
+          </div>
+          <div class="code-sample">
+            <figure>
+              <figcaption>html</figcaption>
+<pre><code>&lt;div class=&quot;current-inventory-list&quot;&gt;
+  &lt;div class=&quot;inventory-item locked&quot;&gt;
+    &lt;input id=&quot;item-2&quot; type=&quot;radio&quot; name=&quot;items&quot; class=&quot;accordian&quot;&gt;
+    &lt;label for=&quot;item-2&quot; class=&quot;inventory-item-header&quot;&gt;
+      &lt;span class=&quot;item-number&quot;&gt;2&lt;/span&gt;
+      &lt;div class=&quot;item-details&quot;&gt;
+        &lt;span class=&quot;description&quot;&gt;&lt;b&gt;Description&lt;/b&gt;:&amp;nbsp;HP Deskjet 4300&lt;/span&gt;
+        &lt;span class=&quot;cost&quot;&gt;&lt;b&gt;Cost&lt;/b&gt;:&amp;nbsp;&amp;#36;139&lt;/span&gt;
+        &lt;span class=&quot;quantity&quot;&gt;&lt;b&gt;Quantity&lt;/b&gt;:&amp;nbsp;1&lt;/span&gt;
+        &lt;span class=&quot;age&quot;&gt;&lt;b&gt;Age&lt;/b&gt;:&amp;nbsp;2 years, 5 months&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;i class=&quot;la la-angle-down&quot;&gt;&lt;/i&gt;
+    &lt;/label&gt;
   &lt;/div&gt;
-&lt;/form&gt;</code></pre>
+&lt;/div&gt;</code></pre>
             </figure>
           </div>
         </div>
@@ -340,7 +391,7 @@
                   <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
                     <span class="error-message">Please include a description</span>
                     <input type="text" name="description" id="description" placeholder="Describe your item&nbsp;&#40;including brand&#41;" value="HP Deskjet 4300" disabled>
-                    <label for="description">Description&#42;</label>
+                    <label for="description" style="color: #7f7f7f;">Description&#42;</label>
                   </div>
                 </fieldset>
                 <div class="small">
@@ -349,7 +400,7 @@
                     <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
                       <span class="error-message">Please include a cost per item</span>
                       <input type="text" name="cost" id="cost" placeholder="Cost per item" value="&#36;139" disabled>
-                      <label for="cost">Cost Per Item&#42;</label>
+                      <label for="cost" style="color: #7f7f7f;">Cost Per Item&#42;</label>
                     </div>
                   </fieldset>
                   <fieldset>
@@ -357,7 +408,7 @@
                     <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
                       <span class="error-message">Please include a quantity</span>
                       <input type="number" name="quantity" id="quantity" placeholder="Quantity" value="1" disabled>
-                      <label for="quantity">Quantity&#42;</label>
+                      <label for="quantity" style="color: #7f7f7f;">Quantity&#42;</label>
                     </div>
                   </fieldset>
                 </div>
@@ -367,7 +418,7 @@
                     <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
                       <span class="error-message">How old is this item &#40;in years&#41;?</span>
                       <input type="number" name="years" id="years" placeholder="Years" value="2" disabled>
-                      <label for="years">Age: In Years&#42;</label>
+                      <label for="years" style="color: #7f7f7f;">Age: In Years&#42;</label>
                     </div>
                   </fieldset>
                   <fieldset>
@@ -375,7 +426,7 @@
                     <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
                       <span class="error-message">How old is this item &#40;in months&#41;?</span>
                       <input type="number" name="months" id="months" placeholder="Months" value="5" disabled>
-                      <label for="months">Age: In Months&#42;</label>
+                      <label for="months" style="color: #7f7f7f;">Age: In Months&#42;</label>
                     </div>
                   </fieldset>
                 </div>
@@ -394,7 +445,7 @@
                     </select>
                     <div class="select-icon"><i class="la la-angle-down"></i></div>
                     <span class="valid select"><i class="la la-check-circle-o"></i></span>
-                    <label for="condition">Condition</label>
+                    <label for="condition" style="color: #7f7f7f;">Condition</label>
                   </div>
                 </fieldset>
                 <div class="form-button-box">

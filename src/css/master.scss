@@ -5,6 +5,7 @@ $sans-serif: "Montserrat", sans-serif;
 $white: #ffffff;
 $off-white: #f5f5f5;
 $light-gray: #cccece;
+$med-gray: #7f7f7f;
 $dark-gray: #444853;
 $black: #000000;
 $invalid: #bb0000;
@@ -287,7 +288,7 @@ ul.attachment-list li .line-item {
   width: 100%;
   padding: 0;
   font-weight: 500;
-  line-height: 1.5;
+  line-height: 1.2;
 }
 
 ul.attachment-list li .line-item span.file-type-icon {
@@ -315,7 +316,7 @@ ul.attachment-list li .line-item span.file-type-icon.pdf:after {content: "\f1e7"
 ul.attachment-list li .line-item span.file-type-icon.other:after {content: "\f1df";}
 
 ul.attachment-list li .line-item span.file-name {
-  width: 70%;
+  width: 60%;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -339,6 +340,9 @@ ul.attachment-list li .line-item .expanding-button-box.expand {max-width: 100%;}
 ul.attachment-list li .line-item .expanding-button-box .expanding-button.small {display: flex;}
 
 ul.attachment-list li .line-item .expanding-button-box .expanding-button.large {display: none;}
+
+@media (min-width: 48rem) {
+ul.attachment-list li .line-item span.file-name {width: 70%;}}
 
 
 // ATTACHMENT LIST ERRORS
@@ -810,6 +814,25 @@ span.button.upload input[type="file"] {
 }}
 
 
+// DOWNLOAD BUTTON
+.download-button {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 2.25rem;
+  max-width: 2.25rem;
+  height: 2.25rem;
+  max-height: 2.25rem;
+  margin: 0 0 0 0.5rem;
+  padding: 0.5rem;
+  border-radius: 100%;
+  font-size: 1.44rem;
+  line-height: 1;
+}
+
+.download-button span.download-icon {position: absolute;}
+
+
 // BUTTON BOX/ROW CONTAINER
 .button-box {
   display: flex;
@@ -843,6 +866,7 @@ span.button.upload input[type="file"] {
   justify-content: flex-start;
 }
 .button-box.right .button {margin: 0 0 1rem 1rem;}
+.button-box.right .download-button {margin: 0 0 0 1rem;}
 .button-box.left .button {margin: 0 1rem 1rem 0;}
 .button-box.left .expanding-button-box {margin: 0 1rem 1rem 0;}
 form .button-box {padding: 0 1rem;}}
@@ -888,9 +912,16 @@ header {
   align-items: center;
   justify-content: flex-start;
   width: 100%;
-  margin: 0;
+  margin: 0 auto;
   padding: 2rem;
   background-color: $white;
+}
+
+header.wide {justify-content: flex-start;}
+
+header.back {
+  align-items: center;
+  justify-content: center;
 }
 
 .header--fixed {
@@ -914,7 +945,7 @@ header {
 header {
   flex-direction: row;
   align-items: flex-end;
-  justify-content: space-between;
+  justify-content: center;
 }}
 
 
@@ -924,11 +955,15 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  max-width: 10rem;
-  max-height: 10rem;
+  width: auto;
+  max-width: 12rem;
+  height: auto;
+  max-height: 12rem;
   margin: 0 auto;
   padding: 0;
 }
+
+@media (min-width: 35.5rem) {.logo {margin: 0;}}
 
 
 // NAVIGATION
@@ -950,22 +985,16 @@ nav {
   ul li {
     width: auto;
     margin: 0;
-    padding: 0 1rem 0 0;
+    padding: 0 0.5rem 0 0.5rem;
     font-size: 0.833rem;
     font-weight: 500;
+    line-height: 1.2;
     text-align: center;
     text-transform: uppercase;
     color: $color-two;
   }
 
-  ul li:last-child {padding: 0;}
-
-  ul li a {
-    font-size: 0.833rem;
-    text-align: left;
-    text-transform: uppercase;
-    opacity: 1;
-  }
+  ul li:last-child {padding: 0 0.5rem 0 0.5rem;}
 
   ul li a span {
     font-size: 1.44rem;
@@ -974,10 +1003,18 @@ nav {
 }
 
 @media (min-width: 35.5rem) {
+nav {width: auto;}
 nav ul {
   justify-content: flex-end;
-  padding: 0 0 0 1rem;
-}}
+  padding: 0 0 0 4rem;
+}
+nav ul li {
+  padding: 0 1rem 0 0;
+  font-size: 0.694rem;
+}
+nav ul li:last-child {padding: 0;}}
+
+@media (min-width: 64rem) {nav ul li {padding: 0 1.44rem 0 0;}}
 
 
 // BACK BUTTON
@@ -1029,7 +1066,6 @@ footer .livechat.online {
   max-height: 1.3rem;
 }
 
-footer .livechat,
 footer .livechat.offline svg,
 footer .livechat.online svg {height: 1.3rem;}
 
@@ -1040,10 +1076,7 @@ main {
   flex-direction: column;
   justify-content: center;
   margin: 0;
-  padding: 12rem 0 0;
 }
-
-@media (min-width: 35.5rem) {main {padding: 9rem 0 0;}}
 
 
 // TEXT BOX
@@ -1094,6 +1127,7 @@ main {
   width: auto;
   margin: 0;
 }
+.action.text.left {margin: 0;}
 .action.text .button-box.right {margin: 0 0 0 2rem;}
 .action.text .button-box.left {margin: 0 2rem 0 0;}}
 
@@ -1124,7 +1158,7 @@ main {
 
 .graphic-cell .graphic {
   width: 25%;
-  margin: 0 auto 2rem;
+  margin: 0 auto 1rem;
 }
 
 .graphic-cell .graphic.wide {
@@ -1134,7 +1168,8 @@ main {
 
 @media (min-width: 48rem) {
 .graphic.text {margin: 0 auto 2rem;}
-.graphic.text .graphic-cell {padding: 0 6rem;}}
+.graphic.text .graphic-cell {padding: 0 6rem;}
+.graphic-cell .graphic {width: 20%;}}
 
 
 // ALERT BARS
@@ -1341,7 +1376,7 @@ main {
 
 .carousel-cell .graphic {
   width: 25%;
-  margin: 0 auto 2rem;
+  margin: 0 auto 1rem;
 }
 
 .carousel-cell .graphic.wide {
@@ -1357,7 +1392,9 @@ main {
   max-height: inherit;
   padding: 0;
 }
-.carousel .carousel-cell {padding: 0 6rem;}}
+.carousel .carousel-cell {padding: 0 6rem;}
+.carousel-cell .graphic {width: 20%;}
+.carousel-cell .graphic.wide {width: 80%;}}
 
 
 // CURRENT INVENTORY
@@ -1434,7 +1471,7 @@ main {
 .current-inventory {
   position: relative;
   top: inherit;
-  padding: 1rem 0 0;
+  padding: 3rem 0 0;
 }
 .current-inventory .current-inventory-bar h2:after {opacity: 0;}}
 
@@ -1541,6 +1578,16 @@ main {
 }
 
 .inventory-item .inventory-item-details form {padding: 2rem 0 0;}
+
+.inventory-item.locked .inventory-item-header span.item-number {background-color: $med-gray;}
+
+.inventory-item.locked .inventory-item-header .item-details span.description,
+.inventory-item.locked .inventory-item-header .item-details span.cost,
+.inventory-item.locked .inventory-item-header .item-details span.quantity,
+.inventory-item.locked .inventory-item-header .item-details span.age,
+.inventory-item.locked .inventory-item-header i.la.la-angle-down {color: $med-gray;}
+
+.inventory-item.locked .inventory-item-details .field label {color: $med-gray;}
 
 @media (min-width: 21.625rem) {.current-inventory-list {padding: 2rem 2rem 0;}}
 
@@ -2067,7 +2114,7 @@ input[type="url"] {
 form {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: baseline;
   width: 100%;
   margin: 0 auto;
   padding: 2rem 1rem 0;
@@ -2172,7 +2219,7 @@ fieldset, .small {width: 25%;}
 
 .field input:disabled {
   border-color: $light-gray;
-  color: $dark-gray;
+  color: $med-gray;
   cursor: default;
 }
 
@@ -2408,10 +2455,10 @@ span.error-message {
 
 .field select:disabled {
   border-color: $light-gray;
-  color: $dark-gray;
+  color: $med-gray;
 }
 
-.field select:disabled + .select-icon {color: $light-gray;}
+.field select:disabled + .select-icon {color: $med-gray;}
 
 
 // CHECKBOXES
