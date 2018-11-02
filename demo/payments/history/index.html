@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Enservio Customer Portal | Success!</title>
+    <title>Enservio Customer Portal | Payments ach-history</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
@@ -72,11 +72,31 @@
       </nav>
     </header>
     <main>
-      <section id="payments-success">
-        <div class="text first md center">
-          <h1>Success!</h1>
-          <p><a href="../history/index.html">Click here to review your payment details and history</a>.</p>
-          <p>You can review your payment details and history any time you log in by clicking the <b>View History</b> button on your home page.</p>
+      <section id="ach-history" class="ach-history">
+        <div class="ach-history-container">
+          <div class="ach-history-header">
+            <div class="ach-history-information">
+              <h1>Payment History</h1>
+            </div>
+          </div>
+          <div class="ach-history-ledger">
+            <div class="ledger">
+              <table>
+                <tbody>
+                  <tr>
+                    <th>Date</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                  </tr>
+                  <tr>
+                    <td>{Month D, YYYY}</td>
+                    <td>{USD&#36;00.00}</td>
+                    <td>{Status}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
       </section>
     </main>

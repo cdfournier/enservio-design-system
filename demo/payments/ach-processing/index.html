@@ -2,8 +2,9 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Enservio Customer Portal | Success!</title>
+    <title>Enservio Customer Portal | Processing Payment</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="refresh" content="2.5; url='../success/index.html'">
     <!-- css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700">
@@ -25,11 +26,11 @@
   </head>
   <body>
     <section id="alerts" class="alerts">
-      <div class="alert-bar error">
+      <div class="alert-bar error file-type">
         <div class="alert-bar-details">
           <span><i class="la la-exclamation-circle"></i></span>
           <div class="alert-bar-message">
-            <span></span>
+            <span>Our review is taking longer than expected. You will be contacted by email with next steps.</span>
           </div>
           <span class="dismiss error"><i class="la la-times-circle"></i></span>
         </div>
@@ -53,10 +54,10 @@
       <div class="timeout">
         <div class="text center md">
           <h1>Timeout Warning</h1>
-          <p>Due to inactivity, your session will end in <b>{time}</b>, and any unsaved changes will be lost. To remain logged in, please click the  <b>Continue</b> button to keep working.</p>
+          <p>Due to inactivity, your session will end in <b>{time}</b>, and any unsaved changes will be lost. To remain logged in, please click the <b>Continue</b> button to keep working.</p>
         </div>
         <div class="button-box">
-          <button class="button color-one continue"><span class="button-label">Continue<span class="button-label"></button>
+          <button class="button color-one continue"><span class="button-label">Continue</span></button>
         </div>
       </div>
     </section>
@@ -64,19 +65,15 @@
       <div class="logo">
         <img src="../../../src/images/logo.png" alt="carrier logo">
       </div>
-      <nav>
-        <ul>
-          <li><a href="../../home/home/index.html">Home</a></li>
-          <li><a href="../../log-in/log-out-log-in/index.html">Log Out</a></li>
-        </ul>
-      </nav>
     </header>
     <main>
-      <section id="payments-success">
-        <div class="text first md center">
-          <h1>Success!</h1>
-          <p><a href="../history/index.html">Click here to review your payment details and history</a>.</p>
-          <p>You can review your payment details and history any time you log in by clicking the <b>View History</b> button on your home page.</p>
+      <section id="processing-payment">
+        <div class="text center">
+          <div class="spinner-box">
+            <div class="spinner"><i class="la la-refresh la-spin"></i></div>
+          </div>
+          <h1>Thank You</h1>
+          <p>We are reviewing your payment details. We promise this won't take long.</p>
         </div>
       </section>
     </main>

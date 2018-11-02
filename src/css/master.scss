@@ -1804,17 +1804,17 @@ main {
 @media (min-width: 64rem) {.card {max-width: 35%;}}
 
 
-// TRANSACTIONS HEADER
-.transactions {
+// TRANSACTIONS & ach-history HEADER
+.transactions, .ach-history {
   display: block;
   width: 100%;
   margin: 0 auto;
   padding: 2rem 2rem 0;
 }
 
-.transactions:first-of-type {padding: 0 2rem;}
+.transactions:first-of-type, .ach-history:first-of-type {padding: 0 2rem;}
 
-.transactions-container {
+.transactions-container, .ach-history-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1828,7 +1828,7 @@ main {
   background-color: $off-white;
 }
 
-.transactions-header {
+.transactions-header, .ach-history-header {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1840,7 +1840,7 @@ main {
   background-color: $white;
 }
 
-.transactions-information {
+.transactions-information, .ach-history-information {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -1854,7 +1854,7 @@ main {
   background-color: $white;
 }
 
-.transactions-summary {
+.transactions-summary, .ach-history-summary {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -1892,7 +1892,7 @@ main {
 }
 
 @media (min-width: 48rem) {
-.transactions-information {
+.transactions-information, .ach-history-information {
   flex-direction: row;
   align-items: flex-start;
 }
@@ -1900,8 +1900,8 @@ main {
 .transactions-details .details span.transactions-data {font-size: 1rem;}}
 
 
-// TRANSACTIONS LEDGER
-.transactions-ledger {
+// TRANSACTIONS & ach-history LEDGER
+.transactions-ledger, .ach-history-ledger {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -1938,7 +1938,7 @@ main {
 
 .transactions-ledger .control .field .select-icon {right: 0;}
 
-.transactions-ledger .ledger {
+.transactions-ledger .ledger, .ach-history-ledger .ledger {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -1949,14 +1949,22 @@ main {
   border-top: 1px solid $light-gray;
 }
 
-.transactions-ledger .ledger table {
+.ach-history-ledger .ledger {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.transactions-ledger .ledger table, .ach-history-ledger .ledger table {
   display: table;
   width: 100%;
   margin: 0;
 }
 
 .transactions-ledger .ledger table th,
-.transactions-ledger .ledger table td {
+.transactions-ledger .ledger table td,
+.ach-history-ledger .ledger table th,
+.ach-history-ledger .ledger table td {
   overflow: hidden;
   padding: 0.2rem 0.2rem 0;
   font-size: 0.833rem;
@@ -1966,21 +1974,28 @@ main {
   white-space: nowrap;
 }
 
-.transactions-ledger .ledger table td {font-weight: 300;}
+.transactions-ledger .ledger table td,
+.ach-history-ledger .ledger table td {font-weight: 300;}
 
-.transactions-ledger .ledger table tr {line-height: 1.5;}
+.transactions-ledger .ledger table tr,
+.ach-history-ledger .ledger table tr {line-height: 1.5;}
 
 .transactions-ledger .ledger table th:first-of-type,
-.transactions-ledger .ledger table td:first-of-type {padding: 0.2rem 0.2rem 0 0;}
+.transactions-ledger .ledger table td:first-of-type,
+.ach-history-ledger .ledger table th:first-of-type,
+.ach-history-ledger .ledger table td:first-of-type {padding: 0.2rem 0.2rem 0 0;}
 
 .transactions-ledger .ledger table th:last-of-type,
-.transactions-ledger .ledger table td:last-of-type {
+.transactions-ledger .ledger table td:last-of-type,
+.ach-history-ledger .ledger table th:last-of-type,
+.ach-history-ledger .ledger table td:last-of-type {
   padding: 0.2rem 0 0 0.2rem;
   text-align: right;
 }
 
 @media (min-width: 48rem) {
-.transactions-ledger .ledger {overflow: hidden;}
+.transactions-ledger .ledger,
+.ach-history-ledger .ledger {overflow: hidden;}
 .transactions-ledger .control fieldset:nth-of-type(1n) .field {padding: 0 1rem 0 0;}
 .transactions-ledger .control fieldset:nth-of-type(2n) .field {padding: 0 0 0 1rem;}
 .field span.search.la.la-search {right: 1rem;}
