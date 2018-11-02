@@ -1034,9 +1034,8 @@ span.back:hover, span.back:focus {color: $color-two;}
 // FOOTER
 footer {
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: space-between;
+  flex-direction: column-reverse;
+  align-items: center;
   position: relative;
   width: 100%;
   max-width: 40rem;
@@ -1049,18 +1048,24 @@ footer {
 footer.wide {max-width: none;}
 
 footer span {
-  display: block;
-  width: calc(100% - 6rem);
+  margin: 1rem 0 0;
+  text-align: center;
 }
 
-footer a {padding: 0.322rem 0 0;}
-
-@media (min-width: 35.5rem) {footer a {padding: 0;}}
+@media (min-width: 35.5rem) {
+footer {
+  flex-direction: row;
+  justify-content: space-between;
+}
+footer span {
+  margin: 0;
+  width: calc(100% - 6.5rem);
+  text-align: left;
+}}
 
 footer .livechat,
 footer .livechat.offline,
 footer .livechat.online {
-  display: block;
   width: 6rem;
   height: auto;
   max-height: 1.75rem;
