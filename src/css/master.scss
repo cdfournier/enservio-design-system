@@ -1234,10 +1234,17 @@ main {
 
 
 // ALERT BAR ACTION BOX SETTINGS
-.alert-bar .alert-bar-details .confirm-action-box {
+.alert-bar.confirm .alert-bar-details span {padding: 0 1rem 0 0;}
+
+.alert-bar.confirm .alert-bar-details .confirm-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.alert-bar.confirm .alert-bar-details span.confirm-action-box {
   display: inline-flex;
   align-items: center;
-  padding: 0 0 0 1rem;
+  padding: 1rem 0 0 0;
   font-size: 0.694rem;
   font-weight: 500;
   line-height: 0;
@@ -1247,38 +1254,42 @@ main {
   @include transition(all, 0.25s, ease-in-out);
 }
 
-.alert-bar .alert-bar-details .confirm-action-box span.confirm-action {
+.alert-bar.confirm .alert-bar-details .confirm-action-box span.confirm-action {
   padding: 0.875rem 1rem;
   border-radius: 4rem;
   font-size: 0.833rem;
   @include transition(all, 0.25s, ease-in-out);
 }
 
-.alert-bar .alert-bar-details .confirm-action-box span.confirm-action {
+.alert-bar.confirm .alert-bar-details .confirm-action-box span.confirm-action {
   margin: 0 0 0 1rem;
   border: 1px solid $white;
   color: $invalid;
   background-color: $white;
 }
 
-.alert-bar .alert-bar-details .confirm-action-box span.confirm-action:hover,
-.alert-bar .alert-bar-details .confirm-action-box span.confirm-action:focus {
+.alert-bar.confirm .alert-bar-details .confirm-action-box span.confirm-action:hover,
+.alert-bar.confirm .alert-bar-details .confirm-action-box span.confirm-action:focus {
   color: $white;
   background-color: $invalid;
 }
 
-.alert-bar .alert-bar-details .confirm-action-box span.confirm-action.secondary {
+.alert-bar.confirm .alert-bar-details .confirm-action-box span.confirm-action.secondary {
   margin: 0;
   border: 1px solid $white;
   color: $white;
   background-color: $invalid;
 }
 
-.alert-bar .alert-bar-details .confirm-action-box span.confirm-action.secondary:hover,
-.alert-bar .alert-bar-details .confirm-action-box span.confirm-action.secondary:focus {
+.alert-bar.confirm .alert-bar-details .confirm-action-box span.confirm-action.secondary:hover,
+.alert-bar.confirm .alert-bar-details .confirm-action-box span.confirm-action.secondary:focus {
   color: $invalid;
   background-color: $white;
 }
+
+@media (min-width: 48rem) {
+.alert-bar.confirm .alert-bar-details .confirm-details {flex-direction: row;}
+.alert-bar.confirm .alert-bar-details span.confirm-action-box {padding: 0 0 0 1rem;}}
 
 
 // TIMEOUT
