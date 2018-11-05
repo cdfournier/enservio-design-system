@@ -50,7 +50,7 @@ html {
 html {font-size: 1rem;}
 
 @media screen and (min-width: 320px) {
-html {font-size: calc(1rem + 6 * ((100vw - 20rem) / 680))}}
+html {font-size: calc(1rem + 6 * ((100vw - 32rem) / 680))}}
 
 @media screen and (min-width: 1000px) {
 html {font-size: 1.25rem;}}
@@ -815,7 +815,9 @@ span.button.upload input[type="file"] {
 
 
 // DOWNLOAD BUTTON
-.download-button {
+.download-button {display: none;}
+
+.no-touch .download-button {
   display: flex;
   justify-content: center;
   position: relative;
@@ -830,7 +832,7 @@ span.button.upload input[type="file"] {
   line-height: 1;
 }
 
-.download-button span.download-icon {position: absolute;}
+.no-touch .download-button span.download-icon {position: absolute;}
 
 
 // BUTTON BOX/ROW CONTAINER

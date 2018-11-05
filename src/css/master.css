@@ -10,7 +10,7 @@ html {
 
 @media screen and (min-width: 320px) {
   html {
-    font-size: calc(1rem + 6 * ((100vw - 20rem) / 680)); } }
+    font-size: calc(1rem + 6 * ((100vw - 32rem) / 680)); } }
 
 @media screen and (min-width: 1000px) {
   html {
@@ -745,6 +745,9 @@ span.button.upload input[type="file"] {
     margin: 0; } }
 
 .download-button {
+  display: none; }
+
+.no-touch .download-button {
   display: flex;
   justify-content: center;
   position: relative;
@@ -758,7 +761,7 @@ span.button.upload input[type="file"] {
   font-size: 1.44rem;
   line-height: 1; }
 
-.download-button span.download-icon {
+.no-touch .download-button span.download-icon {
   position: absolute; }
 
 .button-box {
