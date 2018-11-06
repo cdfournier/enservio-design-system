@@ -1042,6 +1042,9 @@ main {
   margin: 0 auto;
   padding: 2rem 2rem 0; }
 
+.action.text.first {
+  padding: 0 2rem; }
+
 .action.text .text {
   padding: 0; }
 
@@ -1061,7 +1064,10 @@ main {
   .action.text .button-box.right {
     margin: 0 0 0 2rem; }
   .action.text .button-box.left {
-    margin: 0 2rem 0 0; } }
+    margin: 0 2rem 0 0; }
+  .action.text .button-box button,
+  .action.text .button-box .button {
+    margin: 0; } }
 
 .graphic.text {
   display: block;
