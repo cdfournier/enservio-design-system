@@ -38,13 +38,15 @@
       <div class="alert-bar confirm">
         <div class="alert-bar-details">
           <span><i class="la la-exclamation-circle"></i></span>
-          <div class="alert-bar-message">
-            <span>You have unsaved changes. If you continue, these changes will be lost. Do you want to continue?</span>
+          <div class="confirm-details">
+            <div class="alert-bar-message">
+              <span>You have unsaved changes. If you continue, these changes will be lost. Do you want to continue?</span>
+            </div>
+            <span class="confirm-action-box">
+              <span class="confirm-action secondary dismiss confirm">No</span>
+              <span class="confirm-action dismiss confirm">Yes</span>
+            </span>
           </div>
-          <span class="confirm-action-box">
-            <span class="confirm-action secondary dismiss confirm">No</span>
-            <span class="confirm-action dismiss confirm">Yes</span>
-          </span>
         </div>
       </div>
       <div class="alert-bar success">
@@ -103,9 +105,10 @@
       &lt;span class=&quot;dismiss error&quot;&gt;&lt;i class=&quot;la la-times-circle&quot;&gt;&lt;/i&gt;&lt;/span&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;alert-bar confirm&quot;&gt;
-    &lt;div class=&quot;alert-bar-details&quot;&gt;
-      &lt;span&gt;&lt;i class=&quot;la la-exclamation-circle&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+&lt;div class=&quot;alert-bar confirm&quot;&gt;
+  &lt;div class=&quot;alert-bar-details&quot;&gt;
+    &lt;span&gt;&lt;i class=&quot;la la-exclamation-circle&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+    &lt;div class=&quot;confirm-details&quot;&gt;
       &lt;div class=&quot;alert-bar-message&quot;&gt;
         &lt;span&gt;You have unsaved changes. If you continue, these changes will be lost. Do you want to continue?&lt;/span&gt;
       &lt;/div&gt;
@@ -115,6 +118,7 @@
       &lt;/span&gt;
     &lt;/div&gt;
   &lt;/div&gt;
+&lt;/div&gt;
   &lt;div class=&quot;alert-bar success&quot;&gt;
     &lt;div class=&quot;alert-bar-details&quot;&gt;
       &lt;div class=&quot;alert-bar-message&quot;&gt;

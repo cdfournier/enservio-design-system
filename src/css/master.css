@@ -10,7 +10,7 @@ html {
 
 @media screen and (min-width: 320px) {
   html {
-    font-size: calc(1rem + 6 * ((100vw - 20rem) / 680)); } }
+    font-size: calc(1rem + 6 * ((100vw - 32rem) / 680)); } }
 
 @media screen and (min-width: 1000px) {
   html {
@@ -745,6 +745,9 @@ span.button.upload input[type="file"] {
     margin: 0; } }
 
 .download-button {
+  display: none; }
+
+.no-touch .download-button {
   display: flex;
   justify-content: center;
   position: relative;
@@ -758,7 +761,7 @@ span.button.upload input[type="file"] {
   font-size: 1.44rem;
   line-height: 1; }
 
-.download-button span.download-icon {
+.no-touch .download-button span.download-icon {
   position: absolute; }
 
 .button-box {
@@ -1039,6 +1042,9 @@ main {
   margin: 0 auto;
   padding: 2rem 2rem 0; }
 
+.action.text.first {
+  padding: 0 2rem; }
+
 .action.text .text {
   padding: 0; }
 
@@ -1058,7 +1064,10 @@ main {
   .action.text .button-box.right {
     margin: 0 0 0 2rem; }
   .action.text .button-box.left {
-    margin: 0 2rem 0 0; } }
+    margin: 0 2rem 0 0; }
+  .action.text .button-box button,
+  .action.text .button-box .button {
+    margin: 0; } }
 
 .graphic.text {
   display: block;
@@ -1171,10 +1180,17 @@ main {
   .alert-bar .alert-bar-details .alert-bar-message span {
     font-size: 1.2rem; } }
 
-.alert-bar .alert-bar-details .confirm-action-box {
+.alert-bar.confirm .alert-bar-details span {
+  padding: 0 1rem 0 0; }
+
+.alert-bar.confirm .alert-bar-details .confirm-details {
+  display: flex;
+  flex-direction: column; }
+
+.alert-bar.confirm .alert-bar-details span.confirm-action-box {
   display: inline-flex;
   align-items: center;
-  padding: 0 0 0 1rem;
+  padding: 1rem 0 0 0;
   font-size: 0.694rem;
   font-weight: 500;
   line-height: 0;
@@ -1187,7 +1203,7 @@ main {
   -o-transition: all 0.25s ease-in-out 0s;
   transition: all 0.25s ease-in-out 0s; }
 
-.alert-bar .alert-bar-details .confirm-action-box span.confirm-action {
+.alert-bar.confirm .alert-bar-details .confirm-action-box span.confirm-action {
   padding: 0.875rem 1rem;
   border-radius: 4rem;
   font-size: 0.833rem;
@@ -1197,27 +1213,33 @@ main {
   -o-transition: all 0.25s ease-in-out 0s;
   transition: all 0.25s ease-in-out 0s; }
 
-.alert-bar .alert-bar-details .confirm-action-box span.confirm-action {
+.alert-bar.confirm .alert-bar-details .confirm-action-box span.confirm-action {
   margin: 0 0 0 1rem;
   border: 1px solid #ffffff;
   color: #bb0000;
   background-color: #ffffff; }
 
-.alert-bar .alert-bar-details .confirm-action-box span.confirm-action:hover,
-.alert-bar .alert-bar-details .confirm-action-box span.confirm-action:focus {
+.alert-bar.confirm .alert-bar-details .confirm-action-box span.confirm-action:hover,
+.alert-bar.confirm .alert-bar-details .confirm-action-box span.confirm-action:focus {
   color: #ffffff;
   background-color: #bb0000; }
 
-.alert-bar .alert-bar-details .confirm-action-box span.confirm-action.secondary {
+.alert-bar.confirm .alert-bar-details .confirm-action-box span.confirm-action.secondary {
   margin: 0;
   border: 1px solid #ffffff;
   color: #ffffff;
   background-color: #bb0000; }
 
-.alert-bar .alert-bar-details .confirm-action-box span.confirm-action.secondary:hover,
-.alert-bar .alert-bar-details .confirm-action-box span.confirm-action.secondary:focus {
+.alert-bar.confirm .alert-bar-details .confirm-action-box span.confirm-action.secondary:hover,
+.alert-bar.confirm .alert-bar-details .confirm-action-box span.confirm-action.secondary:focus {
   color: #bb0000;
   background-color: #ffffff; }
+
+@media (min-width: 48rem) {
+  .alert-bar.confirm .alert-bar-details .confirm-details {
+    flex-direction: row; }
+  .alert-bar.confirm .alert-bar-details span.confirm-action-box {
+    padding: 0 0 0 1rem; } }
 
 .timeout {
   display: flex;
