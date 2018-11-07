@@ -289,6 +289,12 @@ ul.attachment-list li .line-item .expanding-button-box .expanding-button.small {
 ul.attachment-list li .line-item .expanding-button-box .expanding-button.large {
   display: none; }
 
+ul.attachment-list.submitted li .line-item .expanding-button-box {
+  display: none; }
+
+ul.attachment-list.submitted li .line-item span.file-name {
+  width: 70%; }
+
 @media (min-width: 48rem) {
   ul.attachment-list li .line-item span.file-name {
     width: 70%; } }
