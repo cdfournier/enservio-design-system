@@ -2227,10 +2227,16 @@ fieldset {width: 50%;}
 
 @media (min-width: 104rem) {
 fieldset, .small {width: 25%;}
+form.sm .small,
 .small fieldset {
   width: 50%;
   min-width: 50%;
   max-width: 50%;
+}
+form.sm .small fieldset {
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
 }}
 
 
