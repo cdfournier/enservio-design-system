@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="ut8">
+    <title>Enservio Design System | Typography</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700">
+    <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css">
+    <link rel="stylesheet" href="../../../src/css/master.css">
+    <link rel="stylesheet" href="../../assets/css/guide.css">
+    <!-- favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../public/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../public/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../../../public/icons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../public/icons/favicon-16x16.png">
+    <link rel="manifest" href="../../../public/icons/site.webmanifest">
+    <link rel="mask-icon" href="../../../public/icons/safari-pinned-tab.svg" color="#2e84ed">
+    <link rel="shortcut icon" href="../../../public/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2e84ed">
+    <meta name="msapplication-TileImage" content="../../../public/icons/mstile-144x144.png">
+    <meta name="msapplication-config" content="../../../public/icons/browserconfig.xml">
+    <meta name="theme-color" content="#2e84ed">
+    <style>
+      article {padding: 2rem 0 0 0;}
+      article:first-of-type {padding: 0;}
+      ul {
+        -webkit-column-break-inside: avoid;
+        page-break-inside: avoid;
+        break-inside: avoid-column;
+      }
+      ul li {padding: 0 0 0.5rem 0;}
+      h1, h2, h3 {text-transform: none;}
+      .split {
+        max-width: 40rem;
+        margin: auto;
+      }
+      @media (min-width: 48rem) {
+        .design-sample {width: 25%;}
+        .code-sample {width: 75%;}
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section id="typography">
+        <div class="text lg">
+          <article>
+            <h1>Typography</h1>
+            <p>Typography is the appearance of text, and he purpose of typography is to enable readers to focus and immerse themselves in the content of the text. Good typography, by definition, is typography that helps text fulfill its purpose of communication.</p>
+            <p>There are four essential properties required to get typography right:</p>
+            <ul>
+              <li>Font family</li>
+              <li>Font size</li>
+              <li>Line height</li>
+              <li>Line width</li>
+            </ul>
+          </article>
+          <article>
+            <h2>Font Family</h2>
+            <p>We have chosen <a href="https://fonts.google.com/specimen/Roboto+Slab" target="_blank">Roboto Slab</a> as our headline font family and <a href="https://fonts.google.com/specimen/Montserrat" target="_blank">Montserrat</a> as our body copy and all-purpose font family. The font weights we use for each depend on the use case, but are intended to provide the most legible option for each situation.</p>
+          </article>
+          <article>
+            <h2>Font Size</h2>
+            <p>For our font sizes, we use a <a href="https://type-scale.com/" target="_blank")>1.200 Minor Third type scale</a>. This provides a subtle but powerful consistency and rhythm to the way in which different aspects of our typography renders at multiple screen sizes.</p>
+          </article>
+          <article>
+            <h2>Line Height</h2>
+            <p>Typography also has both a vertical and horizontal rhythm to help improve readability. The 1.200 Minor Third type scale also provides us with the line height we need.</p>
+          </article>
+          <article>
+            <h2>Line Length</h2>
+            <p>In a fluid layout, browser width and typographic measure are linked: the wider the viewport, the more characters per line. Keeping in mind that a range of 45-75 characters per line is generally accepted as safe for comfortable reading, there are a couple of things that can be done to avoid extra long lines of text in fluid layouts.</p>
+            <p>The first thing we do is control the width of a container. We can test our container width by dropping some lorem text into the layout with two asterisks. The first marks the 45th character, and the second marks the 75th. See below at various widths.</p>
+            <p style="font-weight: 500;">Lorem ipsum dolor sit amet, consectetur adip*isicing elit, sed do eiusmod *tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p>If at any point the two asterisks appear on the same line of text, we know it’s time to either decrease the width of the container or increase the font size.</p>
+            </article>
+          <article>
+            <h2>Relative Units</h2>
+            <p>The typography for the design system is set using the <a href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units" target="_blank">rem relative unit</a>. This helps to ensure that our designs are relative to font or viewport size, meaning that the layout will continue to look correct even if the user drastically increases or decreases the font size via their browser.</p>
+          </article>
+        </div>
+        <div class="split last">
+          <div class="design-sample">
+            <figcaption>Design Sample</figcaption>
+            <h1 style="padding: 0 0 0.694rem;">h1</h1>
+            <h2 style="padding: 0 0 0.694rem;">h2</h2>
+            <h3 style="padding: 0 0 0.694rem;">h3</h3>
+            <p style="padding: 0 0 0.694rem; line-height: 1.5;">p</p>
+            <ol style="padding: 0 0 0.694rem 1.5rem;"><li>ol li</li></ol>
+            <ul style="padding: 0 0 0.694rem 1.5rem;"><li>ul li</li></ul>
+            <small style="display: block; padding: 0 0 0.694rem;">small</small>
+          </div>
+          <div class="code-sample">
+            <div class="notes" style="padding: 0;">
+              <figcaption>Notes</figcaption>
+              <p>Note that every effort has been made to reduce the number of variants in this typography system. Do we have unordered lists without bullets? Yes. Has spacing been adjusted to accommodate specific layout requirements? In some cases. However, our objective and prime directive is to keep things simple and try to avoid creating customized typography for each obstacle encountered.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <nav>
+        <ul>
+          <li><a href="../../../index.html">Home</a></li>
+          <li><a href="../../principles/principles.html">Principles</a></li>
+          <li><a href="../../style/style.html">Style</a></li>
+          <li><a href="../../atoms/atoms.html">Atoms</a></li>
+          <li><a href="../../molecules/molecules.html">Molecules</a></li>
+          <li><a href="../../demo/pages.html">Pages</a></li>
+        </ul>
+      </nav>
+      <span>&copy;2018 Enservio, Inc. All rights reserved. <span class="tag">v.1.1</span></span>
+    </footer>
+    <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="../../assets/scripts/enservio.js"></script>
+  </body>
+</html>
