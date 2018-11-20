@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Enservio Customer Portal | Reset Your Password</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700">
+    <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css">
+    <link rel="stylesheet" href="../../../../src/css/master.css">
+    <!-- favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../../public/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../../public/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../../../../public/icons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../../public/icons/favicon-16x16.png">
+    <link rel="manifest" href="../../../../public/icons/site.webmanifest">
+    <link rel="mask-icon" href="../../../../public/icons/safari-pinned-tab.svg" color="#2e84ed">
+    <link rel="shortcut icon" href="../../../../public/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2e84ed">
+    <meta name="msapplication-TileImage" content="../../../../public/icons/mstile-144x144.png">
+    <meta name="msapplication-config" content="../../../../public/icons/browserconfig.xml">
+    <meta name="theme-color" content="#2e84ed">
+  </head>
+  <body>
+    <section id="alerts" class="alerts">
+      <div class="alert-bar error">
+        <div class="alert-bar-details">
+          <span><i class="la la-exclamation-circle"></i></span>
+          <div class="alert-bar-message">
+            <span></span>
+          </div>
+          <span class="dismiss error"><i class="la la-times-circle"></i></span>
+        </div>
+      </div>
+      <div class="alert-bar success">
+        <div class="alert-bar-details">
+          <div class="alert-bar-message">
+            <span></span>
+          </div>
+          <span class="dismiss success"><i class="la la-times-circle"></i></span>
+        </div>
+      </div>
+      <div class="alert-bar system">
+        <div class="alert-bar-details">
+          <div class="alert-bar-message">
+            <span></span>
+          </div>
+          <span class="dismiss system"><i class="la la-times-circle"></i></span>
+        </div>
+      </div>
+      <div class="timeout">
+        <div class="text center md">
+          <h1>Timeout Warning</h1>
+          <p>Due to inactivity, your session will end in <b>{time}</b>, and any unsaved changes will be lost. To remain logged in, please click the  <b>Continue</b> button to keep working.</p>
+        </div>
+        <div class="button-box">
+          <button class="button color-one continue"><span class="button-label">Continue</span></button>
+        </div>
+      </div>
+    </section>
+    <header id="header" class="header--fixed">
+      <div class="logo">
+        <img src="../../../assets/images/logo.png" alt="carrier logo">
+      </div>
+    </header>
+    <main>
+      <section id="reset-your-password">
+        <div class="text first center md">
+          <h1>Reset Your Password</h1>
+          <p>Please reset your password to continue.</p>
+        </div>
+        <form class="sm" action="../../log-in/log-in/index.html" novalidate>
+          <fieldset>
+            <legend>New Password</legend>
+            <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+              <span class="error-message">This password does not meet the minimum requirements below</span>
+              <input type="password" name="new-password" id="new-password" placeholder="Choose a password" maxlength="50" minlength="8" autocomplete="new-password">
+              <label for="new-password">New Password&#42;</label>
+              <span toggle="#new-password" class="la la-eye-slash show-hide-password"></span>
+              <span class="valid password"><i class="la la-check-circle-o"></i></span>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Confirm New Password</legend>
+            <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+              <span class="error-message">Your passwords do not match</span>
+              <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirm your password" maxlength="50" minlength="8" autocomplete="new-password">
+              <label for="confirm-password">Confirm New Password&#42;</label>
+              <span toggle="#confirm-password" class="la la-eye-slash show-hide-password"></span>
+              <span class="valid password"><i class="la la-check-circle-o"></i></span>
+            </div>
+          </fieldset>
+          <div class="button-box">
+            <button class="button color-one"><span class="button-label">Reset Password<span class="post"><span class="processing"><i class="la la-refresh la-spin"></i></span></span></span></button>
+          </div>
+        </form>
+      </section>
+      <section id="password-requirements">
+        <div class="text border md">
+          <h2>Password Requirements</h2>
+          <ul class="requirements">
+            <li class="default">Passwords must match&nbsp; <!-- change li class from default to valid or invalid as necessary -->
+              <span>
+                <i class="la la-circle"></i>
+                <i class="la la-check-circle"></i>
+                <i class="la la-exclamation-circle"></i>
+              </span>
+            </li>
+            <li class="default">Passwords must contain between 8&#8211;50 characters&nbsp;
+              <span>
+                <i class="la la-circle"></i>
+                <i class="la la-check-circle"></i>
+                <i class="la la-exclamation-circle"></i>
+              </span>
+            </li>
+            <li class="default">Passwords must contain least 1 upper&#45;case letter&nbsp;
+              <span>
+                <i class="la la-circle"></i>
+                <i class="la la-check-circle"></i>
+                <i class="la la-exclamation-circle"></i>
+              </span>
+            </li>
+            <li class="default">Passwords must contain least 1 lower&#45;case letter&nbsp;
+              <span>
+                <i class="la la-circle"></i>
+                <i class="la la-check-circle"></i>
+                <i class="la la-exclamation-circle"></i>
+              </span>
+            </li>
+            <li class="default">Passwords must contain least 1 number&nbsp;
+              <span>
+                <i class="la la-circle"></i>
+                <i class="la la-check-circle"></i>
+                <i class="la la-exclamation-circle"></i>
+              </span>
+            </li>
+            <li class="default">Passwords must contain least 1 of the following characters: &#x21;&#x20;&#x40;&#x20;&#x23;&#x20;&#x24;&#x20;&#x25;&#x20;&#x5e;&#x20;&#x26;&#x20;&#x2a;&#x20;&#x28;&#x20;&#x29;&#x20;&#x27;&#x20;&#x2d;&#x20;&#x2b;&#x20;&#x2c;&#x20;&#x2e;&#x20;&#x2f;&#x20;&#x3a;&#x20;&#x3b;&#x20;&#x3c;&#x20;&#x3d;&#x20;&#x3e;&#x20;&#x3f;&#x20;&#x5b;&#x20;&#x5d;&#x20;&#x5f;&#x20;&#x60;&#x20;&#x7b;&#x20;&#x7d;&#x20;&#x7c;&#x20;&#x5c;&#x20;&nbsp;
+              <span>
+                <i class="la la-circle"></i>
+                <i class="la la-check-circle"></i>
+                <i class="la la-exclamation-circle"></i>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <span>&copy;2018 Enservio, Inc. All rights reserved.&nbsp;<a href="../../policies/terms/index.html">Terms&nbsp;&amp;&nbsp;Conditions</a></span>
+      <div class="livechat">
+        <div class="livechat offline">
+          <img src="../../../../src/images/livechat-offline.png" alt="Livechat offline">
+        </div>
+        <div class="livechat online">
+          <img src="../../../../src/images/livechat-online.png" alt="Livechat online">
+        </div>
+      </div>
+    </footer>
+    <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="https://unpkg.com/headroom.js@0.9.4/dist/headroom.js"></script>
+    <script src="../../../assets/scripts/enservio.js"></script>
+    <script src="../../../assets/scripts/enservio.header.js"></script>
+  </body>
+</html>

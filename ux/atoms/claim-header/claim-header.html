@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Enservio Design System | Claim Header</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700">
+    <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css">
+    <link rel="stylesheet" href="../../../src/css/master.css">
+    <link rel="stylesheet" href="../../assets/css/guide.css">
+    <!-- favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../public/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../public/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../../../public/icons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../public/icons/favicon-16x16.png">
+    <link rel="manifest" href="../../../public/icons/site.webmanifest">
+    <link rel="mask-icon" href="../../../public/icons/safari-pinned-tab.svg" color="#2e84ed">
+    <link rel="shortcut icon" href="../../../public/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2e84ed">
+    <meta name="msapplication-TileImage" content="../../../public/icons/mstile-144x144.png">
+    <meta name="msapplication-config" content="../../../public/icons/browserconfig.xml">
+    <meta name="theme-color" content="#2e84ed">
+  </head>
+  <body>
+    <main>
+      <section id="claim-header">
+        <div class="text guide">
+          <h1>Claim Header</h1>
+          <p>Currently used on the <a href="../../demo/home/home/index.html">Home</a> page, the Claim Header displays valuable claim information at-a-glance. It is also responsive by nature, and the information on display changes depending on the screen size.</p>
+        </div>
+        <div class="split wide last">
+          <div class="design-sample">
+            <figcaption>Design Sample</figcaption>
+            <div class="claim-header">
+              <div class="claim-information">
+                <div class="claim-details number">
+                  <div class="claim-details-icon">
+                    <span class="icon"><i class="la la-map-signs"></i></span>
+                  </div>
+                  <div class="details">
+                    <span class="claim-label">Number</span>
+                    <span class="claim-data">A01234567879</span>
+                  </div>
+                </div>
+                <div class="claim-details items">
+                  <div class="claim-details-icon">
+                    <span class="icon"><i class="la la-list-ol"></i></span>
+                  </div>
+                  <div class="details">
+                    <span class="claim-label">Items</span>
+                    <span class="claim-data">18</span>
+                  </div>
+                </div>
+                <div class="claim-details attachments">
+                  <div class="claim-details-icon">
+                    <span class="icon"><i class="la la-paperclip"></i></span>
+                  </div>
+                  <div class="details">
+                    <span class="claim-label">Attachments</span>
+                    <span class="claim-data">14</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="code-sample">
+            <figure>
+              <figcaption>html</figcaption>
+<pre><code>&lt;div class=&quot;claim-header&quot;&gt;
+  &lt;div class=&quot;claim-information&quot;&gt;
+    &lt;div class=&quot;claim-details number&quot;&gt;
+      &lt;div class=&quot;claim-details-icon&quot;&gt;
+        &lt;span class=&quot;icon&quot;&gt;&lt;i class=&quot;la la-map-signs&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;details&quot;&gt;
+        &lt;span class=&quot;claim-label&quot;&gt;Number&lt;/span&gt;
+        &lt;span class=&quot;claim-data&quot;&gt;{Claim_Number}&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;claim-details items&quot;&gt;
+      &lt;div class=&quot;claim-details-icon&quot;&gt;
+        &lt;span class=&quot;icon&quot;&gt;&lt;i class=&quot;la la-list-ol&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;details&quot;&gt;
+        &lt;span class=&quot;claim-label&quot;&gt;Items&lt;/span&gt;
+        &lt;span class=&quot;claim-data&quot;&gt;{Claim_Items}&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;claim-details attachments&quot;&gt;
+      &lt;div class=&quot;claim-details-icon&quot;&gt;
+        &lt;span class=&quot;icon&quot;&gt;&lt;i class=&quot;la la-paperclip&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;details&quot;&gt;
+        &lt;span class=&quot;claim-label&quot;&gt;Attachments&lt;/span&gt;
+        &lt;span class=&quot;claim-data&quot;&gt;{Claim_Attachments}&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            </figure>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="wide">
+      <nav>
+        <ul>
+          <li><a href="../../../index.html">Home</a></li>
+          <li><a href="../../principles/principles.html">Principles</a></li>
+          <li><a href="../../style/style.html">Style</a></li>
+          <li><a href="../../atoms/atoms.html">Atoms</a></li>
+          <li><a href="../../molecules/molecules.html">Molecules</a></li>
+          <li><a href="../../demo/pages.html">Pages</a></li>
+        </ul>
+      </nav>
+      <span>&copy;2018 Enservio, Inc. All rights reserved. <span class="tag">v.1.1</span></span>
+    </footer>
+    <!-- scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+    <script src="../../assets/scripts/enservio.js"></script>
+  </body>
+</html>
