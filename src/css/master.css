@@ -857,10 +857,6 @@ header {
   padding: 2rem;
   background-color: #ffffff; }
 
-header.wide {
-  justify-content: flex-start;
-  max-width: none; }
-
 header.back {
   align-items: center;
   justify-content: center; }
