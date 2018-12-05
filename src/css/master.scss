@@ -2200,6 +2200,7 @@ legend {display: none;}
 form {
   flex-direction: row;
   flex-wrap: wrap;
+  align-items: flex-start;
 }
 form.sm, form.md, form.lg {
   flex-direction: column;
