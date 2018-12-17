@@ -879,6 +879,13 @@ button.secondary.color-two.disabled:hover, button.secondary.color-two.disabled:f
 
 .button-box.left {align-items: flex-start;}
 
+.button-box.wide {
+  flex-direction: row;
+  justify-content: center;
+}
+
+.button-box.wide button, .button-box.wide .button {margin: 1rem 0.5rem 0;}
+
 @media (min-width: 48rem) {
 .button-box {
   flex-direction: row;
@@ -898,7 +905,8 @@ button.secondary.color-two.disabled:hover, button.secondary.color-two.disabled:f
 .button-box.right .download-button {margin: 0 0 0 1rem;}
 .button-box.left .button {margin: 0 1rem 1rem 0;}
 .button-box.left .expanding-button-box {margin: 0 1rem 1rem 0;}
-form .button-box {padding: 0 1rem;}}
+form .button-box {padding: 0 1rem;}
+.button-box.wide button, .button-box.wide .button {margin: 0 0.5rem 0;}}
 
 
 // CURRENT INVENTORY BUTTON BOX
@@ -1713,7 +1721,7 @@ main {
 .inventory-item-details.receipts .replacement-info {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center;
   width: 100%;
   padding: 1rem 1rem 0;
 }
@@ -1820,6 +1828,7 @@ main {
   justify-content: space-between;
   padding: 1rem 1rem 0;
 }
+.inventory-item-details.receipts .replacement-info {align-items: flex-end;}
 .inventory-item-details.receipts ul li {
   width: 47%;
   padding: 0;
@@ -1901,8 +1910,6 @@ main {
 @media (min-width: 48rem) {
 .receipt-details {flex-direction: row;}
 .receipt-details form .small {width: 100%;}
-.receipt-details form .button-box.reverse {flex-direction: column-reverse;}
-.receipt-details form .button-box.reverse .button:first-of-type {margin-bottom: 1rem;}
 .receipt-box {padding: 2rem 2rem 0 1rem;}
 .receipt-box:before {display: none;}
 .receipt-image {padding: 0 0 2rem;}}
@@ -1910,6 +1917,42 @@ main {
 @media (min-width: 64rem) {
 .receipt-details form .button-box.reverse {flex-direction: row;}
 .receipt-details form .button-box.reverse .button:first-of-type {margin-bottom: 0;}}
+
+
+// RECEIPT SUMMARY
+.replacement-receipt-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0 1rem;
+}
+
+.replacement-receipt-info p {
+  padding-top: 0;
+  text-align: center;
+}
+
+.replacement-receipt-info .button-box {
+  flex-direction: row;
+  justify-content: center;
+}
+
+.replacement-receipt-info .button-box .button {margin: 0 0.5rem 0;}
+
+@media (min-width: 48rem) {
+.replacement-receipt-info {flex-direction: row;}
+.replacement-receipt-info p {
+  padding: 0;
+  text-align: left;
+}
+.replacement-receipt-info .button-box {
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+}}
+
+@media (min-width: 64rem) {.replacement-receipt-info {padding: 0;}}
 
 
 // CLAIM INFORMATION
