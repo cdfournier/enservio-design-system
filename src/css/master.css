@@ -1785,6 +1785,9 @@ main {
   display: block;
   content: "$"; }
 
+.inventory-item-details.receipt-image {
+  padding: 2rem 1rem 0; }
+
 @media (min-width: 48rem) {
   .inventory-item.receipt .inventory-item-header .item-details button,
   .inventory-item.receipt .inventory-item-header .item-details .button {
@@ -1904,56 +1907,52 @@ main {
   .receipt-details form .button-box.reverse .button:first-of-type {
     margin-bottom: 0; } }
 
-.replacement-receipt-info {
+.inventory-item-details.receipts .receipt-data {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0 0 1rem; }
+  flex-direction: column; }
 
-.replacement-receipt-info .receipt {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  margin: 0 auto;
-  padding: 0; }
+.inventory-item-details.receipts .receipt-border {
+  display: none;
+  width: calc(100% - 2rem);
+  height: 1px;
+  margin: 1rem auto 0;
+  background-color: #cccece; }
 
-.replacement-receipt-info .receipt p {
-  padding-top: 0;
-  text-align: center; }
+.inventory-item-details.receipts .receipt-data .receipt-data-details h2 {
+  padding: 1rem 0 0 1rem;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 500; }
 
-.replacement-receipt-info .receipt img {
-  margin: 1rem auto 2rem; }
-
-.replacement-receipt-info .button-box {
-  flex-direction: row;
-  justify-content: center; }
-
-.replacement-receipt-info .button-box .button {
-  margin: 0 0.5rem 0; }
+.inventory-item-details.receipts .receipt-data .receipt-image {
+  padding: 2rem 1rem 0; }
 
 @media (min-width: 48rem) {
-  .replacement-receipt-info {
-    flex-direction: row;
-    align-items: flex-start; }
-  .replacement-receipt-info .receipt img {
-    margin: 1rem auto 0; }
-  .replacement-receipt-info p {
-    padding: 0;
-    text-align: left; }
-  .replacement-receipt-info .receipt p {
-    padding: 0 0 1rem; }
-  .replacement-receipt-info .button-box {
-    justify-content: flex-end;
-    flex-wrap: nowrap; } }
+  .inventory-item-details.receipts .receipt-data {
+    flex-direction: row; }
+  .inventory-item-details.receipts .receipt-data .receipt-data-details {
+    width: 60%; }
+  .inventory-item-details.receipts .receipt-data .receipt-data-details ul {
+    flex-direction: column;
+    padding: 1rem; }
+  .inventory-item-details.receipts .receipt-data .receipt-data-details ul li {
+    width: 100%; }
+  .inventory-item-details.receipts .receipt-data .receipt-data-details ul li:nth-of-type(1n) {
+    margin: 0;
+    padding-bottom: 1rem; }
+  .inventory-item-details.receipts .receipt-data .receipt-data-details ul li:nth-of-type(2n) {
+    margin: 0;
+    padding: 0; }
+  .inventory-item-details.receipts .receipt-data .receipt-data-details .button-box.wide {
+    justify-content: flex-start;
+    padding-left: 0.5rem; }
+  .inventory-item-details.receipts .receipt-data .receipt-image {
+    width: 40%;
+    padding: 1rem 1rem 0; } }
 
 @media (min-width: 64rem) {
-  .replacement-receipt-info {
-    padding: 0; }
-  .replacement-receipt-info .receipt img {
-    margin: 0 auto; } }
+  .inventory-item-details.receipts .receipt-border {
+    display: block; } }
 
 .claim {
   display: block;
