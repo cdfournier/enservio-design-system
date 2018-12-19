@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700">
     <link rel="stylesheet" href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome.min.css">
     <link rel="stylesheet" href="../../../../src/css/master.css">
+    <link rel="stylesheet" href="../../../../src/css/receipts.css">
     <!-- favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="../../../../public/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../../../../public/icons/favicon-32x32.png">
@@ -72,89 +73,128 @@
       </nav>
     </header>
     <main>
-      <section id="line-item-receipts">
-        <div class="action text first left">
-          <div class="text">
-            <h1>Submit Receipts</h1>
-            <p>You've been invited to submit receipts for the following items:</p>
-          </div>
-          <div class="button-box right">
-            <a href="../submit/index.html" class="button secondary color-one"><span class="button-label">Submit Receipts</span></a>
-          </div>          
-        </div>
-        <div class="current-inventory-list">
-          <div class="inventory-item receipt">
-            <input id="item-1" type="checkbox" name="items" class="accordian">
-            <label for="item-1" class="inventory-item-header">
-              <span class="item-number">1</span>
-              <div class="item-details">
-                <span class="description"><b>Description</b>:&nbsp;Macbook Pro 13&quot;</span>
-                <div class="replacement-count line"><span>0</span>of<span>1</span>items replaced</div>
-                <div class="buttons">
-                  <!-- <a href="#!" class="button receipts secondary color-one"><span class="button-label icon"><i class="la la-pencil"></i></span><span class="button-label copy">Edit</span></a> -->
-                  <a href="#!" class="button receipts color-one"><span class="button-label icon"><i class="la la-plus"></i></span><span class="button-label copy">Add</span></a>
-                </div>
-              </div>
-              <i class="la la-angle-down"></i>
-            </label>
-            <div class="inventory-item-details receipts index">
-              <div class="replacement-info">
-                <div class="replacement-count"><span>0</span>of<span>1</span>items replaced</div>
-              </div>
-              <ul>
-                <li><b>Total Replacement Cost:</b><span>1900.00</span></li>
-                <li><b>Total Amount Submitted:</b><span>0.00</span></li>
-              </ul>
-            </div>
-          </div>
-          <div class="inventory-item receipt">
-            <input id="item-2" type="checkbox" name="items" class="accordian">
-            <label for="item-2" class="inventory-item-header">
-              <span class="item-number">2</span>
-              <div class="item-details">
-                <span class="description"><b>Description</b>:&nbsp;HP Deskjet 4300</span>
-                <div class="replacement-count line"><span>0</span>of<span>1</span>items replaced</div>
-                <div class="buttons">
-                  <!-- <a href="#!" class="button receipts secondary color-one"><span class="button-label icon"><i class="la la-pencil"></i></span><span class="button-label copy">Edit</span></a> -->
-                  <a href="#!" class="button receipts color-one"><span class="button-label icon"><i class="la la-plus"></i></span><span class="button-label copy">Add</span></a>
-                </div>
-              </div>
-              <i class="la la-angle-down"></i>
-            </label>
-            <div class="inventory-item-details receipts index">
-              <div class="replacement-info">
-                <div class="replacement-count"><span>0</span>of<span>1</span>items replaced</div>
-              </div>
-              <ul>
-                <li><b>Total Replacement Cost:</b><span>90.00</span></li>
-                <li><b>Total Amount Submitted:</b><span>0.00</span></li>
-              </ul>
-            </div>
-          </div>
-          <div class="inventory-item receipt">
+      <section id="receipts">
+        <div class="inventory-receipt-list">
+
+          <p>Receipt List</p>
+          <div class="receipt-item">
             <input id="item-3" type="checkbox" name="items" class="accordian">
+            <label for="item-3" class="receipt-item-header">
+              <span class="item-number">3</span>
+              <div class="item-details">
+                <span class="description"><b>Description</b>:&nbsp;Slacks</span>
+                <div class="replacement-count"><span>0</span>of<span>4</span>items replaced</div>
+                <div class="buttons">
+                  <!-- <a href="#!" class="button receipts secondary color-one"><span class="button-label icon"><i class="la la-pencil"></i></span><span class="button-label copy">Edit</span></a> -->
+                  <a href="#!" class="button receipts color-one"><span class="button-label icon"><i class="la la-plus"></i></span><span class="button-label copy">Add</span></a>
+                </div>
+              </div>
+              <i class="la la-angle-down"></i>
+            </label>
+            <div class="receipt-details">
+              <div class="receipt-border"></div>
+              <div class="replacement-count"><span>0</span>of<span>4</span>items replaced</div>
+              <div class="replacement-details">
+                <ul>
+                  <li><b>Total Replacement Cost:</b><span>96.00</span></li>
+                  <li><b>Total Amount Submitted:</b><span>0.00</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <p>Receipt Summary</p>
+          <div class="receipt-item">
+            <input id="item-2" type="checkbox" name="items" class="accordian" checked>
+            <label for="item-2" class="receipt-item-header">
+              <span class="item-number">3</span>
+              <div class="item-details">
+                <span class="description"><b>Description</b>:&nbsp;Slacks</span>
+                <div class="replacement-count"><span>0</span>of<span>4</span>items replaced</div>
+              </div>
+              <i class="la la-angle-down"></i>
+            </label>
+            <div class="receipt-details">
+              <div class="receipt-border"></div>
+              <div class="receipt-details-box">
+                <div class="receipt-details-box-left">
+                  <div class="replacement-count"><span>0</span>of<span>4</span>items replaced</div>
+                  <div class="replacement-details">
+                    <h2>Receipt &#35;1</h2>
+                    <ul>
+                      <li><b>Total Replacement Cost:</b><span>96.00</span></li>
+                      <li><b>Total Amount Submitted:</b><span>0.00</span></li>
+                    </ul>
+                    <div class="button-box">
+                      <a href="#!" class="button secondary color-one"><span class="button-label">Edit</span></a>
+                      <a href="#!" class="button color-one"><span class="button-label">Delete</span></a>
+                    </div>
+                  </div>
+                </div>
+                <div class="receipt-image">
+                  <img src="../../../assets/images/slacks-receipt-highlighted.jpg" alt="Receipt Image">
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <p>Receipt Submit</p>
+          <div class="receipt-item">
+            <input id="item-1" type="checkbox" name="items" class="accordian" checked>
+            <label for="item-1" class="receipt-item-header">
+              <span class="item-number">3</span>
+              <div class="item-details">
+                <span class="description"><b>Description</b>:&nbsp;Slacks</span>
+              </div>
+              <i class="la la-angle-down"></i>
+            </label>
+            <div class="receipt-details">
+              <div class="receipt-border"></div>
+              <div class="receipt-details-box">
+                <div class="replacement-details summary">
+                  <h2>Receipt &#35;1</h2>
+                  <ul>
+                    <li><span class="qty">Qty</span><span class="amt no">Amount</span><span class="receipt-thumbnail">Receipt</span></li>
+                    <li><span class="qty">1</span><span class="amt">149.97</span><span class="receipt-thumbnail"><img src="../../../assets/images/slacks-receipt-highlighted.jpg" alt="Receipt Thumbnail"></span></li>
+                  </ul>
+                  <h2>Receipt &#35;2</h2>
+                  <ul>
+                    <li><span class="qty">Qty</span><span class="amt no">Amount</span><span class="receipt-thumbnail">Receipt</span></li>
+                    <li><span class="qty">1</span><span class="amt">49.99</span><span class="receipt-thumbnail"><img src="../../../assets/images/slacks-receipt-02-highlighted.jpg" alt="Receipt Thumbnail"></span></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+<!--
+          <p>Receipt Submit</p>
+          <div class="inventory-item receipt">
+            <input id="item-3" type="checkbox" name="items" class="accordian" checked>
             <label for="item-3" class="inventory-item-header">
               <span class="item-number">3</span>
               <div class="item-details">
                 <span class="description"><b>Description</b>:&nbsp;Slacks</span>
-                <div class="replacement-count line"><span>3</span>of<span>4</span>items replaced</div>
-                <div class="buttons">
-                  <a href="../details/index.html" class="button receipts secondary color-one"><span class="button-label icon"><i class="la la-pencil"></i></span><span class="button-label copy">Edit</span></a>
-                  <a href="../upload/index.html" class="button receipts color-one"><span class="button-label icon"><i class="la la-plus"></i></span><span class="button-label copy">Add</span></a>
-                </div>
               </div>
               <i class="la la-angle-down"></i>
             </label>
-            <div class="inventory-item-details receipts index">
-              <div class="replacement-info">
-                <div class="replacement-count"><span>3</span>of<span>4</span>items replaced</div>
+
+            <div class="inventory-item-details receipts">
+              <div class="receipt-border"></div>
+              <div class="receipt-data">
+                <div class="receipt-data-details">
+                  <h2>Receipt &#35;1</h2>
+                  <ul>
+                    <li><b>Total Amount Submitted:</b><span>149.99</span></li>
+                    <li class="receipt-image"><img src="../../../assets/images/slacks-receipt-highlighted.jpg" alt="Receipt Image"></li>
+                  </ul>
+                </div>
               </div>
-              <ul>
-                <li><b>Total Replacement Cost:</b><span>96.00</span></li>
-                <li><b>Total Amount Submitted:</b><span>149.00</span></li>
-              </ul>
             </div>
           </div>
+-->
+
         </div>
       </section>
     </main>
