@@ -75,8 +75,14 @@
     </header>
     <main>
       <section id="line-item-receipts-summary">
-        <div class="text first center lg">
-          <h1>Receipt Summary</h1>
+        <div class="action text first lg">
+          <div class="text">
+            <h1>Receipt Summary</h1>
+            <p>You've replaced <b>{3}</b> of <b>{4}</b> of these items. Would you like to add another receipt for this item?</p>
+          </div>
+          <div class="button-box right">
+            <a href="#!" class="button color-one"><span class="button-label">Add Another</span></a>
+          </div>          
         </div>
         <div class="current-inventory-list">
           <div class="inventory-item receipt">
@@ -91,27 +97,28 @@
             </label>
             <div class="inventory-item-details receipts">
               <div class="replacement-info">
-                <div class="replacement-receipt-info">
+                <div class="replacement-count"><span>3</span>of<span>4</span>items replaced</div>
+                <!-- <div class="replacement-receipt-info">
                   <p><b>Receipt &#35;1</b></p>
                   <div class="button-box">
                     <a href="../details/index.html" class="button secondary color-two"><span class="button-label">Edit</span></a>
                     <button class="button color-two"><span class="button-label">Delete</span></button>
                   </div>
-                </div>
-                <div class="replacement-count"><span>3</span>of<span>4</span>&nbsp;items replaced</div>
+                </div> -->
               </div>
               <ul>
                 <li><b>Total Replacement Cost:</b> <span>96.00</span></li>
                 <li><b>Total Amount Submitted:</b> <span>149.99</span></li>
               </ul>
+              <div class="button-box wide">
+                <a href="#!" class="button secondary color-one"><span class="button-label">Edit</span></a>
+                <a href="#!" class="button color-one"><span class="button-label">Delete</span></a>
+              </div>
             </div>
           </div>
-          <div class="button-box">
-            <a href="#!" class="button color-two"><span class="button-label">Add Another</span></a>
-          </div>
-          <div class="button-box wide">
-            <a href="../receipt-capture/index.html" class="button secondary color-one"><span class="button-label">Cancel</span></a>
-            <a href="#!" class="button color-one"><span class="button-label">Done</span></a>
+          <div class="button-box reverse">
+            <a href="../receipt-capture/index.html" class="button secondary color-two"><span class="button-label">Cancel</span></a>
+            <a href="#!" class="button color-two"><span class="button-label">Done</span></a>
           </div>
         </div>
       </section>

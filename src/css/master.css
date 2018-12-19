@@ -1697,14 +1697,16 @@ main {
 .inventory-item-details.receipts {
   width: 100%; }
 
-.inventory-item-details.receipts .replacement-info {
+.inventory-item-details.receipts .replacement-info,
+.inventory-item-details.receipts .receipt-info {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   padding: 1rem 1rem 0; }
 
-.inventory-item-details.receipts .replacement-info:before {
+.inventory-item-details.receipts .replacement-info:before,
+.inventory-item-details.receipts .receipt-info:before {
   display: block;
   width: 100%;
   height: 1px;
@@ -1712,7 +1714,8 @@ main {
   margin: 0 auto 1rem;
   content: ""; }
 
-.inventory-item-details.receipts .replacement-info:after {
+.inventory-item-details.receipts .replacement-info:after,
+.inventory-item-details.receipts .receipt-info:after {
   display: block;
   width: 100%;
   height: 1px;
@@ -1721,7 +1724,8 @@ main {
   content: ""; }
 
 .inventory-item.receipt .inventory-item-header .item-details .replacement-count.line,
-.inventory-item-details .replacement-info .replacement-count {
+.inventory-item-details .replacement-info .replacement-count,
+.inventory-item-details .receipt-info .replacement-count {
   display: flex;
   flex-direction: row;
   align-items: center; }
@@ -1730,7 +1734,8 @@ main {
   display: none; }
 
 .inventory-item.receipt .inventory-item-header .item-details .replacement-count.line span,
-.inventory-item-details .replacement-info .replacement-count span {
+.inventory-item-details .replacement-info .replacement-count span,
+.inventory-item-details .receipt-info .replacement-count span {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1747,10 +1752,12 @@ main {
   background-color: #000000; }
 
 .inventory-item-details .replacement-info .replacement-count span:first-of-type,
+.inventory-item-details .receipt-info .replacement-count span:first-of-type,
 .inventory-item.receipt .inventory-item-header .item-details .replacement-count.line span:first-of-type {
   margin: 0 0.5rem 0 0; }
 
 .inventory-item-details .replacement-info .replacement-count span:last-of-type,
+.inventory-item-details .receipt-info .replacement-count span:last-of-type,
 .inventory-item.receipt .inventory-item-header .item-details .replacement-count.line span:last-of-type {
   margin: 0 0.5rem 0 0.5rem; }
 
@@ -1801,7 +1808,8 @@ main {
   .inventory-item-details.receipts ul {
     justify-content: space-between;
     padding: 1rem 1rem 0; }
-  .inventory-item-details.receipts .replacement-info {
+  .inventory-item-details.receipts .replacement-info,
+  .inventory-item-details.receipts .receipt-info {
     align-items: flex-end; }
   .inventory-item-details.receipts ul li {
     width: 47%;
@@ -1812,7 +1820,8 @@ main {
     margin: 0 0 0 1rem; } }
 
 @media (min-width: 64rem) {
-  .inventory-item-details.receipts .replacement-info {
+  .inventory-item-details.receipts .replacement-info,
+  .inventory-item-details.receipts .receipt-info .replacement-count {
     display: none; }
   .inventory-item.receipt .inventory-item-header .item-details .description {
     width: inherit; }
@@ -1903,9 +1912,20 @@ main {
   margin: 0 auto;
   padding: 0 0 1rem; }
 
-.replacement-receipt-info p {
+.replacement-receipt-info .receipt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0; }
+
+.replacement-receipt-info .receipt p {
   padding-top: 0;
   text-align: center; }
+
+.replacement-receipt-info .receipt img {
+  margin: 1rem auto 2rem; }
 
 .replacement-receipt-info .button-box {
   flex-direction: row;
@@ -1916,17 +1936,24 @@ main {
 
 @media (min-width: 48rem) {
   .replacement-receipt-info {
-    flex-direction: row; }
+    flex-direction: row;
+    align-items: flex-start; }
+  .replacement-receipt-info .receipt img {
+    margin: 1rem auto 0; }
   .replacement-receipt-info p {
     padding: 0;
     text-align: left; }
+  .replacement-receipt-info .receipt p {
+    padding: 0 0 1rem; }
   .replacement-receipt-info .button-box {
     justify-content: flex-end;
     flex-wrap: nowrap; } }
 
 @media (min-width: 64rem) {
   .replacement-receipt-info {
-    padding: 0; } }
+    padding: 0; }
+  .replacement-receipt-info .receipt img {
+    margin: 0 auto; } }
 
 .claim {
   display: block;
