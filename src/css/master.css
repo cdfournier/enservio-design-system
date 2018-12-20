@@ -1899,7 +1899,8 @@ main {
 
 .receipt-item .receipt-details .receipt-details-box {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  padding: 0 1rem; }
 
 .receipt-item input.accordian:checked ~ .receipt-details {
   max-height: 100rem;
@@ -1921,7 +1922,10 @@ main {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  padding: 0 1rem 0; }
+  padding: 0 1rem; }
+
+.receipt-item .receipt-details .receipt-details-box-left .replacement-count {
+  padding: 0; }
 
 .receipt-item .receipt-details .replacement-count span {
   display: flex;
@@ -1945,6 +1949,13 @@ main {
 .receipt-item .receipt-details .replacement-count span:last-of-type {
   margin: 0 0.5rem 0 0.5rem; }
 
+.receipt-item .receipt-details .replacement-details h2 {
+  padding: 1rem 0 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center; }
+
 .receipt-item .receipt-details .replacement-details ul {
   display: flex;
   flex-direction: column;
@@ -1953,12 +1964,8 @@ main {
   padding: 1rem 1rem 0;
   list-style-type: none; }
 
-.receipt-item .receipt-details .replacement-details h2 {
-  padding: 1rem 1rem 0;
-  font-family: "Montserrat", sans-serif;
-  font-size: 1rem;
-  font-weight: 500;
-  text-align: center; }
+.receipt-item .receipt-details .receipt-details-box-left .replacement-details ul {
+  padding: 1rem 0 0; }
 
 .receipt-item .receipt-details .replacement-details ul li {
   display: flex;
@@ -1976,7 +1983,104 @@ main {
   content: "$"; }
 
 .receipt-item .receipt-details .receipt-image {
-  padding: 1rem 1rem 0; }
+  padding: 2rem 0 0; }
+
+@media (min-width: 48rem) {
+  .receipt-item .receipt-details .replacement-count {
+    justify-content: flex-start; }
+  .receipt-item .receipt-item-header .item-details .description {
+    width: auto; }
+  .receipt-item .receipt-item-header .item-details .button {
+    display: inline-flex;
+    align-items: center;
+    width: auto;
+    max-width: 100%;
+    height: 2.25rem;
+    max-height: 2.25rem;
+    margin: 0;
+    padding: 0 1.75rem;
+    border-radius: 4rem;
+    font-size: 0.694rem;
+    line-height: 1; }
+  .receipt-item .receipt-item-header .item-details .button span.button-label.icon {
+    display: none; }
+  .receipt-item .receipt-item-header .item-details .button span.button-label.copy {
+    display: block; }
+  .receipt-item .receipt-details .replacement-details ul {
+    flex-direction: row;
+    justify-content: space-between; }
+  .receipt-item .receipt-details .replacement-details ul li {
+    width: 50%;
+    padding: 0; }
+  .receipt-item .receipt-details .replacement-details ul li:first-of-type {
+    margin: 0 0.5rem 0 0; }
+  .receipt-item .receipt-details .replacement-details ul li:last-of-type {
+    margin: 0 0 0 0.5rem; }
+  .inventory-receipt-list.summary {
+    padding: 2rem; }
+  .receipt-item .receipt-details .receipt-details-box {
+    flex-direction: row; }
+  .receipt-item .receipt-details .receipt-details-box-left {
+    width: 60%; }
+  .receipt-item .receipt-details .replacement-details h2 {
+    text-align: left; }
+  .receipt-item .receipt-details .receipt-details-box-left .replacement-details ul {
+    flex-direction: column;
+    padding: 0 0 1rem 0; }
+  .receipt-item .receipt-details .receipt-details-box-left .replacement-details ul li {
+    width: 100%;
+    padding: 0.694rem 0 0; }
+  .receipt-item .receipt-details .receipt-details-box-left .replacement-details ul li:first-of-type,
+  .receipt-item .receipt-details .receipt-details-box-left .replacement-details ul li:last-of-type {
+    margin: 0; }
+  .receipt-item .receipt-details .receipt-details-box-left .replacement-details .button-box {
+    justify-content: flex-end;
+    padding: 0; }
+  .receipt-item .receipt-details .receipt-details-box-left .replacement-details .button-box:before {
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin: 0 auto 2rem;
+    background-color: #cccece;
+    content: ""; }
+  .receipt-item .receipt-details .receipt-details-box-left .replacement-details .button-box .button:last-of-type {
+    margin: 0 0 0 0.5rem; }
+  .receipt-item .receipt-details .receipt-image {
+    width: 40%;
+    padding: 0 0 0 2rem; } }
+
+@media (min-width: 64rem) {
+  .receipt-item .receipt-item-header .item-details .description {
+    width: 36%; }
+  .receipt-item .receipt-item-header .item-details .replacement-count {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 0 1rem; }
+  .receipt-item .receipt-item-header .item-details .replacement-count span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.625rem;
+    min-width: 1.625rem;
+    height: 1.625rem;
+    min-height: 1.625rem;
+    margin: 0 0.5rem 0 0;
+    border-radius: 50%;
+    font-size: 0.833rem;
+    font-weight: 700;
+    line-height: 0;
+    color: #ffffff;
+    background-color: #000000; }
+  .receipt-item .receipt-item-header .item-details .replacement-count span:first-of-type {
+    margin: 0 0.5rem 0 0; }
+  .receipt-item .receipt-item-header .item-details .replacement-count span:last-of-type {
+    margin: 0 0.5rem 0 0.5rem; }
+  .receipt-item .receipt-details .replacement-details ul {
+    padding: 0 1rem; }
+  .receipt-item .receipt-details .replacement-count {
+    display: none; } }
 
 .receipt-item .receipt-details .replacement-details.summary h2 {
   text-align: left; }
@@ -2029,95 +2133,74 @@ main {
   position: relative;
   width: 20%; }
 
+.receipt-item .receipt-details .replacement-details.submit {
+  width: 100%; }
+
+.receipt-item .receipt-details .replacement-details.submit h2 {
+  padding: 0;
+  text-align: left; }
+
+.receipt-item .receipt-details .replacement-details.submit h2:before {
+  display: block;
+  width: 100%;
+  height: 1px;
+  margin: 1rem auto;
+  background-color: #cccece;
+  content: ""; }
+
+.receipt-item .receipt-details .replacement-details.submit h2:first-of-type:before {
+  display: none; }
+
+.receipt-item .receipt-details .replacement-details.submit ul {
+  padding: 0; }
+
+.receipt-item .receipt-details .replacement-details.submit ul li {
+  align-items: flex-start;
+  justify-content: space-between; }
+
+.receipt-item .receipt-details .replacement-details.submit ul li:first-of-type {
+  padding: 0;
+  font-weight: 500; }
+
+.receipt-item .receipt-details .replacement-details.submit ul li span.qty {
+  position: relative;
+  width: 25%; }
+
+.receipt-item .receipt-details .replacement-details.submit ul li span.amt {
+  position: relative;
+  width: 55%; }
+
+.receipt-item .receipt-details .replacement-details.submit ul li span:before {
+  display: none; }
+
+.receipt-item .receipt-details .replacement-details.submit ul li span.amt:before {
+  display: block;
+  content: "$"; }
+
+.receipt-item .receipt-details .replacement-details.submit ul li span.amt.no:before {
+  display: none; }
+
+.receipt-item .receipt-details .replacement-details.submit ul li span.receipt-thumbnail {
+  display: grid;
+  position: relative;
+  width: 20%; }
+
 @media (min-width: 48rem) {
-  .receipt-item .receipt-details .replacement-count {
-    justify-content: flex-start; }
-  .receipt-item .receipt-item-header .item-details .description {
-    width: auto; }
-  .receipt-item .receipt-item-header .item-details .button {
-    display: inline-flex;
-    align-items: center;
-    width: auto;
-    max-width: 100%;
-    height: 2.25rem;
-    max-height: 2.25rem;
-    margin: 0;
-    padding: 0 1.75rem;
-    border-radius: 4rem;
-    font-size: 0.694rem;
-    line-height: 1; }
-  .receipt-item .receipt-item-header .item-details .button span.button-label.icon {
-    display: none; }
-  .receipt-item .receipt-item-header .item-details .button span.button-label.copy {
-    display: block; }
-  .receipt-item .receipt-details .replacement-details ul {
-    flex-direction: row;
-    justify-content: space-between; }
-  .receipt-item .receipt-details .replacement-details ul li {
-    width: 50%;
-    padding: 0; }
-  .receipt-item .receipt-details .replacement-details ul li:first-of-type {
-    margin: 0 0.5rem 0 0; }
-  .receipt-item .receipt-details .replacement-details ul li:last-of-type {
-    margin: 0 0 0 0.5rem; }
-  .inventory-receipt-list.summary {
+  .inventory-receipt-list.submit {
     padding: 2rem; }
-  .receipt-item .receipt-details .receipt-details-box {
-    flex-direction: row; }
-  .receipt-item .receipt-details .receipt-details-box-left {
-    width: 60%; }
-  .receipt-item .receipt-details .replacement-details h2 {
-    text-align: left; }
-  .receipt-item .receipt-details .receipt-details-box-left .replacement-details ul {
-    flex-direction: column;
-    padding: 0 0 1rem 1rem; }
-  .receipt-item .receipt-details .receipt-details-box-left .replacement-details ul li {
-    width: 100%;
-    padding: 0.694rem 0 0; }
-  .receipt-item .receipt-details .receipt-details-box-left .replacement-details ul li:first-of-type,
-  .receipt-item .receipt-details .receipt-details-box-left .replacement-details ul li:last-of-type {
+  .receipt-item .receipt-details .replacement-details.submit ul {
+    flex-direction: column; }
+  .receipt-item .receipt-details .replacement-details.submit ul li {
+    width: 100%; }
+  .receipt-item .receipt-details .replacement-details.submit ul li:first-of-type,
+  .receipt-item .receipt-details .replacement-details.submit ul li:last-of-type {
     margin: 0; }
-  .receipt-item .receipt-details .receipt-details-box-left .replacement-details .button-box {
-    justify-content: flex-start;
-    padding: 0 0 0 0.5rem; }
-  .receipt-item .receipt-details .receipt-image {
-    width: 40%;
-    padding: 0 1rem; } }
+  .receipt-item .receipt-details .replacement-details.submit ul li span.receipt-thumbnail {
+    width: 15%; } }
 
 @media (min-width: 64rem) {
-  .receipt-item .receipt-item-header .item-details .description {
-    width: 36%; }
-  .receipt-item .receipt-item-header .item-details .replacement-count {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 0 0 0 1rem; }
-  .receipt-item .receipt-item-header .item-details .replacement-count span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 1.625rem;
-    min-width: 1.625rem;
-    height: 1.625rem;
-    min-height: 1.625rem;
-    margin: 0 0.5rem 0 0;
-    border-radius: 50%;
-    font-size: 0.833rem;
-    font-weight: 700;
-    line-height: 0;
-    color: #ffffff;
-    background-color: #000000; }
-  .receipt-item .receipt-item-header .item-details .replacement-count span:first-of-type {
-    margin: 0 0.5rem 0 0; }
-  .receipt-item .receipt-item-header .item-details .replacement-count span:last-of-type {
-    margin: 0 0.5rem 0 0.5rem; }
-  .receipt-item .receipt-details .replacement-details ul {
-    padding: 0 1rem; }
-  .receipt-item .receipt-details .replacement-count {
-    display: none; }
-  .receipt-item .receipt-details .replacement-details h2 {
-    padding: 0 1rem; } }
+  .receipt-item .receipt-details .replacement-details.submit ul li span.receipt-thumbnail {
+    width: 10%; } }
 
 .receipt-details-form {
   display: flex;
