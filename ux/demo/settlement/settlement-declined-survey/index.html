@@ -75,8 +75,52 @@
       <section id="settlement-declined">
         <div class="text first center lg">
           <h1>Thank You.</h1>
-          <p>We will contact you with next steps.</p>
+          <p>Thank you. We will contact you with next steps. In the meantime, please let us know why you did not accept this Settlement.</p>
         </div>
+      </section>
+      <section id="settlement-survey">
+        <div class="text center lg">
+          <p>Of the following reasons, which best applies to you?</p>
+        </div>
+        <form class="sm" action="../settlement-survey-thanks/index.html">
+          <fieldset>
+            <legend>Settlement Survey</legend>
+            <div class="field"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
+              <span class="error-message radio">You must select one option</span>
+              <input type="radio" name="settlement-one" id="settlement-one-one">
+              <label class="radio" for="settlement-one-one">I need more information about Replacement Cost vs. Actual Cash Value</label>
+            </div>
+            <div class="field"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
+              <span class="error-message radio">You must select one option</span>
+              <input type="radio" name="settlement-one" id="settlement-one-two">
+              <label class="radio" for="settlement-one-two">I need more information on my Contents or Special Limits</label>
+            </div>
+            <div class="field"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
+              <span class="error-message radio">You must select one option</span>
+              <input type="radio" name="settlement-one" id="settlement-one-three">
+              <label class="radio" for="settlement-one-three">I need more information on my Deductible</label>
+            </div>
+            <div class="field"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
+              <span class="error-message radio">You must select one option</span>
+              <input type="radio" name="settlement-one" id="settlement-one-four">
+              <label class="radio" for="settlement-one-four">I disagree with the Replacement Cost on one or more of my items</label>
+            </div>
+            <div class="field"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
+              <span class="error-message radio">You must select one option</span>
+              <input type="radio" name="settlement-one" id="settlement-one-five">
+              <label class="radio" for="settlement-one-five">I have other structural damages affected in this loss (e.g. broken window)</label>
+            </div>
+            <div class="field"> <!-- change class to 'field valid' or 'field invalid' as necessary -->
+              <span class="error-message radio">You must select one option</span>
+              <input type="text" name="other" id="Other" placeholder="Enter another reason here">
+              <input type="radio" name="settlement-one" id="settlement-one-six">
+              <label class="radio" for="settlement-one-six">Other</label>
+            </div>
+          </fieldset>
+          <div class="button-box">
+            <button type="submit" class="button color-one"><span class="button-label">Submit</span></button>
+          </div>
+        </form>
       </section>
     </main>
     <footer>
