@@ -2529,6 +2529,9 @@ main {
   .transactions-ledger .ledger,
   .ach-history-ledger .ledger {
     overflow: hidden; }
+  .transactions-ledger .control form {
+    align-items: center;
+    justify-content: center; }
   .transactions-ledger .control fieldset:nth-of-type(1n) .field {
     padding: 0 1rem 0 0; }
   .transactions-ledger .control fieldset:nth-of-type(2n) .field {
@@ -2538,15 +2541,11 @@ main {
   .transactions-ledger .control .button-box {
     justify-content: flex-start;
     padding: 0; }
-  .transactions-ledger .control .button-box .button {
-    margin: 0; } }
-
-@media (min-width: 90rem) {
-  .transactions-ledger .control form {
-    flex-wrap: nowrap; }
   .transactions-ledger .control .button-box {
     width: auto;
-    padding: 0 0 0 1rem; } }
+    padding: 0 0 0 1rem; }
+  .transactions-ledger .control .button-box .button {
+    margin: 0; } }
 
 .spinner-box {
   display: flex;

@@ -2456,7 +2456,7 @@ main {
 .transactions-details .details span.transactions-data {font-size: 1rem;}}
 
 
-// TRANSACTIONS & ach-history LEDGER
+// TRANSACTIONS & ACH-HISTORY LEDGER
 .transactions-ledger, .ach-history-ledger {
   display: flex;
   flex-direction: column;
@@ -2552,6 +2552,10 @@ main {
 @media (min-width: 48rem) {
 .transactions-ledger .ledger,
 .ach-history-ledger .ledger {overflow: hidden;}
+.transactions-ledger .control form {
+  align-items: center;
+  justify-content: center;
+}
 .transactions-ledger .control fieldset:nth-of-type(1n) .field {padding: 0 1rem 0 0;}
 .transactions-ledger .control fieldset:nth-of-type(2n) .field {padding: 0 0 0 1rem;}
 .field span.search.la.la-search {right: 1rem;}
@@ -2559,14 +2563,11 @@ main {
   justify-content: flex-start;
   padding: 0;
 }
-.transactions-ledger .control .button-box .button {margin: 0;}}
-
-@media (min-width: 90rem) {
-.transactions-ledger .control form {flex-wrap: nowrap;}
 .transactions-ledger .control .button-box {
   width: auto;
   padding: 0 0 0 1rem;
-}}
+}
+.transactions-ledger .control .button-box .button {margin: 0;}}
 
 
 // PROCESSING SPINNER
