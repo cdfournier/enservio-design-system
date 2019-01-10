@@ -98,31 +98,21 @@
                 <label for="description">Description&#42;</label>
               </div>
             </fieldset>
+            <fieldset style="display: none;">
+              <legend>Model</legend>
+              <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                <span class="error-message">Please include a model</span>
+                <input type="text" name="model" id="model" placeholder="Please add a model for this item">
+                <label for="model">Model</label>
+              </div>
+            </fieldset>
             <div class="small">
-              <fieldset>
-                <legend>Model</legend>
-                <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
-                  <span class="error-message">Please include a model</span>
-                  <input type="text" name="model" id="model" placeholder="Please add a model for this item">
-                  <label for="model">Model</label>
-                </div>
-              </fieldset>
               <fieldset>
                 <legend>Cost</legend>
                 <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
                   <span class="error-message">Please include a cost per item</span>
                   <input type="text" name="cost" id="cost" placeholder="Cost per item">
                   <label for="cost">Cost Per Item&#42;</label>
-                </div>
-              </fieldset>
-            </div>
-            <div class="small">
-              <fieldset>
-                <legend>Amount Claimed</legend>
-                <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
-                  <span class="error-message">Please include amount claimed</span>
-                  <input type="text" name="model" id="model" placeholder="Amount claimed">
-                  <label for="model">Amount Claimed</label>
                 </div>
               </fieldset>
               <fieldset>
@@ -134,20 +124,6 @@
                 </div>
               </fieldset>
             </div>
-            <fieldset>
-              <legend>Acquired</legend>
-              <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
-                <span class="error-message">Please select an option</span>
-                <select name="condition" id="condition">
-                  <option value="0">Choose a option</option>
-                  <option value="New">New</option>
-                  <option value="Used">Used</option>
-                </select>
-                <div class="select-icon"><i class="la la-angle-down"></i></div>
-                <span class="valid select"><i class="la la-check-circle-o"></i></span>
-                <label for="acquired">Acquired</label>
-              </div>
-            </fieldset>
             <div class="small">
               <fieldset>
                 <legend>Age: Years</legend>
@@ -189,6 +165,38 @@
                 <div class="select-icon"><i class="la la-angle-down"></i></div>
                 <span class="valid select"><i class="la la-check-circle-o"></i></span>
                 <label for="condition">Condition</label>
+              </div>
+            </fieldset>
+            <div class="small" style="display: none;">
+              <fieldset>
+                <legend>Amount Claimed</legend>
+                <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                  <span class="error-message">Please include amount claimed</span>
+                  <input type="text" name="amount-claimed" id="amount-claimed" placeholder="Amount claimed">
+                  <label for="amount-claimed">Amount Claimed</label>
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend>Original Cost</legend>
+                <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                  <span class="error-message">Please include amount claimed</span>
+                  <input type="text" name="original-cost" id="original-cost" placeholder="Original cost">
+                  <label for="original-cost">Original Cost</label>
+                </div>
+              </fieldset>
+            </div>
+            <fieldset style="display: none;">
+              <legend>Acquired</legend>
+              <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                <span class="error-message">Please select an option</span>
+                <select name="condition" id="condition">
+                  <option value="0">Choose a option</option>
+                  <option value="New">New</option>
+                  <option value="Used">Used</option>
+                </select>
+                <div class="select-icon"><i class="la la-angle-down"></i></div>
+                <span class="valid select"><i class="la la-check-circle-o"></i></span>
+                <label for="acquired">Acquired</label>
               </div>
             </fieldset>
             <div class="button-box left">
@@ -236,6 +244,14 @@
                     <span class="error-message">Please include a description</span>
                     <input type="text" name="description" id="description" placeholder="Describe your item&nbsp;&#40;including brand&#41;" value="HP Deskjet 4300">
                     <label for="description">Description&#42;</label>
+                  </div>
+                </fieldset>
+                <fieldset style="display: none;">
+                  <legend>Model</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Please include a model</span>
+                    <input type="text" name="model" id="model" placeholder="Please add a model for this item">
+                    <label for="model">Model</label>
                   </div>
                 </fieldset>
                 <div class="small">
@@ -292,6 +308,38 @@
                     <label for="condition">Condition</label>
                   </div>
                 </fieldset>
+                <div class="small" style="display: none;">
+                  <fieldset>
+                    <legend>Amount Claimed</legend>
+                    <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                      <span class="error-message">Please include amount claimed</span>
+                      <input type="text" name="amount-claimed" id="amount-claimed" placeholder="Amount claimed">
+                      <label for="amount-claimed">Amount Claimed</label>
+                    </div>
+                  </fieldset>
+                  <fieldset>
+                    <legend>Original Cost</legend>
+                    <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                      <span class="error-message">Please include amount claimed</span>
+                      <input type="text" name="original-cost" id="original-cost" placeholder="Original cost">
+                      <label for="original-cost">Original Cost</label>
+                    </div>
+                  </fieldset>
+                </div>
+                <fieldset style="display: none;">
+                  <legend>Acquired</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Please select an option</span>
+                    <select name="condition" id="condition">
+                      <option value="0">Choose a option</option>
+                      <option value="New">New</option>
+                      <option value="Used">Used</option>
+                    </select>
+                    <div class="select-icon"><i class="la la-angle-down"></i></div>
+                    <span class="valid select"><i class="la la-check-circle-o"></i></span>
+                    <label for="acquired">Acquired</label>
+                  </div>
+                </fieldset>
                 <div class="form-button-box">
                   <div class="form-button-box-row">
                     <div class="form-button-box-button">
@@ -341,6 +389,14 @@
                     <span class="error-message">Please include a description</span>
                     <input type="text" name="description" id="description" placeholder="Describe your item&nbsp;&#40;including brand&#41;" value="Macbook Pro 13&quot;" disabled>
                     <label for="description">Description&#42;</label>
+                  </div>
+                </fieldset>
+                <fieldset style="display: none;">
+                  <legend>Model</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Please include a model</span>
+                    <input type="text" name="model" id="model" placeholder="Please add a model for this item">
+                    <label for="model">Model</label>
                   </div>
                 </fieldset>
                 <div class="small">
@@ -395,6 +451,38 @@
                     <div class="select-icon"><i class="la la-angle-down"></i></div>
                     <span class="valid select"><i class="la la-check-circle-o"></i></span>
                     <label for="condition">Condition</label>
+                  </div>
+                </fieldset>
+                <div class="small" style="display: none;">
+                  <fieldset>
+                    <legend>Amount Claimed</legend>
+                    <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                      <span class="error-message">Please include amount claimed</span>
+                      <input type="text" name="amount-claimed" id="amount-claimed" placeholder="Amount claimed">
+                      <label for="amount-claimed">Amount Claimed</label>
+                    </div>
+                  </fieldset>
+                  <fieldset>
+                    <legend>Original Cost</legend>
+                    <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                      <span class="error-message">Please include amount claimed</span>
+                      <input type="text" name="original-cost" id="original-cost" placeholder="Original cost">
+                      <label for="original-cost">Original Cost</label>
+                    </div>
+                  </fieldset>
+                </div>
+                <fieldset style="display: none;">
+                  <legend>Acquired</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Please select an option</span>
+                    <select name="condition" id="condition">
+                      <option value="0">Choose a option</option>
+                      <option value="New">New</option>
+                      <option value="Used">Used</option>
+                    </select>
+                    <div class="select-icon"><i class="la la-angle-down"></i></div>
+                    <span class="valid select"><i class="la la-check-circle-o"></i></span>
+                    <label for="acquired">Acquired</label>
                   </div>
                 </fieldset>
                 <div class="form-button-box">
