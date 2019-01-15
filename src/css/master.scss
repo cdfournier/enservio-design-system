@@ -2715,7 +2715,30 @@ legend {display: none;}
 
 @media (min-width: 48rem) {
 fieldset {width: 50%;}
-fieldset.half {width: 25%;}}
+fieldset.half {width: 25%;}
+form.xs fieldset,
+form.sm fieldset,
+form.md fieldset,
+form.sm fieldset.max,
+form.md fieldset.max {width: 100%;}
+form.lg fieldset {width: 50%;}
+form.lg fieldset.max {width: 100%;}
+form.column {flex-direction: column;}
+form.column fieldset.small {width: 25%;}}
+
+@media (min-width: 104rem) {
+form.sm fieldset {
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+}
+form.lg fieldset {
+  width: 50%;
+  min-width: 50%;
+  max-width: 50%;
+}
+fieldset {width: 25%;}
+fieldset.half {width: 12.5%;}}
 
 
 // INPUTS, LABELS, AND PLACEHOLDERS
