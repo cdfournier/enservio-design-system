@@ -98,7 +98,7 @@
                 <label for="description">Description&#42;</label>
               </div>
             </fieldset>
-            <fieldset style="display: none;">
+            <fieldset>
               <legend>Model</legend>
               <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
                 <span class="error-message">Please include a model</span>
@@ -106,42 +106,38 @@
                 <label for="model">Model</label>
               </div>
             </fieldset>
-            <div class="small">
-              <fieldset>
-                <legend>Cost</legend>
-                <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
-                  <span class="error-message">Please include a cost per item</span>
-                  <input type="text" name="cost" id="cost" placeholder="Cost per item">
-                  <label for="cost">Cost Per Item&#42;</label>
-                </div>
-              </fieldset>
-              <fieldset>
-                <legend>Quantity</legend>
-                <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
-                  <span class="error-message">Please include a quantity</span>
-                  <input type="number" name="quantity" id="quantity" placeholder="Quantity">
-                  <label for="quantity">Quantity&#42;</label>
-                </div>
-              </fieldset>
-            </div>
-            <div class="small">
-              <fieldset>
-                <legend>Age: Years</legend>
-                <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
-                  <span class="error-message">How old is this item &#40;in years&#41;?</span>
-                  <input type="number" name="years" id="years" placeholder="Years">
-                  <label for="years">Age: In Years&#42;</label>
-                </div>
-              </fieldset>
-              <fieldset>
-                <legend>Age: Months</legend>
-                <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
-                  <span class="error-message">How old is this item &#40;in months&#41;?</span>
-                  <input type="number" name="months" id="months" placeholder="Months">
-                  <label for="months">Age: In Months&#42;</label>
-                </div>
-              </fieldset>
-            </div>
+            <fieldset class="half">
+              <legend>Cost</legend>
+              <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                <span class="error-message">Please include a cost per item</span>
+                <input type="text" name="cost" id="cost" placeholder="Cost per item">
+                <label for="cost">Cost Per Item&#42;</label>
+              </div>
+            </fieldset>
+            <fieldset class="half">
+              <legend>Quantity</legend>
+              <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                <span class="error-message">Please include a quantity</span>
+                <input type="number" name="quantity" id="quantity" placeholder="Quantity">
+                <label for="quantity">Quantity&#42;</label>
+              </div>
+            </fieldset>
+            <fieldset class="half">
+              <legend>Age: Years</legend>
+              <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                <span class="error-message">How old is this item &#40;in years&#41;?</span>
+                <input type="number" name="years" id="years" placeholder="Years">
+                <label for="years">Age: In Years&#42;</label>
+              </div>
+            </fieldset>
+            <fieldset class="half">
+              <legend>Age: Months</legend>
+              <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                <span class="error-message">How old is this item &#40;in months&#41;?</span>
+                <input type="number" name="months" id="months" placeholder="Months">
+                <label for="months">Age: In Months&#42;</label>
+              </div>
+            </fieldset>
             <fieldset>
               <legend>Place Of Purchase</legend>
               <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
@@ -167,36 +163,34 @@
                 <label for="condition">Condition</label>
               </div>
             </fieldset>
-            <div class="small" style="display: none;">
-              <fieldset>
-                <legend>Amount Claimed</legend>
-                <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
-                  <span class="error-message">Please include amount claimed</span>
-                  <input type="text" name="amount-claimed" id="amount-claimed" placeholder="Amount claimed">
-                  <label for="amount-claimed">Amount Claimed</label>
-                </div>
-              </fieldset>
-              <fieldset>
-                <legend>Original Cost</legend>
-                <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
-                  <span class="error-message">Please include amount claimed</span>
-                  <input type="text" name="original-cost" id="original-cost" placeholder="Original cost">
-                  <label for="original-cost">Original Cost</label>
-                </div>
-              </fieldset>
-            </div>
-            <fieldset style="display: none;">
+            <fieldset>
               <legend>Acquired</legend>
               <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
                 <span class="error-message">Please select an option</span>
                 <select name="condition" id="condition">
-                  <option value="0">Choose a option</option>
+                  <option value="0">Choose an option</option>
                   <option value="New">New</option>
                   <option value="Used">Used</option>
                 </select>
                 <div class="select-icon"><i class="la la-angle-down"></i></div>
                 <span class="valid select"><i class="la la-check-circle-o"></i></span>
                 <label for="acquired">Acquired</label>
+              </div>
+            </fieldset>
+            <fieldset class="half">
+              <legend>Original Cost</legend>
+              <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                <span class="error-message">Please include amount claimed</span>
+                <input type="text" name="original-cost" id="original-cost" placeholder="Original cost">
+                <label for="original-cost">Original Cost</label>
+              </div>
+            </fieldset>
+            <fieldset class="half">
+              <legend>Amount Claimed</legend>
+              <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                <span class="error-message">Please include amount claimed</span>
+                <input type="text" name="amount-claimed" id="amount-claimed" placeholder="Amount claimed">
+                <label for="amount-claimed">Amount Claimed</label>
               </div>
             </fieldset>
             <div class="button-box left">
@@ -246,50 +240,54 @@
                     <label for="description">Description&#42;</label>
                   </div>
                 </fieldset>
-                <fieldset style="display: none;">
+                <fieldset>
                   <legend>Model</legend>
                   <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
                     <span class="error-message">Please include a model</span>
-                    <input type="text" name="model" id="model" placeholder="Please add a model for this item">
+                    <input type="text" name="model" id="model" value="Deskjet 4300">
                     <label for="model">Model</label>
                   </div>
                 </fieldset>
-                <div class="small">
-                  <fieldset>
-                    <legend>Cost</legend>
-                    <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
-                      <span class="error-message">Please include a cost per item</span>
-                      <input type="text" name="cost" id="cost" placeholder="Cost per item" value="&#36;139">
-                      <label for="cost">Cost Per Item&#42;</label>
-                    </div>
-                  </fieldset>
-                  <fieldset>
-                    <legend>Quantity</legend>
-                    <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
-                      <span class="error-message">Please include a quantity</span>
-                      <input type="number" name="quantity" id="quantity" placeholder="Quantity" value="1">
-                      <label for="quantity">Quantity&#42;</label>
-                    </div>
-                  </fieldset>
-                </div>
-                <div class="small">
-                  <fieldset>
-                    <legend>Age: Years</legend>
-                    <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
-                      <span class="error-message">How old is this item &#40;in years&#41;?</span>
-                      <input type="number" name="years" id="years" placeholder="Years" value="2">
-                      <label for="years">Age: In Years&#42;</label>
-                    </div>
-                  </fieldset>
-                  <fieldset>
-                    <legend>Age: Months</legend>
-                    <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
-                      <span class="error-message">How old is this item &#40;in months&#41;?</span>
-                      <input type="number" name="months" id="months" placeholder="Months" value="5">
-                      <label for="months">Age: In Months&#42;</label>
-                    </div>
-                  </fieldset>
-                </div>
+                <fieldset class="half">
+                  <legend>Cost</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Please include a cost per item</span>
+                    <input type="text" name="cost" id="cost" placeholder="Cost per item" value="&#36;139">
+                    <label for="cost">Cost Per Item&#42;</label>
+                  </div>
+                </fieldset>
+                <fieldset class="half">
+                  <legend>Quantity</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Please include a quantity</span>
+                    <input type="number" name="quantity" id="quantity" placeholder="Quantity" value="1">
+                    <label for="quantity">Quantity&#42;</label>
+                  </div>
+                </fieldset>
+                <fieldset class="half">
+                  <legend>Age: Years</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">How old is this item &#40;in years&#41;?</span>
+                    <input type="number" name="years" id="years" placeholder="Years" value="2">
+                    <label for="years">Age: In Years&#42;</label>
+                  </div>
+                </fieldset>
+                <fieldset class="half">
+                  <legend>Age: Months</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">How old is this item &#40;in months&#41;?</span>
+                    <input type="number" name="months" id="months" placeholder="Months" value="5">
+                    <label for="months">Age: In Months&#42;</label>
+                  </div>
+                </fieldset>
+                <fieldset>
+                  <legend>Place Of Purchase</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Place Of Purchase</span>
+                    <input type="text" name="place-of-purchase" id="place-of-purchase" value="Best Buy">
+                    <label for="place-of-purchase">Place Of Purchase</label>
+                  </div>
+                </fieldset>
                 <fieldset>
                   <legend>Condition</legend>
                   <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
@@ -308,36 +306,34 @@
                     <label for="condition">Condition</label>
                   </div>
                 </fieldset>
-                <div class="small" style="display: none;">
-                  <fieldset>
-                    <legend>Amount Claimed</legend>
-                    <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
-                      <span class="error-message">Please include amount claimed</span>
-                      <input type="text" name="amount-claimed" id="amount-claimed" placeholder="Amount claimed">
-                      <label for="amount-claimed">Amount Claimed</label>
-                    </div>
-                  </fieldset>
-                  <fieldset>
-                    <legend>Original Cost</legend>
-                    <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
-                      <span class="error-message">Please include amount claimed</span>
-                      <input type="text" name="original-cost" id="original-cost" placeholder="Original cost">
-                      <label for="original-cost">Original Cost</label>
-                    </div>
-                  </fieldset>
-                </div>
-                <fieldset style="display: none;">
+                <fieldset>
                   <legend>Acquired</legend>
                   <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
                     <span class="error-message">Please select an option</span>
                     <select name="condition" id="condition">
-                      <option value="0">Choose a option</option>
                       <option value="New">New</option>
+                      <option value="0">Choose a option</option>
                       <option value="Used">Used</option>
                     </select>
                     <div class="select-icon"><i class="la la-angle-down"></i></div>
                     <span class="valid select"><i class="la la-check-circle-o"></i></span>
                     <label for="acquired">Acquired</label>
+                  </div>
+                </fieldset>
+                <fieldset class="half">
+                  <legend>Amount Claimed</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Please include amount claimed</span>
+                    <input type="text" name="amount-claimed" id="amount-claimed" value="&#36;139">
+                    <label for="amount-claimed">Amount Claimed</label>
+                  </div>
+                </fieldset>
+                <fieldset class="half">
+                  <legend>Original Cost</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Please include amount claimed</span>
+                    <input type="text" name="original-cost" id="original-cost" value="&#36;139">
+                    <label for="original-cost">Original Cost</label>
                   </div>
                 </fieldset>
                 <div class="form-button-box">
@@ -391,50 +387,54 @@
                     <label for="description">Description&#42;</label>
                   </div>
                 </fieldset>
-                <fieldset style="display: none;">
+                <fieldset>
                   <legend>Model</legend>
                   <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
                     <span class="error-message">Please include a model</span>
-                    <input type="text" name="model" id="model" placeholder="Please add a model for this item">
+                    <input type="text" name="model" id="model" value="Macbook Pro 13&quot;" disabled>
                     <label for="model">Model</label>
                   </div>
                 </fieldset>
-                <div class="small">
-                  <fieldset>
-                    <legend>Cost</legend>
-                    <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
-                      <span class="error-message">Please include a cost per item</span>
-                      <input type="text" name="cost" id="cost" placeholder="Cost per item" value="&#36;2,500" disabled>
-                      <label for="cost">Cost Per Item&#42;</label>
-                    </div>
-                  </fieldset>
-                  <fieldset>
-                    <legend>Quantity</legend>
-                    <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
-                      <span class="error-message">Please include a quantity</span>
-                      <input type="number" name="quantity" id="quantity" placeholder="Quantity" value="1" disabled>
-                      <label for="quantity">Quantity&#42;</label>
-                    </div>
-                  </fieldset>
-                </div>
-                <div class="small">
-                  <fieldset>
-                    <legend>Age: Years</legend>
-                    <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
-                      <span class="error-message">How old is this item &#40;in years&#41;?</span>
-                      <input type="number" name="years" id="years" placeholder="Years" value="1" disabled>
-                      <label for="years">Age: In Years&#42;</label>
-                    </div>
-                  </fieldset>
-                  <fieldset>
-                    <legend>Age: Months</legend>
-                    <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
-                      <span class="error-message">How old is this item &#40;in months&#41;?</span>
-                      <input type="number" name="months" id="months" placeholder="Months" value="7" disabled>
-                      <label for="months">Age: In Months&#42;</label>
-                    </div>
-                  </fieldset>
-                </div>
+                <fieldset class="half">
+                  <legend>Cost</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Please include a cost per item</span>
+                    <input type="text" name="cost" id="cost" placeholder="Cost per item" value="&#36;2,500" disabled>
+                    <label for="cost">Cost Per Item&#42;</label>
+                  </div>
+                </fieldset>
+                <fieldset class="half">
+                  <legend>Quantity</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Please include a quantity</span>
+                    <input type="number" name="quantity" id="quantity" placeholder="Quantity" value="1" disabled>
+                    <label for="quantity">Quantity&#42;</label>
+                  </div>
+                </fieldset>
+                <fieldset class="half">
+                  <legend>Age: Years</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">How old is this item &#40;in years&#41;?</span>
+                    <input type="number" name="years" id="years" placeholder="Years" value="1" disabled>
+                    <label for="years">Age: In Years&#42;</label>
+                  </div>
+                </fieldset>
+                <fieldset class="half">
+                  <legend>Age: Months</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">How old is this item &#40;in months&#41;?</span>
+                    <input type="number" name="months" id="months" placeholder="Months" value="7" disabled>
+                    <label for="months">Age: In Months&#42;</label>
+                  </div>
+                </fieldset>
+                <fieldset>
+                  <legend>Place Of Purchase</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Place Of Purchase</span>
+                    <input type="text" name="place-of-purchase" id="place-of-purchase" value="Apple" disabled>
+                    <label for="place-of-purchase">Place Of Purchase</label>
+                  </div>
+                </fieldset>
                 <fieldset>
                   <legend>Condition</legend>
                   <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
@@ -453,36 +453,34 @@
                     <label for="condition">Condition</label>
                   </div>
                 </fieldset>
-                <div class="small" style="display: none;">
-                  <fieldset>
-                    <legend>Amount Claimed</legend>
-                    <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
-                      <span class="error-message">Please include amount claimed</span>
-                      <input type="text" name="amount-claimed" id="amount-claimed" placeholder="Amount claimed">
-                      <label for="amount-claimed">Amount Claimed</label>
-                    </div>
-                  </fieldset>
-                  <fieldset>
-                    <legend>Original Cost</legend>
-                    <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
-                      <span class="error-message">Please include amount claimed</span>
-                      <input type="text" name="original-cost" id="original-cost" placeholder="Original cost">
-                      <label for="original-cost">Original Cost</label>
-                    </div>
-                  </fieldset>
-                </div>
-                <fieldset style="display: none;">
+                <fieldset>
                   <legend>Acquired</legend>
                   <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
                     <span class="error-message">Please select an option</span>
-                    <select name="condition" id="condition">
-                      <option value="0">Choose a option</option>
+                    <select name="condition" id="condition" disabled>
                       <option value="New">New</option>
+                      <option value="0">Choose a option</option>
                       <option value="Used">Used</option>
                     </select>
                     <div class="select-icon"><i class="la la-angle-down"></i></div>
                     <span class="valid select"><i class="la la-check-circle-o"></i></span>
                     <label for="acquired">Acquired</label>
+                  </div>
+                </fieldset>
+                <fieldset class="half">
+                  <legend>Amount Claimed</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Please include amount claimed</span>
+                    <input type="text" name="amount-claimed" id="amount-claimed" value="&#36;2,500" disabled>
+                    <label for="amount-claimed">Amount Claimed</label>
+                  </div>
+                </fieldset>
+                <fieldset class="half">
+                  <legend>Original Cost</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Please include amount claimed</span>
+                    <input type="text" name="original-cost" id="original-cost" value="&#36;2,500" disabled>
+                    <label for="original-cost">Original Cost</label>
                   </div>
                 </fieldset>
                 <div class="form-button-box">

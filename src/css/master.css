@@ -2646,8 +2646,9 @@ input[type="url"] {
 
 form {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: baseline;
+  flex-wrap: wrap;
   width: 100%;
   margin: 0 auto;
   padding: 2rem 1rem 0; }
@@ -2659,6 +2660,9 @@ fieldset {
   border: none; }
 
 fieldset.max {
+  width: 50%; }
+
+fieldset.half {
   width: 50%; }
 
 legend {
@@ -2673,64 +2677,39 @@ legend {
   margin: 0 0 1rem;
   padding: 0 1rem; }
 
-.small {
-  display: flex;
-  flex-direction: row;
-  align-items: baseline;
-  position: relative;
-  width: 100%;
-  margin: 0;
-  padding: 0; }
-
-.xsmall {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  position: relative;
-  width: 50%;
-  margin: 0;
-  padding: 0; }
-
 @media (min-width: 48rem) {
-  form {
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start; }
-  form.sm, form.md, form.lg {
-    flex-direction: column;
-    align-items: flex-start;
-    flex-wrap: nowrap; }
+  fieldset {
+    width: 50%; }
+  fieldset.half {
+    width: 25%; }
   form.xs fieldset,
   form.sm fieldset,
   form.md fieldset,
-  form.lg fieldset,
   form.sm fieldset.max,
-  form.md fieldset.max,
+  form.md fieldset.max {
+    width: 100%; }
+  form.lg fieldset {
+    width: 50%; }
   form.lg fieldset.max {
     width: 100%; }
   form.column {
     flex-direction: column; }
   form.column fieldset.small {
-    width: 25%; }
-  fieldset {
-    width: 50%; }
-  .small {
-    width: 50%; }
-  .xsmall {
     width: 25%; } }
 
 @media (min-width: 104rem) {
-  fieldset, .small {
-    width: 25%; }
-  form.sm .small,
-  .small fieldset {
+  form.sm fieldset {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%; }
+  form.lg fieldset {
     width: 50%;
     min-width: 50%;
     max-width: 50%; }
-  form.sm .small fieldset {
-    width: 100%;
-    min-width: 100%;
-    max-width: 100%; } }
+  fieldset {
+    width: 25%; }
+  fieldset.half {
+    width: 12.5%; } }
 
 .field label, .field input {
   font-family: "Montserrat", sans-serif;
