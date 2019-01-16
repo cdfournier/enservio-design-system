@@ -2559,14 +2559,7 @@ main {
 .transactions-ledger .control fieldset:nth-of-type(1n) .field {padding: 0 1rem 0 0;}
 .transactions-ledger .control fieldset:nth-of-type(2n) .field {padding: 0 0 0 1rem;}
 .field span.search.la.la-search {right: 1rem;}
-.transactions-ledger .control .button-box {
-  justify-content: flex-start;
-  padding: 0;
-}
-.transactions-ledger .control .button-box {
-  width: auto;
-  padding: 0 0 0 1rem;
-}
+.transactions-ledger .control .button-box {padding: 1rem 0 0;}
 .transactions-ledger .control .button-box .button {margin: 0;}}
 
 

@@ -2539,11 +2539,7 @@ main {
   .field span.search.la.la-search {
     right: 1rem; }
   .transactions-ledger .control .button-box {
-    justify-content: flex-start;
-    padding: 0; }
-  .transactions-ledger .control .button-box {
-    width: auto;
-    padding: 0 0 0 1rem; }
+    padding: 1rem 0 0; }
   .transactions-ledger .control .button-box .button {
     margin: 0; } }
 
