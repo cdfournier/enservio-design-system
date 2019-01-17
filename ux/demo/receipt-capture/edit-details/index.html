@@ -49,7 +49,7 @@
             </div>
             <span class="confirm-action-box">
               <span class="confirm-action secondary dismiss confirm">No</span>
-              <span class="confirm-action"><a href="../receipt-capture/index.html">Yes</a></span>
+              <span class="confirm-action"><a href="../receipt-capture-b/index.html">Yes</a></span>
             </span>
           </div>
         </div>
@@ -114,7 +114,7 @@
               <legend>Cost</legend>
               <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
                 <span class="error-message">Please include a cost per item</span>
-                <input type="text" name="cost" id="cost" placeholder="Add a cost">
+                <input type="text" name="cost" id="cost" value="49.99">
                 <label for="cost">Cost&#42;</label>
               </div>
             </fieldset>
@@ -122,14 +122,14 @@
               <legend>Quantity</legend>
               <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
                 <span class="error-message">Error message</span>
-                <input type="number" name="quantity-replaced" id="quantity-replaced" placeholder="Enter the quantity replaced">
+                <input type="number" name="quantity-replaced" id="quantity-replaced" value="3">
                 <label for="quantity-replaced">Quantity&#42;</label>
                 <span class="valid"><i class="la la-check-circle-o"></i></span>
               </div>
             </fieldset>
             <div class="button-box wide reverse">
-              <a class="button color-one show-confirm-prev"><span class="button-label">Prev</span></a>
-              <a href="../receipt-capture-b/index.html" class="button color-one"><span class="button-label">Submit Receipt</span></a>
+<!--               <a class="button color-one show-confirm-prev"><span class="button-label">Prev</span></a> -->
+              <a href="../receipt-capture-b/index.html" class="button color-one"><span class="button-label">Save Changes</span></a>
             </div>
             <div class="button-box">
               <a class="button secondary color-two show-confirm-cancel"><span class="button-label">Cancel</span></a>
@@ -137,7 +137,7 @@
           </form>
           <div class="receipt-crop-box sm">
             <div class="receipt-image">
-              <img id="receipt" src="../../../assets/images/slacks-receipt.jpg" alt="Receipt image">
+              <img id="receipt" src="../../../assets/images/slacks-receipt-highlighted.jpg" alt="Receipt image">
             </div>
             <div class="receipt-controls">
               <div class="receipt-buttons">

@@ -1257,6 +1257,13 @@ main {
   color: #ffffff;
   background-color: #bb0000; }
 
+.alert-bar.confirm .alert-bar-details .confirm-action-box span.confirm-action a {
+  color: #bb0000; }
+
+.alert-bar.confirm .alert-bar-details .confirm-action-box span.confirm-action a:hover,
+.alert-bar.confirm .alert-bar-details .confirm-action-box span.confirm-action a:focus {
+  color: #ffffff; }
+
 .alert-bar.confirm .alert-bar-details .confirm-action-box span.confirm-action.secondary {
   margin: 0;
   border: 1px solid #ffffff;
@@ -1949,6 +1956,11 @@ main {
 .receipt-item .receipt-details .replacement-count span:last-of-type {
   margin: 0 0.5rem 0 0.5rem; }
 
+.receipt-item .receipt-details .replacement-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
 .receipt-item .receipt-details .replacement-details h2 {
   padding: 1rem 0 0;
   font-family: "Montserrat", sans-serif;
@@ -1956,38 +1968,70 @@ main {
   font-weight: 500;
   text-align: center; }
 
-.receipt-item .receipt-details .replacement-details ul {
+.receipt-item .receipt-details .replacement-details p {
+  padding: 1rem 1rem 0;
+  text-align: center; }
+
+.receipt-item .receipt-details .replacement-details .receipt {
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin: 0;
-  padding: 1rem 1rem 0;
-  list-style-type: none; }
+  padding: 1rem 1rem 0; }
 
-.receipt-item .receipt-details .receipt-details-box-left .replacement-details ul {
-  padding: 1rem 0 0; }
+.receipt-item .receipt-details .replacement-details span.receipt-number {
+  display: block;
+  width: 100%;
+  font-weight: 500; }
 
-.receipt-item .receipt-details .replacement-details ul li {
+.receipt-item .receipt-details .replacement-details .receipt .receipt-action {
   display: flex;
   flex-direction: row;
-  position: relative; }
+  width: 100%;
+  padding: 1rem 0 0; }
 
-.receipt-item .receipt-details .replacement-details ul li span {
+.receipt-item .receipt-details .replacement-details .receipt .receipt-action .receipt-thumbnail {
+  width: 25%; }
+
+.receipt-item .receipt-details .replacement-details .receipt .receipt-action .receipt-action-details {
+  display: flex;
+  flex-direction: column;
+  width: inherit;
+  padding: 0 0 0 1rem; }
+
+.receipt-item .receipt-details .replacement-details .receipt .receipt-action .receipt-action-details ul {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  list-style-type: none; }
+
+.receipt-item .receipt-details .replacement-details .receipt .receipt-action .receipt-action-details li {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  width: 100%;
+  padding: 0;
+  font-weight: inherit; }
+
+.receipt-item .receipt-details .replacement-details .receipt .receipt-action .receipt-action-details li span {
   display: flex;
   flex-direction: row;
   position: absolute;
   right: 0; }
 
-.receipt-item .receipt-details .replacement-details ul li span:before {
+.receipt-item .receipt-details .replacement-details .receipt .receipt-action .receipt-action-details li span:before {
   display: block;
   content: "$"; }
+
+.receipt-item .receipt-details .replacement-details .receipt .receipt-action .receipt-action-details .button-box {
+  flex-direction: row; }
+
+.receipt-item .receipt-details .replacement-details .receipt .receipt-action .receipt-action-details .button-box .button {
+  margin: 1rem 1rem 0 0; }
 
 .receipt-item .receipt-details .receipt-image {
   padding: 2rem 0 0; }
 
 @media (min-width: 48rem) {
-  .receipt-item .receipt-details .replacement-count {
-    justify-content: flex-start; }
   .receipt-item .receipt-item-header .item-details .description {
     width: auto; }
   .receipt-item .receipt-item-header .item-details .button {
@@ -2006,16 +2050,6 @@ main {
     display: none; }
   .receipt-item .receipt-item-header .item-details .button span.button-label.copy {
     display: block; }
-  .receipt-item .receipt-details .replacement-details ul {
-    flex-direction: row;
-    justify-content: space-between; }
-  .receipt-item .receipt-details .replacement-details ul li {
-    width: 50%;
-    padding: 0; }
-  .receipt-item .receipt-details .replacement-details ul li:first-of-type {
-    margin: 0 0.5rem 0 0; }
-  .receipt-item .receipt-details .replacement-details ul li:last-of-type {
-    margin: 0 0 0 0.5rem; }
   .inventory-receipt-list.summary {
     padding: 2rem; }
   .receipt-item .receipt-details .receipt-details-box {
@@ -2047,7 +2081,14 @@ main {
     margin: 0 0 0 0.5rem; }
   .receipt-item .receipt-details .receipt-image {
     width: 40%;
-    padding: 0 0 0 2rem; } }
+    padding: 0 0 0 2rem; }
+  .receipt-item .receipt-details .replacement-details .receipt .receipt-action .receipt-action-details .button-box {
+    justify-content: flex-start; }
+  .receipt-item .receipt-details .replacement-details .receipt .receipt-action .receipt-action-details .button-box .button:last-of-type {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1rem 0 0; } }
 
 @media (min-width: 64rem) {
   .receipt-item .receipt-item-header .item-details .description {
@@ -2077,10 +2118,12 @@ main {
     margin: 0 0.5rem 0 0; }
   .receipt-item .receipt-item-header .item-details .replacement-count span:last-of-type {
     margin: 0 0.5rem 0 0.5rem; }
-  .receipt-item .receipt-details .replacement-details ul {
-    padding: 0 1rem; }
   .receipt-item .receipt-details .replacement-count {
-    display: none; } }
+    display: none; }
+  .receipt-item .receipt-details .replacement-details p {
+    padding: 0 1rem; }
+  .receipt-item .receipt-details .replacement-details .receipt .receipt-action .receipt-thumbnail {
+    width: 20%; } }
 
 .receipt-item .receipt-details .replacement-details.summary h2 {
   text-align: left; }
@@ -2264,7 +2307,8 @@ main {
 
 @media (min-width: 48rem) {
   .receipt-details-form {
-    flex-direction: row; }
+    flex-direction: row;
+    align-items: flex-start; }
   .receipt-details-form form p {
     text-align: left; }
   .receipt-details-form form .small {
@@ -2684,6 +2728,7 @@ legend {
   form.sm fieldset.max,
   form.md fieldset.max {
     width: 100%; }
+  form.sm fieldset.half,
   form.lg fieldset {
     width: 50%; }
   form.lg fieldset.max {

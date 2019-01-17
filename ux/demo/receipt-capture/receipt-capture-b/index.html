@@ -25,6 +25,20 @@
   </head>
   <body>
     <section id="alerts" class="alerts">
+      <div class="alert-bar confirm">
+        <div class="alert-bar-details">
+          <span><i class="la la-exclamation-circle"></i></span>
+          <div class="confirm-details">
+            <div class="alert-bar-message">
+              <span>Are you sure you want to delete this receipt?</span>
+            </div>
+            <span class="confirm-action-box">
+              <span class="confirm-action secondary dismiss confirm">No</span>
+              <span class="confirm-action"><a href="../receipt-capture/index.html">Yes</a></span>
+            </span>
+          </div>
+        </div>
+      </div>
       <div class="alert-bar error">
         <div class="alert-bar-details">
           <span><i class="la la-exclamation-circle"></i></span>
@@ -91,7 +105,6 @@
                 <span class="description"><b>Description</b>:&nbsp;Macbook Pro 13&quot;</span>
                 <div class="replacement-count"><span>0</span>of<span>1</span>items replaced</div>
                 <div class="buttons">
-                  <!-- <a href="#!" class="button receipts secondary color-one"><span class="button-label icon"><i class="la la-pencil"></i></span><span class="button-label copy">Edit</span></a> -->
                   <a href="#!" class="button receipts color-one"><span class="button-label icon"><i class="la la-plus"></i></span><span class="button-label copy">Add</span></a>
                 </div>
               </div>
@@ -100,12 +113,6 @@
             <div class="receipt-details">
               <div class="receipt-border"></div>
               <div class="replacement-count"><span>0</span>of<span>1</span>items replaced</div>
-              <div class="replacement-details">
-                <ul>
-                  <li><b>Total Replacement Cost:</b><span>2500.00</span></li>
-                  <li><b>Total Amount Submitted:</b><span>0.00</span></li>
-                </ul>
-              </div>
             </div>
           </div>
           <div class="receipt-item">
@@ -116,7 +123,6 @@
                 <span class="description"><b>Description</b>:&nbsp;HP Deskjet 4300</span>
                 <div class="replacement-count"><span>0</span>of<span>1</span>items replaced</div>
                 <div class="buttons">
-                  <!-- <a href="#!" class="button receipts secondary color-one"><span class="button-label icon"><i class="la la-pencil"></i></span><span class="button-label copy">Edit</span></a> -->
                   <a href="#!" class="button receipts color-one"><span class="button-label icon"><i class="la la-plus"></i></span><span class="button-label copy">Add</span></a>
                 </div>
               </div>
@@ -125,12 +131,6 @@
             <div class="receipt-details">
               <div class="receipt-border"></div>
               <div class="replacement-count"><span>0</span>of<span>1</span>items replaced</div>
-              <div class="replacement-details">
-                <ul>
-                  <li><b>Total Replacement Cost:</b><span>139.00</span></li>
-                  <li><b>Total Amount Submitted:</b><span>0.00</span></li>
-                </ul>
-              </div>
             </div>
           </div>
           <div class="receipt-item">
@@ -141,7 +141,6 @@
                 <span class="description"><b>Description</b>:&nbsp;Slacks</span>
                 <div class="replacement-count"><span>3</span>of<span>4</span>items replaced</div>
                 <div class="buttons">
-                  <a href="#!" class="button receipts secondary color-one"><span class="button-label icon"><i class="la la-pencil"></i></span><span class="button-label copy">Edit</span></a>
                   <a href="../upload/index.html" class="button receipts color-one"><span class="button-label icon"><i class="la la-plus"></i></span><span class="button-label copy">Add</span></a>
                 </div>
               </div>
@@ -151,10 +150,26 @@
               <div class="receipt-border"></div>
               <div class="replacement-count"><span>3</span>of<span>4</span>items replaced</div>
               <div class="replacement-details">
-                <ul>
-                  <li><b>Total Replacement Cost:</b><span>96.00</span></li>
-                  <li><b>Total Amount Submitted:</b><span>146.97</span></li>
-                </ul>
+                <p>You can enter {1} more receipt for this line.</p>
+                <div class="receipt">
+                  <span class="receipt-number">Receipt #1</span>
+                  <div class="receipt-action">
+                    <div class="receipt-thumbnail">
+                      <img src="../../../assets/images/slacks-receipt-highlighted.jpg" alt="Receipt Image">
+                    </div>
+                    <div class="receipt-action-details">
+                      <ul>
+                        <li><b>Amount Per Item:</b><span>49.99</span></li>
+                        <li><b>Quantity Replaced:</b><span>3</span></li>
+                      </ul>
+                      <div class="button-box">
+                        <a href="../edit-details/index.html" class="button secondary color-one"><span class="button-label">Edit</span></a>
+                        <a class="button color-one show-confirm"><span class="button-label">Delete</span></a>
+                        <a class="button color-two"><span class="button-label">Add Another</span></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -178,5 +193,13 @@
     <script src="https://unpkg.com/headroom.js@0.9.4/dist/headroom.js"></script>
     <script src="../../../assets/scripts/enservio.js"></script>
     <script src="../../../assets/scripts/enservio.header.js"></script>
+    <script>
+      $('.show-confirm').click( function() {
+        $('.alert-bar.confirm').addClass('show');
+      });
+      $('.dismiss.confirm').click( function() {
+        $('.alert-bar.confirm').removeClass('show');
+      });
+    </script>
   </body>
 </html>

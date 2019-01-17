@@ -29,7 +29,7 @@
         <div class="alert-bar-details">
           <span><i class="la la-exclamation-circle"></i></span>
           <div class="alert-bar-message">
-            <span></span>
+            <span>You have not yet added any receipts to submit</span>
           </div>
           <span class="dismiss error"><i class="la la-times-circle"></i></span>
         </div>
@@ -79,7 +79,7 @@
             <p>You've been invited to submit receipts for the following items:</p>
           </div>
           <div class="button-box right">
-            <a href="#!" class="button secondary color-one disabled"><span class="button-label">Submit Receipts</span></a>
+            <a class="button secondary color-one show-submit-error"><span class="button-label">Submit Receipts</span></a>
           </div>          
         </div>
         <div class="inventory-receipt-list">
@@ -91,7 +91,6 @@
                 <span class="description"><b>Description</b>:&nbsp;Macbook Pro 13&quot;</span>
                 <div class="replacement-count"><span>0</span>of<span>1</span>items replaced</div>
                 <div class="buttons">
-                  <!-- <a href="#!" class="button receipts secondary color-one"><span class="button-label icon"><i class="la la-pencil"></i></span><span class="button-label copy">Edit</span></a> -->
                   <a href="#!" class="button receipts color-one"><span class="button-label icon"><i class="la la-plus"></i></span><span class="button-label copy">Add</span></a>
                 </div>
               </div>
@@ -100,12 +99,6 @@
             <div class="receipt-details">
               <div class="receipt-border"></div>
               <div class="replacement-count"><span>0</span>of<span>1</span>items replaced</div>
-              <div class="replacement-details">
-                <ul>
-                  <li><b>Total Replacement Cost:</b><span>2500.00</span></li>
-                  <li><b>Total Amount Submitted:</b><span>0.00</span></li>
-                </ul>
-              </div>
             </div>
           </div>
           <div class="receipt-item">
@@ -116,7 +109,6 @@
                 <span class="description"><b>Description</b>:&nbsp;HP Deskjet 4300</span>
                 <div class="replacement-count"><span>0</span>of<span>1</span>items replaced</div>
                 <div class="buttons">
-                  <!-- <a href="#!" class="button receipts secondary color-one"><span class="button-label icon"><i class="la la-pencil"></i></span><span class="button-label copy">Edit</span></a> -->
                   <a href="#!" class="button receipts color-one"><span class="button-label icon"><i class="la la-plus"></i></span><span class="button-label copy">Add</span></a>
                 </div>
               </div>
@@ -125,12 +117,6 @@
             <div class="receipt-details">
               <div class="receipt-border"></div>
               <div class="replacement-count"><span>0</span>of<span>1</span>items replaced</div>
-              <div class="replacement-details">
-                <ul>
-                  <li><b>Total Replacement Cost:</b><span>139.00</span></li>
-                  <li><b>Total Amount Submitted:</b><span>0.00</span></li>
-                </ul>
-              </div>
             </div>
           </div>
           <div class="receipt-item">
@@ -141,7 +127,6 @@
                 <span class="description"><b>Description</b>:&nbsp;Slacks</span>
                 <div class="replacement-count"><span>0</span>of<span>4</span>items replaced</div>
                 <div class="buttons">
-                  <!-- <a href="#!" class="button receipts secondary color-one"><span class="button-label icon"><i class="la la-pencil"></i></span><span class="button-label copy">Edit</span></a> -->
                   <a href="../upload/index.html" class="button receipts color-one"><span class="button-label icon"><i class="la la-plus"></i></span><span class="button-label copy">Add</span></a>
                 </div>
               </div>
@@ -150,12 +135,6 @@
             <div class="receipt-details">
               <div class="receipt-border"></div>
               <div class="replacement-count"><span>0</span>of<span>4</span>items replaced</div>
-              <div class="replacement-details">
-                <ul>
-                  <li><b>Total Replacement Cost:</b><span>96.00</span></li>
-                  <li><b>Total Amount Submitted:</b><span>0.00</span></li>
-                </ul>
-              </div>
             </div>
           </div>
         </div>
@@ -178,5 +157,15 @@
     <script src="https://unpkg.com/headroom.js@0.9.4/dist/headroom.js"></script>
     <script src="../../../assets/scripts/enservio.js"></script>
     <script src="../../../assets/scripts/enservio.header.js"></script>
+    <script>
+      $('.show-submit-error').click( function() {
+        $('.alert-bar.error').addClass('show');
+        setTimeout(function() { 
+          $('.alert-bar.error').removeClass('show') }, 10000);
+      });
+      $('.dismiss.error').click( function() {
+        $('.alert-bar.error').removeClass('show');
+      });
+    </script>
   </body>
 </html>
