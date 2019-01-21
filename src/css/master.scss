@@ -845,6 +845,7 @@ button.color-two.disabled, .button.color-two.disabled,
 button.color-two.disabled:hover, button.color-two.disabled:focus, 
 .button.color-two.disabled:hover, .button.color-two.disabled:focus {
   border-color: $light-gray;
+  color: $white;
   background-color: $light-gray;
 }
 
@@ -1991,6 +1992,19 @@ main {
   padding: 1rem 1rem 0;
 }
 
+.receipt-item .receipt-details .replacement-details .receipt:after {
+  display: block;
+  width: calc(100% - 2rem);
+  height: 1px;
+  margin: 1rem auto 0;
+  background-color: $light-gray;
+  content: "";
+}
+
+.receipt-item .receipt-details .replacement-details .receipt:last-of-type:after {
+  display: none;
+}
+
 .receipt-item .receipt-details .replacement-details span.receipt-number {
   display: block;
   width: 100%;
@@ -2036,7 +2050,7 @@ main {
   right: 0;
 }
 
-.receipt-item .receipt-details .replacement-details .receipt .receipt-action .receipt-action-details li span:before {
+.receipt-item .receipt-details .replacement-details .receipt .receipt-action .receipt-action-details li:first-of-type span:before {
   display: block;
   content: "$";
 }
