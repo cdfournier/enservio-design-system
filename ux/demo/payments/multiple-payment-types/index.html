@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Enservio Customer Portal | Payments History</title>
+    <title>Enservio Customer Portal | Payments History and Transactions</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
@@ -92,6 +92,62 @@
                     <td>{Month D, YYYY}</td>
                     <td>{USD&#36;00.00}</td>
                     <td>{Status}</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="transactions" class="transactions">
+        <div class="transactions-container">
+          <div class="transactions-header">
+            <div class="transactions-information">
+              <h1>Transaction History</h1>
+              <div class="transactions-summary">
+                <div class="transactions-details ccard">
+                  <div class="details">
+                    <span class="transactions-label">Card &#35;</span>
+                    <span class="transactions-data">{Card_No}</span>
+                  </div>
+                </div>
+                <div class="transactions-details balance">
+                  <div class="details">
+                    <span class="transactions-label">Balance</span>
+                    <span class="transactions-data">{USD&#36;00.00}</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="transactions-ledger">
+            <div class="control">
+              <div class="button-box">
+                <button class="button color-one"><span class="button-label">Download</span></button>
+              </div>
+            </div>
+            <div class="ledger">
+              <table>
+                <tbody>
+                  <tr>
+                    <th>Date</th>
+                    <th>Description</th>
+                    <th>Amount</th>
+                  </tr>
+                  <tr>
+                    <td>{Month D, YYYY}</td>
+                    <td>{Transaction_Description}</td>
+                    <td>{USD&#36;00.00}</td>
+                  </tr>
+                  <tr>
+                    <td>{Month D, YYYY}</td>
+                    <td>{Transaction_Description}</td>
+                    <td>{USD&#36;00.00}</td>
+                  </tr>
+                  <tr>
+                    <td>{Month D, YYYY}</td>
+                    <td>{Transaction_Description}</td>
+                    <td>{USD&#36;00.00}</td>
                   </tr>
                 </tbody>
               </table>
