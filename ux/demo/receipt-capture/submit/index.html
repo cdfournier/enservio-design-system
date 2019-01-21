@@ -75,32 +75,37 @@
       <section id="upload-line-item-receipts">
         <div class="text first center lg">
           <h1>Submit Receipts</h1>
-          <p>You are about to submit <b>{2 receipts}</b> for a total of <b>{$}</b>.</p>
+          <p>You are about to submit <b>{1 receipt}</b> for a total of <b>{$}</b>.</p>
         </div>
-        <div class="inventory-receipt-list submit">
+        <div class="inventory-receipt-list" style="padding-bottom: 2rem;">
           <div class="receipt-item">
-            <input id="item-3" type="checkbox" name="items" class="accordian" checked>
+            <input id="item-3" type="checkbox" name="items" class="accordian">
             <label for="item-3" class="receipt-item-header">
               <span class="item-number">3</span>
               <div class="item-details">
                 <span class="description"><b>Description</b>:&nbsp;Slacks</span>
+                <div class="replacement-count"><span>3</span>of<span>4</span>items replaced</div>
               </div>
               <i class="la la-angle-down"></i>
             </label>
             <div class="receipt-details">
               <div class="receipt-border"></div>
-              <div class="receipt-details-box">
-                <div class="replacement-details submit">
-                  <h2>Receipt &#35;1</h2>
-                  <ul>
-                    <li><span class="qty">Qty</span><span class="amt no">Amount</span><span class="receipt-thumbnail">Receipt</span></li>
-                    <li><span class="qty">3</span><span class="amt">149.97</span><span class="receipt-thumbnail"><img src="../../../assets/images/slacks-receipt-highlighted.jpg" alt="Receipt Thumbnail"></span></li>
-                  </ul>
-                  <h2>Receipt &#35;2</h2>
-                  <ul>
-                    <li><span class="qty">Qty</span><span class="amt no">Amount</span><span class="receipt-thumbnail">Receipt</span></li>
-                    <li><span class="qty">1</span><span class="amt">49.99</span><span class="receipt-thumbnail"><img src="../../../assets/images/slacks-receipt-02-highlighted.jpg" alt="Receipt Thumbnail"></span></li>
-                  </ul>
+              <div class="replacement-count"><span>3</span>of<span>4</span>items replaced</div>
+              <div class="replacement-details">
+                <p>You can enter {1} more receipt for this line.</p>
+                <div class="receipt">
+                  <span class="receipt-number">Receipt #1</span>
+                  <div class="receipt-action">
+                    <div class="receipt-thumbnail">
+                      <img src="../../../assets/images/slacks-receipt-highlighted.jpg" alt="Receipt Image">
+                    </div>
+                    <div class="receipt-action-details">
+                      <ul>
+                        <li><b>Amount Per Item:</b><span>49.99</span></li>
+                        <li><b>Quantity Replaced:</b><span>3</span></li>
+                      </ul>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
