@@ -2018,7 +2018,10 @@ main {
   padding: 1rem 0 0;
 }
 
-.receipt-item .receipt-details .replacement-details .receipt .receipt-action .receipt-thumbnail {width: 25%;}
+.receipt-item .receipt-details .replacement-details .receipt .receipt-action .receipt-thumbnail {
+  width: 25%;
+  max-width: 6rem;
+}
 
 .receipt-item .receipt-details .replacement-details .receipt .receipt-action .receipt-action-details {
   display: flex;
