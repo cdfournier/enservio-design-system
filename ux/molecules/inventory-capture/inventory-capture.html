@@ -47,42 +47,38 @@
                   <label for="description">Description&#42;</label>
                 </div>
               </fieldset>
-              <div class="small">
-                <fieldset>
-                  <legend>Cost</legend>
-                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
-                    <span class="error-message">Please include a cost per item</span>
-                    <input type="text" name="cost" id="cost" placeholder="Cost per item" required>
-                    <label for="cost">Cost Per Item&#42;</label>
-                  </div>
-                </fieldset>
-                <fieldset>
-                  <legend>Quantity</legend>
-                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
-                    <span class="error-message">Please include a quantity</span>
-                    <input type="number" name="quantity" id="quantity" placeholder="Quantity" required>
-                    <label for="quantity">Quantity&#42;</label>
-                  </div>
-                </fieldset>
-              </div>
-              <div class="small">
-                <fieldset>
-                  <legend>Age: Years</legend>
-                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
-                    <span class="error-message">How old is this item &#40;in years&#41;?</span>
-                    <input type="number" name="years" id="years" placeholder="Years" required>
-                    <label for="years">Age: In Years&#42;</label>
-                  </div>
-                </fieldset>
-                <fieldset>
-                  <legend>Age: Months</legend>
-                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
-                    <span class="error-message">How old is this item &#40;in months&#41;?</span>
-                    <input type="number" name="months" id="months" placeholder="Months" required>
-                    <label for="months">Age: In Months&#42;</label>
-                  </div>
-                </fieldset>
-              </div>
+              <fieldset class="half">
+                <legend>Cost</legend>
+                <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                  <span class="error-message">Please include a cost per item</span>
+                  <input type="text" name="cost" id="cost" placeholder="Cost per item" required>
+                  <label for="cost">Cost Per Item&#42;</label>
+                </div>
+              </fieldset>
+              <fieldset class="half">
+                <legend>Quantity</legend>
+                <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                  <span class="error-message">Please include a quantity</span>
+                  <input type="number" name="quantity" id="quantity" placeholder="Quantity" required>
+                  <label for="quantity">Quantity&#42;</label>
+                </div>
+              </fieldset>
+              <fieldset class="half">
+                <legend>Age: Years</legend>
+                <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                  <span class="error-message">How old is this item &#40;in years&#41;?</span>
+                  <input type="number" name="years" id="years" placeholder="Years" required>
+                  <label for="years">Age: In Years&#42;</label>
+                </div>
+              </fieldset>
+              <fieldset class="half">
+                <legend>Age: Months</legend>
+                <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                  <span class="error-message">How old is this item &#40;in months&#41;?</span>
+                  <input type="number" name="months" id="months" placeholder="Months" required>
+                  <label for="months">Age: In Months&#42;</label>
+                </div>
+              </fieldset>
               <fieldset>
                 <legend>Condition</legend>
                 <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
@@ -106,10 +102,6 @@
                 <button id="submit-button" class="button secondary color-one submit"><span class="button-label">Submit Inventory<span class="post"><span class="processing"><i class="la la-refresh la-spin"></i></span></span></span></button>
               </div>
             </form>
-            <div class="notes">
-              <figcaption>Notes</figcaption>
-              <p>One thing to note is the use of <code>&lt;div class=&quot;small&quot;&gt;</code>. This technique enables us to group smaller aligned <code>&lt;input&gt;</code> fields. This keeps those fields together even on devices with smaller screens.</p>
-            </div>
           </div>
           <div class="code-sample">
             <figure>
@@ -123,42 +115,38 @@
       &lt;label for=&quot;description&quot;&gt;Description&amp;#42;&lt;/label&gt;
     &lt;/div&gt;
   &lt;/fieldset&gt;
-  &lt;div class=&quot;small&quot;&gt;
-    &lt;fieldset&gt;
-      &lt;legend&gt;Cost&lt;/legend&gt;
-      &lt;div class=&quot;field&quot;&gt; &lt;!-- change to 'field valid' or 'field invalid' as necessary --&gt;
-        &lt;span class=&quot;error-message&quot;&gt;Please include a cost per item&lt;/span&gt;
-        &lt;input type=&quot;text&quot; name=&quot;cost&quot; id=&quot;cost&quot; placeholder=&quot;Cost per item&quot; required&gt;
-        &lt;label for=&quot;cost&quot;&gt;Cost Per Item&amp;#42;&lt;/label&gt;
-      &lt;/div&gt;
-    &lt;/fieldset&gt;
-    &lt;fieldset&gt;
-      &lt;legend&gt;Quantity&lt;/legend&gt;
-      &lt;div class=&quot;field&quot;&gt; &lt;!-- change to 'field valid' or 'field invalid' as necessary --&gt;
-        &lt;span class=&quot;error-message&quot;&gt;Please include a quantity&lt;/span&gt;
-        &lt;input type=&quot;number&quot; name=&quot;quantity&quot; id=&quot;quantity&quot; placeholder=&quot;Quantity&quot; required&gt;
-        &lt;label for=&quot;quantity&quot;&gt;Quantity&amp;#42;&lt;/label&gt;
-      &lt;/div&gt;
-    &lt;/fieldset&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;small&quot;&gt;
-    &lt;fieldset&gt;
-      &lt;legend&gt;Age: Years&lt;/legend&gt;
-      &lt;div class=&quot;field&quot;&gt; &lt;!-- change to 'field valid' or 'field invalid' as necessary --&gt;
-        &lt;span class=&quot;error-message&quot;&gt;How old is this item &amp;#40;in years&amp;#41;?&lt;/span&gt;
-        &lt;input type=&quot;number&quot; name=&quot;years&quot; id=&quot;years&quot; placeholder=&quot;Years&quot; required&gt;
-        &lt;label for=&quot;years&quot;&gt;Age: In Years&amp;#42;&lt;/label&gt;
-      &lt;/div&gt;
-    &lt;/fieldset&gt;
-    &lt;fieldset&gt;
-      &lt;legend&gt;Age: Months&lt;/legend&gt;
-      &lt;div class=&quot;field&quot;&gt; &lt;!-- change to 'field valid' or 'field invalid' as necessary --&gt;
-        &lt;span class=&quot;error-message&quot;&gt;How old is this item &amp;#40;in months&amp;#41;?&lt;/span&gt;
-        &lt;input type=&quot;number&quot; name=&quot;months&quot; id=&quot;months&quot; placeholder=&quot;Months&quot; required&gt;
-        &lt;label for=&quot;months&quot;&gt;Age: In Months&amp;#42;&lt;/label&gt;
-      &lt;/div&gt;
-    &lt;/fieldset&gt;
-  &lt;/div&gt;
+  &lt;fieldset class=&quot;half&quot;&gt;
+    &lt;legend&gt;Cost&lt;/legend&gt;
+    &lt;div class=&quot;field&quot;&gt; &lt;!-- change to 'field valid' or 'field invalid' as necessary --&gt;
+      &lt;span class=&quot;error-message&quot;&gt;Please include a cost per item&lt;/span&gt;
+      &lt;input type=&quot;text&quot; name=&quot;cost&quot; id=&quot;cost&quot; placeholder=&quot;Cost per item&quot; required&gt;
+      &lt;label for=&quot;cost&quot;&gt;Cost Per Item&amp;#42;&lt;/label&gt;
+    &lt;/div&gt;
+  &lt;/fieldset&gt;
+  &lt;fieldset class=&quot;half&quot;&gt;
+    &lt;legend&gt;Quantity&lt;/legend&gt;
+    &lt;div class=&quot;field&quot;&gt; &lt;!-- change to 'field valid' or 'field invalid' as necessary --&gt;
+      &lt;span class=&quot;error-message&quot;&gt;Please include a quantity&lt;/span&gt;
+      &lt;input type=&quot;number&quot; name=&quot;quantity&quot; id=&quot;quantity&quot; placeholder=&quot;Quantity&quot; required&gt;
+      &lt;label for=&quot;quantity&quot;&gt;Quantity&amp;#42;&lt;/label&gt;
+    &lt;/div&gt;
+  &lt;/fieldset&gt;
+  &lt;fieldset class=&quot;half&quot;&gt;
+    &lt;legend&gt;Age: Years&lt;/legend&gt;
+    &lt;div class=&quot;field&quot;&gt; &lt;!-- change to 'field valid' or 'field invalid' as necessary --&gt;
+      &lt;span class=&quot;error-message&quot;&gt;How old is this item &amp;#40;in years&amp;#41;?&lt;/span&gt;
+      &lt;input type=&quot;number&quot; name=&quot;years&quot; id=&quot;years&quot; placeholder=&quot;Years&quot; required&gt;
+      &lt;label for=&quot;years&quot;&gt;Age: In Years&amp;#42;&lt;/label&gt;
+    &lt;/div&gt;
+  &lt;/fieldset&gt;
+  &lt;fieldset class=&quot;half&quot;&gt;
+    &lt;legend&gt;Age: Months&lt;/legend&gt;
+    &lt;div class=&quot;field&quot;&gt; &lt;!-- change to 'field valid' or 'field invalid' as necessary --&gt;
+      &lt;span class=&quot;error-message&quot;&gt;How old is this item &amp;#40;in months&amp;#41;?&lt;/span&gt;
+      &lt;input type=&quot;number&quot; name=&quot;months&quot; id=&quot;months&quot; placeholder=&quot;Months&quot; required&gt;
+      &lt;label for=&quot;months&quot;&gt;Age: In Months&amp;#42;&lt;/label&gt;
+    &lt;/div&gt;
+  &lt;/fieldset&gt;
   &lt;fieldset&gt;
     &lt;legend&gt;Condition&lt;/legend&gt;
     &lt;div class=&quot;field&quot;&gt; &lt;!-- change to 'field valid' or 'field invalid' as necessary --&gt;
