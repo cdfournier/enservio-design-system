@@ -1095,13 +1095,20 @@ main {
     margin: 0; }
   .action.text.left {
     margin: 0; }
+  .action.text .button-box {
+    flex-direction: column; }
+  .action.text .button-box.reverse {
+    flex-direction: column-reverse; }
   .action.text .button-box.right {
     margin: 0 0 0 2rem; }
   .action.text .button-box.left {
     margin: 0 2rem 0 0; }
   .action.text .button-box button,
   .action.text .button-box .button {
-    margin: 0; } }
+    margin: 0; }
+  .action.text .button-box button:last-of-type,
+  .action.text .button-box .button:last-of-type {
+    margin: 0 0 1rem; } }
 
 .graphic.text {
   display: block;
@@ -1771,6 +1778,7 @@ main {
     display: flex; } }
 
 .inventory-receipt-list {
+  margin: 0 auto;
   padding: 2rem 1rem 0; }
 
 @media (min-width: 21.625rem) {
@@ -1890,6 +1898,7 @@ main {
 
 .receipt-item .receipt-details {
   width: 100%;
+  max-width: 32rem;
   max-height: 0;
   padding: 0;
   -webkit-transition: max-height 0.25s ease-in-out 0s;
@@ -2002,14 +2011,15 @@ main {
   padding: 1rem 0 0; }
 
 .receipt-item .receipt-details .replacement-details .receipt .receipt-action .receipt-thumbnail {
-  width: 25%;
+  display: none;
+  width: 15%;
   max-width: 6rem; }
 
 .receipt-item .receipt-details .replacement-details .receipt .receipt-action .receipt-action-details {
   display: flex;
   flex-direction: column;
   width: inherit;
-  padding: 0 0 0 1rem; }
+  padding: 0; }
 
 .receipt-item .receipt-details .replacement-details .receipt .receipt-action .receipt-action-details ul {
   display: flex;
@@ -2031,15 +2041,18 @@ main {
   position: absolute;
   right: 0; }
 
-.receipt-item .receipt-details .replacement-details .receipt .receipt-action .receipt-action-details li:first-of-type span:before {
+.receipt-item .receipt-details .replacement-details .receipt .receipt-action .receipt-action-details li span.currency:before {
   display: block;
   content: "$"; }
 
 .receipt-item .receipt-details .replacement-details .receipt .receipt-action .receipt-action-details .button-box {
-  flex-direction: row; }
+  align-items: flex-start; }
 
 .receipt-item .receipt-details .replacement-details .receipt .receipt-action .receipt-action-details .button-box .button {
-  margin: 1rem 1rem 0 0; }
+  margin: 1rem 0 0 0; }
+
+.receipt-item .receipt-details .replacement-details .receipt .receipt-action .receipt-action-details .button-box .expanding-button-box {
+  margin: 1rem 0 0 0; }
 
 .receipt-item .receipt-details .receipt-image {
   padding: 2rem 0 0; }
@@ -2095,13 +2108,16 @@ main {
   .receipt-item .receipt-details .receipt-image {
     width: 40%;
     padding: 0 0 0 2rem; }
+  .receipt-item .receipt-details .replacement-details .receipt .receipt-action .receipt-thumbnail {
+    display: block; }
+  .receipt-item .receipt-details .replacement-details .receipt .receipt-action .receipt-action-details {
+    padding: 0 0 0 1rem; }
+  .receipt-item .receipt-details .replacement-details .receipt .receipt-action .receipt-action-details ul {
+    width: 83%;
+    margin: 0; }
   .receipt-item .receipt-details .replacement-details .receipt .receipt-action .receipt-action-details .button-box {
-    justify-content: flex-start; }
-  .receipt-item .receipt-details .replacement-details .receipt .receipt-action .receipt-action-details .button-box .button:last-of-type {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin: 1rem 0 0; } }
+    flex-direction: column;
+    justify-content: flex-start; } }
 
 @media (min-width: 64rem) {
   .receipt-item .receipt-item-header .item-details .description {
@@ -2134,9 +2150,7 @@ main {
   .receipt-item .receipt-details .replacement-count {
     display: none; }
   .receipt-item .receipt-details .replacement-details p {
-    padding: 0 1rem; }
-  .receipt-item .receipt-details .replacement-details .receipt .receipt-action .receipt-thumbnail {
-    width: 20%; } }
+    padding: 0 1rem; } }
 
 .receipt-item .receipt-details .replacement-details.summary h2 {
   text-align: left; }
@@ -2677,6 +2691,9 @@ figcaption ul li {
 
 .lg {
   max-width: 40rem; }
+
+.xl {
+  max-width: 56rem; }
 
 input[type="password"],
 input[type="checkbox"],

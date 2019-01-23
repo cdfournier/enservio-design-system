@@ -73,11 +73,17 @@
     </header>
     <main>
       <section id="upload-line-item-receipts">
-        <div class="text first center lg">
-          <h1>Submit Receipts</h1>
-          <p>You are about to submit <b>{1 receipt}</b> for a total of <b>{$}</b>.</p>
+        <div class="action text first xl">
+          <div class="text">
+            <h1>Submit Receipts</h1>
+            <p>You are about to submit <b>{1 receipt}</b> for a total of <b>{$}</b>. Please note that these amounts do not include tax.</p>
+          </div>
+          <div class="button-box reverse right">
+            <a href="../receipt-capture-b/index.html" class="button secondary color-one"><span class="button-label">Cancel</span></a>
+            <a href="../processing/index.html" class="button color-one"><span class="button-label">Submit</span></a>
+          </div>
         </div>
-        <div class="inventory-receipt-list" style="padding-bottom: 2rem;">
+        <div class="inventory-receipt-list xl">
           <div class="receipt-item">
             <input id="item-3" type="checkbox" name="items" class="accordian">
             <label for="item-3" class="receipt-item-header">
@@ -101,8 +107,9 @@
                     </div>
                     <div class="receipt-action-details">
                       <ul>
-                        <li><b>Amount Per Item:</b><span>49.99</span></li>
+                        <li><b>Amount Per Item:</b><span class="currency">49.99</span></li>
                         <li><b>Quantity Replaced:</b><span>3</span></li>
+                        <li><b>Subtotal:</b><span class="currency">149.97</span></li>
                       </ul>
                     </div>
                   </div>
@@ -110,10 +117,6 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="button-box reverse">
-          <a href="../receipt-capture-b/index.html" class="button secondary color-one"><span class="button-label">Cancel</span></a>
-          <a href="../processing/index.html" class="button color-one"><span class="button-label">Submit</span></a>
         </div>
       </section>
     </main>
