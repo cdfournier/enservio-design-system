@@ -2274,7 +2274,9 @@ main {
 
 .receipt-details-form {
   display: flex;
-  flex-direction: column; }
+  flex-direction: column;
+  max-width: 56rem;
+  margin: 0 auto; }
 
 .receipt-details-form form p {
   padding: 0 0 0.694rem;
@@ -2286,6 +2288,10 @@ main {
   width: 100%;
   margin: 0 auto;
   padding: 2rem 2rem 0; }
+
+.receipt-crop-box p {
+  padding: 0 0 2rem;
+  text-align: center; }
 
 .receipt-crop-box:before {
   display: block;
@@ -2336,12 +2342,19 @@ main {
   .receipt-details-form {
     flex-direction: row;
     align-items: flex-start; }
+  .receipt-details-form form {
+    width: 50%;
+    padding: 2rem 1rem 0 2rem; }
   .receipt-details-form form p {
     text-align: left; }
-  .receipt-details-form form .small {
-    width: 100%; }
+  .receipt-details-form form fieldset.half {
+    width: 50%; }
+  .receipt-details-form form fieldset.half .field {
+    padding: 0 2rem 0 0; }
   .receipt-crop-box {
-    width: 40%; }
+    width: 50%; }
+  .receipt-crop-box p {
+    text-align: left; }
   .receipt-crop-box:before {
     display: none; } }
 
