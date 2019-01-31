@@ -1877,7 +1877,7 @@ main {
 .receipt-item .receipt-item-header .item-details .description {
   display: block;
   overflow: hidden;
-  width: calc(100% - 4.625rem);
+  width: calc(100% - 2.625rem);
   text-align: left;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -1886,6 +1886,8 @@ main {
 .receipt-item .receipt-item-header .item-details .buttons {
   display: flex;
   flex-direction: row;
+  justify-content: flex-end;
+  min-height: 2.25rem;
   margin: 0 0 0 1rem;
 }
 
@@ -2074,6 +2076,7 @@ main {
 .receipt-item .receipt-details .receipt-image {padding: 2rem 0 0;}
 
 @media (min-width: 48rem) {
+.receipt-item .receipt-item-header .item-details .buttons {min-width: 6rem;}
 .receipt-item .receipt-item-header .item-details .button.icon {display: none;}
 .receipt-item .receipt-item-header .item-details .description {width: auto;}
 .receipt-item .receipt-item-header .item-details .button.copy {display: inline-flex;}
