@@ -1886,15 +1886,12 @@ main {
   font-size: 1.44rem;
   line-height: 1; }
 
-.receipt-item .receipt-item-header .item-details .button:nth-of-type(2n) {
-  margin-left: 0.5rem; }
+.receipt-item .receipt-item-header .item-details .button.copy {
+  display: none; }
 
-.receipt-item .receipt-item-header .item-details .button span.button-label.icon {
+.receipt-item .receipt-item-header .item-details .button.icon span.button-label {
   overflow: unset;
   text-overflow: unset; }
-
-.receipt-item.receipt .receipt-item-header .item-details .button span.button-label.copy {
-  display: none; }
 
 .receipt-item .receipt-details {
   width: 100%;
@@ -2058,8 +2055,12 @@ main {
   padding: 2rem 0 0; }
 
 @media (min-width: 48rem) {
+  .receipt-item .receipt-item-header .item-details .button.icon {
+    display: none; }
   .receipt-item .receipt-item-header .item-details .description {
     width: auto; }
+  .receipt-item .receipt-item-header .item-details .button.copy {
+    display: inline-flex; }
   .receipt-item .receipt-item-header .item-details .button {
     display: inline-flex;
     align-items: center;
