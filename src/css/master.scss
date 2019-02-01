@@ -432,8 +432,9 @@ button.none, .button.none {display: none;}
 button span.button-label,
 .button span.button-label {
   display: block;
-  overflow: hidden;
   width: auto;
+  overflow: hidden;
+  line-height: 2.25rem;
   text-overflow: ellipsis;
 }
 
@@ -1894,6 +1895,7 @@ main {
 .receipt-item .receipt-item-header .item-details .button {
   display: flex;
   justify-content: center;
+  position: relative;
   width: 2.25rem;
   max-width: 2.25rem;
   height: 2.25rem;
@@ -1908,7 +1910,9 @@ main {
 .receipt-item .receipt-item-header .item-details .button.copy {display: none;}
 
 .receipt-item .receipt-item-header .item-details .button.icon span.button-label {
+  position: absolute;
   overflow: unset;
+  line-height: 2.25rem;
   text-overflow: unset;
 }
 
