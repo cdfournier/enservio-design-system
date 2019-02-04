@@ -2487,10 +2487,10 @@ main {
   text-align: left;
   background-color: #ffffff; }
 
-.transactions-summary, .ach-history-summary {
+.transactions-summary {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: 100%;
   margin: 0.694rem 0 0; }
 
@@ -2524,6 +2524,7 @@ main {
     flex-direction: row;
     align-items: flex-start; }
   .transactions-summary {
+    justify-content: flex-end;
     margin: 0; }
   .transactions-details .details span.transactions-data {
     font-size: 1rem; } }
@@ -2575,6 +2576,10 @@ main {
   padding: 1rem 0 0;
   border-top: 1px solid #cccece; }
 
+.transactions-ledger .ledger small, .ach-history-ledger .ledger small {
+  padding: 0 0 0.5rem;
+  text-align: center; }
+
 .ach-history-ledger .ledger {
   margin: 0;
   padding: 0;
@@ -2617,6 +2622,14 @@ main {
 .ach-history-ledger .ledger table td:last-of-type {
   padding: 0.2rem 0 0 0.2rem;
   text-align: right; }
+
+@media (min-width: 30rem) {
+  .ach-history-ledger .ledger small {
+    display: none; } }
+
+@media (min-width: 41.6875rem) {
+  .transactions-ledger .ledger small {
+    display: none; } }
 
 @media (min-width: 48rem) {
   .transactions-ledger .ledger,

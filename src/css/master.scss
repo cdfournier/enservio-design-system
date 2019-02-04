@@ -2508,10 +2508,10 @@ main {
   background-color: $white;
 }
 
-.transactions-summary, .ach-history-summary {
+.transactions-summary {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   width: 100%;
   margin: 0.694rem 0 0;
 }
@@ -2550,7 +2550,10 @@ main {
   flex-direction: row;
   align-items: flex-start;
 }
-.transactions-summary {margin: 0;}
+.transactions-summary {
+  justify-content: flex-end;
+  margin: 0;
+}
 .transactions-details .details span.transactions-data {font-size: 1rem;}}
 
 
@@ -2603,6 +2606,11 @@ main {
   border-top: 1px solid $light-gray;
 }
 
+.transactions-ledger .ledger small, .ach-history-ledger .ledger small {
+  padding: 0 0 0.5rem;
+  text-align: center;
+}
+
 .ach-history-ledger .ledger {
   margin: 0;
   padding: 0;
@@ -2646,6 +2654,10 @@ main {
   padding: 0.2rem 0 0 0.2rem;
   text-align: right;
 }
+
+@media (min-width: 30rem) {.ach-history-ledger .ledger small {display: none;}}
+
+@media (min-width: 41.6875rem) {.transactions-ledger .ledger small {display: none;}}
 
 @media (min-width: 48rem) {
 .transactions-ledger .ledger,
