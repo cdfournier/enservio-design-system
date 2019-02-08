@@ -2044,10 +2044,12 @@ main {
   position: absolute;
   right: 0; }
 
+/*
 .receipt-item .receipt-details .replacement-details .receipt .receipt-action .receipt-action-details li span.currency:before {
   display: block;
-  content: "$"; }
-
+  content: "$";
+}
+*/
 .receipt-item .receipt-details .replacement-details .receipt .receipt-action .receipt-action-details .button-box {
   align-items: flex-start; }
 
@@ -2200,10 +2202,12 @@ main {
   position: relative;
   width: 75%; }
 
+/*
 .receipt-item .receipt-details .replacement-details.summary ul li span.amt:before {
   display: block;
-  content: "$"; }
-
+  content: "$";
+}
+*/
 .receipt-item .receipt-details .replacement-details.summary ul li span.amt.no:before {
   display: none; }
 
@@ -2252,10 +2256,12 @@ main {
 .receipt-item .receipt-details .replacement-details.submit ul li span:before {
   display: none; }
 
+/*
 .receipt-item .receipt-details .replacement-details.submit ul li span.amt:before {
   display: block;
-  content: "$"; }
-
+  content: "$";
+}
+*/
 .receipt-item .receipt-details .replacement-details.submit ul li span.amt.no:before {
   display: none; }
 
