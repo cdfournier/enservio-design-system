@@ -2105,6 +2105,7 @@ main {
 .receipt-item .receipt-details .receipt-details-box {flex-direction: row;}
 .receipt-item .receipt-details .receipt-details-box-left {width: 60%;}
 .receipt-item .receipt-details .replacement-details h2 {text-align: left;}
+.receipt-item .receipt-details .replacement-details p:nth-of-type(2n) {padding: 0 1rem;}
 .receipt-item .receipt-details .receipt-details-box-left .replacement-details ul {
   flex-direction: column;
   padding: 0 0 1rem 0;

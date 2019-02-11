@@ -105,16 +105,15 @@
       <section id="line-item-receipts-details">
         <div class="text first center lg">
           <h1>Receipt Details</h1>
-          <p style="padding-bottom: 0;"><b>Description</b>:&nbsp;Slacks</p>
+          <p style="padding-bottom: 0;"><b>Description</b>:&nbsp;Lamps</p>
         </div>
         <div class="receipt-details-form">
           <form>
-            <p>Enter the cost and quantity per replacement item <em>excluding tax</em>.</p>
             <fieldset class="half">
               <legend>Cost</legend>
               <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
                 <span class="error-message">Please include a cost per item</span>
-                <input type="text" name="cost" id="cost" value="49.99">
+                <input type="text" name="cost" id="cost" value="160.99" disabled>
                 <label for="cost">Cost&#42;</label>
               </div>
             </fieldset>
@@ -122,28 +121,18 @@
               <legend>Quantity</legend>
               <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
                 <span class="error-message">Error message</span>
-                <input type="number" name="quantity-replaced" id="quantity-replaced" value="3">
+                <input type="number" name="quantity-replaced" id="quantity-replaced" value="1" disabled>
                 <label for="quantity-replaced">Quantity&#42;</label>
                 <span class="valid"><i class="la la-check-circle-o"></i></span>
               </div>
             </fieldset>
-            <div class="button-box wide reverse">
-              <a class="button color-one" onclick="goBack()"><span class="button-label">Save Changes</span></a>
-            </div>
             <div class="button-box">
-              <a class="button secondary color-two show-confirm-cancel"><span class="button-label">Cancel</span></a>
+              <a class="button secondary color-one" onclick="goBack()"><span class="button-label"><span class="pre"><i class="la la-arrow-left"></i>Back</span></span></a>
             </div>
           </form>
           <div class="receipt-crop-box">
-            <p>Adjust the receipt image below and highlight the item you've replaced.</p>
             <div class="receipt-image">
-              <img id="receipt" src="../../../assets/images/slacks-receipt-highlighted.jpg" alt="Receipt image">
-            </div>
-            <div class="receipt-controls">
-              <div class="receipt-buttons">
-                <button type="button" class="button rotate-button color-two" data-method="rotate" data-option="-45"><span class="rotate-icon"><i class="la la-rotate-left"></i></span></button>
-                <button type="button" class="button rotate-button color-two" data-method="rotate" data-option="45"><span class="rotate-icon"><i class="la la-rotate-right"></i></span></button>
-              </div>
+              <img id="receipt" src="../../../assets/images/target-lamp-01-highlighted.jpg" alt="Receipt image">
             </div>
           </div>
         </div>
@@ -164,17 +153,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script src="https://unpkg.com/headroom.js@0.9.4/dist/headroom.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.4.3/cropper.js"></script>
     <script src="../../../assets/scripts/enservio.js"></script>
     <script src="../../../assets/scripts/enservio.header.js"></script>
-    <script>
-      const image = document.getElementById('receipt');
-      const cropper = new Cropper(image, {
-        viewMode: 1,
-        background: false,
-        zoomOnWheel: false
-      });
-    </script>
     <script>
       $('.show-confirm-prev').click( function() {
         $('.alert-bar.confirm.prev').addClass('show');
