@@ -44,15 +44,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 1.625rem;
+  width: auto;
   min-width: 1.625rem;
   height: 1.625rem;
   min-height: 1.625rem;
   margin: 0 0.5rem 0 0;
-  border-radius: 50%;
+  padding: 0 0.625rem;
+  border-radius: 4rem;
   font-size: 0.833rem;
-  font-weight: 700;
-  line-height: 0;
+  font-weight: 500;
+  line-height: 1.625rem;
   color: $white;
   background-color: $black;
 }
@@ -71,7 +72,8 @@
   flex-wrap: nowrap;
   justify-content: space-between;
   overflow: hidden;
-  width: calc(100% - 3.5rem);
+  width: auto;
+  max-width: calc(100% - 3.5rem);
   text-overflow: ellipsis;
 }
 
@@ -80,7 +82,7 @@
 .receipt-item .receipt-item-header .item-details .description {
   display: block;
   overflow: hidden;
-  width: calc(100% - 2.625rem);
+  width: 100%;
   text-align: left;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -90,8 +92,10 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  position: absolute;
+  right: 2.5rem;
   min-height: 2.25rem;
-  margin: 0 0 0 1rem;
+  margin: 0 0 0 0.5rem;
 }
 
 .receipt-item .receipt-item-header .item-details .button {
@@ -163,15 +167,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 1.625rem;
+  width: auto;
   min-width: 1.625rem;
   height: 1.625rem;
   min-height: 1.625rem;
   margin: 0 0.5rem 0 0;
-  border-radius: 50%;
+  padding: 0 0.625rem;
+  border-radius: 4rem;
   font-size: 0.833rem;
-  font-weight: 700;
-  line-height: 0;
+  font-weight: 500;
+  line-height: 1.625rem;
   color: $white;
   background-color: $black;
 }
@@ -284,6 +289,7 @@
 .receipt-item .receipt-details .receipt-image {padding: 2rem 0 0;}
 
 @media (min-width: 48rem) {
+.receipt-item .receipt-item-header .item-details {width: calc(100% - 12rem);}
 .receipt-item .receipt-item-header .item-details .buttons {min-width: 6rem;}
 .receipt-item .receipt-item-header .item-details .button.icon {display: none;}
 .receipt-item .receipt-item-header .item-details .description {width: auto;}
@@ -347,7 +353,6 @@
 }}
 
 @media (min-width: 64rem) {
-.receipt-item .receipt-item-header .item-details .description {width: 36%;}
 .receipt-item .receipt-item-header .item-details .replacement-count {
   display: flex;
   flex-direction: row;
@@ -359,15 +364,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 1.625rem;
+  width: auto;
   min-width: 1.625rem;
   height: 1.625rem;
   min-height: 1.625rem;
   margin: 0 0.5rem 0 0;
-  border-radius: 50%;
+  padding: 0 0.625rem;
+  border-radius: 4rem;
   font-size: 0.833rem;
-  font-weight: 700;
-  line-height: 0;
+  font-weight: 500;
+  line-height: 1.625rem;
   color: $white;
   background-color: $black;
 }
