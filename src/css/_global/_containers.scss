@@ -1,0 +1,179 @@
+// MAX-WIDTHS
+.xs {max-width: 16rem;}
+
+.sm {max-width: 24rem;}
+
+.md {max-width: 32rem;}
+
+.lg {max-width: 40rem;}
+
+.xl {max-width: 56rem;}
+
+
+// MAIN
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+}
+
+
+// TEXT BOX
+.text {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 2rem 0;
+}
+
+.text.first {padding: 0 2rem;}
+
+.text.border:before {
+  display: block;
+  margin: 0 auto 2rem;
+  border-top: 1px solid $light-gray;
+  content: "";
+  column-span: all;
+}
+
+.text.center {text-align: center;}
+
+.text.left {margin: 0;}
+
+
+// ACTION TEXT BOX
+.action.text {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 2rem 0;
+}
+
+.action.text.first {padding: 0 2rem;}
+
+.action.text .text {padding: 0;}
+
+.action.text .button-box {width: auto;}
+
+@media (min-width: 48rem) {
+.action.text {
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.action.text .text {
+  width: auto;
+  margin: 0;
+}
+.action.text.left {margin: 0;}
+.action.text .button-box {flex-direction: column;}
+.action.text .button-box.reverse {flex-direction: column-reverse;}
+.action.text .button-box.right {margin: 0 0 0 2rem;}
+.action.text .button-box.left {margin: 0 2rem 0 0;}
+.action.text .button-box button,
+.action.text .button-box .button {margin: 0;}
+.action.text .button-box button:last-of-type,
+.action.text .button-box .button:last-of-type {margin: 0 0 1rem;}}
+
+
+// GRAPHIC TEXT BOX
+.graphic.text {
+  display: block;
+  width: 100%;
+  max-width: 40rem;
+  margin: 0 auto 1rem;
+  padding: 0;
+}
+
+.graphic.text .graphic-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 40rem;
+  min-height: 100%;
+  margin: auto;
+  padding: 0 2rem;
+  text-align: left;
+}
+
+.graphic.text .graphic-cell.center {text-align: center;}
+
+.graphic-cell .graphic {
+  width: 25%;
+  margin: 0 auto 1rem;
+}
+
+.graphic-cell .graphic.wide {
+  width: 100%;
+  margin: 0;
+}
+
+@media (min-width: 48rem) {
+.graphic.text {margin: 0 auto 2rem;}
+.graphic.text .graphic-cell {padding: 0 6rem;}
+.graphic-cell .graphic {width: 20%;}}
+
+
+// FIGURES & CAPTIONS
+figure {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 1rem 0;
+}
+
+figcaption {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0.5rem 0 0;
+  width: 100%;
+  font-size: 0.833rem;
+  font-weight: 400;
+  line-height: 1;
+  text-transform: uppercase;
+  color: $black;
+}
+
+figcaption span.left {
+  width: 35%;
+  text-align: left;
+}
+
+figcaption span.center {
+  width: 50%;
+  text-align: center;
+}
+
+figcaption span.right {
+  width: 15%;
+  text-align: right;
+}
+
+figcaption ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 0.694rem;
+  font-weight: 500;
+  list-style-type: none;
+  text-align: center;
+  white-space: nowrap;
+}
+
+figcaption ul li {
+  overflow: hidden;
+  padding: 0;
+  text-overflow: ellipsis;
+}

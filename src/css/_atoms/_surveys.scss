@@ -1,0 +1,29 @@
+// SURVEY LIST
+ol.survey li fieldset legend {display: block;}
+
+ol.survey li .field {
+  flex-direction: column;
+  margin: 1rem 0 0;
+  padding: 0;
+}
+
+ol.survey li .field .survey-group {
+  position: relative;
+  margin: 0 0 1rem;
+}
+
+ol.survey li .field .survey-group:last-of-type {
+  margin: 0;
+}
+
+ol.survey li .field .survey-group input[type="radio"],
+ol.survey li .field .survey-group input[type="checkbox"] {
+  left: 0;
+}
+
+ol.survey li .field label {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+ol.survey li .field span.error-message {font-size: 1rem;}

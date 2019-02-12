@@ -1,0 +1,543 @@
+// BUTTONS
+button,
+.button {
+  display: inline-flex;
+  align-items: center;
+  width: auto;
+  max-width: 100%;
+  min-height: 2.25rem;
+  max-height: 2.25rem;
+  overflow: hidden;
+  margin: 1rem auto 0;
+  padding: 0 1.75rem;
+  border-radius: 4rem;
+  font-family: $sans-serif;
+  font-size: 0.694rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 2.25rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  cursor: pointer;
+  @include transition(all, 0.25s, ease-in-out);
+}
+
+button.none, .button.none {display: none;}
+
+@media (min-width: 48rem) {button, .button {margin: 0 0.5rem 0;}}
+
+button span.button-label,
+.button span.button-label {
+  display: block;
+  width: auto;
+  overflow: hidden;
+  line-height: 2.25rem;
+  text-overflow: ellipsis;
+}
+
+button span.pre, .button span.pre,
+button span.post, .button span.post {
+  display: inline-block;
+  padding: 0;
+}
+
+button span.pre i.la, .button span.pre i.la,
+button span.post i.la, .button span.post i.la {
+  position: relative;
+  top: 0.1rem;
+  font-size: 1rem;
+}
+
+button span.pre span.number, button span.post span.number,
+.button span.pre span.number, .button span.post span.number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0 0 0 0.5rem;
+  border-radius: 2rem;
+  font-size: 0.694rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+button span.pre span.processing, button span.post span.processing,
+.button span.pre span.processing, .button span.post span.processing {
+  display: block;
+  max-width: 0;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  @include transition(all, 0.25s, ease-in-out);
+}
+
+button span.processing i.la.la-refresh.la-spin,
+.button span.processing i.la.la-refresh.la-spin {
+  display: none;
+  position: relative;
+  top: 0.125rem;
+  font-size: 1rem;
+}
+
+button span.pre span.processing.active, button span.post span.processing.active,
+.button span.pre span.processing.active, .button span.post span.processing.active {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  opacity: 1;
+}
+
+button span.processing.active i.la.la-refresh.la-spin,
+.button span.processing.active i.la.la-refresh.la-spin {display: inline-block;}
+
+button.big,
+.button.big {
+  min-height: inherit;
+  max-height: inherit;
+  padding: 1.25rem 2.5rem;
+  font-size: 1rem;
+}
+
+button.big span.button-label,
+.button.big span.button-label {line-height: 1;}
+
+button.color-one,
+.button.color-one {
+  border: 1px solid $color-one;
+  color: $white;
+  background-color: $color-one;
+}
+
+button.color-one:hover, button.color-one:focus,
+.button.color-one:hover, .button.color-one:focus {
+  color: $color-one;
+  background-color: $white;
+}
+
+button.color-one span.number,
+.button.color-one span.number {
+  color: $color-one;
+  background-color: $white;
+}
+
+button.color-one:hover span.number, button.color-one:focus span.number,
+.button.color-one:hover span.number, .button.color-one:focus span.number {
+  color: $white;
+  background-color: $color-one;
+}
+
+button.color-two,
+.button.color-two {
+  border: 1px solid $color-two;
+  color: $white;
+  background-color: $color-two;
+}
+
+button.color-two:hover, button.color-two:focus,
+.button.color-two:hover, .button.color-two:focus {
+  color: $color-two;
+  background-color: $white;
+}
+
+button.color-two span.number,
+.button.color-two span.number {
+  color: $color-two;
+  background-color: $white;
+}
+
+button.color-two:hover span.number, button.color-two:focus span.number,
+.button.color-two:hover span.number, .button.color-two:focus span.number {
+  color: $white;
+  background-color: $color-two;
+}
+
+button.secondary.color-one,
+.button.secondary.color-one {
+  border: 1px solid $color-one;
+  color: $color-one;
+  background-color: $white;
+}
+
+button.secondary.color-one:hover, button.secondary.color-one:focus,
+.button.secondary.color-one:hover, .button.secondary.color-one:focus {
+  color: $white;
+  background-color: $color-one;
+}
+
+button.secondary.color-one span.number,
+.button.secondary.color-one span.number {
+  color: $white;
+  background-color: $color-one;
+}
+
+button.secondary.color-one:hover span.number, button.secondary.color-one:focus span.number,
+.button.secondary.color-one:hover span.number, .button.secondary.color-one:focus span.number {
+  color: $color-one;
+  background-color: $white;
+}
+
+button.secondary.color-two,
+.button.secondary.color-two {
+  border: 1px solid $color-two;
+  color: $color-two;
+  background-color: $white;
+}
+
+button.secondary.color-two:hover, button.secondary.color-two:focus,
+.button.secondary.color-two:hover, .button.secondary.color-two:focus {
+  color: $white;
+  background-color: $color-two;
+}
+
+button.secondary.color-two span.number,
+.button.secondary.color-two span.number {
+  color: $white;
+  background-color: $color-two;
+}
+
+button.secondary.color-two:hover span.number, button.secondary.color-two:focus span.number,
+.button.secondary.color-two:hover span.number, .button.secondary.color-two:focus span.number {
+  color: $color-two;
+  background-color: $white;
+}
+
+
+// HIDE BUTTONS
+.button.skip {
+  opacity: 1;
+	@include transition(all, 0.25s, ease-in-out);
+}
+
+.button.skip.hide {opacity: 0;}
+
+
+// EXPANDING BUTTONS
+.expanding-button-box {
+  display: inline-flex;
+  align-items: center;
+  max-width: 2.25rem;
+  overflow: hidden;
+  margin: 1rem 0 0;
+  border-radius: 4rem;
+  cursor: pointer;
+  @include transition(all, 0.25s, ease-in-out);
+}
+
+.line-item .expanding-button-box {margin: 0;}
+
+.expanding-button-box.expand {max-width: 100%;}
+
+.expanding-button-box .expanding-button {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4rem;
+  @include transition(all, 0.25s, ease-in-out);
+}
+
+.expanding-button-box .expanding-button.large {display: none;}
+
+.expanding-button-box .expanding-button.small {
+  display: flex;
+  width: 2.25rem;
+  max-width: 2.25rem;
+  height: 2.25rem;
+  max-height: 2.25rem;
+  margin: auto;
+  padding: 0.5rem;
+  font-size: 1.44rem;
+  line-height: 1;
+  color: $white;
+}
+
+.expanding-button-box .expanding-button.large {
+  width: max-content;
+  min-width: 8rem;
+  min-height: 2.25rem;
+  max-height: 2.25rem;
+  padding: 1rem 1.175rem;
+  font-size: 0.694rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  line-height: 0;
+  text-transform: uppercase;
+  color: $white;
+}
+
+@media (min-width: 48rem) {
+.expanding-button-box {
+  max-width: 8rem;
+  margin: 0;
+}
+.expanding-button-box.expand {max-width: 100%;}
+.expanding-button-box .expanding-button.small {display: none;}
+.expanding-button-box .expanding-button.large {display: flex;}}
+
+
+// CONFIRM ACTION BOX SETTINGS
+.expanding-button-box .confirm-action-box {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 0.325rem 0 0.5rem;
+  font-size: 0.694rem;
+  font-weight: 500;
+  line-height: 0;
+  text-transform: uppercase;
+  color: $white;
+  opacity: 0;
+  @include transition(all, 0.5s, ease-in-out);
+  @include transform(translateX(10rem));
+}
+
+.expanding-button-box.expand .confirm-action-box {
+  display: inline-flex;
+  opacity: 1;
+  @include transform(translateX(0));
+}
+
+.expanding-button-box .confirm-action-box span.confirm-action-text {
+  display: inline-flex;
+  width: max-content;
+}
+
+.expanding-button-box .confirm-action-box span.confirm-action {
+  margin: 0 0 0 0.5rem;
+  padding: 0.675rem 0.75rem;
+  border-radius: 4rem;
+  @include transition(all, 0.25s, ease-in-out);
+}
+
+
+// EXPANDING BUTTON COLOR ONE SETTINGS
+.expanding-button-box.color-one {background-color: $color-one;}
+
+.expanding-button-box.color-one .expanding-button {
+  border: 1px solid $color-one;
+  background-color: $color-one;
+}
+
+.expanding-button-box.color-one .expanding-button:hover,
+.expanding-button-box.color-one .expanding-button:focus {
+  color: $color-one;
+  background-color: $white;
+}
+
+.expanding-button-box.expand.color-one .confirm-action-box span.confirm-action {
+  border: 1px solid $white;
+  color: $color-one;
+  background-color: $white;
+}
+
+.expanding-button-box.expand.color-one .confirm-action-box span.confirm-action:hover,
+.expanding-button-box.expand.color-one .confirm-action-box span.confirm-action:focus {
+  color: $white;
+  background-color: $color-one;
+}
+
+.expanding-button-box.expand.color-one .confirm-action-box span.confirm-action.secondary {
+  border: 1px solid $white;
+  color: $white;
+  background-color: $color-one;
+}
+
+.expanding-button-box.expand.color-one .confirm-action-box span.confirm-action.secondary:hover,
+.expanding-button-box.expand.color-one .confirm-action-box span.confirm-action.secondary:focus {
+  color: $color-one;
+  background-color: $white;
+}
+
+
+// EXPANDING BUTTON COLOR TWO SETTINGS
+.expanding-button-box.color-two {background-color: $color-two;}
+
+.expanding-button-box.color-two .expanding-button {
+  border: 1px solid $color-two;
+  background-color: $color-two;
+}
+
+.expanding-button-box.color-two .expanding-button:hover,
+.expanding-button-box.color-two .expanding-button:focus {
+  color: $color-two;
+  background-color: $white;
+}
+
+.expanding-button-box.expand.color-two .confirm-action-box span.confirm-action {
+  border: 1px solid $white;
+  color: $color-two;
+  background-color: $white;
+}
+
+.expanding-button-box.expand.color-two .confirm-action-box span.confirm-action:hover,
+.expanding-button-box.expand.color-two .confirm-action-box span.confirm-action:focus {
+  color: $white;
+  background-color: $color-two;
+}
+
+.expanding-button-box.expand.color-two .confirm-action-box span.confirm-action.secondary {
+  border: 1px solid $white;
+  color: $white;
+  background-color: $color-two;
+}
+
+.expanding-button-box.expand.color-two .confirm-action-box span.confirm-action.secondary:hover,
+.expanding-button-box.expand.color-two .confirm-action-box span.confirm-action.secondary:focus {
+  color: $color-two;
+  background-color: $white;
+}
+
+
+// UPLOAD BUTTON
+span.button.upload input[type="file"] {
+  position: absolute;
+  width: auto;
+  max-width: 9.5rem;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+
+// INVENTORY SUBMIT BUTTON
+.button.submit {margin: 1rem auto 0;}
+
+@media (min-width: 64rem) {
+.button.submit {
+  position: absolute;
+  right: 0;
+  margin: 0;
+}}
+
+
+// DOWNLOAD BUTTON
+.download-button {display: none;}
+
+.no-touch .download-button {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 2.25rem;
+  max-width: 2.25rem;
+  height: 2.25rem;
+  max-height: 2.25rem;
+  margin: 0 0 0 0.5rem;
+  padding: 0.5rem;
+  border-radius: 100%;
+  font-size: 1.44rem;
+  line-height: 1;
+}
+
+.no-touch .download-button span.download-icon {position: absolute;}
+
+
+// DISABLED BUTTONS
+button.disabled, .button.disabled {cursor: not-allowed;}
+
+button.color-one.disabled, .button.color-one.disabled,
+button.color-two.disabled, .button.color-two.disabled,
+button.color-one.disabled:hover, button.color-one.disabled:focus, 
+.button.color-one.disabled:hover, .button.color-one.disabled:focus,
+button.color-two.disabled, .button.color-two.disabled,
+button.color-two.disabled:hover, button.color-two.disabled:focus, 
+.button.color-two.disabled:hover, .button.color-two.disabled:focus {
+  border-color: $light-gray;
+  color: $white;
+  background-color: $light-gray;
+}
+
+button.secondary.color-one.disabled, .button.secondary.color-one.disabled,
+button.secondary.color-two.disabled, .button.secondary.color-two.disabled,
+button.secondary.color-one.disabled:hover, button.secondary.color-one.disabled:focus, 
+.button.secondary.color-one.disabled:hover, .button.secondary.color-one.disabled:focus,
+button.secondary.color-two.disabled, .button.secondary.color-two.disabled,
+button.secondary.color-two.disabled:hover, button.secondary.color-two.disabled:focus, 
+.button.secondary.color-two.disabled:hover, .button.secondary.color-two.disabled:focus {
+  border-color: $light-gray;
+  color: $light-gray;
+  background-color: $white;
+}
+
+
+// BUTTON BOX/ROW CONTAINER
+.button-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.button-box.reverse {flex-direction: column-reverse;}
+
+.button-box.right {align-items: flex-end;}
+
+.button-box.left {align-items: flex-start;}
+
+.button-box.wide {
+  flex-direction: row;
+  justify-content: center;
+}
+
+.button-box.wide button, .button-box.wide .button {margin: 1rem 0.5rem 0;}
+
+@media (min-width: 48rem) {
+.button-box {
+  flex-direction: row;
+  justify-content: center;
+}
+.button-box + .button-box {padding: 1rem 0 0;}
+.button-box.reverse {flex-direction: row;}
+.button-box.right {
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+.button-box.left {
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.button-box.right .button {margin: 0 0 1rem 1rem;}
+.button-box.right .download-button {margin: 0 0 0 1rem;}
+.button-box.left .button {margin: 0 1rem 1rem 0;}
+.button-box.left .expanding-button-box {margin: 0 1rem 1rem 0;}
+form .button-box {padding: 0 1rem;}
+.button-box.wide button, .button-box.wide .button {margin: 0 0.5rem 0;}}
+
+
+// CURRENT INVENTORY BUTTON BOX
+.form-button-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.form-button-box-button {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem;
+}
+
+.form-button-box .form-button-box-button {padding: 0 0 0 1rem;}
+
+.form-button-box-row {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.form-button-box-row.row {flex-direction: row;}
+
+.form-button-box-button .expanding-button-box {margin: 1rem 0 0;}
+
+@media (min-width: 48rem) {
+.form-button-box-row {flex-direction: row;}
+.form-button-box .form-button-box-button {padding: 0 0 0 0.5rem;}
+.form-button-box .form-button-box-row.row .form-button-box-button {padding: 0;}
+.form-button-box-button .expanding-button-box {margin: 1rem 0 0 0.5rem;}}

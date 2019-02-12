@@ -1,0 +1,109 @@
+// UPLOAD CONTAINER
+.upload-container {display: none;}
+
+.no-touch .upload-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto 2rem;
+  padding: 4rem 1rem;
+  border: 1px solid #cccece;
+  border-radius: 0.25rem;
+  text-align: center;
+}
+
+
+// ATTACHMENT LIST
+ul.attachment-list {
+  margin: 0 auto;
+  padding: 2rem 2rem 0;
+  list-style-type: none;
+}
+
+ul.attachment-list li {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+}
+
+ul.attachment-list li .line-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  width: 100%;
+  padding: 0;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+ul.attachment-list li .line-item span.file-type-icon {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  font-size: 2.25rem;
+  line-height: 1;
+}
+
+ul.attachment-list li .line-item span.file-type-icon:after {
+  display: block;
+  font-family: "LineAwesome";
+}
+
+ul.attachment-list li .line-item span.file-type-icon.jpg:after {content: "\f1e9";}
+
+ul.attachment-list li .line-item span.file-type-icon.word:after {content: "\f1ef";}
+
+ul.attachment-list li .line-item span.file-type-icon.text:after {content: "\f1ec";}
+
+ul.attachment-list li .line-item span.file-type-icon.pdf:after {content: "\f1e7";}
+
+ul.attachment-list li .line-item span.file-type-icon.other:after {content: "\f1df";}
+
+ul.attachment-list li .line-item span.file-name {
+  width: 60%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+ul.attachment-list li .line-item .button-box {
+  position: absolute;
+  right: 0;
+  width: auto;
+  @include transition(all, 0.25s, ease);
+}
+
+ul.attachment-list li .line-item .button-box.right {
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+ul.attachment-list li .line-item .expanding-button-box {max-width: 2.25rem;}
+
+ul.attachment-list li .line-item .expanding-button-box.expand {max-width: 100%;}
+
+ul.attachment-list li .line-item .expanding-button-box .expanding-button.small {display: flex;}
+
+ul.attachment-list li .line-item .expanding-button-box .expanding-button.large {display: none;}
+
+ul.attachment-list.submitted li .line-item .expanding-button-box {display: none;}
+
+ul.attachment-list.submitted li .line-item span.file-name {width: 70%;}
+
+@media (min-width: 48rem) {
+ul.attachment-list li .line-item span.file-name {width: 70%;}}
+
+
+// ATTACHMENT LIST ERRORS
+ul.attachment-list li span.error-message {margin: 0.25rem 0 0 0.5rem;}
+
+ul.attachment-list li.invalid span.error-message {opacity: 1;}
+
+ul.attachment-list li.invalid .line-item span.file-type-icon,
+ul.attachment-list li.invalid .line-item span.file-name {color: $invalid;}
+
+ul.attachment-list li.invalid .button-box.right {opacity: 0;}

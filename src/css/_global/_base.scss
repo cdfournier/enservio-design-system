@@ -1,0 +1,76 @@
+@import "color";
+@import "mixins";
+
+
+//FONTS
+$serif: "Roboto Slab", serif;
+$sans-serif: "Montserrat", sans-serif;
+
+
+// BASE
+html {
+  font-family: $sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 1.2;
+  color: $black;
+}
+
+html {font-size: 1rem;}
+
+@media screen and (min-width: 320px) {html {font-size: calc(1rem + 6 * ((100vw - 32rem) / 680))}}
+
+@media screen and (min-width: 1000px) {html {font-size: 1.25rem;}}
+
+body, .body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0;
+}
+
+body {animation: 1s ease-out 0s 1 fadeIn;}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+::-moz-selection {
+  color: $white;
+  background: $color-one;
+}
+
+::selection {
+  color: $white;
+  background: $color-one;
+}
+
+a {
+  outline-color: $color-one;
+  font-weight: 500;
+  text-decoration: none;
+  color: $color-one;
+  @include transition(all, 0.25s, ease);
+}
+
+a:hover, a:focus, a:active {color: $color-two;}
+
+img {
+  width: 100%;
+  height: auto;
+  margin: 0;
+}

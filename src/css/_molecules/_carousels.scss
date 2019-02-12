@@ -1,0 +1,69 @@
+// CAROUSELS
+.carousel {
+  display: block;
+  width: 100%;
+  max-width: 40rem;
+  margin: 0 auto 1rem;
+  padding: 0;
+}
+
+.carousel .flickity-prev-next-button {display: none;}
+
+.carousel .flickity-button-icon {fill: $color-one;}
+
+.carousel .flickity-page-dots {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: inherit;
+  bottom: 0;
+  width: 100%;
+  margin: 1rem auto 0;
+}
+
+.carousel .flickity-page-dots .dot {
+  width: 0.625rem;
+  height: 0.625rem;
+  margin: 0 0.25rem;
+  padding: 0;
+  line-height: 1;
+  background: $color-one;
+}
+
+.carousel .carousel-cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 40rem;
+  min-height: 100%;
+  margin: auto;
+  padding: 0 2rem;
+  text-align: left;
+}
+
+.carousel .carousel-cell.center {text-align: center;}
+
+.carousel-cell .graphic {
+  width: 25%;
+  margin: 0 auto 1rem;
+}
+
+.carousel-cell .graphic.wide {
+  width: 100%;
+  margin: 0;
+}
+
+@media (min-width: 48rem) {
+.carousel {margin: 0 auto 2rem;}
+.carousel .flickity-prev-next-button {
+  display: block;
+  min-width: inherit;
+  max-height: inherit;
+  padding: 0;
+}
+.carousel .carousel-cell {padding: 0 6rem;}
+.carousel-cell .graphic {width: 20%;}
+.carousel-cell .graphic.wide {width: 80%;}}

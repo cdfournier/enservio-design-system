@@ -1,0 +1,39 @@
+// FOOTER
+footer {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  max-width: 40rem;
+  margin: 0 auto;
+  padding: 2rem;
+  font-size: 0.833rem;
+  text-align: left;
+}
+
+footer.wide {max-width: none;}
+
+footer span {
+  margin: 1rem 0 0;
+  text-align: center;
+}
+
+@media (min-width: 35.5rem) {
+footer {
+  flex-direction: row;
+  justify-content: space-between;
+}
+footer span {
+  margin: 0;
+  width: calc(100% - 6.5rem);
+  text-align: left;
+}}
+
+footer .livechat,
+footer .livechat.offline,
+footer .livechat.online {
+  width: 6rem;
+  height: auto;
+  max-height: 1.75rem;
+}

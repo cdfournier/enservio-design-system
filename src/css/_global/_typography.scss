@@ -1,0 +1,81 @@
+// TYPOGRAPHY
+h1, h2, h3, p {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-style: normal;
+}
+
+h1 {
+  font-family: $serif;
+  font-size: 1.728rem;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+h2, h3 {
+  font-family: $serif;
+  font-size: 1.44rem;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+h3 {font-size: 1.2rem;}
+
+h1 + h2 {padding: 0.694rem 0;}
+
+p {
+  padding: 0.694rem 0 0.694rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+p:last-child {padding: 0.694rem 0 0;}
+
+small {font-size: 0.833rem;}
+
+strong, em, b {
+  font-style: normal;
+  font-weight: 500;
+}
+
+h1.center, h2.center, h3.center, p.center, strong.center, em.center, small.center {text-align: center;}
+
+h1.right, h2.right, h3.right, p.right, strong.right, em.right, small.right {text-align: right;}
+
+
+// LISTS
+ul, ol {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 0 1rem 1.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: left;
+}
+
+ul {list-style-type: disc;}
+
+ol {list-style-type: decimal;}
+
+ul li, ol li {
+  width: 100%;
+  padding: 0 0 1rem 0;
+}
+
+ul li:last-child, ol li:last-child {padding: 0;}
+
+
+// TAGS
+span.tag {
+  margin: 0 0 0 0.694rem;
+  padding: 0.125rem 0.75rem;
+  border: 1px solid $light-gray;
+  border-radius: 2rem;
+  font-size: 0.694rem;
+  background-color: $off-white;
+  white-space: nowrap;
+}

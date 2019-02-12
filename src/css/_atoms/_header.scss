@@ -1,0 +1,122 @@
+// HEADER
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: $white;
+}
+
+header.back {
+  align-items: center;
+  justify-content: center;
+}
+
+.header--fixed {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.headroom {
+  @include transition(all, 0.25s, ease-in-out);
+  will-change: transform;
+}
+
+.headroom--pinned {@include transform(translateY(0));}
+
+.headroom--unpinned {@include transform(translateY(-100%));}
+
+@media (min-width: 35.5rem) {
+header {
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+}}
+
+
+// LOGO
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  max-width: 10rem;
+  height: auto;
+  max-height: 10rem;
+  margin: 0 auto;
+  padding: 0;
+}
+
+@media (min-width: 35.5rem) {.logo {margin: 0;}}
+
+
+// NAVIGATION
+nav {
+  width: 100%;
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 100%;
+    margin: 0;
+    padding: 1rem 0 0;
+    list-style-type: none;
+  }
+
+  ul li {
+    width: auto;
+    margin: 0;
+    padding: 0 0.5rem 0 0.5rem;
+    font-size: 0.833rem;
+    font-weight: 500;
+    line-height: 1.2;
+    text-align: center;
+    text-transform: uppercase;
+    color: $color-two;
+  }
+
+  ul li:last-child {padding: 0 0.5rem 0 0.5rem;}
+
+  ul li a span {
+    font-size: 1.44rem;
+    line-height: 1;
+  }
+}
+
+@media (min-width: 35.5rem) {
+nav {width: auto;}
+nav ul {
+  justify-content: flex-end;
+  padding: 0 0 0 4rem;
+}
+nav ul li {
+  padding: 0 1rem 0 0;
+  font-size: 0.694rem;
+}
+nav ul li:last-child {padding: 0;}}
+
+@media (min-width: 64rem) {nav ul li {padding: 0 1.44rem 0 0;}}
+
+
+// BACK BUTTON
+span.back {
+  position: absolute;
+  left: 2rem;
+  font-size: 1.44rem;
+  line-height: 1;
+  color: $color-one;
+  cursor: pointer;
+  @include transition(all, 0.25s, ease-in-out);
+}
+
+span.back:hover, span.back:focus {color: $color-two;}

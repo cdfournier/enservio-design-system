@@ -1,0 +1,134 @@
+.Select {border: none !important;}
+
+.Select.Select--single {
+  display: flex;
+  width: 100%;
+  min-height: 2.5rem;
+  font-family: $sans-serif;
+  font-size: 0.833rem;
+  font-weight: 500;
+}
+
+.Select .Select-control {
+  display: inline-block;
+  height: 2.5rem;
+  border: none;
+  border-bottom: 1px solid $black;
+  border-radius: 0;
+}
+
+.Select.is-open > .Select-control {border: none;}
+
+.Select.is-disabled > .Select-control {
+  color: $med-gray !important;
+  background-color: $white !important;
+  border-color: $light-gray;
+}
+
+.Select.is-disabled.has-value.Select--single > .Select-control .Select-value .Select-value-label {color: $med-gray !important;}
+
+.Select.is-focused:not(.is-open) > .Select-control {
+  border-color: $black !important;
+  box-shadow: none !important;
+}
+
+.Select-placeholder, .Select--single > .Select-control .Select-value {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+  line-height: 3 !important;
+  color: $light-gray !important;
+}
+.Select.has-value.Select--single > .Select-control .Select-value a.Select-value-label:hover,
+.Select.has-value.is-pseudo-focused.Select--single > .Select-control .Select-value a.Select-value-label:hover,
+.Select.has-value.Select--single > .Select-control .Select-value a.Select-value-label:focus,
+.Select.has-value.is-pseudo-focused.Select--single > .Select-control .Select-value a.Select-value-label:focus {
+  color: none !important;
+}
+
+span.Select-arrow-zone {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: 40%;
+  right: 0;
+  z-index: 0;
+  width: auto;
+}
+
+.Select-control > *:last-child {padding-right: 0 !important;}
+
+.Select.has-value.Select--single > .Select-control .Select-value .Select-value-label,
+.Select.has-value.is-pseudo-focused.Select--single > .Select-control .Select-value .Select-value-label {
+  color: $black !important;
+}
+
+.Select--multi .Select-value {
+  border-color: $black !important;
+  color: $black !important;
+}
+
+.Select .Select-menu-outer {z-index: 1001;}
+
+.button {outline: none;}
+
+.category span.error-message {display: none;}
+
+.show-password-container span.error-message {display: none;}
+
+#create-inventory {position: relative;}
+
+.react-autosuggest__container {
+  position: relative;
+  width: 100%;
+}
+
+.react-autosuggest__input:focus {outline: none;}
+
+.react-autosuggest__suggestions-container {display: none;}
+
+.react-autosuggest__container--open .react-autosuggest__suggestions-container {
+  display: block;
+  position: absolute;
+  top: 3rem;
+  width: 100%;
+  border: 1px solid $light-gray;
+  background-color: $white;
+  font-weight: 300;
+  font-size: 0.833rem;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  z-index: 10000;
+}
+
+.react-autosuggest__suggestions-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.react-autosuggest__suggestion,
+.react-autosuggest__suggestion ul li:last-child {
+  cursor: pointer;
+  padding: 0.5rem !important;
+}
+
+.react-autosuggest__suggestion--focused {
+  background-color: $color-one;
+  color: $white;
+}
+
+.suggestion-content {
+  display: flex;
+  align-items: center;
+  background-repeat: no-repeat;
+}
+
+.highlight {
+  color: $color-one;
+  font-weight: 500;
+}
+
+.react-autosuggest__suggestion--highlighted {background-color: rgba(46,132,237,0.25);}
+
+.react-autosuggest__suggestion--focused .highlight {color: $black;}

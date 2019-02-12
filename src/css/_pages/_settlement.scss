@@ -1,0 +1,37 @@
+// SETTLEMENT OFFER LIST
+ul.settlement-offer {
+  margin: 0;
+  padding: 1rem 0;
+  list-style-type: none;
+}
+
+ul.settlement-offer li {
+  display: inline-flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 0 1rem;
+}
+
+ul.settlement-offer li:last-of-type {padding: 0;}
+
+ul.settlement-offer li span {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 0 0 0 1rem;
+  font-weight: 400;
+}
+
+ul.settlement-offer li span.subtract {color: $invalid;}
+
+ul.settlement-offer li span.border,
+ul.settlement-offer li span.subtract.border {
+  padding: 0 0 1rem;
+  border-bottom: 1px solid $light-gray;
+}
+
+ul.settlement-offer li.border {
+  margin: 0 0 1rem;
+  border-bottom: 1px solid $light-gray;
+}

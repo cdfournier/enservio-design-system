@@ -1,0 +1,517 @@
+
+
+// INPUT RESETS
+input[type="password"],
+input[type="checkbox"],
+input[type="select"],
+input[type="search"],
+input[type="radio"],
+input[type="email"],
+input[type="file"],
+input[type="text"],
+input[type="tel"],
+input[type="url"] {
+  outline-color: $color-one;
+  font-size: 1rem;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  @include appearance(none);
+}
+
+
+// FORMS
+form {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1rem 0;
+}
+
+fieldset {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+fieldset.max {width: 50%;}
+
+fieldset.half {width: 50%;}
+
+legend {display: none;}
+
+.field {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  position: relative;
+  width: 100%;
+  margin: 0 0 1rem;
+  padding: 0 1rem;
+}
+
+@media (min-width: 48rem) {
+fieldset {width: 50%;}
+fieldset.half {width: 25%;}
+form.xs fieldset,
+form.sm fieldset,
+form.md fieldset,
+form.sm fieldset.max,
+form.md fieldset.max {width: 100%;}
+form.sm fieldset.half,
+form.lg fieldset {width: 50%;}
+form.lg fieldset.max {width: 100%;}
+form.column {flex-direction: column;}
+form.column fieldset.small {width: 25%;}}
+
+@media (min-width: 104rem) {
+form.sm fieldset {
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+}
+form.lg fieldset {
+  width: 50%;
+  min-width: 50%;
+  max-width: 50%;
+}
+fieldset {width: 25%;}
+fieldset.half {width: 12.5%;}}
+
+
+// INPUTS, LABELS, AND PLACEHOLDERS
+.field label, .field input {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.833rem;
+  @include transition(all, 0.25s, ease-in-out);
+  touch-action: manipulation;
+}
+
+.field input {
+  z-index: 10;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  border-bottom: 1px solid $black;
+  border-radius: 0;
+  outline-color: $color-one;
+  font-weight: 400;
+  line-height: 3;
+  background-color: transparent;
+  cursor: text;
+}
+
+.field input.valid:disabled {opacity: 1;}
+
+.field input:disabled {
+  border-color: $light-gray;
+  color: $med-gray;
+  cursor: default;
+}
+
+input.email-address:disabled,
+input.email-address[type="email"].disabled {
+  border: none;
+  border-bottom: 1px solid $black;
+  font-weight: 500;
+  color: $black;
+  opacity: 1;
+}
+
+.field label {
+  margin: 0;
+  width: 100%;
+  font-weight: 500;
+  text-align: left;
+  color: $black;
+}
+
+.field input:placeholder-shown + label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: text;
+  transform-origin: left bottom;
+  white-space: nowrap;
+  @include transform(translate(0,1.5rem));
+}
+
+input::placeholder {
+  opacity: 0;
+  transition: inherit;
+}
+
+input:focus::placeholder {
+  opacity: 1;
+  color: $light-gray;
+}
+
+.field input:not(:placeholder-shown) + label,
+.field input:focus + label {
+  cursor: pointer;
+  @include transform(translate(0,0));
+}
+
+
+// VALID INPUT SETTINGS
+.field.valid input {
+  border-color: $valid;
+  color: $valid;
+  @include transition(all, 0.25s, ease-in-out);
+}
+
+.field.valid input:not(:placeholder-shown) + label,
+.field.valid input:placeholder-shown + label,
+.field.valid input:focus + label {color: $valid;}
+
+.field.valid input:not(:placeholder-shown) + label a,
+.field.valid input:placeholder-shown + label a,
+.field.valid input:focus + label a {color: $valid;}
+
+.field.valid input:not(:placeholder-shown) + label a:hover, .field.valid input:not(:placeholder-shown) + label a:focus,
+.field.valid input:placeholder-shown + label a:hover, .field.valid input:placeholder-shown + label a:focus,
+.field.valid input:focus + label a:hover, .field.valid input:focus + label a:focus {color: darken($valid, 10%);}
+
+.field.valid select {
+  border-color: $valid;
+  color: $valid;
+}
+
+.field.valid select option,
+.field.valid .select-icon,
+.field.valid label {color: $valid;}
+
+.field.valid select option span.option {color: $valid;}
+
+.field span.valid {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0 0 0 1rem;
+  font-size: 1.5rem;
+  color: $valid;
+  opacity: 0;
+  @include transition(all, 0.25s, ease-in-out);
+}
+
+.field.valid span.valid {opacity: 1;}
+
+.field.valid span.select.valid {
+  top: 1.5rem;
+  right: 2.25rem;
+}
+
+.field.valid span.valid.password {
+  top: 1.5rem;
+  right: 1rem;
+  padding: 0;
+  font-size: 1.25rem;
+}
+
+.field.valid .show-hide-password {
+  right: 2.5rem;
+  color: $valid;
+}
+
+
+// INVALID INPUT SETTINGS
+span.error-message {
+  width: 100%;
+  height: inherit;
+  min-height: 2rem;
+  margin: 0.25rem 0 0 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.833rem;
+  font-weight: 600;
+  color: $invalid;
+  text-align: left;
+  opacity: 0;
+  @include transition(all, 0.25s, ease-in-out);
+}
+
+.field.invalid span.error-message {opacity: 1;}
+
+.field.invalid input {
+  border-color: $invalid;
+  color: $invalid;
+}
+
+.field.invalid input:not(:placeholder-shown) + label,
+.field.invalid input:placeholder-shown + label,
+.field.invalid input:focus + label {color: $invalid;}
+
+.field.invalid input:not(:placeholder-shown) + label a,
+.field.invalid input:placeholder-shown + label a,
+.field.invalid input:focus + label a {color: $invalid;}
+
+.field.invalid input:not(:placeholder-shown) + label a:hover, .field.invalid input:not(:placeholder-shown) + label a:focus,
+.field.invalid input:placeholder-shown + label a:hover, .field.invalid input:placeholder-shown + label a:focus,
+.field.invalid input:focus + label a:hover, .field.invalid input:focus + label a:focus {color: darken($invalid, 10%);}
+
+.field.invalid select {
+  border-color: $invalid;
+  color: $invalid;
+}
+
+.field.invalid select option,
+.field.invalid .select-icon,
+.field.invalid label {color: $invalid;}
+
+.field.invalid select option span.option {color: $invalid;}
+
+.field.invalid .show-hide-password {color: $invalid;}
+
+
+// SELECT INPUTS
+.field select { // reset
+  border: none;
+  border-radius: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  @include appearance(none);
+}
+
+.field select {
+  display: inline-block;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  min-height: 2.3125rem;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  border-bottom: 1px solid $black;
+  outline-color: $color-one;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.833rem;
+  font-weight: 400;
+  line-height: 3;
+  text-overflow: ellipsis;
+  background-color: transparent;
+  white-space: nowrap;
+}
+
+.field select option {
+  overflow: hidden;
+  outline-color: $color-one;
+  text-overflow: ellipsis;
+}
+
+.text .field {padding: 0;}
+
+.field .select-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  top: 1.575rem;
+  right: 1rem;
+  z-index: 0;
+  font-size: 1rem;
+}
+
+.field select:disabled {
+  border-color: $light-gray;
+  color: $med-gray;
+}
+
+.field select:disabled + .select-icon {color: $med-gray;}
+
+
+// CHECKBOXES
+input[type="checkbox"] {
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin: 0;
+  border: 1px solid $black;
+  background-color: $white;
+  cursor: pointer;
+  @include appearance(none);
+  @include transition(all, 0.25s, ease-in-out);
+}
+
+input[type="checkbox"]:checked:before {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 1.125rem;
+  height: 1.125rem;
+  margin: 0;
+  font-family: "LineAwesome";
+  font-size: 1rem;
+  color: $white;
+  content: '\f17b';
+}
+
+input[type="checkbox"]:checked:not(:disabled) {background-color: $black;}
+
+label.checkbox, label.radio {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: auto;
+  min-height: 1.25rem;
+  padding: 0 0 0 2rem;
+  line-height: 1.5;
+}
+
+
+// VALID CHECKBOX SETTINGS
+.field.valid input[type="checkbox"]:checked:not(:disabled) {background-color: $valid;}
+
+.field.valid label span.checkmark {border-color: $valid;}
+
+
+// INVALID CHECKBOX SETTINGS
+.field.invalid input[type="checkbox"]:checked:not(:disabled) {background-color: $invalid;}
+
+span.error-message.checkbox {padding: 0 0 0 2rem;}
+
+.field.invalid label span.checkmark {border-color: $invalid;}
+
+
+// RADIO BUTTONS
+input[type="radio"] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin: 0;
+  border: 1px solid $black;
+  border-radius: 100%;
+  background-color: $white;
+  cursor: pointer;
+  @include appearance(none);
+  @include transition(all, 0.25s, ease-in-out);
+}
+
+input[type="radio"]:checked:before {
+  display: block;
+  position: relative;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 100%;
+  background-color: $black;
+  content: "";
+}
+
+label.radio {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  min-height: 1.25rem;
+  padding: 0 0 0 1.75rem;
+}
+
+input:disabled, input:disabled:checked {
+  border-color: $light-gray;
+  cursor: default;
+}
+
+input[type="radio"]:disabled:checked:before {
+  display: block;
+  position: relative;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 100%;
+  background-color: $light-gray;
+  content: "";
+}
+
+
+// VALID RADIO BUTTON SETTINGS
+.field.valid input[type="radio"]:checked:before {background-color: $valid;}
+
+
+// INVALID RADIO BUTTON SETTINGS
+.field.invalid input[type="radio"]:checked:before {background-color: $invalid;}
+
+span.error-message.radio {padding: 0 0 0 1.75rem;}
+
+
+// SWITCHES
+input.toggle[type="checkbox"] {
+  -webkit-appearance: none;
+  appearance: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  width: 3.5rem;
+  height: 1.75rem;
+  min-height: 1.75rem;
+  max-height: 1.75rem;
+  margin: 0;
+  padding: 0.1875rem;
+  border-color: transparent;
+  border-radius: 2rem;
+  background-color: $dark-gray;
+  @include transition(all, 0.25s, ease-in-out);
+}
+
+input.toggle[type="checkbox"]:checked:before {display: none;}
+
+input.toggle[type="checkbox"]:after {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: 0;
+  width: 1.25rem;
+  height: 1.25rem;
+  margin: 0;
+  border-radius: 100%;
+  font-family: "LineAwesome";
+  font-size: 1rem;
+  background-color: white;
+  content: "\f342";
+  @include transition(all, 0.25s, ease-in-out);
+}
+
+input.toggle[type="checkbox"]:checked {
+  background-color: $color-one;
+}
+
+input.toggle[type="checkbox"]:checked:after {
+  left: calc(100% - 1.25rem);
+  color: $color-one;
+  content: "\f17b";
+}
+
+label.toggle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: auto;
+  min-height: 1.75rem;
+  padding: 0 0 0 4rem;
+}
+
+
+// VALID TOGGLE SWITCH SETTINGS
+.field.valid input.toggle[type="checkbox"]:not(:disabled),
+.field.valid input.toggle[type="checkbox"]:checked:not(:disabled) {background-color: $valid;}
+
+.field.valid input.toggle[type="checkbox"]:after {color: $valid;}
+
+
+// INVALID TOGGLE SWITCH SETTINGS
+.field.invalid input.toggle[type="checkbox"]:not(:disabled),
+.field.invalid input.toggle[type="checkbox"]:checked:not(:disabled) {background-color: $invalid;}
+
+.field.invalid input.toggle[type="checkbox"]:after {color: $invalid;}

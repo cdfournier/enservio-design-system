@@ -1,0 +1,110 @@
+// CLAIM INFORMATION
+.claim {
+  display: block;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 2rem 0;
+}
+
+.claim:first-of-type {padding: 0 2rem;}
+
+.claim-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 1rem;
+  border: 1px solid $light-gray;
+  border-radius: 0.25rem;
+  text-align: center;
+  background-color: $off-white;
+}
+
+.claim-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+  margin: 0 0 1rem;
+  padding: 0;
+  background-color: $white;
+}
+
+.claim-information {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+  padding: 1rem;
+  border: 1px solid $light-gray;
+  border-radius: 0.25rem;
+  text-align: left;
+  background-color: $white;
+}
+
+.claim-details {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  padding: 0;
+}
+
+.claim-details.items, .claim-details.attachments,
+.claim-details.status, .claim-details.balance {display: none;}
+
+.claim-details:last-of-type {padding: 0;}
+
+.claim-details-icon {
+  font-size: 2rem;
+  color: $light-gray;
+}
+
+.claim-details .details {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  overflow: hidden;
+  padding: 0 0 0 0.5rem;
+  text-align: left;
+}
+
+.claim-details .details span.claim-label {
+  font-size: 0.694rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: $light-gray;
+}
+
+.claim-details .details span.claim-data {
+  width: -webkit-fill-available;
+  overflow: hidden;
+  font-weight: 500;
+  text-overflow: ellipsis;
+}
+
+@media (min-width: 30rem) {
+.claim {max-width: 56rem;}
+.claim-information {
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.claim-details {width: auto;}
+.claim-details:nth-of-type(3n) {padding: 0;}}
+
+@media (min-width: 48rem) {
+.claim-details {padding: 0 3rem 0 0;}
+.claim-details.items,
+.claim-details.status {display: flex;}}
+
+@media (min-width: 64rem) {
+.claim-details.attachments,
+.claim-details.balance {display: flex;}}

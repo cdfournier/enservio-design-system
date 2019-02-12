@@ -1,0 +1,154 @@
+
+
+
+// ALERT BARS
+.alerts {position: absolute;}
+
+.alert-bar {
+  position: fixed;
+  z-index: 150;
+  width: 100%;
+  @include transition(all, 0.5s, ease-in-out);
+  @include transform(translateY(-20rem));
+}
+
+.alert-bar.error, .alert-bar.confirm {background-color: $invalid;}
+
+.alert-bar.success {background-color: $valid;}
+
+.alert-bar.system {background-color: $color-one;}
+
+.alert-bar.error.show,
+.alert-bar.confirm.show,
+.alert-bar.success.show,
+.alert-bar.system.show {@include transform(translateY(0));}
+
+.alert-bar .alert-bar-details {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 1rem;
+  color: $white;
+}
+
+.alert-bar .alert-bar-details span {font-size: 2rem;}
+
+.alert-bar .alert-bar-details span.dismiss {cursor: pointer;}
+
+.alert-bar .alert-bar-details span:first-of-type {padding: 0 1rem 0 0;}
+
+.alert-bar .alert-bar-details span:last-of-type {padding: 0 0 0 1rem;}
+
+.alert-bar .alert-bar-details .alert-bar-message {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.alert-bar .alert-bar-details .alert-bar-message span {
+  padding: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  color: $white;
+}
+
+@media (min-width: 48rem) {
+.alert-bar .alert-bar-details {padding: 2rem;}
+.alert-bar .alert-bar-details .alert-bar-message span {font-size: 1.2rem;}}
+
+
+// ALERT BAR ACTION BOX SETTINGS
+.alert-bar.confirm .alert-bar-details span {padding: 0 1rem 0 0;}
+
+.alert-bar.confirm .alert-bar-details .confirm-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.alert-bar.confirm .alert-bar-details span.confirm-action-box {
+  display: inline-flex;
+  align-items: center;
+  padding: 1rem 0 0 0;
+  font-size: 0.694rem;
+  font-weight: 500;
+  line-height: 0;
+  text-transform: uppercase;
+  color: $white;
+  opacity: 1;
+  @include transition(all, 0.25s, ease-in-out);
+}
+
+.alert-bar.confirm .alert-bar-details .confirm-action-box span.confirm-action {
+  padding: 0.875rem 1rem;
+  border-radius: 4rem;
+  font-size: 0.833rem;
+  @include transition(all, 0.25s, ease-in-out);
+}
+
+.alert-bar.confirm .alert-bar-details .confirm-action-box span.confirm-action {
+  margin: 0 0 0 1rem;
+  border: 1px solid $white;
+  color: $invalid;
+  background-color: $white;
+}
+
+.alert-bar.confirm .alert-bar-details .confirm-action-box span.confirm-action:hover,
+.alert-bar.confirm .alert-bar-details .confirm-action-box span.confirm-action:focus {
+  color: $white;
+  background-color: $invalid;
+}
+
+.alert-bar.confirm .alert-bar-details .confirm-action-box span.confirm-action a {color: $invalid;}
+
+.alert-bar.confirm .alert-bar-details .confirm-action-box span.confirm-action a:hover,
+.alert-bar.confirm .alert-bar-details .confirm-action-box span.confirm-action a:focus {color: $white;}
+
+.alert-bar.confirm .alert-bar-details .confirm-action-box span.confirm-action.secondary {
+  margin: 0;
+  border: 1px solid $white;
+  color: $white;
+  background-color: $invalid;
+}
+
+.alert-bar.confirm .alert-bar-details .confirm-action-box span.confirm-action.secondary:hover,
+.alert-bar.confirm .alert-bar-details .confirm-action-box span.confirm-action.secondary:focus {
+  color: $invalid;
+  background-color: $white;
+}
+
+@media (min-width: 48rem) {
+.alert-bar.confirm .alert-bar-details .confirm-details {flex-direction: row;}
+.alert-bar.confirm .alert-bar-details span.confirm-action-box {padding: 0 0 0 1rem;}}
+
+
+// TIMEOUT
+.timeout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -5000;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  background-color: $white;
+  opacity: 0;
+  @include transition(all, 0.5s, ease-in-out);
+  @include transform(translateY(-100%));
+}
+
+.timeout.show {
+  z-index: 5000;
+  opacity: 1;
+  @include transform(translateY(0));
+}
+
+.timeout .text {
+  margin: 0 auto;
+  padding: 2rem;
+}
