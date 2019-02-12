@@ -2175,6 +2175,12 @@ main {
 .receipt-item .receipt-details .replacement-details p {padding: 0 1rem;}}
 
 
+// SUBMITTED/DISABLED RECEIPTS
+.receipt-item.disabled {color: $med-gray;}
+.receipt-item.disabled .receipt-item-header span.item-number {background-color: $med-gray;}
+.receipt-item.disabled .receipt-item-header .item-details .replacement-count span {background-color: $med-gray;}
+
+
 // RECEIPT SUMMARY
 .receipt-item .receipt-details .replacement-details.summary h2 {text-align: left;}
 

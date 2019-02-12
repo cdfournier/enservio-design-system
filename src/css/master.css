@@ -2165,6 +2165,15 @@ main {
   .receipt-item .receipt-details .replacement-details p {
     padding: 0 1rem; } }
 
+.receipt-item.disabled {
+  color: #7f7f7f; }
+
+.receipt-item.disabled .receipt-item-header span.item-number {
+  background-color: #7f7f7f; }
+
+.receipt-item.disabled .receipt-item-header .item-details .replacement-count span {
+  background-color: #7f7f7f; }
+
 .receipt-item .receipt-details .replacement-details.summary h2 {
   text-align: left; }
 
