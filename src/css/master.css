@@ -25,7 +25,7 @@ body, .body {
   margin: 0 auto;
   padding: 0; }
 
-body {
+body, .body {
   animation: 1s ease-out 0s 1 fadeIn; }
 
 @keyframes fadeIn {
@@ -1438,7 +1438,7 @@ fieldset.max {
   width: 50%; }
 
 fieldset.half {
-  width: 50%; }
+  width: calc(50% - 1rem); }
 
 legend {
   display: none; }

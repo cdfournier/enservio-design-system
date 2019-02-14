@@ -31,9 +31,59 @@
           <h1>Accordions</h1>
           <p>An accordion is used to show (and hide) content. Accordions differ from dropdowns in a couple of ways. When an accordion is opened its content pushes the page content down	whereas dropdown content lays over existing page content. We use accordions in this design system for things like Current Inventory and Receipt Capture.</p>
         </div>
+        <div class="text guide">
+          <h2>Receipt Capture Accordions</h2>
+        </div>
         <div class="split wide">
           <div class="design-sample">
             <figcaption>Design Sample</figcaption>
+            <div class="inventory-receipt-list xl">
+              <div class="accordion receipts">
+                <input id="item-1" type="checkbox" name="items">
+                <label for="item-1">
+                  <div class="item-number">Item Number:&nbsp;<span>5000</span></div>
+                  <div class="item-header">
+                    <div class="description"><p>This is a really long description for lamps</p></div>
+                    <div class="replacement-count"><span>1000</span>of<span>2000</span>items replaced</div>
+                    <div class="buttons">
+                      <a class="button color-one small"><span class="button-label"><i class="la la-plus"></i></span></a>
+                      <a class="button color-one large"><span class="button-label">Add</span></a>
+                    </div>
+                  </div>
+                </label>
+                <div class="item-details">
+                  <div class="replacement-count"><span>1000</span>of<span>2000</span>items replaced</div>
+                  <div class="message"><span class="submitted">You have submitted {0} receipt(s) for this line.</span><span class="added">You have added {0} receipt(s) for this line that you have not yet submitted.</span><span class="more">You can enter {0} more receipt(s) for this line.</span>
+                  </div>
+                  <div class="receipt">
+                    <div class="receipt-number"><span>Receipt #1</span></div>
+                    <div class="receipt-details">
+                      <figure><img src="../../assets/images/target-lamp-01-highlighted.jpg" alt="Receipt Image"></figure>
+                      <div class="receipt-control">
+                        <ul>
+                          <li><b>Amount Per Item:</b><span class="currency">{000.00}</span></li>
+                          <li><b>Quantity Replaced:</b><span>{0}</span></li>
+                          <li><b>Subtotal:</b><span class="currency">{000.00}</span></li>
+                        </ul>
+                        <div class="button-box">
+                          <!-- <a href="../view-submitted-c/index.html" class="button secondary color-one"><span class="button-label">View</span></a> -->
+                          <a href="../edit-details/index.html" class="button secondary color-one"><span class="button-label">Edit</span></a>
+                          <div class="expanding-button-box item-one color-one" style="margin: 1rem 0 0 0;">
+                            <div class="expanding-button small"><span class="trash-icon"><i class="la la-trash"></i></span></div>
+                            <div class="expanding-button large">Delete</div>
+                            <div class="confirm-action-box">
+                              <span class="confirm-action-text">Are you sure?</span>
+                              <span class="confirm-action secondary">No</span>
+                              <span class="confirm-action">Yes</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="notes wide">
               <figcaption>Notes</figcaption>
               <p></p>
@@ -42,8 +92,52 @@
           <div class="code-sample">
             <figure>
               <figcaption>html</figcaption>
-<pre><code>
-</code></pre>
+<pre><code>&lt;div class=&quot;inventory-receipt-list xl&quot;&gt;
+  &lt;div class=&quot;accordion receipts&quot;&gt;
+    &lt;input id=&quot;item-1&quot; type=&quot;checkbox&quot; name=&quot;items&quot;&gt;
+    &lt;label for=&quot;item-1&quot;&gt;
+      &lt;div class=&quot;item-number&quot;&gt;Item Number:&amp;nbsp;&lt;span&gt;5000&lt;/span&gt;&lt;/div&gt;
+      &lt;div class=&quot;item-header&quot;&gt;
+        &lt;div class=&quot;description&quot;&gt;&lt;p&gt;This is a really long description for lamps&lt;/p&gt;&lt;/div&gt;
+        &lt;div class=&quot;replacement-count&quot;&gt;&lt;span&gt;1000&lt;/span&gt;of&lt;span&gt;2000&lt;/span&gt;items replaced&lt;/div&gt;
+        &lt;div class=&quot;buttons&quot;&gt;
+          &lt;a class=&quot;button color-one small&quot;&gt;&lt;span class=&quot;button-label&quot;&gt;&lt;i class=&quot;la la-plus&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/a&gt;
+          &lt;a class=&quot;button color-one large&quot;&gt;&lt;span class=&quot;button-label&quot;&gt;Add&lt;/span&gt;&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/label&gt;
+    &lt;div class=&quot;item-details&quot;&gt;
+      &lt;div class=&quot;replacement-count&quot;&gt;&lt;span&gt;1000&lt;/span&gt;of&lt;span&gt;2000&lt;/span&gt;items replaced&lt;/div&gt;
+      &lt;div class=&quot;message&quot;&gt;&lt;span class=&quot;submitted&quot;&gt;You have submitted {0} receipt(s) for this line.&lt;/span&gt;&lt;span class=&quot;added&quot;&gt;You have added {0} receipt(s) for this line that you have not yet submitted.&lt;/span&gt;&lt;span class=&quot;more&quot;&gt;You can enter {0} more receipt(s) for this line.&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;receipt&quot;&gt;
+        &lt;div class=&quot;receipt-number&quot;&gt;&lt;span&gt;Receipt #1&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;receipt-details&quot;&gt;
+          &lt;figure&gt;&lt;img src=&quot;../../assets/images/target-lamp-01-highlighted.jpg&quot; alt=&quot;Receipt Image&quot;&gt;&lt;/figure&gt;
+          &lt;div class=&quot;receipt-control&quot;&gt;
+            &lt;ul&gt;
+              &lt;li&gt;&lt;b&gt;Amount Per Item:&lt;/b&gt;&lt;span class=&quot;currency&quot;&gt;{000.00}&lt;/span&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;b&gt;Quantity Replaced:&lt;/b&gt;&lt;span&gt;{0}&lt;/span&gt;&lt;/li&gt;
+              &lt;li&gt;&lt;b&gt;Subtotal:&lt;/b&gt;&lt;span class=&quot;currency&quot;&gt;{000.00}&lt;/span&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+            &lt;div class=&quot;button-box&quot;&gt;
+              &lt;a href=&quot;../edit-details/index.html&quot; class=&quot;button secondary color-one&quot;&gt;&lt;span class=&quot;button-label&quot;&gt;Edit&lt;/span&gt;&lt;/a&gt;
+              &lt;div class=&quot;expanding-button-box item-one color-one&quot; style=&quot;margin: 1rem 0 0 0;&quot;&gt;
+                &lt;div class=&quot;expanding-button small&quot;&gt;&lt;span class=&quot;trash-icon&quot;&gt;&lt;i class=&quot;la la-trash&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;
+                &lt;div class=&quot;expanding-button large&quot;&gt;Delete&lt;/div&gt;
+                &lt;div class=&quot;confirm-action-box&quot;&gt;
+                  &lt;span class=&quot;confirm-action-text&quot;&gt;Are you sure?&lt;/span&gt;
+                  &lt;span class=&quot;confirm-action secondary&quot;&gt;No&lt;/span&gt;
+                  &lt;span class=&quot;confirm-action&quot;&gt;Yes&lt;/span&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
             </figure>
           </div>
         </div>

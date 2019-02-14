@@ -17,7 +17,9 @@
 @import "_molecules/claims";
 
 @import "_pages/settlement";
+@import "_pages/inventory-new";
 @import "_pages/payments";
+@import "_pages/receipts-new";
 
 
 // ACCORDIONS
@@ -38,7 +40,7 @@
 
 .accordion:last-of-type {margin: 0 auto;}
 
-.accordion input {
+.accordion input.accordion {
   position: absolute;
   z-index: -1;
   opacity: 0;
@@ -48,40 +50,26 @@
   display: flex;
   flex-direction: column;
   width: 100%;
+  cursor: pointer;
 }
 
 .item-number {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: 100%;
-  height: 1.625rem;
+  font-size: 0.694rem;
   font-weight: 500;
-  line-height: 1.625rem;
+  text-transform: uppercase;
 }
 
-.item-number span {
-  display: flex;
-  width: min-content;
-  min-width: 1.625rem;
-  height: 1.625rem;
-  min-height: 1.625rem;
-  margin: 0;
-  padding: 0 0.625rem;
-  border-radius: 4rem;
-  font-size: 0.833rem;
-  font-weight: 500;
-  line-height: 1.625rem;
-  color: $white;
-  background-color: $black;
-}
+.item-number span {font-weight: 700;}
 
 
-// ACCORDION HEADER
+// ACCORDION ITEM HEADER
 .item-header {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
+  min-height: 2.125rem;
   margin: 0;
 }
 
@@ -92,13 +80,20 @@
   margin: 0 0 0 0.5rem;
   font-family: "LineAwesome";
   content: "\f110";
+  @include transition(all, 0.5s, ease-in-out, 0s);
+  @include transform(rotate(0turn));
+}
+
+.accordion input:checked ~ .item-header:after {
+  @include transition(all, 0.5s, ease-in-out, 0s);
+  @include transform(rotate(0.5turn));
 }
 
 .description {
   display: flex;
   flex-direction: row;
   align-items: center;
-  width: calc(100% - 4rem);
+  width: calc(100% - 5rem);
   padding: 0 0.5rem 0 0;
 }
 
@@ -111,8 +106,12 @@
   white-space: nowrap;
 }
 
+@media (min-width: 64rem) {
+.item-header:after {width: 2.5%;}
+.description {width: 45%;}}
 
-// ACCORDIAN DETAILS
+
+// ACCORDION ITEM DETAILS
 .item-details {
   width: 100%;
   max-height: 0;
@@ -134,66 +133,16 @@
   @include transition(max-height, 0.5s, ease-in-out);
 }
 
-.message {display: block;}
-
-.message span {
-//   display: none;
-  margin: 0 0.25rem 0 0;
+.message {
+  display: block;
+  line-height: 1.5;
 }
 
-.message span.show {display: inline;}
+.message span {margin: 0 0.25rem 0 0;}
 
 .message span:last-of-type {margin: 0;}
 
-
-// RECEIPT REPLACEMENT COUNTS
-.replacement-count {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 0 0 1rem;
-  font-weight: 500;
-}
-
-.replacement-count span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: auto;
-  min-width: 1.625rem;
-  height: 1.625rem;
-  min-height: 1.625rem;
-  margin: 0 0.5rem 0 0;
-  padding: 0 0.625rem;
-  border-radius: 4rem;
-  font-size: 0.833rem;
-  font-weight: 500;
-  line-height: 1.625rem;
-  color: $white;
-  background-color: $black;
-}
-
-.replacement-count span:first-of-type {margin: 0 0.5rem 0 0;}
-
-.replacement-count span:last-of-type {margin: 0 0.5rem 0 0.5rem;}
-
-.item-header .replacement-count {display: none;}
-
-@media (min-width: 30rem) {
-.item-details .replacement-count {justify-content: flex-start;}
-}
-
-
-// RECEIPTS
-.receipt-number {
-  display: block;
-  width: 100%;
-  padding: 0 0 0.5rem;
-  font-weight: 500;
-}
-
-.receipt-number:before {
+.message:after {
   display: block;
   width: 100%;
   height: 1px;
@@ -202,61 +151,17 @@
   content: "";
 }
 
-.receipt-details {
-  display: flex;
-  flex-direction: column-reverse;
-  width: 100%;
-}
-
-.receipt-details figure {
-  display: grid;
-  width: 100%;
-  margin: 1rem auto 0;
-}
-
-.receipt-control {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.receipt-control ul {
-  display: flex;
-  flex-direction: column;
-  padding: 0;
-  list-style-type: none;
-}
-
-.receipt-control ul li {
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  width: 100%;
-  padding: 0;
-  font-weight: inherit;
-}
-
-.receipt-control ul li span {
-  display: flex;
-  flex-direction: row;
-  position: absolute;
-  right: 0;
-}
-
-.receipt-control .button-box {align-items: flex-start;}
-
-@media (min-width: 35.5rem) {
-.receipt-details {flex-direction: row;}
-.receipt-details figure {
-  width: 25%;
-  margin: 0 1rem 0 0;
-}}
-
-@media (min-width: 48rem) {.receipt-control .button-box {flex-direction: column;}}
-
 
 // ACCORDIAN BUTTONS
-.buttons {display: grid;}
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: auto;
+  min-width: 3rem;
+  height: auto;
+  min-height: 2.25rem;
+}
 
 .buttons .large {display: none;}
 
@@ -272,6 +177,8 @@
   max-height: 2.25rem;
   margin: 0 0 0 0.5rem;
 }}
+
+@media (min-width: 64rem) {.buttons {width: 17.5%;}}
 
 
 // SMALL BUTTONS
@@ -293,7 +200,7 @@
 .button.small span {position: absolute;}
 
 
-// DELETE THESE BEFORE IMPORT
+// DELETE THESE BEFORE IMPORT?
 .inventory-receipt-list.xl {
   margin: 2rem auto 0;
   padding: 0 2rem;

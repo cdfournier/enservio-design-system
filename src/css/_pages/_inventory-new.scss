@@ -1,0 +1,22 @@
+// DELETE THESE BEFORE IMPORT?
+.current-inventory-list {
+  padding: 2rem 1rem 0;
+}
+
+
+// INVENTORY ITEM HEADER
+.inventory .item-header {min-height: inherit;}
+
+.inventory .description {width: calc(100% - 1.5rem);}
+
+.cost {display: none;}
+.quantity {display: none;}
+
+
+// INVENTORY ITEM DETAILS
+.inventory .item-details:before {display: none;}
+
+.inventory .item-details form {padding: 2rem 0 0;}
+
+
+// INVENTORY ITEM DETAILS FORM

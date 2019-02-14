@@ -40,7 +40,7 @@ fieldset {
 
 fieldset.max {width: 50%;}
 
-fieldset.half {width: 50%;}
+fieldset.half {width: calc(50% - 1rem);}
 
 legend {display: none;}
 
