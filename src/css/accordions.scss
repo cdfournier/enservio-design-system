@@ -40,7 +40,7 @@
 
 .accordion:last-of-type {margin: 0 auto;}
 
-.accordion input.accordion {
+.accordion > input {
   position: absolute;
   z-index: -1;
   opacity: 0;
@@ -198,10 +198,3 @@
 }
 
 .button.small span {position: absolute;}
-
-
-// DELETE THESE BEFORE IMPORT?
-.inventory-receipt-list.xl {
-  margin: 2rem auto 0;
-  padding: 0 2rem;
-}
