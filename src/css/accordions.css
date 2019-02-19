@@ -2365,6 +2365,92 @@ ul.settlement-offer li.border {
   .current-inventory-list {
     padding: 2rem 2rem 0; } }
 
+.current-inventory {
+  position: fixed;
+  top: calc(100vh - 7rem);
+  left: 0;
+  z-index: 200;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 0 2rem;
+  background-color: #ffffff;
+  -webkit-transition: top 0.4s ease-in-out 0s;
+  -moz-transition: top 0.4s ease-in-out 0s;
+  -ms-transition: top 0.4s ease-in-out 0s;
+  -o-transition: top 0.4s ease-in-out 0s;
+  transition: top 0.4s ease-in-out 0s; }
+
+.current-inventory.open {
+  top: 0;
+  overflow-y: scroll; }
+
+.current-inventory .current-inventory-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 5rem;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  background-color: #2e84ed;
+  cursor: pointer;
+  -webkit-transition: all 0.25s ease-in-out 0s;
+  -moz-transition: all 0.25s ease-in-out 0s;
+  -ms-transition: all 0.25s ease-in-out 0s;
+  -o-transition: all 0.25s ease-in-out 0s;
+  transition: all 0.25s ease-in-out 0s; }
+
+.current-inventory .current-inventory-bar h2 {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  color: #ffffff; }
+
+.current-inventory .current-inventory-bar h2:after {
+  display: block;
+  margin: 0 0 0 0.5rem;
+  content: "\f183";
+  font-family: "LineAwesome";
+  font-size: 1.75rem;
+  color: #ffffff;
+  opacity: 1;
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  -ms-transition: all 0.4s ease-in-out 0s;
+  -o-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s; }
+
+.current-inventory.open .current-inventory-bar h2:after {
+  -webkit-transform: rotate(0.5turn);
+  -moz-transform: rotate(0.5turn);
+  -ms-transform: rotate(0.5turn);
+  -o-transform: rotate(0.5turn);
+  transform: rotate(0.5turn); }
+
+.current-inventory .current-inventory-bar span.counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.75rem;
+  min-height: 1.75rem;
+  margin: 0 0 0 1rem;
+  border-radius: 2rem;
+  font-size: 0.833rem;
+  font-weight: 700;
+  line-height: 1.75rem;
+  color: #2e84ed;
+  background-color: #ffffff; }
+
+@media (min-width: 48rem) {
+  .current-inventory {
+    position: relative;
+    top: inherit;
+    padding: 3rem 0 0; }
+  .current-inventory .current-inventory-bar h2:after {
+    opacity: 0; } }
+
 .accordion.inventory {
   padding: 1rem 0; }
 
@@ -2672,6 +2758,10 @@ ul.settlement-offer li.border {
   .transactions-ledger .control .button-box .button {
     margin: 0; } }
 
+.receipt-list {
+  margin: 2rem auto 0;
+  padding: 0 2rem; }
+
 .replacement-count {
   display: flex;
   flex-direction: row;
@@ -2834,7 +2924,7 @@ ul.settlement-offer li.border {
 .accordion:last-of-type {
   margin: 0 auto; }
 
-.accordion input.accordion {
+.accordion > input {
   position: absolute;
   z-index: -1;
   opacity: 0; }
@@ -3004,7 +3094,3 @@ ul.settlement-offer li.border {
 
 .button.small span {
   position: absolute; }
-
-.inventory-receipt-list.xl {
-  margin: 2rem auto 0;
-  padding: 0 2rem; }
