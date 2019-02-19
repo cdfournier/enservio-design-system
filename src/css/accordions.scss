@@ -84,9 +84,9 @@
   @include transform(rotate(0turn));
 }
 
-.accordion input:checked ~ .item-header:after {
+.accordion input.accordion:checked ~ label .item-header:after {
   @include transition(all, 0.5s, ease-in-out, 0s);
-  @include transform(rotate(0.5turn));
+  @include transform(rotate(-0.5turn));
 }
 
 .description {
@@ -108,7 +108,10 @@
 
 @media (min-width: 64rem) {
 .item-header:after {width: 2.5%;}
-.description {width: 45%;}}
+.description {
+  width: 45%;
+  min-width: 45%;
+}}
 
 
 // ACCORDION ITEM DETAILS
@@ -129,7 +132,7 @@
 }
 
 .accordion input:checked ~ .item-details {
-  max-height: 100rem;
+  max-height: 500rem;
   @include transition(max-height, 0.5s, ease-in-out);
 }
 
@@ -178,7 +181,11 @@
   margin: 0 0 0 0.5rem;
 }}
 
-@media (min-width: 64rem) {.buttons {width: 17.5%;}}
+@media (min-width: 64rem) {
+.buttons {
+  width: 15.5%;
+  min-width: 15.5%;
+}}
 
 
 // SMALL BUTTONS

@@ -2361,23 +2361,108 @@ ul.settlement-offer li.border {
 .current-inventory-list {
   padding: 2rem 1rem 0; }
 
+@media (min-width: 21.625rem) {
+  .current-inventory-list {
+    padding: 2rem 2rem 0; } }
+
+.accordion.inventory {
+  padding: 1rem 0; }
+
+.inventory .item-number {
+  padding: 0 1rem; }
+
+.inventory .item-number span.tag {
+  margin: 0 0 0 0.694rem;
+  padding: 0.125rem 0.75rem;
+  border: 1px solid #2e84ed;
+  border-radius: 2rem;
+  font-size: 0.694rem;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: #2e84ed;
+  white-space: nowrap; }
+
 .inventory .item-header {
-  min-height: inherit; }
+  min-height: inherit;
+  padding: 0 1rem; }
+
+.inventory .description,
+.inventory .cost,
+.inventory .qty {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0.5rem 0.5rem 0 0; }
 
 .inventory .description {
   width: calc(100% - 1.5rem); }
 
-.cost {
+.inventory .description span,
+.inventory .cost span,
+.inventory .qty span {
+  font-size: 0.694rem;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.inventory .description p,
+.inventory .cost p,
+.inventory .qty p {
+  display: block;
+  padding: 0;
+  overflow: hidden;
+  text-align: left;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+.inventory .cost, .inventory .qty {
   display: none; }
 
-.quantity {
-  display: none; }
+@media (min-width: 48rem) {
+  .inventory .description {
+    width: calc(80% - 1.5rem); }
+  .inventory .cost {
+    display: flex;
+    width: calc(25% - 1.5rem); } }
+
+@media (min-width: 64rem) {
+  .inventory .description {
+    width: calc(70% - 1.5rem); }
+  .inventory .cost {
+    width: calc(22% - 1.5rem); }
+  .inventory .qty {
+    display: flex;
+    width: calc(18% - 1.5rem); } }
 
 .inventory .item-details:before {
-  display: none; }
+  display: block;
+  width: calc(100% - 2rem);
+  height: 1px;
+  margin: 2rem 1rem 0;
+  background-color: #cccece;
+  content: ""; }
 
 .inventory .item-details form {
   padding: 2rem 0 0; }
+
+.accordion.inventory.disabled .item-number {
+  color: #7f7f7f; }
+
+.accordion.inventory.disabled .item-header {
+  color: #7f7f7f; }
+
+.accordion.inventory.disabled .field input {
+  border-bottom: 1px solid #7f7f7f;
+  color: #7f7f7f; }
+
+.accordion.inventory.disabled .field label {
+  color: #7f7f7f; }
+
+.accordion.inventory.disabled .field select {
+  border-bottom: 1px solid #7f7f7f;
+  color: #7f7f7f; }
+
+.accordion.inventory.disabled .field .select-icon {
+  color: #7f7f7f; }
 
 .transactions, .ach-history {
   display: block;
@@ -2630,7 +2715,8 @@ ul.settlement-offer li.border {
   .item-header .replacement-count {
     display: flex;
     justify-content: flex-end;
-    width: 42.5%;
+    width: 35.5%;
+    min-width: 35.5%;
     padding: 0; } }
 
 .receipt {
@@ -2712,6 +2798,21 @@ ul.settlement-offer li.border {
   .receipt-control .button-box {
     flex-direction: column; } }
 
+.accordion.receipts.disabled .item-number {
+  color: #7f7f7f; }
+
+.accordion.receipts.disabled .item-header {
+  color: #7f7f7f; }
+
+.accordion.receipts.disabled .replacement-count span {
+  background-color: #7f7f7f; }
+
+.accordion.receipts.disabled .item-details {
+  color: #7f7f7f; }
+
+.accordion.receipts.disabled .recplacement-count {
+  color: #7f7f7f; }
+
 .accordion {
   display: flex;
   flex-direction: column;
@@ -2779,17 +2880,17 @@ ul.settlement-offer li.border {
   -o-transform: rotate(0turn);
   transform: rotate(0turn); }
 
-.accordion input:checked ~ .item-header:after {
+.accordion input.accordion:checked ~ label .item-header:after {
   -webkit-transition: all 0.5s ease-in-out 0s;
   -moz-transition: all 0.5s ease-in-out 0s;
   -ms-transition: all 0.5s ease-in-out 0s;
   -o-transition: all 0.5s ease-in-out 0s;
   transition: all 0.5s ease-in-out 0s;
-  -webkit-transform: rotate(0.5turn);
-  -moz-transform: rotate(0.5turn);
-  -ms-transform: rotate(0.5turn);
-  -o-transform: rotate(0.5turn);
-  transform: rotate(0.5turn); }
+  -webkit-transform: rotate(-0.5turn);
+  -moz-transform: rotate(-0.5turn);
+  -ms-transform: rotate(-0.5turn);
+  -o-transform: rotate(-0.5turn);
+  transform: rotate(-0.5turn); }
 
 .description {
   display: flex;
@@ -2810,7 +2911,8 @@ ul.settlement-offer li.border {
   .item-header:after {
     width: 2.5%; }
   .description {
-    width: 45%; } }
+    width: 45%;
+    min-width: 45%; } }
 
 .item-details {
   width: 100%;
@@ -2831,7 +2933,7 @@ ul.settlement-offer li.border {
   content: ""; }
 
 .accordion input:checked ~ .item-details {
-  max-height: 100rem;
+  max-height: 500rem;
   -webkit-transition: max-height 0.5s ease-in-out 0s;
   -moz-transition: max-height 0.5s ease-in-out 0s;
   -ms-transition: max-height 0.5s ease-in-out 0s;
@@ -2883,7 +2985,8 @@ ul.settlement-offer li.border {
 
 @media (min-width: 64rem) {
   .buttons {
-    width: 17.5%; } }
+    width: 15.5%;
+    min-width: 15.5%; } }
 
 .button.small {
   display: flex;
