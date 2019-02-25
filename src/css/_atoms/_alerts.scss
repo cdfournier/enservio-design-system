@@ -16,7 +16,7 @@
 
 .alert-bar.success {background-color: $valid;}
 
-.alert-bar.system {background-color: $color-one;}
+.alert-bar.system {background-color: var(--color-one);}
 
 .alert-bar.error.show,
 .alert-bar.confirm.show,

@@ -9,7 +9,7 @@
 
 .carousel .flickity-prev-next-button {display: none;}
 
-.carousel .flickity-button-icon {fill: $color-one;}
+.carousel .flickity-button-icon {fill: var(--color-one);}
 
 .carousel .flickity-page-dots {
   display: flex;
@@ -28,7 +28,7 @@
   margin: 0 0.25rem;
   padding: 0;
   line-height: 1;
-  background: $color-one;
+  background: var(--color-one);
 }
 
 .carousel .carousel-cell {

@@ -11,7 +11,7 @@
   background-color: $white;
   @include transition(top, 0.4s, ease-in-out);
 }
-	
+
 .current-inventory.open {
   top: 0;
   overflow-y: scroll;
@@ -26,7 +26,7 @@
   height: 5rem;
   margin: 0 auto;
   padding: 1rem 2rem;
-  background-color: $color-one;
+  background-color: var(--color-one);
   cursor: pointer;
   @include transition(all, 0.25s, ease-in-out);
 }
@@ -64,7 +64,7 @@
   font-size: 0.833rem;
   font-weight: 700;
   line-height: 1.75rem;
-  color: $color-one;
+  color: var(--color-one);
   background-color: $white;
 }
 

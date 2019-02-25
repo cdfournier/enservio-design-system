@@ -7,6 +7,15 @@ $serif: "Roboto Slab", serif;
 $sans-serif: "Montserrat", sans-serif;
 
 
+// COLOR APPLICATION VARIABLES
+:root {
+  --color-one: #2e84ed;
+  --color-two: #0f4a92;
+}
+:export { colorone: #2e84ed;};
+:export { colortwo: #0f4a92};
+
+
 // BASE
 html {
   font-family: $sans-serif;
@@ -51,23 +60,23 @@ body, .body {animation: 1s ease-out 0s 1 fadeIn;}
 
 ::-moz-selection {
   color: $white;
-  background: $color-one;
+  background: var(--color-one);
 }
 
 ::selection {
   color: $white;
-  background: $color-one;
+  background: var(--color-one);
 }
 
 a {
-  outline-color: $color-one;
+  outline-color: var(--color-one);
   font-weight: 500;
   text-decoration: none;
-  color: $color-one;
+  color: var(--color-one);
   @include transition(all, 0.25s, ease);
 }
 
-a:hover, a:focus, a:active {color: $color-two;}
+a:hover, a:focus, a:active {color: var(--color-two);}
 
 img {
   width: 100%;

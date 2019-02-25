@@ -114,7 +114,7 @@ span.Select-arrow-zone {
 }
 
 .react-autosuggest__suggestion--focused {
-  background-color: $color-one;
+  background-color: var(--color-one);
   color: $white;
 }
 
@@ -125,7 +125,7 @@ span.Select-arrow-zone {
 }
 
 .highlight {
-  color: $color-one;
+  color: var(--color-one);
   font-weight: 500;
 }
 

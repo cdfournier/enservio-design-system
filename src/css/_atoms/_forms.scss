@@ -11,7 +11,7 @@ input[type="file"],
 input[type="text"],
 input[type="tel"],
 input[type="url"] {
-  outline-color: $color-one;
+  outline-color: var(--color-one);
   font-size: 1rem;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -40,7 +40,7 @@ fieldset {
 
 fieldset.max {width: 50%;}
 
-fieldset.half {width: calc(50% - 1rem);}
+fieldset.half {width: 50%;}
 
 legend {display: none;}
 
@@ -98,7 +98,7 @@ fieldset.half {width: 12.5%;}}
   border: 0;
   border-bottom: 1px solid $black;
   border-radius: 0;
-  outline-color: $color-one;
+  outline-color: var(--color-one);
   font-weight: 400;
   line-height: 3;
   background-color: transparent;
@@ -285,7 +285,7 @@ span.error-message {
   margin: 0;
   padding: 0;
   border-bottom: 1px solid $black;
-  outline-color: $color-one;
+  outline-color: var(--color-one);
   font-family: "Montserrat", sans-serif;
   font-size: 0.833rem;
   font-weight: 400;
@@ -297,7 +297,7 @@ span.error-message {
 
 .field select option {
   overflow: hidden;
-  outline-color: $color-one;
+  outline-color: var(--color-one);
   text-overflow: ellipsis;
 }
 
@@ -484,12 +484,12 @@ input.toggle[type="checkbox"]:after {
 }
 
 input.toggle[type="checkbox"]:checked {
-  background-color: $color-one;
+  background-color: var(--color-one);
 }
 
 input.toggle[type="checkbox"]:checked:after {
   left: calc(100% - 1.25rem);
-  color: $color-one;
+  color: var(--color-one);
   content: "\f17b";
 }
 

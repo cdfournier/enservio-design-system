@@ -1,3 +1,13 @@
+:root {
+  --color-one: #2e84ed;
+  --color-two: #0f4a92; }
+
+:export {
+  colorone: #2e84ed; }
+
+:export {
+  colortwo: #0f4a92; }
+
 html {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
@@ -41,17 +51,17 @@ body, .body {
 
 ::-moz-selection {
   color: #ffffff;
-  background: #2e84ed; }
+  background: var(--color-one); }
 
 ::selection {
   color: #ffffff;
-  background: #2e84ed; }
+  background: var(--color-one); }
 
 a {
-  outline-color: #2e84ed;
+  outline-color: var(--color-one);
   font-weight: 500;
   text-decoration: none;
-  color: #2e84ed;
+  color: var(--color-one);
   -webkit-transition: all 0.25s ease 0s;
   -moz-transition: all 0.25s ease 0s;
   -ms-transition: all 0.25s ease 0s;
@@ -59,7 +69,7 @@ a {
   transition: all 0.25s ease 0s; }
 
 a:hover, a:focus, a:active {
-  color: #0f4a92; }
+  color: var(--color-two); }
 
 img {
   width: 100%;
@@ -347,7 +357,7 @@ figcaption ul li {
   width: 100%;
   margin: 0;
   padding: 1rem;
-  background-color: #2e84ed; }
+  background-color: var(--color-one); }
 
 .card .card-graphic img {
   width: 5rem; }
@@ -401,7 +411,7 @@ figcaption ul li {
   height: 6rem;
   margin: 0 auto 2rem;
   border-radius: 50%;
-  background-color: #2e84ed; }
+  background-color: var(--color-one); }
 
 .spinner i.la.la-refresh {
   font-size: 3rem;
@@ -519,86 +529,86 @@ button.big span.button-label,
 
 button.color-one,
 .button.color-one {
-  border: 1px solid #2e84ed;
+  border: 1px solid var(--color-one);
   color: #ffffff;
-  background-color: #2e84ed; }
+  background-color: var(--color-one); }
 
 button.color-one:hover, button.color-one:focus,
 .button.color-one:hover, .button.color-one:focus {
-  color: #2e84ed;
+  color: var(--color-one);
   background-color: #ffffff; }
 
 button.color-one span.number,
 .button.color-one span.number {
-  color: #2e84ed;
+  color: var(--color-one);
   background-color: #ffffff; }
 
 button.color-one:hover span.number, button.color-one:focus span.number,
 .button.color-one:hover span.number, .button.color-one:focus span.number {
   color: #ffffff;
-  background-color: #2e84ed; }
+  background-color: var(--color-one); }
 
 button.color-two,
 .button.color-two {
-  border: 1px solid #0f4a92;
+  border: 1px solid var(--color-two);
   color: #ffffff;
-  background-color: #0f4a92; }
+  background-color: var(--color-two); }
 
 button.color-two:hover, button.color-two:focus,
 .button.color-two:hover, .button.color-two:focus {
-  color: #0f4a92;
+  color: var(--color-two);
   background-color: #ffffff; }
 
 button.color-two span.number,
 .button.color-two span.number {
-  color: #0f4a92;
+  color: var(--color-two);
   background-color: #ffffff; }
 
 button.color-two:hover span.number, button.color-two:focus span.number,
 .button.color-two:hover span.number, .button.color-two:focus span.number {
   color: #ffffff;
-  background-color: #0f4a92; }
+  background-color: var(--color-two); }
 
 button.secondary.color-one,
 .button.secondary.color-one {
-  border: 1px solid #2e84ed;
-  color: #2e84ed;
+  border: 1px solid var(--color-one);
+  color: var(--color-one);
   background-color: #ffffff; }
 
 button.secondary.color-one:hover, button.secondary.color-one:focus,
 .button.secondary.color-one:hover, .button.secondary.color-one:focus {
   color: #ffffff;
-  background-color: #2e84ed; }
+  background-color: var(--color-one); }
 
 button.secondary.color-one span.number,
 .button.secondary.color-one span.number {
   color: #ffffff;
-  background-color: #2e84ed; }
+  background-color: var(--color-one); }
 
 button.secondary.color-one:hover span.number, button.secondary.color-one:focus span.number,
 .button.secondary.color-one:hover span.number, .button.secondary.color-one:focus span.number {
-  color: #2e84ed;
+  color: var(--color-one);
   background-color: #ffffff; }
 
 button.secondary.color-two,
 .button.secondary.color-two {
-  border: 1px solid #0f4a92;
-  color: #0f4a92;
+  border: 1px solid var(--color-two);
+  color: var(--color-two);
   background-color: #ffffff; }
 
 button.secondary.color-two:hover, button.secondary.color-two:focus,
 .button.secondary.color-two:hover, .button.secondary.color-two:focus {
   color: #ffffff;
-  background-color: #0f4a92; }
+  background-color: var(--color-two); }
 
 button.secondary.color-two span.number,
 .button.secondary.color-two span.number {
   color: #ffffff;
-  background-color: #0f4a92; }
+  background-color: var(--color-two); }
 
 button.secondary.color-two:hover span.number, button.secondary.color-two:focus span.number,
 .button.secondary.color-two:hover span.number, .button.secondary.color-two:focus span.number {
-  color: #0f4a92;
+  color: var(--color-two);
   background-color: #ffffff; }
 
 .button.skip {
@@ -727,67 +737,67 @@ button.secondary.color-two:hover span.number, button.secondary.color-two:focus s
   transition: all 0.25s ease-in-out 0s; }
 
 .expanding-button-box.color-one {
-  background-color: #2e84ed; }
+  background-color: var(--color-one); }
 
 .expanding-button-box.color-one .expanding-button {
-  border: 1px solid #2e84ed;
-  background-color: #2e84ed; }
+  border: 1px solid var(--color-one);
+  background-color: var(--color-one); }
 
 .expanding-button-box.color-one .expanding-button:hover,
 .expanding-button-box.color-one .expanding-button:focus {
-  color: #2e84ed;
+  color: var(--color-one);
   background-color: #ffffff; }
 
 .expanding-button-box.expand.color-one .confirm-action-box span.confirm-action {
   border: 1px solid #ffffff;
-  color: #2e84ed;
+  color: var(--color-one);
   background-color: #ffffff; }
 
 .expanding-button-box.expand.color-one .confirm-action-box span.confirm-action:hover,
 .expanding-button-box.expand.color-one .confirm-action-box span.confirm-action:focus {
   color: #ffffff;
-  background-color: #2e84ed; }
+  background-color: var(--color-one); }
 
 .expanding-button-box.expand.color-one .confirm-action-box span.confirm-action.secondary {
   border: 1px solid #ffffff;
   color: #ffffff;
-  background-color: #2e84ed; }
+  background-color: var(--color-one); }
 
 .expanding-button-box.expand.color-one .confirm-action-box span.confirm-action.secondary:hover,
 .expanding-button-box.expand.color-one .confirm-action-box span.confirm-action.secondary:focus {
-  color: #2e84ed;
+  color: var(--color-one);
   background-color: #ffffff; }
 
 .expanding-button-box.color-two {
-  background-color: #0f4a92; }
+  background-color: var(--color-two); }
 
 .expanding-button-box.color-two .expanding-button {
-  border: 1px solid #0f4a92;
-  background-color: #0f4a92; }
+  border: 1px solid var(--color-two);
+  background-color: var(--color-two); }
 
 .expanding-button-box.color-two .expanding-button:hover,
 .expanding-button-box.color-two .expanding-button:focus {
-  color: #0f4a92;
+  color: var(--color-two);
   background-color: #ffffff; }
 
 .expanding-button-box.expand.color-two .confirm-action-box span.confirm-action {
   border: 1px solid #ffffff;
-  color: #0f4a92;
+  color: var(--color-two);
   background-color: #ffffff; }
 
 .expanding-button-box.expand.color-two .confirm-action-box span.confirm-action:hover,
 .expanding-button-box.expand.color-two .confirm-action-box span.confirm-action:focus {
   color: #ffffff;
-  background-color: #0f4a92; }
+  background-color: var(--color-two); }
 
 .expanding-button-box.expand.color-two .confirm-action-box span.confirm-action.secondary {
   border: 1px solid #ffffff;
   color: #ffffff;
-  background-color: #0f4a92; }
+  background-color: var(--color-two); }
 
 .expanding-button-box.expand.color-two .confirm-action-box span.confirm-action.secondary:hover,
 .expanding-button-box.expand.color-two .confirm-action-box span.confirm-action.secondary:focus {
-  color: #0f4a92;
+  color: var(--color-two);
   background-color: #ffffff; }
 
 span.button.upload input[type="file"] {
@@ -1028,7 +1038,7 @@ nav {
     line-height: 1.2;
     text-align: center;
     text-transform: uppercase;
-    color: #0f4a92; }
+    color: var(--color-two); }
   nav ul li:last-child {
     padding: 0 0.5rem 0 0.5rem; }
   nav ul li a span {
@@ -1056,7 +1066,7 @@ span.back {
   left: 2rem;
   font-size: 1.44rem;
   line-height: 1;
-  color: #2e84ed;
+  color: var(--color-one);
   cursor: pointer;
   -webkit-transition: all 0.25s ease-in-out 0s;
   -moz-transition: all 0.25s ease-in-out 0s;
@@ -1065,7 +1075,7 @@ span.back {
   transition: all 0.25s ease-in-out 0s; }
 
 span.back:hover, span.back:focus {
-  color: #0f4a92; }
+  color: var(--color-two); }
 
 footer {
   display: flex;
@@ -1127,7 +1137,7 @@ footer .livechat.online {
   background-color: #008000; }
 
 .alert-bar.system {
-  background-color: #2e84ed; }
+  background-color: var(--color-one); }
 
 .alert-bar.error.show,
 .alert-bar.confirm.show,
@@ -1410,7 +1420,7 @@ input[type="file"],
 input[type="text"],
 input[type="tel"],
 input[type="url"] {
-  outline-color: #2e84ed;
+  outline-color: var(--color-one);
   font-size: 1rem;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
@@ -1438,7 +1448,7 @@ fieldset.max {
   width: 50%; }
 
 fieldset.half {
-  width: calc(50% - 1rem); }
+  width: 50%; }
 
 legend {
   display: none; }
@@ -1504,7 +1514,7 @@ legend {
   border: 0;
   border-bottom: 1px solid #000000;
   border-radius: 0;
-  outline-color: #2e84ed;
+  outline-color: var(--color-one);
   font-weight: 400;
   line-height: 3;
   background-color: transparent;
@@ -1703,7 +1713,7 @@ span.error-message {
   margin: 0;
   padding: 0;
   border-bottom: 1px solid #000000;
-  outline-color: #2e84ed;
+  outline-color: var(--color-one);
   font-family: "Montserrat", sans-serif;
   font-size: 0.833rem;
   font-weight: 400;
@@ -1714,7 +1724,7 @@ span.error-message {
 
 .field select option {
   overflow: hidden;
-  outline-color: #2e84ed;
+  outline-color: var(--color-one);
   text-overflow: ellipsis; }
 
 .text .field {
@@ -1906,11 +1916,11 @@ input.toggle[type="checkbox"]:after {
   transition: all 0.25s ease-in-out 0s; }
 
 input.toggle[type="checkbox"]:checked {
-  background-color: #2e84ed; }
+  background-color: var(--color-one); }
 
 input.toggle[type="checkbox"]:checked:after {
   left: calc(100% - 1.25rem);
-  color: #2e84ed;
+  color: var(--color-one);
   content: "\f17b"; }
 
 label.toggle {
@@ -2050,7 +2060,7 @@ span.Select-arrow-zone {
   padding: 0.5rem !important; }
 
 .react-autosuggest__suggestion--focused {
-  background-color: #2e84ed;
+  background-color: var(--color-one);
   color: #ffffff; }
 
 .suggestion-content {
@@ -2059,7 +2069,7 @@ span.Select-arrow-zone {
   background-repeat: no-repeat; }
 
 .highlight {
-  color: #2e84ed;
+  color: var(--color-one);
   font-weight: 500; }
 
 .react-autosuggest__suggestion--highlighted {
@@ -2134,7 +2144,7 @@ ul.requirements li.invalid span i.la.la-check-circle {
   width: auto;
   height: 1.75rem;
   font-size: 1.5rem;
-  color: #2e84ed;
+  color: var(--color-one);
   cursor: pointer;
   -webkit-transition: all 0.25s ease-in-out 0s;
   -moz-transition: all 0.25s ease-in-out 0s;
@@ -2144,7 +2154,7 @@ ul.requirements li.invalid span i.la.la-check-circle {
 
 .field .show-hide-password:hover,
 .field .show-hide-password:focus {
-  color: #0f4a92; }
+  color: var(--color-two); }
 
 .carousel {
   display: block;
@@ -2157,7 +2167,7 @@ ul.requirements li.invalid span i.la.la-check-circle {
   display: none; }
 
 .carousel .flickity-button-icon {
-  fill: #2e84ed; }
+  fill: var(--color-one); }
 
 .carousel .flickity-page-dots {
   display: flex;
@@ -2175,7 +2185,7 @@ ul.requirements li.invalid span i.la.la-check-circle {
   margin: 0 0.25rem;
   padding: 0;
   line-height: 1;
-  background: #2e84ed; }
+  background: var(--color-one); }
 
 .carousel .carousel-cell {
   display: flex;
@@ -2353,7 +2363,7 @@ ul.requirements li.invalid span i.la.la-check-circle {
   height: 5rem;
   margin: 0 auto;
   padding: 1rem 2rem;
-  background-color: #2e84ed;
+  background-color: var(--color-one);
   cursor: pointer;
   -webkit-transition: all 0.25s ease-in-out 0s;
   -moz-transition: all 0.25s ease-in-out 0s;
@@ -2399,7 +2409,7 @@ ul.requirements li.invalid span i.la.la-check-circle {
   font-size: 0.833rem;
   font-weight: 700;
   line-height: 1.75rem;
-  color: #2e84ed;
+  color: var(--color-one);
   background-color: #ffffff; }
 
 @media (min-width: 48rem) {

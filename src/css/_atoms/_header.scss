@@ -82,7 +82,7 @@ nav {
     line-height: 1.2;
     text-align: center;
     text-transform: uppercase;
-    color: $color-two;
+    color: var(--color-two);
   }
 
   ul li:last-child {padding: 0 0.5rem 0 0.5rem;}
@@ -114,9 +114,9 @@ span.back {
   left: 2rem;
   font-size: 1.44rem;
   line-height: 1;
-  color: $color-one;
+  color: var(--color-one);
   cursor: pointer;
   @include transition(all, 0.25s, ease-in-out);
 }
 
-span.back:hover, span.back:focus {color: $color-two;}
+span.back:hover, span.back:focus {color: var(--color-two);}

@@ -106,101 +106,101 @@ button.big span.button-label,
 
 button.color-one,
 .button.color-one {
-  border: 1px solid $color-one;
+  border: 1px solid var(--color-one);
   color: $white;
-  background-color: $color-one;
+  background-color: var(--color-one);
 }
 
 button.color-one:hover, button.color-one:focus,
 .button.color-one:hover, .button.color-one:focus {
-  color: $color-one;
+  color: var(--color-one);
   background-color: $white;
 }
 
 button.color-one span.number,
 .button.color-one span.number {
-  color: $color-one;
+  color: var(--color-one);
   background-color: $white;
 }
 
 button.color-one:hover span.number, button.color-one:focus span.number,
 .button.color-one:hover span.number, .button.color-one:focus span.number {
   color: $white;
-  background-color: $color-one;
+  background-color: var(--color-one);
 }
 
 button.color-two,
 .button.color-two {
-  border: 1px solid $color-two;
+  border: 1px solid var(--color-two);
   color: $white;
-  background-color: $color-two;
+  background-color: var(--color-two);
 }
 
 button.color-two:hover, button.color-two:focus,
 .button.color-two:hover, .button.color-two:focus {
-  color: $color-two;
+  color: var(--color-two);
   background-color: $white;
 }
 
 button.color-two span.number,
 .button.color-two span.number {
-  color: $color-two;
+  color: var(--color-two);
   background-color: $white;
 }
 
 button.color-two:hover span.number, button.color-two:focus span.number,
 .button.color-two:hover span.number, .button.color-two:focus span.number {
   color: $white;
-  background-color: $color-two;
+  background-color: var(--color-two);
 }
 
 button.secondary.color-one,
 .button.secondary.color-one {
-  border: 1px solid $color-one;
-  color: $color-one;
+  border: 1px solid var(--color-one);
+  color: var(--color-one);
   background-color: $white;
 }
 
 button.secondary.color-one:hover, button.secondary.color-one:focus,
 .button.secondary.color-one:hover, .button.secondary.color-one:focus {
   color: $white;
-  background-color: $color-one;
+  background-color: var(--color-one);
 }
 
 button.secondary.color-one span.number,
 .button.secondary.color-one span.number {
   color: $white;
-  background-color: $color-one;
+  background-color: var(--color-one);
 }
 
 button.secondary.color-one:hover span.number, button.secondary.color-one:focus span.number,
 .button.secondary.color-one:hover span.number, .button.secondary.color-one:focus span.number {
-  color: $color-one;
+  color: var(--color-one);
   background-color: $white;
 }
 
 button.secondary.color-two,
 .button.secondary.color-two {
-  border: 1px solid $color-two;
-  color: $color-two;
+  border: 1px solid var(--color-two);
+  color: var(--color-two);
   background-color: $white;
 }
 
 button.secondary.color-two:hover, button.secondary.color-two:focus,
 .button.secondary.color-two:hover, .button.secondary.color-two:focus {
   color: $white;
-  background-color: $color-two;
+  background-color: var(--color-two);
 }
 
 button.secondary.color-two span.number,
 .button.secondary.color-two span.number {
   color: $white;
-  background-color: $color-two;
+  background-color: var(--color-two);
 }
 
 button.secondary.color-two:hover span.number, button.secondary.color-two:focus span.number,
 .button.secondary.color-two:hover span.number, .button.secondary.color-two:focus span.number {
-  color: $color-two;
+  color: var(--color-two);
   background-color: $white;
 }
 
@@ -312,79 +312,79 @@ button.secondary.color-two:hover span.number, button.secondary.color-two:focus s
 
 
 // EXPANDING BUTTON COLOR ONE SETTINGS
-.expanding-button-box.color-one {background-color: $color-one;}
+.expanding-button-box.color-one {background-color: var(--color-one);}
 
 .expanding-button-box.color-one .expanding-button {
-  border: 1px solid $color-one;
-  background-color: $color-one;
+  border: 1px solid var(--color-one);
+  background-color: var(--color-one);
 }
 
 .expanding-button-box.color-one .expanding-button:hover,
 .expanding-button-box.color-one .expanding-button:focus {
-  color: $color-one;
+  color: var(--color-one);
   background-color: $white;
 }
 
 .expanding-button-box.expand.color-one .confirm-action-box span.confirm-action {
   border: 1px solid $white;
-  color: $color-one;
+  color: var(--color-one);
   background-color: $white;
 }
 
 .expanding-button-box.expand.color-one .confirm-action-box span.confirm-action:hover,
 .expanding-button-box.expand.color-one .confirm-action-box span.confirm-action:focus {
   color: $white;
-  background-color: $color-one;
+  background-color: var(--color-one);
 }
 
 .expanding-button-box.expand.color-one .confirm-action-box span.confirm-action.secondary {
   border: 1px solid $white;
   color: $white;
-  background-color: $color-one;
+  background-color: var(--color-one);
 }
 
 .expanding-button-box.expand.color-one .confirm-action-box span.confirm-action.secondary:hover,
 .expanding-button-box.expand.color-one .confirm-action-box span.confirm-action.secondary:focus {
-  color: $color-one;
+  color: var(--color-one);
   background-color: $white;
 }
 
 
 // EXPANDING BUTTON COLOR TWO SETTINGS
-.expanding-button-box.color-two {background-color: $color-two;}
+.expanding-button-box.color-two {background-color: var(--color-two);}
 
 .expanding-button-box.color-two .expanding-button {
-  border: 1px solid $color-two;
-  background-color: $color-two;
+  border: 1px solid var(--color-two);
+  background-color: var(--color-two);
 }
 
 .expanding-button-box.color-two .expanding-button:hover,
 .expanding-button-box.color-two .expanding-button:focus {
-  color: $color-two;
+  color: var(--color-two);
   background-color: $white;
 }
 
 .expanding-button-box.expand.color-two .confirm-action-box span.confirm-action {
   border: 1px solid $white;
-  color: $color-two;
+  color: var(--color-two);
   background-color: $white;
 }
 
 .expanding-button-box.expand.color-two .confirm-action-box span.confirm-action:hover,
 .expanding-button-box.expand.color-two .confirm-action-box span.confirm-action:focus {
   color: $white;
-  background-color: $color-two;
+  background-color: var(--color-two);
 }
 
 .expanding-button-box.expand.color-two .confirm-action-box span.confirm-action.secondary {
   border: 1px solid $white;
   color: $white;
-  background-color: $color-two;
+  background-color: var(--color-two);
 }
 
 .expanding-button-box.expand.color-two .confirm-action-box span.confirm-action.secondary:hover,
 .expanding-button-box.expand.color-two .confirm-action-box span.confirm-action.secondary:focus {
-  color: $color-two;
+  color: var(--color-two);
   background-color: $white;
 }
 
@@ -439,10 +439,10 @@ button.disabled, .button.disabled {cursor: not-allowed;}
 
 button.color-one.disabled, .button.color-one.disabled,
 button.color-two.disabled, .button.color-two.disabled,
-button.color-one.disabled:hover, button.color-one.disabled:focus, 
+button.color-one.disabled:hover, button.color-one.disabled:focus,
 .button.color-one.disabled:hover, .button.color-one.disabled:focus,
 button.color-two.disabled, .button.color-two.disabled,
-button.color-two.disabled:hover, button.color-two.disabled:focus, 
+button.color-two.disabled:hover, button.color-two.disabled:focus,
 .button.color-two.disabled:hover, .button.color-two.disabled:focus {
   border-color: $light-gray;
   color: $white;
@@ -451,10 +451,10 @@ button.color-two.disabled:hover, button.color-two.disabled:focus,
 
 button.secondary.color-one.disabled, .button.secondary.color-one.disabled,
 button.secondary.color-two.disabled, .button.secondary.color-two.disabled,
-button.secondary.color-one.disabled:hover, button.secondary.color-one.disabled:focus, 
+button.secondary.color-one.disabled:hover, button.secondary.color-one.disabled:focus,
 .button.secondary.color-one.disabled:hover, .button.secondary.color-one.disabled:focus,
 button.secondary.color-two.disabled, .button.secondary.color-two.disabled,
-button.secondary.color-two.disabled:hover, button.secondary.color-two.disabled:focus, 
+button.secondary.color-two.disabled:hover, button.secondary.color-two.disabled:focus,
 .button.secondary.color-two.disabled:hover, .button.secondary.color-two.disabled:focus {
   border-color: $light-gray;
   color: $light-gray;
