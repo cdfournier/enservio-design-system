@@ -75,7 +75,7 @@ main {
 .action.text .button-box.right {margin: 0 0 0 2rem;}
 .action.text .button-box.left {margin: 0 2rem 0 0;}
 .action.text .button-box button,
-.action.text .button-box .button {margin: 0;}
+// .action.text .button-box .button {margin: 0;}
 .action.text .button-box button:last-of-type,
 .action.text .button-box .button:last-of-type {margin: 0 0 1rem;}}
 
@@ -176,4 +176,31 @@ figcaption ul li {
   overflow: hidden;
   padding: 0;
   text-overflow: ellipsis;
+}
+
+
+// HELP
+.help {
+  display: flex;
+  flex-direction: column;
+}
+
+.help:before {
+  display: block;
+  width: 90%;
+  height: 1px;
+  margin: 2rem auto 0;
+  padding: 0;
+  background-color: $light-gray;
+  content: "";
+}
+
+.help:after {
+  display: block;
+  width: 90%;
+  height: 1px;
+  margin: 2rem auto 0;
+  padding: 0;
+  background-color: $light-gray;
+  content: "";
 }

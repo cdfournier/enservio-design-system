@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Enservio Customer Portal | Claim Attachments</title>
+    <title>Enservio Customer Portal | Upload Inventory List</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
@@ -22,49 +22,30 @@
     <meta name="msapplication-TileImage" content="../../../../public/icons/mstile-144x144.png">
     <meta name="msapplication-config" content="../../../../public/icons/browserconfig.xml">
     <meta name="theme-color" content="#2e84ed">
-    <style>
-      .skip, .done {
-        display: none;
-        opacity: 0;
-        -webkit-transition: all 0.25s ease-in-out;
-        -moz-transition: all 0.25s ease-in-out;
-        -ms-transition: all 0.25s ease-in-out;
-        -o-transition: all 0.25s ease-in-out;
-        transition: all 0.25s ease-in-out;
-      }
-      .skip {
-        display: inline-flex;
-        opacity: 1;
-      }
-      .done.show {
-        display: inline-flex;
-        opacity: 1;
-      }
-      .skip.hide {
-        display: none;
-        opacity: 0;
-      }
-      @media (min-device-width: 48rem) {.done.show {margin: 0 0.5rem 0;}}
-    </style>
   </head>
   <body>
     <section id="alerts" class="alerts">
-      <div class="alert-bar error file-type">
+      <div class="alert-bar error">
         <div class="alert-bar-details">
           <span><i class="la la-exclamation-circle"></i></span>
           <div class="alert-bar-message">
-            <span>This is not a valid file type</span>
+            <span>Sorry. There was a network issue. Please try again.</span>
           </div>
           <span class="dismiss error"><i class="la la-times-circle"></i></span>
         </div>
       </div>
-      <div class="alert-bar error file-size">
+      <div class="alert-bar confirm">
         <div class="alert-bar-details">
           <span><i class="la la-exclamation-circle"></i></span>
-          <div class="alert-bar-message">
-            <span>This file's size is too big</span>
+          <div class="confirm-details">
+            <div class="alert-bar-message">
+              <span>You have unsaved changes. If you continue, these changes will be lost. Do you want to continue?</span>
+            </div>
+            <span class="confirm-action-box">
+              <span class="confirm-action secondary dismiss confirm">No</span>
+              <span class="confirm-action dismiss confirm">Yes</span>
+            </span>
           </div>
-          <span class="dismiss error"><i class="la la-times-circle"></i></span>
         </div>
       </div>
       <div class="alert-bar success">
@@ -73,14 +54,6 @@
             <span>File uploaded successfully</span>
           </div>
           <span class="dismiss success"><i class="la la-times-circle"></i></span>
-        </div>
-      </div>
-      <div class="alert-bar system">
-        <div class="alert-bar-details">
-          <div class="alert-bar-message">
-            <span></span>
-          </div>
-          <span class="dismiss system"><i class="la la-times-circle"></i></span>
         </div>
       </div>
       <div class="timeout">
@@ -100,27 +73,23 @@
       <nav>
         <ul>
           <li><a href="../../home/home/index.html">Home</a></li>
-          <li>Claim Attachments</li>
+          <li><a href="../claim-attachments/index.html">Claim Attachments</a></li>
           <li><a href="../../log-in/log-out-log-in/index.html">Log Out</a></li>
         </ul>
       </nav>
     </header>
     <main>
-      <section id="claim-attachments">
-        <div class="text first center lg">
-          <h1>Claim Attachments</h1>
-          <p>You have {number} attachments for this claim.</p>
+      <section id="upload-inventory">
+        <div class="action text left">
+          <div class="text">
+            <h1>Inventory List Upload</h1>
+            <p>You are about to upload a list with <b>{000}</b> lines. Please click <b>Submit</b> to continue. To cancel or upload a different file, please click <b>Cancel</b>.</p>
+          </div>
+          <div class="button-box right">
+            <a href="../capture/index.html" class="button color-one"><span class="button-label">Submit</span></a>
+            <a href="../capture/index.html" class="button secondary color-one"><span class="button-label">Cancel</span></a>
+          </div>
         </div>
-        <form class="lg" action="../capture/index.html">
-          <div class="upload-container md">
-            <p><strong>Drag Files Here To Upload</strong></p>
-            <small>PDF, PNG, JPG, DOC</small>
-          </div>
-          <div class="button-box">
-            <span class="button upload color-one"><input type="file" id="files" name="files[]" multiple><span class="button-label">Add Attachments<span class="post"><i class="la la-paperclip"></i></span></span></span>
-            <button class="button color-two"><span class="button-label">Done<span class="post"><span class="processing"><i class="la la-refresh la-spin"></i></span></span></span></button>
-          </div>
-        </form>
       </section>
     </main>
     <footer>
@@ -140,11 +109,6 @@
     <script src="https://unpkg.com/headroom.js@0.9.4/dist/headroom.js"></script>
     <script src="../../../assets/scripts/enservio.js"></script>
     <script src="../../../assets/scripts/enservio.header.js"></script>
-    <script>
-      $(".upload").click(function() {
-        $(".skip").addClass("hide");
-        $(".done").addClass("show");
-      });
-    </script>
+    <script src="../../../assets/scripts/enservio.inventory.js"></script>
   </body>
 </html>
