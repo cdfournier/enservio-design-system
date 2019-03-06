@@ -179,17 +179,17 @@
       <section id="current-inventory" class="current-inventory">
         <div class="current-inventory-bar">
           <h2>Current Inventory Items</h2>
-          <span class="counter">2</span>
+          <span class="counter">200</span>
         </div>
-        <div class="current-inventory-list">
+        <div id="current-inventory-list" class="current-inventory-list">
           <div class="accordion inventory">
-            <input id="item-9" type="checkbox" name="items" class="accordion">
-            <label for="item-9">
-              <div class="item-number">Item Number:&nbsp;<span>5100</span></div>
+            <input id="item-1" type="checkbox" name="items" class="accordion">
+            <label for="item-1">
+              <div class="item-number">Item Number:&nbsp;<span>0000</span><span class="submitted">Submitted</span></div>
               <div class="item-header">
-                <div class="description"><span>Description</span><p>This is a really long description for side tables</p></div>
-                <div class="cost"><span>Cost</span><p>&#36;139.00</p></div>
-                <div class="qty"><span>Qty</span><p>10</p></div>
+                <div class="description"><span>Description</span><p>This is a long product description</p></div>
+                <div class="cost"><span>Cost</span><p>&#36;000.00</p></div>
+                <div class="qty"><span>Qty</span><p>00</p></div>
               </div>
             </label>
             <div class="item-details">
@@ -198,7 +198,7 @@
                   <legend>Description</legend>
                   <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
                     <span class="error-message">Please include a description</span>
-                    <input type="text" name="description" id="description" placeholder="Describe your item&nbsp;&#40;including brand&#41;" value="HP Deskjet 4300">
+                    <input type="text" name="description" id="description" placeholder="Describe your item&nbsp;&#40;including brand&#41;" value="This is a long product description">
                     <label for="description">Description&#42;</label>
                   </div>
                 </fieldset>
@@ -206,7 +206,7 @@
                   <legend>Cost</legend>
                   <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
                     <span class="error-message">Please include a cost per item</span>
-                    <input type="text" name="cost" id="cost" placeholder="Cost per item" value="&#36;139">
+                    <input type="text" name="cost" id="cost" placeholder="Cost per item" value="&#36;000.00">
                     <label for="cost">Cost Per Item&#42;</label>
                   </div>
                 </fieldset>
@@ -214,7 +214,889 @@
                   <legend>Quantity</legend>
                   <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
                     <span class="error-message">Please include a quantity</span>
-                    <input type="number" name="quantity" id="quantity" placeholder="Quantity" value="1">
+                    <input type="number" name="quantity" id="quantity" placeholder="Quantity" value="00">
+                    <label for="quantity">Quantity&#42;</label>
+                  </div>
+                </fieldset>
+                <fieldset class="half">
+                  <legend>Age: Years</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">How old is this item &#40;in years&#41;?</span>
+                    <input type="number" name="years" id="years" placeholder="Years" value="00">
+                    <label for="years">Age: In Years&#42;</label>
+                  </div>
+                </fieldset>
+                <fieldset class="half">
+                  <legend>Age: Months</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">How old is this item &#40;in months&#41;?</span>
+                    <input type="number" name="months" id="months" placeholder="Months" value="00">
+                    <label for="months">Age: In Months&#42;</label>
+                  </div>
+                </fieldset>
+                <fieldset>
+                  <legend>Condition</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Please select an option</span>
+                    <select name="condition" id="condition">
+                      <option value="0">Choose a Condition</option>
+                      <option value="New">New</option>
+                      <option value="Excellent">Excellent</option>
+                      <option value="Good">Good</option>
+                      <option value="Fair">Fair</option>
+                      <option value="Poor">Poor</option>
+                    </select>
+                    <div class="select-icon"><i class="la la-angle-down"></i></div>
+                    <span class="valid select"><i class="la la-check-circle-o"></i></span>
+                    <label for="condition">Condition</label>
+                  </div>
+                </fieldset>
+                <div class="form-button-box">
+                  <div class="form-button-box-row">
+                    <div class="form-button-box-button">
+                      <button class="button color-two"><span class="button-label">Add Attachments<span class="post"><span class="number">00</span></span></span></button>
+                    </div>
+                    <div class="form-button-box-row row">
+                      <div class="form-button-box-button">
+                        <button class="button secondary color-one"><span class="button-label">Save<span class="post"><span class="processing"><i class="la la-refresh la-spin"></i></span></span></span></button>
+                      </div>
+                      <div class="form-button-box-button">
+                        <button class="button secondary color-one"><span class="button-label">Cancel</span></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-button-box-button">
+                    <div class="expanding-button-box color-one two">
+                      <div class="expanding-button small click-two"><span class="trash-icon"><i class="la la-trash"></i></span></div>
+                      <div class="expanding-button large click-two">Delete Item</div>
+                      <div class="confirm-action-box">
+                        <span class="confirm-action-text">Are you sure?</span>
+                        <span class="confirm-action secondary no-two">No</span>
+                        <span class="confirm-action yes-two">Yes</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="accordion inventory">
+            <input id="item-2" type="checkbox" name="items" class="accordion">
+            <label for="item-2">
+              <div class="item-number">Item Number:&nbsp;<span>0000</span><span class="submitted">Submitted</span></div>
+              <div class="item-header">
+                <div class="description"><span>Description</span><p>This is a long product description</p></div>
+                <div class="cost"><span>Cost</span><p>&#36;000.00</p></div>
+                <div class="qty"><span>Qty</span><p>00</p></div>
+              </div>
+            </label>
+            <div class="item-details">
+              <form>
+                <fieldset>
+                  <legend>Description</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Please include a description</span>
+                    <input type="text" name="description" id="description" placeholder="Describe your item&nbsp;&#40;including brand&#41;" value="This is a long product description">
+                    <label for="description">Description&#42;</label>
+                  </div>
+                </fieldset>
+                <fieldset class="half">
+                  <legend>Cost</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Please include a cost per item</span>
+                    <input type="text" name="cost" id="cost" placeholder="Cost per item" value="&#36;000.00">
+                    <label for="cost">Cost Per Item&#42;</label>
+                  </div>
+                </fieldset>
+                <fieldset class="half">
+                  <legend>Quantity</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Please include a quantity</span>
+                    <input type="number" name="quantity" id="quantity" placeholder="Quantity" value="00">
+                    <label for="quantity">Quantity&#42;</label>
+                  </div>
+                </fieldset>
+                <fieldset class="half">
+                  <legend>Age: Years</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">How old is this item &#40;in years&#41;?</span>
+                    <input type="number" name="years" id="years" placeholder="Years" value="00">
+                    <label for="years">Age: In Years&#42;</label>
+                  </div>
+                </fieldset>
+                <fieldset class="half">
+                  <legend>Age: Months</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">How old is this item &#40;in months&#41;?</span>
+                    <input type="number" name="months" id="months" placeholder="Months" value="00">
+                    <label for="months">Age: In Months&#42;</label>
+                  </div>
+                </fieldset>
+                <fieldset>
+                  <legend>Condition</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Please select an option</span>
+                    <select name="condition" id="condition">
+                      <option value="0">Choose a Condition</option>
+                      <option value="New">New</option>
+                      <option value="Excellent">Excellent</option>
+                      <option value="Good">Good</option>
+                      <option value="Fair">Fair</option>
+                      <option value="Poor">Poor</option>
+                    </select>
+                    <div class="select-icon"><i class="la la-angle-down"></i></div>
+                    <span class="valid select"><i class="la la-check-circle-o"></i></span>
+                    <label for="condition">Condition</label>
+                  </div>
+                </fieldset>
+                <div class="form-button-box">
+                  <div class="form-button-box-row">
+                    <div class="form-button-box-button">
+                      <button class="button color-two"><span class="button-label">Add Attachments<span class="post"><span class="number">00</span></span></span></button>
+                    </div>
+                    <div class="form-button-box-row row">
+                      <div class="form-button-box-button">
+                        <button class="button secondary color-one"><span class="button-label">Save<span class="post"><span class="processing"><i class="la la-refresh la-spin"></i></span></span></span></button>
+                      </div>
+                      <div class="form-button-box-button">
+                        <button class="button secondary color-one"><span class="button-label">Cancel</span></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-button-box-button">
+                    <div class="expanding-button-box color-one two">
+                      <div class="expanding-button small click-two"><span class="trash-icon"><i class="la la-trash"></i></span></div>
+                      <div class="expanding-button large click-two">Delete Item</div>
+                      <div class="confirm-action-box">
+                        <span class="confirm-action-text">Are you sure?</span>
+                        <span class="confirm-action secondary no-two">No</span>
+                        <span class="confirm-action yes-two">Yes</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="accordion inventory">
+            <input id="item-3" type="checkbox" name="items" class="accordion">
+            <label for="item-3">
+              <div class="item-number">Item Number:&nbsp;<span>0000</span><span class="submitted">Submitted</span></div>
+              <div class="item-header">
+                <div class="description"><span>Description</span><p>This is a long product description</p></div>
+                <div class="cost"><span>Cost</span><p>&#36;000.00</p></div>
+                <div class="qty"><span>Qty</span><p>00</p></div>
+              </div>
+            </label>
+            <div class="item-details">
+              <form>
+                <fieldset>
+                  <legend>Description</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Please include a description</span>
+                    <input type="text" name="description" id="description" placeholder="Describe your item&nbsp;&#40;including brand&#41;" value="This is a long product description">
+                    <label for="description">Description&#42;</label>
+                  </div>
+                </fieldset>
+                <fieldset class="half">
+                  <legend>Cost</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Please include a cost per item</span>
+                    <input type="text" name="cost" id="cost" placeholder="Cost per item" value="&#36;000.00">
+                    <label for="cost">Cost Per Item&#42;</label>
+                  </div>
+                </fieldset>
+                <fieldset class="half">
+                  <legend>Quantity</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Please include a quantity</span>
+                    <input type="number" name="quantity" id="quantity" placeholder="Quantity" value="00">
+                    <label for="quantity">Quantity&#42;</label>
+                  </div>
+                </fieldset>
+                <fieldset class="half">
+                  <legend>Age: Years</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">How old is this item &#40;in years&#41;?</span>
+                    <input type="number" name="years" id="years" placeholder="Years" value="00">
+                    <label for="years">Age: In Years&#42;</label>
+                  </div>
+                </fieldset>
+                <fieldset class="half">
+                  <legend>Age: Months</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">How old is this item &#40;in months&#41;?</span>
+                    <input type="number" name="months" id="months" placeholder="Months" value="00">
+                    <label for="months">Age: In Months&#42;</label>
+                  </div>
+                </fieldset>
+                <fieldset>
+                  <legend>Condition</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Please select an option</span>
+                    <select name="condition" id="condition">
+                      <option value="0">Choose a Condition</option>
+                      <option value="New">New</option>
+                      <option value="Excellent">Excellent</option>
+                      <option value="Good">Good</option>
+                      <option value="Fair">Fair</option>
+                      <option value="Poor">Poor</option>
+                    </select>
+                    <div class="select-icon"><i class="la la-angle-down"></i></div>
+                    <span class="valid select"><i class="la la-check-circle-o"></i></span>
+                    <label for="condition">Condition</label>
+                  </div>
+                </fieldset>
+                <div class="form-button-box">
+                  <div class="form-button-box-row">
+                    <div class="form-button-box-button">
+                      <button class="button color-two"><span class="button-label">Add Attachments<span class="post"><span class="number">00</span></span></span></button>
+                    </div>
+                    <div class="form-button-box-row row">
+                      <div class="form-button-box-button">
+                        <button class="button secondary color-one"><span class="button-label">Save<span class="post"><span class="processing"><i class="la la-refresh la-spin"></i></span></span></span></button>
+                      </div>
+                      <div class="form-button-box-button">
+                        <button class="button secondary color-one"><span class="button-label">Cancel</span></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-button-box-button">
+                    <div class="expanding-button-box color-one two">
+                      <div class="expanding-button small click-two"><span class="trash-icon"><i class="la la-trash"></i></span></div>
+                      <div class="expanding-button large click-two">Delete Item</div>
+                      <div class="confirm-action-box">
+                        <span class="confirm-action-text">Are you sure?</span>
+                        <span class="confirm-action secondary no-two">No</span>
+                        <span class="confirm-action yes-two">Yes</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="accordion inventory">
+            <input id="item-4" type="checkbox" name="items" class="accordion">
+            <label for="item-4">
+              <div class="item-number">Item Number:&nbsp;<span>0000</span><span class="submitted">Submitted</span></div>
+              <div class="item-header">
+                <div class="description"><span>Description</span><p>This is a long product description</p></div>
+                <div class="cost"><span>Cost</span><p>&#36;000.00</p></div>
+                <div class="qty"><span>Qty</span><p>00</p></div>
+              </div>
+            </label>
+            <div class="item-details">
+              <form>
+                <fieldset>
+                  <legend>Description</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Please include a description</span>
+                    <input type="text" name="description" id="description" placeholder="Describe your item&nbsp;&#40;including brand&#41;" value="This is a long product description">
+                    <label for="description">Description&#42;</label>
+                  </div>
+                </fieldset>
+                <fieldset class="half">
+                  <legend>Cost</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Please include a cost per item</span>
+                    <input type="text" name="cost" id="cost" placeholder="Cost per item" value="&#36;000.00">
+                    <label for="cost">Cost Per Item&#42;</label>
+                  </div>
+                </fieldset>
+                <fieldset class="half">
+                  <legend>Quantity</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Please include a quantity</span>
+                    <input type="number" name="quantity" id="quantity" placeholder="Quantity" value="00">
+                    <label for="quantity">Quantity&#42;</label>
+                  </div>
+                </fieldset>
+                <fieldset class="half">
+                  <legend>Age: Years</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">How old is this item &#40;in years&#41;?</span>
+                    <input type="number" name="years" id="years" placeholder="Years" value="00">
+                    <label for="years">Age: In Years&#42;</label>
+                  </div>
+                </fieldset>
+                <fieldset class="half">
+                  <legend>Age: Months</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">How old is this item &#40;in months&#41;?</span>
+                    <input type="number" name="months" id="months" placeholder="Months" value="00">
+                    <label for="months">Age: In Months&#42;</label>
+                  </div>
+                </fieldset>
+                <fieldset>
+                  <legend>Condition</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Please select an option</span>
+                    <select name="condition" id="condition">
+                      <option value="0">Choose a Condition</option>
+                      <option value="New">New</option>
+                      <option value="Excellent">Excellent</option>
+                      <option value="Good">Good</option>
+                      <option value="Fair">Fair</option>
+                      <option value="Poor">Poor</option>
+                    </select>
+                    <div class="select-icon"><i class="la la-angle-down"></i></div>
+                    <span class="valid select"><i class="la la-check-circle-o"></i></span>
+                    <label for="condition">Condition</label>
+                  </div>
+                </fieldset>
+                <div class="form-button-box">
+                  <div class="form-button-box-row">
+                    <div class="form-button-box-button">
+                      <button class="button color-two"><span class="button-label">Add Attachments<span class="post"><span class="number">00</span></span></span></button>
+                    </div>
+                    <div class="form-button-box-row row">
+                      <div class="form-button-box-button">
+                        <button class="button secondary color-one"><span class="button-label">Save<span class="post"><span class="processing"><i class="la la-refresh la-spin"></i></span></span></span></button>
+                      </div>
+                      <div class="form-button-box-button">
+                        <button class="button secondary color-one"><span class="button-label">Cancel</span></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-button-box-button">
+                    <div class="expanding-button-box color-one two">
+                      <div class="expanding-button small click-two"><span class="trash-icon"><i class="la la-trash"></i></span></div>
+                      <div class="expanding-button large click-two">Delete Item</div>
+                      <div class="confirm-action-box">
+                        <span class="confirm-action-text">Are you sure?</span>
+                        <span class="confirm-action secondary no-two">No</span>
+                        <span class="confirm-action yes-two">Yes</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="accordion inventory">
+            <input id="item-5" type="checkbox" name="items" class="accordion">
+            <label for="item-5">
+              <div class="item-number">Item Number:&nbsp;<span>0000</span><span class="submitted">Submitted</span></div>
+              <div class="item-header">
+                <div class="description"><span>Description</span><p>This is a long product description</p></div>
+                <div class="cost"><span>Cost</span><p>&#36;000.00</p></div>
+                <div class="qty"><span>Qty</span><p>00</p></div>
+              </div>
+            </label>
+            <div class="item-details">
+              <form>
+                <fieldset>
+                  <legend>Description</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Please include a description</span>
+                    <input type="text" name="description" id="description" placeholder="Describe your item&nbsp;&#40;including brand&#41;" value="This is a long product description">
+                    <label for="description">Description&#42;</label>
+                  </div>
+                </fieldset>
+                <fieldset class="half">
+                  <legend>Cost</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Please include a cost per item</span>
+                    <input type="text" name="cost" id="cost" placeholder="Cost per item" value="&#36;000.00">
+                    <label for="cost">Cost Per Item&#42;</label>
+                  </div>
+                </fieldset>
+                <fieldset class="half">
+                  <legend>Quantity</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Please include a quantity</span>
+                    <input type="number" name="quantity" id="quantity" placeholder="Quantity" value="00">
+                    <label for="quantity">Quantity&#42;</label>
+                  </div>
+                </fieldset>
+                <fieldset class="half">
+                  <legend>Age: Years</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">How old is this item &#40;in years&#41;?</span>
+                    <input type="number" name="years" id="years" placeholder="Years" value="00">
+                    <label for="years">Age: In Years&#42;</label>
+                  </div>
+                </fieldset>
+                <fieldset class="half">
+                  <legend>Age: Months</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">How old is this item &#40;in months&#41;?</span>
+                    <input type="number" name="months" id="months" placeholder="Months" value="00">
+                    <label for="months">Age: In Months&#42;</label>
+                  </div>
+                </fieldset>
+                <fieldset>
+                  <legend>Condition</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Please select an option</span>
+                    <select name="condition" id="condition">
+                      <option value="0">Choose a Condition</option>
+                      <option value="New">New</option>
+                      <option value="Excellent">Excellent</option>
+                      <option value="Good">Good</option>
+                      <option value="Fair">Fair</option>
+                      <option value="Poor">Poor</option>
+                    </select>
+                    <div class="select-icon"><i class="la la-angle-down"></i></div>
+                    <span class="valid select"><i class="la la-check-circle-o"></i></span>
+                    <label for="condition">Condition</label>
+                  </div>
+                </fieldset>
+                <div class="form-button-box">
+                  <div class="form-button-box-row">
+                    <div class="form-button-box-button">
+                      <button class="button color-two"><span class="button-label">Add Attachments<span class="post"><span class="number">00</span></span></span></button>
+                    </div>
+                    <div class="form-button-box-row row">
+                      <div class="form-button-box-button">
+                        <button class="button secondary color-one"><span class="button-label">Save<span class="post"><span class="processing"><i class="la la-refresh la-spin"></i></span></span></span></button>
+                      </div>
+                      <div class="form-button-box-button">
+                        <button class="button secondary color-one"><span class="button-label">Cancel</span></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-button-box-button">
+                    <div class="expanding-button-box color-one two">
+                      <div class="expanding-button small click-two"><span class="trash-icon"><i class="la la-trash"></i></span></div>
+                      <div class="expanding-button large click-two">Delete Item</div>
+                      <div class="confirm-action-box">
+                        <span class="confirm-action-text">Are you sure?</span>
+                        <span class="confirm-action secondary no-two">No</span>
+                        <span class="confirm-action yes-two">Yes</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="accordion inventory">
+            <input id="item-5" type="checkbox" name="items" class="accordion">
+            <label for="item-5">
+              <div class="item-number">Item Number:&nbsp;<span>0000</span><span class="submitted">Submitted</span></div>
+              <div class="item-header">
+                <div class="description"><span>Description</span><p>This is a long product description</p></div>
+                <div class="cost"><span>Cost</span><p>&#36;000.00</p></div>
+                <div class="qty"><span>Qty</span><p>00</p></div>
+              </div>
+            </label>
+            <div class="item-details">
+              <form>
+                <fieldset>
+                  <legend>Description</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Please include a description</span>
+                    <input type="text" name="description" id="description" placeholder="Describe your item&nbsp;&#40;including brand&#41;" value="This is a long product description">
+                    <label for="description">Description&#42;</label>
+                  </div>
+                </fieldset>
+                <fieldset class="half">
+                  <legend>Cost</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Please include a cost per item</span>
+                    <input type="text" name="cost" id="cost" placeholder="Cost per item" value="&#36;000.00">
+                    <label for="cost">Cost Per Item&#42;</label>
+                  </div>
+                </fieldset>
+                <fieldset class="half">
+                  <legend>Quantity</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Please include a quantity</span>
+                    <input type="number" name="quantity" id="quantity" placeholder="Quantity" value="00">
+                    <label for="quantity">Quantity&#42;</label>
+                  </div>
+                </fieldset>
+                <fieldset class="half">
+                  <legend>Age: Years</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">How old is this item &#40;in years&#41;?</span>
+                    <input type="number" name="years" id="years" placeholder="Years" value="00">
+                    <label for="years">Age: In Years&#42;</label>
+                  </div>
+                </fieldset>
+                <fieldset class="half">
+                  <legend>Age: Months</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">How old is this item &#40;in months&#41;?</span>
+                    <input type="number" name="months" id="months" placeholder="Months" value="00">
+                    <label for="months">Age: In Months&#42;</label>
+                  </div>
+                </fieldset>
+                <fieldset>
+                  <legend>Condition</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Please select an option</span>
+                    <select name="condition" id="condition">
+                      <option value="0">Choose a Condition</option>
+                      <option value="New">New</option>
+                      <option value="Excellent">Excellent</option>
+                      <option value="Good">Good</option>
+                      <option value="Fair">Fair</option>
+                      <option value="Poor">Poor</option>
+                    </select>
+                    <div class="select-icon"><i class="la la-angle-down"></i></div>
+                    <span class="valid select"><i class="la la-check-circle-o"></i></span>
+                    <label for="condition">Condition</label>
+                  </div>
+                </fieldset>
+                <div class="form-button-box">
+                  <div class="form-button-box-row">
+                    <div class="form-button-box-button">
+                      <button class="button color-two"><span class="button-label">Add Attachments<span class="post"><span class="number">00</span></span></span></button>
+                    </div>
+                    <div class="form-button-box-row row">
+                      <div class="form-button-box-button">
+                        <button class="button secondary color-one"><span class="button-label">Save<span class="post"><span class="processing"><i class="la la-refresh la-spin"></i></span></span></span></button>
+                      </div>
+                      <div class="form-button-box-button">
+                        <button class="button secondary color-one"><span class="button-label">Cancel</span></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-button-box-button">
+                    <div class="expanding-button-box color-one two">
+                      <div class="expanding-button small click-two"><span class="trash-icon"><i class="la la-trash"></i></span></div>
+                      <div class="expanding-button large click-two">Delete Item</div>
+                      <div class="confirm-action-box">
+                        <span class="confirm-action-text">Are you sure?</span>
+                        <span class="confirm-action secondary no-two">No</span>
+                        <span class="confirm-action yes-two">Yes</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="accordion inventory">
+            <input id="item-6" type="checkbox" name="items" class="accordion">
+            <label for="item-6">
+              <div class="item-number">Item Number:&nbsp;<span>0000</span><span class="submitted">Submitted</span></div>
+              <div class="item-header">
+                <div class="description"><span>Description</span><p>This is a long product description</p></div>
+                <div class="cost"><span>Cost</span><p>&#36;000.00</p></div>
+                <div class="qty"><span>Qty</span><p>00</p></div>
+              </div>
+            </label>
+            <div class="item-details">
+              <form>
+                <fieldset>
+                  <legend>Description</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Please include a description</span>
+                    <input type="text" name="description" id="description" placeholder="Describe your item&nbsp;&#40;including brand&#41;" value="This is a long product description">
+                    <label for="description">Description&#42;</label>
+                  </div>
+                </fieldset>
+                <fieldset class="half">
+                  <legend>Cost</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Please include a cost per item</span>
+                    <input type="text" name="cost" id="cost" placeholder="Cost per item" value="&#36;000.00">
+                    <label for="cost">Cost Per Item&#42;</label>
+                  </div>
+                </fieldset>
+                <fieldset class="half">
+                  <legend>Quantity</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Please include a quantity</span>
+                    <input type="number" name="quantity" id="quantity" placeholder="Quantity" value="00">
+                    <label for="quantity">Quantity&#42;</label>
+                  </div>
+                </fieldset>
+                <fieldset class="half">
+                  <legend>Age: Years</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">How old is this item &#40;in years&#41;?</span>
+                    <input type="number" name="years" id="years" placeholder="Years" value="00">
+                    <label for="years">Age: In Years&#42;</label>
+                  </div>
+                </fieldset>
+                <fieldset class="half">
+                  <legend>Age: Months</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">How old is this item &#40;in months&#41;?</span>
+                    <input type="number" name="months" id="months" placeholder="Months" value="00">
+                    <label for="months">Age: In Months&#42;</label>
+                  </div>
+                </fieldset>
+                <fieldset>
+                  <legend>Condition</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Please select an option</span>
+                    <select name="condition" id="condition">
+                      <option value="0">Choose a Condition</option>
+                      <option value="New">New</option>
+                      <option value="Excellent">Excellent</option>
+                      <option value="Good">Good</option>
+                      <option value="Fair">Fair</option>
+                      <option value="Poor">Poor</option>
+                    </select>
+                    <div class="select-icon"><i class="la la-angle-down"></i></div>
+                    <span class="valid select"><i class="la la-check-circle-o"></i></span>
+                    <label for="condition">Condition</label>
+                  </div>
+                </fieldset>
+                <div class="form-button-box">
+                  <div class="form-button-box-row">
+                    <div class="form-button-box-button">
+                      <button class="button color-two"><span class="button-label">Add Attachments<span class="post"><span class="number">00</span></span></span></button>
+                    </div>
+                    <div class="form-button-box-row row">
+                      <div class="form-button-box-button">
+                        <button class="button secondary color-one"><span class="button-label">Save<span class="post"><span class="processing"><i class="la la-refresh la-spin"></i></span></span></span></button>
+                      </div>
+                      <div class="form-button-box-button">
+                        <button class="button secondary color-one"><span class="button-label">Cancel</span></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-button-box-button">
+                    <div class="expanding-button-box color-one two">
+                      <div class="expanding-button small click-two"><span class="trash-icon"><i class="la la-trash"></i></span></div>
+                      <div class="expanding-button large click-two">Delete Item</div>
+                      <div class="confirm-action-box">
+                        <span class="confirm-action-text">Are you sure?</span>
+                        <span class="confirm-action secondary no-two">No</span>
+                        <span class="confirm-action yes-two">Yes</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="accordion inventory">
+            <input id="item-7" type="checkbox" name="items" class="accordion">
+            <label for="item-7">
+              <div class="item-number">Item Number:&nbsp;<span>0000</span><span class="submitted">Submitted</span></div>
+              <div class="item-header">
+                <div class="description"><span>Description</span><p>This is a long product description</p></div>
+                <div class="cost"><span>Cost</span><p>&#36;000.00</p></div>
+                <div class="qty"><span>Qty</span><p>00</p></div>
+              </div>
+            </label>
+            <div class="item-details">
+              <form>
+                <fieldset>
+                  <legend>Description</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Please include a description</span>
+                    <input type="text" name="description" id="description" placeholder="Describe your item&nbsp;&#40;including brand&#41;" value="This is a long product description">
+                    <label for="description">Description&#42;</label>
+                  </div>
+                </fieldset>
+                <fieldset class="half">
+                  <legend>Cost</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Please include a cost per item</span>
+                    <input type="text" name="cost" id="cost" placeholder="Cost per item" value="&#36;000.00">
+                    <label for="cost">Cost Per Item&#42;</label>
+                  </div>
+                </fieldset>
+                <fieldset class="half">
+                  <legend>Quantity</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Please include a quantity</span>
+                    <input type="number" name="quantity" id="quantity" placeholder="Quantity" value="00">
+                    <label for="quantity">Quantity&#42;</label>
+                  </div>
+                </fieldset>
+                <fieldset class="half">
+                  <legend>Age: Years</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">How old is this item &#40;in years&#41;?</span>
+                    <input type="number" name="years" id="years" placeholder="Years" value="00">
+                    <label for="years">Age: In Years&#42;</label>
+                  </div>
+                </fieldset>
+                <fieldset class="half">
+                  <legend>Age: Months</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">How old is this item &#40;in months&#41;?</span>
+                    <input type="number" name="months" id="months" placeholder="Months" value="00">
+                    <label for="months">Age: In Months&#42;</label>
+                  </div>
+                </fieldset>
+                <fieldset>
+                  <legend>Condition</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Please select an option</span>
+                    <select name="condition" id="condition">
+                      <option value="0">Choose a Condition</option>
+                      <option value="New">New</option>
+                      <option value="Excellent">Excellent</option>
+                      <option value="Good">Good</option>
+                      <option value="Fair">Fair</option>
+                      <option value="Poor">Poor</option>
+                    </select>
+                    <div class="select-icon"><i class="la la-angle-down"></i></div>
+                    <span class="valid select"><i class="la la-check-circle-o"></i></span>
+                    <label for="condition">Condition</label>
+                  </div>
+                </fieldset>
+                <div class="form-button-box">
+                  <div class="form-button-box-row">
+                    <div class="form-button-box-button">
+                      <button class="button color-two"><span class="button-label">Add Attachments<span class="post"><span class="number">00</span></span></span></button>
+                    </div>
+                    <div class="form-button-box-row row">
+                      <div class="form-button-box-button">
+                        <button class="button secondary color-one"><span class="button-label">Save<span class="post"><span class="processing"><i class="la la-refresh la-spin"></i></span></span></span></button>
+                      </div>
+                      <div class="form-button-box-button">
+                        <button class="button secondary color-one"><span class="button-label">Cancel</span></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-button-box-button">
+                    <div class="expanding-button-box color-one two">
+                      <div class="expanding-button small click-two"><span class="trash-icon"><i class="la la-trash"></i></span></div>
+                      <div class="expanding-button large click-two">Delete Item</div>
+                      <div class="confirm-action-box">
+                        <span class="confirm-action-text">Are you sure?</span>
+                        <span class="confirm-action secondary no-two">No</span>
+                        <span class="confirm-action yes-two">Yes</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="accordion inventory">
+            <input id="item-8" type="checkbox" name="items" class="accordion">
+            <label for="item-8">
+              <div class="item-number">Item Number:&nbsp;<span>0000</span><span class="submitted">Submitted</span></div>
+              <div class="item-header">
+                <div class="description"><span>Description</span><p>This is a long product description</p></div>
+                <div class="cost"><span>Cost</span><p>&#36;000.00</p></div>
+                <div class="qty"><span>Qty</span><p>00</p></div>
+              </div>
+            </label>
+            <div class="item-details">
+              <form>
+                <fieldset>
+                  <legend>Description</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Please include a description</span>
+                    <input type="text" name="description" id="description" placeholder="Describe your item&nbsp;&#40;including brand&#41;" value="This is a long product description">
+                    <label for="description">Description&#42;</label>
+                  </div>
+                </fieldset>
+                <fieldset class="half">
+                  <legend>Cost</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Please include a cost per item</span>
+                    <input type="text" name="cost" id="cost" placeholder="Cost per item" value="&#36;000.00">
+                    <label for="cost">Cost Per Item&#42;</label>
+                  </div>
+                </fieldset>
+                <fieldset class="half">
+                  <legend>Quantity</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Please include a quantity</span>
+                    <input type="number" name="quantity" id="quantity" placeholder="Quantity" value="00">
+                    <label for="quantity">Quantity&#42;</label>
+                  </div>
+                </fieldset>
+                <fieldset class="half">
+                  <legend>Age: Years</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">How old is this item &#40;in years&#41;?</span>
+                    <input type="number" name="years" id="years" placeholder="Years" value="00">
+                    <label for="years">Age: In Years&#42;</label>
+                  </div>
+                </fieldset>
+                <fieldset class="half">
+                  <legend>Age: Months</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">How old is this item &#40;in months&#41;?</span>
+                    <input type="number" name="months" id="months" placeholder="Months" value="00">
+                    <label for="months">Age: In Months&#42;</label>
+                  </div>
+                </fieldset>
+                <fieldset>
+                  <legend>Condition</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Please select an option</span>
+                    <select name="condition" id="condition">
+                      <option value="0">Choose a Condition</option>
+                      <option value="New">New</option>
+                      <option value="Excellent">Excellent</option>
+                      <option value="Good">Good</option>
+                      <option value="Fair">Fair</option>
+                      <option value="Poor">Poor</option>
+                    </select>
+                    <div class="select-icon"><i class="la la-angle-down"></i></div>
+                    <span class="valid select"><i class="la la-check-circle-o"></i></span>
+                    <label for="condition">Condition</label>
+                  </div>
+                </fieldset>
+                <div class="form-button-box">
+                  <div class="form-button-box-row">
+                    <div class="form-button-box-button">
+                      <button class="button color-two"><span class="button-label">Add Attachments<span class="post"><span class="number">00</span></span></span></button>
+                    </div>
+                    <div class="form-button-box-row row">
+                      <div class="form-button-box-button">
+                        <button class="button secondary color-one"><span class="button-label">Save<span class="post"><span class="processing"><i class="la la-refresh la-spin"></i></span></span></span></button>
+                      </div>
+                      <div class="form-button-box-button">
+                        <button class="button secondary color-one"><span class="button-label">Cancel</span></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-button-box-button">
+                    <div class="expanding-button-box color-one two">
+                      <div class="expanding-button small click-two"><span class="trash-icon"><i class="la la-trash"></i></span></div>
+                      <div class="expanding-button large click-two">Delete Item</div>
+                      <div class="confirm-action-box">
+                        <span class="confirm-action-text">Are you sure?</span>
+                        <span class="confirm-action secondary no-two">No</span>
+                        <span class="confirm-action yes-two">Yes</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="accordion inventory disabled">
+            <input id="item-9" type="checkbox" name="items" class="accordion">
+            <label for="item-9">
+              <div class="item-number">Item Number:&nbsp;<span>5100</span><span class="submitted">Submitted</span></div>
+              <div class="item-header">
+                <div class="description"><span>Description</span><p>This is a really long description for side tables</p></div>
+                <div class="cost"><span>Cost</span><p>&#36;139.00</p></div>
+                <div class="qty"><span>Qty</span><p>2</p></div>
+              </div>
+            </label>
+            <div class="item-details">
+              <form>
+                <fieldset>
+                  <legend>Description</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Please include a description</span>
+                    <input type="text" name="description" id="description" placeholder="Describe your item&nbsp;&#40;including brand&#41;" value="This is a really long description for side tables">
+                    <label for="description">Description&#42;</label>
+                  </div>
+                </fieldset>
+                <fieldset class="half">
+                  <legend>Cost</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Please include a cost per item</span>
+                    <input type="text" name="cost" id="cost" placeholder="Cost per item" value="&#36;139.00">
+                    <label for="cost">Cost Per Item&#42;</label>
+                  </div>
+                </fieldset>
+                <fieldset class="half">
+                  <legend>Quantity</legend>
+                  <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                    <span class="error-message">Please include a quantity</span>
+                    <input type="number" name="quantity" id="quantity" placeholder="Quantity" value="2">
                     <label for="quantity">Quantity&#42;</label>
                   </div>
                 </fieldset>
@@ -284,7 +1166,7 @@
           <div class="accordion inventory disabled">
             <input id="item-10" type="checkbox" name="items" class="accordion">
             <label for="item-10">
-              <div class="item-number">Item Number:&nbsp;<span>5101</span><span class="tag">Submitted</span></div>
+              <div class="item-number">Item Number:&nbsp;<span>5101</span><span class="submitted">Submitted</span></div>
               <div class="item-header">
                 <div class="description"><span>Description</span><p>So many tee-shirts</p></div>
                 <div class="cost"><span>Cost</span><p>&#36;19.00</p></div>
@@ -381,6 +1263,22 @@
                 </div>
               </form>
             </div>
+          </div>
+          <div class="pagination">
+            <ol>
+              <li><a href="#!" class="button color-one disabled"><span class="button-label"><span class="pre"><i class="la la-arrow-left"></i></span>Prev</span></a></li>
+              <li class="page selected"><a href="#!">1</a></li>
+              <li class="page"><a href="index-02.html#current-inventory-list">2</a></li>
+              <li class="page"><a href="#!">3</a></li>
+              <li class="page"><a href="#!">4</a></li>
+              <li class="page"><a href="#!">5</a></li>
+              <li class="page"><a href="#!">6</a></li>
+              <li class="page"><a href="#!">7</a></li>
+              <li class="page"><a href="#!">8</a></li>
+              <li class="page"><a href="#!">9</a></li>
+              <li class="page"><a href="#!">10</a></li>
+              <li><a href="index-02.html#current-inventory-list" class="button color-one"><span class="button-label">Next<span class="post"><i class="la la-arrow-right"></i></span></span></a></li>
+            </ol>
           </div>
         </div>
       </section>

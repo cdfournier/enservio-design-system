@@ -155,3 +155,27 @@ $('a[href*="#"]')
       }
     }
   });
+
+
+// SMOOTH SCROLL WITH HASH
+var jump=function(e) {
+   if (e) {
+     //e.preventDefault();
+     var target = jQuery(this).attr("href").replace('/', '');
+   }
+
+   else {var target = location.hash;}
+
+   jQuery('html,body').animate({scrollTop: (jQuery(target).offset().top) - 100}, 1000);
+}
+
+jQuery(document).ready(function($) {
+  $(document).on('click', 'a[href*=#]', jump);
+
+    if (location.hash) {
+      setTimeout(function() {
+        $('html, body').scrollTop(0).show();
+        jump();
+      }, 0);
+    }
+});

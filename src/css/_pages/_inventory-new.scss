@@ -37,14 +37,7 @@
   @include transition(all, 0.25s, ease-in-out);
 }
 
-.current-inventory .current-inventory-bar h2 {
-  display: flex;
-  align-items: center;
-  padding: 0;
-  color: $white;
-}
-
-.current-inventory .current-inventory-bar h2:after {
+.current-inventory .current-inventory-bar:after {
   display: block;
   margin: 0 0 0 0.5rem;
   content: "\f183";
@@ -55,18 +48,27 @@
   @include transition(all, 0.4s, ease-in-out);
 }
 
-.current-inventory.open .current-inventory-bar h2:after {
+.current-inventory.open .current-inventory-bar:after {
   @include transform(rotate(0.5turn));
+}
+
+.current-inventory .current-inventory-bar h2 {
+  display: flex;
+  align-items: center;
+  padding: 0;
+  color: $white;
 }
 
 .current-inventory .current-inventory-bar span.counter {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: auto;
   min-width: 1.75rem;
   min-height: 1.75rem;
   margin: 0 0 0 1rem;
-  border-radius: 2rem;
+  padding: 0 1rem;
+  border-radius: 4rem;
   font-size: 0.833rem;
   font-weight: 700;
   line-height: 1.75rem;
@@ -90,7 +92,8 @@
 // INVENTORY ITEM HEADER
 .inventory .item-number {padding: 0 1rem;}
 
-.inventory .item-number span.tag {
+.inventory .item-number span.submitted {
+  display: none;
   margin: 0 0 0 0.694rem;
   padding: 0.125rem 0.75rem;
   border: 1px solid var(--color-one);
@@ -171,6 +174,7 @@
 // DISABLED INVENTORY ITEMS
 .accordion.inventory.disabled {
   .item-number {color: $med-gray;}
+  .item-number span.submitted {display: inline;}
   .item-header {color: $med-gray;}
   .field input {
     border-bottom: 1px solid $med-gray;
