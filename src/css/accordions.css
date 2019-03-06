@@ -2645,6 +2645,15 @@ ul.settlement-offer li.border {
 .accordion.inventory.disabled .field .select-icon {
   color: #7f7f7f; }
 
+.accordion.inventory.disabled .form-button-box-row.row {
+  display: none; }
+
+.accordion.inventory.disabled .form-button-box-button {
+  display: none; }
+
+.accordion.inventory.disabled .form-button-box .form-button-box-row .form-button-box-button {
+  display: flex; }
+
 .transactions, .ach-history {
   display: block;
   width: 100%;

@@ -186,4 +186,7 @@
     color: $med-gray;
   }
   .field .select-icon {color: $med-gray;}
+  .form-button-box-row.row {display: none;}
+  .form-button-box-button {display: none;}
+  .form-button-box .form-button-box-row .form-button-box-button {display: flex;}
 }
