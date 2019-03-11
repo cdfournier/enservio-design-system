@@ -3062,7 +3062,11 @@ input::-ms-clear, input::-ms-reveal, ::-ms-clear {
   .field input[type="checkbox"] {
     min-height: inherit; }
   .field input[type="radio"] {
-    min-height: inherit; } }
+    min-height: inherit; }
+  .receipt-item .receipt-item-header .item-details .buttons {
+    top: -0.25rem; }
+  .receipt-item .receipt-item-header i.la.la-angle-down {
+    top: 0; } }
 
 .accordion {
   display: flex;
