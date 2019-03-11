@@ -22,10 +22,10 @@ header.hidden {
   width: auto;
   height: auto;
   max-height: 5rem;
-  margin: 0 auto;
+//   margin: 0 auto; <- Removed as part of IE11 testing
 }
 
-main {padding: 0;}
+main {padding: 0 !important;} // <- Important added as part of IE11 testing
 
 .alerts {top: 0;}
 
