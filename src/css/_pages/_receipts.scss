@@ -445,7 +445,12 @@
 }
 
 
-// RECEIPT SUBMIT
+// UPLOAD RECEIPT
+.upload-line-item-receipts .text.first h1 + p {padding: 1rem 0 0;}
+.upload-line-item-receipts .text.first p {padding: 0;}
+
+
+// SUBMIT RECEIPT
 .receipt-item .receipt-details .replacement-details.submit {width: 100%;}
 
 .receipt-item .receipt-details .replacement-details.submit h2 {

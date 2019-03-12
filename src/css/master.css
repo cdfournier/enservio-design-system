@@ -3160,6 +3160,12 @@ ul.settlement-offer li.border {
   position: relative;
   width: 20%; }
 
+.upload-line-item-receipts .text.first h1 + p {
+  padding: 1rem 0 0; }
+
+.upload-line-item-receipts .text.first p {
+  padding: 0; }
+
 .receipt-item .receipt-details .replacement-details.submit {
   width: 100%; }
 
