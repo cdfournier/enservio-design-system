@@ -145,7 +145,7 @@
 }
 
 .receipt-item input.accordian:checked ~ .receipt-details {
-  max-height: 100rem;
+  max-height: 500rem;
   @include transition(max-height, 0.5s, ease-in-out);
 }
 

@@ -2854,7 +2854,7 @@ ul.settlement-offer li.border {
   padding: 0 1rem; }
 
 .receipt-item input.accordian:checked ~ .receipt-details {
-  max-height: 100rem;
+  max-height: 500rem;
   -webkit-transition: max-height 0.5s ease-in-out 0s;
   -moz-transition: max-height 0.5s ease-in-out 0s;
   -ms-transition: max-height 0.5s ease-in-out 0s;
