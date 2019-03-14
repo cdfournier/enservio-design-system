@@ -5190,6 +5190,15 @@ input::-ms-clear, input::-ms-reveal, ::-ms-clear {
     height: inherit; }
   .inventory-item {
     display: block; }
+  .inventory-item .inventory-item-header i.la.la-angle-down {
+    top: 0.25rem; }
+  ul.attachment-list li .line-item .expanding-button-box .expanding-button.small span.icon-close {
+    position: relative;
+    top: 0;
+    right: 0.175rem; }
+  .no-touch .download-button span.download-icon {
+    top: 0.375rem;
+    left: 0.325rem; }
   .field input {
     min-height: 3rem; }
   .field input:placeholder-shown + label {
@@ -5207,7 +5216,9 @@ input::-ms-clear, input::-ms-reveal, ::-ms-clear {
   .receipt-item .receipt-item-header .item-details .buttons {
     top: -0.25rem; }
   .receipt-item .receipt-item-header i.la.la-angle-down {
-    top: 0; } }
+    top: 0; }
+  .receipt-item input.accordian:checked ~ .receipt-details {
+    max-height: 100% !important; } }
 
 .accordion {
   display: flex;
