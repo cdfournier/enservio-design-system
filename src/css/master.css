@@ -5743,6 +5743,4 @@ input::-ms-clear, input::-ms-reveal, ::-ms-clear {
   .receipt-item .receipt-item-header .item-details .buttons {
     top: -0.25rem; }
   .receipt-item .receipt-item-header i.la.la-angle-down {
-    top: 0; }
-  .receipt-item input.accordian:checked ~ .receipt-details {
-    max-height: 100% !important; } }
+    top: 0; } }
