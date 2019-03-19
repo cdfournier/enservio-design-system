@@ -2309,6 +2309,9 @@ span.tag {
 .xl {
   max-width: 56rem; }
 
+.xs, .sm, .md, .lg, .xl {
+  margin: 0 auto; }
+
 main {
   display: flex;
   flex-direction: column;
