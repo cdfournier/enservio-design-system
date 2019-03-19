@@ -204,3 +204,5 @@ figcaption ul li {
   background-color: $light-gray;
   content: "";
 }
+
+.line-item-receipts + .help:after {display: none;}

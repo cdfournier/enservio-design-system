@@ -21,8 +21,6 @@
   @include transition(all, 0.5s, ease-in-out, 0s);
 }
 
-.receipt-item:last-of-type {margin: 0 auto;}
-
 .receipt-item input.accordian {
   position: absolute;
   z-index: -1;

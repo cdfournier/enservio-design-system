@@ -2488,6 +2488,9 @@ figcaption ul li {
   background-color: #cccece;
   content: ""; }
 
+.line-item-receipts + .help:after {
+  display: none; }
+
 .cards {
   display: flex;
   flex-direction: column;
@@ -4253,7 +4256,7 @@ span.Select-arrow-zone {
     position: relative;
     width: 100%;
     overflow: hidden;
-    margin: 0 auto;
+    margin: 1rem auto 0;
     padding: 1rem 0;
     list-style-type: none;
     text-overflow: ellipsis;
@@ -5235,9 +5238,6 @@ input::-ms-clear, input::-ms-reveal, ::-ms-clear {
   -ms-transition: all 0.5s ease-in-out 0s;
   -o-transition: all 0.5s ease-in-out 0s;
   transition: all 0.5s ease-in-out 0s; }
-
-.accordion:last-of-type {
-  margin: 0 auto; }
 
 .accordion > input {
   position: absolute;
