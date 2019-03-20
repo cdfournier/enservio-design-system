@@ -7,31 +7,49 @@
   justify-content: space-between;
   width: 100%;
   margin: 0 auto;
-  padding: 2rem 1rem 0;
+  padding: 2rem 2rem 0 1rem;
   background-color: $white;
-}
-
-.toolbar .search {
-  display: block;
-  width: 100%;
   form {
     width: 100%;
     padding: 0;
     fieldset {
       width: 100%;
-      .field input, .field label {padding: 0 0 0 2rem;}
-      .field input:not(:placeholder-shown) + label, .field input:focus + label {
-        @include transform(translate(-2rem, 0));
-      }
-      .field .search-icon {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        position: absolute;
-        bottom: 50%;
-        left: 1rem;
-        font-size: 1.5rem;
-      }
+      .field {padding: 0 0 0 1rem;}
     }
+  }
+}
+
+
+// SEARCH
+.toolbar .search {
+  width: 50%;
+  .field input, .field label {
+    padding: 0 0 0 1.5rem;
+    font-size: 0.694rem;
+  }
+  .field label {@include transform(translate(-1.5rem, 0));}
+  .field input::placeholder {opacity: 1;}
+  .field .search-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    bottom: 20%;
+    left: 1rem;
+    z-index: 10;
+    font-size: 1rem;
+  }
+}
+
+
+// SORT
+.toolbar .sort {
+  width: 50%;
+  .field select, .field label {font-size: 0.694rem;}
+  .field select {min-height: 0;}
+  .field .select-icon {
+    top: 47%;
+    right: 0;
+    font-size: 0.833rem;
   }
 }

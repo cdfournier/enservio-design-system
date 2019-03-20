@@ -4568,33 +4568,49 @@ ul.requirements li.invalid span i.la.la-check-circle {
   justify-content: space-between;
   width: 100%;
   margin: 0 auto;
-  padding: 2rem 1rem 0;
+  padding: 2rem 2rem 0 1rem;
   background-color: #ffffff; }
-
-.toolbar .search {
-  display: block;
-  width: 100%; }
-  .toolbar .search form {
+  .toolbar form {
     width: 100%;
     padding: 0; }
-    .toolbar .search form fieldset {
+    .toolbar form fieldset {
       width: 100%; }
-      .toolbar .search form fieldset .field input, .toolbar .search form fieldset .field label {
-        padding: 0 0 0 2rem; }
-      .toolbar .search form fieldset .field input:not(:placeholder-shown) + label, .toolbar .search form fieldset .field input:focus + label {
-        -webkit-transform: translate(-2rem, 0);
-        -moz-transform: translate(-2rem, 0);
-        -ms-transform: translate(-2rem, 0);
-        -o-transform: translate(-2rem, 0);
-        transform: translate(-2rem, 0); }
-      .toolbar .search form fieldset .field .search-icon {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        position: absolute;
-        bottom: 50%;
-        left: 1rem;
-        font-size: 1.5rem; }
+      .toolbar form fieldset .field {
+        padding: 0 0 0 1rem; }
+
+.toolbar .search {
+  width: 50%; }
+  .toolbar .search .field input, .toolbar .search .field label {
+    padding: 0 0 0 1.5rem;
+    font-size: 0.694rem; }
+  .toolbar .search .field label {
+    -webkit-transform: translate(-1.5rem, 0);
+    -moz-transform: translate(-1.5rem, 0);
+    -ms-transform: translate(-1.5rem, 0);
+    -o-transform: translate(-1.5rem, 0);
+    transform: translate(-1.5rem, 0); }
+  .toolbar .search .field input::placeholder {
+    opacity: 1; }
+  .toolbar .search .field .search-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    bottom: 20%;
+    left: 1rem;
+    z-index: 10;
+    font-size: 1rem; }
+
+.toolbar .sort {
+  width: 50%; }
+  .toolbar .sort .field select, .toolbar .sort .field label {
+    font-size: 0.694rem; }
+  .toolbar .sort .field select {
+    min-height: 0; }
+  .toolbar .sort .field .select-icon {
+    top: 47%;
+    right: 0;
+    font-size: 0.833rem; }
 
 .current-inventory {
   position: fixed;

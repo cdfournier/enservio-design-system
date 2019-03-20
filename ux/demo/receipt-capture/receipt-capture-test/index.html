@@ -87,7 +87,6 @@
               <fieldset>
                 <legend>Search</legend>
                 <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
-                  <span class="error-message">Error message goes here</span>
                   <input type="search" name="search" id="search" placeholder="Search receipts">
                   <label for="search">Search receipts</label>
                   <span class="search-icon"><i class="la la-search"></i></span>
@@ -95,8 +94,25 @@
               </fieldset>
             </form>
           </div>
-          <div class="sort"></div>
+          <div class="sort">
+            <form>
+              <fieldset>
+                <legend>Sort</legend>
+                <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                  <select name="sort" id="sort">
+                    <option value="Item Number Ascending">Item Number Ascending</option>
+                    <option value="Item Number Descending">Item Number Descending</option>
+                    <option value="Item Description Ascending">Item Description Ascending</option>
+                    <option value="Item Description Descending">Item Description Descending</option>
+                  </select>
+                  <div class="select-icon"><i class="la la-angle-down"></i></div>
+                  <label for="condition">Sort</label>
+                </div>
+              </fieldset>
+            </form>
+          </div>
           <div class="filter"></div>
+          <div class="tags"></div>
         </div>
         <div class="receipt-list xl">
           <div class="accordion receipts">
