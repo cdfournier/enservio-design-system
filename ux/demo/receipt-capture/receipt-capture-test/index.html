@@ -81,11 +81,28 @@
             <a class="button secondary color-one show-submit-error"><span class="button-label">Submit Receipts</span></a>
           </div>          
         </div>
+        <div class="toolbar xl">
+          <div class="search">
+            <form>
+              <fieldset>
+                <legend>Search</legend>
+                <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
+                  <span class="error-message">Error message goes here</span>
+                  <input type="search" name="search" id="search" placeholder="Search receipts">
+                  <label for="search">Search receipts</label>
+                  <span class="search-icon"><i class="la la-search"></i></span>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+          <div class="sort"></div>
+          <div class="filter"></div>
+        </div>
         <div class="receipt-list xl">
           <div class="accordion receipts">
             <input id="item-10" type="checkbox" name="items" class="accordion">
             <label for="item-10">
-              <div class="item-number">Item Number:&nbsp;<span>5001</span></div>
+              <div class="item-number">Item Number:&nbsp;<span>5001</span><span class="submitted">Submitted</span></div>
               <div class="item-header">
                 <div class="description"><p>This is a really long description for lamps</p></div>
                 <div class="replacement-count"><span>1000</span>of<span>2000</span>items replaced</div>
@@ -112,7 +129,7 @@
                     <div class="button-box">
                       <!-- <a href="../view-submitted-c/index.html" class="button secondary color-one"><span class="button-label">View</span></a> -->
                       <a href="../edit-details/index.html" class="button secondary color-one"><span class="button-label">Edit</span></a>
-                      <div class="expanding-button-box item-one color-one" style="margin: 1rem 0 0 0;">
+                      <div class="expanding-button-box item-ten color-one" style="margin: 1rem 0 0 0;">
                         <div class="expanding-button small"><span class="trash-icon"><i class="la la-trash"></i></span></div>
                         <div class="expanding-button large">Delete</div>
                         <div class="confirm-action-box">
@@ -156,13 +173,13 @@
           <div class="accordion receipts disabled">
             <input id="item-9" type="checkbox" name="items" class="accordion">
             <label for="item-9">
-              <div class="item-number">Item Number:&nbsp;<span>5000</span></div>
+              <div class="item-number">Item Number:&nbsp;<span>5000</span><span class="submitted">Submitted</span></div>
               <div class="item-header">
                 <div class="description"><p>This is a really long description for side tables</p></div>
                 <div class="replacement-count"><span>2000</span>of<span>2000</span>items replaced</div>
                 <div class="buttons">
-                  <!-- <a href="../upload/index.html" class="button color-one small"><span class="button-label"><i class="la la-plus"></i></span></a> -->
-                  <!-- <a href="../upload/index.html" class="button color-one large"><span class="button-label">Add</span></a> -->
+                  <a href="../upload/index.html" class="button color-one small"><span class="button-label"><i class="la la-plus"></i></span></a>
+                  <a href="../upload/index.html" class="button color-one large"><span class="button-label">Add</span></a>
                 </div>
               </div>
             </label>
@@ -181,10 +198,9 @@
                       <li><b>Subtotal:</b><span class="currency">{000.00}</span></li>
                     </ul>
                     <div class="button-box">
-                      <a href="../view-submitted-c/index.html" class="button secondary color-one"><span class="button-label">View</span></a>
-                      <!-- <a href="../edit-details/index.html" class="button secondary color-one"><span class="button-label">Edit</span></a> -->
-<!--
-                      <div class="expanding-button-box item-three color-one" style="margin: 1rem 0 0 0;">
+                      <a href="../view-submitted-c/index.html" class="button secondary color-one view"><span class="button-label">View</span></a>
+                      <a href="../edit-details/index.html" class="button secondary color-one edit"><span class="button-label">Edit</span></a>
+                      <div class="expanding-button-box item-nine color-one" style="margin: 1rem 0 0 0;">
                         <div class="expanding-button small"><span class="trash-icon"><i class="la la-trash"></i></span></div>
                         <div class="expanding-button large">Delete</div>
                         <div class="confirm-action-box">
@@ -193,7 +209,6 @@
                           <span class="confirm-action">Yes</span>
                         </div>
                       </div>
--->
                     </div>
                   </div>
                 </div>
@@ -203,13 +218,13 @@
           <div class="accordion receipts disabled">
             <input id="item-8" type="checkbox" name="items" class="accordion">
             <label for="item-8">
-              <div class="item-number">Item Number:&nbsp;<span>0000</span></div>
+              <div class="item-number">Item Number:&nbsp;<span>0000</span><span class="submitted">Submitted</span></div>
               <div class="item-header">
                 <div class="description"><p>This is a really long product description</p></div>
                 <div class="replacement-count"><span>0000</span>of<span>0000</span>items replaced</div>
                 <div class="buttons">
-                  <!-- <a href="../upload/index.html" class="button color-one small"><span class="button-label"><i class="la la-plus"></i></span></a> -->
-                  <!-- <a href="../upload/index.html" class="button color-one large"><span class="button-label">Add</span></a> -->
+                  <a href="../upload/index.html" class="button color-one small"><span class="button-label"><i class="la la-plus"></i></span></a>
+                  <a href="../upload/index.html" class="button color-one large"><span class="button-label">Add</span></a>
                 </div>
               </div>
             </label>
@@ -228,10 +243,9 @@
                       <li><b>Subtotal:</b><span class="currency">{000.00}</span></li>
                     </ul>
                     <div class="button-box">
-                      <a href="../view-submitted-c/index.html" class="button secondary color-one"><span class="button-label">View</span></a>
-                      <!-- <a href="../edit-details/index.html" class="button secondary color-one"><span class="button-label">Edit</span></a> -->
-<!--
-                      <div class="expanding-button-box item-three color-one" style="margin: 1rem 0 0 0;">
+                      <a href="../view-submitted-c/index.html" class="button secondary color-one view"><span class="button-label">View</span></a>
+                      <a href="../edit-details/index.html" class="button secondary color-one edit"><span class="button-label">Edit</span></a>
+                      <div class="expanding-button-box item-eight color-one" style="margin: 1rem 0 0 0;">
                         <div class="expanding-button small"><span class="trash-icon"><i class="la la-trash"></i></span></div>
                         <div class="expanding-button large">Delete</div>
                         <div class="confirm-action-box">
@@ -240,7 +254,6 @@
                           <span class="confirm-action">Yes</span>
                         </div>
                       </div>
--->
                     </div>
                   </div>
                 </div>
@@ -250,13 +263,13 @@
           <div class="accordion receipts disabled">
             <input id="item-7" type="checkbox" name="items" class="accordion">
             <label for="item-7">
-              <div class="item-number">Item Number:&nbsp;<span>0000</span></div>
+              <div class="item-number">Item Number:&nbsp;<span>0000</span><span class="submitted">Submitted</span></div>
               <div class="item-header">
                 <div class="description"><p>This is a really long product description</p></div>
                 <div class="replacement-count"><span>0000</span>of<span>0000</span>items replaced</div>
                 <div class="buttons">
-                  <!-- <a href="../upload/index.html" class="button color-one small"><span class="button-label"><i class="la la-plus"></i></span></a> -->
-                  <!-- <a href="../upload/index.html" class="button color-one large"><span class="button-label">Add</span></a> -->
+                  <a href="../upload/index.html" class="button color-one small"><span class="button-label"><i class="la la-plus"></i></span></a>
+                  <a href="../upload/index.html" class="button color-one large"><span class="button-label">Add</span></a>
                 </div>
               </div>
             </label>
@@ -275,10 +288,9 @@
                       <li><b>Subtotal:</b><span class="currency">{000.00}</span></li>
                     </ul>
                     <div class="button-box">
-                      <a href="../view-submitted-c/index.html" class="button secondary color-one"><span class="button-label">View</span></a>
-                      <!-- <a href="../edit-details/index.html" class="button secondary color-one"><span class="button-label">Edit</span></a> -->
-<!--
-                      <div class="expanding-button-box item-three color-one" style="margin: 1rem 0 0 0;">
+                      <a href="../view-submitted-c/index.html" class="button secondary color-one view"><span class="button-label">View</span></a>
+                      <a href="../edit-details/index.html" class="button secondary color-one edit"><span class="button-label">Edit</span></a>
+                      <div class="expanding-button-box item-seven color-one" style="margin: 1rem 0 0 0;">
                         <div class="expanding-button small"><span class="trash-icon"><i class="la la-trash"></i></span></div>
                         <div class="expanding-button large">Delete</div>
                         <div class="confirm-action-box">
@@ -287,7 +299,6 @@
                           <span class="confirm-action">Yes</span>
                         </div>
                       </div>
--->
                     </div>
                   </div>
                 </div>
@@ -295,15 +306,15 @@
             </div>
           </div>
           <div class="accordion receipts disabled">
-            <input id="item-8" type="checkbox" name="items" class="accordion">
-            <label for="item-8">
-              <div class="item-number">Item Number:&nbsp;<span>0000</span></div>
+            <input id="item-6" type="checkbox" name="items" class="accordion">
+            <label for="item-6">
+              <div class="item-number">Item Number:&nbsp;<span>0000</span><span class="submitted">Submitted</span></div>
               <div class="item-header">
                 <div class="description"><p>This is a really long product description</p></div>
                 <div class="replacement-count"><span>0000</span>of<span>0000</span>items replaced</div>
                 <div class="buttons">
-                  <!-- <a href="../upload/index.html" class="button color-one small"><span class="button-label"><i class="la la-plus"></i></span></a> -->
-                  <!-- <a href="../upload/index.html" class="button color-one large"><span class="button-label">Add</span></a> -->
+                  <a href="../upload/index.html" class="button color-one small"><span class="button-label"><i class="la la-plus"></i></span></a>
+                  <a href="../upload/index.html" class="button color-one large"><span class="button-label">Add</span></a>
                 </div>
               </div>
             </label>
@@ -322,9 +333,143 @@
                       <li><b>Subtotal:</b><span class="currency">{000.00}</span></li>
                     </ul>
                     <div class="button-box">
-                      <a href="../view-submitted-c/index.html" class="button secondary color-one"><span class="button-label">View</span></a>
-                      <!-- <a href="../edit-details/index.html" class="button secondary color-one"><span class="button-label">Edit</span></a> -->
-<!--
+                      <a href="../view-submitted-c/index.html" class="button secondary color-one view"><span class="button-label">View</span></a>
+                      <a href="../edit-details/index.html" class="button secondary color-one edit"><span class="button-label">Edit</span></a>
+                      <div class="expanding-button-box item-six color-one" style="margin: 1rem 0 0 0;">
+                        <div class="expanding-button small"><span class="trash-icon"><i class="la la-trash"></i></span></div>
+                        <div class="expanding-button large">Delete</div>
+                        <div class="confirm-action-box">
+                          <span class="confirm-action-text">Are you sure?</span>
+                          <span class="confirm-action secondary">No</span>
+                          <span class="confirm-action">Yes</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion receipts disabled">
+            <input id="item-5" type="checkbox" name="items" class="accordion">
+            <label for="item-5">
+              <div class="item-number">Item Number:&nbsp;<span>0000</span><span class="submitted">Submitted</span></div>
+              <div class="item-header">
+                <div class="description"><p>This is a really long product description</p></div>
+                <div class="replacement-count"><span>0000</span>of<span>0000</span>items replaced</div>
+                <div class="buttons">
+                  <a href="../upload/index.html" class="button color-one small"><span class="button-label"><i class="la la-plus"></i></span></a>
+                  <a href="../upload/index.html" class="button color-one large"><span class="button-label">Add</span></a>
+                </div>
+              </div>
+            </label>
+            <div class="item-details">
+              <div class="replacement-count"><span>0000</span>of<span>0000</span>items replaced</div>
+              <div class="message"><span class="submitted">You have submitted {0} receipt(s) for this line.</span><span class="added">You have added {0} receipt(s) for this line that you have not yet submitted.</span><span class="more">You can enter {0} more receipt(s) for this line.</span>
+              </div>
+              <div class="receipt">
+                <div class="receipt-number"><span>Receipt #1</span></div>
+                <div class="receipt-details">
+                  <figure><img src="../../../assets/images/target-side-tables-highlighted.jpg" alt="Receipt Image"></figure>
+                  <div class="receipt-control">
+                    <ul>
+                      <li><b>Amount Per Item:</b><span class="currency">{000.00}</span></li>
+                      <li><b>Quantity Replaced:</b><span>{0}</span></li>
+                      <li><b>Subtotal:</b><span class="currency">{000.00}</span></li>
+                    </ul>
+                    <div class="button-box">
+                      <a href="../view-submitted-c/index.html" class="button secondary color-one view"><span class="button-label">View</span></a>
+                      <a href="../edit-details/index.html" class="button secondary color-one edit"><span class="button-label">Edit</span></a>
+                      <div class="expanding-button-box item-five color-one" style="margin: 1rem 0 0 0;">
+                        <div class="expanding-button small"><span class="trash-icon"><i class="la la-trash"></i></span></div>
+                        <div class="expanding-button large">Delete</div>
+                        <div class="confirm-action-box">
+                          <span class="confirm-action-text">Are you sure?</span>
+                          <span class="confirm-action secondary">No</span>
+                          <span class="confirm-action">Yes</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion receipts disabled">
+            <input id="item-4" type="checkbox" name="items" class="accordion">
+            <label for="item-4">
+              <div class="item-number">Item Number:&nbsp;<span>0000</span><span class="submitted">Submitted</span></div>
+              <div class="item-header">
+                <div class="description"><p>This is a really long product description</p></div>
+                <div class="replacement-count"><span>0000</span>of<span>0000</span>items replaced</div>
+                <div class="buttons">
+                  <a href="../upload/index.html" class="button color-one small"><span class="button-label"><i class="la la-plus"></i></span></a>
+                  <a href="../upload/index.html" class="button color-one large"><span class="button-label">Add</span></a>
+                </div>
+              </div>
+            </label>
+            <div class="item-details">
+              <div class="replacement-count"><span>0000</span>of<span>0000</span>items replaced</div>
+              <div class="message"><span class="submitted">You have submitted {0} receipt(s) for this line.</span><span class="added">You have added {0} receipt(s) for this line that you have not yet submitted.</span><span class="more">You can enter {0} more receipt(s) for this line.</span>
+              </div>
+              <div class="receipt">
+                <div class="receipt-number"><span>Receipt #1</span></div>
+                <div class="receipt-details">
+                  <figure><img src="../../../assets/images/target-side-tables-highlighted.jpg" alt="Receipt Image"></figure>
+                  <div class="receipt-control">
+                    <ul>
+                      <li><b>Amount Per Item:</b><span class="currency">{000.00}</span></li>
+                      <li><b>Quantity Replaced:</b><span>{0}</span></li>
+                      <li><b>Subtotal:</b><span class="currency">{000.00}</span></li>
+                    </ul>
+                    <div class="button-box">
+                      <a href="../view-submitted-c/index.html" class="button secondary color-one view"><span class="button-label">View</span></a>
+                      <a href="../edit-details/index.html" class="button secondary color-one edit"><span class="button-label">Edit</span></a>
+                      <div class="expanding-button-box item-four color-one" style="margin: 1rem 0 0 0;">
+                        <div class="expanding-button small"><span class="trash-icon"><i class="la la-trash"></i></span></div>
+                        <div class="expanding-button large">Delete</div>
+                        <div class="confirm-action-box">
+                          <span class="confirm-action-text">Are you sure?</span>
+                          <span class="confirm-action secondary">No</span>
+                          <span class="confirm-action">Yes</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion receipts disabled">
+            <input id="item-3" type="checkbox" name="items" class="accordion">
+            <label for="item-3">
+              <div class="item-number">Item Number:&nbsp;<span>0000</span><span class="submitted">Submitted</span></div>
+              <div class="item-header">
+                <div class="description"><p>This is a really long product description</p></div>
+                <div class="replacement-count"><span>0000</span>of<span>0000</span>items replaced</div>
+                <div class="buttons">
+                  <a href="../upload/index.html" class="button color-one small"><span class="button-label"><i class="la la-plus"></i></span></a>
+                  <a href="../upload/index.html" class="button color-one large"><span class="button-label">Add</span></a>
+                </div>
+              </div>
+            </label>
+            <div class="item-details">
+              <div class="replacement-count"><span>0000</span>of<span>0000</span>items replaced</div>
+              <div class="message"><span class="submitted">You have submitted {0} receipt(s) for this line.</span><span class="added">You have added {0} receipt(s) for this line that you have not yet submitted.</span><span class="more">You can enter {0} more receipt(s) for this line.</span>
+              </div>
+              <div class="receipt">
+                <div class="receipt-number"><span>Receipt #1</span></div>
+                <div class="receipt-details">
+                  <figure><img src="../../../assets/images/target-side-tables-highlighted.jpg" alt="Receipt Image"></figure>
+                  <div class="receipt-control">
+                    <ul>
+                      <li><b>Amount Per Item:</b><span class="currency">{000.00}</span></li>
+                      <li><b>Quantity Replaced:</b><span>{0}</span></li>
+                      <li><b>Subtotal:</b><span class="currency">{000.00}</span></li>
+                    </ul>
+                    <div class="button-box">
+                      <a href="../view-submitted-c/index.html" class="button secondary color-one view"><span class="button-label">View</span></a>
+                      <a href="../edit-details/index.html" class="button secondary color-one edit"><span class="button-label">Edit</span></a>
                       <div class="expanding-button-box item-three color-one" style="margin: 1rem 0 0 0;">
                         <div class="expanding-button small"><span class="trash-icon"><i class="la la-trash"></i></span></div>
                         <div class="expanding-button large">Delete</div>
@@ -334,7 +479,96 @@
                           <span class="confirm-action">Yes</span>
                         </div>
                       </div>
--->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion receipts disabled">
+            <input id="item-2" type="checkbox" name="items" class="accordion">
+            <label for="item-2">
+              <div class="item-number">Item Number:&nbsp;<span>0000</span><span class="submitted">Submitted</span></div>
+              <div class="item-header">
+                <div class="description"><p>This is a really long product description</p></div>
+                <div class="replacement-count"><span>0000</span>of<span>0000</span>items replaced</div>
+                <div class="buttons">
+                  <a href="../upload/index.html" class="button color-one small"><span class="button-label"><i class="la la-plus"></i></span></a>
+                  <a href="../upload/index.html" class="button color-one large"><span class="button-label">Add</span></a>
+                </div>
+              </div>
+            </label>
+            <div class="item-details">
+              <div class="replacement-count"><span>0000</span>of<span>0000</span>items replaced</div>
+              <div class="message"><span class="submitted">You have submitted {0} receipt(s) for this line.</span><span class="added">You have added {0} receipt(s) for this line that you have not yet submitted.</span><span class="more">You can enter {0} more receipt(s) for this line.</span>
+              </div>
+              <div class="receipt">
+                <div class="receipt-number"><span>Receipt #1</span></div>
+                <div class="receipt-details">
+                  <figure><img src="../../../assets/images/target-side-tables-highlighted.jpg" alt="Receipt Image"></figure>
+                  <div class="receipt-control">
+                    <ul>
+                      <li><b>Amount Per Item:</b><span class="currency">{000.00}</span></li>
+                      <li><b>Quantity Replaced:</b><span>{0}</span></li>
+                      <li><b>Subtotal:</b><span class="currency">{000.00}</span></li>
+                    </ul>
+                    <div class="button-box">
+                      <a href="../view-submitted-c/index.html" class="button secondary color-one view"><span class="button-label">View</span></a>
+                      <a href="../edit-details/index.html" class="button secondary color-one edit"><span class="button-label">Edit</span></a>
+                      <div class="expanding-button-box item-two color-one" style="margin: 1rem 0 0 0;">
+                        <div class="expanding-button small"><span class="trash-icon"><i class="la la-trash"></i></span></div>
+                        <div class="expanding-button large">Delete</div>
+                        <div class="confirm-action-box">
+                          <span class="confirm-action-text">Are you sure?</span>
+                          <span class="confirm-action secondary">No</span>
+                          <span class="confirm-action">Yes</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="accordion receipts disabled">
+            <input id="item-1" type="checkbox" name="items" class="accordion">
+            <label for="item-1">
+              <div class="item-number">Item Number:&nbsp;<span>0000</span><span class="submitted">Submitted</span></div>
+              <div class="item-header">
+                <div class="description"><p>This is a really long product description</p></div>
+                <div class="replacement-count"><span>0000</span>of<span>0000</span>items replaced</div>
+                <div class="buttons">
+                  <a href="../upload/index.html" class="button color-one small"><span class="button-label"><i class="la la-plus"></i></span></a>
+                  <a href="../upload/index.html" class="button color-one large"><span class="button-label">Add</span></a>
+                </div>
+              </div>
+            </label>
+            <div class="item-details">
+              <div class="replacement-count"><span>0000</span>of<span>0000</span>items replaced</div>
+              <div class="message"><span class="submitted">You have submitted {0} receipt(s) for this line.</span><span class="added">You have added {0} receipt(s) for this line that you have not yet submitted.</span><span class="more">You can enter {0} more receipt(s) for this line.</span>
+              </div>
+              <div class="receipt">
+                <div class="receipt-number"><span>Receipt #1</span></div>
+                <div class="receipt-details">
+                  <figure><img src="../../../assets/images/target-side-tables-highlighted.jpg" alt="Receipt Image"></figure>
+                  <div class="receipt-control">
+                    <ul>
+                      <li><b>Amount Per Item:</b><span class="currency">{000.00}</span></li>
+                      <li><b>Quantity Replaced:</b><span>{0}</span></li>
+                      <li><b>Subtotal:</b><span class="currency">{000.00}</span></li>
+                    </ul>
+                    <div class="button-box">
+                      <a href="../view-submitted-c/index.html" class="button secondary color-one view"><span class="button-label">View</span></a>
+                      <a href="../edit-details/index.html" class="button secondary color-one edit"><span class="button-label">Edit</span></a>
+                      <div class="expanding-button-box item-one color-one" style="margin: 1rem 0 0 0;">
+                        <div class="expanding-button small"><span class="trash-icon"><i class="la la-trash"></i></span></div>
+                        <div class="expanding-button large">Delete</div>
+                        <div class="confirm-action-box">
+                          <span class="confirm-action-text">Are you sure?</span>
+                          <span class="confirm-action secondary">No</span>
+                          <span class="confirm-action">Yes</span>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -393,21 +627,5 @@
         $('.alert-bar.error').removeClass('show');
       });
     </script>
-<!--
-    <script>
-      $('.item-four').click(function() {
-        $('.expanding-button-box.item-four').toggleClass('expand');
-      });
-      $('.item-five').click(function() {
-        $('.expanding-button-box.item-five').toggleClass('expand');
-      });
-      $('.item-six').click(function() {
-        $('.expanding-button-box.item-six').toggleClass('expand');
-      });
-      $('.item-seven').click(function() {
-        $('.expanding-button-box.item-seven').toggleClass('expand');
-      });
-    </script>
--->
   </body>
 </html>

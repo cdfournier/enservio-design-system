@@ -4560,6 +4560,42 @@ ul.requirements li.invalid span i.la.la-check-circle {
   .claim-details.balance {
     display: flex; } }
 
+.toolbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1rem 0;
+  background-color: #ffffff; }
+
+.toolbar .search {
+  display: block;
+  width: 100%; }
+  .toolbar .search form {
+    width: 100%;
+    padding: 0; }
+    .toolbar .search form fieldset {
+      width: 100%; }
+      .toolbar .search form fieldset .field input, .toolbar .search form fieldset .field label {
+        padding: 0 0 0 2rem; }
+      .toolbar .search form fieldset .field input:not(:placeholder-shown) + label, .toolbar .search form fieldset .field input:focus + label {
+        -webkit-transform: translate(-2rem, 0);
+        -moz-transform: translate(-2rem, 0);
+        -ms-transform: translate(-2rem, 0);
+        -o-transform: translate(-2rem, 0);
+        transform: translate(-2rem, 0); }
+      .toolbar .search form fieldset .field .search-icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        bottom: 50%;
+        left: 1rem;
+        font-size: 1.5rem; }
+
 .current-inventory {
   position: fixed;
   top: calc(100vh - 7rem);

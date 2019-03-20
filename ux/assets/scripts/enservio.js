@@ -118,6 +118,17 @@ else {
 }
 
 
+// STICK TO TOP
+$(window).scroll(function() {
+    var distanceFromTop = $(this).scrollTop();
+    if (distanceFromTop >= $('').height()) {
+        $('').addClass('fixed');
+    } else {
+        $('').removeClass('fixed');
+    }
+});
+
+
 // SMOOTH SCROLL
 $('a[href*="#"]')
   // Remove links that don't actually link to anything

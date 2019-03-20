@@ -133,13 +133,3 @@
 }}
 
 @media (min-width: 48rem) {.receipt-control .button-box {flex-direction: column;}}
-
-
-// DISABLED RECEIPTS
-.accordion.receipts.disabled {
-  .item-number {color: $med-gray;}
-  .item-header {color: $med-gray;}
-  .replacement-count span {background-color: $med-gray;}
-  .item-details {color: $med-gray;}
-  .recplacement-count {color: $med-gray;}
-}

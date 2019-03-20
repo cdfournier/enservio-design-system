@@ -17,6 +17,7 @@
 @import "_molecules/passwords";
 @import "_molecules/carousels";
 @import "_molecules/claims";
+@import "_molecules/toolbar";
 
 @import "_pages/settlement";
 @import "_pages/inventory-new";
@@ -207,3 +208,45 @@
 }
 
 .button.small span {position: absolute;}
+
+
+// SUBMITTED ITEMS
+.accordion .item-number span.submitted {
+  display: none;
+  margin: 0 0 0 0.694rem;
+  padding: 0.125rem 0.75rem;
+  border: 1px solid var(--color-one);
+  border-radius: 2rem;
+  font-size: 0.6rem;
+  font-weight: 500;
+  color: $white;
+  background-color: var(--color-one);
+  white-space: nowrap;
+}
+
+
+// DISABLED ACCORDIONS
+.accordion.disabled {
+  .item-number {color: $med-gray;}
+  .item-number span.submitted {display: inline;}
+  .item-header {color: $med-gray;}
+  .item-header .buttons {display: none;}
+  .item-details {color: $med-gray;}
+  .recplacement-count {color: $med-gray;}
+  .replacement-count span {background-color: $med-gray;}
+  .button.secondary.color-one.edit {display: none;}
+  .receipt-control .button-box .expanding-button-box {display: none;}
+  .field input {
+    border-bottom: 1px solid $med-gray;
+    color: $med-gray;
+  }
+  .field label {color: $med-gray;}
+  .field select {
+    border-bottom: 1px solid $med-gray;
+    color: $med-gray;
+  }
+  .field .select-icon {color: $med-gray;}
+  .form-button-box-row.row {display: none;}
+  .form-button-box-button {display: none;}
+  .form-button-box .form-button-box-row .form-button-box-button {display: flex;}
+}

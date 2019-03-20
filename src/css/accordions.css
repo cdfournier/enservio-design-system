@@ -4560,6 +4560,42 @@ ul.requirements li.invalid span i.la.la-check-circle {
   .claim-details.balance {
     display: flex; } }
 
+.toolbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem 1rem 0;
+  background-color: #ffffff; }
+
+.toolbar .search {
+  display: block;
+  width: 100%; }
+  .toolbar .search form {
+    width: 100%;
+    padding: 0; }
+    .toolbar .search form fieldset {
+      width: 100%; }
+      .toolbar .search form fieldset .field input, .toolbar .search form fieldset .field label {
+        padding: 0 0 0 2rem; }
+      .toolbar .search form fieldset .field input:not(:placeholder-shown) + label, .toolbar .search form fieldset .field input:focus + label {
+        -webkit-transform: translate(-2rem, 0);
+        -moz-transform: translate(-2rem, 0);
+        -ms-transform: translate(-2rem, 0);
+        -o-transform: translate(-2rem, 0);
+        transform: translate(-2rem, 0); }
+      .toolbar .search form fieldset .field .search-icon {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: absolute;
+        bottom: 50%;
+        left: 1rem;
+        font-size: 1.5rem; }
+
 ul.settlement-offer {
   margin: 0;
   padding: 1rem 0;
@@ -4695,18 +4731,6 @@ ul.settlement-offer li.border {
 .inventory .item-number {
   padding: 0 1rem; }
 
-.inventory .item-number span.submitted {
-  display: none;
-  margin: 0 0 0 0.694rem;
-  padding: 0.125rem 0.75rem;
-  border: 1px solid var(--color-one);
-  border-radius: 2rem;
-  font-size: 0.694rem;
-  font-weight: 500;
-  color: #ffffff;
-  background-color: var(--color-one);
-  white-space: nowrap; }
-
 .inventory .item-header {
   min-height: inherit;
   padding: 0 1rem; }
@@ -4768,38 +4792,6 @@ ul.settlement-offer li.border {
 
 .inventory .item-details form {
   padding: 2rem 0 0; }
-
-.accordion.inventory.disabled .item-number {
-  color: #7f7f7f; }
-
-.accordion.inventory.disabled .item-number span.submitted {
-  display: inline; }
-
-.accordion.inventory.disabled .item-header {
-  color: #7f7f7f; }
-
-.accordion.inventory.disabled .field input {
-  border-bottom: 1px solid #7f7f7f;
-  color: #7f7f7f; }
-
-.accordion.inventory.disabled .field label {
-  color: #7f7f7f; }
-
-.accordion.inventory.disabled .field select {
-  border-bottom: 1px solid #7f7f7f;
-  color: #7f7f7f; }
-
-.accordion.inventory.disabled .field .select-icon {
-  color: #7f7f7f; }
-
-.accordion.inventory.disabled .form-button-box-row.row {
-  display: none; }
-
-.accordion.inventory.disabled .form-button-box-button {
-  display: none; }
-
-.accordion.inventory.disabled .form-button-box .form-button-box-row .form-button-box-button {
-  display: flex; }
 
 .transactions, .ach-history {
   display: block;
@@ -5139,21 +5131,6 @@ ul.settlement-offer li.border {
   .receipt-control .button-box {
     flex-direction: column; } }
 
-.accordion.receipts.disabled .item-number {
-  color: #7f7f7f; }
-
-.accordion.receipts.disabled .item-header {
-  color: #7f7f7f; }
-
-.accordion.receipts.disabled .replacement-count span {
-  background-color: #7f7f7f; }
-
-.accordion.receipts.disabled .item-details {
-  color: #7f7f7f; }
-
-.accordion.receipts.disabled .recplacement-count {
-  color: #7f7f7f; }
-
 input::-ms-clear, input::-ms-reveal, ::-ms-clear {
   display: none; }
 
@@ -5412,3 +5389,65 @@ input::-ms-clear, input::-ms-reveal, ::-ms-clear {
 
 .button.small span {
   position: absolute; }
+
+.accordion .item-number span.submitted {
+  display: none;
+  margin: 0 0 0 0.694rem;
+  padding: 0.125rem 0.75rem;
+  border: 1px solid var(--color-one);
+  border-radius: 2rem;
+  font-size: 0.6rem;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: var(--color-one);
+  white-space: nowrap; }
+
+.accordion.disabled .item-number {
+  color: #7f7f7f; }
+
+.accordion.disabled .item-number span.submitted {
+  display: inline; }
+
+.accordion.disabled .item-header {
+  color: #7f7f7f; }
+
+.accordion.disabled .item-header .buttons {
+  display: none; }
+
+.accordion.disabled .item-details {
+  color: #7f7f7f; }
+
+.accordion.disabled .recplacement-count {
+  color: #7f7f7f; }
+
+.accordion.disabled .replacement-count span {
+  background-color: #7f7f7f; }
+
+.accordion.disabled .button.secondary.color-one.edit {
+  display: none; }
+
+.accordion.disabled .receipt-control .button-box .expanding-button-box {
+  display: none; }
+
+.accordion.disabled .field input {
+  border-bottom: 1px solid #7f7f7f;
+  color: #7f7f7f; }
+
+.accordion.disabled .field label {
+  color: #7f7f7f; }
+
+.accordion.disabled .field select {
+  border-bottom: 1px solid #7f7f7f;
+  color: #7f7f7f; }
+
+.accordion.disabled .field .select-icon {
+  color: #7f7f7f; }
+
+.accordion.disabled .form-button-box-row.row {
+  display: none; }
+
+.accordion.disabled .form-button-box-button {
+  display: none; }
+
+.accordion.disabled .form-button-box .form-button-box-row .form-button-box-button {
+  display: flex; }

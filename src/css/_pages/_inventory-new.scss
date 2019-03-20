@@ -92,19 +92,6 @@
 // INVENTORY ITEM HEADER
 .inventory .item-number {padding: 0 1rem;}
 
-.inventory .item-number span.submitted {
-  display: none;
-  margin: 0 0 0 0.694rem;
-  padding: 0.125rem 0.75rem;
-  border: 1px solid var(--color-one);
-  border-radius: 2rem;
-  font-size: 0.694rem;
-  font-weight: 500;
-  color: $white;
-  background-color: var(--color-one);
-  white-space: nowrap;
-}
-
 .inventory .item-header {
   min-height: inherit;
   padding: 0 1rem;
@@ -169,24 +156,3 @@
 }
 
 .inventory .item-details form {padding: 2rem 0 0;}
-
-
-// DISABLED INVENTORY ITEMS
-.accordion.inventory.disabled {
-  .item-number {color: $med-gray;}
-  .item-number span.submitted {display: inline;}
-  .item-header {color: $med-gray;}
-  .field input {
-    border-bottom: 1px solid $med-gray;
-    color: $med-gray;
-  }
-  .field label {color: $med-gray;}
-  .field select {
-    border-bottom: 1px solid $med-gray;
-    color: $med-gray;
-  }
-  .field .select-icon {color: $med-gray;}
-  .form-button-box-row.row {display: none;}
-  .form-button-box-button {display: none;}
-  .form-button-box .form-button-box-row .form-button-box-button {display: flex;}
-}
