@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700">
-    <link rel="stylesheet" href="../../../../src/css/master.css">
+    <link rel="stylesheet" href="../../../../src/css/accordions.css">
     <!-- favicons -->
     <link rel="apple-touch-icon" sizes="180x180" href="../../../../public/icons/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="../../../../public/icons/favicon-32x32.png">
@@ -78,16 +78,14 @@
           <h1>Attachments</h1>
           <p>You have {number} attachments for this item.</p>
         </div>
-        <div class="current-inventory-list">
-          <div class="inventory-item">
-            <input id="item-1" type="radio" name="items" class="accordian">
-            <label for="item-1" class="inventory-item-header">
-              <span class="item-number">1</span>
-              <div class="item-details">
-                <span class="description"><b>Description</b>:&nbsp;Macbook Pro 13&quot;</span>
-                <span class="cost"><b>Cost</b>:&nbsp;&#36;2,500</span>
-                <span class="quantity"><b>Quantity</b>:&nbsp;1</span>
-                <span class="age"><b>Age</b>:&nbsp;1 years, 7 months</span>
+        <div id="current-inventory-list" class="current-inventory-list">
+          <div class="accordion inventory attachment">
+            <label for="item-1">
+              <div class="item-number">Item Number:&nbsp;<span>0000</span><span class="submitted">Submitted</span></div>
+              <div class="item-header">
+                <div class="description"><span>Description</span><p>This is a long product description</p></div>
+                <div class="cost"><span>Cost</span><p>&#36;000.00</p></div>
+                <div class="qty"><span>Qty</span><p>00</p></div>
               </div>
             </label>
           </div>

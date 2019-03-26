@@ -225,6 +225,10 @@
 }
 
 
+// ACCORDION ON ATTACHMENT SCREEN
+.accordion.inventory.attachment .item-header:after {display: none;}
+
+
 // DISABLED ACCORDIONS
 .accordion.disabled {
   .item-number {color: $med-gray;}

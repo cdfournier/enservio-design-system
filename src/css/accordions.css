@@ -5418,6 +5418,9 @@ input::-ms-clear, input::-ms-reveal, ::-ms-clear {
   background-color: var(--color-one);
   white-space: nowrap; }
 
+.accordion.inventory.attachment .item-header:after {
+  display: none; }
+
 .accordion.disabled .item-number {
   color: #7f7f7f; }
 
