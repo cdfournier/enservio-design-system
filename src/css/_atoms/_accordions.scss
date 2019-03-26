@@ -1,32 +1,3 @@
-@import "_global/base";
-@import "_global/typography";
-@import "_global/line-awesome";
-@import "_global/containers";
-
-@import "_atoms/cards";
-@import "_atoms/spinners";
-@import "_atoms/buttons";
-@import "_atoms/header";
-@import "_atoms/footer";
-@import "_atoms/alerts";
-@import "_atoms/attachments";
-@import "_atoms/forms";
-@import "_atoms/react-select";
-@import "_atoms/pagination";
-
-@import "_molecules/passwords";
-@import "_molecules/carousels";
-@import "_molecules/claims";
-@import "_molecules/toolbar";
-
-@import "_pages/settlement";
-@import "_pages/inventory-new";
-@import "_pages/payments";
-@import "_pages/receipts-new";
-
-@import "_global/microsoft";
-
-
 // ACCORDIONS
 .accordion {
   display: flex;
@@ -92,12 +63,23 @@
   @include transform(rotate(-0.5turn));
 }
 
-.description {
+.description,
+.cost,
+.qty {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  width: calc(100% - 5rem);
-  padding: 0 0.5rem 0 0;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0.5rem 0.5rem 0 0;
+}
+
+.description {width: calc(100% - 5rem);}
+
+.description span,
+.cost span,
+.qty span {
+  font-size: 0.694rem;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 .description p {
@@ -210,29 +192,19 @@
 .button.small span {position: absolute;}
 
 
-// SUBMITTED ITEMS
-.accordion .item-number span.submitted {
-  display: none;
-  margin: 0 0 0 0.694rem;
-  padding: 0.125rem 0.75rem;
-  border: 1px solid var(--color-one);
-  border-radius: 2rem;
-  font-size: 0.6rem;
-  font-weight: 500;
-  color: $white;
-  background-color: var(--color-one);
-  white-space: nowrap;
-}
-
-
 // ACCORDION ON ATTACHMENT SCREEN
 .accordion.inventory.attachment .item-header:after {display: none;}
+
+
+// ACCORDION ON SUBMIT RECEIPTS SCREEN
+.accordion.receipts.submit .buttons {visibility: hidden;}
+
+.accordion.receipts.submit .receipt-control .button-box {display: none;}
 
 
 // DISABLED ACCORDIONS
 .accordion.disabled {
   .item-number {color: $med-gray;}
-  .item-number span.submitted {display: inline;}
   .item-header {color: $med-gray;}
   .item-header .buttons {display: none;}
   .item-details {color: $med-gray;}

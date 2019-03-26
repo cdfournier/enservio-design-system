@@ -130,7 +130,7 @@
               <a class="button color-one" onclick="goBack()"><span class="button-label">Save Changes</span></a>
             </div>
             <div class="button-box">
-              <a class="button secondary color-two show-confirm-cancel"><span class="button-label">Cancel</span></a>
+              <a class="button secondary color-two" onclick="goBack()"><span class="button-label">Cancel</span></a>
             </div>
           </form>
           <div class="receipt-crop-box">
@@ -172,22 +172,6 @@
         viewMode: 1,
         background: false,
         zoomOnWheel: false
-      });
-    </script>
-    <script>
-      $('.show-confirm-prev').click( function() {
-        $('.alert-bar.confirm.prev').addClass('show');
-      });
-      $('.dismiss.confirm-prev').click( function() {
-        $('.alert-bar.confirm.prev').removeClass('show');
-      });
-    </script>
-    <script>
-      $('.show-confirm-cancel').click( function() {
-        $('.alert-bar.confirm.cancel').addClass('show');
-      });
-      $('.dismiss.confirm-cancel').click( function() {
-        $('.alert-bar.confirm.cancel').removeClass('show');
       });
     </script>
     <script>

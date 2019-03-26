@@ -49,31 +49,29 @@
         <div class="split wide last">
           <div class="design-sample">
             <figcaption>Design Sample</figcaption>
-            <div id="current-list" class="current-inventory">
+            <div class="current-inventory">
               <div class="current-inventory-bar">
                 <h2>Current Inventory Items</h2>
-                <span class="counter">0</span>
+                <span class="counter">200</span>
               </div>
-              <div class="current-inventory-list">
-                <div class="inventory-item">
-                  <input id="item-1" type="radio" name="items" class="accordian">
-                  <label for="item-1" class="inventory-item-header">
-                    <span class="item-number">1</span>
-                    <div class="item-details">
-                      <span class="description"><b>Description</b>:&nbsp;</span>
-                      <span class="cost"><b>Cost</b>:&nbsp;</span>
-                      <span class="quantity"><b>Quantity</b>:&nbsp;</span>
-                      <span class="age"><b>Age</b>:&nbsp;</span>
+              <div id="current-inventory-list" class="current-inventory-list">
+                <div class="accordion inventory">
+                  <input id="item-1" type="checkbox" name="items" class="accordion">
+                  <label for="item-1">
+                    <div class="item-number">Item Number:&nbsp;<span>0000</span></div>
+                    <div class="item-header">
+                      <div class="description"><span>Description</span><p>This is a long product description</p></div>
+                      <div class="cost"><span>Cost</span><p>&#36;000.00</p></div>
+                      <div class="qty"><span>Qty</span><p>00</p></div>
                     </div>
-                    <i class="la la-angle-down"></i>
                   </label>
-                  <div class="inventory-item-details">
+                  <div class="item-details">
                     <form>
                       <fieldset>
                         <legend>Description</legend>
                         <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
                           <span class="error-message">Please include a description</span>
-                          <input type="text" name="description" id="description" placeholder="Describe your item&nbsp;&#40;including brand&#41;" value="HP Deskjet 4300">
+                          <input type="text" name="description" id="description" placeholder="Describe your item&nbsp;&#40;including brand&#41;" value="This is a long product description">
                           <label for="description">Description&#42;</label>
                         </div>
                       </fieldset>
@@ -81,7 +79,7 @@
                         <legend>Cost</legend>
                         <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
                           <span class="error-message">Please include a cost per item</span>
-                          <input type="text" name="cost" id="cost" placeholder="Cost per item" value="&#36;139">
+                          <input type="text" name="cost" id="cost" placeholder="Cost per item" value="&#36;000.00">
                           <label for="cost">Cost Per Item&#42;</label>
                         </div>
                       </fieldset>
@@ -89,7 +87,7 @@
                         <legend>Quantity</legend>
                         <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
                           <span class="error-message">Please include a quantity</span>
-                          <input type="number" name="quantity" id="quantity" placeholder="Quantity" value="1">
+                          <input type="number" name="quantity" id="quantity" placeholder="Quantity" value="00">
                           <label for="quantity">Quantity&#42;</label>
                         </div>
                       </fieldset>
@@ -97,7 +95,7 @@
                         <legend>Age: Years</legend>
                         <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
                           <span class="error-message">How old is this item &#40;in years&#41;?</span>
-                          <input type="number" name="years" id="years" placeholder="Years" value="2">
+                          <input type="number" name="years" id="years" placeholder="Years" value="00">
                           <label for="years">Age: In Years&#42;</label>
                         </div>
                       </fieldset>
@@ -105,7 +103,7 @@
                         <legend>Age: Months</legend>
                         <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
                           <span class="error-message">How old is this item &#40;in months&#41;?</span>
-                          <input type="number" name="months" id="months" placeholder="Months" value="5">
+                          <input type="number" name="months" id="months" placeholder="Months" value="00">
                           <label for="months">Age: In Months&#42;</label>
                         </div>
                       </fieldset>
@@ -114,7 +112,6 @@
                         <div class="field"> <!-- change to 'field valid' or 'field invalid' as necessary -->
                           <span class="error-message">Please select an option</span>
                           <select name="condition" id="condition">
-                            <option value="Fair">Fair</option>
                             <option value="0">Choose a Condition</option>
                             <option value="New">New</option>
                             <option value="Excellent">Excellent</option>
@@ -130,14 +127,14 @@
                       <div class="form-button-box">
                         <div class="form-button-box-row">
                           <div class="form-button-box-button">
-                            <button class="button color-two"><span class="button-label">Add Attachments<span class="post"><span class="number">1</span></span></span></button>
+                            <button class="button color-two"><span class="button-label">Add Attachments<span class="post"><span class="number">00</span></span></span></button>
                           </div>
                           <div class="form-button-box-row row">
                             <div class="form-button-box-button">
                               <button class="button secondary color-one"><span class="button-label">Save<span class="post"><span class="processing"><i class="la la-refresh la-spin"></i></span></span></span></button>
                             </div>
                             <div class="form-button-box-button">
-                              <button class="button secondary color-one"><span class="button-label">Cancel<span class="button-label"></button>
+                              <button class="button secondary color-one"><span class="button-label">Cancel</span></button>
                             </div>
                           </div>
                         </div>
@@ -162,31 +159,29 @@
           <div class="code-sample">
             <figure>
               <figcaption>html</figcaption>
-<pre><code>&lt;div id=&quot;current-list&quot; class=&quot;current-inventory&quot;&gt;
+<pre><code>&lt;section id=&quot;current-inventory&quot; class=&quot;current-inventory&quot;&gt;
   &lt;div class=&quot;current-inventory-bar&quot;&gt;
     &lt;h2&gt;Current Inventory Items&lt;/h2&gt;
-    &lt;span class=&quot;counter&quot;&gt;0&lt;/span&gt;
+    &lt;span class=&quot;counter&quot;&gt;200&lt;/span&gt;
   &lt;/div&gt;
-  &lt;div class=&quot;current-inventory-list&quot;&gt;
-    &lt;div class=&quot;inventory-item&quot;&gt;
-      &lt;input id=&quot;item-1&quot; type=&quot;radio&quot; name=&quot;items&quot; class=&quot;accordian&quot;&gt;
-      &lt;label for=&quot;item-1&quot; class=&quot;inventory-item-header&quot;&gt;
-        &lt;span class=&quot;item-number&quot;&gt;1&lt;/span&gt;
-        &lt;div class=&quot;item-details&quot;&gt;
-          &lt;span class=&quot;description&quot;&gt;&lt;b&gt;Description&lt;/b&gt;:&amp;nbsp;&lt;/span&gt;
-          &lt;span class=&quot;cost&quot;&gt;&lt;b&gt;Cost&lt;/b&gt;:&amp;nbsp;&lt;/span&gt;
-          &lt;span class=&quot;quantity&quot;&gt;&lt;b&gt;Quantity&lt;/b&gt;:&amp;nbsp;&lt;/span&gt;
-          &lt;span class=&quot;age&quot;&gt;&lt;b&gt;Age&lt;/b&gt;:&amp;nbsp;&lt;/span&gt;
+  &lt;div id=&quot;current-inventory-list&quot; class=&quot;current-inventory-list&quot;&gt;
+    &lt;div class=&quot;accordion inventory&quot;&gt;
+      &lt;input id=&quot;item-1&quot; type=&quot;checkbox&quot; name=&quot;items&quot; class=&quot;accordion&quot;&gt;
+      &lt;label for=&quot;item-1&quot;&gt;
+        &lt;div class=&quot;item-number&quot;&gt;Item Number:&amp;nbsp;&lt;span&gt;0000&lt;/span&gt;&lt;/div&gt;
+        &lt;div class=&quot;item-header&quot;&gt;
+          &lt;div class=&quot;description&quot;&gt;&lt;span&gt;Description&lt;/span&gt;&lt;p&gt;This is a long product description&lt;/p&gt;&lt;/div&gt;
+          &lt;div class=&quot;cost&quot;&gt;&lt;span&gt;Cost&lt;/span&gt;&lt;p&gt;&amp;#36;000.00&lt;/p&gt;&lt;/div&gt;
+          &lt;div class=&quot;qty&quot;&gt;&lt;span&gt;Qty&lt;/span&gt;&lt;p&gt;00&lt;/p&gt;&lt;/div&gt;
         &lt;/div&gt;
-        &lt;i class=&quot;la la-angle-down&quot;&gt;&lt;/i&gt;
       &lt;/label&gt;
-      &lt;div class=&quot;inventory-item-details&quot;&gt;
+      &lt;div class=&quot;item-details&quot;&gt;
         &lt;form&gt;
           &lt;fieldset&gt;
             &lt;legend&gt;Description&lt;/legend&gt;
             &lt;div class=&quot;field&quot;&gt; &lt;!-- change to 'field valid' or 'field invalid' as necessary --&gt;
               &lt;span class=&quot;error-message&quot;&gt;Please include a description&lt;/span&gt;
-              &lt;input type=&quot;text&quot; name=&quot;description&quot; id=&quot;description&quot; placeholder=&quot;Describe your item&amp;nbsp;&amp;#40;including brand&amp;#41;&quot; value=&quot;HP Deskjet 4300&quot;&gt;
+              &lt;input type=&quot;text&quot; name=&quot;description&quot; id=&quot;description&quot; placeholder=&quot;Describe your item&amp;nbsp;&amp;#40;including brand&amp;#41;&quot; value=&quot;This is a long product description&quot;&gt;
               &lt;label for=&quot;description&quot;&gt;Description&amp;#42;&lt;/label&gt;
             &lt;/div&gt;
           &lt;/fieldset&gt;
@@ -194,7 +189,7 @@
             &lt;legend&gt;Cost&lt;/legend&gt;
             &lt;div class=&quot;field&quot;&gt; &lt;!-- change to 'field valid' or 'field invalid' as necessary --&gt;
               &lt;span class=&quot;error-message&quot;&gt;Please include a cost per item&lt;/span&gt;
-              &lt;input type=&quot;text&quot; name=&quot;cost&quot; id=&quot;cost&quot; placeholder=&quot;Cost per item&quot; value=&quot;&amp;#36;139&quot;&gt;
+              &lt;input type=&quot;text&quot; name=&quot;cost&quot; id=&quot;cost&quot; placeholder=&quot;Cost per item&quot; value=&quot;&amp;#36;000.00&quot;&gt;
               &lt;label for=&quot;cost&quot;&gt;Cost Per Item&amp;#42;&lt;/label&gt;
             &lt;/div&gt;
           &lt;/fieldset&gt;
@@ -202,7 +197,7 @@
             &lt;legend&gt;Quantity&lt;/legend&gt;
             &lt;div class=&quot;field&quot;&gt; &lt;!-- change to 'field valid' or 'field invalid' as necessary --&gt;
               &lt;span class=&quot;error-message&quot;&gt;Please include a quantity&lt;/span&gt;
-              &lt;input type=&quot;number&quot; name=&quot;quantity&quot; id=&quot;quantity&quot; placeholder=&quot;Quantity&quot; value=&quot;1&quot;&gt;
+              &lt;input type=&quot;number&quot; name=&quot;quantity&quot; id=&quot;quantity&quot; placeholder=&quot;Quantity&quot; value=&quot;00&quot;&gt;
               &lt;label for=&quot;quantity&quot;&gt;Quantity&amp;#42;&lt;/label&gt;
             &lt;/div&gt;
           &lt;/fieldset&gt;
@@ -210,7 +205,7 @@
             &lt;legend&gt;Age: Years&lt;/legend&gt;
             &lt;div class=&quot;field&quot;&gt; &lt;!-- change to 'field valid' or 'field invalid' as necessary --&gt;
               &lt;span class=&quot;error-message&quot;&gt;How old is this item &amp;#40;in years&amp;#41;?&lt;/span&gt;
-              &lt;input type=&quot;number&quot; name=&quot;years&quot; id=&quot;years&quot; placeholder=&quot;Years&quot; value=&quot;2&quot;&gt;
+              &lt;input type=&quot;number&quot; name=&quot;years&quot; id=&quot;years&quot; placeholder=&quot;Years&quot; value=&quot;00&quot;&gt;
               &lt;label for=&quot;years&quot;&gt;Age: In Years&amp;#42;&lt;/label&gt;
             &lt;/div&gt;
           &lt;/fieldset&gt;
@@ -218,7 +213,7 @@
             &lt;legend&gt;Age: Months&lt;/legend&gt;
             &lt;div class=&quot;field&quot;&gt; &lt;!-- change to 'field valid' or 'field invalid' as necessary --&gt;
               &lt;span class=&quot;error-message&quot;&gt;How old is this item &amp;#40;in months&amp;#41;?&lt;/span&gt;
-              &lt;input type=&quot;number&quot; name=&quot;months&quot; id=&quot;months&quot; placeholder=&quot;Months&quot; value=&quot;5&quot;&gt;
+              &lt;input type=&quot;number&quot; name=&quot;months&quot; id=&quot;months&quot; placeholder=&quot;Months&quot; value=&quot;00&quot;&gt;
               &lt;label for=&quot;months&quot;&gt;Age: In Months&amp;#42;&lt;/label&gt;
             &lt;/div&gt;
           &lt;/fieldset&gt;
@@ -227,7 +222,6 @@
             &lt;div class=&quot;field&quot;&gt; &lt;!-- change to 'field valid' or 'field invalid' as necessary --&gt;
               &lt;span class=&quot;error-message&quot;&gt;Please select an option&lt;/span&gt;
               &lt;select name=&quot;condition&quot; id=&quot;condition&quot;&gt;
-                &lt;option value=&quot;Fair&quot;&gt;Fair&lt;/option&gt;
                 &lt;option value=&quot;0&quot;&gt;Choose a Condition&lt;/option&gt;
                 &lt;option value=&quot;New&quot;&gt;New&lt;/option&gt;
                 &lt;option value=&quot;Excellent&quot;&gt;Excellent&lt;/option&gt;
@@ -243,14 +237,14 @@
           &lt;div class=&quot;form-button-box&quot;&gt;
             &lt;div class=&quot;form-button-box-row&quot;&gt;
               &lt;div class=&quot;form-button-box-button&quot;&gt;
-                &lt;button class=&quot;button color-two&quot;&gt;&lt;span class=&quot;button-label&quot;&gt;Add Attachments&lt;span class=&quot;post&quot;&gt;&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;
+                &lt;button class=&quot;button color-two&quot;&gt;&lt;span class=&quot;button-label&quot;&gt;Add Attachments&lt;span class=&quot;post&quot;&gt;&lt;span class=&quot;number&quot;&gt;00&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;
               &lt;/div&gt;
               &lt;div class=&quot;form-button-box-row row&quot;&gt;
                 &lt;div class=&quot;form-button-box-button&quot;&gt;
                   &lt;button class=&quot;button secondary color-one&quot;&gt;&lt;span class=&quot;button-label&quot;&gt;Save&lt;span class=&quot;post&quot;&gt;&lt;span class=&quot;processing&quot;&gt;&lt;i class=&quot;la la-refresh la-spin&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;
                 &lt;/div&gt;
                 &lt;div class=&quot;form-button-box-button&quot;&gt;
-                  &lt;button class=&quot;button secondary color-one&quot;&gt;&lt;span class=&quot;button-label&quot;&gt;Cancel&lt;span class=&quot;button-label&quot;&gt;&lt;/button&gt;
+                  &lt;button class=&quot;button secondary color-one&quot;&gt;&lt;span class=&quot;button-label&quot;&gt;Cancel&lt;/span&gt;&lt;/button&gt;
                 &lt;/div&gt;
               &lt;/div&gt;
             &lt;/div&gt;
@@ -270,7 +264,7 @@
       &lt;/div&gt;
     &lt;/div&gt;
   &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+&lt;/section&gt;</code></pre>
             </figure>
           </div>
         </div>

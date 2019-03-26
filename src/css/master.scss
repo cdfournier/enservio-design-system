@@ -12,6 +12,7 @@
 @import "_atoms/attachments";
 @import "_atoms/forms";
 @import "_atoms/react-select";
+@import "_atoms/accordions";
 @import "_atoms/pagination";
 
 @import "_molecules/passwords";
@@ -19,9 +20,9 @@
 @import "_molecules/claims";
 @import "_molecules/toolbar";
 
-@import "_pages/inventory";
 @import "_pages/settlement";
-@import "_pages/receipts";
+@import "_pages/inventory";
 @import "_pages/payments";
+@import "_pages/receipts";
 
 @import "_global/microsoft";
