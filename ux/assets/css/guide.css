@@ -182,31 +182,24 @@ footer nav {
     width: 100%;
     padding: 0 0 2rem; } }
 
-.split .design-sample .button {
-  margin: 0; }
+/*
+.split .design-sample .button {margin: 0;}
 
 .split .design-sample .button:nth-child(2n),
-.split .design-sample .button:nth-child(3n) {
-  margin: 1rem 0 0; }
+.split .design-sample .button:nth-child(3n) {margin: 1rem 0 0;}
 
-.split .design-sample .button-box {
-  padding: 1rem 0 0; }
+.split .design-sample .button-box {padding: 1rem 0 0;}
 
-.split .design-sample form .button-box {
-  padding: 0 1rem; }
+.split .design-sample form .button-box {padding: 0 1rem;}
 
-.split .design-sample .expanding-button-box {
-  margin: 0; }
+.split .design-sample .expanding-button-box {margin: 0;}
 
-.split .design-sample ul.attachment-list li .line-item .button-box {
-  padding: 0; }
+.split .design-sample ul.attachment-list li .line-item .button-box {padding: 0;}
 
 @media (min-width: 48rem) {
-  .split .design-sample .button:nth-child(2n) {
-    margin: 0 0 0 1rem; }
-  .split .design-sample .button:nth-child(3n) {
-    margin: 0 0 0 1rem; } }
-
+.split .design-sample .button:nth-child(2n) {margin: 0 0 0 1rem;}
+.split .design-sample .button:nth-child(3n) {margin: 0 0 0 1rem;}}
+*/
 .split .design-sample form {
   padding: 2rem 0 0; }
 
