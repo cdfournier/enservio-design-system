@@ -4994,7 +4994,7 @@ ul.settlement-offer li.border {
     position: relative;
     top: inherit;
     padding: 3rem 0 0; }
-  .current-inventory .current-inventory-bar h2:after {
+  .current-inventory .current-inventory-bar:after {
     opacity: 0; } }
 
 .accordion.inventory {
