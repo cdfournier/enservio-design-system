@@ -82,7 +82,10 @@
   top: inherit;
   padding: 3rem 0 0;
 }
-.current-inventory .current-inventory-bar:after {opacity: 0;}}
+.current-inventory .current-inventory-bar:after {
+  display: none;
+  opacity: 0;
+}}
 
 
 // INVENTORY ACCORDIONS
