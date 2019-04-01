@@ -94,7 +94,7 @@
 .receipt-control {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  min-width: 50%;
 }
 
 .receipt-control ul {
@@ -128,6 +128,7 @@
 .receipt-details {flex-direction: row;}
 .receipt-details figure {
   width: auto;
+  max-width: 25%;
   height: 100%;
   margin: 0 1rem 0 0;
 }}
