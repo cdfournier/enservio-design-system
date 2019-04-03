@@ -43,6 +43,11 @@ main {padding: 0 !important;} // <- Important added as part of IE11 testing
 
 .inventory-item .inventory-item-header i.la.la-angle-down {top: 0.25rem;}
 
+.current-inventory .current-inventory-bar span.counter {
+  display: block;
+  min-width: inherit;
+}
+
 ul.attachment-list li .line-item .expanding-button-box .expanding-button.small span.icon-close {
   position: relative;
   top: 0;
