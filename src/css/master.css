@@ -4842,7 +4842,7 @@ ul.requirements li.invalid span i.la.la-check-circle {
           padding: 0 0 0 1rem; }
 
 .toolbar .search {
-  width: 50%; }
+  width: 100%; }
   .toolbar .search .field input, .toolbar .search .field label {
     padding: 0 0 0 1.5rem;
     font-size: 0.694rem; }
