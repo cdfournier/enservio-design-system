@@ -30,7 +30,7 @@
 
 // SEARCH
 .toolbar .search {
-  width: 100%;
+  width: 60%;
   .field input, .field label {
     padding: 0 0 0 1.5rem;
     font-size: 0.694rem;
@@ -52,7 +52,7 @@
 
 // SORT
 .toolbar .sort {
-  width: 50%;
+  width: 40%;
   .field select, .field label {font-size: 0.694rem;}
   .field select {min-height: 0;}
   .field .select-icon {

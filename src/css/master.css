@@ -4842,7 +4842,7 @@ ul.requirements li.invalid span i.la.la-check-circle {
           padding: 0 0 0 1rem; }
 
 .toolbar .search {
-  width: 100%; }
+  width: 60%; }
   .toolbar .search .field input, .toolbar .search .field label {
     padding: 0 0 0 1.5rem;
     font-size: 0.694rem; }
@@ -4865,7 +4865,7 @@ ul.requirements li.invalid span i.la.la-check-circle {
     font-size: 1rem; }
 
 .toolbar .sort {
-  width: 50%; }
+  width: 40%; }
   .toolbar .sort .field select, .toolbar .sort .field label {
     font-size: 0.694rem; }
   .toolbar .sort .field select {
