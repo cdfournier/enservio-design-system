@@ -4845,6 +4845,8 @@ ul.requirements li.invalid span i.la.la-check-circle {
 
 .toolbar .search {
   width: 60%; }
+  .toolbar .search .field input {
+    min-height: 2.5rem; }
   .toolbar .search .field input, .toolbar .search .field label {
     padding: 0 0 0 1.5rem;
     font-size: 0.694rem; }
@@ -4868,10 +4870,12 @@ ul.requirements li.invalid span i.la.la-check-circle {
 
 .toolbar .sort {
   width: 40%; }
+  .toolbar .sort .field select {
+    min-height: 2.5rem; }
   .toolbar .sort .field select, .toolbar .sort .field label, .toolbar .sort .field .Select.Select--single {
     font-size: 0.694rem; }
-  .toolbar .sort .field select, .toolbar .sort .field .Select.Select--single {
-    min-height: 0; }
+  .toolbar .sort .field .Select.Select--single {
+    font-weight: 400; }
   .toolbar .sort .field .select-icon {
     top: 47%;
     right: 0;

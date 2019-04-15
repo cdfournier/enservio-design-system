@@ -34,6 +34,7 @@
 // SEARCH
 .toolbar .search {
   width: 60%;
+  .field input {min-height: 2.5rem;}
   .field input, .field label {
     padding: 0 0 0 1.5rem;
     font-size: 0.694rem;
@@ -56,8 +57,9 @@
 // SORT
 .toolbar .sort {
   width: 40%;
+  .field select {min-height: 2.5rem;}
   .field select, .field label, .field .Select.Select--single {font-size: 0.694rem;}
-  .field select, .field .Select.Select--single {min-height: 0;}
+  .field .Select.Select--single {font-weight: 400;}
   .field .select-icon {
     top: 47%;
     right: 0;
