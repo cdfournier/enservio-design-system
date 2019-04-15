@@ -4840,6 +4840,8 @@ ul.requirements li.invalid span i.la.la-check-circle {
         width: 100%; }
         .toolbar .top-line form fieldset .field, .toolbar .bottom-line form fieldset .field {
           padding: 0 0 0 1rem; }
+          .toolbar .top-line form fieldset .field span.error-message, .toolbar .bottom-line form fieldset .field span.error-message {
+            display: none; }
 
 .toolbar .search {
   width: 60%; }
@@ -4866,9 +4868,9 @@ ul.requirements li.invalid span i.la.la-check-circle {
 
 .toolbar .sort {
   width: 40%; }
-  .toolbar .sort .field select, .toolbar .sort .field label {
+  .toolbar .sort .field select, .toolbar .sort .field label, .toolbar .sort .field .Select.Select--single {
     font-size: 0.694rem; }
-  .toolbar .sort .field select {
+  .toolbar .sort .field select, .toolbar .sort .field .Select.Select--single {
     min-height: 0; }
   .toolbar .sort .field .select-icon {
     top: 47%;
@@ -4904,6 +4906,7 @@ ul.requirements li.invalid span i.la.la-check-circle {
     transition: all 0.25s ease-in-out 0s; }
     .toolbar ul.chips li i {
       padding-left: 0.5rem;
+      line-height: 1.5rem;
       cursor: pointer;
       -webkit-transition: all 0.25s ease-in-out 0s;
       -moz-transition: all 0.25s ease-in-out 0s;
