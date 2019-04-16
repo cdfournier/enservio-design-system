@@ -1,12 +1,12 @@
 :root {
-  --color-one: #2e84ed;
-  --color-two: #0f4a92; }
+  --color-one: #ea7200;
+  --color-two: #101820; }
 
 :export {
-  colorone: #2e84ed; }
+  colorone: #ea7200; }
 
 :export {
-  colortwo: #0f4a92; }
+  colortwo: #101820; }
 
 html {
   font-family: "Montserrat", sans-serif;
@@ -2550,7 +2550,7 @@ figcaption ul li {
   font-size: 0.694rem;
   font-weight: 500;
   text-transform: uppercase;
-  color: #444853; }
+  color: #243746; }
 
 .card .card-copy span.status.disabled {
   display: none; }
@@ -3166,7 +3166,7 @@ header.back {
   header {
     flex-direction: row;
     align-items: flex-end;
-    justify-content: center; } }
+    justify-content: space-between; } }
 
 .logo {
   display: flex;
@@ -4051,7 +4051,7 @@ input.toggle[type="checkbox"] {
   padding: 0.1875rem;
   border-color: transparent;
   border-radius: 2rem;
-  background-color: #444853;
+  background-color: #243746;
   -webkit-transition: all 0.25s ease-in-out 0s;
   -moz-transition: all 0.25s ease-in-out 0s;
   -ms-transition: all 0.25s ease-in-out 0s;
@@ -4901,7 +4901,7 @@ ul.requirements li.invalid span i.la.la-check-circle {
     font-weight: 400;
     line-height: 1.5rem;
     color: #ffffff;
-    background-color: #444853;
+    background-color: #243746;
     opacity: 1;
     -webkit-transition: all 0.25s ease-in-out 0s;
     -moz-transition: all 0.25s ease-in-out 0s;
