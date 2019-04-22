@@ -170,6 +170,50 @@
           <h2>Current Inventory Items</h2>
           <span class="counter">200</span>
         </div>
+        <div class="toolbar xl">
+          <div class="top-line">
+            <div class="search">
+              <form>
+                <fieldset>
+                  <legend>Search</legend>
+                  <div class="field">
+                    <span class="error-message"></span>
+                    <input type="search" name="search" id="search" placeholder="Search">
+                    <label for="search">Search</label>
+                    <span class="search-icon"><i class="la la-search"></i></span>
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+            <div class="sort">
+              <form>
+                <fieldset>
+                  <legend>Sort</legend>
+                  <div class="field">
+                    <span class="error-message"></span>
+                    <select name="sort" id="sort">
+                      <option value="Item Description Ascending">Item Desc. A-Z</option>
+                      <option value="Item Description Descending">Item Desc. Z-A</option>
+                      <option value="Item Number Ascending">Item No. lo-hi</option>
+                      <option value="Item Number Descending">Item No. hi-lo</option>
+                    </select>
+                    <div class="select-icon"><i class="la la-angle-down"></i></div>
+                    <label for="condition">Sort</label>
+                  </div>
+                </fieldset>
+              </form>
+            </div>
+          </div>
+          <div class="bottom-line">
+            <ul class="chips">
+              <li>Search filters</li>
+              <li id="tables">tables<i class="la la-close close--chip tables"></i></li>
+              <li id="shirts">shirts<i class="la la-close close--chip shirts"></i></li>
+              <li id="pants">pants<i class="la la-close close--chip pants"></i></li>
+              <li id="dismiss">dismiss me<i class="la la-close close--chip dismiss"></i></li>
+            </ul>
+          </div>
+        </div>
         <div id="current-inventory-list" class="current-inventory-list">
           <div class="accordion inventory">
             <input id="item-1" type="checkbox" name="items" class="accordion">
@@ -1285,5 +1329,19 @@
     <script src="../../../assets/scripts/enservio.js"></script>
     <script src="../../../assets/scripts/enservio.header.js"></script>
     <script src="../../../assets/scripts/enservio.inventory.js"></script>
+    <script>
+      $('.close--chip.tables').click( function() {
+        $('ul.chips li#tables').addClass('hidden');
+      });
+      $('.close--chip.shirts').click( function() {
+        $('ul.chips li#shirts').addClass('hidden');
+      });
+      $('.close--chip.pants').click( function() {
+        $('ul.chips li#pants').addClass('hidden');
+      });
+      $('.close--chip.dismiss').click( function() {
+        $('ul.chips li#dismiss').addClass('hidden');
+      });
+    </script>
   </body>
 </html>
