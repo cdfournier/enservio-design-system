@@ -2523,10 +2523,20 @@ figcaption ul li {
   width: 100%;
   margin: 0;
   padding: 1rem;
-  background-color: var(--color-one); }
+  background-color: var(--color-two); }
 
 .card .card-graphic img {
   width: 5rem; }
+
+.card .card-graphic svg {
+  width: 5rem;
+  height: 5rem; }
+  .card .card-graphic svg .color-one {
+    fill: var(--color-one); }
+  .card .card-graphic svg .color-two {
+    fill: var(--color-two); }
+  .card .card-graphic svg .white {
+    fill: #ffffff; }
 
 .card .card-copy {
   display: flex;

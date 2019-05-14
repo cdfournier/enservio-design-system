@@ -29,10 +29,18 @@
   width: 100%;
   margin: 0;
   padding: 1rem;
-  background-color: var(--color-one);
+  background-color: var(--color-two);
 }
 
 .card .card-graphic img {width: 5rem;}
+
+.card .card-graphic svg {
+  width: 5rem;
+  height: 5rem;
+  .color-one {fill: var(--color-one);}
+  .color-two {fill: var(--color-two);}
+  .white {fill: $white;}
+}
 
 .card .card-copy {
   display: flex;

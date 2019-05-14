@@ -120,7 +120,7 @@ footer nav {
     font-size: 0.833rem;
     font-weight: 500;
     text-transform: uppercase;
-    color: #0f4a92; }
+    color: #101820; }
   footer nav ul li:last-child {
     padding: 0; }
   footer nav ul li a {
@@ -274,10 +274,10 @@ footer nav {
   min-height: 6rem; }
 
 .color-cards .card .color-sample.color-one {
-  background-color: #2e84ed; }
+  background-color: #ea7200; }
 
 .color-cards .card .color-sample.color-two {
-  background-color: #0f4a92; }
+  background-color: #101820; }
 
 .color-cards .card .color-sample.white {
   background-color: #ffffff; }
