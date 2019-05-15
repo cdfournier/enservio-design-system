@@ -77,7 +77,7 @@ nav {
     width: auto;
     margin: 0;
     padding: 0 0.5rem 0 0.5rem;
-    font-size: 0.833rem;
+    font-size: 0.694rem;
     font-weight: 500;
     line-height: 1.2;
     text-align: center;
@@ -93,16 +93,15 @@ nav {
   }
 }
 
+@media (min-width: 24rem) {nav ul li {font-size: 0.833rem;}}
+
 @media (min-width: 35.5rem) {
 nav {width: auto;}
 nav ul {
   justify-content: flex-end;
   padding: 0 0 0 4rem;
 }
-nav ul li {
-  padding: 0 1rem 0 0;
-  font-size: 0.694rem;
-}
+nav ul li {padding: 0 1rem 0 0;}
 nav ul li:last-child {padding: 0;}}
 
 @media (min-width: 64rem) {nav ul li {padding: 0 1.44rem 0 0;}}
