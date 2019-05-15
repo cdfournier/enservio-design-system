@@ -106,9 +106,13 @@ main {
 
 .graphic.text .graphic-cell.center {text-align: center;}
 
-.graphic-cell .graphic {
-  width: 25%;
-  margin: 0 auto 1rem;
+.graphic-cell .graphic svg {
+  width: 8rem;
+  height: 8rem;
+  margin: 0 auto 2rem;
+  .color-one {fill: var(--color-one);}
+  .color-two {fill: var(--color-two);}
+  .white {fill: $white;}
 }
 
 .graphic-cell .graphic.wide {
@@ -118,8 +122,7 @@ main {
 
 @media (min-width: 48rem) {
 .graphic.text {margin: 0 auto 2rem;}
-.graphic.text .graphic-cell {padding: 0 6rem;}
-.graphic-cell .graphic {width: 20%;}}
+.graphic.text .graphic-cell {padding: 0 6rem;}}
 
 
 // FIGURES & CAPTIONS
