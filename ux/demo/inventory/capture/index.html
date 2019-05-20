@@ -85,7 +85,7 @@
       <section id="create-inventory">
         <div class="text first">
           <h1>Your Inventory List</h1>
-          <p>Please complete the form below to add items to your claim. When you are finished adding items, click the <a href="#submit-button">Submit Inventory</a> button below.</p>
+          <p>Please complete the form below to add items to your claim. When you are finished adding items, click the <a href="#submit-button" data-scroll>Submit Inventory</a> button below.</p>
         </div>
         <div class="forms">
           <form>
@@ -1326,9 +1326,21 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script src="https://unpkg.com/headroom.js@0.9.4/dist/headroom.js"></script>
+    <script src="https://unpkg.com/sweet-scroll/sweet-scroll.min.js"></script>
     <script src="../../../assets/scripts/enservio.js"></script>
     <script src="../../../assets/scripts/enservio.header.js"></script>
     <script src="../../../assets/scripts/enservio.inventory.js"></script>
+    <script>
+      document.addEventListener(
+        'DOMContentLoaded',
+        () => {
+          const scroller = new SweetScroll({
+            /* some options */
+          });
+        },
+        false,
+      );
+    </script>
     <script>
       $('.close--chip.tables').click( function() {
         $('ul.chips li#tables').addClass('hidden');
