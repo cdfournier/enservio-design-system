@@ -47,8 +47,8 @@
 .carousel .carousel-cell.center {text-align: center;}
 
 .carousel-cell .graphic svg {
-  width: 8rem;
-  height: 8rem;
+  width: 6.5rem;
+  height: 6.5rem;
   margin: 0 auto 2rem;
   .color-one {fill: var(--color-one);}
   .color-two {fill: var(--color-two);}
@@ -62,7 +62,7 @@
 
 .carousel-cell .graphic.wide svg {
   width: 100%;
-  height: inherit;
+  height: 6.5rem;
   margin: 0 auto;
 }
 
